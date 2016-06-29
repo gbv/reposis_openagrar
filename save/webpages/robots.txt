@@ -1,0 +1,8 @@
+Sitemap: https://openagrar.bmel-forschung.de/sitemap_google.xml
+User-agent: *
+Allow: /servlets/MCRFileNodeServlet/
+Disallow: /*?
+Disallow: /servlets/
+Disallow: /browse/
+Disallow: /rsc/
+Disallow: /api/
