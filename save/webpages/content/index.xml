@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MyCoReWebPage>
+  <section xml:lang="de" title="Willkommen auf den Seiten des Publikationsservers OpenAgrar">
+    <div class="jumbotwo">
+      <div class="row">
+        <div class="col-md-6" lang="de">
+          <h3>
+            Willkommen auf den Seiten des Publikationsservers OpenAgrar
+          </h3>
+          <p>
+            Zum Ressortbereich des Bundesministeriums für Ernährung und Landwirtschaft
+            (BMEL) gehören Bundesforschungsinstitute und weitere Bundesbehörden sowie Einrichtungen der
+            Wissenschaftsgemeinschaft Gottfried Wilhelm Leibniz (WGL). Für die von den Einrichtungen und
+            deren Mitarbeitern stammenden Veröffentlichungen wurde im Rahmen eines Projektes ein
+            institutionelles Repositorium aufgebaut. Die dort gespeicherten Dokumente stehen jedem
+            Interessierten für die Nutzung zur Verfügung.
+          </p>
+          <p>
+            In der Aufbauphase werden es überwiegend Literaturnachweise sein, die in der Folgezeit nach
+            und nach mit Volltexten, Abbildungen und anderen Medien ergänzt werden. Das Repositorium weist
+            Hochschulschriften, Reports, Konferenzbände, Bücher und Zeitschriften sowie AV-Medien nach.
+          </p>
+        </div>
+      </div>
+    </div>
+    </section>
+    <meta>
+        <log lastEditor="administrator" date="2016-06-30" time="09:18"/>
+    </meta>
+</MyCoReWebPage>
