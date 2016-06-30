@@ -1,7 +1,7 @@
 html body .jumbotron {
-  color: #83B4BA;
+  color: #444444;;
   background: unset;
-  background-color: #ecf0f1;
+  background-color: #d7dbdc;
 }
 
 html body #powered_by {
@@ -10,6 +10,6 @@ html body #powered_by {
 }
 
 .flatmir-footer {
-  color: #d1d1d1;
+  color: #ebeded;
   border: none;
 }
