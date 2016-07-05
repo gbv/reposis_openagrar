@@ -3,7 +3,7 @@
   xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="mir_institutes">
   <label xml:lang="en" text="Instituts of BMEL" description="A list of institutions" />
   <label xml:lang="de" text="Einrichtungen des BMEL" description="Liste der BMEL-Einrichtungen" />
-  <label xml:lang="x-uri" text="https://www.openagrar.de/classifications/mir_institutes" />
+  <label xml:lang="x-uri" text="https://www.openagrar.de/classifications/institutes" />
   <categories>
     <category ID="jki">
       <label xml:lang="de" text="Julius Kühn-Institut" description="Bundesforschungsinstitut für Kulturpflanzen" />
