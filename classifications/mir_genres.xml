@@ -70,15 +70,10 @@
         <label xml:lang="en" text="Bachelor thesis" />
         <label xml:lang="de" text="Abschlussarbeit (Bachelor)" />
       </category>
-      <category ID="bachelor_thesis">
+      <category ID="student_resarch_project">
         <label xml:lang="x-hosts" text="series standalone" />
-        <label xml:lang="en" text="Bachelor thesis" />
-        <label xml:lang="de" text="Abschlussarbeit (Bachelor)" />
-      </category>
-      <category ID="state_examination">
-        <label xml:lang="x-hosts" text="series standalone" />
-        <label xml:lang="en" text="State examination" />
-        <label xml:lang="de" text="Staatsexamen" />
+        <label xml:lang="en" text="Student research project" />
+        <label xml:lang="de" text="Studienarbeit" />
       </category>
       <category ID="magister_thesis">
         <label xml:lang="x-hosts" text="series standalone" />
