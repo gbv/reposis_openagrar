@@ -5,7 +5,28 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xalan="http://xml.apache.org/xalan" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:scopus="http://www.elsevier.com/xml/svapi/abstract/dtd" xmlns:ait="http://www.elsevier.com/xml/ani/ait" xmlns:ce="http://www.elsevier.com/xml/ani/common" xmlns:cto="http://www.elsevier.com/xml/cto/dtd" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/" xmlns:xocs="http://www.elsevier.com/xml/xocs/dtd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
+  <xsl:param name="parentId" />
+
   <xsl:output method="xml" encoding="UTF-8" indent="yes" xalan:indent-amount="2" />
+
+  <xsl:template match="/">
+    <mycoreobject>
+      <xsl:if test="string-length($parentId) &gt; 0">
+        <structure>
+          <parents class="MCRMetaLinkID" notinherit="true" heritable="false">
+            <parent xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="locator" xlink:href="{$parentId}" />
+          </parents>
+        </structure>
+      </xsl:if>
+      <metadata>
+        <def.modsContainer class="MCRMetaXML" heritable="false" notinherit="true">
+          <modsContainer inherited="0">
+            <xsl:apply-templates select="scopus:abstracts-retrieval-response" />
+          </modsContainer>
+        </def.modsContainer>
+      </metadata>
+    </mycoreobject>
+  </xsl:template>
 
   <xsl:template match="scopus:abstracts-retrieval-response">
     <mods:mods>
@@ -55,7 +76,7 @@
       <xsl:apply-templates select="//author[@auid=current()/@auid][1]/ce:e-address[@type='email']" />
     </mods:name>
   </xsl:template>
-  
+
   <xsl:template match="ce:e-address[@type='email']">
     <mods:affiliation>
       <xsl:value-of select="." />
