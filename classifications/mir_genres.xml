@@ -141,6 +141,11 @@
         <label xml:lang="de" text="Kurs- und Seminarmaterial" />
       </category>
     </category>
+    <category ID="issue">
+      <label xml:lang="en" text="Issue" />
+      <label xml:lang="de" text="Zeitschriftenheft" />
+      <label xml:lang="x-hosts" text="journal" />
+    </category>
     <category ID="book">
       <label xml:lang="de" text="Buch" />
       <label xml:lang="en" text="Book" />
