@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MyCoReWebPage>
+  <section xml:lang="de" title="Erfassungsrichtlinien">
+    <div class="row">
+      <div class="col-md-10" lang="de">
+        <h3>
+          Erfassungsrichtlinien
+        </h3>
+        <p>
+          Auf dieser und ggf. weiteren Seiten sollen Richtlinien zur Dokumentenerfassung festgehalten werden. Die
+          Kolleginnen und Kollegen des BMEL werden diese Seite zeitnah mit Inhalten füllen.
+        </p>
+        <p>
+          Weiterhin wird es an dieser Stelle mittelfristig die Möglichkeit geben die Hilfetexte der Erfassungsmasken
+          zu bearbeiten.
+        </p>
+      </div>
+    </div>
+    </section>
+    <meta>
+        <log lastEditor="administrator" date="2016-07-08" time="20:56"/>
+    </meta>
+</MyCoReWebPage>
