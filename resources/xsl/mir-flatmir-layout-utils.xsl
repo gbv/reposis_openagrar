@@ -55,6 +55,7 @@
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='search']" />
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='browse']" />
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='publish']" />
+            <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='docu']" />
             <xsl:call-template name="mir.basketMenu" />
           </ul>
         </nav>
