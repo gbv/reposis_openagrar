@@ -4,7 +4,7 @@
 >
   <xsl:include href="layout-utils.xsl" />
   
-  <xsl:param name="MIR.oas" select="'hide'" />
+  <xsl:param name="MIR.OAS" select="'hide'" />
   
   <xsl:template match="/site">
     <xsl:copy>
@@ -126,7 +126,7 @@
             </div>
           </xsl:if>
 <!-- OAS statistics -->
-          <xsl:if test="$MIR.oas = 'show'">  
+          <xsl:if test="$MIR.OAS = 'show'">  
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h3 class="panel-title">Zugriffsstatistik</h3>
