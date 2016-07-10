@@ -33,7 +33,7 @@
         <div class="col-md-7 col-sm-9 col-xs-6 text-right"><xsl:value-of select="i18n:translate('mir.oas.counter.fulltext')" /></div>
         <div  data-oaselementtype="OASInline" 
             data-oasproviderurl="{$MIR.OAS.GraphProviderURL}" 
-            data-oasidentifier="oai:ub-deposit.fernuni-hagen.de:{$objID}" 
+            data-oasidentifier="{$MIR.OAS.Prefix}:{$objID}" 
             data-oascounttype="counter"
         />
       </div>
@@ -41,7 +41,7 @@
         <div class="col-md-7 col-sm-9 col-xs-6 text-right"><xsl:value-of select="i18n:translate('mir.oas.counter.abstract')" /></div>
         <div  data-oaselementtype="OASInline" 
             data-oasproviderurl="{$MIR.OAS.GraphProviderURL}" 
-            data-oasidentifier="oai:ub-deposit.fernuni-hagen.de:{$objID}" 
+            data-oasidentifier="{$MIR.OAS.Prefix}:{$objID}" 
             data-oascounttype="counter_abstract" 
         />
       </div>
@@ -52,7 +52,7 @@
         <div class="col-md-7 col-sm-9 col-xs-6 text-right"><xsl:value-of select="i18n:translate('mir.oas.counter.fulltext')" /></div>
         <div  data-oaselementtype="OASInline" 
             data-oasproviderurl="{$MIR.OAS.GraphProviderURL}" 
-            data-oasidentifier="oai:ub-deposit.fernuni-hagen.de:{$objID}" 
+            data-oasidentifier="{$MIR.OAS.Prefix}:{$objID}" 
             data-oascounttype="counter"
             data-oasfrom="{$from}" data-oasuntil="{$until}"
         />
@@ -61,7 +61,7 @@
         <div class="col-md-7 col-sm-9 col-xs-6 text-right"><xsl:value-of select="i18n:translate('mir.oas.counter.abstract')" /></div>
         <div data-oaselementtype="OASInline" 
             data-oasproviderurl="{$WebApplicationBaseURL}graphprovider/" 
-            data-oasidentifier="oai:ub-deposit.fernuni-hagen.de:{$objID}" 
+            data-oasidentifier="{$MIR.OAS.Prefix}:{$objID}" 
             data-oascounttype="counter_abstract"
             data-oasfrom="{$from}" data-oasuntil="{$until}"
         />
@@ -84,7 +84,7 @@
               <div id="oasGraph" style="width:100%;height:200px;" 
                   data-oaselementtype="OASGraph" 
                   data-oasproviderurl="{$MIR.OAS.GraphProviderURL}" 
-                  data-oasidentifier="oai:ub-deposit.fernuni-hagen.de:{$objID}" 
+                  data-oasidentifier="{$MIR.OAS.Prefix}:{$objID}" 
                   data-oasfrom="{$from}" data-oasuntil="{$until}"
               />
             </div>
