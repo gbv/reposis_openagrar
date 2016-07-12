@@ -40,11 +40,6 @@
       <label xml:lang="x-group" text="true" />
       <label xml:lang="en" text="Thesis" />
       <label xml:lang="de" text="Hochschulschriften" />
-      <category ID="exam">
-        <label xml:lang="x-hosts" text="series standalone" />
-        <label xml:lang="en" text="Exam" />
-        <label xml:lang="de" text="Examensarbeit" />
-      </category>
       <category ID="dissertation">
         <label xml:lang="x-hosts" text="series standalone" />
         <label xml:lang="de" text="Dissertation" />
@@ -59,6 +54,11 @@
         <label xml:lang="x-hosts" text="series standalone" />
         <label xml:lang="de" text="Diplomarbeit" />
         <label xml:lang="en" text="Diploma thesis" />
+      </category>
+      <category ID="state_examination">
+        <label xml:lang="x-hosts" text="series standalone" />
+        <label xml:lang="en" text="State examination" />
+        <label xml:lang="de" text="Abschlussarbeit (Staatsexamen)" />
       </category>
       <category ID="master_thesis">
         <label xml:lang="x-hosts" text="series standalone" />
