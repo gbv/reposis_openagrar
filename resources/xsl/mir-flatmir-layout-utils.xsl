@@ -70,41 +70,14 @@
   </xsl:template>
 
   <xsl:template name="mir.footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <p>© 2016 OpenAgrar</p>
-        </div>
-        <div class="col-md-8">
-          <ul class="internal_links nav navbar-nav">
-            <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='below']/*" />
-          </ul>
-        </div>
-      </div>
-    </div>
-  </xsl:template>
-
-  <xsl:template name="mir.powered_by">
     <xsl:variable name="mcr_version" select="concat('MyCoRe ',mcrver:getCompleteVersion())" />
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
-
-        </div>
-        <div class="col-md-3">
-
-        </div>
-        <div class="col-md-3">
-          <h3>Kontakt</h3>
-          <p>
-            Platz der Göttinger Sieben 1 <br />
-            37073 Göttingen <br />
-            Tel.: 0551 39 5207 <br />
-            Fax: 0551 39 13980 <br />
-            <b>Digitale Bibliothek, Reposis</b><br />
-            Internet: <a href="https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-repository-service">https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-repository-service</a> <br />
-            E-Mail: <a href="mailto:dms-list@gbv.de">dms-list@gbv.de</a>
-          </p>
+        <div class="col-md-9">
+          <p>© 2016 OpenAgrar</p>
+          <ul class="internal_links nav navbar-nav">
+            <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='below']/*" />
+          </ul>
         </div>
         <div class="col-md-3 text-center">
           <div id="sponsored_by">
@@ -120,6 +93,10 @@
         </div>
       </div>
     </div>
+  </xsl:template>
+
+  <xsl:template name="mir.powered_by">
+    <!-- do nothing -->
   </xsl:template>
 
 </xsl:stylesheet>
