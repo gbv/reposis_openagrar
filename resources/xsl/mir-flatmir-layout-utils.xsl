@@ -88,17 +88,33 @@
     <xsl:variable name="mcr_version" select="concat('MyCoRe ',mcrver:getCompleteVersion())" />
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
-          <div id="powered_by">
-            <a href="http://www.mycore.de">
-              <img src="{$WebApplicationBaseURL}mir-layout/images/mycore_logo_small_invert.png" title="{$mcr_version}" alt="powered by MyCoRe" />
-            </a>
-          </div>
+        <div class="col-md-3">
+
         </div>
-        <div class="col-md-6">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-3">
+          <h3>Kontakt</h3>
+          <p>
+            Platz der Göttinger Sieben 1 <br />
+            37073 Göttingen <br />
+            Tel.: 0551 39 5207 <br />
+            Fax: 0551 39 13980 <br />
+            <b>Digitale Bibliothek, Reposis</b><br />
+            Internet: <a href="https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-repository-service">https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-repository-service</a> <br />
+            E-Mail: <a href="mailto:dms-list@gbv.de">dms-list@gbv.de</a>
+          </p>
+        </div>
+        <div class="col-md-3 text-center">
           <div id="sponsored_by">
             <a href="http://www.bmel.de/">
               <img src="{$WebApplicationBaseURL}images/logos/logo_bmelv.png" title="Forschung im Bereich des BMEL" alt="Forschung im Bereich des BMEL" />
+            </a>
+          </div>
+          <div id="powered_by">
+            <a href="http://www.mycore.de">
+              <img src="{$WebApplicationBaseURL}mir-layout/images/mycore_logo_small_invert.png" title="{$mcr_version}" alt="powered by MyCoRe" />
             </a>
           </div>
         </div>
