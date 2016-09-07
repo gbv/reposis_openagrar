@@ -112,11 +112,7 @@ html body header #header_box {
   background-color: #00487D;
 }
 .mir-main-nav nav .navbar-nav .dropdown-menu > .active > a {
-  background-color: #62a0a8;
-}
-.mir-main-nav nav .navbar-nav .dropdown-menu > .active > a:hover,
-.mir-main-nav nav .navbar-nav .dropdown-menu > .active > a:focus {
-    color: #62a0a8;
+  background-color: #85bc7c;
 }
 .mir-main-nav {
     box-shadow: unset;
@@ -179,7 +175,7 @@ html body #powered_by {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 170px; /* Set the fixed height of the footer here */
+  height: 190px; /* Set the fixed height of the footer here */
 }
 .flatmir-footer .container {
   margin-top: 0px;
