@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="noteTypes">
+  <label xml:lang="de" text="Kommentartyp" />
+  <label xml:lang="en" text="Type of note" />
+  <label xml:lang="x-uri" text="http://www.mycore.org/classifications/noteTypes" />
+  <url xlink:href="http://www.loc.gov/standards/mods/mods-notes.html" xlink:type="locator" />
+  <categories>
+    <category ID="thesis">
+      <label xml:lang="en" text="Dissertation note" />
+      <label xml:lang="x-access" text="guest" />
+      <label xml:lang="de" text="Hochschulvermerk" />
+    </category>
+    <category ID="system_details">
+      <label xml:lang="x-access" text="guest" />
+      <label xml:lang="en" text="system details" />
+      <label xml:lang="de" text="System Angaben" />
+    </category>
+    <category ID="date">
+      <label xml:lang="de" text="Datum" />
+      <label xml:lang="en" text="date" />
+      <label xml:lang="x-access" text="guest" />
+    </category>
+    <category ID="content">
+      <label xml:lang="x-access" text="guest" />
+      <label xml:lang="de" text="Inhalt" />
+      <label xml:lang="en" text="content" />
+    </category>
+    <category ID="citation/reference">
+      <label xml:lang="x-access" text="guest" />
+      <label xml:lang="en" text="citation/reference" />
+      <label xml:lang="de" text="Zitierungen / Referenzen" />
+    </category>
+    <category ID="admin">
+      <label xml:lang="en" text="intern comment" />
+      <label xml:lang="de" text="interner Kommentar" />
+      <label xml:lang="x-access" text="editor admin" />
+    </category>
+  </categories>
+</mycoreclass>
