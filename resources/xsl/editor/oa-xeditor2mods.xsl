@@ -35,18 +35,15 @@
   </xsl:template>
 
   <xsl:template match="mods:name" mode="addIDToName">
-    <!-- only copy mods:name where a name is given -->
     <xsl:param name="ID" />
-    <xsl:if test="@mcr:categId">
-      <xsl:apply-templates select="." mode="handleClassification">
-        <xsl:with-param name="ID" select="$ID" />
-      </xsl:apply-templates>
-    </xsl:if>
-    <xsl:if test="mods:displayForm | mods:namePart">
+    <mods:name>
+      <xsl:attribute name="ID">
+        <xsl:value-of select="$ID" />
+      </xsl:attribute>
       <xsl:copy>
         <xsl:apply-templates select='@*|node()' />
       </xsl:copy>
-    </xsl:if>
+    </mods:name>
   </xsl:template>
 
 
