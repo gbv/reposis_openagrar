@@ -10,10 +10,11 @@
     <div id="header_box" class="clearfix container">
       <div id="project_logo_box">
         <a href="http://www.bfr.bund.de/"><img id="logo_bfr" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_bfr.png" alt="" /></a>
-        <a href="http://www.ti.bund.de/"><img id="logo_thuenen" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_thuenen.png" alt="" /></a>
-        <a href="http://www.mri.bund.de/"><img id="logo_mri" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_mri.png" alt="" /></a>
-        <a href="http://www.fli.bund.de/"><img id="logo_fli" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_fli.png" alt="" /></a>
+        <a href="http://www.thuenen.de/"><img id="logo_thuenen" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_thuenen.png" alt="" /></a>
+        <a href="https://www.mri.bund.de/"><img id="logo_mri" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_mri.png" alt="" /></a>
+        <a href="https://www.fli.de/"><img id="logo_fli" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_fli.png" alt="" /></a>
         <a href="http://www.jki.bund.de/"><img id="logo_jki" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_jki.png" alt="" /></a>
+        <a href="https://www.dbfz.de/"><img id="logo_dbfz" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_dbfz.png" alt="" /></a>
         <a href="{$WebApplicationBaseURL}"><img id="logo_oa" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_oa.png" alt="" /></a>
       </div>
       <div id="options_nav_box" class="mir-prop-nav">
