@@ -84,6 +84,10 @@
     </fieldset>
   </xed:template>
 
+  <xed:template id="source">
+    <mir:textarea xpath="mods:relatedItem[@type='isReferencedBy']/mods:titleInfo/mods:title" label="oa.source" help-text="{i18n:oa.help.source}" rows="3" />
+  </xed:template>
+
   <xed:template id="college">
     <mir:textfield xpath="mods:originInfo[@eventType='creation']/mods:publisher" label="mir.college" help-text="{i18n:mir.help.college}" />
   </xed:template>
