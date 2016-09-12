@@ -88,13 +88,13 @@
   <menu id="publish" dir="/content/publish">
     <label xml:lang="de">Dokumente einreichen</label>
     <label xml:lang="en">Submit Document</label>
-    <item href="/servlets/MCRActionMappingServlet/mods/create" type="intern">
+    <item href="/content/publish/index.xml" type="intern">
       <label xml:lang="de">Publizieren</label>
       <label xml:lang="en">Publish</label>
     </item>
-    <item href="/content/publish/importPPN.xml" type="intern">
-      <label xml:lang="de">Publizieren (PPN Import)</label>
-      <label xml:lang="en">Publish (PPN Import)</label>
+    <item href="/editor/editor-admins.xed" type="intern">
+      <label xml:lang="de">Publizieren (Admin)</label>
+      <label xml:lang="en">Publish (Admin)</label>
     </item>
     <item href="/content/publish/guidelines.xml" type="intern">
       <label xml:lang="de">Erfassungsrichtlinien</label>

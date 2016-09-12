@@ -77,7 +77,7 @@
             <mir:help-pmud help-text="{i18n:mir.help.institutes}" pmud="true" />
           </div>
 
-          <mir:textfield xpath="mods:note[@type='admin']" label="mir.comment" help-text="{i18n:mir.help.comment}" rows="3" />
+          <mir:textarea xpath="mods:note[@type='admin']" label="mir.comment" help-text="{i18n:mir.help.comment}" rows="3" />
           <mir:textfield xpath="mods:location/mods:physicalLocation" label="oa.physicalLocation" help-text="{i18n:oa.help.physicalLocation}" />
         </xed:repeat>
       </div>
