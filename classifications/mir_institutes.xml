@@ -183,71 +183,111 @@
         <label xml:lang="de" text="Vorgängereinrichtung" />
       </category>
     </category>
-    <category ID="vti">
-      <label xml:lang="de" text="Johann Heinrich von Thünen-Institut" description="Bundesforschungsinstitut für Ländliche Räume, Wald und Fischerei" />
-      <url xlink:href="http://www.vti.bund.de/" xlink:type="locator" />
-      <category ID="vti_lr">
+    <category ID="ti">
+      <label xml:lang="de" text="Thünen-Institut" description="Bundesforschungsinstitut für Ländliche Räume, Wald und Fischerei" />
+      <url xlink:href="http://www.ti.bund.de/" xlink:type="locator" />
+      <category ID="ti_ma">
+         <label xml:lang="de" text="Institut für Marktanalyse" />
+      </category>
+      <category ID="ti_at">
+        <label xml:lang="de" text="Institut für Agrartechnologie" />
+      </category>
+      <category ID="ti_ak">
+        <label xml:lang="de" text="Institut für Agrarklimaschutz" />
+      </category>
+      <category ID="ti_lr">
         <label xml:lang="de" text="Institut für Ländliche Räume" />
       </category>
-      <category ID="vti_bw">
+      <category ID="ti_bw">
         <label xml:lang="de" text="Institut für Betriebswirtschaft" />
       </category>
-      <category ID="vti_ma">
-        <label xml:lang="de" text="Institut für Marktanalyse und Agrarhandelspolitik" />
-      </category>
-      <category ID="vti_ab">
-        <label xml:lang="de" text="Institut für Agrartechnologie und Biosystemtechnik" />
-      </category>
-      <category ID="vti_bd">
+      <category ID="ti_bd">
         <label xml:lang="de" text="Institut für Biodiversität" />
       </category>
-      <category ID="vti_ak">
-        <label xml:lang="de" text="Institut für Agrarrelevante Klimaforschung" />
+      <category ID="ti_ol">
+         <label xml:lang="de" text="Institut für ökologischen Landbau" />
       </category>
-      <category ID="vti_oel">
-        <label xml:lang="de" text="Institut für ökologischen Landbau " />
+      <category ID="ti_hf">
+        <label xml:lang="de" text="Institut für Holzforschung" />
       </category>
-      <category ID="vti_htb">
-        <label xml:lang="de" text="Institut für Holztechnologie und Holzbiologie" />
+      <category ID="ti_fo">
+        <label xml:lang="de" text="Institut für Forstökonomie" />
       </category>
-      <category ID="vti_oef">
-        <label xml:lang="de" text="Institut für Ökonomie der Forst- und Holzwirtschaft " />
-      </category>
-      <category ID="vti_wfw">
+      <category ID="ti_wf">
         <label xml:lang="de" text="Institut für Weltforstwirtschaft" />
       </category>
-      <category ID="vti_woi">
-        <label xml:lang="de" text="Institut Waldökologie und Waldinventuren" />
+      <category ID="ti_wo">
+        <label xml:lang="de" text="Institut für Waldökosysteme" />
       </category>
-      <category ID="vti_fg">
+      <category ID="ti_fg">
         <label xml:lang="de" text="Institut für Forstgenetik" />
       </category>
-      <category ID="vti_sf">
+      <category ID="ti_sf">
         <label xml:lang="de" text="Institut für Seefischerei" />
       </category>
-      <category ID="vti_foe">
+      <category ID="ti_fi">
         <label xml:lang="de" text="Institut für Fischereiökologie" />
       </category>
-      <category ID="vti_osf">
+      <category ID="ti_of">
         <label xml:lang="de" text="Institut für Ostseefischerei" />
       </category>
-      <category ID="vti_it">
+      <category ID="ti_it">
         <label xml:lang="de" text="Informationstechnik" />
       </category>
-      <category ID="vti_fiz">
+      <category ID="ti_fz">
         <label xml:lang="de" text="Fachinformationszentrum" />
-      </category>
-      <category ID="vti_pb">
-        <label xml:lang="de" text="Präsidialbüro" />
-      </category>
-      <category ID="vti_pr">
-        <label xml:lang="de" text="Presse- und Öffentlichkeitsarbeit" />
-      </category>
-      <category ID="vti_vw">
-        <label xml:lang="de" text="Verwaltung" />
       </category>
       <category ID="vti_vg">
         <label xml:lang="de" text="Vorgängereinrichtung" />
+        <category ID="vti">
+          <label xml:lang="de" text="Johann Heinrich von Thünen-Institut" description="Bundesforschungsinstitut für Ländliche Räume, Wald und Fischerei" />
+            <url xlink:href="http://www.vti.bund.de/" xlink:type="locator" />
+          <category ID="vti_ma">
+            <label xml:lang="de" text="Institut für Marktanalyse und Agrarhandelspolitik" />
+          </category>
+          <category ID="vti_ab">
+            <label xml:lang="de" text="Institut für Agrartechnologie und Biosystemtechnik" />
+          </category>
+          <category ID="vti_oel">
+            <label xml:lang="de" text="Institut für ökologischen Landbau " />
+          </category>
+          <category ID="vti_htb">
+            <label xml:lang="de" text="Institut für Holztechnologie und Holzbiologie" />
+          </category>
+          <category ID="vti_oef">
+            <label xml:lang="de" text="Institut Ökonomie der Forst- und Holzwirtschaft " />
+          </category>
+          <category ID="vti_wfw">
+            <label xml:lang="de" text="Institut für Weltforstwirtschaft" />
+          </category>
+          <category ID="vti_woi">
+            <label xml:lang="de" text="Institut Waldökologie und Waldinventuren" />
+          </category>
+          <category ID="vti_sf">
+            <label xml:lang="de" text="Institut für Seefischerei" />
+          </category>
+          <category ID="vti_foe">
+            <label xml:lang="de" text="Institut für Fischereiökologie" />
+          </category>
+          <category ID="vti_osf">
+            <label xml:lang="de" text="Institut für Ostseefischerei" />
+          </category>
+          <category ID="vti_fiz">
+            <label xml:lang="de" text="Fachinformationszentrum" />
+          </category>
+          <category ID="vti_pb">
+            <label xml:lang="de" text="Präsidialbüro" />
+          </category>
+          <category ID="vti_pr">
+            <label xml:lang="de" text="Presse- und Öffentlichkeitsarbeit" />
+          </category>
+          <category ID="vti_vw">
+            <label xml:lang="de" text="Verwaltung" />
+          </category>
+        </category>
+        <category ID="fal">
+          <label xml:lang="de" text="Bundesforschungsanstalt für Landwirtschaft" />
+        </category>
       </category>
     </category>
     <category ID="bfr_201406">
