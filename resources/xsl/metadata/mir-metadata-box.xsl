@@ -247,34 +247,45 @@
                                                         not(@authorityURI='https://www.openagrar.de/classifications/annual_review')]" />
             <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:part/mods:extent" />
             <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:location/mods:url" />
-            <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:note">
-              <xsl:variable name="myURI" select="concat('classification:metadata:0:children:noteTypes:',mcrxsl:regexp(@type,' ', '_'))" />
-              <xsl:variable name="x-access">
-                <xsl:value-of select="document($myURI)//label[@xml:lang='x-access']/@text"/>
-              </xsl:variable>
-              <xsl:variable name="noteLabel">
-                <xsl:value-of select="document($myURI)//category/label[@xml:lang=$CurrentLang]/@text"/>
-              </xsl:variable>
-              <xsl:if test="contains($x-access, 'guest')">
-                <xsl:call-template name="printMetaDate.mods">
-                  <xsl:with-param select="." name="nodes" />
-                  <xsl:with-param select="$noteLabel" name="label"/>
-                </xsl:call-template>
-              </xsl:if>
-            </xsl:for-each>
-
             <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
               <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']" />
             </xsl:if>
-            <xsl:call-template name="printMetaDate.mods">
-              <xsl:with-param name="nodes" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:location/mods:physicalLocation" />
-            </xsl:call-template>
-            <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:name[@type='corporate'][@ID or @authorityURI=$institutesURI]" />
+            <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:name[@type='corporate'][@ID or @authorityURI=$institutesURI]" />
 
           </table>
 
     </div>
     <xsl:apply-imports />
+  </xsl:template>
+
+
+  <xsl:template match="mods:name[@type='corporate' and @ID]" mode="oa">
+    <xsl:variable name="id" select="concat('#', @ID)" />
+    <tr>
+      <td valign="top" class="metaname">
+        <span class="oa-noteLocationCorp-meta"><xsl:value-of select="concat(i18n:translate('component.mods.metaData.dictionary.institution.label'),':')" /></span>
+      </td>
+      <td class="metavalue">
+        <span class="oa-noteLocationCorp-meta"><xsl:apply-templates select="." mode="printName" /></span>
+      </td>
+    </tr>
+    <xsl:if
+      test="(not(mcrxsl:isCurrentUserGuestUser()) and ./../mods:note[@xlink:href=$id]) or (./../mods:location/mods:physicalLocation[@xlink:href=$id])">
+      <tr>
+        <td colspan="2">
+          <table class="metaData">
+            <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
+              <xsl:call-template name="printMetaDate.mods">
+                <xsl:with-param name="nodes" select="./../mods:note[@xlink:href=$id]" />
+              </xsl:call-template>
+            </xsl:if>
+            <xsl:call-template name="printMetaDate.mods">
+              <xsl:with-param name="nodes" select="./../mods:location/mods:physicalLocation[@xlink:href=$id]" />
+            </xsl:call-template>
+          </table>
+        </td>
+      </tr>
+    </xsl:if>
   </xsl:template>
 
 </xsl:stylesheet>

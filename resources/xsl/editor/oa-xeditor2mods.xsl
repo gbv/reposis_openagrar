@@ -36,14 +36,12 @@
 
   <xsl:template match="mods:name" mode="addIDToName">
     <xsl:param name="ID" />
-    <mods:name>
+    <xsl:copy>
       <xsl:attribute name="ID">
         <xsl:value-of select="$ID" />
       </xsl:attribute>
-      <xsl:copy>
-        <xsl:apply-templates select='@*|node()' />
-      </xsl:copy>
-    </mods:name>
+      <xsl:apply-templates select='@*|node()' />
+    </xsl:copy>
   </xsl:template>
 
 

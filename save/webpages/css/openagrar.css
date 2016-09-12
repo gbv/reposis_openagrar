@@ -172,6 +172,10 @@ html body header #header_box {
 .oa-noteLocationCorp > label {
   margin-top: 20px;
 }
+.oa-noteLocationCorp-meta {
+  margin-top: 20px;
+  display: block;
+}
 
 
 /* *********************** footer *********************** */
