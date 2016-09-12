@@ -8,7 +8,16 @@
 >
 
   <xsl:template match="noteLocationCorp">
-    <xsl:variable name="repeaterId" select="generate-id(.)" />
+    <xsl:variable name="repeaterId">
+      <xsl:choose>
+        <xsl:when test="mods:name/@ID">
+          <xsl:value-of select="mods:name/@ID" />
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="generate-id(.)" />
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
     <xsl:apply-templates select="mods:name" mode="addIDToName">
       <xsl:with-param name="ID" select="$repeaterId" />
     </xsl:apply-templates>
