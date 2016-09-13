@@ -3,8 +3,9 @@
   version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:mods="http://www.loc.gov/mods/v3"
+  xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions"
   xmlns:xlink="http://www.w3.org/1999/xlink"
-  exclude-result-prefixes="mods xlink"
+  exclude-result-prefixes="mods mcrxsl xlink"
 >
   <xsl:import href="xslImport:solr-document:openagrar-solr.xsl" />
 
