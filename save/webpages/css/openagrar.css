@@ -77,13 +77,16 @@ html body header #header_box {
 /* ****************** searchfield_box ******************* */
 .searchfield_box {
   position: absolute;
-  left:0;
-  bottom:-45px;
+  left: 8px;
+  bottom: -40px;
+  background: transparent url("../images/searchbar.png") no-repeat top left;
+  width: 625px;
 }
 
 .searchfield_box .btn-primary {
-  color: #00487D;
-  background-color: #F9F9F9;
+  background: transparent url("../images/searchbar_label.png") no-repeat top left;
+  width: 98px;
+  height: 32px;
   border-width: 0px;
   margin: 0 0 0 15px;
   padding:0;
@@ -93,7 +96,16 @@ html body header #header_box {
 .searchfield_box input {
   border-width: 0px;
 }
-
+html body header #searchInput {
+  padding: 0 0 0 25px;
+  margin-top: 0;
+  height: 30px;
+  width: 487px;
+  background: transparent url("../images/searchbar_input.png") no-repeat top left;
+}
+.searchfield_box .navbar-form {
+  margin: 4px 0;
+}
 
 /* ********************* navigation ********************* */
 .mir-main-nav .container {
@@ -145,6 +157,9 @@ html body header #header_box {
   height: 40px;
   width: 120px;
 }
+#basket-list-item {
+  text-align: right;
+}
 .mir-main-nav .nav > li:hover, .mir-main-nav .nav > li:active {
   background: #eee url("../images/back_main_menu_button_down.png") no-repeat top left;
 }
@@ -165,9 +180,7 @@ html body header #header_box {
 .mir-main-nav nav .navbar-nav .dropdown-menu {
   background-color: #00487D;
   border: 0px !important;
-  border-radius: 0 !important;
   box-shadow: 0 0 0 !important;
-  margin: 0px !important;
   padding: 0px;
 }
 
@@ -178,12 +191,24 @@ html body header #header_box {
 }
 
 .mir-main-nav nav .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > .open > a,
+.mir-main-nav nav .navbar-nav > li.active > a:hover,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus,
-.mir-main-nav nav .navbar-nav .dropdown-menu > li > a:hover,
-.mir-main-nav nav .navbar-nav .dropdown-menu > li > a:focus {
-    background-color: transparent;
+.navbar-default .navbar-nav > li.active > a:hover,
+.navbar-default .navbar-nav > li.active > a:focus,
+.navbar-default .navbar-nav > li.active > a,
+.navbar-default .navbar-nav > .open > a {
+  background-color: transparent;
+  color: #223;
+  text-decoration: underline;
+}
+.navbar-default .navbar-nav > li.active > a,
+.navbar-default .navbar-nav > .open > a {
+  text-decoration: none;
+}
+
+.navbar-default .navbar-nav > li.active {
+  background: #eee url("../images/back_main_menu_button_down.png") no-repeat top left;
 }
 
 

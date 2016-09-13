@@ -55,8 +55,8 @@
         <nav class="collapse navbar-collapse mir-main-nav-entries">
           <ul class="nav navbar-nav pull-right">
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='search']" />
-            <xsl:call-template name="mir.basketMenu" />
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='browse']" />
+            <xsl:call-template name="oa.basketMenu" />
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='register']/*" />
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='publish']" />
           </ul>
@@ -98,6 +98,41 @@
 
   <xsl:template name="mir.powered_by">
     <!-- do nothing -->
+  </xsl:template>
+
+  <xsl:template name="oa.basketMenu">
+    <xsl:variable name="basketType" select="'objects'" />
+    <xsl:variable name="basket" select="document(concat('basket:',$basketType))/basket" />
+    <xsl:variable name="entryCount" select="count($basket/entry)" />
+    <xsl:variable name="basketTitle">
+      <xsl:choose>
+        <xsl:when test="$entryCount = 0">
+          <xsl:value-of select="i18n:translate('basket.numEntries.none')" disable-output-escaping="yes" />
+        </xsl:when>
+        <xsl:when test="$entryCount = 1">
+          <xsl:value-of select="i18n:translate('basket.numEntries.one')" disable-output-escaping="yes" />
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="i18n:translate('basket.numEntries.many',$entryCount)" disable-output-escaping="yes" />
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+
+    <li class="dropdown" id="basket-list-item">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="{$basketTitle}">
+        Merkliste
+        <sup>
+          <xsl:value-of select="$entryCount" />
+        </sup>
+      </a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}?type={$basket/@type}&amp;action=show">
+            <xsl:value-of select="i18n:translate('basket.open')" />
+          </a>
+        </li>
+      </ul>
+    </li>
   </xsl:template>
 
 </xsl:stylesheet>
