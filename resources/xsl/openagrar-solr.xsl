@@ -32,7 +32,7 @@
       </field>
     </xsl:for-each>
     <xsl:for-each
-      select=".//mods:name[mods:role/mods:roleTerm[@authority='marcrelator' and (@type='text' and text()='author') or (@type='code' and text()='aut')]]">
+      select="mods:name[mods:role/mods:roleTerm[@authority='marcrelator' and (@type='text' and text()='author') or (@type='code' and text()='aut')]]">
       <xsl:if test="position()=1">
         <field name="mods.mainAuthor">
           <xsl:for-each select="mods:displayForm | mods:namePart | text()">
