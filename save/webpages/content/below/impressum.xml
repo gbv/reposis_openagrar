@@ -3,64 +3,71 @@
 <MyCoReWebPage>
   <section xml:lang="de" title="Impressum">
   <div>
-    <h2>Gesamtverantwortung</h2>
-    <p>
-      <strong>
-        Der Präsident des Senats der Bundesforschungsinstitute <br/>
-        im Geschäftsbereich des Bundesministeriums für Ernährung <br/>
-        und Landwirtschaft <br/>
-      </strong>
-      c/o Geschäftsstelle <br/>
-      Königin-Luise-Straße 19 <br/>
-      14195 Berlin <br/>
-      Dr. rer. nat. Antje Töpfer  <br/>
-      Dr. sc. agr. Michaela Nürnberg  <br/>
-      E-Mail: <span class="madress">senat-bundesforschung [at] jki.bund.de</span>
-    </p>
-    <p>
-      Das Angebot openagrar.bmel-forschung.de wurde im Rahmen eines Projektes des Konjunkturpaketes II
-      der Bundesregierung unter Federführung der Bundesanstalt für Landwirtschaft und Ernährung in Zusammenarbeit
-      mit den Bibliotheken der Ressortforschungseinrichtungen und dem Gemeinsamen Bibliotheksverbund (GBV)
-      entwickelt. Die Programmierarbeiten wurden gemeinsam mit der Thüringischen Landes- und Universitätsbibliothek
-      (ThULB) Jena durchgeführt. Die Ansprechpartner finden Sie unter Kontakt.
-    </p>
+    <h1>
+      Impressum
+    </h1>
+    <div class="row">
+      <div class="col-md-8 oa-borderbox" lang="de">
+        <h2>Gesamtverantwortung</h2>
+        <p>
+          <strong>
+            Der Präsident des Senats der Bundesforschungsinstitute <br/>
+            im Geschäftsbereich des Bundesministeriums für Ernährung <br/>
+            und Landwirtschaft <br/>
+          </strong>
+          c/o Geschäftsstelle <br/>
+          Königin-Luise-Straße 19 <br/>
+          14195 Berlin <br/>
+          Dr. rer. nat. Antje Töpfer  <br/>
+          Dr. sc. agr. Michaela Nürnberg  <br/>
+          E-Mail: <span class="madress">senat-bundesforschung [at] jki.bund.de</span>
+        </p>
+        <p>
+          Das Angebot openagrar.bmel-forschung.de wurde im Rahmen eines Projektes des Konjunkturpaketes II
+          der Bundesregierung unter Federführung der Bundesanstalt für Landwirtschaft und Ernährung in Zusammenarbeit
+          mit den Bibliotheken der Ressortforschungseinrichtungen und dem Gemeinsamen Bibliotheksverbund (GBV)
+          entwickelt. Die Programmierarbeiten wurden gemeinsam mit der Thüringischen Landes- und Universitätsbibliothek
+          (ThULB) Jena durchgeführt. Die Ansprechpartner finden Sie unter Kontakt.
+        </p>
 
-    <h2>Betrieb</h2>
-    <p>
-      Das Portal sowie die dafür erforderlichen Datenbanken werden vom Gemeinsamen Bibliotheksverbund GBV in Göttingen
-      gehostet und betrieben.
-    </p>
+        <h2>Betrieb</h2>
+        <p>
+          Das Portal sowie die dafür erforderlichen Datenbanken werden vom Gemeinsamen Bibliotheksverbund GBV in Göttingen
+          gehostet und betrieben.
+        </p>
 
-    <h2>Hinweise zur Nutzung</h2>
-    <p>
-      Für Vollständigkeit, Fehler redaktioneller und technischer Art, Auslassungen usw. sowie die Richtigkeit der Eintragungen kann
-      keine Haftung übernommen werden. Insbesondere kann keine Gewähr für die Vollständigkeit und Richtigkeit von Informationen
-      übernommen werden, die über weiterführende Links erreicht werden.
-    </p>
-    <p>
-      Anbieter sind für die eigenen Inhalte, die sie zur Nutzung bereithalten, nach den allgemeinen Gesetzen verantwortlich.
-      Von diesen eigenen Inhalten sind Querverweise auf die von anderen Anbietern bereitgehaltenen Inhalte zu unterscheiden.
-    </p>
-    <p>
-      Die Verweise durch Hyperlinks auf Inhalte fremder Webseiten dienen lediglich der Information. Die Verantwortlichkeit
-      für diese fremden Inhalte liegt allein bei dem Anbieter, der die Inhalte bereithält. Vor dem Einrichten des entsprechenden
-      Verweises sind die Web-Seiten der anderen Anbieter mit großer Sorgfalt und nach bestem Wissen und Gewissen überprüft worden.
-      Es kann jedoch keine Gewähr für die Vollständigkeit und Richtigkeit von Informationen übernommen werden, die über weiterführende
-      Hyperlinks erreicht werden. Der Inhalt der anderen Web-Seiten kann jederzeit ohne Wissen der Internet-Redaktion des Senats
-      geändert werden.
-    </p>
-    <p>
-      Für sämtliche Links auf diesen Seiten gilt: Wir betonen, dass wir keinen Einfluss auf die Gestaltung und die Inhalte der
-      durch Link von unserer Homepage aus erreichbaren Seiten anderer Anbieter haben und uns deren Inhalt nicht zu eigen machen.
-      Diese Erklärung gilt für alle Seiten dieser Homepage und die dort angebrachten Links.
-    </p>
-    <p>
-      Falls auf Seiten verwiesen werden sollte, deren Inhalt Anlass zur Beanstandung gibt, bittet die Internet-Redaktion um Mitteilung.
-    </p>
-    <p>
-      Die Internet-Redaktion behält sich das Recht vor, ohne vorherige Ankündigung die bereitgestellten Informationen zu ändern,
-      zu ergänzen oder zu entfernen.
-    </p>
+        <h2>Hinweise zur Nutzung</h2>
+        <p>
+          Für Vollständigkeit, Fehler redaktioneller und technischer Art, Auslassungen usw. sowie die Richtigkeit der Eintragungen kann
+          keine Haftung übernommen werden. Insbesondere kann keine Gewähr für die Vollständigkeit und Richtigkeit von Informationen
+          übernommen werden, die über weiterführende Links erreicht werden.
+        </p>
+        <p>
+          Anbieter sind für die eigenen Inhalte, die sie zur Nutzung bereithalten, nach den allgemeinen Gesetzen verantwortlich.
+          Von diesen eigenen Inhalten sind Querverweise auf die von anderen Anbietern bereitgehaltenen Inhalte zu unterscheiden.
+        </p>
+        <p>
+          Die Verweise durch Hyperlinks auf Inhalte fremder Webseiten dienen lediglich der Information. Die Verantwortlichkeit
+          für diese fremden Inhalte liegt allein bei dem Anbieter, der die Inhalte bereithält. Vor dem Einrichten des entsprechenden
+          Verweises sind die Web-Seiten der anderen Anbieter mit großer Sorgfalt und nach bestem Wissen und Gewissen überprüft worden.
+          Es kann jedoch keine Gewähr für die Vollständigkeit und Richtigkeit von Informationen übernommen werden, die über weiterführende
+          Hyperlinks erreicht werden. Der Inhalt der anderen Web-Seiten kann jederzeit ohne Wissen der Internet-Redaktion des Senats
+          geändert werden.
+        </p>
+        <p>
+          Für sämtliche Links auf diesen Seiten gilt: Wir betonen, dass wir keinen Einfluss auf die Gestaltung und die Inhalte der
+          durch Link von unserer Homepage aus erreichbaren Seiten anderer Anbieter haben und uns deren Inhalt nicht zu eigen machen.
+          Diese Erklärung gilt für alle Seiten dieser Homepage und die dort angebrachten Links.
+        </p>
+        <p>
+          Falls auf Seiten verwiesen werden sollte, deren Inhalt Anlass zur Beanstandung gibt, bittet die Internet-Redaktion um Mitteilung.
+        </p>
+        <p>
+          Die Internet-Redaktion behält sich das Recht vor, ohne vorherige Ankündigung die bereitgestellten Informationen zu ändern,
+          zu ergänzen oder zu entfernen.
+        </p>
+      </div>
+    </div>
   </div>
   </section>
   <meta>

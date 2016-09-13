@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/EsvMC5un3kjyUhB9ZEPPwg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
 /* latin */
 @font-face {
   font-family: 'Lato';
@@ -24,9 +31,38 @@ html {
 body {
   margin-bottom: 220px; /* Margin bottom by footer height */
 }
-
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 400;
+}
 html body #page {
   background-color: #F9F9F9;
+}
+.oa-borderbox {
+  border-radius: 3px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin: 20px 0px 40px 15px;
+}
+.panel {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 3px
+}
+html body #page #main_content .jumbotwo h2 {
+  font-size: 21px;
+  margin: 21px 0 10px 0;
+}
+.panel-default > .panel-heading,
+.result_body .result_filter .panel .panel-heading,
+.panel-heading {
+  background-color: #00487D;
+  color: white;
+  padding: 10px;
+  margin: 10px -1px;
+}
+.result_body .result_filter .panel .panel-heading .panel-title {
+  color: white;
 }
 
 /* ****************** header and logos ****************** */
@@ -147,7 +183,7 @@ html body header #searchInput {
   line-height: 17px;
 }
 .mir-main-nav .nav > li > a {
-  padding: 9px 5px 9px 10px;
+  padding: 10px 0px 8px 17px;
 }
 .mir-main-nav .nav > li {
   background: #eee url("../images/back_main_menu_button.png") no-repeat top left;
@@ -262,4 +298,10 @@ html body footer .internal_links {
 #oa-copyright {
   margin-top: 150px;
   position: absolute;
+}
+
+
+
+div#_altmetric_popover_el.altmetric-embed div#_altmetric_container.altmetric_container div#_altmetric_popover_inner .altmetric-popover-content {
+  background-color: #f9f9f9 !important;
 }

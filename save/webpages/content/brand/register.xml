@@ -3,20 +3,26 @@
 <MyCoReWebPage>
   <section xml:lang="de" title="Registrieren">
   <div>
-    <p>
-      Der Lesezugriff auf OpenAgrar ist frei für alle Besucher. Eine Registrierung hierfür ist nicht notwendig.
-    </p>
-    <p>
-      In der derzeitigen Version steht der Publikationsserver für die Veröffentlichung von Literaturnachweisen und
-      Volltexten nur den Einrichtungen aus dem Geschäftsbereich des Bundesministeriums für Ernährung
-      und Landwirtschaft (BMEL) zur Verfügung.
-    </p>
-    <p>
-      Sofern Sie in einer dieser Einrichtungen beschäftigt sind und Ihre Dokumente selber in OpenAgrar eingeben möchten,
-      ist eine Registrierung erforderlich. Hierfür nehmen Sie bitte mit der Bibliothek Ihrer Einrichtung Kontakt auf.
-      Die Adressen finden Sie unter <a href="../below/contact.xml">Kontakt</a>.
-    </p>
-
+    <h1>
+      Registrieren
+    </h1>
+    <div class="row">
+      <div class="col-md-8 oa-borderbox" lang="de">
+        <p>
+          Der Lesezugriff auf OpenAgrar ist frei für alle Besucher. Eine Registrierung hierfür ist nicht notwendig.
+        </p>
+        <p>
+          In der derzeitigen Version steht der Publikationsserver für die Veröffentlichung von Literaturnachweisen und
+          Volltexten nur den Einrichtungen aus dem Geschäftsbereich des Bundesministeriums für Ernährung
+          und Landwirtschaft (BMEL) zur Verfügung.
+        </p>
+        <p>
+          Sofern Sie in einer dieser Einrichtungen beschäftigt sind und Ihre Dokumente selber in OpenAgrar eingeben möchten,
+          ist eine Registrierung erforderlich. Hierfür nehmen Sie bitte mit der Bibliothek Ihrer Einrichtung Kontakt auf.
+          Die Adressen finden Sie unter <a href="../below/contact.xml">Kontakt</a>.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
   <meta>

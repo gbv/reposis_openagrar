@@ -2,13 +2,13 @@
 <MyCoReWebPage>
   <section xml:lang="de" title="Willkommen auf den Seiten des Publikationsservers OpenAgrar">
     <div class="jumbotwo">
-      <div class="row">
-        <div class="col-md-6" lang="de">
-          <h3>
-            Willkommen auf den Seiten des Publikationsservers OpenAgrar
-          </h3>
 
-          <h4>Sie suchen Literatur - versuchen Sie es doch hier</h4>
+      <h1>
+        Willkommen auf den Seiten des Publikationsservers OpenAgrar
+      </h1>
+      <div class="row">
+        <div class="col-md-8 oa-borderbox" lang="de">
+          <h2>Sie suchen Literatur - versuchen Sie es doch hier</h2>
           <p>
             Zum Ressortbereich des Bundesministeriums für Ernährung und Landwirtschaft
             (BMEL) gehören Bundesforschungsinstitute und weitere Bundesbehörden sowie Einrichtungen der
