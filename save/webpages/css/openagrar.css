@@ -147,7 +147,7 @@ html body header #searchInput {
   line-height: 17px;
 }
 .mir-main-nav .nav > li > a {
-  padding: 9px 21px 9px 16px;
+  padding: 9px 5px 9px 10px;
 }
 .mir-main-nav .nav > li {
   background: #eee url("../images/back_main_menu_button.png") no-repeat top left;
@@ -156,9 +156,6 @@ html body header #searchInput {
   padding: 0 0 0 0px;
   height: 40px;
   width: 120px;
-}
-#basket-list-item {
-  text-align: right;
 }
 .mir-main-nav .nav > li:hover, .mir-main-nav .nav > li:active {
   background: #eee url("../images/back_main_menu_button_down.png") no-repeat top left;
@@ -247,9 +244,22 @@ html body #powered_by {
 }
 #sponsored_by {
   background-color: #F9F9F9;
-  margin-top: 15px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
 }
 .flatmir-footer .nav > li > a:hover, .nav > li > a:focus {
     text-decoration: underline;
     background-color: inherit;
+}
+html body footer .internal_links {
+  width: 100%;
+}
+.internal_links > li:nth-child(1) > a:nth-child(1) {
+  padding-left: 0px;
+}
+#oa-copyright {
+  margin-top: 150px;
+  position: absolute;
 }

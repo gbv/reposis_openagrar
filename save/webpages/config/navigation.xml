@@ -86,15 +86,15 @@
     </item>
   </menu>
   <menu id="publish" dir="/content/publish">
-    <label xml:lang="de">Dokumente einreichen</label>
-    <label xml:lang="en">Submit Document</label>
+    <label xml:lang="de">Publizieren</label>
+    <label xml:lang="en">Publish</label>
     <item href="/content/publish/index.xml" type="intern">
-      <label xml:lang="de">Publizieren</label>
-      <label xml:lang="en">Publish</label>
+      <label xml:lang="de">Dokument einreichen</label>
+      <label xml:lang="en">Submit Document</label>
     </item>
     <item href="/editor/editor-admins.xed" type="intern">
-      <label xml:lang="de">Publizieren (Admin)</label>
-      <label xml:lang="en">Publish (Admin)</label>
+      <label xml:lang="de">Admin-Formular</label>
+      <label xml:lang="en">Admin Editor</label>
     </item>
     <item href="/content/publish/guidelines.xml" type="intern">
       <label xml:lang="de">Erfassungsrichtlinien</label>
