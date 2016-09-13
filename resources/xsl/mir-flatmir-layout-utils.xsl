@@ -2,7 +2,9 @@
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:mcrver="xalan://org.mycore.common.MCRCoreVersion"
-    exclude-result-prefixes="mcrver">
+    xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation"
+    xmlns:basket="xalan://org.mycore.frontend.basket.MCRBasketManager"
+    exclude-result-prefixes="mcrver i18n basket">
 
   <xsl:import href="resource:xsl/layout/mir-common-layout.xsl" />
   <xsl:template name="mir.navigation">
