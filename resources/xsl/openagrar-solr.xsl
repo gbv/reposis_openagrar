@@ -15,6 +15,11 @@
   </xsl:template>
 
   <xsl:template match="mods:mods" mode="oa">
+    <xsl:for-each select="mods:subject">
+      <field name="mods.subject">
+        <xsl:value-of select="mods:topic" />
+      </field>
+    </xsl:for-each>
     <xsl:for-each select="mods:location/mods:physicalLocation">
       <field name="mods.physicalLocation">
         <xsl:value-of select="." />
@@ -24,6 +29,16 @@
       <field name="mods.annual_review">
         <xsl:value-of select="@edition" />
       </field>
+    </xsl:for-each>
+    <xsl:for-each
+      select=".//mods:name[mods:role/mods:roleTerm[@authority='marcrelator' and (@type='text' and text()='author') or (@type='code' and text()='aut')]]">
+      <xsl:if test="position()=1">
+        <field name="mods.mainAuthor">
+          <xsl:for-each select="mods:displayForm | mods:namePart | text()">
+            <xsl:value-of select="concat(' ',mcrxsl:normalizeUnicode(.))" />
+          </xsl:for-each>
+        </field>
+      </xsl:if>
     </xsl:for-each>
   </xsl:template>
 </xsl:stylesheet>
