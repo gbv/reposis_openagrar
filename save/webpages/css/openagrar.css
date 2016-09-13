@@ -77,8 +77,8 @@ html body header #header_box {
 /* ****************** searchfield_box ******************* */
 .searchfield_box {
   position: absolute;
-  right: 0;
-  bottom: -20px;
+  left:0;
+  bottom:-45px;
 }
 
 .searchfield_box .btn-primary {
@@ -100,7 +100,7 @@ html body header #header_box {
     position: relative;
 }
 .mir-main-nav nav .navbar-nav {
-  margin: 0px 0px 0px 200px;
+  margin: -22px 0px 0px 0px;
 }
 .mir-main-nav .navbar-header {
   float: right;
@@ -110,7 +110,7 @@ html body header #header_box {
   position: inherit;
   min-height: 30px;
   background-color: #F9F9F9;
-  border-top: 6px solid #00487D;
+  border-top: 2px solid #00487D;
 }
 .navbar-default .navbar-nav > li {
   background-color: #00487D;
@@ -121,6 +121,12 @@ html body header #header_box {
 .mir-main-nav {
     box-shadow: unset;
 }
+.mir-main-nav .navbar-nav > li > a > .caret {
+  margin-left: 6px;
+  border-top: 6px solid;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+}
 .mir-main-nav nav .navbar-nav .dropdown-menu > li > a:hover,
 .mir-main-nav nav .navbar-nav .dropdown-menu > li > a,
 .mir-main-nav .navbar-nav > li > a {
@@ -129,10 +135,26 @@ html body header #header_box {
   line-height: 17px;
 }
 .mir-main-nav .nav > li > a {
-  padding: 9px 21px;
+  padding: 9px 21px 9px 16px;
 }
 .mir-main-nav .nav > li {
-  border-left: 1px solid #fff;
+  background: #eee url("../images/back_main_menu_button.png") no-repeat top left;
+  border: 0px solid #ccc;
+  margin: 0 0px 0 5px;
+  padding: 0 0 0 0px;
+  height: 40px;
+  width: 120px;
+}
+.mir-main-nav .nav > li:hover, .mir-main-nav .nav > li:active {
+  background: #eee url("../images/back_main_menu_button_down.png") no-repeat top left;
+}
+.mir-main-nav nav .navbar-nav > li > a {
+  color: #00487D;
+  font-weight: 700;
+  font-size: 16px;
+}
+.mir-main-nav nav .navbar-nav > li > a:hover {
+  color: #223;
 }
 .mir-main-nav nav .navbar-nav > li > a:hover .caret {
     border-top-color: #00487D !important;
@@ -161,7 +183,7 @@ html body header #header_box {
 .navbar-default .navbar-nav > .open > a:focus,
 .mir-main-nav nav .navbar-nav .dropdown-menu > li > a:hover,
 .mir-main-nav nav .navbar-nav .dropdown-menu > li > a:focus {
-    background-color: #5786a8;
+    background-color: transparent;
 }
 
 

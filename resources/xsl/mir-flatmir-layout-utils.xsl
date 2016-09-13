@@ -20,7 +20,7 @@
       <div id="options_nav_box" class="mir-prop-nav">
 
         <div class="searchfield_box">
-          <form action="{$WebApplicationBaseURL}servlets/solr/find?q={0}" class="navbar-form navbar-left pull-right" role="search">
+          <form action="{$WebApplicationBaseURL}servlets/solr/find?q={0}" class="navbar-form navbar-left" role="search">
             <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
             <div class="form-group">
               <input name="q" placeholder="Schnellsuche" class="form-control search-query" id="searchInput" type="text" />
@@ -53,12 +53,12 @@
         </div>
 
         <nav class="collapse navbar-collapse mir-main-nav-entries">
-          <ul class="nav navbar-nav pull-left">
+          <ul class="nav navbar-nav pull-right">
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='search']" />
+            <xsl:call-template name="mir.basketMenu" />
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='browse']" />
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='register']/*" />
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='publish']" />
-            <xsl:call-template name="mir.basketMenu" />
           </ul>
         </nav>
 
