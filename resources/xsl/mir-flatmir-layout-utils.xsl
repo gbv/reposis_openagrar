@@ -5,10 +5,9 @@
     xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation"
     xmlns:basket="xalan://org.mycore.frontend.basket.MCRBasketManager"
     exclude-result-prefixes="mcrver i18n basket">
-
+  <xsl:import href="resource:xsl/layout/mir-common-layout.xsl" />
   <xsl:param name="piwikID" select="'2'" />
 
-  <xsl:import href="resource:xsl/layout/mir-common-layout.xsl" />
   <xsl:template name="mir.navigation">
 
     <div id="header_box" class="clearfix container">
