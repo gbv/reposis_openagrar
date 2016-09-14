@@ -89,7 +89,7 @@
     <label xml:lang="de">Publizieren</label>
     <label xml:lang="en">Publish</label>
     <item href="/content/publish/index.xml" type="intern">
-      <label xml:lang="de">Dokument einreichen</label>
+      <label xml:lang="de">Dokument erfassen</label>
       <label xml:lang="en">Submit Document</label>
     </item>
     <item href="/editor/editor-admins.xed" type="intern">
