@@ -241,6 +241,9 @@
     <field name="mods.physicalLocation" type="string" multiValued="true" />
     <field name="mods.annual_review" type="int"/>
     <field name="mods.subject" type="text_de" multiValued="true" indexed="true" stored="false" />
+    <!-- sollte eigentlich mit category abgedeckt werden können: (depricated backward compability)-->
+    <field name="corporate" type="string" multiValued="true" />
+    
 
  <!-- Field to use to determine and enforce document uniqueness.
       Unless this field is marked with required="false", it will be a required field
