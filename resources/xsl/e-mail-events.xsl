@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mcrmods="xalan://org.mycore.mods.MCRMODSClassificationSupport"
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mcrmods="xalan://org.mycore.mods.classification.MCRMODSClassificationSupport"
   xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:acl="xalan://org.mycore.access.MCRAccessManager"
-  xmlns:mods="http://www.loc.gov/mods/v3" exclude-result-prefixes="acl mcrxsl mcrmods mods xlink">
+  xmlns:mods="http://www.loc.gov/mods/v3" xmlns:str="http://exslt.org/strings" exclude-result-prefixes="acl mcrxsl mcrmods mods xlink str">
   <xsl:param name="action" />
   <xsl:param name="CurrentUser" />
   <xsl:param name="DefaultLang" />
   <xsl:param name="type" />
   <xsl:param name="WebApplicationBaseURL" />
   <xsl:param name="ServletsBaseURL" />
-  <xsl:param name="MCR.bmelv-module.EditorMail" />
+  <xsl:param name="MCR.mir-module.EditorMail" />
+  <xsl:param name="MCR.mir-module.MailSender" />
+  <xsl:param name="MCR.mir-module.sendEditorMailToCurrentAuthor" />
   <xsl:variable name="newline" select="'&#xA;'" />
-  <xsl:variable name="categories" select="document('classification:metadata:1:children:bmelv_institutes')/mycoreclass/categories" />
-  <xsl:variable name="institutemember" select="$categories/category[mcrxsl:isCurrentUserInRole(concat('bmelv_institutes:',@ID))]" />
+  <xsl:variable name="categories" select="document('classification:metadata:1:children:mir_institutes')/mycoreclass/categories" />
+  <xsl:variable name="institutemember" select="$categories/category[mcrxsl:isCurrentUserInRole(concat('mir_institutes:',@ID))]" />
 
   <xsl:template match="/">
     <xsl:message>
@@ -21,7 +23,7 @@
       <xsl:value-of select="$action" />
     </xsl:message>
     <email>
-      <from>"OpenAgrar Server" &lt;openagrar@bmelv-forschung.de&gt;</from>
+      <from><xsl:value-of select="$MCR.mir-module.MailSender" /></from>
       <xsl:apply-templates select="/*" mode="email" />
     </email>
   </xsl:template>
@@ -124,13 +126,19 @@
       </xsl:variable>
       <xsl:value-of select="concat('Autor(en)       : ',$authors,$newline)" />
     </xsl:if>
-    <xsl:value-of select="concat('Link            : ',$WebApplicationBaseURL,'receive/',@ID)" />
+    <xsl:value-of select="concat('Link            : &lt;',$WebApplicationBaseURL,'receive/',@ID, '&gt;')" />
   </xsl:template>
 
   <xsl:template match="mycoreobject" mode="mailReceiver">
-    <xsl:if test="string-length($MCR.bmelv-module.EditorMail)&gt;0">
+    <xsl:if test="string-length($MCR.mir-module.EditorMail)&gt;0">
+      <xsl:for-each select="str:tokenize($MCR.mir-module.EditorMail,',')" >
+        <to> <xsl:value-of select="." /> </to>
+      </xsl:for-each>
+    </xsl:if>
+    <xsl:if test="$MCR.mir-module.sendEditorMailToCurrentAuthor = 'true'">
       <to>
-        <xsl:value-of select="$MCR.bmelv-module.EditorMail" />
+        <xsl:variable  name="user" select="document(concat('user:',service/servflags[@class='MCRMetaLangText']/servflag[@type='createdby']))" />
+        <xsl:value-of select="$user/user/eMail"/>
       </to>
     </xsl:if>
     <xsl:for-each select="$institutemember">
@@ -144,15 +152,15 @@
         <xsl:when test="./@ID='fli'">
           <to>oa.editor@fli.bund.de</to>
         </xsl:when>
-        <xsl:when test="./@ID='bfr'">
+        <xsl:when test="contains(./@ID,'bfr')">
           <to>benedikt.hummel@bfr.bund.de</to>
           <to>bfr@gbv.de</to>
         </xsl:when>
-        <xsl:when test="./@ID='vti'">
+        <xsl:when test="./@ID='ti' or ./@ID='vti'">
           <to>oa-editor@ti.bund.de</to>
         </xsl:when>
         <xsl:when test="./@ID='test'">
-          <to>dms-list@gbv.de</to>
+          <to>dms-list@lists.gbv.de</to>
         </xsl:when>
       </xsl:choose>
     </xsl:for-each>
