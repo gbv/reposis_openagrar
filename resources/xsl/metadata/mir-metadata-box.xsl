@@ -7,7 +7,6 @@
   <xsl:include href="modsmetadata.xsl" />
   <!-- copied from http://www.loc.gov/standards/mods/v3/MODS3-4_HTML_XSLT1-0.xsl -->
 
-  <xsl:param name="MCR.Mods.SherpaRomeo.ApiKey" select="''" />
   <xsl:key use="@type" name="title-by-type" match="//mods:mods/mods:titleInfo" />
 
   <xsl:template match="/">
@@ -162,24 +161,15 @@
               mode="present" />
             <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:identifier[@type!='open-aire' and @type!='intern' and @type!='issn']" />
             <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:identifier[@type='issn']">
-              <xsl:variable name="sherpa_issn" select="." />
-              <xsl:variable name="sherpa_publisher" select="document(concat('http://www.sherpa.ac.uk/romeo/api29.php?ak=', $MCR.Mods.SherpaRomeo.ApiKey, '&amp;issn=', $sherpa_issn))//publishers" />
               <tr>
                 <td class="metaname" valign="top">
                   <xsl:value-of select="i18n:translate('mir.identifier.issn')" />
                 </td>
                 <td class="metavalue">
-                  <xsl:value-of select="$sherpa_issn"/>
+                        <xsl:value-of select="."/>
+                        <div class="sherpa-issn hidden"><xsl:value-of select="."/></div>
                 </td>
               </tr>
-              <xsl:if test="$sherpa_publisher/publisher">
-               <tr>
-                  <td class="metaname" valign="top">SHERPA/RoMEO:</td>
-                  <td class="metavalue">
-                    <a href="http://www.sherpa.ac.uk/romeo/search.php?issn={$sherpa_issn}">RoMEO <xsl:value-of select="$sherpa_publisher/publisher/romeocolour" /> Journal</a>
-                  </td>
-                </tr>
-              </xsl:if>
             </xsl:for-each>
             <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:language" />
             <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:typeOfResource">
@@ -257,7 +247,10 @@
                                                         not(@authorityURI='https://www.openagrar.de/classifications/annual_review')]" />
             <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:part/mods:extent" />
             <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:location/mods:url" />
+
+
             <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
+              <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@displayLabel='characteristics']" />
               <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']" />
             </xsl:if>
             <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:name[@type='corporate'][@ID or @authorityURI=$institutesURI]" />
