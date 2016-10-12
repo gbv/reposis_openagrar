@@ -10,30 +10,10 @@
       <div class="col-md-8 oa-borderbox" lang="de">
         <h2>Gesamtverantwortung</h2>
         <p>
-          <strong>
-            Der Präsident des Senats der Bundesforschungsinstitute <br/>
-            im Geschäftsbereich des Bundesministeriums für Ernährung <br/>
-            und Landwirtschaft <br/>
-          </strong>
-          c/o Geschäftsstelle <br/>
-          Königin-Luise-Straße 19 <br/>
-          14195 Berlin <br/>
-          Dr. rer. nat. Antje Töpfer  <br/>
-          Dr. sc. agr. Michaela Nürnberg  <br/>
-          E-Mail: <span class="madress">senat-bundesforschung [at] jki.bund.de</span>
-        </p>
-        <p>
-          Das Angebot openagrar.bmel-forschung.de wurde im Rahmen eines Projektes des Konjunkturpaketes II
-          der Bundesregierung unter Federführung der Bundesanstalt für Landwirtschaft und Ernährung in Zusammenarbeit
-          mit den Bibliotheken der Ressortforschungseinrichtungen und dem Gemeinsamen Bibliotheksverbund (GBV)
-          entwickelt. Die Programmierarbeiten wurden gemeinsam mit der Thüringischen Landes- und Universitätsbibliothek
-          (ThULB) Jena durchgeführt. Die Ansprechpartner finden Sie unter Kontakt.
-        </p>
-
-        <h2>Betrieb</h2>
-        <p>
-          Das Portal sowie die dafür erforderlichen Datenbanken werden vom Gemeinsamen Bibliotheksverbund GBV in Göttingen
-          gehostet und betrieben.
+          Der Publikationsserver <a href="/">OpenAgrar</a> wird von den Bibliotheken im Geschäftsbereich des BMEL gemeinschaftlich entwickelt und
+          betrieben. Für die Gestaltung und den Inhalt sind alle diese Einrichtungen in gleicher Weise zuständig. Für den Webserver
+          und die technische Verfügbarkeit der Website ist die Verbundzentrale des GBV (VZG) verantwortlich. Die Ansprechpartner
+          finden Sie unter <a href="contact.xml">Kontakt</a>.
         </p>
 
         <h2>Hinweise zur Nutzung</h2>
