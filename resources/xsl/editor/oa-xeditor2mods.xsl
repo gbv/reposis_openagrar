@@ -4,6 +4,7 @@
   xmlns:mcr="http://www.mycore.org/"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:mods="http://www.loc.gov/mods/v3"
+  xmlns:math="http://exslt.org/math"
   exclude-result-prefixes="xlink mcr" version="1.0"
 >
 
@@ -14,7 +15,7 @@
           <xsl:value-of select="mods:name/@ID" />
         </xsl:when>
         <xsl:otherwise>
-          <xsl:value-of select="generate-id(.)" />
+          <xsl:value-of select="concat(generate-id(.),'-',(floor(math:random()*100000) mod 100000) + 1)" />
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
