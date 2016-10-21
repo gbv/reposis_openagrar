@@ -143,21 +143,21 @@
     </xsl:if>
     <xsl:for-each select="$institutemember">
       <xsl:choose>
-        <xsl:when test="./@ID='ble'">
-          <to>carl.koehler@ble.de</to>
-        </xsl:when>
         <xsl:when test="./@ID='mri'">
           <to>openagrar@mri.bund.de</to>
         </xsl:when>
         <xsl:when test="./@ID='fli'">
-          <to>oa.editor@fli.bund.de</to>
+          <to>oa.editor@fli.de</to>
         </xsl:when>
         <xsl:when test="contains(./@ID,'bfr')">
           <to>benedikt.hummel@bfr.bund.de</to>
           <to>bfr@gbv.de</to>
         </xsl:when>
         <xsl:when test="./@ID='ti' or ./@ID='vti'">
-          <to>oa-editor@ti.bund.de</to>
+          <to>oa-editor@thuenen.de</to>
+        </xsl:when>
+        <xsl:when test="./@ID='dbfz'">
+          <to>bib@dbfz.de</to>
         </xsl:when>
         <xsl:when test="./@ID='test'">
           <to>dms-list@lists.gbv.de</to>
