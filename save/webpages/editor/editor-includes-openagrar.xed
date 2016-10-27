@@ -6,7 +6,7 @@
     <xed:source uri="xslStyle:scopus2mods,editor/oa-mods2xeditor,editor/mods2xeditor:{$MIR.Scopus.API.URL}abstract/{$scopusField}/{$ScopusID}?apikey={$MIR.Scopus.API.Key}" />
     <xed:source uri="xslStyle:pubmed2mods,editor/oa-mods2xeditor,editor/mods2xeditor:{$MIR.PubMed.REST.URL}{$pubMedField}:{$PubMedID}" />
     <xed:source uri="xslStyle:crossref2mods,editor/oa-mods2xeditor,editor/mods2xeditor:http://api.crossref.org/works/{$CrossRefDOI}/transform/application/rdf+xml" />
-    <xed:source uri="xslStyle:PPN-mods-simple,mycoreobject-migrate-nameIdentifier,editor/oa-mods2xeditor,editor/mods2xeditor:http://unapi.gbv.de/?id=gvk:ppn:{$ppn}&amp;format=mods" />
+    <xed:source uri="xslStyle:PPN-mods-simple,mycoreobject-migrate-nameIdentifier,editor/oa-mods2xeditor,editor/mods2xeditor:http://unapi.gbv.de/?id=gvk:ppn:{$ppn}&amp;format=mods36" />
     <xed:source uri="xslStyle:RDF-mods-journal,editor/oa-mods2xeditor,editor/mods2xeditor:http://ld.zdb-services.de/data/{$zdbid}.rdf" />
     <xed:source uri="xslStyle:editor/oa-mods2xeditor,editor/mods2xeditor:{$sourceUri}" />
     <xed:source uri="xslStyle:mycoreobject-editor,editor/oa-mods2xeditor,editor/mods2xeditor:mcrobject:{$id}" />
