@@ -189,17 +189,10 @@ zu klären:
 
     <!-- Genre -->
     <xsl:variable name="modsType">
-      <xsl:choose>
-        <xsl:when test="mods:genre[@type='kindof']">
-          <xsl:value-of select="substring-after(mods:genre[@type='kindof']/@valueURI,'#')" />
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of select="substring-after(mods:genre[@type='intern']/@valueURI,'#')" />
-        </xsl:otherwise>
-      </xsl:choose>
+      <xsl:value-of select="substring-after(mods:genre[@type='intern']/@valueURI,'#')" />>
     </xsl:variable>
     <xsl:call-template name="convertStringToCsv">
-      <xsl:with-param name="cstring" select="document(concat('classification:metadata:0:children:bmelv_genres:',$modsType))//category/label[@xml:lang=$CurrentLang]/@text" />
+      <xsl:with-param name="cstring" select="document(concat('classification:metadata:0:children:mir_genres:',$modsType))//category/label[@xml:lang=$CurrentLang]/@text" />
     </xsl:call-template>
 
     <!-- Seitenangaben -->
@@ -293,7 +286,7 @@ zu klären:
           <xsl:value-of select="'; '" />
         </xsl:if>
         <xsl:variable name="institute" select="substring-after(@valueURI, 'institutes#')" />
-        <xsl:value-of select="document(concat('classification:metadata:0:children:bmelv_institutes:',$institute))//category/label[@xml:lang=$CurrentLang]/@text" />
+        <xsl:value-of select="document(concat('classification:metadata:0:children:mir_institutes:',$institute))//category/label[@xml:lang=$CurrentLang]/@text" />
       </xsl:for-each>
     <xsl:text>&quot;;</xsl:text>
 
