@@ -187,23 +187,24 @@
     <field name="mods.title.host" type="text_general" multiValued="true" />
     <field name="mods.title.main" type="collatedGERMAN" />
     <field name="mods.title.subtitle" type="text_de" />
-    <field name="mods.nameIdentifier" type="string" multiValued="true" />
-    <field name="mods.nameIdentifier.top" type="string" multiValued="true" />
+    <field name="mods.nameIdentifier" type="text_lower" multiValued="true" />
+    <field name="mods.nameIdentifier.top" type="text_lower" multiValued="true" />
     <field name="mods.name" type="namesType" multiValued="true" />
     <field name="mods.name.top" type="namesType" multiValued="true" />
     <field name="mods.author" type="namesType" multiValued="true" />
     <field name="mods.mainAuthor" type="collatedGERMAN" indexed="true" stored="false" />
     <field name="mods.genre" type="string" multiValued="true" />
-    <field name="mods.identifier" type="string" multiValued="true" />
-    <field name="mods.identifier.host" type="string" multiValued="true" />
+    <field name="mods.identifier" type="text_lower" multiValued="true" />
+    <field name="mods.identifier.host" type="text_lower" multiValued="true" />
     <field name="mods.abstract" type="text_de" multiValued="true" />
     <field name="mods.abstract.result" type="text_de" indexed="false" />
     <field name="mods.dateIssued" type="string"/>
+    <field name="mods.dateIssued.host" type="string"/>
     <field name="mods.yearIssued" type="int"/>
     <field name="mods.publisher" type="text_de" multiValued="true"/>
     <field name="mods.place" type="text_de" multiValued="true"/>
-    <field name="mods.pindexname" type="string" multiValued="true" />
-    <field name="mods.pindexname.published" type="string" multiValued="true" />
+    <field name="mods.pindexname" type="text_lower" multiValued="true" />
+    <field name="mods.pindexname.published" type="text_lower" multiValued="true" />
     <field name="mods.embargo" type="string" />
     <field name="mods.part" type="string" />
     <dynamicField name="mods.relatedItem*" type="string" multiValued="true" />
@@ -219,7 +220,7 @@
     <!-- identifier (gnd, pnd, etc.) -->
     <dynamicField name="id.*" type="string" />
 
-    <!-- all names (personal and corporate) with role in fieldname -->
+    <!-- all names (personal and corporate) with role in field name -->
     <dynamicField name="mods.nameByRole.*" type="string" multiValued="true" />
 
     <field name="mods.name.conference" type="string" multiValued="true" />
@@ -243,7 +244,7 @@
     <field name="mods.subject" type="text_de" multiValued="true" indexed="true" stored="false" />
     <!-- sollte eigentlich mit category abgedeckt werden können: (depricated backward compability)-->
     <field name="corporate" type="string" multiValued="true" />
-    
+
 
  <!-- Field to use to determine and enforce document uniqueness.
       Unless this field is marked with required="false", it will be a required field
@@ -460,6 +461,14 @@
         <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.ManagedStopFilterFactory" managed="english" />
         <filter class="solr.ManagedSynonymFilterFactory" managed="english" />
+      </analyzer>
+    </fieldType>
+
+    <!-- Defining customized data type for lower casing. -->
+    <fieldType name="text_lower" class="solr.TextField" positionIncrementGap="100">
+      <analyzer>
+        <tokenizer class="solr.KeywordTokenizerFactory"/>
+        <filter class="solr.LowerCaseFilterFactory" />
       </analyzer>
     </fieldType>
 
