@@ -189,7 +189,7 @@ zu klären:
 
     <!-- Genre -->
     <xsl:variable name="modsType">
-      <xsl:value-of select="substring-after(mods:genre[@type='intern']/@valueURI,'#')" />>
+      <xsl:value-of select="substring-after(mods:genre[@type='intern']/@valueURI,'#')" />
     </xsl:variable>
     <xsl:call-template name="convertStringToCsv">
       <xsl:with-param name="cstring" select="document(concat('classification:metadata:0:children:mir_genres:',$modsType))//category/label[@xml:lang=$CurrentLang]/@text" />
