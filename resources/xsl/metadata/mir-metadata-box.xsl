@@ -106,7 +106,7 @@
 
             <xsl:for-each select="mycoreobject">
               <xsl:if test="./structure/parents/parent/@xlink:href">
-                <xsl:call-template name="printMetaDate.mods.relatedItem" mode="oa">
+                <xsl:call-template name="printMetaDate.mods.relatedItem2">
                   <xsl:with-param name="parentID" select="./structure/parents/parent/@xlink:href" />
                   <xsl:with-param name="label" select="i18n:translate('component.mods.metaData.dictionary.confpubIn')" />
                 </xsl:call-template>
@@ -291,7 +291,7 @@
     </xsl:if>
   </xsl:template>
   
-  <xsl:template name="printMetaDate.mods.relatedItem" mode="oa">
+  <xsl:template name="printMetaDate.mods.relatedItem2">
     <xsl:param name="parentID" />
     <xsl:param name="label" />
 
