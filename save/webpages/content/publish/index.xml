@@ -105,6 +105,12 @@
           </div>
         </div>
         <div class="row form-group">
+          <label class="col-sm-3 col-lg-2 control-label">ZDB-ID:</label>
+          <div class="col-sm-7 col-md-5 col-lg-4">
+            <input class="form-control" type="text" name="zdbid" />
+          </div>
+        </div>
+        <div class="row form-group">
           <label class="col-sm-3 col-lg-2 control-label">mit der PPN:</label>
           <div class="col-sm-7 col-md-5 col-lg-4">
             <input type="text" name="ppn" id="ppn" class="form-control" size="20" placeholder="z.B. 198562268" />
