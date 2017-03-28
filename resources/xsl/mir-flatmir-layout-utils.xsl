@@ -81,7 +81,7 @@
           <ul class="internal_links nav navbar-nav">
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='below']/*" />
           </ul>
-          <p id="oa-copyright">© 2016 OpenAgrar</p>
+          <p id="oa-copyright">© 2017 OpenAgrar</p>
         </div>
         <div class="col-md-3 text-center">
           <div id="sponsored_by">
