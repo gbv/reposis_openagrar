@@ -248,7 +248,31 @@
             <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:part/mods:extent" />
             <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:location/mods:url" />
 
-
+            <xsl:call-template name="printMetaDate.mods">
+              <xsl:with-param name="nodes" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:location/mods:physicalLocation" />
+            </xsl:call-template>
+            <xsl:call-template name="printMetaDate.mods">
+              <xsl:with-param name="nodes" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:location/mods:shelfLocator" />
+              <xsl:with-param name="label" select="i18n:translate('mir.shelfmark')" />
+            </xsl:call-template>
+            <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:name[@type='corporate'][@ID or @authorityURI=$institutesURI]" />
+            <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@displayLabel='characteristics']" />
+            <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:note">
+              <xsl:variable name="myURI" select="concat('classification:metadata:0:children:noteTypes:',mcrxsl:regexp(@type,' ', '_'))" />
+              <xsl:variable name="x-access">
+                <xsl:value-of select="document($myURI)//label[@xml:lang='x-access']/@text"/>
+              </xsl:variable>
+              <xsl:variable name="noteLabel">
+                <xsl:value-of select="document($myURI)//category/label[@xml:lang=$CurrentLang]/@text"/>
+              </xsl:variable>
+              <xsl:if test="contains($x-access, 'guest')">
+                <xsl:call-template name="printMetaDate.mods">
+                  <xsl:with-param select="." name="nodes" />
+                  <xsl:with-param select="$noteLabel" name="label"/>
+                </xsl:call-template>
+              </xsl:if>
+            </xsl:for-each>
+            
             <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
               <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@displayLabel='characteristics']" />
               <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']" />
