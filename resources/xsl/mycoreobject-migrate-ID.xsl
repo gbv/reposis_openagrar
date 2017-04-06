@@ -15,11 +15,17 @@
     <xsl:copy>
       <xsl:apply-templates select="@*" />
       <xsl:apply-templates
-        select="*[not( (local-name()='name' and @ID and @type='corporate') or (starts-with(@xlink:href,'#')) or (starts-with(mods:physicalLocation/@xlink:href,'#')) )]" />
-      <xsl:for-each select="mods:name[starts-with(@ID,'N1') and string-length(@ID)=6  and @type='corporate']">
+        select="*[not( 
+                (local-name()='name' and starts-with(@ID,'N') and string-length(@ID)=6 and @type='corporate') 
+                or 
+                (starts-with(@xlink:href,'#N') and string-length(@xlink:href)=6) 
+                or 
+                (starts-with(mods:physicalLocation/@xlink:href,'#N') and string-length(mods:physicalLocation/@xlink:href)=6) 
+            )]" />
+      <xsl:for-each select="mods:name[starts-with(@ID,'N') and string-length(@ID)=6  and @type='corporate']">
         
-        <xsl:variable  name="newid" select="concat(@ID,'-',(floor(math:random()*100000) mod 100000) + 1)"/>
-        <xsl:variable name="ID" select="@ID" />
+        <xsl:variable name="newid" select="concat(@ID,'-',(floor(math:random()*100000) mod 100000) + 1)"/>
+        <xsl:variable name="ID"    select="@ID" />
 
         <xsl:copy>
           <xsl:attribute name="ID">
