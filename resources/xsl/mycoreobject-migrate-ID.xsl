@@ -18,9 +18,9 @@
         select="*[not( 
                 (local-name()='name' and starts-with(@ID,'N') and string-length(@ID)=6 and @type='corporate') 
                 or 
-                (starts-with(@xlink:href,'#N') and string-length(@xlink:href)=6) 
+                (starts-with(@xlink:href,'#N') and string-length(@xlink:href)=7) 
                 or 
-                (starts-with(mods:physicalLocation/@xlink:href,'#N') and string-length(mods:physicalLocation/@xlink:href)=6) 
+                (starts-with(mods:physicalLocation/@xlink:href,'#N') and string-length(mods:physicalLocation/@xlink:href)=7) 
             )]" />
       <xsl:for-each select="mods:name[starts-with(@ID,'N') and string-length(@ID)=6  and @type='corporate']">
         
