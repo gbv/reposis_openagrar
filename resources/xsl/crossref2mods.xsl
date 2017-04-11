@@ -140,7 +140,7 @@
   </xsl:template>
 
   <xsl:template match="dc:date[starts-with(@rdf:datatype,'http://www.w3.org/2001/XMLSchema')]">
-    <mods:originInfo>
+    <mods:originInfo eventType="publication">
       <mods:dateIssued encoding="w3cdtf">
         <xsl:value-of select="substring(text(),1,4)" />
       </mods:dateIssued>
