@@ -15,37 +15,22 @@
   
   <xsl:template match="children"> 
     <children class="MCRMetaLinkID">
-    <!-- <xsl:variable name="children" xmlns:encoder="xalan://java.net.URLEncoder"
+       <xsl:variable name="children" xmlns:encoder="xalan://java.net.URLEncoder"
           select="document(concat('solr:q=',encoder:encode(concat('parent:',  $objId,' AND objectType:mods&amp;rows=1000&amp;fl=id')) ))" />
-    <xsl:for-each select="$children//result[@name='response']/doc/str[@name='id']">
-      <child inherited="0" xlink:type="locator" >
-        <xsl:attribute name="xlink:title">
-          <xsl:value-of select="." />
-        </xsl:attribute>
-        <xsl:attribute name="xlink:href">
-          <xsl:value-of select="." />
-        </xsl:attribute>
-     </child>   
-    </xsl:for-each>
-     -->
+      <xsl:for-each select="$children//result[@name='response']/doc/str[@name='id']">
+        <child inherited="0" xlink:type="locator" >
+          <xsl:attribute name="xlink:title">
+            <xsl:value-of select="." />
+          </xsl:attribute>
+          <xsl:attribute name="xlink:href">
+            <xsl:value-of select="." />
+          </xsl:attribute>
+       </child>   
+      </xsl:for-each>
+     
      <child inherited="0" xlink:type="locator" xlink:title="import_mods_00000724" xlink:href="import_mods_00000724"/>
     </children>
   </xsl:template>
-  
-  <!-- <xsl:template match="mods:mods"> 
-    <xsl:message>
-      <xsl:value-of select="'++++++++++++++++boom nbooom '" />
-    </xsl:message>
-    <mods:titleInfo supplied="yes" usage="primary" xlink:type="simple">
-      <mods:title>Warum nur das denn nur2</mods:title>
-    </mods:titleInfo>
-    <xsl:apply-templates />
-  </xsl:template>
-   -->
-  <xsl:template match="servflags[@type='modifiedby']">
-    <servflag type="modifiedby" inherited="0" form="plain">paul</servflag>
-  </xsl:template>
-  
   
   
 </xsl:stylesheet>
