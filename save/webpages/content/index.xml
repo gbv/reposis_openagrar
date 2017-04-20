@@ -18,15 +18,28 @@
             Interessierten für die Nutzung zur Verfügung.
           </p>
           <p>
-            In der Aufbauphase werden es überwiegend Literaturnachweise sein, die in der Folgezeit nach
-            und nach mit Volltexten, Abbildungen und anderen Medien ergänzt werden. Das Repositorium weist
-            Hochschulschriften, Reports, Konferenzbände, Bücher und Zeitschriften sowie AV-Medien nach.
+            In OpenAgrar werden Hochschul- und Institutsschriften, Reports, Bücher, Konferenz- und
+            Zeitschriftenbeiträge sowie AV-Medien nachgewiesen. Aktuell umfasst das Repositorium <span
+            id="oa-docCounter">80.000</span> Dokumente.
           </p>
         </div>
       </div>
     </div>
+
+    <script type="text/javascript" src="../js/jquery.number.js"></script>
+    <script>
+        $.ajax({
+          type: "GET",
+          url: "../api/v1/search?q=objectType:mods AND state:published&amp;rows=0&amp;wt=json&amp;json.wrf=?",
+          dataType: "jsonp",
+          success: function (data) {
+            $('#oa-docCounter').text($.number(data.response.numFound,0, ',', '.'));
+          },
+        });
+    </script>
+
     </section>
     <meta>
-        <log lastEditor="administrator" date="2016-06-30" time="09:18"/>
+        <log lastEditor="administrator" date="2017-04-20" time="08:56"/>
     </meta>
 </MyCoReWebPage>
