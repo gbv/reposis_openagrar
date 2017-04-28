@@ -104,13 +104,13 @@
         <p>
           <strong>Widerspruch:</strong>
         </p>
-        <iframe style="border: 0; height: 200px; width: 758px;" src="https://openagrar.bmel-forschung.de/piwik/piwik/index.php?module=CoreAdminHome&amp;action=optOut&amp;idsite=1&amp;language=de"></iframe>
+        <iframe style="border: 0; height: 200px; width: 758px;" src="../../piwik/piwik/index.php?module=CoreAdminHome&amp;action=optOut&amp;idsite=1&amp;language=de"></iframe>
 
       </div>
     </div>
   </div>
   </section>
   <meta>
-    <log date="2016-06-30" time="09:19" labelPath=" » Kontakt" lastEditor="Kathleen Neumann" />
+    <log date="2017-04-28" time="12:09" labelPath=" » Kontakt" lastEditor="Kathleen Neumann" />
   </meta>
 </MyCoReWebPage>
