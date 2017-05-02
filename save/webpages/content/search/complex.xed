@@ -139,6 +139,9 @@
                         <option value="mods.dateIssued">
                           <xed:output i18n="component.mods.metaData.dictionary.dateIssued" />
                         </option>
+                        <option value="modified">
+                          <xed:output i18n="metaData.versions.action.M" />
+                        </option>
                         <option value="score">
                           <xed:output i18n="editor.search.score" />
                         </option>
