@@ -60,8 +60,8 @@
       <label xml:lang="en">complex</label>
     </item>
     <item href="/servlets/solr/select?q=createdby:USERNAME" type="intern">
-      <label xml:lang="de">Meine Aufnahmen</label>
-      <label xml:lang="en">My Documents</label>
+      <label xml:lang="de">meine Aufnahmen</label>
+      <label xml:lang="en">my documents</label>
     </item>
     <item href="/search/search-expert.xed" type="intern">
       <label xml:lang="de">expert</label>
