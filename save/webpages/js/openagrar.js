@@ -7,6 +7,8 @@ $(document).ready(function() {
   $("a[href='https://www.openagrar.de/servlets/solr/select?q=createdby:USERNAME']").attr('href', newHrefShort);
   var newHref = 'https://openagrar.bmel-forschung.de/servlets/solr/select?q=createdby:' + userID + '&fq=objectType:mods';
   $("a[href='https://openagrar.bmel-forschung.de/servlets/solr/select?q=createdby:USERNAME']").attr('href', newHref);
+  var newHrefTest = 'https://reposis-test.gbv.de/openagrar/servlets/solr/select?q=createdby:' + userID + '&fq=objectType:mods';
+  $("a[href='https://reposis-test.gbv.de/openagrar/servlets/solr/select?q=createdby:USERNAME']").attr('href', newHrefTest);
 
 
 // spam protection for mails
