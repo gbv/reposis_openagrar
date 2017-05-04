@@ -3,17 +3,29 @@
   <section xml:lang="de" title="Erfassungsrichtlinien">
     <div class="row">
       <div class="col-md-10" lang="de">
-        <h3>
+        <h1>
           Erfassungsrichtlinien
-        </h3>
+        </h1>
+        <h2>1. Namenskonventionen</h2>
         <p>
-          Auf dieser und ggf. weiteren Seiten sollen Richtlinien zur Dokumentenerfassung festgehalten werden. Die
-          Kolleginnen und Kollegen des BMEL werden diese Seite zeitnah mit Inhalten füllen.
+          Folgende Regeln gelten für die Erfassung von Personennamen:
         </p>
-        <p>
-          Weiterhin wird es an dieser Stelle mittelfristig die Möglichkeit geben die Hilfetexte der Erfassungsmasken
-          zu bearbeiten.
-        </p>
+        <ul>
+          <li>
+            Namen sind immer in der Form "Nachname, Vorname" zu erfassen", z.B. Aarestrup, Frank M.
+          </li>
+          <li>
+            Wenn möglich den vollständig ausgeschriebenen Namen erfassen, dieser
+            kann nachträglich für die Zitation durch die Anwendung eingekürzt werden.
+          </li>
+          <li>
+            Immer ein Leerzeichen nach dem Komma setzen.
+          </li>
+          <li>
+            Bei Verwendung von Initialen ebenfalls ein Leerzeichen nach dem Punkt
+            setzten.
+          </li>
+        </ul>
       </div>
     </div>
     </section>
