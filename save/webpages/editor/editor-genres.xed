@@ -202,6 +202,18 @@
     <xed:include uri="webapp:editor/editor-genres.xed" ref="publication.common" />
   </xed:template>
 
+  <xed:template id="preprint">
+    <xed:include uri="webapp:editor/editor-genres.xed" ref="publication.common" />
+  </xed:template>
+
+  <xed:template id="flyer">
+    <xed:include uri="webapp:editor/editor-genres.xed" ref="publication.common" />
+  </xed:template>
+
+  <xed:template id="conferenceObject">
+    <xed:include uri="webapp:editor/editor-genres.xed" ref="publication.common" />
+  </xed:template>
+
   <xed:template id="teaching_material">
     <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="rights" />
     <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="titles.thesis" />
