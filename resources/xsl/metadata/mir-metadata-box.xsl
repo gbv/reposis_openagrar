@@ -128,14 +128,14 @@
                 </xsl:otherwise>
               </xsl:choose>
             </xsl:for-each>
-            <xsl:call-template name="printMetaDate.mods">
+            <!-- xsl:call-template name="printMetaDate.mods">
               <xsl:with-param name="nodes" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem[@type='host']/mods:part/mods:detail[@type='volume']/mods:number" />
               <xsl:with-param name="label" select="i18n:translate('component.mods.metaData.dictionary.volume.article')" />
             </xsl:call-template>
             <xsl:call-template name="printMetaDate.mods">
               <xsl:with-param name="nodes" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem[@type='host']/mods:part/mods:detail[@type='issue']/mods:number" />
               <xsl:with-param name="label" select="i18n:translate('mir.details.issue')" />
-            </xsl:call-template>
+            </xsl:call-template -->
             <xsl:call-template name="printMetaDate.mods">
               <xsl:with-param name="nodes" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:originInfo/mods:edition" />
             </xsl:call-template>
