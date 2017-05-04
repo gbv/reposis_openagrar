@@ -8,25 +8,10 @@
     </h1>
     <div class="row">
       <div class="col-md-8 oa-borderbox" lang="de">
-        <h2>Urheberrecht</h2>
-        <p>
-          Alle Rechte vorbehalten, Senat der Bundesforschungsinstitute, Königin-Luise-Straße 19, 14195 Berlin
-        </p>
-        <p>
-          Die Online-Dokumente und Webseiten einschließlich ihrer Teile sind urheberrechtlich geschützt. Sie dürfen
-          nur zum privaten, wissenschaftlichen und nichtgewerblichen Gebrauch zum Zweck der Information kopiert und
-          ausgedruckt werden. Auf eventuelle Nutzungseinschränkungen wird bei den jeweiligen Dokumenten hingewiesen.
-        </p>
-
-        <h2>Bildrechte</h2>
-        <p>
-          Eine Vervielfältigung oder Verwendung der Abbildungen ist in anderen elektronischen oder gedruckten Publikationen
-          ohne ausdrückliche Einwilligung des Urhebers nicht gestattet.
-        </p>
 
         <h2>Hinweise zum Datenschutz</h2>
         <p>
-          Der Schutz persönlicher Daten ist dem Senat ein wichtiges Anliegen. Daher werden auf dieser Website Nutzungsdaten
+          Der Schutz persönlicher Daten ist den Betreibern von OpenAgrar ein wichtiges Anliegen. Daher werden auf dieser Website Nutzungsdaten
           nur in anonymisierter Form zu Optimierungszwecken gesammelt und gespeichert. Über diese Daten können Sie nicht als
           Besucher dieser Website persönlich identifiziert werden und es kann kein Nutzungsprofil angelegt werden. Die Daten
           dienen ausschließlich der Verbesserung des Service, den der Senat mit seiner Internetseite anbietet.
@@ -104,13 +89,13 @@
         <p>
           <strong>Widerspruch:</strong>
         </p>
-        <iframe style="border: 0; height: 200px; width: 758px;" src="../../piwik/piwik/index.php?module=CoreAdminHome&amp;action=optOut&amp;idsite=1&amp;language=de"></iframe>
+        <iframe style="border: 0; height: 200px; width: 758px;" src="https://www.openagrar.de/piwik/index.php?module=CoreAdminHome&amp;action=optOut&amp;idsite=1&amp;language=de"></iframe>
 
       </div>
     </div>
   </div>
   </section>
   <meta>
-    <log date="2017-04-28" time="12:09" labelPath=" » Kontakt" lastEditor="Kathleen Neumann" />
+    <log date="2017-05-03" time="09:09" labelPath=" » Kontakt" lastEditor="Kathleen Neumann" />
   </meta>
 </MyCoReWebPage>

@@ -108,7 +108,7 @@
       _paq.push(["enableLinkTracking"]);
 
       (function() {
-        var u="/piwik/piwik/";
+        var u="https://www.openagrar.de/piwik/";
         var objectID = '<xsl:value-of select="//site/@ID" />';
         if(objectID != "") {
           _paq.push(["setCustomVariable",1, "object", objectID, "page"]);
@@ -123,7 +123,7 @@
     <noscript>
       <p>
         <!-- Piwik Image Tracker -->
-        <img src="/piwik/piwik/piwik.php?idsite={$piwikID}&amp;rec=1" style="border:0" alt="" />
+        <img src="https://www.openagrar.de/piwik/piwik.php?idsite={$piwikID}&amp;rec=1" style="border:0" alt="" />
         <!-- End Piwik -->
       </p>
     </noscript>
