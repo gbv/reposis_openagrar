@@ -14,7 +14,7 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>mycore-pi-MCRDOINoRegistrationservice</artifactId>
   <groupId>org.mycore</groupId>
-  <version>2016.07-SNAPSHOT</version>
+  <version>2016.06.0.2</version>
   <name>MyCoRe MODS MCRUpdateImportedMods</name>
   <properties>
     <manifest.priority>54</manifest.priority>
