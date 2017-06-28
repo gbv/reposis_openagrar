@@ -494,7 +494,7 @@
                   <img src="{$WebApplicationBaseURL}images/workflow_addnbn.gif" title="{i18n:translate('derivate.urn.addURN')}" />
                 </a>
                 </xsl:if -->
-                <!-- Register DOI -->
+                <!-- Register DOI --> 
                 <xsl:if
                         test="$MIR.registerDOI='true' and $accessedit 
                               and not(pi:hasIdentifierRegistered('DataciteTI', /mycoreobject/@ID, '') or pi:hasIdentifierRegistered('DataciteBfR', /mycoreobject/@ID, '') or pi:hasIdentifierRegistered('DataciteJKI', /mycoreobject/@ID, '')) 

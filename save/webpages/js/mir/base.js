@@ -452,7 +452,7 @@
             let service = button.attr("data-register-pi");
             let resource = baseURL + "rsc/pi/registration/service/" + service + "/" + mcrId;
             let type = button.attr("data-type");
-
+ 
             $.ajax({
                 type: 'POST',
                 url: resource,
