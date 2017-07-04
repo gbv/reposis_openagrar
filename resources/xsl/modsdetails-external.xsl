@@ -533,7 +533,8 @@
                   </li>
                 </xsl:if>
               </xsl:if>
-              <xsl:if test="$CurrentUser=$MCR.Users.Superuser.UserName or $accessdelete and not(mcrurn:hasURNDefined($id) or $MIR.registerDOI='true' and pi:hasIdentifierRegistered('Datacite', /mycoreobject/@ID, ''))" >
+              <!-- refacture following test if the function are available ... use pi:hasIdentifierRegistered() -->
+              <xsl:if test="$CurrentUser=$MCR.Users.Superuser.UserName or $accessdelete and not(mcrurn:hasURNDefined($id) or $MIR.registerDOI='true' and (pi:hasIdentifierRegistered('DataciteBfR', /mycoreobject/@ID, '') or pi:hasIdentifierRegistered('DataciteJKI', /mycoreobject/@ID, '') or pi:hasIdentifierRegistered('DataciteTI', /mycoreobject/@ID, '')))" >
                 <li>
                   <xsl:choose>
                     <xsl:when test="/mycoreobject/structure/children/child">
