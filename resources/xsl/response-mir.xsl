@@ -17,12 +17,14 @@
   </xsl:variable>
   
   <xsl:variable name="instID">
-  	<xsl:value-of select="substring-before(substring-after($query,'mir_institutes:'),'&quot;')"/>
+    <xsl:if test="not (contains(substring-after($query,'mir_institutes:'),'mir_institutes:'))">
+  	  <xsl:value-of select="substring-before(substring-after($query,'mir_institutes:'),'&quot;')"/>
+  	</xsl:if>
   </xsl:variable>
   
   
   <xsl:variable name="institut_str">
-  	<xsl:if test="$instID">
+  	<xsl:if test="string-length($instID) &gt; 0">
   	  <xsl:variable name="intitutes" select="document(concat('classification:metadata:0:parents:mir_institutes:',$instID))" />
       <xsl:for-each select="$intitutes//category/label[@xml:lang='de']">
         <xsl:value-of select="@text"/>
@@ -30,6 +32,29 @@
       	  <xsl:value-of select="' &#8212; '"/>
         </xsl:if>
       </xsl:for-each>
+    </xsl:if>
+  </xsl:variable>
+  
+  <xsl:variable name="nameGND">
+    <xsl:if test="not (contains(substring-after($query,'mods.nameIdentifier:'),'mods.nameIdentifier:'))">
+      <xsl:choose>
+        <xsl:when test="contains(substring-after($query,'mods.nameIdentifier:'),' ')">
+          <xsl:value-of select="substring-after(substring-before(substring-after($query,'mods.nameIdentifier:'),' '),':')"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="substring-after(substring-after($query,'mods.nameIdentifier:'),':')"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:if>
+  </xsl:variable>
+  
+  
+  <xsl:variable name="name_str">
+    <xsl:if test="string-length($nameGND) &gt; 0">
+      <xsl:value-of select="'Suchergebnisse für '"/>
+      <xsl:variable name="names" select="document(concat($WebApplicationBaseURL,'/servlets/solr/personindex?XSL.Style=xml&amp;terms.regex=.*:gnd:',$nameGND))" />
+  	  <xsl:value-of select="substring-before($names//int[contains(@name,$nameGND)]/@name,':gnd')"/>
+      
     </xsl:if>
   </xsl:variable>
   
@@ -53,6 +78,9 @@
       <div class="col-xs-12 result_headline">
       	<h1>
       	  <xsl:value-of select="$institut_str"/>
+      	</h1>
+      	<h1>
+      	  <xsl:value-of select="$name_str"/>
       	</h1>
         <h1>
           <xsl:choose>
