@@ -2133,7 +2133,7 @@
   <xed:template id="javascript">
     <script type="text/javascript" src="{$WebApplicationBaseURL}js/jquery.search-entity.min.js"></script>
     <script src="{$WebApplicationBaseURL}assets/jquery/plugins/typeahead/bloodhound.min.js" type="text/javascript"></script>
-    <script src="{$WebApplicationBaseURL}assets/jquery/plugins/bootstrap3-typeahead/bootstrap3-typeahead.min.js" type="text/javascript"></script>
+    <script src="{$WebApplicationBaseURL}assets/jquery/plugins/bootstrap3-typeahead/bootstrap3-typeahead.js" type="text/javascript"></script>
     <script src="{$WebApplicationBaseURL}js/mir/relatedItem-autocomplete.min.js" type="text/javascript"></script>
     <script src="{$WebApplicationBaseURL}js/mir/item-autocomplete.js" type="text/javascript"></script>
     <link href="{$WebApplicationBaseURL}assets/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet" />
