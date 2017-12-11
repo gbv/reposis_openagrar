@@ -235,7 +235,7 @@
   <xsl:template match="journalInfo/yearOfPublication" />
 
   <xsl:template match="journalInfo/yearOfPublication" mode="dateIssued">
-    <mods:originInfo>
+    <mods:originInfo eventType="publication">
       <mods:dateIssued encoding="w3cdtf">
         <xsl:value-of select="." />
       </mods:dateIssued>
