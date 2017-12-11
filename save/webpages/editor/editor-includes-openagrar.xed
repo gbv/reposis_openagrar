@@ -101,5 +101,9 @@
     <mir:textfield xpath="mods:originInfo[@eventType='creation']/mods:place/mods:placeTerm[@type='text']" label="mir.collegeplace" help-text="{i18n:mir.help.collegeplace}" />
   </xed:template>
 
+  <xed:template id="title.issue.relItemsearch">
+    <mir:relItemsearch searchengine="title_ptitle" genre="issue" responsefield="mods.title" xpath="mods:titleInfo/mods:title" label="mir.title.issue"
+      help-text="{i18n:mir.help.title.issue}" class="required" />
+  </xed:template>
 
 </xed:template>

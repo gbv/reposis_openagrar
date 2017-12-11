@@ -105,6 +105,22 @@
     <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="edition" />
   </xed:template>
 
+  <xed:template id="issue">
+    <div class="mir-form-group-body">
+      <xed:bind xpath="mods:relatedItem[@type='host']">
+        <xed:bind xpath="@xlink:href" initially="{$MIR.projectid.default}_mods_00000000"> <input id="relItem-issue" type="hidden" /> </xed:bind>
+        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-openagrar.xed" ref="title.issue.relItemsearch" />
+        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-openagrar.xed" ref="identifier.issn.issue.relItemsearch" />
+      </xed:bind>
+      <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="year.issued.relItem" />
+      <xed:bind xpath="mods:relatedItem[@type='host']">
+        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="host.volume" />
+        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="host.issue" />
+        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="host.pages" />
+      </xed:bind>
+    </div>
+  </xed:template>
+
   <xed:template id="journal">
     <div class="mir-form-group-body">
       <xed:bind xpath="mods:relatedItem[@type='host']">
