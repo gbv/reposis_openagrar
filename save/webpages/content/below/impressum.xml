@@ -1,56 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE MyCoReWebPage>
-<MyCoReWebPage>
-  <section xml:lang="de" title="Impressum">
-  <div>
-    <h1>
-      Impressum
-    </h1>
-    <div class="row">
-      <div class="col-md-8 oa-borderbox" lang="de">
-        <h2>Gesamtverantwortung</h2>
-        <p>
-          Der Publikationsserver <a href="/">OpenAgrar</a> wird von den Bibliotheken im Geschäftsbereich des BMEL gemeinschaftlich entwickelt und
-          betrieben. Für die Gestaltung und den Inhalt sind alle diese Einrichtungen in gleicher Weise zuständig. Für den Webserver
-          und die technische Verfügbarkeit der Website ist die Verbundzentrale des GBV (VZG) verantwortlich. Die Ansprechpartner
-          finden Sie unter <a href="contact.xml">Kontakt</a>.
-        </p>
+<MyCoReWebPage><section xml:lang="de" title="Impressum"><div>
+<h1>Impressum</h1>
 
-        <h2>Hinweise zur Nutzung</h2>
-        <p>
-          Für Vollständigkeit, Fehler redaktioneller und technischer Art, Auslassungen usw. sowie die Richtigkeit der Eintragungen kann
-          keine Haftung übernommen werden. Insbesondere kann keine Gewähr für die Vollständigkeit und Richtigkeit von Informationen
-          übernommen werden, die über weiterführende Links erreicht werden.
-        </p>
-        <p>
-          Anbieter sind für die eigenen Inhalte, die sie zur Nutzung bereithalten, nach den allgemeinen Gesetzen verantwortlich.
-          Von diesen eigenen Inhalten sind Querverweise auf die von anderen Anbietern bereitgehaltenen Inhalte zu unterscheiden.
-        </p>
-        <p>
-          Die Verweise durch Hyperlinks auf Inhalte fremder Webseiten dienen lediglich der Information. Die Verantwortlichkeit
-          für diese fremden Inhalte liegt allein bei dem Anbieter, der die Inhalte bereithält. Vor dem Einrichten des entsprechenden
-          Verweises sind die Web-Seiten der anderen Anbieter mit großer Sorgfalt und nach bestem Wissen und Gewissen überprüft worden.
-          Es kann jedoch keine Gewähr für die Vollständigkeit und Richtigkeit von Informationen übernommen werden, die über weiterführende
-          Hyperlinks erreicht werden. Der Inhalt der anderen Web-Seiten kann jederzeit ohne Wissen der Internet-Redaktion des Senats
-          geändert werden.
-        </p>
-        <p>
-          Für sämtliche Links auf diesen Seiten gilt: Wir betonen, dass wir keinen Einfluss auf die Gestaltung und die Inhalte der
-          durch Link von unserer Homepage aus erreichbaren Seiten anderer Anbieter haben und uns deren Inhalt nicht zu eigen machen.
-          Diese Erklärung gilt für alle Seiten dieser Homepage und die dort angebrachten Links.
-        </p>
-        <p>
-          Falls auf Seiten verwiesen werden sollte, deren Inhalt Anlass zur Beanstandung gibt, bittet die Internet-Redaktion um Mitteilung.
-        </p>
-        <p>
-          Die Internet-Redaktion behält sich das Recht vor, ohne vorherige Ankündigung die bereitgestellten Informationen zu ändern,
-          zu ergänzen oder zu entfernen.
-        </p>
-      </div>
-    </div>
-  </div>
-  </section>
-  <meta>
-    <log date="2016-06-30" time="09:19" labelPath=" » Kontakt" lastEditor="Kathleen Neumann" />
-  </meta>
-</MyCoReWebPage>
+<div class="row">
+<div class="col-md-8 oa-borderbox" lang="de">
+<h2>Gesamtverantwortung</h2>
+
+<p>Der Publikationsserver <a href="/">OpenAgrar</a> wird von den Bibliotheken im Geschäftsbereich des BMEL gemeinschaftlich entwickelt und betrieben. Für die Gestaltung und den Inhalt sind alle diese Einrichtungen in gleicher Weise zuständig. Für den Webserver und die technische Verfügbarkeit der Website ist die Verbundzentrale des GBV (VZG) verantwortlich. Die Ansprechpartner finden Sie unter <a href="contact.xml">Kontakt</a>.</p>
+
+<h2>Hinweise zur Nutzung</h2>
+
+<p>Für Vollständigkeit, Fehler redaktioneller und technischer Art, Auslassungen usw. sowie die Richtigkeit der Eintragungen kann keine Haftung übernommen werden. Insbesondere kann keine Gewähr für die Vollständigkeit und Richtigkeit von Informationen übernommen werden, die über weiterführende Links erreicht werden.</p>
+
+<p>Anbieter sind für die eigenen Inhalte, die sie zur Nutzung bereithalten, nach den allgemeinen Gesetzen verantwortlich. Von diesen eigenen Inhalten sind Querverweise auf die von anderen Anbietern bereitgehaltenen Inhalte zu unterscheiden.</p>
+
+<p>Die Verweise durch Hyperlinks auf Inhalte fremder Webseiten dienen lediglich der Information. Die Verantwortlichkeit für diese fremden Inhalte liegt allein bei dem Anbieter, der die Inhalte bereithält. Vor dem Einrichten des entsprechenden Verweises sind die Web-Seiten der anderen Anbieter mit großer Sorgfalt und nach bestem Wissen und Gewissen überprüft worden. Es kann jedoch keine Gewähr für die Vollständigkeit und Richtigkeit von Informationen übernommen werden, die über weiterführende Hyperlinks erreicht werden. Der Inhalt der anderen Web-Seiten kann jederzeit ohne Wissen der Internet-Redaktion des Senats geändert werden.</p>
+
+<p>Für sämtliche Links auf diesen Seiten gilt: Wir betonen, dass wir keinen Einfluss auf die Gestaltung und die Inhalte der durch Link von unserer Homepage aus erreichbaren Seiten anderer Anbieter haben und uns deren Inhalt nicht zu eigen machen. Diese Erklärung gilt für alle Seiten dieser Homepage und die dort angebrachten Links.</p>
+
+<p>Falls auf Seiten verwiesen werden sollte, deren Inhalt Anlass zur Beanstandung gibt, bittet die Internet-Redaktion um Mitteilung.</p>
+
+<p>Die Internet-Redaktion behält sich das Recht vor, ohne vorherige Ankündigung die bereitgestellten Informationen zu ändern, zu ergänzen oder zu entfernen.</p>
+</div>
+</div>
+</div>
+</section><section xml:lang="en" title="Imprint"><h1>Imprint</h1>
+
+<h2>Overall responsibility</h2>
+
+<p><a href="/">OpenAgrar</a> is collaboratively operated and developed by the scientific libraries of the member institutions. They are equally responsible for the layout and the content, whereas the common library network GBV (VZG) is in charge of web server and hosting services. You can find all contacts <a href="contact.xml">here</a>.</p>
+
+<h2>Information on use</h2>
+
+<p>No liability can be accepted for completeness, editorial and technical mistakes, omissions as well as for correctness of the contents.</p>
+
+<p>No guarantee can, in particular, be given for completeness and correctness of information obtained through external links.</p>
+
+<p>The operating institutions are responsible for their own contents they make available for use according to general legislation. Cross-references to contents made available by other providers must be distinguished from these proprietary contents.</p>
+
+<p>References via hyperlinks to the contents of external websites are for informational purposes only. The responsibility for these contents of external websites rests solely with the provider making available the contents. We examine the websites of other providers with great care and to the best of our knowledge and belief prior to setting such a link. However, no guarantee can be given for the completeness and correctness of information obtained through hyperlinks to external websites. The content of other websites can be modified at any time without the knowledge of the operating institutions.</p>
+
+<p>The following rule applies to all links on these websites: we stress that we neither have any influence on the design or contents of websites of other providers accessible through links from our homepage nor do we adopt the contents as our own. This statement applies to all websites of this homepage and the links set there.</p>
+
+<p>Please notify us if OpenAgrar refers to websites whose contents give cause for complaint.</p>
+
+<p>We reserve the right to amend, supplement or delete the information provided without prior notice.</p>
+
+<p>.</p>
+</section><meta><log lastEditor="bhummel" date="2018-01-12" time="09:41" /></meta></MyCoReWebPage>

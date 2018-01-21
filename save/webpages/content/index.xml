@@ -1,33 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MyCoReWebPage>
-  <section xml:lang="de" title="Willkommen auf den Seiten des Publikationsservers OpenAgrar">
-    <div class="jumbotwo">
+<MyCoReWebPage><section xml:lang="de" title="Willkommen auf den Seiten des Publikationsservers OpenAgrar"><div>
+<div class="jumbotwo">
+<h1>Willkommen auf den Seiten des Publikationsservers OpenAgrar</h1>
 
-      <h1>
-        Willkommen auf den Seiten des Publikationsservers OpenAgrar
-      </h1>
-      <div class="row">
-        <div class="col-md-8 oa-borderbox" lang="de">
-          <h2>Sie suchen Literatur - versuchen Sie es doch hier</h2>
-          <p>
-            Zum Ressortbereich des Bundesministeriums für Ernährung und Landwirtschaft
-            (BMEL) gehören Bundesforschungsinstitute und weitere Bundesbehörden sowie Einrichtungen der
-            Wissenschaftsgemeinschaft Gottfried Wilhelm Leibniz (WGL). Für die von den Einrichtungen und
-            deren Mitarbeitern stammenden Veröffentlichungen wurde im Rahmen eines Projektes ein
-            institutionelles Repositorium aufgebaut. Die dort gespeicherten Dokumente stehen jedem
-            Interessierten für die Nutzung zur Verfügung.
-          </p>
-          <p>
-            In OpenAgrar werden Hochschul- und Institutsschriften, Reports, Bücher, Konferenz- und
-            Zeitschriftenbeiträge sowie AV-Medien nachgewiesen. Aktuell umfasst das Repositorium <span
-            id="oa-docCounter">80.000</span> Dokumente.
-          </p>
-        </div>
-      </div>
-    </div>
+<div class="row">
+<div class="col-md-8 oa-borderbox" lang="de">
+<h2>Sie suchen Literatur - versuchen Sie es doch hier</h2>
 
-    <script type="text/javascript" src="../js/jquery.number.js"></script>
-    <script>
+<p>OpenAgrar ist das gemeinsame Repositorium der Ressortforschungsinstitute sowie weiterer Bundesbehörden und Einrichtungen im Geschäftsbereich des Bundesministeriums für Ernährung und Landwirtschaft (BMEL). Folgende Institutionen betreiben aktuell das OpenAgrar Repositorium: Deutsches Biomasseforschungszentrum (DBFZ), Julius Kühn-Institut (JKI), Friedrich-Loeffler-Institut (FLI), Max Rubner-Institut (MRI), Thünen-Institut (TI), Bundesinstitut für Risikobewertung (BfR).  In OpenAgrar werden die Veröffentlichungen aus diesen Einrichtungen erfasst, verbreitet, archiviert beziehungsweise Dokumente erstveröffentlicht. Die dort gespeicherten Dokumente und Publikationsnachweise können von jedem Interessierten recherchiert und genutzt werden.</p>
+
+<p>OpenAgrar verzeichnet unter anderem Dissertationen, Berichte, Konferenz Proceedings, Zeitschriftenbeiträge, Bücher, Institutsschriften sowie Forschungsdaten und AV-Medien. Aktuell umfasst das Repositorium <span id="oa-docCounter">80.000</span> Dokumente.</p>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="../js/jquery.number.js" /><script>
         $.ajax({
           type: "GET",
           url: "../api/v1/search?q=objectType:mods AND state:published&amp;rows=0&amp;wt=json&amp;json.wrf=?",
@@ -36,10 +22,5 @@
             $('#oa-docCounter').text($.number(data.response.numFound,0, ',', '.'));
           },
         });
-    </script>
-
-    </section>
-    <meta>
-        <log lastEditor="administrator" date="2017-04-20" time="08:56"/>
-    </meta>
-</MyCoReWebPage>
+    </script></div>
+</section><meta><log lastEditor="bhummel" date="2018-01-12" time="09:23" /></meta></MyCoReWebPage>

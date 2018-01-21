@@ -1,101 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE MyCoReWebPage>
-<MyCoReWebPage>
-  <section xml:lang="de" title="Datenschutz">
-  <div>
-    <h1>
-      Datenschutz
-    </h1>
-    <div class="row">
-      <div class="col-md-8 oa-borderbox" lang="de">
+<MyCoReWebPage><section xml:lang="de" title="Datenschutz"><div>
+<h1>Datenschutz</h1>
 
-        <h2>Hinweise zum Datenschutz</h2>
-        <p>
-          Der Schutz persönlicher Daten ist den Betreibern von OpenAgrar ein wichtiges Anliegen. Daher werden auf dieser Website Nutzungsdaten
-          nur in anonymisierter Form zu Optimierungszwecken gesammelt und gespeichert. Über diese Daten können Sie nicht als
-          Besucher dieser Website persönlich identifiziert werden und es kann kein Nutzungsprofil angelegt werden. Die Daten
-          dienen ausschließlich der Verbesserung des Service, den der Senat mit seiner Internetseite anbietet.
-        </p>
-        <p>
-          Über die anonymisierten und kumulierten Daten erhält der Betreiber Informationen über die Nutzung dieser Internetseite,
-          zum Beispiel, wie häufig verschiedene Artikel aufgerufen wurden oder mit welchem Browser (beispielsweise Firefox,
-          Internet Explorer) die Internetseite betrachtet wird. Diese Informationen nutzt der Betreiber, um die Informationen
-          auf der Internetseite Ihren Bedürfnissen besser anzupassen. So können häufig gelesene Artikel identifiziert werden und
-          die Darstellung der Internetseite an die am häufigsten eingesetzten Browser angepasst werden.
-        </p>
-        <p>
-          Die Nutzung dieser Internetseite ist also ohne Bekanntgabe personenbezogener Informationen möglich. Wenn Sie jedoch
-          das Kontaktformular nutzen, werden Sie gebeten, die für die Bearbeitung erforderlichen persönlichen Informationen zu
-          übermitteln. Dabei sind wir bemüht, nur die nötigsten Angaben von Ihnen abzufragen.
-        </p>
-        <p>
-          Wenn Sie uns eine E-Mail senden, so wird diese und Ihre E-Mail-Adresse ausschließlich für die Korrespondenz mit Ihnen
-          verwendet.
-        </p>
-        <p>
-          Nur insoweit eine gesetzliche oder durch Gerichtsentscheidung ergangene Verpflichtung besteht oder dies im Falle von
-          Angriffen auf die Internetinfrastruktur des Serverbetreibers zur Rechts- oder Strafverfolgung erforderlich ist, erfolgt
-          eine auf den rechtlich zwingend vorgegebenen Umfang beschränkte Weitergabe und Herleitung zu personenbezogenen Daten.
-        </p>
+<div class="row">
+<div class="col-md-8 oa-borderbox" lang="de">
+<h2>Hinweise zum Datenschutz</h2>
 
-        <h2>Cookies</h2>
-        <p>
-          Für einige Funktionen werden Cookies gesetzt, die aber nach der Sitzung gleich wieder gelöscht werden (Session-Cookies).
-          Diese Cookies stellen sicher, dass bestimmte Werte für die Zeit, in der Sie diese Internetseite nutzen, erhalten bleiben.
-          Der Betreiber setzt keine dauerhaften Cookies ein.
-        </p>
-        <p>
-          Ein Cookie ist ein kurzer Eintrag in einem speziellen Dateiverzeichnis auf Ihrem Computer und dient dem Austausch von
-          Informationen zwischen Computerprogrammen oder der zeitlich beschränkten Archivierung von Informationen.
-        </p>
-        <p>
-          Die meisten Browser (Internet-Explorer, Firefox und weitere) sind so eingestellt, dass sie Cookies automatisch akzeptieren.
-          Sie können das Speichern von Cookies jedoch deaktivieren oder Ihren Browser so einstellen, dass Cookies nur für die Dauer
-          der jeweiligen Verbindung zum Internet gespeichert werden.
-        </p>
-        <p>
-          Weitere Informationen zu Cookies: Informationen zum Thema Cookies auf der Plattform <a href="http://www.verbraucher-sicher-online.de/"
-            >"Verbraucher sicher Online"</a>
-        </p>
+<p>Der Schutz persönlicher Daten ist den Betreibern von OpenAgrar ein wichtiges Anliegen. Daher werden auf dieser Website Nutzungsdaten nur in anonymisierter Form zu Optimierungszwecken gesammelt und gespeichert. Über diese Daten können Sie nicht als Besucher dieser Website persönlich identifiziert werden und es kann kein Nutzungsprofil angelegt werden. Die Daten dienen ausschließlich der Verbesserung des Service, den der Senat mit seiner Internetseite anbietet.</p>
 
-        <h2>Technische Daten</h2>
-        <p>
-          Jeder PC, über den man das Internet nutzen kann, erhält bei der Einwahl eine so genannte IP- (Internet Protocol) Adresse.
-          Diese technisch notwendige Adresse ist eine bis zu 12-stellige Zahl in vier Blöcken. Bei jedem Angebot, das Sie online
-          besuchen, wird diese IP-Adresse auf dem jeweiligen Server erkannt und in einem technischen Protokoll gespeichert (geloggt).
-          Ruft eine Nutzerin oder ein Nutzer die OpenAgrar-Internetseite auf, so wird diese IP-Nummer neben der aufgerufenen Seite in
-          einer Log-Datei gespeichert. Dies geschieht bei jedem Server im Internet automatisch. Bei der statistischen Auswertung der
-          Seitenabrufe werden nur die ersten beiden Blöcke der IP-Nummern dargestellt, so dass diese Daten anonymisiert sind.
-        </p>
-        <p>
-          Der Browser, mit dem Sie das OpenAgrar-Internetangebot aufrufen, sendet in der Regel Daten, welcher Browsertyp er ist,
-          das Betriebssystem, die zuvor besuchte Webseite und die beim Verlassen der Seite aufgerufene nächste Webseite. Diese Daten
-          werden ebenfalls im technischen Protokoll gespeichert.
-        </p>
+<p>Über die anonymisierten und kumulierten Daten erhält der Betreiber Informationen über die Nutzung dieser Internetseite, zum Beispiel, wie häufig verschiedene Artikel aufgerufen wurden oder mit welchem Browser (beispielsweise Firefox, Internet Explorer) die Internetseite betrachtet wird. Diese Informationen nutzt der Betreiber, um die Informationen auf der Internetseite Ihren Bedürfnissen besser anzupassen. So können häufig gelesene Artikel identifiziert werden und die Darstellung der Internetseite an die am häufigsten eingesetzten Browser angepasst werden.</p>
 
-        <h2>Seitenaufrufe</h2>
-        <p>
-          Das Auswertungsprogramm speichert, wann eine Seite von www.openagrar.de aufgerufen, welche Seite vorher und
-          welche nächste Seite aufgerufen wurde.
-        </p>
+<p>Die Nutzung dieser Internetseite ist also ohne Bekanntgabe personenbezogener Informationen möglich. Wenn Sie uns eine E-Mail senden, so wird diese und Ihre E-Mail-Adresse ausschließlich für die Korrespondenz mit Ihnen verwendet.</p>
 
-        <h2>Welche Auswertungssoftware setzt der Betreiber ein?</h2>
-        <p>
-          Der Betreiber setzt zur optimalen Auswertung der Aktivitäten auf der Webseite das Produkt Piwik ein. Mit diesem Produkt
-          können die Klicks auf Downloads und externe Links gezählt werden. Die Identifikation der Herkunft (Geolokalisation) erfolgt
-          nur auf Staatenebene. Darüber hinaus gehende Auswertungsmöglichkeiten (Anlegen von Nutzerprofilen) des Produkts kann der
-          Betreiber nicht einsetzen.
-        </p>
-        <p>
-          <strong>Widerspruch:</strong>
-        </p>
-        <iframe style="border: 0; height: 200px; width: 758px;" src="https://www.openagrar.de/piwik/index.php?module=CoreAdminHome&amp;action=optOut&amp;idsite=1&amp;language=de"></iframe>
+<p>Nur insoweit eine gesetzliche oder durch Gerichtsentscheidung ergangene Verpflichtung besteht oder dies im Falle von Angriffen auf die Internetinfrastruktur des Serverbetreibers zur Rechts- oder Strafverfolgung erforderlich ist, erfolgt eine auf den rechtlich zwingend vorgegebenen Umfang beschränkte Weitergabe und Herleitung zu personenbezogenen Daten.</p>
 
-      </div>
-    </div>
-  </div>
-  </section>
-  <meta>
-    <log date="2017-05-03" time="09:09" labelPath=" » Kontakt" lastEditor="Kathleen Neumann" />
-  </meta>
-</MyCoReWebPage>
+<h2>Cookies</h2>
+
+<p>Für einige Funktionen werden Cookies gesetzt, die aber nach der Sitzung gleich wieder gelöscht werden (Session-Cookies). Diese Cookies stellen sicher, dass bestimmte Werte für die Zeit, in der Sie diese Internetseite nutzen, erhalten bleiben. Der Betreiber setzt keine dauerhaften Cookies ein.</p>
+
+<p>Ein Cookie ist ein kurzer Eintrag in einem speziellen Dateiverzeichnis auf Ihrem Computer und dient dem Austausch von Informationen zwischen Computerprogrammen oder der zeitlich beschränkten Archivierung von Informationen.</p>
+
+<p>Die meisten Browser (Internet-Explorer, Firefox und weitere) sind so eingestellt, dass sie Cookies automatisch akzeptieren. Sie können das Speichern von Cookies jedoch deaktivieren oder Ihren Browser so einstellen, dass Cookies nur für die Dauer der jeweiligen Verbindung zum Internet gespeichert werden.</p>
+
+<p>Weitere Informationen zu Cookies: Informationen zum Thema Cookies auf der Plattform <a href="http://www.verbraucher-sicher-online.de/">"Verbraucher sicher Online"</a></p>
+
+<h2>Technische Daten</h2>
+
+<p>Jeder PC, über den man das Internet nutzen kann, erhält bei der Einwahl eine so genannte IP- (Internet Protocol) Adresse. Diese technisch notwendige Adresse ist eine bis zu 12-stellige Zahl in vier Blöcken. Bei jedem Angebot, das Sie online besuchen, wird diese IP-Adresse auf dem jeweiligen Server erkannt und in einem technischen Protokoll gespeichert (geloggt). Ruft eine Nutzerin oder ein Nutzer die OpenAgrar-Internetseite auf, so wird diese IP-Nummer neben der aufgerufenen Seite in einer Log-Datei gespeichert. Dies geschieht bei jedem Server im Internet automatisch. Bei der statistischen Auswertung der Seitenabrufe werden nur die ersten beiden Blöcke der IP-Nummern dargestellt, so dass diese Daten anonymisiert sind.</p>
+
+<p>Der Browser, mit dem Sie das OpenAgrar-Internetangebot aufrufen, sendet in der Regel Daten, welcher Browsertyp er ist, das Betriebssystem, die zuvor besuchte Webseite und die beim Verlassen der Seite aufgerufene nächste Webseite. Diese Daten werden ebenfalls im technischen Protokoll gespeichert.</p>
+
+<h2>Seitenaufrufe</h2>
+
+<p>Das Auswertungsprogramm speichert, wann eine Seite von www.openagrar.de aufgerufen, welche Seite vorher und welche nächste Seite aufgerufen wurde.</p>
+
+<h2>Welche Auswertungssoftware setzt der Betreiber ein?</h2>
+
+<p>Der Betreiber setzt zur optimalen Auswertung der Aktivitäten auf der Webseite das Produkt Piwik ein. Mit diesem Produkt können die Klicks auf Downloads und externe Links gezählt werden. Die Identifikation der Herkunft (Geolokalisation) erfolgt nur auf Staatenebene. Darüber hinaus gehende Auswertungsmöglichkeiten (Anlegen von Nutzerprofilen) des Produkts kann der Betreiber nicht einsetzen.</p>
+
+<p><strong>Widerspruch:</strong></p>
+<iframe src="https://www.openagrar.de/piwik/index.php?module=CoreAdminHome&amp;action=optOut&amp;idsite=1&amp;language=de" style="border: 0; height: 200px; width: 758px;" /></div>
+</div>
+</div>
+</section><meta><log lastEditor="bhummel" date="2018-01-12" time="09:45" /></meta></MyCoReWebPage>
