@@ -13,6 +13,26 @@
 </div>
 </div>
 </div>
+</div>
+</section>
+
+<section xml:lang="en" title="Welcome to the OpenAgrar repository "><div>
+<div class="jumbotwo">
+<h1>Welcome to the OpenAgrar repository</h1>
+
+<div class="row">
+<div class="col-md-8 oa-borderbox" lang="en">
+<h2>You are looking for publications – just try it here</h2>
+
+<p>OpenAgrar is the collective repository of research institutions affiliated with the Federal Ministry of Food and Agriculture (BMEL) in Germany. Currently it is operated by the following institutions: German Biomass Research Centre (DBFZ), Federal Research Centre for Cultivated Plants (JKI), Federal Research Institute for Animal Health (FLI), Federal Research Institute of Nutrition and Food (MRI), Federal Research Institute for Rural Areas, Forestry and Fisheries (TI), German Federal Institute for risk assessment (BfR). It preserves the scholarly output of its members as a whole.</p>
+
+<p>OpenAgrar is an open access repository which publishes, stores, archives and distributes publications, publication references and research data. Its resources can be searched and used by everyone. It contains amongst others theses, reports, conference proceedings, journal articles, books, institutional documents, research datasets, videos and interviews. Currently <span id="oa-docCounter">80.000</span> publications are recorded.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section xml:lang="all">
 <script type="text/javascript" src="../js/jquery.number.js" /><script>
         $.ajax({
           type: "GET",
@@ -22,5 +42,6 @@
             $('#oa-docCounter').text($.number(data.response.numFound,0, ',', '.'));
           },
         });
-    </script></div>
-</section><meta><log lastEditor="bhummel" date="2018-01-12" time="09:23" /></meta></MyCoReWebPage>
+    </script>
+</section>
+<meta><log lastEditor="administrator" date="2018-01-11" time="09:05" /></meta></MyCoReWebPage>

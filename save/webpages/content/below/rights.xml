@@ -6,9 +6,9 @@
 <div class="col-md-8 oa-borderbox" lang="de">
 <h2>Hinweise zum Datenschutz</h2>
 
-<p>Der Schutz persönlicher Daten ist den Betreibern von OpenAgrar ein wichtiges Anliegen. Daher werden auf dieser Website Nutzungsdaten nur in anonymisierter Form zu Optimierungszwecken gesammelt und gespeichert. Über diese Daten können Sie nicht als Besucher dieser Website persönlich identifiziert werden und es kann kein Nutzungsprofil angelegt werden. Die Daten dienen ausschließlich der Verbesserung des Service, den der Senat mit seiner Internetseite anbietet.</p>
+<p>Der Schutz persönlicher Daten ist den Betreibern von OpenAgrar ein wichtiges Anliegen. Daher werden auf dieser Website Nutzungsdaten nur in anonymisierter Form zu Optimierungszwecken gesammelt und gespeichert. Über diese Daten können Sie nicht als Besucher dieser Website persönlich identifiziert werden und es kann kein Nutzungsprofil angelegt werden. Die Daten dienen ausschließlich der Verbesserung des Service, den die Betreiber von OpenAgrar mit ihrer Internetseite anbieten.</p>
 
-<p>Über die anonymisierten und kumulierten Daten erhält der Betreiber Informationen über die Nutzung dieser Internetseite, zum Beispiel, wie häufig verschiedene Artikel aufgerufen wurden oder mit welchem Browser (beispielsweise Firefox, Internet Explorer) die Internetseite betrachtet wird. Diese Informationen nutzt der Betreiber, um die Informationen auf der Internetseite Ihren Bedürfnissen besser anzupassen. So können häufig gelesene Artikel identifiziert werden und die Darstellung der Internetseite an die am häufigsten eingesetzten Browser angepasst werden.</p>
+<p>Über die anonymisierten und kumulierten Daten erhalten die Betreiber Informationen über die Nutzung dieser Internetseite, zum Beispiel, wie häufig verschiedene Artikel aufgerufen wurden oder mit welchem Browser (beispielsweise Firefox, Internet Explorer) die Internetseite betrachtet wird. Diese Informationen nutzten die Betreiber, um die Informationen auf der Internetseite Ihren Bedürfnissen besser anzupassen. So können häufig gelesene Artikel identifiziert werden und die Darstellung der Internetseite an die am häufigsten eingesetzten Browser angepasst werden.</p>
 
 <p>Die Nutzung dieser Internetseite ist also ohne Bekanntgabe personenbezogener Informationen möglich. Wenn Sie uns eine E-Mail senden, so wird diese und Ihre E-Mail-Adresse ausschließlich für die Korrespondenz mit Ihnen verwendet.</p>
 
@@ -22,7 +22,7 @@
 
 <p>Die meisten Browser (Internet-Explorer, Firefox und weitere) sind so eingestellt, dass sie Cookies automatisch akzeptieren. Sie können das Speichern von Cookies jedoch deaktivieren oder Ihren Browser so einstellen, dass Cookies nur für die Dauer der jeweiligen Verbindung zum Internet gespeichert werden.</p>
 
-<p>Weitere Informationen zu Cookies: Informationen zum Thema Cookies auf der Plattform <a href="http://www.verbraucher-sicher-online.de/">"Verbraucher sicher Online"</a></p>
+<p>Weitere Informationen zu Cookies: Informationen zum Thema Cookies auf der Plattform <a href="https://www.verbraucher-sicher-online.de">"Verbraucher sicher Online"</a></p>
 
 <h2>Technische Daten</h2>
 
@@ -42,4 +42,52 @@
 <iframe src="https://www.openagrar.de/piwik/index.php?module=CoreAdminHome&amp;action=optOut&amp;idsite=1&amp;language=de" style="border: 0; height: 200px; width: 758px;" /></div>
 </div>
 </div>
-</section><meta><log lastEditor="bhummel" date="2018-01-12" time="09:45" /></meta></MyCoReWebPage>
+</section>
+
+<section xml:lang="en" title="Data protection"><div>
+<h1>Data protection</h1>
+
+<div class="row">
+<div class="col-md-8 oa-borderbox" lang="de">
+
+
+<h2>Information on data protection</h2>
+
+<p>Protecting personal data is an important concern for the operators of OpenAgrar. For this reason, this website only collects and stores data in anonymised form for optimisation purposes. This data cannot be used to identify you personally as a visitor to this website, and it is not possible to establish a user profile. The sole purpose of the data is to improve the service which the operators of OpenAgrar offer on its internet site.</p>
+
+<p>The anonymised data that is accumulated provide the operators of OpenAgrar with information on the use of this internet site, for instance about the frequency with which articles are retrieved or about the browser used to view the internet page (for instance Firefox, Internet Explorer). The operators of OpenAgrar use this information to better adjust the information on the internet site to your needs. This way, frequently read articles can be identified and the presentation of the internet site can be adapted to the most frequently used browsers.</p>
+
+<p>This internet site can therefore be used without disclosing any personal information. When you send us an e-mail, this e-mail and your e-mail address will be used solely for corresponding with you.</p>
+
+<p>Personal data will only be transmitted and derived to the extent absolutely required by law if we are obliged to do so by law or by a court ruling or if this is required, in the event of assaults on the internet infrastructure of the hosting service institution for prosecution or the initiation of criminal proceedings.</p>
+
+<h2>Cookies</h2>
+
+<p>Cookies are also set, but are deleted immediately after the session (session cookies). These cookies make sure that certain values are maintained while you use this internet page. The Operators do not use any permanent cookies.</p>
+
+<p>A cookie is a short entry in a specific data file on your computer, which supports the exchange of information between computer program or the archiving of information for a limited period of time.</p>
+
+<p>Most browsers (Internet Explorer, Firefox and others) are configured to automatically accept cookies. However, you can deactivate the storage of cookies or adjust your browser so that cookies are only stored for the time of a single internet connection.</p>
+
+<h2>Technical data</h2>
+
+<p>Every PC with internet access is given a so-called IP (Internet Protocol) address when dialing up. This address, which is needed for technical reasons, is a number with up to 12 digits in four blocks. This IP address is recognised on the relevant server whenever you use an online service, and it is stored (logged) in a technical protocol. If a user visits the website of OpenAgrar, this IP number will be stored together with the retrieved page in a log file. This is an automatic process performed by every server on the internet. For the statistical analysis of the page retrievals only the first two blocks of the IP numbers will be visible so that this data is anonymised.</p>
+
+<p>In general, the browser with which you retrieve the internet services of OpenAgrar sends data about the browser type, the operating system, the website visited before and the next website visited after leaving the site. This data is also stored in the technical protocol.</p>
+
+<h2>Website retrievals</h2>
+
+<p>The evaluation program stores the information when a www.openagrar.de site was retrieved and which site was retrieved before and after visiting this page.</p>
+
+<h2>What evaluation software is used?</h2>
+
+<p>For an optimum evaluation of the activities on its website the operators of OpenAgrar use the product "Piwik". With this product, clicks on downloads and external links can be counted. With regard to identifying the origin (geolocalisation) only the country is identified. The operators of OpenAgrar cannot use any of the product’s more extensive evaluation possibilities (creation of user profiles).</p>
+
+<p><strong>Objection:</strong></p>
+
+<iframe src="https://www.openagrar.de/piwik/index.php?module=CoreAdminHome&amp;action=optOut&amp;idsite=1&amp;language=en" style="border: 0; height: 200px; width: 758px;" /></div>
+</div>
+</div>
+
+
+</section><meta><log lastEditor="administrator" date="2018-01-11" time="10:13" /></meta></MyCoReWebPage>

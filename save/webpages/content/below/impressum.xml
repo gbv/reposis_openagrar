@@ -24,8 +24,13 @@
 </div>
 </div>
 </div>
-</section><section xml:lang="en" title="Imprint"><h1>Imprint</h1>
+</section>
 
+<section xml:lang="en" title="Imprint"><div>
+<h1>Imprint</h1>
+
+<div class="row">
+<div class="col-md-8 oa-borderbox" lang="en">
 <h2>Overall responsibility</h2>
 
 <p><a href="/">OpenAgrar</a> is collaboratively operated and developed by the scientific libraries of the member institutions. They are equally responsible for the layout and the content, whereas the common library network GBV (VZG) is in charge of web server and hosting services. You can find all contacts <a href="contact.xml">here</a>.</p>
@@ -45,6 +50,9 @@
 <p>Please notify us if OpenAgrar refers to websites whose contents give cause for complaint.</p>
 
 <p>We reserve the right to amend, supplement or delete the information provided without prior notice.</p>
+</div>
+</div>
+</div>
+</section>
 
-<p>.</p>
-</section><meta><log lastEditor="bhummel" date="2018-01-12" time="09:41" /></meta></MyCoReWebPage>
+<meta><log lastEditor="administrator" date="2018-01-11" time="09:36" /></meta></MyCoReWebPage>
