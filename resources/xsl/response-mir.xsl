@@ -76,13 +76,21 @@
 
     <div class="row result_head">
       <div class="col-xs-12 result_headline">
-      	<h1>
-      	  <xsl:value-of select="$institut_str"/>
-      	</h1>
-      	<h1>
-      	  <xsl:value-of select="$name_str"/>
-      	</h1>
         <h1>
+          <xsl:choose>
+            <xsl:when test="string-length($institut_str) &gt; 0">
+              <span class="resultText"><xsl:value-of select="i18n:translate('results.text')" /></span>
+              <xsl:text> </xsl:text>
+              <xsl:value-of select="$institut_str"/>
+            </xsl:when>
+            <xsl:when test="string-length($name_str) &gt; 0">
+              <span class="resultText"><xsl:value-of select="i18n:translate('results.text')" /></span>
+              <xsl:text> </xsl:text>
+              <xsl:value-of select="$name_str"/>
+            </xsl:when>
+          </xsl:choose>
+        </h1>
+        <h2>
           <xsl:choose>
             <xsl:when test="$hits=0">
               <xsl:value-of select="i18n:translate('results.noObject')" />
@@ -94,7 +102,7 @@
               <xsl:value-of select="i18n:translate('results.nObjects',$hits)" />
             </xsl:otherwise>
           </xsl:choose>
-        </h1>
+        </h2>
       </div>
     </div>
 

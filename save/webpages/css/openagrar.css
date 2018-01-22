@@ -298,6 +298,21 @@ html body footer .internal_links {
 }
 
 
+/* *********************** result text *********************** */
+.result_headline h1 {
+  color: #693;
+  font-weight: bold;
+}
+.result_headline h1 span.resultText {
+  color: #666;
+  font-weight: normal;
+}
+.result_headline h2 {
+  color: #666;
+  font-size: 20px;
+}
+
+
 
 div#_altmetric_popover_el.altmetric-embed div#_altmetric_container.altmetric_container div#_altmetric_popover_inner .altmetric-popover-content {
   background-color: #f9f9f9 !important;
