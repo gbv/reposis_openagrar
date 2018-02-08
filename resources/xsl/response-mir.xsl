@@ -51,7 +51,6 @@
   
   <xsl:variable name="name_str">
     <xsl:if test="string-length($nameGND) &gt; 0">
-      <xsl:value-of select="'Suchergebnisse für '"/>
       <xsl:variable name="names" select="document(concat($WebApplicationBaseURL,'/servlets/solr/personindex?XSL.Style=xml&amp;terms.regex=.*:gnd:',$nameGND))" />
   	  <xsl:value-of select="substring-before($names//int[contains(@name,$nameGND)]/@name,':gnd')"/>
       
