@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="dataciteResType">
+    <label xml:lang="de" text="Datacite ResourceTypen" />
+    <label xml:lang="x-uri" text="https://www.mycore.org/classifications/dataciteResType" />
+    <label xml:lang="en" text="Datacite ResourceTypes" />
+    <categories>
+        <category ID="other">
+            <label xml:lang="en" text="Other" />
+            <label xml:lang="de" text="Other" />
+        </category>
+        <category ID="workflow">
+            <label xml:lang="de" text="Workflow" />
+            <label xml:lang="en" text="Workflow" />
+        </category>
+        <category ID="text">
+            <label xml:lang="de" text="Text" />
+            <label xml:lang="en" text="Text" />
+        </category>
+        <category ID="sound">
+            <label xml:lang="en" text="Sound" />
+            <label xml:lang="de" text="Sound" />
+        </category>
+        <category ID="software">
+            <label xml:lang="en" text="Software" />
+            <label xml:lang="de" text="Software" />
+        </category>
+        <category ID="service">
+            <label xml:lang="en" text="Service" />
+            <label xml:lang="de" text="Service" />
+        </category>
+        <category ID="physicalObject">
+            <label xml:lang="en" text="PhysicalObject" />
+            <label xml:lang="de" text="PhysicalObject" />
+        </category>
+        <category ID="model">
+            <label xml:lang="de" text="Model" />
+            <label xml:lang="en" text="Model" />
+        </category>
+        <category ID="interactiveResource">
+            <label xml:lang="en" text="InteractiveResource" />
+            <label xml:lang="de" text="InteractiveResource" />
+        </category>
+        <category ID="event">
+            <label xml:lang="en" text="Event" />
+            <label xml:lang="de" text="Event" />
+        </category>
+        <category ID="image">
+            <label xml:lang="de" text="Image" />
+            <label xml:lang="en" text="Image" />
+        </category>
+        <category ID="dataset">
+            <label xml:lang="de" text="Dataset" />
+            <label xml:lang="en" text="Dataset" />
+        </category>
+        <category ID="dataPaper">
+            <label xml:lang="en" text="DataPaper" />
+            <label xml:lang="de" text="DataPaper" />
+        </category>
+        <category ID="collection">
+            <label xml:lang="de" text="Collection" />
+            <label xml:lang="en" text="Collection" />
+        </category>
+        <category ID="audiovisual">
+            <label xml:lang="en" text="Audiovisual" />
+            <label xml:lang="de" text="Audiovisual" />
+        </category>
+    </categories>
+</mycoreclass>
