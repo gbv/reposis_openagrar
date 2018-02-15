@@ -1,31 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE MyCoReWebPage>
-<MyCoReWebPage>
-  <section xml:lang="de" title="Registrieren">
-  <div>
-    <h1>
-      Registrieren
-    </h1>
-    <div class="row">
-      <div class="col-md-8 oa-borderbox" lang="de">
-        <p>
-          Der Lesezugriff auf OpenAgrar ist frei für alle Besucher. Eine Registrierung hierfür ist nicht notwendig.
-        </p>
-        <p>
-          In der derzeitigen Version steht der Publikationsserver für die Veröffentlichung von Literaturnachweisen und
-          Volltexten nur den Einrichtungen aus dem Geschäftsbereich des Bundesministeriums für Ernährung
-          und Landwirtschaft (BMEL) zur Verfügung.
-        </p>
-        <p>
-          Sofern Sie in einer dieser Einrichtungen beschäftigt sind und Ihre Dokumente selber in OpenAgrar eingeben möchten,
-          ist eine Registrierung erforderlich. Hierfür nehmen Sie bitte mit der Bibliothek Ihrer Einrichtung Kontakt auf.
-          Die Adressen finden Sie unter <a href="../below/contact.xml">Kontakt</a>.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-  <meta>
-    <log date="2014-01-10" time="10:57" labelPath=" » Registrieren" lastEditor="C.U. Koehler" />
-  </meta>
-</MyCoReWebPage>
+<MyCoReWebPage><section xml:lang="de" title="Registrieren"><div>
+<h1>Registrieren</h1>
+
+<div class="row">
+<div class="col-md-8 oa-borderbox" lang="de">
+<p>Der Lesezugriff auf OpenAgrar ist frei für alle Besucher. Eine Registrierung hierfür ist nicht notwendig.</p>
+
+<p>OpenAgrar ist der gemeinsame Publikationsserver der Bundesforschungseinrichtungen im Geschäftsbereich des Bundesministeriums für Ernährung und Landwirtschaft (BMEL). Folgende Institutionen betreiben aktuell das OpenAgrar Repositorium: Deutsches Biomasseforschungszentrum (DBFZ), Julius Kühn-Institut (JKI), Friedrich-Loeffler-Institut (FLI), Max Rubner-Institut (MRI), Thünen-Institut (TI), Bundesinstitut für Risikobewertung (BfR).</p>
+
+<p>Zur Zeit werden nur Publikationen von Mitarbeiterinnen und Mitarbeitern der oben genannten Institutionen verzeichnet beziehungsweise Publikationen aus Zeitschriften, Tagungsbänden u.a., die von den Institutionen herausgegeben werden.</p>
+
+<p>Sofern Sie in einer dieser Einrichtungen beschäftigt sind und Ihre Dokumente selber in OpenAgrar eingeben möchten, ist eine Registrierung erforderlich. Hierfür nehmen Sie bitte mit der Bibliothek Ihrer Einrichtung Kontakt auf. Die Adressen finden Sie unter <a href="../below/contact.xml">Kontakt</a>.</p>
+
+<p> </p>
+</div>
+</div>
+</div>
+</section><section xml:lang="en" title="Register"><div>
+<h1>Register</h1>
+
+<div class="row">
+<div class="col-md-8 oa-borderbox" lang="de">
+<p>To access the documents hosted by OpenAgrar no registration is necessary.</p>
+
+<p>Open Agrar is the publication server of the federal research institutes within the portfolio of the German Federal Ministry of Food and Agriculture (BMEL). It provides access to the research output of six research institutes (Deutsches Biomasseforschungszentrum, Julius Kühn Institute, Friedrich-Loeffler-Institute, Max Rubner-Institute, Johann Heinrich von Thünen Institute and German Federal Institute for Risk Assessment).</p>
+
+<p>We are actually only hosting publications from authors working in one of the institutes mentioned above and publications out of Journals, Conference Proceedings etc. edited and released by the institutes.</p>
+
+<p>If you work in one of the institutions and want to submit or register your publications by yourself, a registration is necessary. Please contact the library of your institution. You will find the address under <a href="../below/contact.xml">Contact</a>.</p>
+</div>
+</div>
+</div>
+</section><meta><log lastEditor="ustahl" date="2018-01-23" time="14:53" /></meta></MyCoReWebPage>

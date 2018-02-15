@@ -1,134 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE MyCoReWebPage>
-<MyCoReWebPage>
-  <section xml:lang="de" title="Kontakt">
-  <div>
-    <h1>
-      Kontakt
-    </h1>
-    <div class="row">
-      <div class="col-md-8 oa-borderbox" lang="de">
-        <p>
-          Der Publikationsserver OpenAgrar wurde von den Bibliotheken im Geschäftsbereich des BMEL und der Bundesanstalt für
-          Landwirtschaft und Ernährung (BLE) konzipiert und in Zusammenarbeit mit dem Gemeinsamen Bibliotheksverbund (GBV) aufgebaut.
-          <br />
-          Für die Registrierung sowie für fachliche Fragen stehen Ihnen die Bibliotheken oder Informationszentren zur Verfügung.
-        </p>
+<MyCoReWebPage><section xml:lang="en" title="Contact"><div>
+<h3><span style="font-size:26px;">Contact</span></h3>
 
-        <h3> Friedrich-Loeffler-Institut (FLI) </h3>
-        <p>
-          Südufer 10 <br/>
-          17493 Greifswald - Insel Riems <br/>
-          Tel.: 038351 7 0 <br/>
-          Fax: 038351 7 151 <br/>
-          <b> Information und Dokumentation </b> <br/>
-          Internet: <a href="https://www.fli.de/de/service/bibliotheken/"
-            >https://www.fli.de/de/service/bibliotheken/</a> <br/>
-          Tel.: 038351 7 1119 <br/>
-          Fax: 038351 7 1151 <br/>
-          E-Mail: <span class="madress">bibliothek.riems [at] fli.de</span>
-        </p>
+<p>The OpenAgrar repository was planned by the libraries of the research institutions affiliated with the Federal Ministry of Food and Agriculture (BMEL) and the Federal Office for Agriculture and Food. It was developed and set up together with the Verbundzentrale des GBV (VZG).<br />
+For questions regarding the publications in OpenAgrar or the repository framework MyCoRe and the database server please contact the libraries or the Verbundzentrale des GBV (VZG), respectively.</p>
 
-        <h3>Thünen-Institut</h3>
-        <p>
-          Bundesallee 50 <br/>
-          38116 Braunschweig <br/>
-          Tel.: 0531 596 0 <br/>
-          Fax: 0531 596 1099 <br/>
-          Internet: <a href="http://www.thuenen.de">http://www.thuenen.de</a> <br/>
-          <strong>Zentrum für Informationsmanagement</strong> <br/>
-          E-Mail: <span class="madress">zi [at] thuenen.de</span>
-        </p>
+<h3><span style="font-size:20px;">Federal Research Institute for Animal Health - Friedrich-Loeffler-Institut (FLI)</span></h3>
 
-        <h3>Julius Kühn-Institut (JKI)</h3>
-        <p>
-          Erwin-Baur-Straße 27 <br/>
-          06484 Quedlinburg <br/>
-          Tel.: 03946 47 0 <br/>
-          Fax: 03946 47 255 <br/>
-          <strong>Informationszentrum und Bibliothek</strong> <br/>
-          Internet: <a href="https://www.julius-kuehn.de/ib/"
-          >https://www.julius-kuehn.de/ib/</a> <br/>
-          E-Mail: <span class="madress">IB [at] julius-kuehn.de</span>
-        </p>
+<p>Südufer 10<br />
+17493 Greifswald - Insel Riems<br />
+Tel.: +4938351 7 0<br />
+Fax: +4938351 7 151<br />
+<strong>Information and Documentation </strong><br />
+Internet: <a href="https://www.fli.de/de/service/bibliotheken/">https://www.fli.de/en/services/libraries/</a><br />
+Tel.: +4938351 7 1119<br />
+Fax: +4938351 7 1151<br />
+E-Mail: bibliothek.riems [at] fli.de</p>
 
-        <h3> Max Rubner-Institut  </h3>
-        <p>
-          Haid-und-Neu-Str. 9  <br/>
-          76131 Karlsruhe  <br/>
-          Tel.: 0721 6625 0  <br/>
-          Fax: 0721 6625 111  <br/>
-          <strong>Bibliothek</strong> <br/>
-          Internet: <a href="https://www.mri.bund.de/de/service/bibliothek/"
-            >https://www.mri.bund.de/de/service/bibliothek/</a>  <br/>
-          Tel.: 0721 6625 600  <br/>
-          Fax: 0721 6625 602  <br/>
-          E-Mail: <span class="madress">openagrar [at] mri.bund.de</span>
-        </p>
+<h3><span style="font-size:20px;">Federal Research Institute for Rural Areas, Forestry and Fisheries -Thünen-Institut </span></h3>
 
-        <h3>Bundesinstitut für Risikobewertung (BfR)</h3>
-        <p>
-          Max-Dohrn-Straße 8-10 <br/>
-          10589 Berlin <br/>
-          Tel.: 030 18412 0 <br/>
-          Fax: 030 18412 4741 <br/>
-          <b> Bibliothek </b> <br/>
-          Internet: <a href="http://www.bfr.bund.de/de/bibliothek-6902.html"
-            >http://www.bfr.bund.de/de/bibliothek-6902.html </a> <br/>
-          Tel.: 030 18412 4524 <br/>
-          Fax: 030 18412 4718 <br/>
-          E-Mail: <span class="madress">bibliothek [at] bfr.bund.de</span>
-        </p>
+<p>Bundesallee 50<br />
+38116 Braunschweig<br />
+Tel.: +49531 596 0<br />
+Fax: +49531 596 1099<br />
+Internet: <a href="https://www.thuenen.de/en/">https://www.thuenen.de/en/</a><br />
+<strong>Centre for Information Management</strong><br />
+E-Mail: zi [at] thuenen.de</p>
 
-        <h3>Deutsches Biomasseforschungszentrum gemeinnützige GmbH (DBFZ)</h3>
-        <p>
-          Torgauer Straße 116<br/>
-          04347 Leipzig<br/>
-          Tel.: 0341 2434 112<br/>
-          Fax: 0341 2434 133<br/>
-          <strong>Bibliothek</strong> <br/>
-          Internet: <a href="https://www.dbfz.de/"
-            >https://www.dbfz.de/</a>  <br/>
-          Tel.: 0341 2434 447  <br/>
-          Fax: 0341 2434 133  <br/>
-          E-Mail: <span class="madress">bib [at] dbfz.de</span>
-        </p>
+<h3><span style="font-size:20px;">Federal Research Centre for Cultivated Plants - Julius Kühn-Institut (JKI)</span></h3>
 
-        <p>
-          Für technische oder organisatorische Fragen wenden Sie sich bitte an die
-        </p>
-        <h3>Bundesanstalt für Landwirtschaft und Ernährung (BLE)</h3>
-        <p>
-          Zentrale in Bonn:  <br/>
-          Deichmanns Aue 29  <br/>
-          53179 Bonn  <br/>
-          Telefon: 0228 99 6845 0  <br/>
-          Telefax: 0228 99 6845 3101  <br/>
-          <strong>Referat 416 - "Informationsdienste"</strong> <br/>
-          Ansprechpartner: Helmut Michels  <br/>
-          Telefon: 0228 6845 7181  <br/>
-          E-Mail: <span class="madress">helmut.michels [at] ble.de</span> oder <span class="madress">openagar [at] bmel-forschung.de</span>
-        </p>
+<p>Erwin-Baur-Straße 27<br />
+06484 Quedlinburg<br />
+Tel.: +493946 47 0<br />
+Fax: +493946 47 255<br />
+<strong>Information Centre and Library</strong><br />
+Internet: <a href="https://www.julius-kuehn.de/en/information-centre-and-library/">https://www.julius-kuehn.de/en/information-centre-and-library/</a><br />
+E-Mail: IB [at] julius-kuehn.de</p>
 
-        <p>
-          Fragen zum Repositoryframework MyCoRe und dem Datenbankserver beantwortet Ihnen die
-        </p>
-        <h3>Verbundzentrale des GBV (VZG) </h3>
-        <p>
-          Platz der Göttinger Sieben 1 <br/>
-          37073 Göttingen <br/>
-          Tel.: 0551 39 5207 <br/>
-          Fax: 0551 39 13980 <br/>
-          <b>Digitale Bibliothek, Reposis</b> <br/>
-          Internet: <a href="https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-repository-service"
-            >https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-repository-service</a>  <br/>
-          E-Mail: <span class="madress">dms-list [at] lists.gbv.de</span>
-        </p>
-      </div>
-    </div>
-  </div>
-  </section>
-  <meta>
-    <log date="2016-06-30" time="09:20" labelPath=" » Kontakt" lastEditor="Kathleen Neumann" />
-  </meta>
-</MyCoReWebPage>
+<h3><span style="font-size:20px;">Federal Research Institute of Nutrition and Food - Max Rubner-Institut (MRI)</span></h3>
+
+<p>Haid-und-Neu-Str. 9<br />
+76131 Karlsruhe<br />
+Tel.: +49721 6625 0<br />
+Fax: +49721 6625 111<br />
+<strong>Library</strong><br />
+Internet: <a href="https://www.mri.bund.de/en/service/library/">https://www.mri.bund.de/en/service/library/</a><br />
+Tel.: +49721 6625 600<br />
+Fax: +49721 6625 602<br />
+E-Mail: openagrar [at] mri.bund.de</p>
+
+<h3><span style="font-size:20px;">German Federal Institute for risk assessment (BfR)</span></h3>
+
+<p>Max-Dohrn-Straße 8-10<br />
+10589 Berlin<br />
+Tel.: +4930 18412 0<br />
+Fax: +4930 18412 4741<br />
+<strong>Library</strong><br />
+Internet: <a href="http://www.bfr.bund.de/de/bibliothek-6902.html">http://www.bfr.bund.de/de/bibliothek-6902.html </a><br />
+Tel.: +4930 18412 4524<br />
+Fax: +4930 18412 4718<br />
+E-Mail: bibliothek [at] bfr.bund.de</p>
+
+<h3><span style="font-size:20px;">Deutsches Biomasseforschungszentrum gemeinnützige GmbH (DBFZ)</span></h3>
+
+<p>Torgauer Straße 116<br />
+04347 Leipzig<br />
+Tel.: +49341 2434 112<br />
+Fax: +49341 2434 133<br />
+<strong>Library</strong><br />
+Internet: <a href="https://www.dbfz.de/index.php?id=34&amp;L=1">https://www.dbfz.de/index.php?id=34&amp;L=1</a><br />
+Tel.: +49341 2434 447<br />
+Fax: +49341 2434 133<br />
+E-Mail: bib [at] dbfz.de</p>
+
+<h3><span style="font-size:20px;">Federal Office for Agriculture and Food</span></h3>
+
+<p>Deichmanns Aue 29<br />
+53179 Bonn<br />
+Tel.: +49228 99 6845 0<br />
+Fax: +49228 99 6845 3101<br />
+Contact: Helmut Michels<br />
+Tel.: +49228 6845 7181<br />
+E-Mail: helmut.michels [at] ble.de oder openagar [at] bmel-forschung.de</p>
+
+<h3><span style="font-size:20px;">Verbundzentrale des GBV (VZG)</span></h3>
+
+<p>Platz der Göttinger Sieben 1<br />
+37073 Göttingen<br />
+Tel.: +49551 39 5207<br />
+Fax: +49551 39 13980<br />
+<strong>Digital Library, Reposis</strong><br />
+Internet: <a href="https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-repository-service">https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-repository-service</a><br />
+E-Mail: dms-list [at] lists.gbv.de</p>
+</div>
+</section><section xml:lang="de" title="Kontakt"><div><h3><span style="font-size:26px;">Kontakt</span></h3><p>Der Publikationsserver OpenAgrar wurde von den Bibliotheken im Geschäftsbereich des BMEL und der Bundesanstalt für Landwirtschaft und Ernährung (BLE) konzipiert und in Zusammenarbeit mit der Verbundzentrale des GBV (VZG) aufgebaut.</p><p>Für fachliche Fragen kontaktieren Sie bitte die entsprechenden Bibliotheken und Informationszentren. Fragen zum Repository-framework MyCoRe und dem Datenbankserver beantwortet Ihnen die Verbundzentrale des GBV (VZG).</p><h3>Friedrich-Loeffler-Institut (FLI)</h3><p>Südufer 10<br />
+17493 Greifswald - Insel Riems<br />
+Tel.: 038351 7 0<br />
+Fax: 038351 7 151<br />
+<strong>Information und Dokumentation </strong><br />
+Internet: <a href="https://www.fli.de/de/service/bibliotheken/">https://www.fli.de/de/service/bibliotheken/</a><br />
+Tel.: 038351 7 1119<br />
+Fax: 038351 7 1151<br />
+E-Mail: <a href="mailto:bibliothek.riems@fli.de">bibliothek.riems@fli.de</a></p><h3>Thünen-Institut</h3><p>Bundesallee 50<br />
+38116 Braunschweig<br />
+Tel.: 0531 596 0<br />
+Fax: 0531 596 1099<br />
+Internet: <a href="http://www.thuenen.de">http://www.thuenen.de</a><br />
+<strong>Zentrum für Informationsmanagement</strong><br />
+E-Mail: <a href="mailto:zi@thuenen.de">zi@thuenen.de</a></p><h3>Julius Kühn-Institut (JKI)</h3><p>Erwin-Baur-Straße 27<br />
+06484 Quedlinburg<br />
+Tel.: 03946 47 0<br />
+Fax: 03946 47 255<br />
+<strong>Informationszentrum und Bibliothek</strong><br />
+Internet: <a href="https://www.julius-kuehn.de/ib/">https://www.julius-kuehn.de/ib/</a><br />
+E-Mail: <a href="mailto:IB@julius-kuehn.de">IB@julius-kuehn.de</a></p><h3>Max Rubner-Institut</h3><p>Haid-und-Neu-Str. 9<br />
+76131 Karlsruhe<br />
+Tel.: 0721 6625 0<br />
+Fax: 0721 6625 111<br />
+<strong>Bibliothek</strong><br />
+Internet: <a href="https://www.mri.bund.de/de/service/bibliothek/">https://www.mri.bund.de/de/service/bibliothek/</a><br />
+Tel.: 0721 6625 600<br />
+Fax: 0721 6625 602<br />
+E-Mail: <a href="mailto:openagrar@mri.bund.de">openagrar@mri.bund.de</a></p><h3>Bundesinstitut für Risikobewertung (BfR)</h3><p>Max-Dohrn-Straße 8-10<br />
+10589 Berlin<br />
+Tel.: 030 18412 0<br />
+Fax: 030 18412 4741<br />
+<strong>Bibliothek </strong><br />
+Internet: <a href="http://www.bfr.bund.de/de/bibliothek-6902.html">http://www.bfr.bund.de/de/bibliothek-6902.html </a><br />
+Tel.: 030 18412 4524<br />
+Fax: 030 18412 4718<br />
+E-Mail: <a href="mailto:bibliothek@bfr.bund.de">bibliothek@bfr.bund.de</a></p><h3>Deutsches Biomasseforschungszentrum gemeinnützige GmbH (DBFZ)</h3><p>Torgauer Straße 116<br />
+04347 Leipzig<br />
+Tel.: 0341 2434 112<br />
+Fax: 0341 2434 133<br />
+<strong>Bibliothek</strong><br />
+Internet: <a href="https://www.dbfz.de/">https://www.dbfz.de/</a><br />
+Tel.: 0341 2434 447<br />
+Fax: 0341 2434 133<br />
+E-Mail: <a href="mailto:bib@dbfz.de">bib@dbfz.de</a></p><h3>Bundesanstalt für Landwirtschaft und Ernährung (BLE)</h3><p>Zentrale in Bonn:<br />
+Deichmanns Aue 29<br />
+53179 Bonn<br />
+Telefon: 0228 99 6845 0<br />
+Telefax: 0228 99 6845 3101<br />
+<strong>Referat 416 - "Informationsdienste"</strong><br />
+Ansprechpartner: Helmut Michels<br />
+Telefon: 0228 6845 7181<br />
+E-Mail: <a href="mailto:helmut.michels@ble.de">helmut.michels@ble.de</a> oder <a href="mailto:openagar@bmel-forschung.de">openagar@bmel-forschung.de</a></p><h3>Verbundzentrale des GBV (VZG)</h3><p>Platz der Göttinger Sieben 1<br />
+37073 Göttingen<br />
+Tel.: 0551 39 5207<br />
+Fax: 0551 39 13980<br />
+<strong>Digitale Bibliothek, Reposis</strong><br />
+Internet: <a href="https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-repository-service">https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-repository-service</a><br />
+E-Mail: <a href="mailto:dms-list@lists.gbv.de">dms-list@lists.gbv.de</a></p></div></section><meta><log lastEditor="ustahl" date="2018-01-24" time="10:59" /></meta></MyCoReWebPage>
