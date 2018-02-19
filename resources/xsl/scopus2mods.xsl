@@ -28,7 +28,7 @@
     </mycoreobject>
   </xsl:template>
 
-  <xsl:template match="abstracts-retrieval-response">
+  <xsl:template match="scopus:abstracts-retrieval-response">
     <mods:mods>
       <xsl:apply-templates select="item/bibrecord/head/citation-info/citation-type/@code" />
       <xsl:apply-templates select="item/bibrecord/head/citation-title/titletext" />
