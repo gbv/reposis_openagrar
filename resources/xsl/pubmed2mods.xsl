@@ -25,26 +25,30 @@
       <metadata>
         <def.modsContainer class="MCRMetaXML" heritable="false" notinherit="true">
           <modsContainer inherited="0">
-            <xsl:apply-templates select="/responseWrapper|resultList" />
+            <mods:mods>
+              <xsl:apply-templates select="/responseWrapper|resultList[result]" />
+            </mods:mods>
           </modsContainer>
         </def.modsContainer>
       </metadata>
     </mycoreobject>
   </xsl:template>
 
-  <xsl:template match="/responseWrapper|resultList">
-    <xsl:apply-templates />
+  <xsl:template match="/responseWrapper|resultList[result]">
+    <xsl:apply-templates/>
   </xsl:template>
 
-  <xsl:template match="version|hitCount|request|result/id|result/source|result/authorString" />
-
+  <xsl:template match="resultList">
+    <xsl:message>Warning: no data returned for <xsl:value-of select="../request/query"/></xsl:message>
+    <mods:genre>ignore</mods:genre>
+  </xsl:template>
+  
+  <xsl:template match="version|hitCount|request|result/id|result/source|result/authorString"/>
+  
   <xsl:template match="resultList/result">
-    <mods:mods>
-      <xsl:apply-templates />
-      <xsl:apply-templates select="journalInfo/yearOfPublication" mode="dateIssued" />
-    </mods:mods>
+    <xsl:apply-templates/>
+    <xsl:apply-templates select="journalInfo/yearOfPublication" mode="dateIssued"/>
   </xsl:template>
-
   <xsl:template match="result/pmid">
     <mods:identifier type="pubmed"><xsl:value-of select="." /></mods:identifier>
   </xsl:template>
@@ -62,10 +66,10 @@
   </xsl:template>
 
   <xsl:template match="authorList">
-    <xsl:apply-templates select="author" />
+    <xsl:apply-templates select="author[lastName|collectiveName]" />
   </xsl:template>
 
-  <xsl:template match="authorList/author">
+  <xsl:template match="author[lastName|collectiveName]">
     <mods:name type="personal">
       <xsl:apply-templates />
       <mods:role>
@@ -82,7 +86,7 @@
     </mods:namePart>
   </xsl:template>
 
-  <xsl:template match="author/lastName">
+  <xsl:template match="author/lastName|author/collectiveName">
     <mods:namePart type="family">
       <xsl:value-of select="." />
     </mods:namePart>
@@ -221,7 +225,7 @@
   </xsl:template>
 
   <xsl:template match="fullTextUrlList">
-    <xsl:apply-templates select="fullTextUrl/url[not(contains(text(),'dx.doi.org'))]" />
+    <xsl:apply-templates select="fullTextUrl/url[not(contains(text(),'doi.org'))]"/>
   </xsl:template>
 
   <xsl:template match="fullTextUrl/url">
