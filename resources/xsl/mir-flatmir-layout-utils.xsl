@@ -26,7 +26,10 @@
           <form action="{$WebApplicationBaseURL}servlets/solr/find?q={0}" class="navbar-form navbar-left" role="search">
             <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
             <div class="form-group">
-              <input name="q" placeholder="Schnellsuche" class="form-control search-query" id="searchInput" type="text" />
+              <xsl:variable name="placeholder">
+                <xsl:value-of select="i18n:translate('oa.quicksearch')" />
+              </xsl:variable> 
+              <input name="q" placeholder="{$placeholder}" class="form-control search-query" id="searchInput" type="text" />
             </div>
           </form>
         </div>
