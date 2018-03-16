@@ -157,7 +157,7 @@
 
     <li class="dropdown" id="basket-list-item">
       <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="{$basketTitle}">
-        Merkliste
+        <xsl:value-of select="i18n:translate('basket')" />
         <sup>
           <xsl:value-of select="$entryCount" />
         </sup>
