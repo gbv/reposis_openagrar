@@ -212,6 +212,7 @@
     <dynamicField name="mods.part.*" type="string" />
     <dynamicField name="mods.part.order*" type="int" />
     <dynamicField name="mods.relatedItem*" type="string" multiValued="true" />
+    <field name="mods.refered" type="string"/>
 
     <!-- ******************************************** -->
     <!-- * SEARCH -->

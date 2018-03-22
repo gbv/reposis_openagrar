@@ -41,5 +41,36 @@
         </field>
       </xsl:if>
     </xsl:for-each>
+    <xsl:choose>
+      <xsl:when test="mods:extension/chars/@refereed='yes'">
+        <field name="mods.refereed">yes</field>
+      </xsl:when>
+      <xsl:when test="mods:extension/chars/@refereed='no'">
+        <field name="mods.refereed">no</field>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:choose>
+          <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='yes'">
+            <field name="mods.refereed">yes</field>
+          </xsl:when>
+          <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='no'">
+            <field name="mods.refereed">no</field>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:choose>
+              <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='yes'">
+                <field name="mods.refereed">yes</field>
+              </xsl:when>
+              <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='no'">
+                <field name="mods.refereed">no</field>
+              </xsl:when>
+              <xsl:otherwise>
+                <field name="mods.refereed">no</field>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 </xsl:stylesheet>
