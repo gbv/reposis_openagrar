@@ -24,7 +24,7 @@
       <div id="options_nav_box" class="mir-prop-nav">
 
         <div class="searchfield_box">
-          <form action="{$WebApplicationBaseURL}servlets/solr/find" class="navbar-form navbar-left pull-right" role="search">
+          <form action="{$WebApplicationBaseURL}servlets/solr/find" class="navbar-form navbar-left" role="search">
             <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
             <div class="form-group">
               <input name="condQuery" placeholder="{i18n:translate('mir.navsearch.placeholder')}" class="form-control search-query" id="searchInput" type="text" />
