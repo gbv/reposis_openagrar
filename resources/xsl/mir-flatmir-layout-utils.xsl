@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:mcrver="xalan://org.mycore.common.MCRCoreVersion"
     xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation"
+    xmlns:mcrver="xalan://org.mycore.common.MCRCoreVersion"
+    xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions"
     xmlns:basket="xalan://org.mycore.frontend.basket.MCRBasketManager"
-    exclude-result-prefixes="mcrver i18n basket">
-  <xsl:import href="resource:xsl/layout/mir-common-layout.xsl" />
-  <xsl:param name="piwikID" select="'2'" />
+    exclude-result-prefixes="i18n mcrver mcrxsl basket">
 
+  <xsl:import href="resource:xsl/layout/mir-common-layout.xsl" />
+  <xsl:param name="piwikID" select="'0'" />
   <xsl:template name="mir.navigation">
 
     <div id="header_box" class="clearfix container">
@@ -23,13 +24,18 @@
       <div id="options_nav_box" class="mir-prop-nav">
 
         <div class="searchfield_box">
-          <form action="{$WebApplicationBaseURL}servlets/solr/find?q={0}" class="navbar-form navbar-left" role="search">
+          <form action="{$WebApplicationBaseURL}servlets/solr/find" class="navbar-form navbar-left pull-right" role="search">
             <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
             <div class="form-group">
-              <xsl:variable name="placeholder">
-                <xsl:value-of select="i18n:translate('oa.quicksearch')" />
-              </xsl:variable> 
-              <input name="q" placeholder="{$placeholder}" class="form-control search-query" id="searchInput" type="text" />
+              <input name="condQuery" placeholder="{i18n:translate('mir.navsearch.placeholder')}" class="form-control search-query" id="searchInput" type="text" />
+              <xsl:choose>
+                <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
+                  <input name="owner" type="hidden" value="createdby:*" />
+                </xsl:when>
+                <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
+                  <input name="owner" type="hidden" value="createdby:{$CurrentUser}" />
+                </xsl:when>
+              </xsl:choose>
             </div>
           </form>
         </div>
@@ -85,7 +91,7 @@
           <ul class="internal_links nav navbar-nav">
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='below']/*" />
           </ul>
-          <p id="oa-copyright">© 2017 OpenAgrar</p>
+          <p id="oa-copyright">© 2018 OpenAgrar</p>
         </div>
         <div class="col-md-3 text-center">
           <div id="sponsored_by">

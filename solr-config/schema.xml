@@ -132,6 +132,8 @@
     <field name="derivateLink" type="string" multiValued="true" />
     <field name="category" type="string" multiValued="true"/>
     <field name="category.top" type="string" multiValued="true"/>
+    <field name="worldReadable" type="boolean" />
+    <field name="worldReadableComplete" type="boolean" />
 
     <field name="created" type="date" />
     <field name="modified" type="date" />
@@ -175,7 +177,7 @@
     <field name="content" type="text_general" stored="false" />
 
     <field name="payload" type="payloads" />
-    <field name="text_wc" type="text_wc" />
+  <field name="text_wc" type="text_wc" stored="true" />
 
     <!-- default search fields -->
     <field name="allMeta" type="text_general" multiValued="true" stored="false" />
@@ -212,7 +214,6 @@
     <dynamicField name="mods.part.*" type="string" />
     <dynamicField name="mods.part.order*" type="int" />
     <dynamicField name="mods.relatedItem*" type="string" multiValued="true" />
-    <field name="mods.refereed" type="string"/>
 
     <!-- ******************************************** -->
     <!-- * SEARCH -->
@@ -244,6 +245,7 @@
    <!--dynamicField name="*" type="ignored" multiValued="true" /-->
 
     <!-- OpenAgrar specific schema -->
+    <field name="mods.refereed" type="string"/>
     <field name="mods.physicalLocation" type="string" multiValued="true" />
     <field name="mods.annual_review" type="int"/>
     <field name="mods.subject" type="text_de" multiValued="true" indexed="true" stored="false" />
