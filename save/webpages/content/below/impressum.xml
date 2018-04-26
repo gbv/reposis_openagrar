@@ -6,7 +6,7 @@
 <div class="col-md-8 oa-borderbox" lang="de">
 <h2>Gesamtverantwortung</h2>
 
-<p>Der Publikationsserver <a href="/">OpenAgrar</a> wird von den Bibliotheken im Geschäftsbereich des BMEL gemeinschaftlich entwickelt und betrieben. Für die Gestaltung und den Inhalt sind alle diese Einrichtungen in gleicher Weise zuständig. Für den Webserver und die technische Verfügbarkeit der Website ist die Verbundzentrale des GBV (VZG) verantwortlich. Die Ansprechpartner finden Sie unter <a href="contact.xml">Kontakt</a>.</p>
+<p>Der Publikationsserver <a href="../index.xml">OpenAgrar</a> wird von den Bibliotheken im Geschäftsbereich des BMEL gemeinschaftlich entwickelt und betrieben. Für die Gestaltung und den Inhalt sind alle diese Einrichtungen in gleicher Weise zuständig. Für den Webserver und die technische Verfügbarkeit der Website ist die Verbundzentrale des GBV (VZG) verantwortlich. Die Ansprechpartner finden Sie unter <a href="contact.xml">Kontakt</a>.</p>
 
 <h2>Hinweise zur Nutzung</h2>
 
@@ -33,7 +33,7 @@
 <div class="col-md-8 oa-borderbox" lang="en">
 <h2>Overall responsibility</h2>
 
-<p><a href="/">OpenAgrar</a> is collaboratively operated and developed by the scientific libraries of the member institutions. They are equally responsible for the layout and the content, whereas the common library network GBV (VZG) is in charge of web server and hosting services. You can find all contacts <a href="contact.xml">here</a>.</p>
+<p><a href="../index.xml">OpenAgrar</a> is collaboratively operated and developed by the scientific libraries of the member institutions. They are equally responsible for the layout and the content, whereas the common library network GBV (VZG) is in charge of web server and hosting services. You can find all contacts <a href="contact.xml">here</a>.</p>
 
 <h2>Information on use</h2>
 
