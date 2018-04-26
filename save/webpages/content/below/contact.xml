@@ -3,7 +3,7 @@
 <h3><span style="font-size:26px;">Contact</span></h3>
 
 <p>The OpenAgrar repository was planned by the libraries of the research institutions affiliated with the Federal Ministry of Food and Agriculture (BMEL) and the Federal Office for Agriculture and Food. It was developed and set up together with the Verbundzentrale des GBV (VZG).<br />
-For questions regarding the publications in OpenAgrar or the repository framework MyCoRe and the database server please contact the libraries or the Verbundzentrale des GBV (VZG), respectively.</p>
+    For questions regarding the publications in OpenAgrar or the repository framework MyCoRe and the database server please contact the libraries or the Head Office of the GBV (VZG), respectively.</p>
 
 <h3><span style="font-size:20px;">Federal Research Institute for Animal Health - Friedrich-Loeffler-Institut (FLI)</span></h3>
 
@@ -83,7 +83,7 @@ Contact: Helmut Michels<br />
 Tel.: +49228 6845 7181<br />
 E-Mail: <span class="madress">helmut.michels [at] ble.de</span> or <span class="madress">openagar [at] bmel-forschung.de</span></p>
 
-<h3><span style="font-size:20px;">Verbundzentrale des GBV (VZG)</span></h3>
+<h3><span style="font-size:20px;">Head Office of the GBV (VZG)</span></h3>
 
 <p>Platz der Göttinger Sieben 1<br />
 37073 Göttingen<br />
@@ -93,7 +93,12 @@ Fax: +49551 39 13980<br />
 Internet: <a href="https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-repository-service">https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-repository-service</a><br />
 E-Mail: <span class="madress">dms-list [at] lists.gbv.de</span></p>
 </div>
-</section><section xml:lang="de" title="Kontakt"><div><h3><span style="font-size:26px;">Kontakt</span></h3><p>Der Publikationsserver OpenAgrar wurde von den Bibliotheken im Geschäftsbereich des BMEL und der Bundesanstalt für Landwirtschaft und Ernährung (BLE) konzipiert und in Zusammenarbeit mit der Verbundzentrale des GBV (VZG) aufgebaut.</p><p>Für fachliche Fragen kontaktieren Sie bitte die entsprechenden Bibliotheken und Informationszentren. Fragen zum Repository-framework MyCoRe und dem Datenbankserver beantwortet Ihnen die Verbundzentrale des GBV (VZG).</p><h3>Friedrich-Loeffler-Institut (FLI)</h3><p>Südufer 10<br />
+</section>
+
+
+
+<section xml:lang="de" title="Kontakt"><div><h3><span style="font-size:26px;">Kontakt</span></h3>
+<p>Der Publikationsserver OpenAgrar wurde von den Bibliotheken im Geschäftsbereich des BMEL und der Bundesanstalt für Landwirtschaft und Ernährung (BLE) konzipiert und in Zusammenarbeit mit der Verbundzentrale des GBV (VZG) aufgebaut.</p><p>Für fachliche Fragen kontaktieren Sie bitte die entsprechenden Bibliotheken und Informationszentren. Fragen zum Repository-framework MyCoRe und dem Datenbankserver beantwortet Ihnen die Verbundzentrale des GBV (VZG).</p><h3>Friedrich-Loeffler-Institut (FLI)</h3><p>Südufer 10<br />
 17493 Greifswald - Insel Riems<br />
 Tel.: 038351 7 0<br />
 Fax: 038351 7 151<br />
@@ -121,7 +126,8 @@ Fax: 0721 6625 111<br />
 Internet: <a href="https://www.mri.bund.de/de/service/bibliothek/">https://www.mri.bund.de/de/service/bibliothek/</a><br />
 Tel.: 0721 6625 600<br />
 Fax: 0721 6625 602<br />
-E-Mail: <span class="madress">openagrar [at] mri.bund.de</span></p><h3>Bundesinstitut für Risikobewertung (BfR)</h3><p>Max-Dohrn-Straße 8-10<br />
+E-Mail: <span class="madress">openagrar [at] mri.bund.de</span></p><h3>Bundesinstitut für Risikobewertung (BfR)</h3>
+<p>Max-Dohrn-Straße 8-10<br />
 10589 Berlin<br />
 Tel.: 030 18412 0<br />
 Fax: 030 18412 4741<br />
@@ -129,7 +135,9 @@ Fax: 030 18412 4741<br />
 Internet: <a href="http://www.bfr.bund.de/de/bibliothek-6902.html">http://www.bfr.bund.de/de/bibliothek-6902.html </a><br />
 Tel.: 030 18412 4524<br />
 Fax: 030 18412 4718<br />
-E-Mail: <span class="madress">bibliothek [at] bfr.bund.de</span></p><h3>Deutsches Biomasseforschungszentrum gemeinnützige GmbH (DBFZ)</h3><p>Torgauer Straße 116<br />
+E-Mail: <span class="madress">bibliothek [at] bfr.bund.de</span></p>
+<h3>Deutsches Biomasseforschungszentrum gemeinnützige GmbH (DBFZ)</h3>
+<p>Torgauer Straße 116<br />
 04347 Leipzig<br />
 Tel.: 0341 2434 112<br />
 Fax: 0341 2434 133<br />
@@ -145,7 +153,9 @@ Telefax: 0228 99 6845 3101<br />
 <strong>Referat 416 - "Informationsdienste"</strong><br />
 Ansprechpartner: Helmut Michels<br />
 Telefon: 0228 6845 7181<br />
-E-Mail: <span class="madress">helmut.michels [at] ble.de</span> oder <span class="madress">openagar [at] bmel-forschung.de</span></p><h3>Verbundzentrale des GBV (VZG)</h3><p>Platz der Göttinger Sieben 1<br />
+E-Mail: <span class="madress">helmut.michels [at] ble.de</span> oder <span class="madress">openagar [at] bmel-forschung.de</span></p>
+<h3>Verbundzentrale des GBV (VZG)</h3>
+<p>Platz der Göttinger Sieben 1<br />
 37073 Göttingen<br />
 Tel.: 0551 39 5207<br />
 Fax: 0551 39 13980<br />
