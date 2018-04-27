@@ -14,10 +14,9 @@ import org.mycore.pi.MCRPersistentIdentifier;
 import org.mycore.pi.MCRPersistentIdentifierGenerator;
 import org.mycore.pi.exceptions.MCRPersistentIdentifierException;
 
-//public class MCRCreateDateDOIGenerator2 extends MCRPersistentIdentifierGenerator<MCRDigitalObjectIdentifier> {
-public class MCRCreateDateDOIGeneratorJKI implements MCRPersistentIdentifierGenerator<MCRDigitalObjectIdentifier> {
+public class MCRCreateDateDOIGeneratorJKI extends MCRPersistentIdentifierGenerator<MCRDigitalObjectIdentifier> {
 
-    private String datePattern = "yyyyMMdd-HHmmss";
+    private static final String DATE_PATTERN = "yyyyMMdd-HHmmss";
 
     private final MCRDOIParser mcrdoiParser;
 
@@ -25,24 +24,20 @@ public class MCRCreateDateDOIGeneratorJKI implements MCRPersistentIdentifierGene
     
     private String subPrefix = "";
 
-    public MCRCreateDateDOIGeneratorJKI() {
-        //super(generatorID);
-        
+    public MCRCreateDateDOIGeneratorJKI(String generatorID) {
+        super(generatorID);
         mcrdoiParser = new MCRDOIParser();
-        
     }
 
     @Override
-    public MCRDigitalObjectIdentifier  generate(MCRObjectID mcrID, String additional)
+    public MCRDigitalObjectIdentifier generate(MCRObjectID mcrID, String additional)
         throws MCRPersistentIdentifierException {
         Date createdate = MCRMetadataManager.retrieveMCRObject(mcrID).getService().getDate("createdate");
         if (createdate != null) {
             MCRISO8601Date mcrdate = new MCRISO8601Date();
             mcrdate.setDate(createdate);
-            String format = mcrdate.format(datePattern, Locale.ENGLISH);
-            String identifier = (prefix.contains("/")) ? prefix + format : prefix + "/" + format ;
-            //Optional<MCRDigitalObjectIdentifier> parse = mcrdoiParser.parse(identifier);
-            Optional<MCRPersistentIdentifier> parse = mcrdoiParser.parse(identifier);
+            String format = mcrdate.format(DATE_PATTERN, Locale.ENGLISH);
+            Optional<MCRDigitalObjectIdentifier> parse = mcrdoiParser.parse(prefix + "/" + format);
             MCRPersistentIdentifier doi = parse.get();
             return (MCRDigitalObjectIdentifier) doi;
         } else {

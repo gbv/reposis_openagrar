@@ -119,7 +119,18 @@ public class MCRDOINoRegistrationService extends MCRPIRegistrationService<MCRDig
     @Override
     protected void delete(MCRDigitalObjectIdentifier identifier, MCRBase obj, String additional)
         throws MCRPersistentIdentifierException {
-        throw new MCRPersistentIdentifierException("Not supported!");
+    	if (MCRSessionMgr.getCurrentSession().getUserInformation().getUserID()
+            .equals(MCRSystemUserInformation.getSuperUserInstance().getUserID())) {
+            LOGGER.warn("SuperUser deletes object " + obj.getId().toString() + " with registered doi " + doi.asString()
+                + ". Try to set DOI inactive.");
+            try {
+                getDataciteClient().deleteMetadata(doi);
+            } catch (MCRPersistentIdentifierException e) {
+                LOGGER.error("Error while setting " + doi.asString() + " inactive! Delete of object should continue!");
+            }
+        } else {
+            throw new MCRPersistentIdentifierException("Object should not be deleted! (It has a registered DOI)");
+        }
     }
 
     @Override
