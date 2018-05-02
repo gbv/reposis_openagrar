@@ -1,32 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mcr="http://www.mycore.org/"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xmlns:mods="http://www.loc.gov/mods/v3"
-                xmlns:mcrmods="xalan://org.mycore.mods.classification.MCRMODSClassificationSupport"
-                xmlns:mcrxml="xalan://org.mycore.common.xml.MCRXMLFunctions"
-                xmlns:mcrdataurl="xalan://org.mycore.datamodel.common.MCRDataURL"
-                xmlns:mcrid="xalan://org.mycore.datamodel.metadata.MCRObjectID" xmlns:exslt="http://exslt.org/common"
-                exclude-result-prefixes="mcrmods mcrid xlink mcr mcrxml mcrdataurl exslt" version="1.0"
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mcr="http://www.mycore.org/" xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:mods="http://www.loc.gov/mods/v3" xmlns:mcrmods="xalan://org.mycore.mods.classification.MCRMODSClassificationSupport" xmlns:mcrxml="xalan://org.mycore.common.xml.MCRXMLFunctions"
+  xmlns:mcrdataurl="xalan://org.mycore.datamodel.common.MCRDataURL" xmlns:mcrid="xalan://org.mycore.datamodel.metadata.MCRObjectID" xmlns:exslt="http://exslt.org/common"
+  exclude-result-prefixes="mcrmods mcrid xlink mcr mcrxml mcrdataurl exslt" version="1.0"
 >
 
   <xsl:include href="copynodes.xsl" />
   <xsl:include href="editor/mods-node-utils.xsl" />
-  <xsl:include href="mods-utils.xsl"/>
-  <xsl:include href="coreFunctions.xsl"/>
+  <xsl:include href="mods-utils.xsl" />
+  <xsl:include href="coreFunctions.xsl" />
   <xsl:include href="oa-xeditor2mods.xsl"/>
 
   <xsl:param name="MIR.PPN.DatabaseList" select="'gvk'" />
-  <xsl:param name="MCR.Metadata.ObjectID.NumberPattern" select="00000000"/>
+  <xsl:param name="MCR.Metadata.ObjectID.NumberPattern" select="00000000" />
 
   <xsl:template match="mycoreobject/structure">
     <xsl:copy>
       <xsl:variable name="hostItem"
-                    select="../metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem[@type='host'
+        select="../metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem[@type='host'
                     and @xlink:href and mcrid:isValid(@xlink:href)
-                    and not($MCR.Metadata.ObjectID.NumberPattern=substring(@xlink:href, string-length(@xlink:href) - string-length($MCR.Metadata.ObjectID.NumberPattern) + 1))]/@xlink:href"/>
+                    and not($MCR.Metadata.ObjectID.NumberPattern=substring(@xlink:href, string-length(@xlink:href) - string-length($MCR.Metadata.ObjectID.NumberPattern) + 1))]/@xlink:href" />
       <xsl:if test="$hostItem">
         <parents class="MCRMetaLinkID">
-          <parent xlink:href="{$hostItem}" xlink:type="locator" inherited="0"/>
+          <parent xlink:href="{$hostItem}" xlink:type="locator" inherited="0" />
         </parents>
       </xsl:if>
       <xsl:apply-templates />
@@ -37,17 +33,17 @@
     <xsl:copy>
       <xsl:apply-templates select="@*" />
       <xsl:variable name="hostItem"
-                    select="metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem[@type='host'
+        select="metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem[@type='host'
                     and @xlink:href and mcrid:isValid(@xlink:href)
-                    and not($MCR.Metadata.ObjectID.NumberPattern=substring(@xlink:href, string-length(@xlink:href) - string-length($MCR.Metadata.ObjectID.NumberPattern) + 1))]/@xlink:href"/>
+                    and not($MCR.Metadata.ObjectID.NumberPattern=substring(@xlink:href, string-length(@xlink:href) - string-length($MCR.Metadata.ObjectID.NumberPattern) + 1))]/@xlink:href" />
       <xsl:if test="$hostItem">
         <structure>
           <parents class="MCRMetaLinkID">
-            <parent xlink:href="{$hostItem}" xlink:type="locator" inherited="0"/>
+            <parent xlink:href="{$hostItem}" xlink:type="locator" inherited="0" />
           </parents>
         </structure>
       </xsl:if>
-      <xsl:apply-templates select="node()"/>
+      <xsl:apply-templates select="node()" />
     </xsl:copy>
   </xsl:template>
 
@@ -62,7 +58,7 @@
           <xsl:apply-templates select="@*" />
           <xsl:apply-templates mode="asPlainTextNode" />
         </xsl:copy>
-        <xsl:element name="{name(.)}">
+        <xsl:element name="{name(.)}" namespace="{namespace-uri()}">
           <xsl:variable name="content">
             <xsl:apply-templates select="." mode="asXmlNode">
               <xsl:with-param name="ns" select="''" />
@@ -113,18 +109,17 @@
           <xsl:value-of select="substring-after(., 'http://www.viaf.org/')" />
         </mods:nameIdentifier>
       </xsl:when>
+      <xsl:when test="starts-with(../@authorityURI, 'http://d-nb.info/gnd/')">
+        <xsl:attribute name="valueURI">
+          <xsl:value-of select="concat(../@authorityURI,.)" />
+        </xsl:attribute>
+      </xsl:when>
       <xsl:otherwise>
         <xsl:attribute name="valueURI">
           <xsl:value-of select="concat(../@authorityURI,'#',.)" />
         </xsl:attribute>
       </xsl:otherwise>
     </xsl:choose>
-  </xsl:template>
-
-  <xsl:template match="mods:subject/mods:topic/@valueURIxEditor">
-      <xsl:attribute name="valueURI">
-        <xsl:value-of select="concat(../@authorityURI,.)" />
-      </xsl:attribute>
   </xsl:template>
 
   <xsl:template match="mods:nameIdentifier[@type=preceding-sibling::mods:nameIdentifier/@type or contains(../@valueURIxEditor, @type)]">
@@ -235,15 +230,21 @@
     <xsl:variable name="database">
       <xsl:choose>
         <xsl:when test="@transliteration and string-length(@transliteration) &gt; 0">
-          <xsl:value-of select="@transliteration"/>
+          <xsl:value-of select="@transliteration" />
         </xsl:when>
         <xsl:otherwise>
-          <xsl:value-of select="$MIR.PPN.DatabaseList"/>
+          <xsl:value-of select="$MIR.PPN.DatabaseList" />
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
     <mods:identifier type="uri">
-      <xsl:value-of select="concat('http://uri.gbv.de/document/', $database, ':ppn:', text())" />
+      <xsl:value-of select="concat('http://uri.gbv.de/document/', $database, ':ppn:',text())" />
+    </mods:identifier>
+  </xsl:template>
+
+  <xsl:template match="mods:identifierManaged">
+    <mods:identifier>
+      <xsl:apply-templates select="@*|node()" />
     </mods:identifier>
   </xsl:template>
 
@@ -252,7 +253,7 @@
     <xsl:copy-of select="pages:buildExtentPagesNodeSet(mods:list/text())" />
   </xsl:template>
 
-  <xsl:template match="mods:subject/mods:topicSimple">
+  <xsl:template match="mods:subject/mods:topic[contains(text(), ';')]">
     <xsl:variable name="topic">
       <xsl:call-template name="Tokenizer"><!-- use split function from mycore-base/coreFunctions.xsl -->
         <xsl:with-param name="string" select="." />
@@ -262,7 +263,7 @@
     <xsl:for-each select="exslt:node-set($topic)/token">
       <xsl:if test="mcrxml:trim(.) != ''">
         <mods:topic>
-          <xsl:value-of select="."/>
+          <xsl:value-of select="." />
         </mods:topic>
       </xsl:if>
     </xsl:for-each>
