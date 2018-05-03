@@ -39,7 +39,7 @@
 <p>Der Betreiber setzt zur optimalen Auswertung der Aktivitäten auf der Webseite das Produkt Piwik ein. Mit diesem Produkt können die Klicks auf Downloads und externe Links gezählt werden. Die Identifikation der Herkunft (Geolokalisation) erfolgt nur auf Staatenebene. Darüber hinaus gehende Auswertungsmöglichkeiten (Anlegen von Nutzerprofilen) des Produkts kann der Betreiber nicht einsetzen.</p>
 
 <p><strong>Widerspruch:</strong></p>
-<iframe src="https://www.openagrar.de/piwik/index.php?module=CoreAdminHome&amp;action=optOut&amp;idsite=1&amp;language=de" style="border: 0; height: 200px; width: 758px;" /></div>
+    <iframe src="https://piwik.gbv.de/index.php?module=CoreAdminHome&amp;action=optOut&amp;idsite=35&amp;language=de" style="border: 0; height: 200px; width: 758px;" /></div>
 </div>
 </div>
 </section>
@@ -85,7 +85,7 @@
 
 <p><strong>Objection:</strong></p>
 
-<iframe src="https://www.openagrar.de/piwik/index.php?module=CoreAdminHome&amp;action=optOut&amp;idsite=1&amp;language=en" style="border: 0; height: 200px; width: 758px;" /></div>
+    <iframe src="https://piwik.gbv.de/index.php?module=CoreAdminHome&amp;action=optOut&amp;idsite=35&amp;language=en" style="border: 0; height: 200px; width: 758px;" /></div>
 </div>
 </div>
 
