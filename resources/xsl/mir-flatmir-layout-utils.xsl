@@ -116,7 +116,7 @@
             _paq.push(['trackPageView']);
             _paq.push(['enableLinkTracking']);
             (function() {
-              var u="https://piwik.gbv.de/";
+              var u="https://matomo.gbv.de/";
               var objectID = '<xsl:value-of select="//site/@ID" />';
               if(objectID != "") {
                 _paq.push(["setCustomVariable",1, "object", objectID, "page"]);
@@ -128,7 +128,7 @@
               g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
             })();
       </script>
-      <noscript><p><img src="https://piwik.gbv.de/piwik.php?idsite={$piwikID}" style="border:0;" alt="" /></p></noscript>
+      <noscript><p><img src="https://matomo.gbv.de/piwik.php?idsite={$piwikID}&amp;rec=1" style="border:0;" alt="" /></p></noscript>
     </xsl:if>
   </xsl:template>
 
