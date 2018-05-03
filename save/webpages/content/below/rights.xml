@@ -36,7 +36,7 @@
 
 <h2>Welche Auswertungssoftware setzt der Betreiber ein?</h2>
 
-<p>Der Betreiber setzt zur optimalen Auswertung der Aktivitäten auf der Webseite das Produkt Piwik ein. Mit diesem Produkt können die Klicks auf Downloads und externe Links gezählt werden. Die Identifikation der Herkunft (Geolokalisation) erfolgt nur auf Staatenebene. Darüber hinaus gehende Auswertungsmöglichkeiten (Anlegen von Nutzerprofilen) des Produkts kann der Betreiber nicht einsetzen.</p>
+<p>Der Betreiber setzt zur optimalen Auswertung der Aktivitäten auf der Webseite das Produkt Matomo (ehem. Piwik) ein. Mit diesem Produkt können die Klicks auf Downloads und externe Links gezählt werden. Die Identifikation der Herkunft (Geolokalisation) erfolgt nur auf Staatenebene. Darüber hinaus gehende Auswertungsmöglichkeiten (Anlegen von Nutzerprofilen) des Produkts kann der Betreiber nicht einsetzen.</p>
 
 <p><strong>Widerspruch:</strong></p>
     <iframe src="https://piwik.gbv.de/index.php?module=CoreAdminHome&amp;action=optOut&amp;idsite=35&amp;language=de" style="border: 0; height: 200px; width: 758px;" /></div>
@@ -81,7 +81,7 @@
 
 <h2>What evaluation software is used?</h2>
 
-<p>For an optimum evaluation of the activities on its website the operators of OpenAgrar use the product "Piwik". With this product, clicks on downloads and external links can be counted. With regard to identifying the origin (geolocalisation) only the country is identified. The operators of OpenAgrar cannot use any of the product’s more extensive evaluation possibilities (creation of user profiles).</p>
+<p>For an optimum evaluation of the activities on its website the operators of OpenAgrar use the product "Matomo" (formerly "Piwik"). With this product, clicks on downloads and external links can be counted. With regard to identifying the origin (geolocalisation) only the country is identified. The operators of OpenAgrar cannot use any of the product’s more extensive evaluation possibilities (creation of user profiles).</p>
 
 <p><strong>Objection:</strong></p>
 
