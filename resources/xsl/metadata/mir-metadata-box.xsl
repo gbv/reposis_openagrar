@@ -26,7 +26,14 @@
                                   count(. | key('title-by-type',@type)[1])=1]">
               <tr>
                 <td valign="top" class="metaname">
+                  <xsl:choose>
+                    <xsl:when test="@displayLabel">
+                      <xsl:value-of select="@displayLabel" />
+                    </xsl:when>
+                    <xsl:otherwise>
                   <xsl:value-of select="i18n:translate(concat('mir.title.type.', @type))" />
+                    </xsl:otherwise>
+                  </xsl:choose>
                   <xsl:text>:</xsl:text>
                 </td>
                 <td class="metavalue">
@@ -34,7 +41,7 @@
                     <xsl:if test="position()!=1">
                       <br />
                     </xsl:if>
-                    <xsl:apply-templates select="//mods:mods" mode="mods.title">
+                    <xsl:apply-templates select="//modsContainer/mods:mods" mode="mods.title">
                       <xsl:with-param name="type" select="@type" />
                       <xsl:with-param name="asHTML" select="true()" />
                       <xsl:with-param name="withSubtitle" select="true()" />
@@ -66,7 +73,7 @@
               <!-- for every role -->
               <xsl:choose>
                 <!-- check if 'aut' and 'edt' show 'edt', otherwise 'edt' is already shown in abstract-box -->
-                <xsl:when test="mods:role/mods:roleTerm='edt' and not(../mods:role/mods:roleTerm='aut')">
+                <xsl:when test="mods:role/mods:roleTerm='edt' and not(../mods:name/mods:role/mods:roleTerm='aut')">
                   <!-- do nothing -->
                 </xsl:when>
                 <!-- check if role term is given -->
@@ -221,24 +228,24 @@
                   <xsl:value-of select="i18n:translate('mir.cartographics.coordinates')" />
                 </td>
                 <td class="metavalue">
-                  <xsl:value-of select="." /><br />
+                  <xsl:choose>
+                    <xsl:when test="contains(., ', ')">
+                      <div id="displayCoords" data-fullcoords="{.}">
+                        <xsl:value-of select="substring-before(., ', ')" />
+                        <a id="flipCoords" role="button">...</a>
+                      </div>
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <xsl:value-of select="." />
+                    </xsl:otherwise>
+                  </xsl:choose>
                   <div>
-                    <button type="button" class="show_openstreetmap btn btn-default" data="{.}" >
+                    <button type="button" class="show_openstreetmap btn btn-default" data-coords="{.}" >
                       OpenStreetMap
                     </button>
                   </div>
-                  <div class="openstreetmap-container collapse" style="width:555px;">
-                    <div id="header">
-                      <div id="osm">
-                        (c)
-                        <a href="//www.openstreetmap.org">OpenStreetMap</a>
-                        und
-                        <a href="//www.openstreetmap.org/copyright">Mitwirkende</a>
-                        ,
-                        <a href="//creativecommons.org/licenses/by-sa/2.0/deed.de">CC-BY-SA</a>
-                      </div>
-                    </div>
-                    <div class="map" style="width:555px;height:380px;"></div>
+                  <div class="openstreetmap-container collapse">
+                    <div class="map"></div>
                   </div>
                 </td>
               </tr>
@@ -255,7 +262,8 @@
               <xsl:with-param name="nodes" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:location/mods:shelfLocator" />
               <xsl:with-param name="label" select="i18n:translate('mir.shelfmark')" />
             </xsl:call-template>
-
+            <!-- xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:name[@type='corporate'][@ID or @authorityURI=$institutesURI]" />
+            <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@displayLabel='characteristics']" / -->
             <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:note">
               <xsl:variable name="myURI" select="concat('classification:metadata:0:children:noteTypes:',mcrxsl:regexp(@type,' ', '_'))" />
               <xsl:variable name="x-access">
