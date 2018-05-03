@@ -9,7 +9,10 @@
 
 <p>OpenAgrar ist das gemeinsame Repositorium der Ressortforschungsinstitute sowie weiterer Bundesbehörden und Einrichtungen im Geschäftsbereich des Bundesministeriums für Ernährung und Landwirtschaft (BMEL). Folgende Institutionen betreiben aktuell das OpenAgrar Repositorium: Deutsches Biomasseforschungszentrum (DBFZ), Julius Kühn-Institut (JKI), Friedrich-Loeffler-Institut (FLI), Max Rubner-Institut (MRI), Thünen-Institut (TI), Bundesinstitut für Risikobewertung (BfR).  In OpenAgrar werden die Veröffentlichungen aus diesen Einrichtungen erfasst, verbreitet, archiviert beziehungsweise Dokumente erstveröffentlicht. Die dort gespeicherten Dokumente und Publikationsnachweise können von jedem Interessierten recherchiert und genutzt werden.</p>
 
-<p>OpenAgrar verzeichnet unter anderem Dissertationen, Berichte, Konferenz Proceedings, Zeitschriftenbeiträge, Bücher, Institutsschriften sowie Forschungsdaten und AV-Medien. Aktuell umfasst das Repositorium <span id="oa-docCounter">80.000</span> Dokumente.</p>
+<p>OpenAgrar verzeichnet unter anderem Dissertationen, Berichte, Konferenz Proceedings, Zeitschriftenbeiträge, Bücher, Institutsschriften sowie Forschungsdaten und AV-Medien. Aktuell umfasst das Repositorium <span id="oa-docCounter">100.000</span> Dokumente.</p>
+  <div id="oa_re3data" class="pull-right">
+    <object type="image/svg+xml" data="../images/re3data_badge.svg"><img src="../images/re3data_badge.png" style="max-width:100%" /></object>
+  </div>
 </div>
 </div>
 </div>
@@ -26,7 +29,10 @@
 
 <p>OpenAgrar is the collective repository of research institutions affiliated with the Federal Ministry of Food and Agriculture (BMEL) in Germany. Currently it is operated by the following institutions: German Biomass Research Centre (DBFZ), Federal Research Centre for Cultivated Plants (JKI), Federal Research Institute for Animal Health (FLI), Federal Research Institute of Nutrition and Food (MRI), Federal Research Institute for Rural Areas, Forestry and Fisheries (TI), German Federal Institute for risk assessment (BfR). It preserves the scholarly output of its members as a whole.</p>
 
-<p>OpenAgrar is an open access repository which publishes, stores, archives and distributes publications, publication references and research data. Its resources can be searched and used by everyone. It contains amongst others theses, reports, conference proceedings, journal articles, books, institutional documents, research datasets, videos and interviews. Currently <span id="oa-docCounter">80.000</span> publications are recorded.</p>
+<p>OpenAgrar is an open access repository which publishes, stores, archives and distributes publications, publication references and research data. Its resources can be searched and used by everyone. It contains amongst others theses, reports, conference proceedings, journal articles, books, institutional documents, research datasets, videos and interviews. Currently <span id="oa-docCounter">100.000</span> publications are recorded.</p>
+  <div id="oa_re3data" class="pull-right">
+    <object type="image/svg+xml" data="../images/re3data_badge.svg"><img src="../images/re3data_badge.png" style="max-width:100%" /></object>
+  </div>
 </div>
 </div>
 </div>

@@ -105,7 +105,9 @@ html body header #header_box {
   top:10px;
   left:0px;
 }
-
+#oa_re3data {
+  margin: 5px 0px 30px 0px;
+}
 
 /* ****************** searchfield_box ******************* */
 .searchfield_box {
