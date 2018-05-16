@@ -263,6 +263,10 @@
   <xed:template id="report">
     <xed:include uri="webapp:editor/editor-genres.xed" ref="report.common" />
   </xed:template>
+  
+  <xed:template id="methods_description">
+    <xed:include uri="webapp:editor/editor-genres.xed" ref="report.common" />
+  </xed:template>
 
   <xed:template id="research_results">
     <xed:include uri="webapp:editor/editor-genres.xed" ref="report.common" />
