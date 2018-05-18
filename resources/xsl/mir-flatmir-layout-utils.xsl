@@ -95,9 +95,18 @@
         </div>
         <div class="col-md-3 text-center">
           <div id="sponsored_by">
-            <a href="http://www.bmel.de/">
-              <img src="{$WebApplicationBaseURL}images/logos/logo_bmelv.png" title="Forschung im Bereich des BMEL" alt="Forschung im Bereich des BMEL" />
-            </a>
+            <xsl:choose>
+              <xsl:when test="$CurrentLang='en'">
+                <a href="https://www.bmel.de/EN/">
+                  <img src="{$WebApplicationBaseURL}images/logos/logo_bmelv_en.png" title="Research in the field of BMEL" alt="Research in the field of BMEL" />
+                </a>
+              </xsl:when>
+              <xsl:otherwise>
+                <a href="https://www.bmel.de/">
+                  <img src="{$WebApplicationBaseURL}images/logos/logo_bmelv.png" title="Forschung im Bereich des BMEL" alt="Forschung im Bereich des BMEL" />
+                </a>
+              </xsl:otherwise>
+            </xsl:choose>
           </div>
           <div id="powered_by">
             <a href="http://www.mycore.de">
