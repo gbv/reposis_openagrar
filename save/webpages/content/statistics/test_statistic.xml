@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section title="Statistiken" xml:lang="de"/>
+  <section title="Statistics" xml:lang="en"/>
+  <section xml:lang="all">
+    <script src='../../js/statistic.js'> </script>
+
+    <form id="submit_publication"
+          class="form-horizontal"
+          role="form"
+          method="get"
+          action="../../editor/editor-dynamic.xed">
+
+
+      <section xml:lang="de">
+
+        <div class="row">
+          <h1>Statistiken</h1>
+        </div>
+        <div class="row">
+          <h3> </h3>
+          <a href="test_statistic.xml"> Teststatistik</a>
+        </div>
+        <div class="row">
+          <h3>Browsen:</h3>
+          <ul>
+            <li> <a href="browses_institutes.xml"> Browsen nach Einrichtungen</a></li>
+            <li> <a href="browses_genre.xml"> Browsen nach Genre </a></li>
+            <li> <a href="browses_ddc.xml"> Browsen nach DDC</a></li>
+          </ul>
+        </div>
+      </section>
+    </form>
+  </section>
+</MyCoReWebPage>

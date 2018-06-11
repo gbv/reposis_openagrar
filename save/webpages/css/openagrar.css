@@ -319,3 +319,17 @@ html body footer .internal_links {
 div#_altmetric_popover_el.altmetric-embed div#_altmetric_container.altmetric_container div#_altmetric_popover_inner .altmetric-popover-content {
   background-color: #f9f9f9 !important;
 }
+
+/* ******************* temp statistic browser ***************** */
+
+.statisticBrowser a {
+    text-decoration: none !important;
+}
+
+.statisticBrowser tbody td {
+    white-space:nowrap;
+}
+
+.sbSquare {
+    color: #aaa;
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section title="Statistiken" xml:lang="de"/>
+  <section title="Statistics" xml:lang="en"/>
+  <section xml:lang="all">
+    <script src='../../js/statistic.js'> </script>
+  </section>
+     
+  <section xml:lang="de">
+    <div class="row">
+      <h1>Statistik - Fli Jahresberichtskategorie</h1>
+      <p> 
+        Die Publikationen des Fli nach Jahresberichtskategorie für das Jahr 2016.
+      </p>
+      <div  class="row" 
+        data-mirelementtype="Statisticsbrowser"
+        data-classification="mir_institutes"
+        data-rootcategory="fli"
+        data-facets='[]'
+        data-horizontalFacet='{"name":"category.top","valuePrefix":"annual_review"}'
+        data-fq='["objectType:mods","category.top:\"mir_institutes:fli\"","mods.yearIssued:2016"]'
+        data-expandAllElements="true"
+        data-hideEmptyElements="true"
+        data-lang="de"
+      >
+      </div>
+    </div>
+  </section>
+    
+  <section xml:lang="en">
+    <div class="row">
+      <h1>Statistic - MRI annual_review</h1>
+      <p> 
+        The publications of MRI per institut and annual_review of the year 2016.
+      </p>
+      <div  class="row" 
+        data-mirelementtype="Statisticsbrowser"
+        data-classification="mir_institutes"
+        data-rootcategory="mri"
+        data-facets='[]'
+        data-horizontalFacet='{"name":"category.top","valuePrefix":"annual_review"}'
+        data-fq='["objectType:mods","category.top:\"mir_institutes:fli\"","mods.yearIssued:2016"]'
+        data-expandAllElements="true"
+        data-hideEmptyElements="true"
+        data-lang="en"
+      >
+      </div>
+    </div>
+  </section>
+  
+</MyCoReWebPage>
