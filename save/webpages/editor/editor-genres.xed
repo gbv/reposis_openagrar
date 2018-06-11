@@ -204,6 +204,10 @@
   <xed:template id="article">
     <xed:include uri="webapp:editor/editor-genres.xed" ref="publication.common" />
   </xed:template>
+  
+  <xed:template id="abstract">
+    <xed:include uri="webapp:editor/editor-genres.xed" ref="publication.common" />
+  </xed:template>
 
   <xed:template id="preprint">
     <xed:include uri="webapp:editor/editor-genres.xed" ref="publication.common" />
