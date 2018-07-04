@@ -83,6 +83,10 @@
             <label xml:lang="de">Personen</label>
             <label xml:lang="en">Persons</label>
         </item>
+        <item href="/content/statistics/index.xml" type="intern" replaceMenu="false" constrainPopUp="false">
+            <label xml:lang="de">Statistiken</label>
+            <label xml:lang="en">Statistics</label>
+        </item>
     </menu>
     <menu id="publish" dir="/content/publish">
         <label xml:lang="de">Publizieren</label>
