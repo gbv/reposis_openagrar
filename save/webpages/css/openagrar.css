@@ -333,3 +333,10 @@ div#_altmetric_popover_el.altmetric-embed div#_altmetric_container.altmetric_con
 .sbSquare {
     color: #aaa;
 }
+
+/****************** temp refeered badge ************************/
+.hit_refereed {
+    float: left;
+    margin-left: 5px;
+    color: #aeafb3;
+}

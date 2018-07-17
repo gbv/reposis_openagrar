@@ -588,8 +588,8 @@
                   <div class="hit_type">
                     <span class="label label-info">
                       <xsl:value-of select="mcrxsl:getDisplayName('mir_genres','article')" />
-                </span>
-              </div>
+                    </span>
+                  </div>
                   <xsl:value-of select="'article'" />
                 </xsl:otherwise>
               </xsl:choose>
@@ -627,6 +627,13 @@
                   </xsl:variable>
                   <span class="label label-primary">
                     <xsl:value-of select="$date" />
+                  </span>
+                </div>
+              </xsl:if>
+              <xsl:if test="str[@name='mods.refereed']='yes'">
+                <div class="hit_refereed">
+                  <span class="label label-primary">
+                    <xsl:value-of select="i18n:translate('oa.refereed')" />
                   </span>
                 </div>
               </xsl:if>
