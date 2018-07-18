@@ -340,3 +340,8 @@ div#_altmetric_popover_el.altmetric-embed div#_altmetric_container.altmetric_con
     margin-left: 5px;
     color: #aeafb3;
 }
+
+#badges .oa_refereed {
+    display: inline;
+    color: #aeafb3;
+}

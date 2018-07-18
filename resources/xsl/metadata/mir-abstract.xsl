@@ -141,18 +141,18 @@
         </xsl:if>
         <xsl:variable name="refereed">
           <xsl:choose>
-            <xsl:when test="mods:extension/chars/@refereed">
-              <xsl:value-of select="mods:extension/chars/@refereed"/>
+            <xsl:when test="$mods/mods:extension/chars/@refereed">
+              <xsl:value-of select="$mods/mods:extension/chars/@refereed"/>
             </xsl:when>
             <xsl:otherwise>
               <xsl:choose>
-                <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed">
-                  <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed"/>
+                <xsl:when test="$mods/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed">
+                  <xsl:value-of select="$mods/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed"/>
                 </xsl:when>
                 <xsl:otherwise>
                   <xsl:choose>
-                    <xsl:when test="mods:relatedItem[@type='host']/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed">
-                      <xsl:value-of select="mods:relatedItem[@type='host']/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed"/>
+                    <xsl:when test="$mods/mods:relatedItem[@type='host']/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed">
+                      <xsl:value-of select="$mods/mods:relatedItem[@type='host']/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed"/>
                     </xsl:when>
                     <xsl:otherwise>
                       <xsl:value-of select="'no'"/>
@@ -163,10 +163,12 @@
             </xsl:otherwise>
           </xsl:choose>
         </xsl:variable>
-        <xsl:if test="$refereed = yes">
-          <span class="label mir-{$doc-state}" title="{i18n:translate('component.mods.metaData.dictionary.status')}">
-            <xsl:value-of select="i18n:translate('oa.refereed')" />
-          </span>
+        <xsl:if test="$refereed='yes'">
+          <div class="oa_refereed">
+            <span class="label label-info" title="{i18n:translate('oa.refereed')}">
+              <xsl:value-of select="i18n:translate('oa.refereed')" /> 
+            </span>
+          </div>
         </xsl:if>
         <xsl:variable name="doc-state" select="/mycoreobject/service/servstates/servstate/@categid" />
         <xsl:if test="$doc-state">
