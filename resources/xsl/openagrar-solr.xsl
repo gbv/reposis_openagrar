@@ -17,9 +17,11 @@
 
   <xsl:template match="mods:mods" mode="oa">
     <xsl:for-each select="mods:subject">
-      <field name="mods.subject">
-        <xsl:value-of select="mods:topic" />
-      </field>
+      <xsl:for-each select="mods:topic">
+        <field name="mods.subject">
+          <xsl:value-of select="." />
+        </field>
+      </xsl:for-each>
     </xsl:for-each>
     <xsl:for-each select="mods:location/mods:physicalLocation">
       <field name="mods.physicalLocation">
