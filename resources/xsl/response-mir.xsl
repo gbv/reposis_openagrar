@@ -255,6 +255,24 @@
               <ul class="filter">
                 <xsl:apply-templates select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
                   <xsl:with-param name="facet_name" select="'mods.genre'" />
+                  <xsl:with-param name="classification_facet" select="'true'" />
+                </xsl:apply-templates>
+              </ul>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" data-toggle="collapse-next">
+              <h3 class="panel-title">
+                <xsl:value-of select="'referiert'" />
+              </h3>
+            </div>
+            <div class="panel-body collapse in">
+              <ul class="filter">
+                <xsl:apply-templates select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
+                  <xsl:with-param name="facet_name" select="'mods.refereed'" />
+                  <xsl:with-param name="classification_facet" select="'false'" />
+                  <xsl:with-param name="i18n_prefix" select="'oa.refereed.'" />
+                  
                 </xsl:apply-templates>
               </ul>
             </div>
@@ -900,9 +918,15 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+  
+  <xsl:template name="li_facet">
+    
+  </xsl:template>
 
   <xsl:template match="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
     <xsl:param name="facet_name" />
+    <xsl:param name="classification_facet" />
+    <xsl:param name="i18n_prefix" />
     <xsl:for-each select="lst[@name=$facet_name]/int">
       <xsl:variable name="typeComplete">
         <xsl:value-of select="concat('&amp;fq=',$facet_name,':',@name)"></xsl:value-of>
@@ -932,7 +956,18 @@
             </input>
           </label>
           <span class="title">
-            <xsl:value-of select="mcrxsl:getDisplayName('mir_genres', @name)" />
+            <xsl:choose>
+              <xsl:when test="$classification_facet='true'">
+                <xsl:value-of select="mcrxsl:getDisplayName('mir_genres', @name)" />
+              </xsl:when>
+              <xsl:when test="$i18n_prefix">
+                <xsl:value-of select="i18n:translate(concat($i18n_prefix, @name))" />
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="@name" />
+              </xsl:otherwise>
+            </xsl:choose>
+            
           </span>
           <span class="hits">
             <xsl:value-of select="." />
