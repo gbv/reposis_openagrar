@@ -102,9 +102,11 @@
                 <xsl:value-of select="$idType" />
               </sup>
             </a>
-            <a href="{$WebApplicationBaseURL}content/statistics/person.xml?nameIdentifier={$nameIdentifierType}%5C:{$nameIdentifier}&amp;name={$linkText}">
-              <span class="glyphicon glyphicon-stats"></span>
-            </a>
+            <xsl:if test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
+              <a href="{$WebApplicationBaseURL}content/statistics/person.xml?nameIdentifier={$nameIdentifierType}%5C:{$nameIdentifier}&amp;name={$linkText}">
+                <span class="glyphicon glyphicon-stats"></span>
+              </a>
+            </xsl:if>
           </li>
         </xsl:when>
         <xsl:otherwise>
