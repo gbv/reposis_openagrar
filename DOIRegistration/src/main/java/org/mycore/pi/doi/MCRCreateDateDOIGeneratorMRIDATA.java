@@ -14,7 +14,7 @@ import org.mycore.pi.MCRPersistentIdentifier;
 import org.mycore.pi.MCRPersistentIdentifierGenerator;
 import org.mycore.pi.exceptions.MCRPersistentIdentifierException;
 
-public class MCRCreateDateDOIGeneratorMRI extends MCRPersistentIdentifierGenerator<MCRDigitalObjectIdentifier> {
+public class MCRCreateDateDOIGeneratorMRIDATA extends MCRPersistentIdentifierGenerator<MCRDigitalObjectIdentifier> {
 
     private static final String DATE_PATTERN = "yyyyMMdd-HHmmss";
 
@@ -24,7 +24,7 @@ public class MCRCreateDateDOIGeneratorMRI extends MCRPersistentIdentifierGenerat
     
     private String subPrefix = "";
 
-    public MCRCreateDateDOIGeneratorJKI(String generatorID) {
+    public MCRCreateDateDOIGeneratorMRIDATA(String generatorID) {
         super(generatorID);
         mcrdoiParser = new MCRDOIParser();
     }

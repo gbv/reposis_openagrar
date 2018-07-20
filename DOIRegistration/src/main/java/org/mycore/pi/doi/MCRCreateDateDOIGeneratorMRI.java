@@ -24,7 +24,7 @@ public class MCRCreateDateDOIGeneratorMRI extends MCRPersistentIdentifierGenerat
     
     private String subPrefix = "";
 
-    public MCRCreateDateDOIGeneratorJKI(String generatorID) {
+    public MCRCreateDateDOIGeneratorMRI(String generatorID) {
         super(generatorID);
         mcrdoiParser = new MCRDOIParser();
     }
