@@ -103,7 +103,7 @@
               </sup>
             </a>
             <a href="{$WebApplicationBaseURL}content/statistics/person.xml?nameIdentifier={$nameIdentifierType}%5C:{$nameIdentifier}&amp;name={$linkText}">
-              <xsl:value-of select="'statistik'" />
+              <span class="glyphicon glyphicon-stats"></span>
             </a>
           </li>
         </xsl:when>
