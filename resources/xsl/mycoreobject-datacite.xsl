@@ -418,13 +418,13 @@
   <!-- ========== resourceType (0-n) ========== -->
 
   <xsl:template name="resourceType">
-    <xsl:variable name="resourceTypeGeneralID" 
-                  select="substring-after(mods:classification[@authorityURI='http://www.mycore.org/classifications/dataciteResType']/@valueURI,'#')" />
-    <xsl:variable name="resourceTypeGeneralText"
-                  select="document('classification:metadata:-1:children:dataciteResType')//category[@ID=$resourceTypeGeneralID]/label[@xml:lang='en']/@text"  />
-    <xsl:variable name="genreID" select="substring-after(mods:genre/@valueURI, '#')"/>
+  	<xsl:variable name="resourceTypeGeneralID" 
+  	  select="substring-after(mods:classification[@authorityURI='http://www.mycore.org/classifications/dataciteResType']/@valueURI,'#')" />
+  	<xsl:variable name="resourceTypeGeneralText"
+      select="document('classification:metadata:-1:children:dataciteResType')//category[@ID=$resourceTypeGeneralID]/label[@xml:lang='en']/@text"  />
+  	<xsl:variable name="genreID" select="substring-after(mods:genre/@valueURI, '#')"/>
     <xsl:variable name="genretext"
-                  select="document('classification:metadata:-1:children:mir_genres')//category[@ID=$genreID]/label[@xml:lang='en']/@text"  />
+      select="document('classification:metadata:-1:children:mir_genres')//category[@ID=$genreID]/label[@xml:lang='en']/@text"  />
     <resourceType resourceTypeGeneral="{$resourceTypeGeneralText}">
       <xsl:value-of select="$genretext" />
     </resourceType>
