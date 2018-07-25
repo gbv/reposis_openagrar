@@ -8,6 +8,12 @@
       <label xml:lang="en" text="Article / Chapter" />
       <label xml:lang="de" text="Artikel / Aufsatz" />
       <label xml:lang="x-hosts" text="journal issue  collection festschrift proceedings standalone" />
+      <category ID="abstract">
+        <label xml:lang="en" text="abstract / summary" />
+        <label xml:lang="x-mapping" text="marcgt:abstract_or_summary diniPublType:article" />
+        <label xml:lang="x-hosts" text="proceedings" />
+        <label xml:lang="de" text="Abstract / Zusammenfassung" />
+      </category>
       <category ID="chapter">
         <label xml:lang="en" text="Book chapter" />
         <label xml:lang="de" text="Buchkapitel" />
@@ -106,8 +112,8 @@
       <label xml:lang="en" text="Report" />
       <category ID="methods_description">
         <label xml:lang="x-hosts" text="standalone" />
-        <label xml:lang="en" text="Methods description" />
         <label xml:lang="de" text="Methodenbeschreibung" />
+        <label xml:lang="en" text="Methods description" />
       </category>
       <category ID="research_results">
         <label xml:lang="x-hosts" text="standalone" />
@@ -142,8 +148,8 @@
     </category>
     <category ID="journal">
       <label xml:lang="x-hosts" text="standalone" />
-      <label xml:lang="de" text="Zeitschrift" />
       <label xml:lang="en" text="Journal" />
+      <label xml:lang="de" text="Zeitschrift" />
     </category>
     <category ID="series">
       <label xml:lang="x-hosts" text="standalone" />
