@@ -141,6 +141,24 @@
       <label xml:lang="x-hosts" text="journal" />
       <label xml:lang="de" text="Zeitschriftenheft" />
     </category>
+    <category ID="teaching_material">
+      <label xml:lang="de" text="Lehrmaterial"/>
+      <label xml:lang="x-mapping" text="marcgt:instruction diniPublType:CourseMaterial"/>
+      <label xml:lang="x-hosts" text="standalone lecture"/>
+      <label xml:lang="en" text="Teaching Resource"/>
+      <category ID="lecture_resource">
+        <label xml:lang="x-hosts" text="standalone lecture"/>
+        <label xml:lang="x-mapping" text="marcgt:instruction diniPublType:CourseMaterial"/>
+        <label xml:lang="de" text="Vorlesungsmaterial"/>
+        <label xml:lang="en" text="Lecture Resource"/>
+      </category>
+      <category ID="course_resources">
+        <label xml:lang="x-hosts" text="standalone lecture"/>
+        <label xml:lang="x-mapping" text="marcgt:instruction diniPublType:CourseMaterial"/>
+        <label xml:lang="de" text="Kurs- und Seminarmaterial"/>
+        <label xml:lang="en" text="Course Resources"/>
+      </category>
+    </category>
     <category ID="book">
       <label xml:lang="de" text="Buch" />
       <label xml:lang="x-hosts" text="series standalone" />
@@ -193,6 +211,12 @@
       <label xml:lang="x-hosts" text="standalone" />
       <label xml:lang="de" text="Bild" />
       <label xml:lang="en" text="Picture" />
+    </category>
+    <category ID="lecture">
+      <label xml:lang="x-hosts" text="standalone"/>
+      <label xml:lang="de" text="Vorlesung"/>
+      <label xml:lang="en" text="Lecture"/>
+      <label xml:lang="x-mapping" text="marcgt:series diniPublType:lecture"/>
     </category>
   </categories>
 </mycoreclass>
