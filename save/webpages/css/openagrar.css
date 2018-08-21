@@ -300,7 +300,7 @@ html body footer .internal_links {
 }
 
 
-/* *********************** result text *********************** */
+/* *********************** result page *********************** */
 .result_headline h1 {
   color: #693;
   font-weight: bold;
@@ -314,7 +314,12 @@ html body footer .internal_links {
   font-size: 20px;
 }
 
+.hit_option .fa-bookmark {
+  margin-right: 3px;
+}
 
+
+/* *********************** altmetrics *********************** */
 
 div#_altmetric_popover_el.altmetric-embed div#_altmetric_container.altmetric_container div#_altmetric_popover_inner .altmetric-popover-content {
   background-color: #f9f9f9 !important;
