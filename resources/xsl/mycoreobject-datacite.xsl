@@ -84,7 +84,7 @@
 
   <xsl:template name="titles">
     <titles>
-      <xsl:apply-templates select="mods:titleInfo" />
+      <xsl:apply-templates select="mods:titleInfo[not(@altFormat)]" />
     </titles>
   </xsl:template>
 
