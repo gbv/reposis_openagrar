@@ -197,6 +197,7 @@
     <field name="mods.author" type="namesType" multiValued="true" />
     <field name="mods.mainAuthor" type="collatedGERMAN" indexed="true" stored="false" />
     <field name="mods.genre" type="string" multiValued="true" />
+    <field name="mods.genre.host" type="string" multiValued="true" />
     <field name="mods.identifier" type="text_lower" multiValued="true" />
     <field name="mods.identifier.host" type="text_lower" multiValued="true" />
     <field name="mods.abstract" type="text_de" multiValued="true" />

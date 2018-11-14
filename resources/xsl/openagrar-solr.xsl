@@ -43,6 +43,11 @@
         </field>
       </xsl:if>
     </xsl:for-each>
+    <xsl:for-each select="mods:relatedItem[@type='host']/mods:genre">
+      <field name="mods.genre.host">
+        <xsl:value-of select="substring-after(@valueURI,'#')" />
+      </field>
+    </xsl:for-each>
     <xsl:choose>
       <xsl:when test="mods:extension/chars/@refereed='yes'">
         <field name="mods.refereed">yes</field>
