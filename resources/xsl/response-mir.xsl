@@ -263,6 +263,21 @@
           <div class="panel panel-default">
             <div class="panel-heading" data-toggle="collapse-next">
               <h3 class="panel-title">
+                <xsl:value-of select="i18n:translate('editor.search.mir.genre.host')" />
+              </h3>
+            </div>
+            <div class="panel-body collapse in">
+              <ul class="filter">
+                <xsl:apply-templates select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
+                  <xsl:with-param name="facet_name" select="'mods.genre.host'" />
+                  <xsl:with-param name="classification_facet" select="'true'" />
+                </xsl:apply-templates>
+              </ul>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" data-toggle="collapse-next">
+              <h3 class="panel-title">
                 <xsl:value-of select="'referiert'" />
               </h3>
             </div>

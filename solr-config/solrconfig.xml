@@ -854,6 +854,7 @@
        <lst name="appends">
          <str name="facet">true</str>
          <str name="facet.field">mods.genre</str>
+         <str name="facet.field">mods.genre.host</str>
          <str name="facet.field">mods.refereed</str>
          <str name="facet.mincount">1</str>
        </lst>
@@ -1933,6 +1934,7 @@
       <str name="qf1">id^100 mods.gnd^100 mods.identifier^100 isbn^100 mods.title^80 mods.author^40 mods.publisher^30 mods.name^30 mods.abstract^10 mods.place^5 allMeta^0.002</str>
       <str name="facet">true</str>
       <str name="facet.field">mods.genre</str>
+      <str name="facet.field">mods.genre.host</str>
       <str name="facet.field">mods.refereed</str>
       <str name="facet.mincount">1</str>
     </lst>
