@@ -225,7 +225,7 @@
       </xsl:if>
     </xsl:copy>
   </xsl:template>
-
+  
   <xsl:template match="mods:identifier[@type='ppn']">
     <xsl:variable name="database">
       <xsl:choose>
