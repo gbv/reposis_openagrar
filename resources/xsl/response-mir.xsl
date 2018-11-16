@@ -292,6 +292,23 @@
               </ul>
             </div>
           </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" data-toggle="collapse-next">
+              <h3 class="panel-title">
+                <xsl:value-of select="'i18n:translate('editor.search.status')'" />
+              </h3>
+            </div>
+            <div class="panel-body collapse in">
+              <ul class="filter">
+                <xsl:apply-templates select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
+                  <xsl:with-param name="facet_name" select="'state'" /> 
+                  <xsl:with-param name="classification_facet" select="'false'" />
+                  <xsl:with-param name="i18n_prefix" select="'mir.state.'" />
+                  
+                </xsl:apply-templates>
+              </ul>
+            </div>
+          </div>
         </xsl:if>
         <xsl:if test="$MIR.testEnvironment='true'"> <!-- filters in development, show only in test environments -->
           <xsl:call-template name="print.classiFilter">

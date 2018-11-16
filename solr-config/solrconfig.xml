@@ -856,6 +856,8 @@
          <str name="facet.field">mods.genre</str>
          <str name="facet.field">mods.genre.host</str>
          <str name="facet.field">mods.refereed</str>
+         <str name="facet.field">state</str>
+         
          <str name="facet.mincount">1</str>
        </lst>
     <!-- "invariants" are a way of letting the Solr maintainer lock down
@@ -1936,6 +1938,8 @@
       <str name="facet.field">mods.genre</str>
       <str name="facet.field">mods.genre.host</str>
       <str name="facet.field">mods.refereed</str>
+      <str name="facet.field">state</str>
+      
       <str name="facet.mincount">1</str>
     </lst>
     <lst name="invariants">
