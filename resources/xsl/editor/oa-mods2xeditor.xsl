@@ -22,13 +22,13 @@
     </xsl:copy>
   </xsl:template>
   
-  <xsl:template match="mods:affiliation[starts-with(@xlink:href,'https://www.openagrar.de/classifications/mir_institutes#']">
+  <!-- <xsl:template match="mods:affiliation[starts-with(@xlink:href,'https://www.openagrar.de/classifications/mir_institutes#']">
     <mods:affiliation>
       <xsl:attribute name="xlink:href">
         <xsl:value-of select="'https://www.openagrar.de/classifications/mir_institutes#'" />
       </xsl:attribute>
       <xsl:value-of select="substring-after(@xlink:href,'#')" />
     </mods:affiliation>
-  </xsl:template>
+  </xsl:template> -->
 
 </xsl:stylesheet>

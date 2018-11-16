@@ -54,13 +54,13 @@
     </xsl:copy>
   </xsl:template>
   
-  <xsl:template match="mods:affiliation[@xlink:href='https://www.openagrar.de/classifications/mir_institutes#']">
+  <!-- <xsl:template match="mods:affiliation[@xlink:href='https://www.openagrar.de/classifications/mir_institutes#']">
     <mods:affiliation>
       <xsl:attribute name="xlink:href">
         <xsl:value-of select="concat('https://www.openagrar.de/classifications/mir_institutes#',.)" />
       </xsl:attribute>
     </mods:affiliation>
-  </xsl:template>
+  </xsl:template> -->
 
 
 </xsl:stylesheet>

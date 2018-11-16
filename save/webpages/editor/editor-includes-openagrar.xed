@@ -98,8 +98,8 @@
   
   <xed:template id="person.affiliation.openagrar">
     <xed:bind path="mods:affiliation">
-      <xed:bind path="@xlink:href" set="https://www.openagrar.de/classifications/mir_institutes#" /> 
-      <div class="form-group {$xed-validation-marker}">
+       <xed:bind path="@xlink:href" set="https://www.openagrar.de/classifications/mir_institutes#" /> --> 
+       <div class="form-group {$xed-validation-marker}">
         <label class="col-md-3 control-label">
           <xed:output i18n="mir.affiliation" />
         </label>
@@ -114,7 +114,7 @@
           </div>
         </div>
         <mir:help-pmud help-text="{i18n:mir.help.affiliation}" />
-      </div>
+      </div> 
     </xed:bind>
   </xed:template>
 

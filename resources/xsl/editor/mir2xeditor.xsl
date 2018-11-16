@@ -169,7 +169,7 @@
             <xsl:copy-of select="@placeholder" />
           </input>
         </xed:bind>
-        <span class="fa fa-minus input-group-addon" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-minus input-group-addon" aria-hidden="true"></span>
         <xed:bind xpath="{$xpathEnd}">
           <input type="text" class="form-control endDate" data-point="end">
             <xsl:copy-of select="@placeholder" />
@@ -280,7 +280,7 @@
                   <div class="controls">
                     <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="person.fields.noHidden" />
                   </div>
-                  <span class="fa fa-chevron-down expand-item" title="{i18n:translate('mir.help.expand')}" aria-hidden="true"></span>
+                  <span class="glyphicon glyphicon-chevron-down expand-item" title="{i18n:translate('mir.help.expand')}" aria-hidden="true"></span>
                 </div>
                 <div class="col-md-3">
                   <xsl:if test="string-length(@help-text) &gt; 0">
@@ -288,8 +288,8 @@
                   </xsl:if>
                   <xsl:call-template name="mir-pmud" />
                 </div>
-                <xsl:call-template name="mir-required" />
               </xed:bind>
+              <xsl:call-template name="mir-required" />
             </div>
           </xed:bind>
         </legend>
@@ -350,7 +350,7 @@
                 </div>
                 <div class="col-md-6 center-vertical">
                   <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="person.fields.noHidden" />
-                  <span class="fa fa-chevron-down expand-item" title="{i18n:translate('mir.help.expand')}" aria-hidden="true"></span>
+                  <span class="glyphicon glyphicon-chevron-down expand-item" title="{i18n:translate('mir.help.expand')}" aria-hidden="true"></span>
                 </div>
                 <div class="col-md-3">
                   <xsl:if test="string-length(@help-text) &gt; 0">
@@ -366,8 +366,8 @@
         <div class="mir-fieldset-content personExtended-container hidden">
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="nameType" />
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="namePart.repeated" />
-          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-openagrar.xed" ref="person.affiliation.openagrar" />
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="person.affiliation" />
+          <!-- <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-openagrar.xed" ref="person.affiliation.openagrar" /> -->
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="nameIdentifier.repeated" />
         </div>
       </fieldset>
@@ -420,7 +420,7 @@
                 <div class="search-geographic-extended">
                   <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="geographic.input" />
                 </div>
-                <span class="fa fa-chevron-down expand-item" data-target=".geographicExtended-container" title="{i18n:translate('mir.help.expand')}" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-chevron-down expand-item" data-target=".geographicExtended-container" title="{i18n:translate('mir.help.expand')}" aria-hidden="true"></span>
               </div>
             </xsl:when>
             <xsl:otherwise>
@@ -457,7 +457,7 @@
                 <div class="search-topic-extended">
                   <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="topic.input" />
                 </div>
-                <span class="fa fa-chevron-down expand-item" data-target=".topicExtended-container" title="{i18n:translate('mir.help.expand')}" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-chevron-down expand-item" data-target=".topicExtended-container" title="{i18n:translate('mir.help.expand')}" aria-hidden="true"></span>
               </div>
             </xsl:when>
             <xsl:otherwise>
