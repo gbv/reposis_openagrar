@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="author_role">
+  <label xml:lang="de" text="Autorenrollen" />
+  <label xml:lang="en" text="Role of author" />
+  <label xml:lang="x-uri" text="https://www.openagrar.de/classifications/author_role" />
+  <categories>
+    <category ID="main_author">
+      <label xml:lang="en" text="main author" />
+      <label xml:lang="de" text="Hauptautor" />
+    </category>
+    <category ID="last_author">
+      <label xml:lang="en" text="last author" />
+      <label xml:lang="de" text="Letzter Autor" />
+    </category>
+    <category ID="corresponding_author">
+      <label xml:lang="en" text="corresponding author" />
+      <label xml:lang="de" text="Korrespondierender Autor" />
+    </category>
+  </categories>
+</mycoreclass>
