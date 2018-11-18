@@ -114,7 +114,8 @@
 
   <xed:template id="person.affiliation.openagrar">
     <xed:bind xpath="mods:affiliation">
-       <xed:bind xpath="@xlink:href" set="https://www.openagrar.de/classifications/mir_institutes#" /> 
+       <!-- Attribute 'xlink:href' is not allowed to appear in element 'mods:affiliation'. -->
+       <!-- xed:bind xpath="@xlink:href" set="https://www.openagrar.de/classifications/mir_institutes#" / --> 
        <div class="form-group {$xed-validation-marker}">
         <label class="col-md-3 control-label">
           <xed:output i18n="mir.affiliation" />
