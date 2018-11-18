@@ -114,6 +114,7 @@
         <mir:help-pmud help-text="{i18n:oa.authorRole.help}" />
       </div> 
     </xed:bind>
+  </xed:template>
 
   <xed:template id="person.affiliation.openagrar">
     <xed:bind xpath="mods:affiliation">
