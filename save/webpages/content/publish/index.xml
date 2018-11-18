@@ -72,48 +72,24 @@
         </div>
       </div>
 
-<!-- ppn -->
+<!-- more options -->
       <div id="more_options_box" class="row form-group">
         <h2>Publikation aus Scopus, PubMed, CrossRef oder GVK importieren</h2>
         <div class="row form-group">
           <label class="col-sm-3 col-lg-2 control-label">
-            <select name="scopusField">
-              <option value="scopus_id">Scopus ID:</option>
-              <option value="eid">Scopus EID:</option>
-              <option value="doi">Scopus DOI:</option>
+            <select name="type">
+              <option value="doi">DOI</option>
+              <option value="scopus">Scopus-ID</option>
+              <option value="pubmed">PubMed-ID</option>
+              <option value="isbn">ISBN</option>
+              <option value="issn">ISSN</option>
+              <option value="ieee">IEEE</option>
+              <option value="ppn">GVK-PPN</option>
+              <option value="zdb">ZDB-ID</option>
             </select>
           </label>
           <div class="col-sm-7 col-md-5 col-lg-4">
-            <input class="form-control" type="text" name="ScopusID" />
-          </div>
-        </div>
-        <div class="row form-group">
-          <label class="col-sm-3 col-lg-2 control-label">
-            <select name="pubMedField">
-              <option value="ext_id">PubMed ID:</option>
-              <option value="doi">PubMed DOI:</option>
-            </select>
-          </label>
-          <div class="col-sm-7 col-md-5 col-lg-4">
-            <input class="form-control" type="text" name="PubMedID" />
-          </div>
-        </div>
-        <div class="row form-group">
-          <label class="col-sm-3 col-lg-2 control-label">CrossRef DOI:</label>
-          <div class="col-sm-7 col-md-5 col-lg-4">
-            <input class="form-control" type="text" name="CrossRefDOI" />
-          </div>
-        </div>
-        <div class="row form-group">
-          <label class="col-sm-3 col-lg-2 control-label">ZDB-ID:</label>
-          <div class="col-sm-7 col-md-5 col-lg-4">
-            <input class="form-control" type="text" name="zdbid" />
-          </div>
-        </div>
-        <div class="row form-group">
-          <label class="col-sm-3 col-lg-2 control-label">mit der PPN:</label>
-          <div class="col-sm-7 col-md-5 col-lg-4">
-            <input type="text" name="ppn" id="ppn" class="form-control" size="20" placeholder="z.B. 198562268" />
+            <input class="form-control" type="text" name="modsId" />
           </div>
         </div>
       </div>

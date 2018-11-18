@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="rfc4646">
-  <label xml:lang="en" text="Language" description="as defined in RFC 4646" />
-  <label xml:lang="x-auth" text="rfc4646" />
-  <label xml:lang="de" text="Sprache" description="nach RFC 4646" />
-  <label xml:lang="x-uri" text="http://www.mycore.org/classifications/rfc4646" />
+<mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="rfc5646">
+  <label xml:lang="en" text="Language" description="as defined in RFC 5646" />
+  <label xml:lang="x-auth" text="rfc5646" />
+  <label xml:lang="de" text="Sprache" description="nach RFC 5646" />
+  <label xml:lang="x-uri" text="http://www.mycore.org/classifications/rfc5646" />
   <categories>
     <category ID="de">
       <label xml:lang="en" text="German" />
