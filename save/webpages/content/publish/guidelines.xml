@@ -26,6 +26,42 @@
             setzten.
           </li>
         </ul>
+        
+        <!-- 
+        ich habe jetzt unsere Zeitschriften im Open Agrar von den Dubletten, soweit sie aus der Excel-Liste hervorgingen, gesäubert. Sprich alle Dubletten gelöscht.
+
+Damit wir keine weiteren Dubletten fabrizieren, sollten wir uns schnellstens Erfassungsrichtlinien erarbeiten.
+
+
+Für das Erfassen von Zeitschriften sollten meiner Meinung nach folgende Dinge gelten.
+
+ 
+
+1.       Kontrolle, ob eine Zeitschrift schon erfasst ist. [Kontrolle ISSN, ZDB-ID, Titel – bei ISSN und ZDB-ID immer auch die Alternative (Druck oder elektronisch) prüfen!]
+Kann Open Agrar selbst nicht auch einen Abgleich machen, ob eine Zeitschrift schon angelegt ist oder nicht? Und dann eine entsprechende Info an den Bearbeiter geben?
+
+2.       Bei Neuerfassung einer Zeitschrift immer ISSNs und ZDB-IDs aller Ausgaben dieser Zeitschrift erfassen! (Druck, elektronisch, Vorgänger) -> Sind alle Nummern richtig erfasst, wird die Zeitschrift bei der Suche auch gefunden.
+
+3.       Immer auch angeben, ob diese Zeitschrift referiert ist oder nicht. Wenn nötig auch die Impact-Faktoren eintragen.
+
+4.       Als URL immer den Link zur Uni Regensburg, dann kann jeder gleich sehen, ob er Zugriff auf die Zeitschrift hat oder nicht. Ist für unsere Nutzer sicher ganz wichtig.
+
+5.       Neben dem Verlag sollte auch die DDC-Sachgruppe der DNB angegeben werden.
+
+ 
+
+Bei Artikeln sieht es ähnlich aus.
+
+ 
+
+1.       Kontrolle mit Hilfe der DOI oder des Titels, ob ein Artikel schon erfasst ist. (Empfehlenswert bei Artikeln mit Autoren verschiedener Einrichtungen)
+
+2.       Artikel können dann meist mit Hilfe der DOI importiert werden. Hier ist aber Kontrolle angesagt, um fehlende Angaben zu ergänzen.
+
+3.       Bei den Autoren aus der eigenen Einrichtung immer auch die GND eintragen! Ist ein Artikel schon vorhanden, dann Die GNDs der eigenen Autoren nachtragen.
+
+4.       Schlagworte und Abstracts möglicherweise ergänzen
+        -->
       </div>
     </div>
     </section>
