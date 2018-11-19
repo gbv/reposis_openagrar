@@ -5,16 +5,20 @@
   <label xml:lang="x-uri" text="https://www.openagrar.de/classifications/author_role" />
   <categories>
     <category ID="main_author">
-      <label xml:lang="en" text="main author" />
-      <label xml:lang="de" text="Hauptautor" />
+      <label xml:lang="en" text="Main Author" />
+      <label xml:lang="de" text="Erstautor" />
     </category>
     <category ID="last_author">
-      <label xml:lang="en" text="last author" />
+      <label xml:lang="en" text="Last Author" />
       <label xml:lang="de" text="Letzter Autor" />
     </category>
     <category ID="corresponding_author">
-      <label xml:lang="en" text="corresponding author" />
+      <label xml:lang="en" text="Corresponding Author" />
       <label xml:lang="de" text="Korrespondierender Autor" />
+    </category>
+    <category ID="co_author">
+      <label xml:lang="en" text="Co Author" />
+      <label xml:lang="de" text="Co-Autor" />
     </category>
   </categories>
 </mycoreclass>
