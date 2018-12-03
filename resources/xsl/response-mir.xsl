@@ -295,7 +295,7 @@
           <div class="panel panel-default">
             <div class="panel-heading" data-toggle="collapse-next">
               <h3 class="panel-title">
-                <xsl:value-of select="'i18n:translate('editor.search.status')'" />
+                <xsl:value-of select="i18n:translate('editor.search.status')" />
               </h3>
             </div>
             <div class="panel-body collapse in">
