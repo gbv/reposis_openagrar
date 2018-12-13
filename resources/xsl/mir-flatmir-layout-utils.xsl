@@ -23,7 +23,7 @@
       </div>
       <div id="options_nav_box" class="mir-prop-nav">
 
-        <div class="searchfield_box">
+        <div class="searchfield_box" title="{i18n:translate('mir.navsearch.title')}">
           <form action="{$WebApplicationBaseURL}servlets/solr/find" class="navbar-form navbar-left" role="search">
             <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
             <div class="form-group">
