@@ -30,5 +30,8 @@
       <xsl:value-of select="substring-after(@xlink:href,'#')" />
     </mods:affiliation>
   </xsl:template> -->
+  
+  <xsl:template match="mods:relatedItem/mods:name[@ID]">
+  </xsl:template>
 
 </xsl:stylesheet>
