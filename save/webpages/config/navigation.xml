@@ -11,6 +11,10 @@
             <label xml:lang="de">Start</label>
             <label xml:lang="en">Start</label>
         </item>
+        <item href="/content/orcid.xml" type="intern" replaceMenu="false" constrainPopUp="false">
+            <label xml:lang="de">ORCID und Autoren-IDs</label>
+            <label xml:lang="en">ORCID and author IDs</label>
+        </item>
     </menu>
     <menu id="register">
         <label xml:lang="de">Registrieren</label>
