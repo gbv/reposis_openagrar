@@ -117,7 +117,7 @@
           ORCID-Profil. Ebenso empfehlen wir Web of Science und Scopus zu verknüpfen, sofern Ihre Publikationen in diesen Datenbanken nachgewiesen sind.
         </p>
 
-        <h3>OpenAgrar mit ORCID verknüpfen</h3>
+        <strong>OpenAgrar mit ORCID verknüpfen</strong>
         <ol>
           <li>Loggen Sie sich in OpenAgrar mit Ihrem OpenAgrar-Account ein.</li>
           <li>Öffnen Sie das Kontextmenü hinter Ihrem Benutzernamen und wählen Sie „Benutzerdaten anzeigen“</li>
@@ -126,7 +126,7 @@
           <li>Bestätigen Sie mit einem Klick auf „Authorize“, dass OpenAgrar zukünftig mit Ihrem ORCID-Profil verknüpft sein wird.</li>
         </ol>
 
-        <h3>Crossref, DataCite, Web of Science, Scopus etc. mit ORCID verknüpfen</h3>
+        <strong>Crossref, DataCite, Web of Science, Scopus etc. mit ORCID verknüpfen</strong>
         <p>
           Melden Sie sich bei ORCID an und verwenden Sie in Ihrem ORCID-Profil die Funktion "Search &amp; link" (Rubrik "Works" ->
           "Add works": "Search &amp; link").
