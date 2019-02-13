@@ -9,6 +9,7 @@
 
   <xsl:param name="UserAgent" />
   <xsl:param name="MIR.testEnvironment" />
+  <xsl:param name="MCR.ORCID.OAuth.ClientSecret" select="''" />
 
   <xsl:variable name="maxScore" select="//result[@name='response'][1]/@maxScore" />
   
@@ -511,14 +512,14 @@
                       <xsl:when test="acl:checkPermissionForReadingDerivate($derivid)">
                         <a class="hit_option hit_download" href="{$viewerLink}" title="{$mods-genre-i18n}">
                           <div class="hit_icon"
-                            style="background-image: url('{$WebApplicationBaseURL}servlets/MCRTileCombineServlet/THUMBNAIL/{$derivid}/{$derivates/str[@name='iviewFile'][1]}');"
+                            style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');"
                           >
                           </div>
                         </a>
                       </xsl:when>
                       <xsl:otherwise>
                         <div class="hit_icon"
-                          style="background-image: url('{$WebApplicationBaseURL}servlets/MCRTileCombineServlet/THUMBNAIL/{$derivid}/{$derivates/str[@name='iviewFile'][1]}');"
+                          style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');"
                         >
                         </div>
                       </xsl:otherwise>
@@ -543,12 +544,12 @@
                     <xsl:choose>
                       <xsl:when test="acl:checkPermissionForReadingDerivate($derivid)">
                         <a class="hit_option hit_download" href="{$viewerLink}" title="{$mods-genre-i18n}">
-                          <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}img/pdfthumb/{$filePath}?centerThumb=no');">
+                          <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');">
                           </div>
                         </a>
                       </xsl:when>
                       <xsl:otherwise>
-                        <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}img/pdfthumb/{$filePath}?centerThumb=no');">
+                        <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');">
                         </div>
                       </xsl:otherwise>
                     </xsl:choose>
@@ -624,6 +625,27 @@
 <!-- hit type -->
           <div class="hit_tnd_container">
             <div class="hit_tnd_content">
+              <div class="hit_oa" data-toggle="tooltip">
+                <xsl:variable name="isOpenAccess" select="bool[@name='worldReadableComplete']='true'" />
+              <xsl:choose>
+                  <xsl:when test="$isOpenAccess">
+                    <xsl:attribute name="title">
+                      <xsl:value-of select="i18n:translate('mir.response.openAccess.true')" />
+                    </xsl:attribute>
+                    <span class="label label-success">
+                      <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                    </span>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:attribute name="title">
+                      <xsl:value-of select="i18n:translate('mir.response.openAccess.false')" />
+                    </xsl:attribute>
+                    <span class="label label-warning">
+                      <i class="fa fa-lock" aria-hidden="true"></i>
+                    </span>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </div>
               <xsl:choose>
                 <xsl:when test="arr[@name='mods.genre']">
                   <xsl:for-each select="arr[@name='mods.genre']/str">
@@ -640,7 +662,6 @@
                       <xsl:value-of select="mcrxsl:getDisplayName('mir_genres','article')" />
                     </span>
                   </div>
-                  <xsl:value-of select="'article'" />
                 </xsl:otherwise>
               </xsl:choose>
               <xsl:if test="arr[@name='category.top']/str[contains(text(), 'mir_licenses:')]">
@@ -696,6 +717,10 @@
                     <xsl:value-of select="$status-i18n" />
                   </span>
                 </div>
+              </xsl:if>
+              <xsl:if test="string-length($MCR.ORCID.OAuth.ClientSecret) &gt; 0">
+                <script src="{$WebApplicationBaseURL}js/mir/mycore2orcid.js" />
+                <div class="orcid-status" data-id="{$identifier}" />
               </xsl:if>
             </div>
           </div>
@@ -882,6 +907,10 @@
                 </xsl:if>
               </xsl:for-each>
             </div>
+          </xsl:if>
+
+          <xsl:if test="string-length($MCR.ORCID.OAuth.ClientSecret) &gt; 0">
+            <div class="orcid-publish" data-id="{$identifier}" />
           </xsl:if>
 
         </div><!-- end hit col -->
