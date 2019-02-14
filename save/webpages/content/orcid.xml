@@ -121,7 +121,7 @@
         <ol>
           <li>Loggen Sie sich in OpenAgrar mit Ihrem OpenAgrar-Account ein.</li>
           <li>Öffnen Sie das Kontextmenü hinter Ihrem Benutzernamen und wählen Sie „Benutzerdaten anzeigen“</li>
-          <li>Klicken sie auf den Button „Registrieren oder verknüpfen Sie Ihre ORCID ID hier!“</li>
+          <li>Klicken sie auf den Button „Registrieren oder verknüpfen Sie Ihre ORCID hier!“</li>
           <li>Sie werden aufgefordert, ein ORCID-Profil anzulegen bzw. sich in Ihr bestehendes ORCID-Profil einzuloggen.</li>
           <li>Bestätigen Sie mit einem Klick auf „Authorize“, dass OpenAgrar zukünftig mit Ihrem ORCID-Profil verknüpft sein wird.</li>
         </ol>
@@ -181,174 +181,152 @@
     <div class="row">
       <div class="col-md-10" lang="en">
         <h1>
-          english translation is coming soon!
+          ORCID® - Connecting research and researchers!
         </h1>
         
-        <!-- h2>Was ist ORCID?</h2>
+        <h2>What is ORCID®?</h2>
         <p>
-          ORCID steht für <a href="http://orcid.org/">„Open Contributor and Researcher ID“</a> und ist eine international anerkannte ID für
-          Wissenschaftler_innen und Forscher_innen, die Publikationen und Forschungsergebnisse eindeutig mit einer Person verbindet – denn
-          eine eindeutige Referenzierung von Autor_innen wissenschaftlicher Publikationen ist über Namen allein nicht möglich.
+          Open Contributor and Researcher ID is an internationally acknowledged identifier for scientists that links researchers to their work.
+          An ORCID profile can connect an ID with the name (in multiple versions), affiliations, career history, research output and publications.
+          Researchers decide themselves about to which extend this information is publicly available.
         </p>
         <p>
-          Ein ORCID-Profil kann neben der ID den Namen (in allen Varianten), die institutionelle Zugehörigkeit, den beruflichen Werdegang und
-          die Forschungsleistungen und Publikationen einer Person zusammenführen. Über die Sichtbarkeit dieser Angaben in einem Profil
-          entscheiden die Forschenden selbst!
+          From 2017 the Federal Ministry of Food and Agriculture (BMEL) in Germany (and all institutions that manage the open access repository
+          OpenAgrar) is an ORCID member. By appointing OpenAgrar as a „trusted party“, the repository will support you in maintaining your ORCID
+          profile and your publication list.  With your permission, OpenAgrar will automatically import your publications from OpenAgrar into
+          your ORCID profile.
         </p>
         <p>
-          Das BMEL und damit alle Einrichtungen, die das gemeinsame Repositorium OpenAgrar betreiben, ist seit 2017 Mitglied bei ORCID. Dies
-          bedeutet, dass Sie OpenAgrar zur s. g.  "Trusted Party" machen können. Damit wird OpenAgrar Sie bei der Pflege Ihres ORCID-Profils
-          und Ihrer persönlichen Publikationsliste unterstützen, indem in OpenAgrar verzeichnete Publikationen in Ihr ORCID-Profil automatisiert
-          eintragen werden.
-        </p>
-        <p>
-          Nutzen Sie ORCID, damit Sie und OpenAgrar von den Vorteilen profitieren können!
+          If you use ORCID, you will benefit from the advantages!
         </p>
         
         
-        <h2>Ihre Vorteile</h2>
+        <h2>Your advantages</h2>
         <p>
-          ORCID hilft die Sichtbarkeit Ihrer Forschung zu verbessern, sorgt für mehr Vernetzung und erspart Ihnen dabei sehr viel Zeit und Arbeit.
+          Better visibility for your research, more networking, little effort!
         </p>
         <p>
-          <u>Beim Publizieren und im Internet</u>
+          <u>Publishing and publishing on the internet</u>
         </p>
         <ul>
           <li>
-            Sie sind eindeutig zu finden, trotz Namensvarianten, Namenswechsel und unterschiedlichen Schreibweisen.
+            In communication with publishers, you only need to provide your ORCID. If you list the publisher as a trusted party, they will have
+            access to all the necessary information.
           </li>
           <li>
-            Bei der Kommunikation mit Verlagen geben Sie nur Ihre ORCID an. Haben Sie dem Verlag die Rechte dazu
-            eingeräumt, hat er über Ihr ORCID-Profil Zugriff auf alle benötigten von Ihnen freigegebenen Informationen.
+            You can easily and clearly be found online, despite possible variants or different spellings of your name, and even if you were to
+            change your name.
           </li>
           <li>
-            Ihre Publikationen sind Ihnen eindeutig zugeordnet und jederzeit auffindbar, auch wenn diese nicht in
-            Datenbanken wie Web of Science oder Scopus nachgewiesen sind.
+            Your publications are clearly linked to you and can be found online, even if they are not recorded in international databases.
           </li>
           <li>
-            Ihre ORCID und Ihr dort hinterlegtes Profil können Sie ein Leben lang nutzen, unabhängig von Arbeitgebern
-            und Forschungsbereichen.
+            You can use your ORCID and profile for your entire life, regardless of changing employers or areas of research.
           </li>
           <li>
-            Ihre Publikationsliste bei ORCID wird automatisch aktualisiert, sofern Sie OpenAgrar Ihre Publikationen
-            melden und Sie Ihr ORCID-Profil mit OpenAgrar verknüpft haben.
+            Your list of publications on ORCID will always be up to date if you allow trusted parties to update your ORCID profile, automatically.
           </li>
         </ul>
         <p>
-          <u>Beim Funding</u>
+          <u>Funding</u>
         </p>
         <p>
-          Nutzen Sie Ihre ORCID bei Anträgen und Berichten für Forschungsförderer oder Drittmittelgeber. Dies verringert Ihren
-          Arbeitsaufwand deutlich, denn Sie können so Fördergebern Zugriff auf Ihr Profil und Ihre dort dokumentierte Forschungsarbeit gewähren.
+          Using your ORCID on applications or reports for external funding means a significant reduction in administration effort, as you can
+          easily grant external parties access to your profile and the research work documented there.
         </p>
         <p>
-          <u>Im wissenschaftlichen Alltag</u>
+          <u>Day to day research</u>
         </p>
         <p>
-          Geben Sie Ihre ORCID in Ihrer wissenschaftlichen Kommunikation an, können Sie Kolleg_innen, Veranstaltern und Teilnehmer_innen über
-          Ihr ORCID-Profil die notwendigen Informationen zur Verfügung stellen.
+          If you use your ORCID in academic communication, you will be able to provide colleagues, organizations and participants with all the
+          necessary information via your ORCID profile.
         </p>
         
         
-        <h2>Ihre Rechte</h2>
-        <p>
-          Sie haben die volle Kontrolle!
-        </p>
+        <h2>Your rights: you retain full control!</h2>
         <ul>
           <li>
-            Bis auf Ihren Namen und Ihre ORCID (beide sind immer öffentlich) können Sie sämtliche Profilangaben im Hinblick auf ihre Sichtbarkeit verwalten.
+            Apart from your name and your ORCID (both are always visible) you can control the visibility of any element in your profile
+            (everyone | trusted parties | only me).
           </li>
           <li>
-            Sie bestimmen, welche Rechte Sie verknüpften Datenbanken, sog. Trusted Parties bzw. Trusted Organizations (BMEL, Crossref, Web of Science etc.) einräumen.
+            You decide which rights you grant trusted parties.
           </li>
           <li>
-            Eingeräumte Rechte können Sie in Ihrem ORCID-Profil über Account Settings jederzeit kontrollieren, ändern und wieder entziehen.
+            Granted rights can be checked, modified or revoked on the account settings page of your ORCID profile at any time.
           </li>
         </ul>
         
         
-        <h2>Mit ORCID starten</h2>
+        <h2>Getting started: a few things to bear in mind</h2>
         <p>
-          Nachfolgend 3 Tipps, wie Sie ORCID optimal für sich arbeiten lassen können.
-        </p>
-        <p>
-          <u>1. Registrieren</u>
+          <u>1. Registration</u>
         </p>
         <ul>
           <li>
-            Legen Sie für sich nur eine <a href="http://orcid.org/">ORCID</a> an. Falls Sie nicht sicher sind, ob Sie bereits eine haben, können
-            Sie bei ORCID nach Ihrem Namen suchen.
+            Do you already have an ORCID? If you are not sure, you can search for your name at <a href="http://orcid.org/">ORCID</a>.
           </li>
           <li>
-            Erfassen Sie in Ihrem Profil alle Schreibweisen und Varianten Ihres Namens, ggf. auch Ihren Geburtsnamen.
+            Please include all alternative spellings and variants of your name in your profile, as well as your birth name (if applicable).
           </li>
           <li>
-            Generell gilt: Je mehr Informationen Sie angeben, desto aussagekräftiger wird Ihr Profil!
+            The general rule: the more information you provide, the more meaningful your profile is going to be!
           </li>
         </ul>
         <p>
-          <u>2. Datensynchronisation aktivieren</u>
+          <u>2. Synchronization of your publications</u>
         </p>
         <p>
-          Aktivieren Sie die automatische Synchronisation Ihrer Publikationen. Verknüpfen Sie dazu OpenAgrar, Crossref und DataCite mit Ihrem
-          ORCID-Profil. Ebenso empfehlen wir Web of Science und Scopus zu verknüpfen, sofern Ihre Publikationen in diesen Datenbanken nachgewiesen sind.
+          Make Crossref and DataCite trusted parties. OpenAgrar becomes a trusted party when you grant it the required rights. Furthermore,
+          we recommend that you grant Web of Science (Researcher ID) und Scopus (Scopus Author ID) trusted party status if your publications
+          are recorded in their databases. Please allow those trusted parties to exchange data with your ORCID profile.
         </p>
         
-        <h3>OpenAgrar mit ORCID verknüpfen</h3>
+        <h3>Connecting OpenAgrar and ORCID</h3>
         <ol>
-          <li>Loggen Sie sich in OpenAgrar mit Ihrem OpenAgrar-Account ein.</li>
-          <li>Öffnen Sie das Kontextmenü hinter Ihrem Benutzernamen und wählen Sie „Benutzerdaten anzeigen“</li>
-          <li>Klicken sie auf den Button „Registrieren oder verknüpfen Sie Ihre ORCID ID hier!“</li>
-          <li>Sie werden aufgefordert, ein ORCID-Profil anzulegen bzw. sich in Ihr bestehendes ORCID-Profil einzuloggen.</li>
-          <li>Bestätigen Sie mit einem Klick auf „Authorize“, dass OpenAgrar zukünftig mit Ihrem ORCID-Profil verknüpft sein wird.</li>
+          <li>Login to OpenAgrar with your OpenAgrar account.</li>
+          <li>Open the context menu behind your username and choose „Show profile“</li>
+          <li>Click the button „Register and connect your ORCID here!“</li>
+          <li>You will be requested to create an ORCID account. If you already have one, login with your ORCID username and password.</li>
+          <li>Click „Authorize“ and OpenAgrar will be connected with your ORCID profile.</li>
         </ol>
-        
-        <h3>Crossref, DataCite, Web of Science, Scopus etc. mit ORCID verknüpfen</h3>
+
         <p>
-          Melden Sie sich bei ORCID an und verwenden Sie in Ihrem ORCID-Profil die Funktion "Search &amp; link" (Rubrik "Works" ->
-          "Add works": "Search &amp; link").
+          <u>3. Everyday life</u>
         </p>
         <p>
-          Web of Science wird über die ResearcherID verknüpft. Für diese ResearcherID finden Sie unter "Search &amp; link" einen Eintrag.
+          Please use your ORCID for your research activities – especially, when communicating with publishers, at conferences, for funding,
+          on your presentation slides or if you participate in internet or academic forums.
         </p>
-        
-        <p>
-          <u>3. ORCID nutzen</u>
-        </p>
-        <p>
-          Bitte nutzen Sie Ihre ORCID bei Ihren wissenschaftlichen Aktivitäten - insbesondere beim
-        </p>
-        <ul>
-          <li>Kontakt mit Verlagen (diese melden Ihre ORCID z.B. Crossref!),</li>
-          <li>beim Kontakt mit Fördergebern,</li>
-          <li>auf Kongressen,</li>
-          <li>auf Vortragsfolien,</li>
-          <li>auf Ihrer Website,</li>
-          <li>in der Fußzeile (footer) Ihrer E-Mails und</li>
-          <li>wenn Sie in Internet- und Forschungsforen Ihre ORCID hinterlegen können.</li>
-        </ul>
         
         
         <h2>Glossar</h2>
         <p>
-          <em>Crossref</em> und <em>DataCite</em> sind Non-Profit-Organisationen die Identifier (DOI) für Volltexte und Forschungsdaten
-          vergeben und deren Metadaten speichern. Enthalten die Metadaten Ihrer Publikationen Ihre ORCID, werden Ihre Publikationen nach
-          Verknüpfung mit Crossref oder DataCite automatisch in Ihr ORCID-Profil eingespielt. Nutzen Sie daher beim Verlagskontakt immer
-          Ihre ORCID, denn die Verlage registrieren die DOIs für Publikationen bei Crossref und DataCite.
+          <em>Crossref</em> and <em>DataCite</em> are non-profit organizations that provide identifiers (DOI) for full texts and research
+          data. If their databases contain DOIs that are linked to your ORCID (this happens for example when you give your ORCID to a
+          publisher) and you grant them trusted party status, your publications will automatically be transferred to your ORCID profile.
         </p>
         <p>
-          Die <em>ResearcherID</em> und die <em>Scopus Author ID</em> sind Identifier für Autor_innen in den Datenbanken Web of Science bzw.
-          Scopus. Beide Personen-Identifer sind an eine Datenbank bzw. Firma gebunden und im Unterschied zu ORCID daher nicht unabhängig und
-          institutionen- und produktübergreifend gültig.
+          <em>ResearcherID</em> and <em>Scopus Author ID</em> are the proprietary author identifier in the databases Web of Science and Scopus,
+          respectively.
         </p>
-        
-        
-        <h2>Weitere Informationen</h2>
+        <p>
+          To make those organizations/databases trusted parties please sign up on their websites:
+        </p>
         <ul>
-          <li><a href="http://orcid.org/">ORCID-Startseite</a></li>
+          <li><a href="https://search.crossref.org/">Crossref</a></li>
+          <li><a href="https://search.datacite.org/">DataCite</a></li>
+          <li><a href="http://www.researcherid.com/Home.action?returnCode=ROUTER.Success&amp;Init=Yes&amp;SrcApp=CR&amp;SID=E1x9HRZ5lNZr6qY9miU">ResearcherID</a></li>
+          <li><a href="https://orcid.scopusfeedback.com/#/">Scopus2ORCID</a></li>
+        </ul>
+        
+        
+        <h2>Further information</h2>
+        <ul>
+          <li><a href="http://orcid.org/">ORCID website</a></li>
           <li><a href="https://vimeo.com/97150912">„What is ORCID?“ – Video</a></li>
-          <li><a href="https://orcid.org/0000-0002-2785-3404">Beispiel für ein ORCID-Profil</a></li>
-        </ul -->
+          <li><a href="https://orcid.org/0000-0002-2785-3404">Example of an ORCID profile</a></li>
+        </ul>
       </div>
     </div>
   </section>
