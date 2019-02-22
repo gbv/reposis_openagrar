@@ -58,8 +58,7 @@
     </xsl:if>
   </xsl:variable>
   
-  
-  <xsl:template match="/response/result|lst[@name='grouped']/lst[@name='returnId']" priority="10">
+        <xsl:template match="/response/result|lst[@name='grouped']/lst[@name='returnId']" priority="10">
     <xsl:variable name="ResultPages">
       <xsl:if test="($hits &gt; 0) and ($hits &gt; $rows)">
         <div class="pagination_box text-center">
@@ -245,8 +244,25 @@
 <!-- Filter, Pagination & Trefferliste -->
     <div class="row result_body">
       <div class="col-xs-12 col-sm-4 result_filter">
-        <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields'] and $hits &gt; 0">
-          <div class="panel panel-default">
+        <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='worldReadableComplete']/int">
+          <div class="panel panel-default oa">
+            <div class="panel-heading" data-toggle="collapse-next">
+              <h3 class="panel-title">
+                <xsl:value-of select="i18n:translate('mir.response.openAccess.facet.title')" />
+              </h3>
+            </div>
+            <div class="panel-body collapse in">
+              <ul class="filter">
+                <xsl:apply-templates select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
+                  <xsl:with-param name="facet_name" select="'worldReadableComplete'" />
+                  <xsl:with-param name="i18nPrefix" select="'mir.response.openAccess.facet.'" />
+                </xsl:apply-templates>
+              </ul>
+            </div>
+          </div>
+        </xsl:if>
+        <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='mods.genre']/int and $hits &gt; 0">
+          <div class="panel panel-default genre">
             <div class="panel-heading" data-toggle="collapse-next">
               <h3 class="panel-title">
                 <xsl:value-of select="i18n:translate('editor.search.mir.genre')" />
@@ -256,7 +272,7 @@
               <ul class="filter">
                 <xsl:apply-templates select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
                   <xsl:with-param name="facet_name" select="'mods.genre'" />
-                  <xsl:with-param name="classification_facet" select="'true'" />
+                  <xsl:with-param name="classId" select="'mir_genres'" />
                 </xsl:apply-templates>
               </ul>
             </div>
@@ -271,7 +287,7 @@
               <ul class="filter">
                 <xsl:apply-templates select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
                   <xsl:with-param name="facet_name" select="'mods.genre.host'" />
-                  <xsl:with-param name="classification_facet" select="'true'" />
+                  <xsl:with-param name="classId" select="'mir_genres'" />
                 </xsl:apply-templates>
               </ul>
             </div>
@@ -286,9 +302,7 @@
               <ul class="filter">
                 <xsl:apply-templates select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
                   <xsl:with-param name="facet_name" select="'mods.refereed'" />
-                  <xsl:with-param name="classification_facet" select="'false'" />
-                  <xsl:with-param name="i18n_prefix" select="'oa.refereed.'" />
-                  
+                  <xsl:with-param name="i18nPrefix" select="'oa.refereed.'" />
                 </xsl:apply-templates>
               </ul>
             </div>
@@ -302,10 +316,9 @@
             <div class="panel-body collapse in">
               <ul class="filter">
                 <xsl:apply-templates select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
-                  <xsl:with-param name="facet_name" select="'state'" /> 
-                  <xsl:with-param name="classification_facet" select="'false'" />
-                  <xsl:with-param name="i18n_prefix" select="'mir.state.'" />
-                  
+                  <xsl:with-param name="facet_name" select="'state'" />
+                  <xsl:with-param name="classId" select="'mir_institutes'" />
+                  <xsl:with-param name="i18nPrefix" select="'mir.state.'" />
                 </xsl:apply-templates>
               </ul>
             </div>
@@ -374,7 +387,12 @@
     <xsl:variable name="href" select="concat($proxyBaseURL,$HttpSession,$solrParams)" />
     <xsl:variable name="startPosition" select="$hitNumberOnPage - 1 + (($currentPage) -1) * $rows" />
     <xsl:variable name="completeHref">
-      <xsl:value-of select="concat($href, '&amp;start=',$startPosition, '&amp;fl=id&amp;rows=1&amp;origrows=', $rows, '&amp;XSL.Style=browse')" />
+      <xsl:variable name="q">
+        <xsl:call-template name="detectSearchParam">
+          <xsl:with-param name="join" select="'&amp;passthrough.'" />
+        </xsl:call-template>
+      </xsl:variable>
+      <xsl:value-of select="concat($href, '&amp;start=',$startPosition, '&amp;fl=id&amp;rows=1&amp;origrows=', $rows, '&amp;XSL.Style=browse', $q)" />
     </xsl:variable>
     <xsl:variable name="hitHref">
       <xsl:value-of select="mcrxsl:regexp($completeHref, '&amp;XSL.Transformer=response-resultlist', '')" />
@@ -512,14 +530,14 @@
                       <xsl:when test="acl:checkPermissionForReadingDerivate($derivid)">
                         <a class="hit_option hit_download" href="{$viewerLink}" title="{$mods-genre-i18n}">
                           <div class="hit_icon"
-                            style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');"
+                            style="background-image: url('{$WebApplicationBaseURL}servlets/MCRTileCombineServlet/THUMBNAIL/{$derivid}/{$derivates/str[@name='iviewFile'][1]}');"
                           >
                           </div>
                         </a>
                       </xsl:when>
                       <xsl:otherwise>
                         <div class="hit_icon"
-                          style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');"
+                          style="background-image: url('{$WebApplicationBaseURL}servlets/MCRTileCombineServlet/THUMBNAIL/{$derivid}/{$derivates/str[@name='iviewFile'][1]}');"
                         >
                         </div>
                       </xsl:otherwise>
@@ -537,19 +555,22 @@
                           <xsl:value-of select="$derivifs" />
                         </xsl:when>
                         <xsl:otherwise>
-                          <xsl:value-of select="concat($WebApplicationBaseURL, 'rsc/viewer/', $filePath)" />
+                          <xsl:variable name="q">
+                            <xsl:call-template name="detectSearchParam" />
+                          </xsl:variable>
+                          <xsl:value-of select="concat($WebApplicationBaseURL, 'rsc/viewer/', $filePath, $q)" />
                         </xsl:otherwise>
                       </xsl:choose>
                     </xsl:variable>
                     <xsl:choose>
                       <xsl:when test="acl:checkPermissionForReadingDerivate($derivid)">
                         <a class="hit_option hit_download" href="{$viewerLink}" title="{$mods-genre-i18n}">
-                          <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');">
+                          <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}img/pdfthumb/{$filePath}?centerThumb=no');">
                           </div>
                         </a>
                       </xsl:when>
                       <xsl:otherwise>
-                        <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');">
+                        <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}img/pdfthumb/{$filePath}?centerThumb=no');">
                         </div>
                       </xsl:otherwise>
                     </xsl:choose>
@@ -918,6 +939,29 @@
     </div><!-- end hit item -->
   </xsl:template>
 
+  <xsl:template name="detectSearchParam">
+    <xsl:param name="join" select="'?'" />
+    <xsl:variable name="searchString">
+      <xsl:variable name="queryPrefix" select="'{!join from=returnId to=id}+content:'" />
+      <xsl:variable name="fullTextQuery"
+                    select="/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='fq' and contains(., $queryPrefix)]" />
+      <xsl:choose>
+        <xsl:when test="$fullTextQuery">
+          <xsl:value-of select="substring-after($fullTextQuery, $queryPrefix)" />
+        </xsl:when>
+        <xsl:when test="/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='condQuery']">
+          <xsl:value-of select="/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='condQuery']" />
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="''" />
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:if test="$searchString">
+      <xsl:value-of select="concat($join, 'q=', $searchString)" />
+    </xsl:if>
+  </xsl:template>
+
   <!-- copied from mods.xsl -> ToDo: refacture! -->
   <xsl:template name="mods.getObjectEditURL">
     <xsl:param name="id" />
@@ -980,49 +1024,56 @@
     </xsl:choose>
   </xsl:template>
   
-  <xsl:template name="li_facet">
-    
-  </xsl:template>
-
   <xsl:template match="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
     <xsl:param name="facet_name" />
-    <xsl:param name="classification_facet" />
-    <xsl:param name="i18n_prefix" />
+    <xsl:param name="classId" />
+    <xsl:param name="i18nPrefix" />
     <xsl:for-each select="lst[@name=$facet_name]/int">
-      <xsl:variable name="typeComplete">
-        <xsl:value-of select="concat('&amp;fq=',$facet_name,':',@name)"></xsl:value-of>
+      <xsl:variable name="fqFragment">
+        <xsl:value-of select="concat('fq=',$facet_name,':',@name)" />
       </xsl:variable>
-      <xsl:variable name="typHref" select="mcrxsl:regexp($RequestURL, '(&amp;|%26)(start=)[0-9]*', '')" />
+      <xsl:variable name="queryWithoutStart" select="mcrxsl:regexp($RequestURL, '(&amp;|%26)(start=)[0-9]*', '')" />
       <xsl:variable name="queryURL">
         <xsl:choose>
-          <xsl:when test="contains($typHref, $typeComplete)">
-            <xsl:value-of select="concat(substring-before($typHref, $typeComplete), substring-after($typHref, $typeComplete))" />
+          <xsl:when test="contains($queryWithoutStart, $fqFragment)">
+            <xsl:choose>
+              <xsl:when test="not(substring-after($queryWithoutStart, $fqFragment))">
+                <!-- last parameter -->
+                <xsl:value-of select="substring($queryWithoutStart, 1, string-length($queryWithoutStart) - string-length($fqFragment) - 1)" />
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="concat(substring-before($queryWithoutStart, $fqFragment), substring-after($queryWithoutStart, concat($fqFragment,'&amp;')))" />
+              </xsl:otherwise>
+            </xsl:choose>
           </xsl:when>
-          <xsl:when test="not(contains($typHref, '?'))">
-            <xsl:value-of select="concat($typHref, '?', substring-after($typeComplete, '&amp;'))" />
+          <xsl:when test="not(contains($queryWithoutStart, '?'))">
+            <xsl:value-of select="concat($queryWithoutStart, '?', $fqFragment)" />
           </xsl:when>
           <xsl:otherwise>
-            <xsl:value-of select="concat($typHref, $typeComplete)" />
+            <xsl:value-of select="concat($queryWithoutStart, '&amp;', $fqFragment)" />
           </xsl:otherwise>
         </xsl:choose>
       </xsl:variable>
 
-      <li>
+      <xsl:variable name="fqValue" select="concat($facet_name,':',@name)" />
+      <li data-fq="{$fqValue}">
         <div class="checkbox">
           <label>
             <input type="checkbox" onclick="location.href='{$queryURL}';">
-              <xsl:if test="contains($typHref, $typeComplete)">
+              <xsl:if test="
+              /response/lst[@name='responseHeader']/lst[@name='params']/str[@name='fq' and text() = $fqValue] |
+              /response/lst[@name='responseHeader']/lst[@name='params']/arr[@name='fq']/str[text() = $fqValue]">
                 <xsl:attribute name="checked">true</xsl:attribute>
               </xsl:if>
             </input>
           </label>
           <span class="title">
             <xsl:choose>
-              <xsl:when test="$classification_facet='true'">
-                <xsl:value-of select="mcrxsl:getDisplayName('mir_genres', @name)" />
+              <xsl:when test="string-length($classId) &gt; 0">
+                <xsl:value-of select="mcrxsl:getDisplayName($classId, @name)" />
               </xsl:when>
-              <xsl:when test="$i18n_prefix">
-                <xsl:value-of select="i18n:translate(concat($i18n_prefix, @name))" />
+              <xsl:when test="string-length($i18nPrefix) &gt; 0">
+                <xsl:value-of select="i18n:translate(concat($i18nPrefix,@name))" disable-output-escaping="yes" />
               </xsl:when>
               <xsl:otherwise>
                 <xsl:value-of select="@name" />
