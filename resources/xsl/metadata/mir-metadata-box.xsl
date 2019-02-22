@@ -49,7 +49,7 @@
                     </xsl:apply-templates>
                     <xsl:if test="@type='translated'">
                       <xsl:text> (</xsl:text>
-                      <xsl:value-of select="mcrxsl:getDisplayName('rfc4646',@xml:lang)" />
+                      <xsl:value-of select="mcrxsl:getDisplayName('rfc5646',@xml:lang)" />
                       <xsl:text>)</xsl:text>
                     </xsl:if>
                   </xsl:for-each>
@@ -113,10 +113,12 @@
 
             <xsl:for-each select="mycoreobject">
               <xsl:if test="./structure/parents/parent/@xlink:href">
+                <!-- START: OA specific changes -->
                 <xsl:call-template name="printMetaDate.mods.relatedItem.oa">
                   <xsl:with-param name="parentID" select="./structure/parents/parent/@xlink:href" />
                   <xsl:with-param name="label" select="i18n:translate('component.mods.metaData.dictionary.confpubIn')" />
                 </xsl:call-template>
+                <!-- END: OA specific changes -->
               </xsl:if>
             </xsl:for-each>
             <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem[not(@type='host')]">
@@ -135,6 +137,7 @@
                 </xsl:otherwise>
               </xsl:choose>
             </xsl:for-each>
+            <!-- START: OA specific changes -->
             <!-- xsl:call-template name="printMetaDate.mods">
               <xsl:with-param name="nodes" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem[@type='host']/mods:part/mods:detail[@type='volume']/mods:number" />
               <xsl:with-param name="label" select="i18n:translate('component.mods.metaData.dictionary.volume.article')" />
@@ -143,6 +146,7 @@
               <xsl:with-param name="nodes" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem[@type='host']/mods:part/mods:detail[@type='issue']/mods:number" />
               <xsl:with-param name="label" select="i18n:translate('mir.details.issue')" />
             </xsl:call-template -->
+            <!-- END: OA specific changes -->
             <xsl:call-template name="printMetaDate.mods">
               <xsl:with-param name="nodes" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:originInfo/mods:edition" />
             </xsl:call-template>
@@ -250,8 +254,10 @@
                 </td>
               </tr>
             </xsl:for-each>
+            <!-- START: OA specific changes -->
             <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[not(@generator) and
                                                         not(@authorityURI='https://www.openagrar.de/classifications/annual_review')]" />
+            <!-- END: OA specific changes -->
             <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:part/mods:extent" />
             <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:location/mods:url" />
 
@@ -262,8 +268,10 @@
               <xsl:with-param name="nodes" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:location/mods:shelfLocator" />
               <xsl:with-param name="label" select="i18n:translate('mir.shelfmark')" />
             </xsl:call-template>
+            <!-- START: OA specific changes -->
             <!-- xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:name[@type='corporate'][@ID or @authorityURI=$institutesURI]" />
             <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@displayLabel='characteristics']" / -->
+            <!-- END: OA specific changes -->
             <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:note">
               <xsl:variable name="myURI" select="concat('classification:metadata:0:children:noteTypes:',mcrxsl:regexp(@type,' ', '_'))" />
               <xsl:variable name="x-access">
@@ -280,13 +288,14 @@
               </xsl:if>
             </xsl:for-each>
 
+            <!-- START: OA specific changes -->
             <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
               <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@displayLabel='characteristics']" />
               <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']" />
             </xsl:if>
 
             <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:name[@type='corporate'][@ID or @authorityURI=$institutesURI]" />
-
+            <!-- END: OA specific changes -->
           </table>
 
     </div>

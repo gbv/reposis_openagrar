@@ -5,7 +5,8 @@
     xmlns:mcrver="xalan://org.mycore.common.MCRCoreVersion"
     xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions"
     xmlns:basket="xalan://org.mycore.frontend.basket.MCRBasketManager"
-    exclude-result-prefixes="i18n mcrver mcrxsl basket">
+    xmlns:calendar="xalan://java.util.GregorianCalendar"
+    exclude-result-prefixes="i18n mcrver mcrxsl basket calendar">
 
   <xsl:import href="resource:xsl/layout/mir-common-layout.xsl" />
   <xsl:param name="piwikID" select="'0'" />
@@ -91,7 +92,9 @@
           <ul class="internal_links nav navbar-nav">
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='below']/*" />
           </ul>
-          <p id="oa-copyright">© 2018 OpenAgrar</p>
+          
+          <xsl:variable name="tmp" select="calendar:new()"/>
+          <p id="oa-copyright"><xsl:value-of select="concat('© ', calendar:get($tmp, 1), ' OpenAgrar')"/></p>
         </div>
         <div class="col-md-3 text-center">
           <div id="sponsored_by">

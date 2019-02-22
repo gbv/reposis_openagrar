@@ -102,11 +102,13 @@
                 <xsl:value-of select="$idType" />
               </sup>
             </a>
+            <!-- START: OA specific changes -->
             <xsl:if test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
               <a href="{$WebApplicationBaseURL}content/statistics/person.xml?nameIdentifier={$nameIdentifierType}%5C:{$nameIdentifier}&amp;name={$linkText}">
-                <span class="glyphicon glyphicon-stats"></span>
+                <span class="fa fa-bar-chart"></span>
               </a>
             </xsl:if>
+            <!-- END: OA specific changes -->
           </li>
         </xsl:when>
         <xsl:otherwise>
@@ -123,7 +125,7 @@
   <xsl:template match="/response">
 
     <xsl:variable name="a2z">
-      <A search="[a%7Cä%7CÄ].*" />
+      <A search="%5Ba%7Cä%7CÄ%5D.*" />
       <B search="b.*" />
       <C search="c.*" />
       <D search="d.*" />
@@ -137,13 +139,13 @@
       <L search="l.*" />
       <M search="m.*" />
       <N search="n.*" />
-      <O search="[o%7Cö%7CÖ].*" />
+      <O search="%5Bo%7Cö%7CÖ%5D.*" />
       <P search="p.*" />
       <Q search="q.*" />
       <R search="r.*" />
       <S search="s.*" />
       <T search="t.*" />
-      <U search="[u%7Cü%7CÜ].*" />
+      <U search="%5Bu%7Cü%7CÜ%5D.*" />
       <V search="v.*" />
       <W search="w.*" />
       <X search="x.*" />

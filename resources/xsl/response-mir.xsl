@@ -13,6 +13,7 @@
 
   <xsl:variable name="maxScore" select="//result[@name='response'][1]/@maxScore" />
   
+  <!-- START: OA specific changes -->
   <xsl:variable name="query">
   	<xsl:value-of select="$params/str[@name='q']"/>
   </xsl:variable>
@@ -57,8 +58,9 @@
       
     </xsl:if>
   </xsl:variable>
+  <!-- END: OA specific changes -->
   
-        <xsl:template match="/response/result|lst[@name='grouped']/lst[@name='returnId']" priority="10">
+  <xsl:template match="/response/result|lst[@name='grouped']/lst[@name='returnId']" priority="10">
     <xsl:variable name="ResultPages">
       <xsl:if test="($hits &gt; 0) and ($hits &gt; $rows)">
         <div class="pagination_box text-center">
@@ -76,6 +78,7 @@
     <div class="row result_head">
       <div class="col-xs-12 result_headline">
         <h1>
+          <!-- START: OA specific changes -->
           <xsl:choose>
             <xsl:when test="string-length($institut_str) &gt; 0">
               <span class="resultText"><xsl:value-of select="i18n:translate('results.text')" /></span>
@@ -88,6 +91,7 @@
               <xsl:value-of select="$name_str"/>
             </xsl:when>
           </xsl:choose>
+          <!-- END: OA specific changes -->
         </h1>
         <h2>
           <xsl:choose>
@@ -261,6 +265,7 @@
             </div>
           </div>
         </xsl:if>
+        <!-- OA specific changes: " and $hits &gt; 0" -->
         <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='mods.genre']/int and $hits &gt; 0">
           <div class="panel panel-default genre">
             <div class="panel-heading" data-toggle="collapse-next">
@@ -277,6 +282,7 @@
               </ul>
             </div>
           </div>
+          <!-- START: OA specific changes -->
           <div class="panel panel-default">
             <div class="panel-heading" data-toggle="collapse-next">
               <h3 class="panel-title">
@@ -323,6 +329,7 @@
               </ul>
             </div>
           </div>
+          <!-- END: OA specific changes -->
         </xsl:if>
         <xsl:if test="$MIR.testEnvironment='true'"> <!-- filters in development, show only in test environments -->
           <xsl:call-template name="print.classiFilter">
@@ -387,12 +394,7 @@
     <xsl:variable name="href" select="concat($proxyBaseURL,$HttpSession,$solrParams)" />
     <xsl:variable name="startPosition" select="$hitNumberOnPage - 1 + (($currentPage) -1) * $rows" />
     <xsl:variable name="completeHref">
-      <xsl:variable name="q">
-        <xsl:call-template name="detectSearchParam">
-          <xsl:with-param name="join" select="'&amp;passthrough.'" />
-        </xsl:call-template>
-      </xsl:variable>
-      <xsl:value-of select="concat($href, '&amp;start=',$startPosition, '&amp;fl=id&amp;rows=1&amp;origrows=', $rows, '&amp;XSL.Style=browse', $q)" />
+      <xsl:value-of select="concat($href, '&amp;start=',$startPosition, '&amp;fl=id&amp;rows=1&amp;origrows=', $rows, '&amp;XSL.Style=browse')" />
     </xsl:variable>
     <xsl:variable name="hitHref">
       <xsl:value-of select="mcrxsl:regexp($completeHref, '&amp;XSL.Transformer=response-resultlist', '')" />
@@ -530,14 +532,14 @@
                       <xsl:when test="acl:checkPermissionForReadingDerivate($derivid)">
                         <a class="hit_option hit_download" href="{$viewerLink}" title="{$mods-genre-i18n}">
                           <div class="hit_icon"
-                            style="background-image: url('{$WebApplicationBaseURL}servlets/MCRTileCombineServlet/THUMBNAIL/{$derivid}/{$derivates/str[@name='iviewFile'][1]}');"
+                            style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');"
                           >
                           </div>
                         </a>
                       </xsl:when>
                       <xsl:otherwise>
                         <div class="hit_icon"
-                          style="background-image: url('{$WebApplicationBaseURL}servlets/MCRTileCombineServlet/THUMBNAIL/{$derivid}/{$derivates/str[@name='iviewFile'][1]}');"
+                          style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');"
                         >
                         </div>
                       </xsl:otherwise>
@@ -555,22 +557,19 @@
                           <xsl:value-of select="$derivifs" />
                         </xsl:when>
                         <xsl:otherwise>
-                          <xsl:variable name="q">
-                            <xsl:call-template name="detectSearchParam" />
-                          </xsl:variable>
-                          <xsl:value-of select="concat($WebApplicationBaseURL, 'rsc/viewer/', $filePath, $q)" />
+                          <xsl:value-of select="concat($WebApplicationBaseURL, 'rsc/viewer/', $filePath)" />
                         </xsl:otherwise>
                       </xsl:choose>
                     </xsl:variable>
                     <xsl:choose>
                       <xsl:when test="acl:checkPermissionForReadingDerivate($derivid)">
                         <a class="hit_option hit_download" href="{$viewerLink}" title="{$mods-genre-i18n}">
-                          <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}img/pdfthumb/{$filePath}?centerThumb=no');">
+                          <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');">
                           </div>
                         </a>
                       </xsl:when>
                       <xsl:otherwise>
-                        <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}img/pdfthumb/{$filePath}?centerThumb=no');">
+                        <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');">
                         </div>
                       </xsl:otherwise>
                     </xsl:choose>
@@ -722,6 +721,7 @@
                   </span>
                 </div>
               </xsl:if>
+              <!-- START: OA specific changes -->
               <xsl:if test="str[@name='mods.refereed']='yes'">
                 <div class="hit_refereed">
                   <span class="label label-primary">
@@ -729,6 +729,7 @@
                   </span>
                 </div>
               </xsl:if>
+              <!-- END: OA specific changes -->
               <xsl:if test="not (mcrxsl:isCurrentUserGuestUser())">
                 <div class="hit_state">
                   <xsl:variable name="status-i18n">
@@ -937,29 +938,6 @@
         </div><!-- end hit col -->
       </div><!-- end hit body -->
     </div><!-- end hit item -->
-  </xsl:template>
-
-  <xsl:template name="detectSearchParam">
-    <xsl:param name="join" select="'?'" />
-    <xsl:variable name="searchString">
-      <xsl:variable name="queryPrefix" select="'{!join from=returnId to=id}+content:'" />
-      <xsl:variable name="fullTextQuery"
-                    select="/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='fq' and contains(., $queryPrefix)]" />
-      <xsl:choose>
-        <xsl:when test="$fullTextQuery">
-          <xsl:value-of select="substring-after($fullTextQuery, $queryPrefix)" />
-        </xsl:when>
-        <xsl:when test="/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='condQuery']">
-          <xsl:value-of select="/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='condQuery']" />
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of select="''" />
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-    <xsl:if test="$searchString">
-      <xsl:value-of select="concat($join, 'q=', $searchString)" />
-    </xsl:if>
   </xsl:template>
 
   <!-- copied from mods.xsl -> ToDo: refacture! -->
