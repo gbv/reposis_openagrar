@@ -85,7 +85,7 @@
               <option value="issn">ISSN</option>
               <option value="ieee">IEEE</option>
               <option value="ppn">GVK-PPN</option>
-              <option value="zdb">ZDB-ID</option>
+              <option value="zdbid">ZDB-ID</option>
             </select>
           </label>
           <div class="col-sm-7 col-md-5 col-lg-4">
