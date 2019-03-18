@@ -60,7 +60,7 @@
   </xsl:variable>
   <!-- END: OA specific changes -->
   
-  <xsl:template match="/response/result|lst[@name='grouped']/lst[@name='returnId']" priority="10">
+        <xsl:template match="/response/result|lst[@name='grouped']/lst[@name='returnId']" priority="10">
     <xsl:variable name="ResultPages">
       <xsl:if test="($hits &gt; 0) and ($hits &gt; $rows)">
         <div class="pagination_box text-center">
@@ -109,7 +109,7 @@
       </div>
     </div>
 
-<!-- Suchschlitz mit Suchbegriff, Treffer - Nummer, Vorschau, Autor, Änderungsdatum, Link zu den Details, Filter  -->
+<!-- Suchschlitz mit Suchbegriff, Treffer - Nummer, Vorschau, Autor, Ã„nderungsdatum, Link zu den Details, Filter  -->
     <div class="row result_searchline">
       <div class="col-xs-12 col-sm-8 text-center result_search">
         <div class="search_box">
@@ -323,8 +323,7 @@
               <ul class="filter">
                 <xsl:apply-templates select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
                   <xsl:with-param name="facet_name" select="'state'" />
-                  <xsl:with-param name="classId" select="'mir_institutes'" />
-                  <xsl:with-param name="i18nPrefix" select="'mir.state.'" />
+                  <xsl:with-param name="classId" select="'state'" />
                 </xsl:apply-templates>
               </ul>
             </div>
