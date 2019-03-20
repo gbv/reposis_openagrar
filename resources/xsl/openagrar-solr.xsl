@@ -72,7 +72,7 @@
                 <field name="mods.refereed">no</field>
               </xsl:when>
               <xsl:otherwise>
-                <field name="mods.refereed">no</field>
+                <field name="mods.refereed">n/a</field>
               </xsl:otherwise>
             </xsl:choose>
           </xsl:otherwise>
