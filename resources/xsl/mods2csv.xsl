@@ -32,6 +32,7 @@ zu klären:
  - Jahr der Veröffentlichung
  - Jahresberichtskategorie
  - Institution (Organisationseinheit des BfR)
+ - referiert
 
  Dokumenttyp Buchkapitel:
  - Autoren des Kapitels
@@ -108,7 +109,7 @@ zu klären:
 <!-- ************************************************************************************ -->
 
   <xsl:template match="/">
-    <xsl:text>Titel;Nebensachtitel;Autoren;Herausgeber;Betreuer;erschienen in;Buch-Autoren;Konferenz;Konferenz-Zeitraum;Veranstaltungsort;Genre;Seitenangaben;Heftangaben;Bandangaben;ISBN / ISSN;URN;DOI;Verlag;Verlagsort;Veröffentlichungsdatum;Jahresberichtskategorie;Institution&#xA;</xsl:text>
+    <xsl:text>Titel;Nebensachtitel;Autoren;Herausgeber;Betreuer;erschienen in;Buch-Autoren;Konferenz;Konferenz-Zeitraum;Veranstaltungsort;Genre;Seitenangaben;Heftangaben;Bandangaben;ISBN / ISSN;URN;DOI;Verlag;Verlagsort;Veröffentlichungsdatum;referiert;Jahresberichtskategorie;Institution&#xA;</xsl:text>
     <xsl:for-each select="//mods:mods">
       <xsl:call-template name="convertToCsv" />
       <xsl:text>&#xA;</xsl:text>
@@ -270,6 +271,14 @@ zu klären:
         </xsl:call-template>
       </xsl:otherwise>
     </xsl:choose>
+
+    <!-- referiert -->
+    <xsl:variable name="refereed">
+      <xsl:value-of select="document(concat('solr:q=id:',@ID, '&amp;fl=mods.refereed'))//str[@name='mods.refereed']" />
+    </xsl:variable>
+    <xsl:call-template name="convertStringToCsv">
+      <xsl:with-param name="cstring" select="$refereed" />
+    </xsl:call-template>
 
     <!-- Jahresberichtskategorie -->
     <xsl:text>&quot;</xsl:text>
