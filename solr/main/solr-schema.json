@@ -83,5 +83,11 @@
         "name":"mods.identifier.host",
         "type":"text_lower",
         "multiValued":true}
+  },
+  {
+    "add-field": {
+        "name":"mods.title.autocomplete",
+        "type":"text_lower",
+        "multiValued":false}
   }
 ]
