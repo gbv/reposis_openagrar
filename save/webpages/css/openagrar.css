@@ -71,12 +71,12 @@ html body header #header_box {
 }
 .head_logo {
     position: absolute;
-    height: 24px;
+    height: 30px;
 }
  #logo_oa {
    left: 20px;
    top: 37px;
-   width: 110px;
+   height: 110px;
  }
 #logo_bfr {
     left: 1050px;
