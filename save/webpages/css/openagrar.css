@@ -71,43 +71,42 @@ html body header #header_box {
 }
 .head_logo {
     position: absolute;
-    height: 60px;
+    height: 24px;
 }
  #logo_oa {
    left: 20px;
-   top: 33px;
-   width: 361px;
-   height: 260px;
+   top: 37px;
+   width: 110px;
  }
 #logo_bfr {
     left: 1050px;
     top: 162px;
 }
 #logo_thuenen {
-  left: 971px;
+  left: 960px;
   top: 162px;
 }
 #logo_mri {
-  left: 902px;
+  left: 880px;
   top: 162px;
 }
 #logo_fli {
-  left: 847px;
+  left: 818px;
   top: 162px;
 }
 #logo_jki {
-  left: 790px;
-  top: 157px;
-  height: 73px;
+  left: 755px;
+  top: 156px;
+  height: 36px;
 }
 #logo_dbfz {
-  left: 735px;
-  top: 157px;
-  height: 66px;
+  left: 692px;
+  top: 159px;
+  height: 33px;
 }
 #logo_bvl {
-  left: 735px;
-  top: 157px;
+  left: 620px;
+  top: 162px;
 }
 #site_logo {
   position:absolute;
