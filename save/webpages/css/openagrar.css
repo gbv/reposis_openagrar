@@ -71,10 +71,13 @@ html body header #header_box {
 }
 .head_logo {
     position: absolute;
+    height: 60px;
 }
  #logo_oa {
    left: 20px;
    top: 33px;
+   width: 361px;
+   height: 260px;
  }
 #logo_bfr {
     left: 1050px;
@@ -95,8 +98,14 @@ html body header #header_box {
 #logo_jki {
   left: 790px;
   top: 157px;
+  height: 73px;
 }
 #logo_dbfz {
+  left: 735px;
+  top: 157px;
+  height: 66px;
+}
+#logo_bvl {
   left: 735px;
   top: 157px;
 }
