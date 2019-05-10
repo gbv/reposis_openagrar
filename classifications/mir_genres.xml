@@ -4,10 +4,15 @@
   <label xml:lang="x-uri" text="https://www.openagrar.de/classifications/genres" />
   <label xml:lang="de" text="Genre" description="Liste der Publikationsarten" />
   <categories>
-    <category ID="article">
-      <label xml:lang="en" text="Article / Chapter" />
-      <label xml:lang="de" text="Artikel / Aufsatz" />
-      <label xml:lang="x-hosts" text="journal issue  collection festschrift proceedings standalone" />
+    <category ID="contribution">
+      <label xml:lang="en" text="Contribution" />
+      <label xml:lang="de" text="Beitrag" />
+      <label xml:lang="x-group" text="true" />
+      <category ID="article">
+        <label xml:lang="en" text="Article / Chapter" />
+        <label xml:lang="de" text="Artikel / Aufsatz" />
+        <label xml:lang="x-hosts" text="journal issue collection festschrift proceedings" />
+      </category>
       <category ID="abstract">
         <label xml:lang="en" text="abstract / summary" />
         <label xml:lang="x-mapping" text="marcgt:abstract_or_summary diniPublType:article" />
@@ -86,24 +91,34 @@
         <label xml:lang="x-hosts" text="series standalone" />
       </category>
     </category>
-    <category ID="collection">
-      <label xml:lang="de" text="Sammelwerk" />
-      <label xml:lang="x-hosts" text="series standalone" />
-      <label xml:lang="en" text="Collection" />
-      <category ID="festschrift">
-        <label xml:lang="en" text="Festschrift" />
+    <category ID="book">
+      <label xml:lang="de" text="Buch" />
+      <label xml:lang="x-group" text="true" />
+      <label xml:lang="en" text="Book" />
+      <category ID="monograph">
+        <label xml:lang="de" text="Monografie" />
         <label xml:lang="x-hosts" text="series standalone" />
-        <label xml:lang="de" text="Festschrift" />
+        <label xml:lang="en" text="Monograph" />
       </category>
-      <category ID="proceedings">
-        <label xml:lang="en" text="Proceedings" />
-        <label xml:lang="de" text="Tagungsband" />
+      <category ID="collection">
+        <label xml:lang="de" text="Sammelwerk" />
         <label xml:lang="x-hosts" text="series standalone" />
-      </category>
-      <category ID="lexicon">
-        <label xml:lang="x-hosts" text="series standalone" />
-        <label xml:lang="en" text="Lexicon" />
-        <label xml:lang="de" text="Lexikon" />
+        <label xml:lang="en" text="Collection" />
+        <category ID="festschrift">
+          <label xml:lang="en" text="Festschrift" />
+          <label xml:lang="x-hosts" text="series standalone" />
+          <label xml:lang="de" text="Festschrift" />
+        </category>
+        <category ID="proceedings">
+          <label xml:lang="en" text="Proceedings" />
+          <label xml:lang="de" text="Tagungsband" />
+          <label xml:lang="x-hosts" text="series standalone" />
+        </category>
+        <category ID="lexicon">
+          <label xml:lang="x-hosts" text="series standalone" />
+          <label xml:lang="en" text="Lexicon" />
+          <label xml:lang="de" text="Lexikon" />
+        </category>
       </category>
     </category>
     <category ID="report">
@@ -158,11 +173,6 @@
         <label xml:lang="de" text="Kurs- und Seminarmaterial"/>
         <label xml:lang="en" text="Course Resources"/>
       </category>
-    </category>
-    <category ID="book">
-      <label xml:lang="de" text="Buch" />
-      <label xml:lang="x-hosts" text="series standalone" />
-      <label xml:lang="en" text="Book" />
     </category>
     <category ID="journal">
       <label xml:lang="x-hosts" text="standalone" />
