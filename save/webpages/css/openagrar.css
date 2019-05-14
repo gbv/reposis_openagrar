@@ -63,50 +63,57 @@ html body #page #main_content .jumbotwo h2 {
 }
 
 /* ****************** header and logos ****************** */
+header {
+    background-color: white;
+}
 html body header #header_box {
   margin: 0px auto 20px auto;
-  background: transparent url("../images/back_head.png") no-repeat top left;
-  min-height: 220px;
+  background: transparent url("../images/back_head.png") no-repeat top left 8px;
+  min-height: 281px;
   position: relative;
 }
 .head_logo {
     position: absolute;
-    height: 30px;
+    height: 40px;
 }
  #logo_oa {
    left: 20px;
-   top: 37px;
+   top: 64px;
    height: 110px;
  }
 #logo_bfr {
-    left: 1050px;
-    top: 162px;
+    left: 1000px;
+    top: 184px;
 }
 #logo_thuenen {
-  left: 960px;
-  top: 162px;
+  left: 891px;
+  top: 184px;
 }
 #logo_mri {
-  left: 880px;
-  top: 162px;
+  left: 796px;
+  top: 184px;
 }
 #logo_fli {
-  left: 818px;
-  top: 162px;
+  left: 714px;
+  top: 184px;
 }
 #logo_jki {
-  left: 755px;
-  top: 156px;
-  height: 36px;
+  left: 637px;
+  top: 177px;
+  height: 46px;
 }
 #logo_dbfz {
-  left: 692px;
-  top: 159px;
-  height: 33px;
+  left: 566px;
+  top: 181px;
+  height: 43px;
 }
 #logo_bvl {
-  left: 620px;
-  top: 162px;
+  left: 479px;
+  top: 184px;
+}
+#logo_bvl_short {
+  left: 400px;
+  top: 184px;
 }
 #site_logo {
   position:absolute;
@@ -357,4 +364,7 @@ div#_altmetric_popover_el.altmetric-embed div#_altmetric_container.altmetric_con
 #badges .oa_refereed {
     display: inline;
     color: #aeafb3;
+}
+.mir-prop-nav {
+    margin: 10px 0;
 }
