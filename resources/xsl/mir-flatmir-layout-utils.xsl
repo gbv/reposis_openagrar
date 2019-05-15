@@ -20,8 +20,8 @@
         <a href="https://www.fli.de/"><img id="logo_fli" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_fli.svg" alt="" /></a>
         <a href="https://www.julius-kuehn.de/"><img id="logo_jki" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_jki.svg" alt="" /></a>
         <a href="https://www.dbfz.de/"><img id="logo_dbfz" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_dbfz.svg" alt="" /></a>
-        <a href="https://www.bvl.bund.de/"><img id="logo_bvl" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_bvl.svg" alt="" /></a>
-        <a href="{$WebApplicationBaseURL}"><img id="logo_oa" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_oa.svg" alt="" /></a>
+        <a href="https://www.bvl.bund.de/"><img id="logo_bvl" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_bvl.png" alt="" /></a>
+	<a href="{$WebApplicationBaseURL}"><img id="logo_oa" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_oa.svg" alt="" /></a>
       </div>
       <div id="options_nav_box" class="mir-prop-nav">
 

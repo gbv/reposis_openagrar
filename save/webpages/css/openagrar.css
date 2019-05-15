@@ -109,11 +109,8 @@ html body header #header_box {
 }
 #logo_bvl {
   left: 479px;
-  top: 184px;
-}
-#logo_bvl_short {
-  left: 400px;
-  top: 184px;
+  top: 185px;
+  height: 38px;
 }
 #site_logo {
   position:absolute;
