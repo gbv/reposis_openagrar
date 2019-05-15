@@ -1,72 +1,371 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MyCoReWebPage>
-  <section xml:lang="de" title="Erfassungsrichtlinien">
-    <div class="row">
-      <div class="col-md-10" lang="de">
-        <h1>
-          Erfassungsrichtlinien
-        </h1>
-        <h2>1. Namenskonventionen</h2>
-        <p>
-          Folgende Regeln gelten für die Erfassung von Personennamen:
-        </p>
-        <ul>
-          <li>
-            Namen sind immer in der Form "Nachname, Vorname" zu erfassen", z.B. Aarestrup, Frank M.
-          </li>
-          <li>
-            Wenn möglich den vollständig ausgeschriebenen Namen erfassen, dieser
-            kann nachträglich für die Zitation durch die Anwendung eingekürzt werden.
-          </li>
-          <li>
-            Immer ein Leerzeichen nach dem Komma setzen.
-          </li>
-          <li>
-            Bei Verwendung von Initialen ebenfalls ein Leerzeichen nach dem Punkt
-            setzten.
-          </li>
-        </ul>
-        
-        <h2>2. Erfassung von Zeitschriften</h2>
-        <ol>
-          <li>
-            Kontrolle, ob eine Zeitschrift schon erfasst ist. [Kontrolle ISSN, ZDB-ID, Titel – bei ISSN und ZDB-ID immer auch die Alternative (Druck oder elektronisch) prüfen!]
-            Kann Open Agrar selbst nicht auch einen Abgleich machen, ob eine Zeitschrift schon angelegt ist oder nicht? Und dann eine entsprechende Info an den Bearbeiter geben?
-          </li>
-          <li>
-            Bei Neuerfassung einer Zeitschrift immer ISSNs und ZDB-IDs aller Ausgaben dieser Zeitschrift erfassen! (Druck, elektronisch, Vorgänger) -> Sind alle Nummern richtig
-            erfasst, wird die Zeitschrift bei der Suche auch gefunden.
-          </li>
-          <li>
-            Immer auch angeben, ob diese Zeitschrift referiert ist oder nicht. Wenn nötig auch die Impact-Faktoren eintragen.
-          </li>
-          <li>
-            Als URL immer den Link zur Uni Regensburg, dann kann jeder gleich sehen, ob er Zugriff auf die Zeitschrift hat oder nicht. Ist für unsere Nutzer sicher ganz wichtig.
-          </li>
-          <li>
-            Neben dem Verlag sollte auch die DDC-Sachgruppe der DNB angegeben werden.
-          </li>
-        </ol>
-        
-        <h2>2. Erfassung von Artikeln</h2>
-        <ol>
-          <li>
-            Kontrolle mit Hilfe der DOI oder des Titels, ob ein Artikel schon erfasst ist. (Empfehlenswert bei Artikeln mit Autoren verschiedener Einrichtungen)
-          </li>
-          <li>
-            Artikel können dann meist mit Hilfe der DOI importiert werden. Hier ist aber Kontrolle angesagt, um fehlende Angaben zu ergänzen.
-          </li>
-          <li>
-            Bei den Autoren aus der eigenen Einrichtung immer auch die GND eintragen! Ist ein Artikel schon vorhanden, dann Die GNDs der eigenen Autoren nachtragen.
-          </li>
-          <li>
-            Schlagworte und Abstracts möglicherweise ergänzen
-          </li>
-        </ol>
-      </div>
-    </div>
-    </section>
-    <meta>
-        <log lastEditor="administrator" date="2018-11-19" time="20:56"/>
-    </meta>
-</MyCoReWebPage>
+<MyCoReWebPage><section xml:lang="de" title="Erfassungsrichtlinien"><div class="row">
+<div class="col-md-10" lang="de">
+<h1>Erfassungsrichtlinien</h1>
+
+<h2> </h2>
+
+<h2><a name="_Toc4589727"><strong>Eingabe Autoren</strong></a></h2>
+
+<p> </p>
+
+<p>Folgende Regeln gelten für die Erfassung von Personennamen:</p>
+
+<p> </p>
+
+<ul>
+	<li>Namen sind immer in der Form "Nachname, Vorname" zu erfassen", z.B. Aarestrup, Frank M.</li>
+	<li>Wenn möglich den vollständig ausgeschriebenen Namen erfassen, dieser kann nachträglich für die Zitation durch die Anwendung eingekürzt werden.</li>
+	<li>Immer ein Leerzeichen nach dem Komma setzen.</li>
+	<li>Bei Verwendung von Initialen ebenfalls ein Leerzeichen nach dem Punkt setzten.</li>
+	<li>Bei Autoren aus den eigenen Einrichtungen muss die GND-Nummer verlinkt werden. Sollte keine GND-Nummer vorhanden sein, muss eine neue angelegt werden. Es empfiehlt sich mit einer eigenen GND-Liste zu arbeiten, um sicher zu stellen, dass für einen Autor immer dieselbe GND-Nummer verwendet wird. So lassen sich Probleme durch Dubletten in der GND oder gleiche Namen besser vermeiden.</li>
+</ul>
+
+<h2> </h2>
+
+<p>Eingabe von Corresponding Author, First Author, Co-Author: Funktion noch offen</p>
+
+<p>Was sind die Hinweise, worauf ist zu achten?</p>
+
+<h2> </h2>
+
+<h2><a name="_Toc4589728"><strong>Eingabe Institutszugehörigkeiten</strong></a></h2>
+
+<p> </p>
+
+<p>Die Zugehörigkeiten / Affiliations werden unter den Autorennamen eingefügt. Je nachdem in welcher Sprache der Beitrag verfasst wird, wird die Zugehörigkeit auch in dieser Sprache aufgeführt.</p>
+
+<p> </p>
+
+<p>Für JKI-Angehörige wird sie wie folgt angesetzt:</p>
+
+<p>Julius Kühn-Institut (JKI), Bundesforschungsinstitut für Kulturpflanzen, entsprechendes Institut, eventuell Land</p>
+
+<p>ODER</p>
+
+<p>Julius Kühn-Institute (JKI), Federal Research Centre for Cultivated Plants, entsprechendes Institut, eventuell Land</p>
+
+<p> </p>
+
+<p><strong>Beispiel:</strong></p>
+
+<p>Julius Kühn-Institut (JKI), Bundesforschungsinstitut für Kulturpflanzen, Institut für Epidemiologie und Pathogendiagnostik, Braunschweig, Deutschland</p>
+
+<p>ODER</p>
+
+<p>Julius Kühn-Institute (JKI), Federal Research Centre for Cultivated Plants, Institute for Epidemiology and Pathogen Diagnostics, Brunswick, Germany</p>
+
+<p> </p>
+
+<p> </p>
+
+<p>Bei Autoren, die nicht zu unserern EInrichtungen gehören, wird die Zugehörigkeit entsprechend der Angaben auf dem Paper kopiert.</p>
+
+<p> </p>
+
+<p>Ansetzung bei mehreren Institutszugehörigkeiten?</p>
+
+<p> </p>
+
+<h2><a name="_Toc4589729"><strong>Artikel</strong></a></h2>
+
+<p> </p>
+
+<p>Achtung: Kontrolle mit Hilfe der DOI oder des Titels, ob ein Artikel schon erfasst ist. (Empfehlenswert bei Artikeln mit Autoren verschiedener Einrichtungen)</p>
+
+<p> </p>
+
+<h3><a name="_Toc4589730">Erfassung von Artikeln über die DOI</a></h3>
+
+<p> </p>
+
+<ol>
+	<li>Über den Reiter Publizieren auf Dokument erfassen klicken.</li>
+	<li>Als Publikationstyp Artikel festlegen.</li>
+	<li>DOI im vorgesehen Feld eingeben und auf weiter klicken.</li>
+	<li>Lizenz wählen und Datensatz speichern.</li>
+	<li>Datensatz noch einmal im Admin-Editor öffnen und fehlende Angaben und GND-Nummern ergänzen sowie Autorenreihenfolge prüfen.</li>
+	<li>Wichtig: im Feld Related Item mit der entsprechenden Zeitschrift verknüpfen. Die Verknüpfung fehlt, auch wenn der Name der Zeitschrift im Titel eingetragen ist. Dazu Namen der Zeitschrift kopieren und über Publikation auswählen im Suchfeld suchen und auswählen.</li>
+</ol>
+
+<p> </p>
+
+<h3><a name="_Toc4589731">Manuelle Erfassung von Artikeln</a></h3>
+
+<p> </p>
+
+<h2><a name="_Toc4589732"><strong>Bücher</strong></a></h2>
+
+<p> </p>
+
+<ol>
+	<li>Prüfen, welche Form eines Buches vorliegt. àMonografie àSammelwerk à Tagungsband ODER Hochschulschrift (hier wählen, um welche Form es sich handelt, z.B. Dissertation, Habilitation)</li>
+	<li>Prüfen, ob entsprechender Datensatz schon vorhanden ist und ggf. fehlende Angaben ergänzen.</li>
+</ol>
+
+<p> </p>
+
+<h4>Manuelle Eingabe</h4>
+
+<p> </p>
+
+<h4>Eingabe über PPN</h4>
+
+<p> </p>
+
+<ul>
+	<li>derzeit nicht möglich</li>
+</ul>
+
+<p> </p>
+
+<p>Monografie: Dokumenttyp noch benötigt</p>
+
+<p>Sammelwerk</p>
+
+<p>Tagungsband</p>
+
+<p> </p>
+
+<h2><a name="_Toc4589733"><strong>Eingabe von Serientiteln</strong></a></h2>
+
+<p> </p>
+
+<h2><a name="_Toc4589734"><strong>Kapitel / Buchbeitrag</strong></a></h2>
+
+<ul>
+	<li>Eingabe von Einzelbeiträgen in Monografien und Sammelwerken</li>
+</ul>
+
+<p> </p>
+
+<ol>
+	<li>Prüfen, ob ein Datensatz des Buches schon vorhanden ist und ggf. fehlende Angaben ergänzen.</li>
+	<li>Dann über das Feld „Aktionen“ Buchkapitel anwählen.</li>
+	<li value="3">Publikationstyp auf „veröffentlicht“ setzen und die entsprechende Zugriffsberechtigung aus dem Drop-Down-Menü anwählen.</li>
+	<li value="4">Titel, Autoren (siehe Ansetzung Autoren), Seitenzahlen und Jahreszahl angeben.</li>
+</ol>
+
+<p> </p>
+
+<h2><a name="_Toc4589735"><strong>Konferenzbeiträge</strong></a></h2>
+
+<p>[noch zu besprechen]</p>
+
+<p> </p>
+
+<h2><a name="_Toc4589736"><strong>Einzelbeiträge in Tagungen</strong></a></h2>
+
+<p> </p>
+
+<ol>
+	<li> Kategorien auswählen
+	<ol style="list-style-type:lower-alpha;">
+		<li>Kategorie: Publikationstyp: Poster/Vortrag und Abstract/Zusammenfassung (diese Reihenfolge)</li>
+	</ol>
+	</li>
+</ol>
+
+<p>ODER</p>
+
+<ol style="list-style-type:lower-alpha;">
+	<li value="2">Poster/Vortrag und Artikel/Aufsatz, wenn der Beitrag vom Umfang mehr als ein Abstract und Keywords hat und Artikelcharakter hat.</li>
+</ol>
+
+<p> </p>
+
+<ol>
+	<li value="2">Nur die Poster/Vorträge von unseren eigenen Wissenschaftlern aufnehmen.</li>
+</ol>
+
+<p> </p>
+
+<h3><a name="_Toc4589737">Konferenzangabe</a></h3>
+
+<p> </p>
+
+<p>Die Konferenzangabe in der jeweiligen Sprache, wie auch der Vortrag/Poster ist, erfassen. Die Kategorie jeweils im Datensatz von der Tagung, sowie auch vom einzelnen Vortrag/Poster erfassen.</p>
+
+<p> </p>
+
+<p>Konferenztitel ; Konferenzort, Land ; Datumsangabe</p>
+
+<p>ODER</p>
+
+<p>Konferenztitel ; Konferenzort, Land ; Datumsangabe ; Konferenzort, Land ; Datumsangabe</p>
+
+<p> </p>
+
+<p><strong>Beispiel:</strong></p>
+
+<p>60. Deutsche Pflanzenschutztagung ; Halle-Wittenberg, Deutschland ; 2016.09.20-23</p>
+
+<p>ODER</p>
+
+<p>MAgPIE workshop ; Rome, Italy ; 2013.04.22-24 ; Madrid, Spain ; 2013.11.13-15</p>
+
+<p>ACHTUNG: Trennung der Felder gewünscht.</p>
+
+<p> </p>
+
+<h2><a name="_Toc4589738"><strong>Zeitschriften</strong></a></h2>
+
+<p> </p>
+
+<ol>
+	<li>Kontrolle, ob eine Zeitschrift schon erfasst ist. [Kontrolle ISSN, ZDB-ID, Titel – bei ISSN und ZDB-ID immer auch die Alternative (Druck oder elektronisch) prüfen!] Kann Open Agrar selbst nicht auch einen Abgleich machen, ob eine Zeitschrift schon angelegt ist oder nicht? Und dann eine entsprechende Info an den Bearbeiter geben?</li>
+	<li>Bei Neuerfassung einer Zeitschrift immer ISSNs und ZDB-IDs aller Ausgaben dieser Zeitschrift erfassen! (Druck, elektronisch, Vorgänger) -&gt; Sind alle Nummern richtig erfasst, wird die Zeitschrift bei der Suche auch gefunden.</li>
+	<li>Referiert Ja oder Nein nachtragen
+	<ol style="list-style-type:lower-alpha;">
+		<li>Die referiert-Angaben müssen teilweise auf den Verlagseiten der Zeitschrift nachrecherchiert werden. Hinweise darauf sind peer reviewed oder ein Editorial Board.</li>
+	</ol>
+	</li>
+	<li>Verlag ergänzen und die DDC-Sachgruppe der DNB</li>
+	<li>Erscheinungsort, Sprache und DNB-Sachgruppen ergänzen, da diese beim Import nicht mitkommen</li>
+	<li>Nachnutzungsrechte ergänzen, falls bekannt</li>
+	<li>Als URL immer den Link zur Uni Regensburg, dann kann jeder gleich sehen, ob er Zugriff auf die Zeitschrift hat oder nicht. Ist für unsere Nutzer sicher ganz wichtig.</li>
+</ol>
+
+<p> </p>
+
+<h2><a name="_Toc4589739"><strong>Forschungsdaten</strong></a></h2>
+
+<p> </p>
+
+<h2><a name="_Toc4589740"><strong>weitere Veröffentlichungen</strong></a></h2>
+
+<h3><a name="_Toc4589741">Report</a></h3>
+
+<h3> </h3>
+
+<h3><a name="_Toc4589742">Fachliche Stellungnahme</a></h3>
+
+<h3> </h3>
+
+<h3><a name="_Toc4589743">Flyer</a></h3>
+
+<h3> </h3>
+
+<h3><a name="_Toc4589744">Rezension</a></h3>
+
+<h3> </h3>
+
+<h3><a name="_Toc4589745">Interview</a></h3>
+
+<h3> </h3>
+
+<h3><a name="_Toc4589746">Filmbeitrag</a></h3>
+
+<h3> </h3>
+
+<h3><a name="_Toc4589747">Hausinterne Veröffentlichungen</a></h3>
+
+<p> </p>
+
+<h2><a name="_Toc4589748"><strong>Publikationstypen</strong></a></h2>
+
+<table border="1" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td style="width:168px;">
+			<p>Name</p>
+			</td>
+			<td style="width:446px;">
+			<p>Beschreibung</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:168px;">
+			<p>Artikel</p>
+			</td>
+			<td style="width:446px;">
+			<p>wissenschaftlicher Artikel</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:168px;">
+			<p>Aufsatz</p>
+			</td>
+			<td style="width:446px;">
+			<p> </p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:168px;">
+			<p>Beitrag</p>
+			</td>
+			<td style="width:446px;">
+			<p> </p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:168px;">
+			<p>Buch</p>
+			</td>
+			<td style="width:446px;">
+			<p>Kann eine Monografie, ein Sammelwerk etc. sein.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:168px;">
+			<p>Kapitel</p>
+			</td>
+			<td style="width:446px;">
+			<p>Kapitel eines Buches</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:168px;">
+			<p> </p>
+			</td>
+			<td style="width:446px;">
+			<p> </p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:168px;">
+			<p>Mitteilungen/Nachrichten</p>
+			</td>
+			<td style="width:446px;">
+			<p>Kurzmitteilungen in wissenschaftlichen Zeitschriften</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:168px;">
+			<p>Monografie</p>
+			</td>
+			<td style="width:446px;">
+			<p>Ein selbstständiges, abgeschlossenes Werk einzelner oder mehrerer Autoren.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:168px;">
+			<p>Report</p>
+			</td>
+			<td style="width:446px;">
+			<p>Texte und Berichte, die nicht anderen Kategorien zugeordnet werden können.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:168px;">
+			<p>Sammelwerk</p>
+			</td>
+			<td style="width:446px;">
+			<p>Abgeschlossenes Werk, welches einzelne Beiträge verschiedener Autoren versammelt. In der Regel verfügt es über einen oder mehrere Herausgeber.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:168px;">
+			<p>Tagungsband</p>
+			</td>
+			<td style="width:446px;">
+			<p>Sammlung von Beiträgen einer wissenschaftlichen Tagung. Darunter fallen Konferenzbände, Proceedings, Abstractbände</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p> </p>
+</div>
+</div>
+</section><meta><log lastEditor="ustahl" date="2019-03-29" time="15:55" /></meta></MyCoReWebPage>
