@@ -292,7 +292,6 @@ form .optional.expanded .fieldset{
           </xed:bind>
         </xed:form>
       </div>
-      <!--/span-->
     </div>
     <div class="row">
       <div class="col-xs-12 col-sm-7 col-md-8" id="sidebar">

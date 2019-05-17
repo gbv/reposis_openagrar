@@ -235,10 +235,9 @@
         <caption><xsl:value-of select="concat('Fields of core ',$type,'(',$core,')')" /></caption>
         <tr>
           <th>field</th>
-          <th>st/dyn</th>
+          <th>static/dynamic</th>
           <th>type</th>
         </tr>
-        <!-- <xsl:for-each select="$availableFields/response/lst[@name='fields']/lst[not(str/@name='dynamicBase')]"> -->
         <xsl:for-each select="$availableFields/response/lst[@name='fields']/lst">
           <xsl:sort select="@name" />
           
@@ -290,31 +289,6 @@
             </xsl:when>
           </xsl:choose>
         </xsl:for-each>
-        
-        <!-- <xsl:for-each select="$availableFields/response/lst[@name='fields']/lst[str/@name='dynamicBase']">
-          <xsl:sort select="str[@name='dynamicBase']" />
-          <xsl:if test="not(str[@name='dynamicBase']=preceding-sibling::lst[1]/str[@name='dynamicBase'])">
-            <tr>
-              <td>
-                <xsl:value-of select="str[@name='dynamicBase']" />
-              </td>
-              <td>
-                <xsl:value-of select="str[@name='type']" />
-              </td>
-            </tr>
-          </xsl:if>
-          <xsl:if test="not(str[@name='dynamicBase']=preceding-sibling::lst[3]/str[@name='dynamicBase'])">
-            <tr>
-              <td>
-                <xsl:value-of select="concat('->e.g.: ',@name)" />
-              </td>
-              <td>
-                <xsl:value-of select="str[@name='type']" />
-              </td>
-            </tr>
-          </xsl:if>
-        </xsl:for-each> -->
-        
       </table>
     </div>
   </xsl:template>
