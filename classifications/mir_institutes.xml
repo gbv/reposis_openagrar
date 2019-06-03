@@ -5,93 +5,131 @@
   <label xml:lang="x-uri" text="https://www.openagrar.de/classifications/institutes" />
   <categories>
     <category ID="jki">
+      <label xml:lang="en" text="Julius Kühn-Institute" description="Federal Research Centre for Cultivated Plants" />
       <label xml:lang="de" text="Julius Kühn-Institut" description="Bundesforschungsinstitut für Kulturpflanzen" />
-      <url xlink:href="http://www.jki.bund.de/" xlink:type="locator" />
+      <url xlink:href="https://www.julius-kuehn.de" xlink:type="locator" />
       <category ID="jki_leitg">
         <label xml:lang="de" text="Leitungsbereich" />
+        <label xml:lang="en" text="President" />
       </category>
       <category ID="jki_at">
         <label xml:lang="de" text="Institut für Anwendungstechnik im Pflanzenschutz" />
+        <label xml:lang="en" text="Institute for Application Techniques in Plant Protection" />
       </category>
       <category ID="jki_bs">
         <label xml:lang="de" text="Institut für Bienenschutz" />
+        <label xml:lang="en" text="Institute for Bee Protection" />
       </category>
       <category ID="jki_bi">
+        <label xml:lang="en" text="Institute for Biological Control" />
         <label xml:lang="de" text="Institut für biologischen Pflanzenschutz" />
       </category>
       <category ID="jki_ep">
         <label xml:lang="de" text="Institut für Epidemiologie und Pathogendiagnostik" />
+        <label xml:lang="en" text="Institute for Epidemiology and Plant Diagnostics" />
       </category>
       <category ID="jki_opv">
+        <label xml:lang="en" text="Institute for Ecological Chemistry, Plant Analysis and Stored Product Protection" />
         <label xml:lang="de" text="Institut für Ökologische Chemie, Pflanzenanalytik und Vorratsschutz" />
       </category>
       <category ID="jki_pb">
         <label xml:lang="de" text="Institut für Pflanzenbau und Bodenkunde" />
+        <label xml:lang="en" text="Institute for Crop and Soil Science" />
       </category>
       <category ID="jki_ag">
         <label xml:lang="de" text="Institut für nationale und internationale Angelegenheiten der Pflanzengesundheit" />
+        <label xml:lang="en" text="Institute for National and International Plant Health" />
       </category>
       <category ID="jki_a">
         <label xml:lang="de" text="Institut für Pflanzenschutz in Ackerbau und Grünland" />
+        <label xml:lang="en" text="Institute for Plant Protection in Field Crops and Grassland" />
       </category>
       <category ID="jki_gf">
         <label xml:lang="de" text="Institut für Pflanzenschutz in Gartenbau und Forst" />
+        <label xml:lang="en" text="Institute for Plant Protection in Field Crops and Grassland" />
       </category>
       <category ID="jki_ow">
+        <label xml:lang="en" text="Institute for Plant Protection in Fruit Crops and Viticulture" />
         <label xml:lang="de" text="Institut für Pflanzenschutz im Obst- und Weinbau" />
       </category>
       <category ID="jki_zr">
         <label xml:lang="de" text="Institut für Rebenzüchtung" />
+        <label xml:lang="en" text="Institute for Grapevine Breeding" />
       </category>
       <category ID="jki_rs">
+        <label xml:lang="en" text="Institute for Resistance Research and Stress Tolerance" />
         <label xml:lang="de" text="Institut für Resistenzforschung und Stresstoleranz" />
       </category>
       <category ID="jki_sb">
+        <label xml:lang="en" text="Institute for Biosafety in Plant Biotechnology" />
         <label xml:lang="de" text="Institut für die Sicherheit biotechnologischer Verfahren bei Pflanzen" />
       </category>
       <category ID="jki_stfo">
         <label xml:lang="de" text="Institut für Strategien und Folgenabschätzung" />
+        <label xml:lang="en" text="Institute for Strategies and Technology Assessment" />
       </category>
       <category ID="jki_zg">
         <label xml:lang="de" text="Institut für Züchtungsforschung an gartenbaulichen Kulturen" />
+        <label xml:lang="en" text="Institute for Breeding Research on Horticultural Crops" />
       </category>
       <category ID="jki_zl">
+        <label xml:lang="en" text="Institute for Breeding Research on Agricultural Crops" />
         <label xml:lang="de" text="Institut für Züchtungsforschung an landwirtschaftlichen Kulturen" />
       </category>
       <category ID="jki_zo">
         <label xml:lang="de" text="Institut für Züchtungsforschung an Obst" />
+        <label xml:lang="en" text="Institute for Breeding Research on Fruit Crops" />
       </category>
       <category ID="jki_ib">
+        <label xml:lang="en" text="Information centre and library" />
         <label xml:lang="de" text="Informationszentrum und Bibliothek" />
       </category>
       <category ID="jki_dv">
         <label xml:lang="de" text="Zentrale Datenverarbeitung" />
+        <label xml:lang="en" text="Data processing department" />
       </category>
       <category ID="jki_vg">
+        <label xml:lang="en" text="Predecessors" />
         <label xml:lang="de" text="Vorgängereinrichtung" />
         <category ID="3ebb783e-4d0f-4142-a01b-2919abb174f7">
           <label xml:lang="de" text="Julius Kühn-Institut" description="Bundesforschungsinstitut für Kulturpflanzen" />
+          <label xml:lang="en" text="Julius Kühn Institute" description="Federal Research Centre for Cultivated Plants " />
           <url xlink:href="http://www.jki.bund.de/" xlink:type="locator" />
           <category ID="0ea6a332-470f-49fc-94f3-49e4181e7a79">
             <label xml:lang="de" text="Institut für Sicherheit in der Gentechnik bei Pflanzen" />
+            <label xml:lang="en" text="Institute for Biosafety of Genetically Modified Plants" />
           </category>
           <category ID="jki_sf">
+            <label xml:lang="en" text="Institute  for  Strategies  and  Technology  Assessment  in  Plant  Protection" />
             <label xml:lang="de" text="Institut für Strategien und Folgenabschätzung im Pflanzenschutz" />
           </category>
           <category ID="jki_zgo">
             <label xml:lang="de" text="Institut für Züchtungsforschung an Gartenbaulichen Kulturen und Obst" />
+            <label xml:lang="en" text="Institute for Breeding Research on Horticultural Research and Fruit Crops" />
           </category>
         </category>
         <category ID="f9586bbf-e6c8-45e0-9961-f893c6e47806">
+          <label xml:lang="en" text="Federal Biological Research Centre for Agriculture and Forestry" />
           <label xml:lang="de" text="Biologische Bundesanstalt für Land- und Forstwirtschaft" />
           <category ID="22f20c05-8e00-4c7c-b899-68a9176b0ec1">
+            <label xml:lang="en" text="Institute  for  Technology  Assessment  in  Plant  Protection" />
             <label xml:lang="de" text=" Institut für Folgenabschätzung im Pflanzenschutz" />
           </category>
           <category ID="70f8a6c2-d6a3-44c2-baed-1e59027335b8">
             <label xml:lang="de" text=" Institut für integrierten Pflanzenschutz" />
+            <label xml:lang="en" text="Institute for Integrated Plant Protection" />
+          </category>
+          <category ID="bba_o">
+            <label xml:lang="de" text="Institut für Pflanzenschutz im Obstbau" />
+            <label xml:lang="en" text="Institute for Plant Protection in Fruit Crops" />
+          </category>
+          <category ID="VS">
+            <label xml:lang="de" text="Institut für Vorratsschutz" />
+            <label xml:lang="en" text="Institute for Stored Product Protection" />
           </category>
         </category>
         <category ID="bba_bs">
+          <label xml:lang="en" text="Federal Biological Research Centre for Agriculture and Forestry (BBA)" />
           <label xml:lang="de" text="Biologische Bundesanstalt für Land- und Forstwirtschaft &lt;Braunschweig&gt;" />
         </category>
         <category ID="bza_bs">
@@ -107,51 +145,78 @@
           <label xml:lang="de" text="Kaiserliche Biologische Anstalt für Land- und Forstwirtschaft" />
         </category>
         <category ID="kg">
-          <label xml:lang="de" text="Kaiserliches Gesundheitsamt, Biologische Abtheilung für Land- und Forstwirthschaft" />
+          <label xml:lang="de" text="Kaiserliches Gesundheitsamt, Biologische Abteilung für Land- und Forstwirtschaft" />
         </category>
       </category>
     </category>
     <category ID="fli">
+      <label xml:lang="en" text="Friedrich-Loeffler-Institut" description="Federal Research Institute for Animal Health" />
       <label xml:lang="de" text="Friedrich-Loeffler-Institut" description="Bundesforschungsinstitut für Tiergesundheit" />
-      <url xlink:href="http://www.fli.bund.de/" xlink:type="locator" />
+      <url xlink:href="http://www.fli.de/" xlink:type="locator" />
       <category ID="fli_leitg">
+        <label xml:lang="en" text="Management" />
         <label xml:lang="de" text="Leitungsbereich" />
+        <url xlink:href="https://www.fli.de/de/ueber-das-fli/das-fli/leitung/" xlink:type="locator" />
       </category>
       <category ID="fli_atb">
+        <label xml:lang="en" text="Department of Experimental Animal Facilities and Biorisk Management" />
         <label xml:lang="de" text="Abteilung für experimentelle Tierhaltung und Biosicherheit" />
+        <url xlink:href="https://www.fli.de/de/institute/abteilung-fuer-experimentelle-tierhaltung-und-biosicherheit-atb/" xlink:type="locator" />
       </category>
       <category ID="fli_imb">
-        <label xml:lang="de" text="Institut für molekulare Virologie und Zellbiologie (bis 30.04.2014 Institut für Molekularbiologie)" />
+        <label xml:lang="de" text="Institut für molekulare Virologie und Zellbiologie" />
+        <label xml:lang="en" text="Institute of Molecular Virology and Cell Biology" />
+        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-molekulare-virologie-und-zellbiologie-imvz/" xlink:type="locator" />
       </category>
       <category ID="fli_imed">
+        <label xml:lang="en" text="Institute of Infectology" />
         <label xml:lang="de" text="Institut für Infektionsmedizin" />
+        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-infektionsmedizin-imed/" xlink:type="locator" />
       </category>
       <category ID="fli_ivd">
+        <label xml:lang="en" text="Institute of Diagnostic Virology" />
         <label xml:lang="de" text="Institut für Virusdiagnostik" />
+        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-virusdiagnostik-ivd/" xlink:type="locator" />
       </category>
       <category ID="fli_innt">
+        <label xml:lang="en" text="Institute of Novel and Emerging Infectious Diseases" />
         <label xml:lang="de" text="Institut für neue und neuartige Tierseuchenerreger" />
+        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-neue-und-neuartige-tierseuchenerreger-innt/" xlink:type="locator" />
       </category>
       <category ID="fli_ite">
         <label xml:lang="de" text="Institut für Tierernährung" />
+        <label xml:lang="en" text="Institute of Animal Nutrition" />
+        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-tierernaehrung-ite/" xlink:type="locator" />
       </category>
       <category ID="fli_itt">
+        <label xml:lang="en" text="Institute of Animal Welfare and Animal Husbandry" />
         <label xml:lang="de" text="Institut für Tierschutz und Tierhaltung" />
+        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-tierschutz-und-tierhaltung-itt/" xlink:type="locator" />
       </category>
       <category ID="fli_ibiz">
         <label xml:lang="de" text="Institut für Bakterielle Infektionen und Zoonosen" />
+        <label xml:lang="en" text="Institute of Bacterial Infections and Zoonoses" />
+        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-bakterielle-infektionen-und-zoonosen-ibiz/" xlink:type="locator" />
       </category>
       <category ID="fli_imp">
         <label xml:lang="de" text="Institut für Molekulare Pathogenese" />
+        <label xml:lang="en" text="Institute of Molecular Pathogenesis" />
+        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-molekulare-pathogenese-imp/" xlink:type="locator" />
       </category>
       <category ID="fli_ing">
+        <label xml:lang="en" text="Institute of Farm Animal Genetics" />
         <label xml:lang="de" text="Institut für Nutztiergenetik" />
+        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-nutztiergenetik-ing/" xlink:type="locator" />
       </category>
       <category ID="fli_ifi">
         <label xml:lang="de" text="Institut für Immunologie" />
+        <label xml:lang="en" text="Institute of Immunology" />
+        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-immunologie-ifi/" xlink:type="locator" />
       </category>
       <category ID="fli_ife">
         <label xml:lang="de" text="Institut für Epidemiologie" />
+        <label xml:lang="en" text="Institute of Epidemiology" />
+        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-epidemiologie-ife/" xlink:type="locator" />
       </category>
       <category ID="fli_agbm">
         <label xml:lang="de" text="AG Biomathematik" />
@@ -160,6 +225,7 @@
         <label xml:lang="de" text="AG Internationale Tiergesundheit" />
       </category>
       <category ID="fli_vg">
+        <label xml:lang="en" text="Predecessor institution" />
         <label xml:lang="de" text="Vorgängereinrichtung" />
       </category>
     </category>
@@ -171,29 +237,37 @@
       </category>
       <category ID="mri_pbe">
         <label xml:lang="de" text="Institut für Physiologie und Biochemie der Ernährung" />
+        <label xml:lang="en" text="Department of Physiology and Biochemistry of Nutrition" />
       </category>
       <category ID="mri_ev">
         <label xml:lang="de" text="Institut für Ernährungsverhalten" />
+        <label xml:lang="en" text="Department of Nutritional Behaviour" />
       </category>
       <category ID="mri_ke">
         <label xml:lang="de" text="Institut für Kinderernährung" />
       </category>
       <category ID="mri_lbv">
+        <label xml:lang="en" text="Department of Food Technology and Bioprocess Engineering" />
         <label xml:lang="de" text="Institut für Lebensmittel- und Bioverfahrenstechnik" />
       </category>
       <category ID="mri_mbt">
+        <label xml:lang="en" text="Department of Microbiology and Biotechnology" />
         <label xml:lang="de" text="Institut für Mikrobiologie und Biotechnologie" />
       </category>
       <category ID="mri_mf">
         <label xml:lang="de" text="Institut für Sicherheit und Qualität bei Milch und Fisch" />
+        <label xml:lang="en" text="Department of Safety and Quality of Milk and Fish Products" />
       </category>
       <category ID="mri_og">
+        <label xml:lang="en" text="Department of Safety and Quality of Fruit and Vegetables" />
         <label xml:lang="de" text="Institut für Sicherheit und Qualität bei Obst und Gemüse" />
       </category>
       <category ID="mri_fl">
         <label xml:lang="de" text="Institut für Sicherheit und Qualität bei Fleisch" />
+        <label xml:lang="en" text="Department of Safety and Quality of Meat" />
       </category>
       <category ID="mri_ge">
+        <label xml:lang="en" text="Department of Safety and Quality of Cereals" />
         <label xml:lang="de" text="Institut für Sicherheit und Qualität bei Getreide" />
       </category>
       <category ID="mri_aa">
@@ -206,6 +280,9 @@
     <category ID="ti">
       <label xml:lang="de" text="Thünen-Institut" description="Bundesforschungsinstitut für Ländliche Räume, Wald und Fischerei" />
       <url xlink:href="http://www.ti.bund.de/" xlink:type="locator" />
+      <category ID="ti_kb">
+        <label xml:lang="de" text="Stabsstellen Klima und Boden" />
+      </category>
       <category ID="ti_ma">
         <label xml:lang="de" text="Institut für Marktanalyse" />
       </category>
@@ -370,8 +447,8 @@
         <label xml:lang="de" text="Abteilung 2 - Risikokommunikation" />
         <label xml:lang="en" text="Department 2 Risk Communication" />
         <category ID="bfr_21_201406">
-          <label xml:lang="en" text="Unit 21 Crisis Prevention and Coordination" />
           <label xml:lang="de" text="Fachgruppe 21 - Krisenprävention und -koordination" />
+          <label xml:lang="en" text="Unit 21 Crisis Prevention and Coordination" />
         </category>
         <category ID="bfr_22_201406">
           <label xml:lang="de" text="Fachgruppe 22 - Risikoforschung, -wahrnehmung, -früherkennung und -folgenabschätzung" />
@@ -390,8 +467,8 @@
         <label xml:lang="de" text="Abteilung 3 - Exposition" />
         <label xml:lang="en" text="Department 3 Exposure" />
         <category ID="bfr_31_201406">
-          <label xml:lang="de" text="Fachgruppe 31 - Transport gefährlicher Güter" />
           <label xml:lang="en" text="Unit 31 Transport of Dangerous Goods" />
+          <label xml:lang="de" text="Fachgruppe 31 - Transport gefährlicher Güter" />
         </category>
         <category ID="bfr_32_201406">
           <label xml:lang="de" text="Fachgruppe 32 - Vergiftungs- und Produktdokumentation" />
@@ -422,8 +499,8 @@
           <label xml:lang="de" text="Fachgruppe 41 - Lebensmitteltechnologische Verfahren, Warenketten und Produktschutz" />
         </category>
         <category ID="bfr_42_201406">
-          <label xml:lang="de" text="Fachgruppe 42 - Lebensmittelhygiene und -virologie" />
           <label xml:lang="en" text="Unit 42 Food Hygiene and Food Virology" />
+          <label xml:lang="de" text="Fachgruppe 42 - Lebensmittelhygiene und -virologie" />
         </category>
         <category ID="bfr_43_201406">
           <label xml:lang="de" text="Fachgruppe 43 - Epidemiologie, Zoonosen und Antibiotikaresistenz" />
@@ -482,8 +559,8 @@
           <label xml:lang="en" text="Unit 63 Toxicology of ActiveSubstances and their Metabolites" />
         </category>
         <category ID="bfr_64_201406">
-          <label xml:lang="en" text="Unit 64 Toxicology of Products and their Safe Use" />
           <label xml:lang="de" text="Fachgruppe 64 - Toxikologie der Präparate und Anwendungssicherheit" />
+          <label xml:lang="en" text="Unit 64 Toxicology of Products and their Safe Use" />
         </category>
         <category ID="bfr_65_201406">
           <label xml:lang="de" text="Fachgruppe 65 - Rückstände und Analyseverfahren" />
@@ -494,8 +571,8 @@
         <label xml:lang="en" text="Department 7 Chemical and Product Safety" />
         <label xml:lang="de" text="Abteilung 7 - Chemikalien- und Produktsicherheit" />
         <category ID="bfr_71_201406">
-          <label xml:lang="en" text="Unit 71 Coordination and Overall Assessment" />
           <label xml:lang="de" text="Fachgruppe 71 - Steuerung und Gesamtbewertung" />
+          <label xml:lang="en" text="Unit 71 Coordination and Overall Assessment" />
         </category>
         <category ID="bfr_72_201406">
           <label xml:lang="en" text="Unit 72 Chemicals Safety" />
@@ -560,6 +637,7 @@
       </category>
       <category ID="bfr_vg">
         <label xml:lang="de" text="Vorgängereinrichtung" />
+        <label xml:lang="en" text="Predecessor Institution" />
         <category ID="bfr">
           <label xml:lang="de" text="Bundesinstitut für Risikobewertung (bis Juni 2014)" />
           <label xml:lang="x-valuntil" text="2014-06" />
@@ -737,79 +815,106 @@
     </category>
     <category ID="bvl">
       <label xml:lang="de" text="Bundesamt für Verbraucherschutz und Lebensmittelsicherheit" />
+      <label xml:lang="en" text="Federal Office of Consumer Protection and Food Safety (BVL)" />
       <url xlink:href="http://www.bvl.bund.de/" xlink:type="locator" />
-      <category ID="bvl_leitg">
-        <label xml:lang="de" text="Leitungsbereich" />
+      <category ID="bvl_p">
+        <label xml:lang="de" text="Präsident" />
       </category>
-      <category ID="bvl_zs">
-        <label xml:lang="de" text="Zentrale Steuerung" />
+      <category ID="bvl_vp">
+        <label xml:lang="de" text="Vizepräsident" />
+      </category>
+      <category ID="bvl_rglb">
+        <label xml:lang="de" text="Referatsgruppe Leitungsbereich" />
       </category>
       <category ID="bvl_abt1">
-        <label xml:lang="de" text="Abteilung 1" />
+        <label xml:lang="de" text="Abteilung 1  Lebensmittelsicherheit" />
       </category>
       <category ID="bvl_abt2">
-        <label xml:lang="de" text="Abteilung 2" />
+        <label xml:lang="de" text="Abteilung 2  Pflanzenschutzmittel" />
       </category>
       <category ID="bvl_abt3">
-        <label xml:lang="de" text="Abteilung 3" />
+        <label xml:lang="de" text="Abteilung 3 Tierarzneimittel" />
       </category>
       <category ID="bvl_abt4">
-        <label xml:lang="de" text="Abteilung 4" />
+        <label xml:lang="de" text="Abteilung 4  Gentechnik" />
       </category>
-      <category ID="bvl_it">
-        <label xml:lang="de" text="Informationstechnik" />
+      <category ID="bvl_abt5">
+        <label xml:lang="de" text="Abteilung 5 Methodenstandardisierung, Referenzlaboratorien, Antibiotikaresistenz " />
       </category>
-      <category ID="bvl_vw">
-        <label xml:lang="de" text="Verwaltung" />
+      <category ID="bvl_abtz">
+        <label xml:lang="de" text="Abteilung Z Zentrale Dienste" />
       </category>
-      <category ID="bvl_us">
-        <label xml:lang="de" text="Ref. Gruppe Untersuchungen" />
-      </category>
-      <category ID="bvl_p">
-        <label xml:lang="de" text="Presse" />
-      </category>
-      <category ID="bvl_wiv">
-        <label xml:lang="de" text="Wirtschaftlicher Verbraucherschutz" />
+      <category ID="bvl_rgit">
+        <label xml:lang="de" text="Referatsgruppe IT Informationstechnologie, Telekommunikation und Informationssysteme" />
       </category>
       <category ID="bvl_vg">
         <label xml:lang="de" text="Vorgängereinrichtung" />
       </category>
     </category>
     <category ID="ble">
+      <label xml:lang="en" text="Federal Office for Agriculture and Food" />
       <label xml:lang="de" text="Bundesanstalt für Landwirtschaft und Ernährung" />
       <url xlink:href="http://www.ble.de" xlink:type="locator" />
       <category ID="ble_vg">
+        <label xml:lang="en" text="Predecessors" />
         <label xml:lang="de" text="Vorgängereinrichtung" />
       </category>
     </category>
     <category ID="wgl">
       <label xml:lang="de" text="Wissenschaftsgemeinschaft Gottfried Wilhelm Leibniz e.V." />
+      <label xml:lang="en" text="Leibniz Association" />
       <category ID="wgl_dfa">
+        <label xml:lang="en" text="German Research Center for Food Chemistry" />
         <label xml:lang="de" text="Deutsche Forschungsanstalt für Lebensmittelchemie" />
+        <url xlink:href="http://www.dfal.de" xlink:type="locator" />
       </category>
       <category ID="wgl_atb">
+        <label xml:lang="en" text="Leibniz Institute of Agricultural Engineering Potsdam-Bornim e. V. (ATB)" />
         <label xml:lang="de" text="Institut für Agrartechnik Bornim e.V." />
       </category>
       <category ID="wgl_zalf">
-        <label xml:lang="de" text="Leibniz-Zentrum für Agrarlandschaftsforschung e.V." />
+        <label xml:lang="de" text="Leibniz-Zentrum für Agrarlandschaftsforschung (ZALF)" />
+        <label xml:lang="en" text="Leibniz Centre for Agricultural Landscape Research (ZALF)" />
       </category>
       <category ID="wgl_fbn">
+        <label xml:lang="en" text="Forschungsinstitut für die Biologie landwirtschaftlicher Nutztiere" />
         <label xml:lang="de" text="Forschungsinstitut für die Biologie landwirtschaftlicher Nutztiere" />
       </category>
       <category ID="wgl_igz">
         <label xml:lang="de" text="Institut für Gemüse- und Zierpflanzenbau" />
+        <label xml:lang="en" text="Leibniz Institute of Vegetable and Ornamental Crops" />
       </category>
       <category ID="wgl_iamo">
         <label xml:lang="de" text="Institut für Agrarentwicklung in Mittel- und Osteuropa" />
+        <label xml:lang="en" text="Leibniz Institute of Agricultural Development in Transition Economies" />
       </category>
     </category>
     <category ID="fnr">
       <label xml:lang="de" text="Fachagentur Nachwachsende Rohstoffe e.V." />
     </category>
     <category ID="dbfz">
-      <label xml:lang="de" text="Biomasse-Forschungszentrum" />
+      <label xml:lang="de" text="DBFZ Deutsches Biomasseforschungszentrum gemeinnützige GmbH" />
+      <category ID="dbfz_tk">
+        <label xml:lang="de" text="Thermo-chemische Konversion" />
+      </category>
+      <category ID="dbfz_bs">
+        <label xml:lang="de" text="Bioenergiesysteme" />
+      </category>
+      <category ID="dbfz_br">
+        <label xml:lang="de" text="Bioraffinerien" />
+      </category>
+      <category ID="dbfz_bk">
+        <label xml:lang="de" text="Biochemische Konversion" />
+      </category>
+      <category ID="dbfz_leitung">
+        <label xml:lang="de" text="Leitung" />
+      </category>
+      <category ID="dbfz_stabstellen">
+        <label xml:lang="de" text="Stabstellen" />
+      </category>
     </category>
     <category ID="bmelv">
+      <label xml:lang="en" text="Federal Ministry of Food and Agriculture" />
       <label xml:lang="de" text="Bundesministerium für Ernährung und Landwirtschaft" />
       <url xlink:href="http://www.bmel.de" xlink:type="locator" />
     </category>
