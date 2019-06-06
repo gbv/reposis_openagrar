@@ -90,6 +90,7 @@
           "mods.genre",
           "mods.genre.host",
           "mods.refereed",
+          "mods.refereed.public"
           "worldReadableComplete",
           "state"
         ],
@@ -127,6 +128,7 @@
           "mods.genre",
           "mods.genre.host",
           "mods.refereed",
+          "mods.refereed.public",
           "worldReadableComplete",
           "state"
         ],
