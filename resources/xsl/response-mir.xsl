@@ -281,7 +281,7 @@
                 </xsl:apply-templates>
               </ul>
             </div>
-          </div>
+          </div>  
           <!-- START: OA specific changes -->
           <div class="panel panel-default">
             <div class="panel-heading" data-toggle="collapse-next">
@@ -297,17 +297,60 @@
                 </xsl:apply-templates>
               </ul>
             </div>
-          </div>
+          </div> 
+          <!--
+          <div class="panel panel-default">
+            <div class="panel-heading" data-toggle="collapse-next">
+              <h3 class="panel-title">
+                <xsl:value-of select="'Genre'" />
+              </h3>
+            </div>
+            <div class="panel-body collapse in">
+              <ul class="filter">
+                <xsl:apply-templates select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='mods.genre.composite']/int[string-length(substring-after(@name,'.')) = 0]">
+                  <xsl:with-param name="facet_name" select="'mods.genre.composite'" />
+                  <xsl:with-param name="i18nPrefix" select="'oa.genres.composite'" />
+                  <xsl:with-param name="i18nCallback" select="'printGenresComposite'" />
+                </xsl:apply-templates>
+                <xsl:for-each select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='mods.genre.host']/int">
+                  <xsl:variable name="hostGenre" select="@name"/>
+                  <li>
+                    <h4>
+                      <xsl:value-of select="concat('Beitrag in ',mcrxsl:getDisplayName('mir_genres',$hostGenre))"/>
+                    </h4>
+                  </li>
+                  <xsl:apply-templates select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='mods.genre.composite']/int[substring-after(@name,'.')=$hostGenre]">
+                    <xsl:with-param name="facet_name" select="'mods.genre.composite'" />
+                    <xsl:with-param name="i18nPrefix" select="'oa.genres.composite'" />
+                    <xsl:with-param name="i18nCallback" select="'printGenresComposite'" />
+                  </xsl:apply-templates>
+                  
+                  
+                </xsl:for-each>
+              </ul>
+            </div>
+          </div>-->
+          
           <div class="panel panel-default">
             <div class="panel-heading" data-toggle="collapse-next">
               <h3 class="panel-title">
                 <xsl:value-of select="'referiert'" />
               </h3>
             </div>
+            <xsl:variable name="facetname">
+              <xsl:choose>
+                <xsl:when test="mcrxsl:isCurrentUserGuestUser()">
+                  <xsl:value-of select="'mods.refereed.public'" />
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:value-of select="'mods.refereed'" />
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:variable>
             <div class="panel-body collapse in">
               <ul class="filter">
                 <xsl:apply-templates select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
-                  <xsl:with-param name="facet_name" select="'mods.refereed'" />
+                  <xsl:with-param name="facet_name" select="$facetname" />
                   <xsl:with-param name="i18nPrefix" select="'oa.refereed.'" />
                 </xsl:apply-templates>
               </ul>
@@ -377,7 +420,23 @@
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <xsl:variable name="mods-genre-i18n" select="mcrxsl:getDisplayName('mir_genres',$mods-genre)" />
+    <xsl:variable name="parentGenre">
+      <xsl:choose>
+        <xsl:when test="arr[@name='mods.genre.host']">
+          <xsl:value-of select="arr[@name='mods.genre.host']/str" />
+        </xsl:when>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="mods-genre-i18n" >
+      <xsl:choose>
+        <xsl:when test="$parentGenre"> 
+          <xsl:value-of select="concat(mcrxsl:getDisplayName('mir_genres',$mods-genre),' in ',mcrxsl:getDisplayName('mir_genres',$parentGenre))" />
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',$parentGenre)" />
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
     <xsl:variable name="hitItemClass">
       <xsl:choose>
         <xsl:when test="$hitNumberOnPage mod 2 = 1">
@@ -670,7 +729,7 @@
                   <xsl:for-each select="arr[@name='mods.genre']/str">
                     <div class="hit_type">
                       <span class="label label-info">
-                        <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" ></xsl:value-of>
+                        <xsl:value-of select="$mods-genre-i18n" />
                       </span>
                     </div>
                   </xsl:for-each>
@@ -1001,11 +1060,43 @@
     </xsl:choose>
   </xsl:template>
   
+  <xsl:template name="i18nCallback">
+    <xsl:param name="value"/>
+    <xsl:variable name="genre" select="substring-before($value,'.')"/>
+    <xsl:variable name="parentGenre" select="substring-after($value,'.')"/>
+    <xsl:variable name="linkText">
+      <xsl:choose>
+        <xsl:when test="$parentGenre">
+          <xsl:value-of select="concat(mcrxsl:getDisplayName('mir_genres',$genre),' in ',mcrxsl:getDisplayName('mir_genres',$parentGenre) )"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',$genre)"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:value-of select="$linkText" />
+  </xsl:template>
+  
   <xsl:template match="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
     <xsl:param name="facet_name" />
     <xsl:param name="classId" />
     <xsl:param name="i18nPrefix" />
-    <xsl:for-each select="lst[@name=$facet_name]/int">
+    <xsl:param name="i18nCallback" />
+    <xsl:apply-templates select="lst[@name=$facet_name]/int">
+      <xsl:with-param name="facet_name" select="$facet_name"/>
+      <xsl:with-param name="classId" select="$classId"/>
+      <xsl:with-param name="i18nPrefix" select="$i18nPrefix"/>
+      <xsl:with-param name="i18nCallback" select="$i18nCallback"/>
+    </xsl:apply-templates>
+    
+  </xsl:template>
+  
+  <xsl:template match="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst/int">
+    <xsl:param name="facet_name" />
+    <xsl:param name="classId" />
+    <xsl:param name="i18nPrefix" />
+    <xsl:param name="i18nCallback" />
+    <!-- <xsl:for-each select="lst[@name=$facet_name]/int"> -->
       <xsl:variable name="fqFragment">
         <xsl:value-of select="concat('fq=',$facet_name,':',@name)" />
       </xsl:variable>
@@ -1049,6 +1140,12 @@
               <xsl:when test="string-length($classId) &gt; 0">
                 <xsl:value-of select="mcrxsl:getDisplayName($classId, @name)" />
               </xsl:when>
+              <xsl:when test="string-length($i18nCallback) &gt; 0">
+                <xsl:call-template name="i18nCallback">
+                  <xsl:with-param name="i18nPrefix" select="$i18nPrefix" />
+                  <xsl:with-param name="value" select="@name"/>
+                </xsl:call-template>
+              </xsl:when>
               <xsl:when test="string-length($i18nPrefix) &gt; 0">
                 <xsl:value-of select="i18n:translate(concat($i18nPrefix,@name))" disable-output-escaping="yes" />
               </xsl:when>
@@ -1063,7 +1160,7 @@
           </span>
         </div>
       </li>
-    </xsl:for-each>
+    <!-- </xsl:for-each> -->
   </xsl:template>
 
   <xsl:template name="print.classiFilter">

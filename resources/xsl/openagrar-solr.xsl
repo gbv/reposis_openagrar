@@ -48,9 +48,18 @@
         </field>
       </xsl:if>
     </xsl:for-each>
+    <xsl:variable name="genre" select="mods:genre"/>
+    <xsl:if test="not(mods:relatedItem[@type='host'])">
+      <field name="mods.genre.composite">
+        <xsl:value-of select="concat(substring-after($genre/@valueURI,'#'),'.')" />
+      </field>
+    </xsl:if>
     <xsl:for-each select="mods:relatedItem[@type='host']/mods:genre">
       <field name="mods.genre.host">
         <xsl:value-of select="substring-after(@valueURI,'#')" />
+      </field>
+      <field name="mods.genre.composite">
+        <xsl:value-of select="concat(substring-after($genre/@valueURI,'#'),'.',substring-after(@valueURI,'#'))" />
       </field>
     </xsl:for-each>
     <xsl:choose>
@@ -79,6 +88,34 @@
               <xsl:otherwise>
                 <field name="mods.refereed">n/a</field>
               </xsl:otherwise>
+            </xsl:choose>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:otherwise>
+    </xsl:choose>
+    <xsl:choose>
+      <xsl:when test="mods:extension/chars/@refereed='yes'">
+        <field name="mods.refereed.public">yes</field>
+      </xsl:when>
+      <xsl:when test="mods:extension/chars/@refereed='no'">
+        <field name="mods.refereed.public">no</field>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:choose>
+          <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='yes'">
+            <field name="mods.refereed.public">yes</field>
+          </xsl:when>
+          <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='no'">
+            <field name="mods.refereed.public">no</field>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:choose>
+              <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='yes'">
+                <field name="mods.refereed.public">yes</field>
+              </xsl:when>
+              <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='no'">
+                <field name="mods.refereed.public">no</field>
+              </xsl:when>
             </xsl:choose>
           </xsl:otherwise>
         </xsl:choose>

@@ -24,6 +24,12 @@
   },
   {
     "add-field": {
+        "name":"mods.genre.composite",
+        "type":"string",
+        "multiValued":true}
+  },
+  {
+    "add-field": {
         "name":"mods.yearIssued.host",
         "type":"int",
         "multiValued":false}
@@ -31,6 +37,12 @@
   {
     "add-field": {
         "name":"mods.refereed",
+        "type":"string",
+        "multiValued":false}
+  },
+  {
+    "add-field": {
+        "name":"mods.refereed.public",
         "type":"string",
         "multiValued":false}
   },
