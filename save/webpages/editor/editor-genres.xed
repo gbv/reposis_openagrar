@@ -532,8 +532,13 @@
     <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="abstract.simple" />
     <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-openagrar.xed" ref="oa.annual_review" />
   </xed:template>
-
-
+  
+  <xed:template id="conference">
+    <xed:bind xpath="mods:typeOfResource/@mcr:categId" initially="typeOfResource:text"/>
+    <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="rights" />
+    <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="conference" />
+  </xed:template>
+  
   <xed:template id="submit">
     <xed:include uri="webapp:editor/editor-includes.xed" ref="cancel.submit" />
     <xed:include uri="webapp:editor/editor-includes.xed" ref="cleanup-rules" />
