@@ -10,20 +10,20 @@
   <xsl:template match="mods:genre" />
     
   <xsl:template match="mods:identifier[@type='isbn']" >
-    <mods:identifier type="isbn">
-      <xsl:variable name="isbn" select="translate(text(),'-','')" />
-      <xsl:choose>
-        <xsl:when test="translate($isbn,'123456789X','0000000000') = '0000000000000' and (starts-with($isbn,'978') or starts-with($isbn,'979')) ">
-          <xsl:value-of select="'Paul'"/>
-        </xsl:when>
-        <xsl:when test="translate($isbn,'123456789X','0000000000') = '0000000000' ">
+    <xsl:variable name="isbn" select="translate(text(),'-','')" />
+    <xsl:choose>
+      <xsl:when test="translate($isbn,'123456789X','0000000000') = '0000000000000' and (starts-with($isbn,'978') or starts-with($isbn,'979')) ">
+        <mods:identifier type="isbn">
+           <xsl:value-of select="text()"/>
+        </mods:identifier>
+      </xsl:when>
+      <xsl:when test="translate($isbn,'123456789X','0000000000') = '0000000000' ">
+        <mods:identifier type="isbn">
           <xsl:value-of select="text()"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of select="'Paul2'"/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </mods:identifier>
+        </mods:identifier>
+      </xsl:when>
+      <xsl:otherwise/>
+    </xsl:choose>
   </xsl:template>
 
 </xsl:stylesheet>
