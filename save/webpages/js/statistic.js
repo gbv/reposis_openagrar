@@ -70,9 +70,11 @@ Statisticselement.prototype= {
 	var Search = $("<a/>", {href: Searchlink}).text(LinkTitel);
 	
 	td.append(Square);
+	td.data("stElem",this);
 	
 	td.append(Search);
 	if (!stBrowser.horizontalFacet) td.append(cbNum);
+	this.element=td;
 	tr.append(td);
 	if (stBrowser.horizontalFacet) tr.append(tdNum); 
 	
@@ -111,10 +113,11 @@ Statisticselement.prototype= {
       });
     } 
 	
-    //this.element=ListElement;
+    
     //$(this.ulNode).append(ListElement);
     //ListElement.data("stElem",this);
-    this.trNode=tr;
+	this.trNode=tr;
+    
     if (this.parent==null) {
       stBrowser.tBodyNode.append(tr);
     } else {
@@ -139,7 +142,7 @@ Statisticselement.prototype= {
       if (hideEmptyElements == true && count == 0) tr.addClass("hide");
       countSF = selectedFacets.length;
       stElement.facets=$(xml).find('lst[name="facet_counts"]').find('lst[name="facet_fields"]').find('lst[name="' + stElement.stBrowser.facets[countSF] + '"]');
-      if (stElement.stBrowser.expandAllElements === true) {
+      if (stElement.stBrowser.expandAllElements === true ) {
         stElement.openSubselect();
       }
     });
@@ -161,17 +164,16 @@ Statisticselement.prototype= {
       this.element.find("i").removeClass("fa-plus-square-o");
       this.element.find("i").addClass("fa-minus-square-o");
     }
-    //var mainDiv= $("<div/>", { class:"cbVisible"});
-    //this.element.append(mainDiv);
-    //var mainUl = $("<ul/>", { class:"cbList"});
-    //mainDiv.append(mainUl);
-    
+        
     if (stElement.stBrowser.classification) {
-      category=$(this.getCategory());
-      category.children('category').each(function(){
-        var stElem=new Statisticselement(stElement,stElement.stBrowser,this,null,stElement.level + 1);
-        stElem.init();
-      });
+      //TO DO 
+      if (stElement.level < stElement.stBrowser.maxClassificationDeep - 1 || stElement.stBrowser.maxClassificationDeep < 0) {
+        category=$(this.getCategory());
+        category.children('category').each(function(){
+          var stElem=new Statisticselement(stElement,stElement.stBrowser,this,null,stElement.level + 1);
+          stElem.init();
+        });
+      }
     }
     
     selectedFacets=$(this.getFacets());
@@ -187,7 +189,14 @@ Statisticselement.prototype= {
   ,closeSubselect: function () {
     this.element.find("i").removeClass("fa-minus-square-o");
     this.element.find("i").addClass("fa-plus-square-o");
-    this.element.children("div").remove();
+    var stElement=this;
+    this.element.parent().siblings('tr').each( function () {
+      if ($(this).children('td').first().data("stElem").parent == stElement) {
+        this.remove();    	
+      }
+    });
+    
+    //this.element.children("div").remove();
   }
   
   ,getCategory: function () {
@@ -227,7 +236,7 @@ Statisticselement.prototype= {
 
 //Class Statisticsbrowser
 
-function Statisticsbrowser (element,classification,rootCategory,facets,horizontalFacet,expandAllElements,hideEmptyElements,lang,fq) {
+function Statisticsbrowser (element,classification,rootCategory,facets,horizontalFacet,expandAllElements,hideEmptyElements,lang,fq,maxClassificationDeep) {
   
   this.$element = $(element);
   this.classificationXML = null;
@@ -260,7 +269,7 @@ function Statisticsbrowser (element,classification,rootCategory,facets,horizonta
   this.horizontalFacetElements="";
   this.hideEmptyElements = hideEmptyElements;
   this.expandAllElements = expandAllElements;
-  
+  this.maxClassificationDeep = (maxClassificationDeep == null ) ? -1 : maxClassificationDeep;
   this.facet2classifcation= {
   	"mods.genre": {
   	  className :"mir_genres",
@@ -276,11 +285,13 @@ function Statisticsbrowser (element,classification,rootCategory,facets,horizonta
     "mods.refereed": {
       de: {
         yes : "referiert",
-        no  : "nicht referiert"
+        no  : "nicht referiert",
+        "n/a" : "nicht referierbar"
       },
       en: {
         yes : "refereed",
-        no  : "not refereed"
+        no  : "not refereed",
+        "n/a" : "not referabel"
       }
     }
   }
@@ -483,6 +494,7 @@ $(document).ready( function() {
       expandAllElements = ( $(element).data('expandallelements') == true) ? true : false;
       lang = ( $(element).data('lang') != "") ? $(element).data('lang') : null; 
       fq = $(element).data('fq');
+      maxClassificationDeep = $(element).data('maxclassificationdeep');
       mirElement = new Statisticsbrowser(
                           element,
                           classification,
@@ -492,7 +504,8 @@ $(document).ready( function() {
                           expandAllElements,
                           hideEmptyElements,
                           lang,
-                          fq);
+                          fq,
+                          maxClassificationDeep);
       mirElement.init();
     }
   });
