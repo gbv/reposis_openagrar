@@ -38,6 +38,11 @@
         <xsl:value-of select="@edition" />
       </field>
     </xsl:for-each>
+    <xsl:for-each select="mods:name/mods:affiliation">
+      <field name="mods.affiliation">
+        <xsl:value-of select="." />
+      </field>
+    </xsl:for-each>
     <xsl:for-each
       select="mods:name[mods:role/mods:roleTerm[@authority='marcrelator' and (@type='text' and text()='author') or (@type='code' and text()='aut')]]">
       <xsl:if test="position()=1">
@@ -46,20 +51,40 @@
             <xsl:value-of select="concat(' ',mcrxsl:normalizeUnicode(.))" />
           </xsl:for-each>
         </field>
+        <field name="mods.mainAuthor.affiliation">
+          <xsl:value-of select="mods:affiliation" />
+        </field>
       </xsl:if>
     </xsl:for-each>
-    <xsl:variable name="genre" select="mods:genre"/>
-    <xsl:if test="not(mods:relatedItem[@type='host'])">
-      <field name="mods.genre.composite">
-        <xsl:value-of select="concat(substring-after($genre/@valueURI,'#'),'.')" />
-      </field>
-    </xsl:if>
+    <xsl:for-each
+      select="mods:name[mods:role/mods:roleTerm[@authority='marcrelator' and (@type='text' and text()='author') or (@type='code' and text()='aut')]]">
+      <xsl:if test="position()= last()">
+        <field name="mods.lastAuthor">
+          <xsl:for-each select="mods:displayForm | mods:namePart | text()">
+            <xsl:value-of select="concat(' ',mcrxsl:normalizeUnicode(.))" />
+          </xsl:for-each>
+        </field>
+        <field name="mods.lastAuthor.affiliation">
+          <xsl:value-of select="mods:affiliation" />
+        </field>
+      </xsl:if>
+    </xsl:for-each>
+    <xsl:for-each select="mods:genre[contains(@authorityURI,'classifications/genres')]">
+      <xsl:variable name="genre" select="."/>
+      <xsl:if test="not(../mods:relatedItem[@type='host'])">
+        <field name="mods.genre.composite">
+          <xsl:value-of select="concat(substring-after($genre/@valueURI,'#'),'.')" />
+        </field>
+      </xsl:if>
+      <xsl:for-each select="../mods:relatedItem[@type='host']/mods:genre">
+        <field name="mods.genre.composite">
+          <xsl:value-of select="concat(substring-after($genre/@valueURI,'#'),'.',substring-after(@valueURI,'#'))" />
+        </field>
+      </xsl:for-each>
+    </xsl:for-each>
     <xsl:for-each select="mods:relatedItem[@type='host']/mods:genre">
       <field name="mods.genre.host">
         <xsl:value-of select="substring-after(@valueURI,'#')" />
-      </field>
-      <field name="mods.genre.composite">
-        <xsl:value-of select="concat(substring-after($genre/@valueURI,'#'),'.',substring-after(@valueURI,'#'))" />
       </field>
     </xsl:for-each>
     <xsl:choose>
@@ -121,5 +146,11 @@
         </xsl:choose>
       </xsl:otherwise>
     </xsl:choose>
+    <xsl:for-each select="//mods:identifier[@type='isbn']">
+      <field name="mods.identifier.isbn"><xsl:value-of select="."/></field> 
+    </xsl:for-each>
+    <xsl:for-each select="//mods:identifier[@type='issn']">
+      <field name="mods.identifier.issn"><xsl:value-of select="."/></field> 
+    </xsl:for-each>
   </xsl:template>
 </xsl:stylesheet>
