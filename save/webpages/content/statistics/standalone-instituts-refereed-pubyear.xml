@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section title="Statistik - selbständige Werke" xml:lang="de"/>
+  <section title="Statistics" xml:lang="en"/>
+  <section xml:lang="all">
+    <script src='../../js/statistic.js'> </script>
+  </section>
+     
+  <section xml:lang="de">
+    <div class="row">
+      <h1>Statistik - selbständige Werke</h1>
+      <p> 
+        Alle selbständigen Werke, nach Institut und Jahr mit refieriert Angabe. Selbständige Werke sind alle Dokumente 
+        die keine Eltern haben und nicht Journal oder Serien sind.
+      </p>
+      <div  class="row" 
+        data-mirelementtype="Statisticsbrowser"
+        data-classification="mir_institutes"
+        data-facets='["mods.refereed"]'
+        data-horizontalFacet="mods.yearIssued"
+        data-fq='["objectType:mods","-mods.genre:journal","-mods.genre:series","-parent:[\"\" TO *]","mods.yearIssued:[2012 TO 2019]"]'
+        data-hideEmptyElements="true"
+        data-expandAllElements="true"
+        data-maxClassificationDeep="1"
+        data-lang="de"
+      >
+      </div>
+    </div>
+  </section>
+    
+</MyCoReWebPage>
