@@ -16,7 +16,7 @@
   </xsl:template>
 
   <xsl:template match="mods:mods" mode="oa">
-    <xsl:for-each select="mods:titleInfo[not(@type)]">
+    <xsl:for-each select="mods:titleInfo[not(@type)][1]">
       <field name="mods.title.autocomplete">
         <xsl:value-of select="mods:title" />
       </field>
