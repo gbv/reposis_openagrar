@@ -1,0 +1,269 @@
+#
+# by Kathleen.Neumann@gbv.de
+#
+# created 2016-06-29
+#
+
+##############################################################################
+#                                                                            #
+# basic application configuration                                            #
+#                                                                            #
+##############################################################################
+
+# name of project
+  MCR.NameOfProject=OpenAgrar
+  MIR.projectid.default=openagrar
+
+# application base URL and proxy IP
+# MCR.baseurl=https://www.openagrar.de/
+# MCR.Request.TrustedProxies=217.76.106.17
+
+# supported languages
+  MCR.Metadata.Languages=de,en
+
+# SOLR-URL
+# MCR.Module-solr.ServerURL=http\://esx-127.gbv.de:8081/solr/openagrar/
+  MCR.Solr.ServerURL=
+  MCR.Solr.Core.main.Name=
+  MCR.Solr.Core.classification.Name=
+  MCR.Solr.Indexer.ThreadCount=1
+  
+
+# Data directory
+  MCR.datadir=
+  MCR.Save.FileSystem=
+
+# Layout
+  MIR.CustomLayout.CSS=openagrar.css
+  MIR.CustomLayout.JS=openagrar.js
+
+# Set Matomo/PIWIK-ID in mycore.properties.private to deaktivate (0) or productive (35), default is 0
+# piwikID=35
+
+# this is a productive environment
+  MIR.testEnvironment=false
+
+# add oa specific searchfields
+  MCR.URIResolver.xslImports.solr-document=%MCR.URIResolver.xslImports.solr-document%,openagrar-solr.xsl
+
+# allow login only via https
+  MCR.user2.LoginHttpsOnly=true
+
+# specify citation styles
+  MIR.citationStyles=apa,bibtex,elsevier-harvard,springer-basic-author-date,din-1505-2
+
+##############################################################################
+#                                                                            #
+# Google - ReCaptcha (https://www.google.com/recaptcha)                      #
+# registered for: reposis-test.gbv.de, reposis.gbv.de                        #
+#                                                                            #
+##############################################################################
+
+  MIR.ReCaptcha.secret.key=
+  MIR.ReCaptcha.site.key=
+
+
+##############################################################################
+#                                                                            #
+# Sherpa/Romeo API Key                                                       #
+# http://www.sherpa.ac.uk/romeo/api29.php?ak=                                #
+#                                                                            #
+##############################################################################
+
+# you can register your application for sherpa/romeo api key
+# see http://www.sherpa.ac.uk/romeo/apiregistry.php
+# MCR.Mods.SherpaRomeo.ApiKey=PAT9IYDueFw
+
+
+##############################################################################
+#                                                                            #
+# Generic mail configuration for MCRMailer                                   #
+#                                                                            #
+##############################################################################
+
+# The server for outgoing mails
+  MCR.Mail.Server=
+# The mail protocol
+  MCR.Mail.Protocol=smtp
+# The debug option
+  MCR.Mail.Debug=false
+# Encoding for the mail
+  MCR.Mail.Encoding=UTF-8
+# Number of send tries
+  MCR.Mail.NumTries=1
+# Editor Mail adresses for Messages add1@serv1,add2@serv2,...
+  MCR.Mail.Address=
+  MCR.mir-module.EditorMail=
+  MCR.mir-module.MailSender=
+
+#  MCR.mir-module.EditorMail=OpenAgrar - Bearbeiter <openagrar@bmel-forschung.de>
+#  MCR.mir-module.MailSender=OpenAgrar - Publikationsserver <openagrar@bmel-forschung.de>
+
+
+##############################################################################
+#                                                                            #
+# OAI Data Provider                                                          #
+#                                                                            #
+##############################################################################
+
+MCR.OAIDataProvider.OAI2.RepositoryName=OpenAgrar
+MCR.OAIDataProvider.OAI2.RepositoryIdentifier=www.openagrar.de
+MCR.OAIDataProvider.OAI2.AdminEmail=openagrar@bmel-forschung.de
+
+MCR.OAIDataProvider.OAI2.RecordSampleID=openagrar_mods_00000479
+
+MCR.OAIDataProvider.OAI2.MetadataFormats=oai_dc,mods,epicur,oai_datacite
+MCR.OAIDataProvider.MetadataFormat.oai_datacite.Namespace=http://schema.datacite.org/oai/oai-1.0/
+MCR.OAIDataProvider.MetadataFormat.oai_datacite.Schema=http://schema.datacite.org/oai/oai-1.0/oai_datacite.xsd
+
+
+##############################################################################
+#                                                                            #
+# DOI configuration                                                          #
+#                                                                            #
+##############################################################################
+
+# BfR
+  MCR.PI.Generator.DateDOIBfr=org.mycore.pi.MCRGenericPIGenerator
+  MCR.PI.Generator.DateDOIBfr.GeneralPattern=10.17590/$ObjectDate-$Count
+  MCR.PI.Generator.DateDOIBfr.DateFormat=yyyyMMdd-HHmmss
+  MCR.PI.Generator.DateDOIBfr.CountPrecision=-1
+  MCR.PI.Generator.DateDOIBfr.Type=doi
+
+  MCR.PI.MetadataService.MODSDOIBfR=org.mycore.mods.identifier.MCRMODSDOIMetadataService
+  MCR.PI.MetadataService.MODSDOIBfR.Prefix=10.17590
+
+  MCR.PI.Service.DataciteBfR=org.mycore.pi.doi.MCRDOIService
+  MCR.PI.Service.DataciteBfR.MetadataService=MODSDOIBfR
+  MCR.PI.Service.DataciteBfR.Generator=DateDOIBfr
+  MCR.PI.Service.DataciteBfR.RegisterBaseURL=
+  MCR.PI.Service.DataciteBfR.Username=
+  MCR.PI.Service.DataciteBfR.Password=
+  MCR.PI.Service.DataciteBfR.UseTestServer=true
+  MCR.PI.Service.DataciteBfR.Transformer=datacite
+  MCR.PI.Service.DataciteBfR.JobApiUser=datacitejob
+  MCR.PI.Service.DataciteBfR.RegistrationConditionProvider=org.mycore.pi.condition.MCRPIPublishedConditionProvider
+  MCR.PI.Service.DataciteBfR.HostingInstitution=Bundesinstitut f\u00FCr Risikobewertung
+  
+# JKI
+  MCR.PI.Generator.DateDOIJKI=org.mycore.pi.MCRGenericPIGenerator
+  MCR.PI.Generator.DateDOIJKI.GeneralPattern=10.5073/$ObjectDate-$Count
+  MCR.PI.Generator.DateDOIJKI.DateFormat=yyyyMMdd-HHmmss
+  MCR.PI.Generator.DateDOIJKI.CountPrecision=-1
+  MCR.PI.Generator.DateDOIJKI.Type=doi
+
+  MCR.PI.MetadataService.MODSDOIJKI=org.mycore.mods.identifier.MCRMODSDOIMetadataService
+  MCR.PI.MetadataService.MODSDOIJKI.Prefix=10.5073
+
+  MCR.PI.Service.DataciteJKI=org.mycore.pi.doi.MCRDOIService
+  MCR.PI.Service.DataciteJKI.MetadataService=MODSDOIJKI
+  MCR.PI.Service.DataciteJKI.Generator=DateDOIJKI
+  MCR.PI.Service.DataciteJKI.RegisterBaseURL=https://www.openagrar.de
+  MCR.PI.Service.DataciteJKI.Username=
+  MCR.PI.Service.DataciteJKI.Password=
+  MCR.PI.Service.DataciteJKI.UseTestServer=true
+  MCR.PI.Service.DataciteJKI.Transformer=datacite
+  MCR.PI.Service.DataciteJKI.JobApiUser=datacitejob
+  MCR.PI.Service.DataciteJKI.RegistrationConditionProvider=org.mycore.pi.condition.MCRPIPublishedConditionProvider
+  MCR.PI.Service.DataciteBfR.HostingInstitution=Julius K\u00FChn Institut
+  
+# TI
+  MCR.PI.Generator.DateDOITI=org.mycore.pi.MCRGenericPIGenerator
+  MCR.PI.Generator.DateDOITI.GeneralPattern=10.3220/DATA$CurrentDate-$Count
+  MCR.PI.Generator.DateDOITI.DateFormat=yyyyMMddHHmmss
+  MCR.PI.Generator.DateDOITI.CountPrecision=-1
+  MCR.PI.Generator.DateDOITI.Type=doi
+
+  MCR.PI.MetadataService.MODSDOITI=org.mycore.mods.identifier.MCRMODSDOIMetadataService
+  MCR.PI.MetadataService.MODSDOITI.Prefix=10.3220
+
+  MCR.PI.Service.DataciteTI=org.mycore.pi.doi.MCRDOINoRegistrationService
+  MCR.PI.Service.DataciteTI.MetadataService=MODSDOITI
+  MCR.PI.Service.DataciteTI.Generator=DateDOITI
+
+# MRI
+  MCR.PI.Generator.DateDOIMRI=org.mycore.pi.MCRGenericPIGenerator
+  MCR.PI.Generator.DateDOIMRI.GeneralPattern=10.25826/$ObjectDate-$Count
+  MCR.PI.Generator.DateDOIMRI.DateFormat=yyyyMMdd-HHmmss
+  MCR.PI.Generator.DateDOIMRI.CountPrecision=-1
+  MCR.PI.Generator.DateDOIMRI.Type=doi
+
+  MCR.PI.MetadataService.MODSDOIMRI=org.mycore.mods.identifier.MCRMODSDOIMetadataService
+  MCR.PI.MetadataService.MODSDOIMRI.Prefix=10.25826
+
+  MCR.PI.Service.DataciteMRI=org.mycore.pi.doi.MCRDOIService
+  MCR.PI.Service.DataciteMRI.MetadataService=MODSDOIMRI
+  MCR.PI.Service.DataciteMRI.Generator=DateDOIMRI
+  MCR.PI.Service.DataciteMRI.RegisterBaseURL=https://www.openagrar.de
+  MCR.PI.Service.DataciteMRI.Username=
+  MCR.PI.Service.DataciteMRI.Password=
+  MCR.PI.Service.DataciteMRI.UseTestServer=true
+  MCR.PI.Service.DataciteMRI.Transformer=datacite
+  MCR.PI.Service.DataciteMRI.JobApiUser=datacitejob
+  MCR.PI.Service.DataciteMRI.RegistrationConditionProvider=org.mycore.pi.condition.MCRPIPublishedConditionProvider
+  MCR.PI.Service.DataciteBfR.HostingInstitution=Max Rubner Institut
+
+# MRI Data
+  MCR.PI.Generator.DateDOIMRIDATA=org.mycore.pi.MCRGenericPIGenerator
+  MCR.PI.Generator.DateDOIMRIDATA.GeneralPattern=10.25826/Data$ObjectDate-$Count
+  MCR.PI.Generator.DateDOIMRIDATA.DateFormat=yyyyMMdd-HHmmss
+  MCR.PI.Generator.DateDOIMRIDATA.CountPrecision=-1
+  MCR.PI.Generator.DateDOIMRIDATA.Type=doi
+
+  MCR.PI.Service.DataciteMRIDATA=org.mycore.pi.doi.MCRDOIService
+  MCR.PI.Service.DataciteMRIDATA.MetadataService=MODSDOIMRI
+  MCR.PI.Service.DataciteMRIDATA.Generator=DateDOIMRIDATA
+  MCR.PI.Service.DataciteMRIDATA.RegisterBaseURL=https://www.openagrar.de
+  MCR.PI.Service.DataciteMRIDATA.Username=
+  MCR.PI.Service.DataciteMRIDATA.Password=
+  MCR.PI.Service.DataciteMRIDATA.UseTestServer=true
+  MCR.PI.Service.DataciteMRIDATA.Transformer=datacite
+  MCR.PI.Service.DataciteMRIDATA.JobApiUser=datacitejob
+  MCR.PI.Service.DataciteMRIDATA.RegistrationConditionProvider=org.mycore.pi.condition.MCRPIPublishedConditionProvider
+  MCR.PI.Service.DataciteBfR.HostingInstitution=Max Rubner Institut
+
+  MCR.PI.Parsers.doi=org.mycore.pi.doi.MCRDOIParser
+
+##############################################################################
+# MIR OAS                                                                    #
+##############################################################################
+# show OAS Statistics in metadata view ('show', 'hide')
+  MIR.OAS=show
+
+# URL of the graphprovider
+  MIR.OAS.GraphProviderURL=https://reposis-test.gbv.de/openagrar/graphprovider/
+  MIR.OAS.Prefix=oai:openagrar.bmel-forschung.de
+
+
+##############################################################################
+# PubMed API                                                                 #
+##############################################################################
+# for details see http://europepmc.org/RestfulWebService
+  MIR.PubMed.Link=https://www.ncbi.nlm.nih.gov/pubmed/
+  MIR.PubMed.REST.URL=https://www.ebi.ac.uk/europepmc/webservices/rest/search/resulttype=core&query=
+
+
+##############################################################################
+# Scopus API                                                                 #
+##############################################################################
+  MIR.Scopus.RSSFeedURL=
+  MIR.Scopus.Author.Link=https://www.scopus.com/authid/detail.url?partnerID=xxx&origin=inward&authorId=
+  MIR.Scopus.Link=https://www.scopus.com/inward/record.url?partnerID=xxx&origin=inward&scp=
+  MIR.Scopus.API.URL=https://api.elsevier.com/content/
+  MIR.Scopus.API.Key=xxx
+
+
+##############################################################################
+# Export MODS to CSV                                                         #
+##############################################################################
+  MCR.ContentTransformer.mods2csv.Class=org.mycore.common.content.transformer.MCRXSLTransformer
+  MCR.ContentTransformer.mods2csv.Stylesheet=%MCR.ContentTransformer.mods.Stylesheet%,xsl/mods2csv.xsl
+  MCR.ContentTransformer.mods2csv.FileExtension=csv
+
+
+##############################################################################
+# Error Page                                                                 #
+##############################################################################
+# Set mcr_error properties in your mycore.properties.private to show OA error page without StackTrace
+# MCR.ContentTransformer.mcr_error.Stylesheet=xsl/errorPage.xsl,%MCR.LayoutTransformerFactory.Default.Stylesheets%
+
