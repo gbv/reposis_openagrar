@@ -109,7 +109,7 @@
       </div>
     </div>
 
-<!-- Suchschlitz mit Suchbegriff, Treffer - Nummer, Vorschau, Autor, Ã„nderungsdatum, Link zu den Details, Filter  -->
+<!-- Suchschlitz mit Suchbegriff, Treffer - Nummer, Vorschau, Autor, Änderungsdatum, Link zu den Details, Filter  -->
     <div class="row result_searchline">
       <div class="col-xs-12 col-sm-8 text-center result_search">
         <div class="search_box">
@@ -248,23 +248,36 @@
 <!-- Filter, Pagination & Trefferliste -->
     <div class="row result_body">
       <div class="col-xs-12 col-sm-4 result_filter">
-        <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='worldReadableComplete']/int">
-          <div class="panel panel-default oa">
+        
+        <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='mods.refereed']/int or
+                      /response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='mods.refereed.public']/int">
+          <div class="panel panel-default">
             <div class="panel-heading" data-toggle="collapse-next">
               <h3 class="panel-title">
-                <xsl:value-of select="i18n:translate('mir.response.openAccess.facet.title')" />
+                <xsl:value-of select="'referiert'" />
               </h3>
             </div>
+            <xsl:variable name="facetname">
+              <xsl:choose>
+                <xsl:when test="mcrxsl:isCurrentUserGuestUser()">
+                  <xsl:value-of select="'mods.refereed.public'" />
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:value-of select="'mods.refereed'" />
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:variable>
             <div class="panel-body collapse in">
               <ul class="filter">
                 <xsl:apply-templates select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
-                  <xsl:with-param name="facet_name" select="'worldReadableComplete'" />
-                  <xsl:with-param name="i18nPrefix" select="'mir.response.openAccess.facet.'" />
+                  <xsl:with-param name="facet_name" select="$facetname" />
+                  <xsl:with-param name="i18nPrefix" select="'oa.refereed.'" />
                 </xsl:apply-templates>
               </ul>
             </div>
           </div>
         </xsl:if>
+
         <!-- OA specific changes: " and $hits &gt; 0" -->
         <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='mods.genre']/int and $hits &gt; 0">
           <div class="panel panel-default genre">
@@ -331,46 +344,42 @@
             </div>
           </div>-->
           
-          <div class="panel panel-default">
-            <div class="panel-heading" data-toggle="collapse-next">
-              <h3 class="panel-title">
-                <xsl:value-of select="'referiert'" />
-              </h3>
+          <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='worldReadableComplete']/int">
+            <div class="panel panel-default oa">
+              <div class="panel-heading" data-toggle="collapse-next">
+                <h3 class="panel-title">
+                  <xsl:value-of select="i18n:translate('mir.response.openAccess.facet.title')" />
+                </h3>
+              </div>
+              <div class="panel-body collapse in">
+                <ul class="filter">
+                  <xsl:apply-templates select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
+                    <xsl:with-param name="facet_name" select="'worldReadableComplete'" />
+                    <xsl:with-param name="i18nPrefix" select="'mir.response.openAccess.facet.'" />
+                  </xsl:apply-templates>
+                </ul>
+              </div>
             </div>
-            <xsl:variable name="facetname">
-              <xsl:choose>
-                <xsl:when test="mcrxsl:isCurrentUserGuestUser()">
-                  <xsl:value-of select="'mods.refereed.public'" />
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:value-of select="'mods.refereed'" />
-                </xsl:otherwise>
-              </xsl:choose>
-            </xsl:variable>
-            <div class="panel-body collapse in">
-              <ul class="filter">
-                <xsl:apply-templates select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
-                  <xsl:with-param name="facet_name" select="$facetname" />
-                  <xsl:with-param name="i18nPrefix" select="'oa.refereed.'" />
-                </xsl:apply-templates>
-              </ul>
+          </xsl:if>
+          
+          <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='state']/int and
+                        not(mcrxsl:isCurrentUserGuestUser())">
+            <div class="panel panel-default">
+              <div class="panel-heading" data-toggle="collapse-next">
+                <h3 class="panel-title">
+                  <xsl:value-of select="i18n:translate('editor.search.status')" />
+                </h3>
+              </div>
+              <div class="panel-body collapse in">
+                <ul class="filter">
+                  <xsl:apply-templates select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
+                    <xsl:with-param name="facet_name" select="'state'" />
+                    <xsl:with-param name="classId" select="'state'" />
+                  </xsl:apply-templates>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading" data-toggle="collapse-next">
-              <h3 class="panel-title">
-                <xsl:value-of select="i18n:translate('editor.search.status')" />
-              </h3>
-            </div>
-            <div class="panel-body collapse in">
-              <ul class="filter">
-                <xsl:apply-templates select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
-                  <xsl:with-param name="facet_name" select="'state'" />
-                  <xsl:with-param name="classId" select="'state'" />
-                </xsl:apply-templates>
-              </ul>
-            </div>
-          </div>
+          </xsl:if>
           <!-- END: OA specific changes -->
         </xsl:if>
         <xsl:if test="$MIR.testEnvironment='true'"> <!-- filters in development, show only in test environments -->
