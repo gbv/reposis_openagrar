@@ -13,20 +13,21 @@ SearchCountInline.prototype= {
   ,init() {
     this.state="waiting";
     this.render();
-	this.getCount();
+    this.getCount();
   }
 
   ,getCount () {
-	var Searchlink = webApplicationBaseURL+'servlets/solr/select?q=' + encodeURI(this.query) +'&wt=json';
+    var Searchlink = webApplicationBaseURL+'servlets/solr/select?q=' + encodeURI(this.query) +'&wt=json';
     $.ajax({
       method: "GET",
       url: Searchlink,
-      dataType: "json"
+      dataType: "json",
+      context: this
     }) .done(function( json ) {
-      this.count = $json("result[name='response']").attr("numFound");
+      this.count = json.response.numFound;
       this.state="success";
       this.render();
-    }).fail ( function( json ) {
+    }).fail ( function () {
       this.state="error";
       this.render();	
     });
