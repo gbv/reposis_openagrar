@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section title="Statistiken" xml:lang="de"/>
+  <section title="Statistics" xml:lang="en"/>
+  <section xml:lang="all">
+    <script src='../../js/searchcount.js'> </script>
+  </section>
+     
+  <section xml:lang="de">
+    <div class="row">
+      <h1>Statistik - JKI Jahresstatistik</h1>
+      <p> 
+        Bla Bla Lorum est 
+      </p>
+      <table>
+        <tr>
+          <td rowspan="2"> Veröffentlichungsform </td>
+          <td rowspan="2"> IP </td>
+          <td> JKI Gesamt </td>
+          <td> Institut für Pflanzen-schutz in Ackerbau und Grünland (A) </td>
+          <td> Institut für nationale und inter-nationale Angelegen- heiten der Pflanzen- gesundheit (AG) </td>
+          <td> Institut für Anwen-dungs-technik im Pflanzen-schutz (AT) </td>
+          <td> Institut für Bienen-schutz (BS) </td>
+          <td> Institut für Biolo-gischen Pflanzen-schutz (BI) </td>
+          <td> Institut für Epidemio-logie und Pathogen-diagnostik (EP) </td>
+          <td> Institut für Pflanzen-schutz in Gartenbau und Forst (GF) </td>
+          <td> Institut für ökologische Chemie, Pflanzen-analytik und Vorrats-schutz (ÖPV)</td>
+          <td> Institut für Pflanzen-schutz in Obst- und Weinbau (OW) </td>
+          <td> Institut für Pflanzen-bau und Boden-kunde (PB)</td>
+          <td> Institut für Resistenz-forschung und Stress-toleranz (RS) </td>
+          <td> Institut für die Sicherheit biotechno-logischer Verfahren bei Pflanzen (SB) </td>
+          <td> Institut für Strategien und Folgen-abschätz-ung (SF) </td>
+          <td> Institut für Züchtungs-forschung an gartenbau-lichen Kulturen (ZG) </td>
+          <td> Institut für Züchtungs-forschung an landwirt-schaftlichen Kulturen (ZL) </td>
+          <td> Institut für Züchtungs-forschung an Obst (ZO) </td>
+          <td> Institut für Reben-züchtung (ZR) </td>
+        </tr>
+        <tr>
+          <td> 2018 </td>
+          <td> 2018 </td>
+          <td> 2018 </td>
+          <td> 2018 </td>
+          <td> 2018 </td>
+          <td> 2018 </td>
+          <td> 2018 </td>
+          <td> 2018 </td>
+          <td> 2018 </td>
+          <td> 2018 </td>
+          <td> 2018 </td>
+          <td> 2018 </td>
+          <td> 2018 </td>
+          <td> 2018 </td>
+          <td> 2018 </td>
+          <td> 2018 </td>
+          <td> 2018 </td>
+          <td> 2018 </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> 0 </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-query="mods.affiliation:*julius* OR mods.affiliation:*jki*"/> </td>
+        </tr>
+        <tr>
+          <td rowspan="5"> Referierte Beiträge in wiss. Fachzeitschriften </td>
+          <td> &lt; 1 </td>
+        </tr>
+        <tr>
+          <td> 1-3 </td>
+        </tr>
+        <tr>
+          <td> 3-6 </td>
+        </tr>
+        <tr>
+          <td> 6-9 </td>
+        </tr>
+        <tr>
+          <td> &gt; 9 </td>
+        </tr>
+        <tr>
+          <td> Monografien, Buchbeiträge in editierten Buchreihen </td>
+        </tr>
+        <tr>
+          <td> Praxisrelevante Veröffentlichungen, nicht referierte Beiträge in Journalen </td>
+        </tr>
+        <tr>
+          <td> Artikel in Tagungsbänden, nicht referiert </td>
+        </tr>
+        <tr>
+          <td> Artikel in Tagungsbänden, referiert </td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  
+</MyCoReWebPage>
