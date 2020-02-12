@@ -57,6 +57,9 @@ $(document).ready( function() {
     var mirElementtype=$(element).data('mirelementtype');
     if (mirElementtype == "SearchCountInline" ) {
       query = $(element).data('query');
+      if ($(element).data('queryCall')) {
+    	query = eval($(element).data('queryCall'));
+      }
       mirElement = new SearchCountInline(
                           element,
                           query

@@ -8,6 +8,15 @@
   </section>
      
   <section xml:lang="de">
+    <script>
+      var year=2018;
+      var q_refArticle="mods.refereed:yes AND mods.genre:article AND mods.host.genre:journal";
+      
+      var q_instAll= '(mods.affiliation:*julius* OR mods.affiliation:*jki*)' ;
+      var q_instA='(mods.affiliation:"julius kuhn-institut, institut fur pflanzenschutz in ackerbau und grunland")';
+      var q instAG='(mods.affiliation:"julius kuhn-institut (jki), bundesforschungsinstitut fur kulturpflanzen, institut fur nationale und internationale angelegenheiten der pflanzengesundheit, braunschweig, deutschland")';
+      
+    </script>
     <div class="row">
       <h1>Statistik - JKI Jahresstatistik</h1>
       <p> 
@@ -59,7 +68,9 @@
         <tr>
           <td> </td>
           <td> 0 </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-query="mods.affiliation:*julius* OR mods.affiliation:*jki*"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-queryCall="q_refArticle + ' AND ' + q_instAll"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-queryCall="q_refArticle + ' AND ' + q_instA"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-queryCall="q_refArticle + ' AND ' + q_instAG"/> </td>
         </tr>
         <tr>
           <td rowspan="5"> Referierte Beiträge in wiss. Fachzeitschriften </td>
