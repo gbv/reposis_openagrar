@@ -5,14 +5,27 @@
   <section title="Statistics" xml:lang="en"/>
   <section xml:lang="all">
     <script src='../../js/statistic.js'> </script>
-
+    <script>
+      $(document).ready( function() {
+        $("#jki_statistic").empty();
+        var year=new Date().getFullYear();
+        var year1=year-5;
+        if (year1 &lt; 2018) year1 = 2018;
+        for (i = year1; i &lt;= year; i++) {
+          var li = $('<li></li>');
+          li.append ('<a href="jki_statstics.xml?year=' + i + '">' + i + '</a>');
+          $("#jki_statistic").append(li); 
+        }
+      });
+      
+    </script>
     <form id="submit_publication"
           class="form-horizontal"
           role="form"
           method="get"
           action="../../editor/editor-dynamic.xed">
 
-
+  
       <section xml:lang="de">
 
         <div class="row">
@@ -33,19 +46,6 @@
           </ul>
         </div>
         <div class="row">
-          <h3> Statistiken - referiert Kind, Eltern</h3>
-          <ul>
-            <li><a href="refArticlesWithRefParent-institutes-pubyear.xml">Artikel referiert, Eltern refieriert</a></li>
-            <li><a href="refArticlesWithNRefParent-institutes-pubyear.xml">Artikel referiert, Eltern nicht refieriert</a></li>
-            <li><a href="nRefArticlesWithRefParent-institutes-pubyear.xml">Artikel nicht referiert, Eltern refieriert</a></li>
-            <li><a href="nRefArticlesWithNRefParent-institutes-pubyear.xml">Artikel nicht referiert, Eltern nicht refieriert</a></li>
-          </ul>
-          <ul>
-            <li> <a href="https://www.openagrar.de/content/statistics/standalone-instituts-refereed-pubyear.xml"> selbständige Werke </a></li>
-            <li> <a href="https://www.openagrar.de/content/statistics/chapter-instituts-refereed-pubyear.xml"> Buchbeiträge </a></li>
-          </ul>
-        </div>
-        <div class="row">
           <h3> Jahresberichtskategorien (2016) </h3>
           <p> Anzahl der Publikationen nach Institut und Jahresberichtskategorien für das Jahr 2016</p>
           <ul>
@@ -55,7 +55,13 @@
             <li><a href="mri_inst_repCat_pubyear.xml">MRI</a></li>
             <li><a href="ti_inst_repCat_pubyear.xml">TI</a></li>
           </ul>
-        </div>
+  </div>
+         <div class="row">
+          <h3> JKI Jahresstatistik </h3>
+          <ul id="jki_statistic">
+            
+          </ul>
+  </div>
       </section>
     </form>
   </section>
