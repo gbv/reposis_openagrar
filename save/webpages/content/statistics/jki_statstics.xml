@@ -4,101 +4,422 @@
   <section title="Statistiken" xml:lang="de"/>
   <section title="Statistics" xml:lang="en"/>
   <section xml:lang="all">
+    <style>
+      
+      th, td {
+        border: 1px solid black !important;
+        padding: 5px;
+        empty-cells: show;
+      }
+      
+      .head_inst {
+        vertical-align: top;
+        text-align: center;
+        font-size: small;
+      }
+    </style>
+    <script type="text/javascript">
+      
+      function createAffiQuery (institutes) {
+        var query = "";
+        $.each( institutes, function ( i, institut) {
+          query += 'mods.affiliation:"' + institut + '" OR ';
+        });
+        query = query.substring(0, query.length -3);
+        query = "(" + query + ")" ; 
+        return query;
+      }
+    
+      var searchParams = new URLSearchParams(window.location.search);
+      var year="";
+      if (searchParams.has("year") === true) {
+        year=searchParams.get("year");
+      } else {
+        year=new Date().getFullYear();
+      }
+      
+      $(document).ready( function() {
+        $('h1').text(" Statistik - JKI Jahresstatistik " + year);
+      });
+      
+      var q_query = "mods.yearIssued:" + year;
+      var q_refArticle="mods.refereed:yes AND mods.genre:article AND mods.genre.host:journal";
+      var q_refBook="(mods.genre:book OR (mods.genre:chapter AND (mods.genre.host:book OR mods.genre.host:series)))";
+      var q_nRefArticle="NOT (mods.refereed:yes) AND mods.genre:article AND mods.genre.host:journal";
+      var q_nRefConf="NOT (mods.refereed:yes) AND mods.genre:article AND mods.genre.host:proceedings";
+      var q_refConf="mods.refereed:yes AND mods.genre:article AND mods.genre.host:proceedings";
+      
+      var q_instAll= '(mods.affiliation:*julius* OR mods.affiliation:*jki*)' ;
+      var instA = [
+                    "julius kuhn-institut, institut fur pflanzenschutz in ackerbau und grunland",
+                    "julius kuhn-institut (jki), bundesforschungsinstitut fur kulturpflanzen, institut fur pflanzenschutz in ackerbau und grunland, braunschweig, deutschland",
+                    "julius kuhn-institute (jki), federal research centre for cultivated plants, institute for plant protection in field crops and grassland, brunswick, germany",
+                    "julius kuhn institute (jki), institute of plant protection in field crops and grassland, braunschweig, germany"
+                  ];
+      var instAG= [
+                    "julius kuhn-institut (jki), bundesforschungsinstitut fur kulturpflanzen, institut fur nationale und internationale angelegenheiten der pflanzengesundheit, braunschweig, deutschland",
+                  ];
+      var instAT= [
+                    "julius kuhn-institut (jki), bundesforschungsinstitut fur kulturpflanzen, institut fur anwendungstechnik im pflanzenschutz, braunschweig, deutschland",
+                  ];
+      var instBS= [
+                    "julius kuhn-institut (jki), bundesforschungsinstitut fur kulturpflanzen, institut fur bienenschutz, berlin, deutschland",
+                    "julius kuhn-institut (jki), institut fur bienenschutz",
+                    "julius kuhn-institut, institut fur bienenschutz, braunschweig",
+                    "julius kuhn institute (jki), institute for bee protection, berlin, germany",
+                    "julius kuhn-institute (jki), federal research centre for cultivated plants, institute for bee protection",
+                    "julius kuhn-institute (jki), federal research centre for cultivated plants, institute for bee protection, berlin, germany",
+                    "julius kuhn-institute (jki), federal research centre for cultivated plants, institute for bee protection, braunschweig, germany",
+                    "julius kuhn-institut, institute for bee protection",
+                    "julius kuhn institute, institute for bee protection, braunschweig",
+                    "julius kuhn-institute (jki), federal research centre for cultivated plants, institute for bee protection, brunswick, germany",
+                    "julius kuhn-institut, institute for bee protection, braunschweig"
+                  ];
+      var instBI= [
+                    "julius kuhn-institute (jki), federal research centre for cultivated plants, institute for biological control, darmstadt, germany",
+                    "julius kuhn-institut (jki), bundesforschungsinstitut fur kulturpflanzen, institut fur biologischen pflanzenschutz, darmstadt, deutschland"
+                  ];
+      var instEP= [
+                    "julius kuhn-institute (jki), federal research centre for cultivated plants, institute for epidemiology and pathogen diagnostics, brunswick, germany",
+                    "julius kuhn-institute (jki), federal research centre for cultivated plants, institute for epidemiology and pathogen diagnostics, braunschweig, germany",
+                    "julius kuhn-institute (jki), federal research centre for cultivated plants, institute for epidemiology and pathogen diagnostics, munster, germany"
+                  ];
+      var instGF= [
+                    "julius kuhn-institut (jki), bundesforschungsinstitut fur kulturpflanzen, institut fur pflanzenschutz in gartenbau und forst, braunschweig, deutschland",
+                    "julius kuhn-institute (jki), federal research centre for cultivated plants, institute for plant protection in horticulture and forests, munster, germany",
+                    "julius kuhn-institute (jki), federal research centre for cultivated plants, institute for plant protection in horticulture and forests, brunswick, germany",
+                    "julius kuhn-institut (jki), bundesforschungsinstitut fur kulturpflanzen, institut fur pflanzenschutz in gartenbau und forst, kleinmachnow, deutschland",
+                    "julius kuhn-institut (jki), bundesforschungsinstitut fur kulturpflanzen, institut fur pflanzenschutz in gartenbau und forst, munster, deutschland"
+                  ];
+      var instOPV= [
+                    "julius kuhn-institute (jki), federal research centre for cultivated plants, institute for ecological chemistry, plant analysis and stored product protection, berlin, germany",
+                    "julius kuhn-institut (jki), bundesforschungsinstitut fur kulturpflanzen, institut fur okologische chemie, pflanzenanalytik und vorratsschutz, berlin, deutschland",
+                    "julius kuhn-institut (jki), federal research centre for cultivated plants, institute for ecological chemistry, plant analysis and stored product protection, berlin, germany",
+                    "julius kuhn-institute (jki), federal research centre for cultivated plants, institute for ecological chemistry, plant analysis and stored product protection, quedlinburg, germany",
+                    ""
+                  ];
+      var instOW= [
+                    "julius kuhn-institute (jki), federal research centre for cultivated plants, institute for plant protection in fruit crops and viticultur"
+                  ];
+      var instPB= [
+                    "julius kuhn-institut (jki), federal research centre of cultivated plants, institute for crop and soil science, braunschweig, germany",
+                    "julius kuhn-institut (jki), bundesforschungsinstitut fur kulturpflanzen, institut fur pflanzenbau und bodenkunde, braunschweig, deutschland",
+                    "julius kuhn-institute (jki), federal research centre for cultivated plants, institute for crop and soil science, brunswick, germany"
+                  ];
+      var instRS= [
+                    "julius kuhn-institute (jki), federal research centre for cultivated plants, institute for resistance research and stress tolerance, quedlinburg, germany",
+                    "julius kuhn-institut (jki), bundesforschungsinstitut fur kulturpflanzen, institut fur resistenzforschung und stresstoleranz, quedlinburg, deutschland",
+                    "julius kuhn institute (jki), institute for resistance research and stress tolerance, quedlinburg, germany",
+                    "julius kuhn institute (jki), federal research centre for cultivated plants, institute for resistance research and stress tolerance, quedlinburg, germany"
+                  ];
+      var instSB= [
+                    "julius kuhn-institut (jki), federal research centre of cultivated plants, institute for biosafety in plant biotechnology, quedlinburg , deutschland",
+                  ];
+      var instSF= [
+                    "julius kuhn-institut (jki), bundesforschungsinstitut fur kulturpflanzen, institut fur strategien und folgenabschatzung, kleinmachnow, deutschland",
+                    "julius kuhn-institut (jki), bundesforschungsinstitut fur kulturpflanzen, institut fur strategien und folgeabschatzung, kleinmachnow, deutschland",
+                    "julius kuhn institute (jki), institute for strategies and technology assessment, kleinmachnow, germany",
+                    "julius kuhn-institut (jki), bundesforschungsinstitut fur kulturpflanzen, institut fur strategien und folgenabschatzung im pflanzenschutz, kleinmachnow, deutschland",
+                    "julius kuhn-institute (jki), federal research centre for cultivated plants, institute for strategies and technology assessment, kleinmachnow, germany"
+                  ];
+      var instZG= [
+                    "julius kuhn-institute (jki), federal research centre for cultivated plants, institute for breeding research on horticultural crops, quedlinburg, germany"
+                  ];
+      var instZL= [
+                    "julius kuhn-institut (jki), bundesforschungsinstitut fur kulturpflanzen, institut fur zuchtungsforschung an landwirtschaftlichen kulturen, quedlinburg, deutschland",
+                    "julius kuhn-institute (jki), federal research centre for cultivated plants, institute for breeding research on agricultural crops, quedlinburg, germany"
+                  ];
+      var instZO= [
+                    ""
+                  ];
+      var instZR= [
+                    "julius kuhn-institut (jki), bundesforschungsinstitut fur kulturpflanzen, institut fur rebenzuchtung, siebeldingen, deutschland",
+                    "julius kuhn-institute (jki), federal research centre for cultivated plants, institute for grapevine breeding, siebeldingen, germany"
+                  ];
+                
+      //var q_instA = createAffiQuery (instA); 
+      //var q_instAG= createAffiQuery (instAG);
+      //var q_instAT= createAffiQuery (instAT); 
+      //var q_instBS= createAffiQuery (instBS);
+      //var q_instBI= createAffiQuery (instBI); 
+      //var q_instEP= createAffiQuery (instEP);
+      //var q_instGF= createAffiQuery (instGF); 
+      //var q_instOVP= createAffiQuery (instOPV);
+      //var q_instOW= createAffiQuery (instOW); 
+      //var q_instPB= createAffiQuery (instPB);
+      //var q_instRS= createAffiQuery (instRS); 
+      //var q_instSB= createAffiQuery (instSB);
+      //var q_instSF= createAffiQuery (instSF); 
+      //var q_instZG= createAffiQuery (instZG);
+      //var q_instZL= createAffiQuery (instZL); 
+      //var q_instZO= createAffiQuery (instZO);
+      //var q_instZR= createAffiQuery (instZR);
+
+      var q_instA ='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_a"';
+      var q_instAG='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_ag"';
+      var q_instAT='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_at"';
+      var q_instBS='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_bs"';
+      var q_instBI='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_bi"';
+      var q_instEP='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_ep"';
+      var q_instGF='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_gf"';
+      var q_instOVP='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_opv"';
+      var q_instOW='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_ow"';
+      var q_instPB='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_pb"';
+      var q_instRS='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_rs"';
+      var q_instSB='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_sb"';
+      var q_instSF='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_stfo"';
+      var q_instZG='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_zg"';
+      var q_instZL='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_zl"';
+      var q_instZO='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_zo"';
+      var q_instZR='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_zr"';
+      
+    </script>
     <script src='../../js/searchcount.js'> </script>
   </section>
      
   <section xml:lang="de">
-    <script>
-      var year=2018;
-      var q_refArticle="mods.refereed:yes AND mods.genre:article AND mods.host.genre:journal";
-      
-      var q_instAll= '(mods.affiliation:*julius* OR mods.affiliation:*jki*)' ;
-      var q_instA='(mods.affiliation:"julius kuhn-institut, institut fur pflanzenschutz in ackerbau und grunland")';
-      var q instAG='(mods.affiliation:"julius kuhn-institut (jki), bundesforschungsinstitut fur kulturpflanzen, institut fur nationale und internationale angelegenheiten der pflanzengesundheit, braunschweig, deutschland")';
-      
-    </script>
+    
     <div class="row">
-      <h1>Statistik - JKI Jahresstatistik</h1>
-      <p> 
-        Bla Bla Lorum est 
-      </p>
+      <h1>Statistik - JKI Jahresstatistik </h1>
+      
       <table>
         <tr>
-          <td rowspan="2"> Veröffentlichungsform </td>
-          <td rowspan="2"> IP </td>
-          <td> JKI Gesamt </td>
-          <td> Institut für Pflanzen-schutz in Ackerbau und Grünland (A) </td>
-          <td> Institut für nationale und inter-nationale Angelegen- heiten der Pflanzen- gesundheit (AG) </td>
-          <td> Institut für Anwen-dungs-technik im Pflanzen-schutz (AT) </td>
-          <td> Institut für Bienen-schutz (BS) </td>
-          <td> Institut für Biolo-gischen Pflanzen-schutz (BI) </td>
-          <td> Institut für Epidemio-logie und Pathogen-diagnostik (EP) </td>
-          <td> Institut für Pflanzen-schutz in Gartenbau und Forst (GF) </td>
-          <td> Institut für ökologische Chemie, Pflanzen-analytik und Vorrats-schutz (ÖPV)</td>
-          <td> Institut für Pflanzen-schutz in Obst- und Weinbau (OW) </td>
-          <td> Institut für Pflanzen-bau und Boden-kunde (PB)</td>
-          <td> Institut für Resistenz-forschung und Stress-toleranz (RS) </td>
-          <td> Institut für die Sicherheit biotechno-logischer Verfahren bei Pflanzen (SB) </td>
-          <td> Institut für Strategien und Folgen-abschätz-ung (SF) </td>
-          <td> Institut für Züchtungs-forschung an gartenbau-lichen Kulturen (ZG) </td>
-          <td> Institut für Züchtungs-forschung an landwirt-schaftlichen Kulturen (ZL) </td>
-          <td> Institut für Züchtungs-forschung an Obst (ZO) </td>
-          <td> Institut für Reben-züchtung (ZR) </td>
-        </tr>
-        <tr>
-          <td> 2018 </td>
-          <td> 2018 </td>
-          <td> 2018 </td>
-          <td> 2018 </td>
-          <td> 2018 </td>
-          <td> 2018 </td>
-          <td> 2018 </td>
-          <td> 2018 </td>
-          <td> 2018 </td>
-          <td> 2018 </td>
-          <td> 2018 </td>
-          <td> 2018 </td>
-          <td> 2018 </td>
-          <td> 2018 </td>
-          <td> 2018 </td>
-          <td> 2018 </td>
-          <td> 2018 </td>
-          <td> 2018 </td>
+          <td> <b>Veröffentlichungsform </b></td>
+          <td> <b>IP </b> </td>
+          <td> <b>JKI Gesamt</b> </td>
+          <td class="head_inst"> Institut für Pflanzen-schutz in Ackerbau und Grünland (A) </td>
+          <td class="head_inst"> Institut für nationale und inter-nationale Angelegen- heiten der Pflanzen- gesundheit (AG) </td>
+          <td class="head_inst"> Institut für Anwen-dungs-technik im Pflanzen-schutz (AT) </td>
+          <td class="head_inst"> Institut für Bienen-schutz (BS) </td>
+          <td class="head_inst"> Institut für Biolo-gischen Pflanzen-schutz (BI) </td>
+          <td class="head_inst"> Institut für Epidemio-logie und Pathogen-diagnostik (EP) </td>
+          <td class="head_inst"> Institut für Pflanzen-schutz in Gartenbau und Forst (GF) </td>
+          <td class="head_inst"> Institut für ökologische Chemie, Pflanzen-analytik und Vorrats-schutz (ÖPV)</td>
+          <td class="head_inst"> Institut für Pflanzen-schutz in Obst- und Weinbau (OW) </td>
+          <td class="head_inst"> Institut für Pflanzen-bau und Boden-kunde (PB)</td>
+          <td class="head_inst"> Institut für Resistenz-forschung und Stress-toleranz (RS) </td>
+          <td class="head_inst"> Institut für die Sicherheit biotechno-logischer Verfahren bei Pflanzen (SB) </td>
+          <td class="head_inst"> Institut für Strategien und Folgen-abschätz-ung (SF) </td>
+          <td class="head_inst"> Institut für Züchtungs-forschung an gartenbau-lichen Kulturen (ZG) </td>
+          <td class="head_inst"> Institut für Züchtungs-forschung an landwirt-schaftlichen Kulturen (ZL) </td>
+          <td class="head_inst"> Institut für Züchtungs-forschung an Obst (ZO) </td>
+          <td class="head_inst"> Institut für Reben-züchtung (ZR) </td>
         </tr>
         <tr>
           <td> </td>
           <td> 0 </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-queryCall="q_refArticle + ' AND ' + q_instAll"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-queryCall="q_refArticle + ' AND ' + q_instA"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-queryCall="q_refArticle + ' AND ' + q_instAG"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instAll)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instA)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instAG)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instAT)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instBS)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instBI)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instEP)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instGF)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOVP)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOW)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instPB)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instRS)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instSB)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instSF)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZG)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZL)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZO)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZR)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
           <td rowspan="5"> Referierte Beiträge in wiss. Fachzeitschriften </td>
           <td> &lt; 1 </td>
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
         </tr>
         <tr>
           <td> 1-3 </td>
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
         </tr>
         <tr>
           <td> 3-6 </td>
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
         </tr>
         <tr>
           <td> 6-9 </td>
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
         </tr>
         <tr>
           <td> &gt; 9 </td>
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
+          <td />
         </tr>
         <tr>
-          <td> Monografien, Buchbeiträge in editierten Buchreihen </td>
+          <td > Monografien, Buchbeiträge in editierten Buchreihen </td>
+          <td />
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instAll)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instA)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instAG)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instAT)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instBS)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instBI)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instEP)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instGF)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instOVP)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instOW)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instPB)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instRS)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instSB)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instSF)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instZG)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instZL)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instZO)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instZR)" data-printAsLink="true"/> </td>
+        </tr>
+        <tr >
+          <td > Praxisrelevante Veröffentlichungen, nicht referierte Beiträge in Journalen </td>
+          <td />
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instAll)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instA)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instAG)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instAT)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instBS)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instBI)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instEP)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instGF)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instOVP)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instOW)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instPB)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instRS)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instSB)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instSF)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instZG)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instZL)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instZO)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instZR)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
-          <td> Praxisrelevante Veröffentlichungen, nicht referierte Beiträge in Journalen </td>
-        </tr>
-        <tr>
-          <td> Artikel in Tagungsbänden, nicht referiert </td>
+          <td > Artikel in Tagungsbänden, nicht referiert </td>
+          <td />
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instAll)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instA)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instAG)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instAT)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instBS)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instBI)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instEP)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instGF)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instOVP)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instOW)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instPB)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instRS)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instSB)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instSF)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instZG)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instZL)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instZO)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instZR)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
           <td> Artikel in Tagungsbänden, referiert </td>
+          <td />
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instAll)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instA)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instAG)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instAT)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instBS)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instBI)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instEP)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instGF)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instOVP)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instOW)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instPB)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instRS)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instSB)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instSF)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instZG)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instZL)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instZO)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instZR)" data-printAsLink="true"/> </td>
         </tr>
       </table>
     </div>

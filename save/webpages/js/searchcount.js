@@ -1,10 +1,12 @@
 // Class SearchCountInline
 
-function SearchCountInline (element,query) {
+function SearchCountInline (element,query,printAsLink) {
   this.$element = $(element);
   this.query=query;
   this.state = "";
   this.count = "";
+  this.printAsLink = printAsLink;
+  this.searchlink = webApplicationBaseURL+'servlets/solr/select?q=' + encodeURI(this.query);
 }
 
 SearchCountInline.prototype= {
@@ -17,7 +19,7 @@ SearchCountInline.prototype= {
   }
 
   ,getCount () {
-    var Searchlink = webApplicationBaseURL+'servlets/solr/select?q=' + encodeURI(this.query) +'&wt=json';
+    var Searchlink = this.searchlink + '&wt=json&rows=0' ;
     $.ajax({
       method: "GET",
       url: Searchlink,
@@ -42,7 +44,11 @@ SearchCountInline.prototype= {
         this.$element.html("<i class='fa fa-spinner fa-pulse'></i>");
         break;
       case "success":
-        this.$element.text(this.count);
+    	if ( this.printAsLink ) {
+          this.$element.html('<a href="' + this.searchlink + '">' + this.count + '</a>');
+    	} else {
+          this.$element.text(this.count);
+    	}
         break;
       default:
         this.$element.text("");
@@ -57,12 +63,15 @@ $(document).ready( function() {
     var mirElementtype=$(element).data('mirelementtype');
     if (mirElementtype == "SearchCountInline" ) {
       query = $(element).data('query');
-      if ($(element).data('queryCall')) {
-    	query = eval($(element).data('queryCall'));
+      if ($(element).data('querycall')) {
+        f = new Function ($(element).data('querycall'));
+    	query = f();
       }
+      printAsLink = ( $(element).data('printaslink') == true) ? true : false;
       mirElement = new SearchCountInline(
                           element,
-                          query
+                          query,
+                          printAsLink
                    );
       mirElement.init();
     }
