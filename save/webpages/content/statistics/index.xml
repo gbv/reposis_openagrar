@@ -59,9 +59,7 @@
          <div class="row">
           <h3> JKI Jahresstatistik </h3>
           <ul id="jki_statistic">
-            <li><a href="jki_statstics_2018.xml">2018</a></li>
-            <li><a href="jki_statstics_2019.xml">2019</a></li>
-            <li><a href="jki_statstics_2020.xml">2020</a></li>
+            
           </ul>
   </div>
       </section>
