@@ -42,13 +42,13 @@ var BloodhoundConf = {
         transform : function(list) {
 			list = list.response.docs;
 			$.each(list, function(index, item) {
-				item.name = item['mods.identifier.issn'] + ' - ' + item['mods.title'][0];
-				item.value = item['mods.identifier.issn'];
+				item.name = item['identifier.type.issn'] + ' - ' + item['mods.title'][0];
+				item.value = item['identifier.type.issn'];
 			});
 			return list;
 		},
 		prepare : function(query, settings) {
-		    var param = "%2Bmods.identifier.issn%3A"+query+"*";
+		    var param = "%2Bidentifier.type.issn%3A"+query+"*";
 			param += "+%2BobjectType%3A%22mods%22";
 			param += "&fl=mods.title%2Cid%2Cidentifier.type.issn";
 			param += "&version=4.5&rows=20&wt=json";
@@ -69,7 +69,7 @@ var BloodhoundConf = {
 		prepare : function(query, settings) {
 		    var param = "%2Bmods.title.autocomplete%3A*" + query.replace(/ /g,"\\ ") + "*+";
 			param += "%2BobjectType%3A%22mods%22";
-			param += "&fl=mods.title%2Cid%2Cmods.identifier.issn%2Cidentifier.type.isbn%2CshelfLocator";
+			param += "&fl=mods.title%2Cid%2Cidentifier.type.issn%2Cidentifier.type.isbn%2CshelfLocator";
 			param += "&version=4.5&rows=20&wt=json";
 
 			settings.url = settings.url.replace("%QUERY", param);

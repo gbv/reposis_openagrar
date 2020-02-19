@@ -362,8 +362,8 @@
             </div>
           </xsl:if>
           
-          <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='state']/int and
-                        not(mcrxsl:isCurrentUserGuestUser())">
+	  <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='state']/int and
+		        not(mcrxsl:isCurrentUserGuestUser())">
             <div class="panel panel-default">
               <div class="panel-heading" data-toggle="collapse-next">
                 <h3 class="panel-title">
@@ -738,7 +738,8 @@
                   <xsl:for-each select="arr[@name='mods.genre']/str">
                     <div class="hit_type">
                       <span class="label label-info">
-                        <xsl:value-of select="$mods-genre-i18n" />
+			<!--<xsl:value-of select="$mods-genre-i18n" />-->
+                        <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" ></xsl:value-of>
                       </span>
                     </div>
                   </xsl:for-each>

@@ -365,3 +365,27 @@ div#_altmetric_popover_el.altmetric-embed div#_altmetric_container.altmetric_con
 .mir-prop-nav {
     margin: 10px 0;
 }
+
+/**** FIXME: quick hack for sorting of refereed fields *********/
+div.result_filter ul.filter {
+  display: flex;
+  flex-direction: column;
+}
+li[data-fq="mods.refereed.public:yes"]  {
+  order: 1;
+}
+li[data-fq="mods.refereed.public:no"] {
+  order: 2;
+}
+
+li[data-fq="mods.refereed:yes"]  {
+  order: 1;
+}
+li[data-fq="mods.refereed:no"] {
+  order: 2;
+}
+li[data-fq="mods.refereed:n/a"]  {
+  order: 3;
+}
+
+
