@@ -57,25 +57,12 @@
         <!-- TODO: Update badges -->
       <div id="badges">
         <xsl:for-each select="$mods/mods:genre[@type='kindof']|$mods/mods:genre[@type='intern']">
-          <xsl:variable name="genre" select="substring-after(@valueURI,'#')"/>
-          <xsl:variable name="parentGenre" select="substring-after(//mods:mods/mods:relatedItem[@type='host']/mods:genre/@valueURI,'#')"/>
-          <xsl:variable name="linkText">
-            <xsl:choose>
-              <xsl:when test="string-length($parentGenre) &gt; 0">
-                <xsl:value-of select="concat(mcrxsl:getDisplayName('mir_genres',$genre),' in ',mcrxsl:getDisplayName('mir_genres',$parentGenre) )"/>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',$genre)"/>
-              </xsl:otherwise>
-            </xsl:choose>
-          </xsl:variable>
-          <xsl:call-template name="searchLink">
-            <xsl:with-param name="class" select="'access_condition label label-success'" />
-            <xsl:with-param name="linkText" select="$linkText" />
-            <xsl:with-param name="query" select="concat('*&amp;fq=mods.genre.composite:*',concat($genre,'.',$parentGenre), '&amp;owner=createdby:', $owner)" />
+          <xsl:call-template name="categorySearchLink">
+            <xsl:with-param name="class" select="'mods_genre label label-info'" />
+            <xsl:with-param name="node" select="." />
+            <xsl:with-param name="owner"  select="$owner" />
           </xsl:call-template>
         </xsl:for-each>
-        
 
         <xsl:if test="string-length($dateIssued) > 0">
           <time itemprop="datePublished" datetime="{$dateIssued}" data-toggle="tooltip" title="Publication date">
@@ -202,17 +189,10 @@
     <!-- headline -->
     <div id="mir-abstract-title">
       <h1 itemprop="name">
-        <xsl:choose>
-          <xsl:when test="$mods/mods:genre[substring-after(@valueURI,'#')='conference']">
-            <xsl:value-of select="$mods/mods:name[@type='conference']/mods:namePart" />
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:apply-templates mode="mods.title" select="$mods">
-              <xsl:with-param name="asHTML" select="true()" />
-              <xsl:with-param name="withSubtitle" select="true()" />
-            </xsl:apply-templates>
-          </xsl:otherwise>
-        </xsl:choose>
+        <xsl:apply-templates mode="mods.title" select="$mods">
+          <xsl:with-param name="asHTML" select="true()" />
+          <xsl:with-param name="withSubtitle" select="true()" />
+        </xsl:apply-templates>
       </h1>
     </div>
 
@@ -398,7 +378,7 @@
     <xsl:param name="label"/>
 
     <xsl:variable name="hitsSortList" xmlns:encoder="xalan://java.net.URLEncoder"
-                  select="document(concat('solr:q=',encoder:encode($query), '&amp;rows=1000&amp;sort=mods.part.order.', $objectID, ' desc,mods.dateIssued desc, mods.dateIssued.host desc,',  $modsPart, ' desc, mods.title.main desc&amp;group=true&amp;group.limit=1000&amp;group.field=mods.yearIssued'))/response/lst[@name='grouped']/lst[@name='mods.yearIssued']" />
+                  select="document(concat('solr:q=',encoder:encode($query), '&amp;rows=1000&amp;sort=mods.yearIssued desc, mods.part.order.', $objectID, ' desc,mods.dateIssued desc, mods.dateIssued.host desc,',  $modsPart, ' desc, mods.title.main desc&amp;group=true&amp;group.limit=1000&amp;group.field=mods.yearIssued'))/response/lst[@name='grouped']/lst[@name='mods.yearIssued']" />
     <xsl:if test="$hitsSortList/int[@name='matches'] &gt; 0">
           <xsl:call-template name="listRelatedItems">
           <xsl:with-param name="hits" select="$hitsSortList"/>
