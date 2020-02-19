@@ -118,5 +118,39 @@
       "indexed": true,
       "stored": false
     }
+  },
+  {
+    "add-field": {
+      "name": "mods.lastAuthor",
+      "type": "mods.collatedGERMAN",
+      "indexed": true,
+      "stored": false
+    }
+  },
+  {
+    "add-field": {
+      "name": "mods.lastAuthor.affiliation",
+      "type": "mods.collatedGERMAN",
+      "indexed": true,
+      "stored": false
+    }
+  },
+  {
+    "add-field": {
+      "name": "mods.identifier.isbn",
+      "type": "text_lower",
+      "indexed": true,
+      "stored": false,
+      "multiValued":true
+    }
+  },
+  {
+    "add-field": {
+      "name": "mods.identifier.issn",
+      "type": "text_lower",
+      "indexed": true,
+      "stored": false,
+      "multiValued":true
+    }
   }
 ]
