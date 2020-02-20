@@ -45,7 +45,10 @@
 
 # add oa specific searchfields
   MCR.URIResolver.xslImports.solr-document=%MCR.URIResolver.xslImports.solr-document%,openagrar-solr.xsl
-
+  
+# add oa specific remove of mods:extension 
+  MCR.URIResolver.xslIncludes.mycoreobjectXML=%MCR.URIResolver.xslIncludes.mycoreobjectXML%,modsextensionfilter.xsl
+  
 # allow login only via https
   MCR.user2.LoginHttpsOnly=true
 
