@@ -11,7 +11,7 @@
         <mods:extension>
           <xsl:apply-templates select="@*" />
           <xsl:comment>
-            <xsl:value-of select="'mods:extension is not accessable for quest'" />
+            <xsl:value-of select="'mods:extension is not accessable for guest'" />
           </xsl:comment>
         </mods:extension>            
       </xsl:when>
