@@ -9,7 +9,10 @@
     <xsl:choose>
       <xsl:when test="mcrxsl:isCurrentUserGuestUser()">
         <mods:extension>
-          <xsl:value-of select="'mods:extension is not accessable for quest'" />
+          <xsl:apply-templates select="@*" />
+          <xsl:comment>
+            <xsl:value-of select="'mods:extension is not accessable for quest'" />
+          </xsl:comment>
         </mods:extension>            
       </xsl:when>
       <xsl:otherwise>
