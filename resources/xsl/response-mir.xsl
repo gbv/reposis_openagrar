@@ -249,6 +249,7 @@
     <div class="row result_body">
       <div class="col-xs-12 col-sm-4 result_filter">
         
+        <!-- OA specific facet mods.refereed -->
         <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='mods.refereed']/int or
                       /response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='mods.refereed.public']/int">
           <div class="panel panel-default">
@@ -277,6 +278,7 @@
             </div>
           </div>
         </xsl:if>
+        <!-- END specific facet -->
 
         <!-- OA specific changes: " and $hits &gt; 0" -->
         <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='mods.genre']/int and $hits &gt; 0">
@@ -343,7 +345,25 @@
               </ul>
             </div>
           </div>-->
-          
+
+          <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='mods.yearIssued']/int">
+            <div class="panel panel-default">
+              <div class="panel-heading" data-toggle="collapse-next">
+                <h3 class="panel-title">
+                  <xsl:value-of select="i18n:translate('mir.response.yearIssued.facet.title')" />
+                </h3>
+              </div>
+              <div class="panel-body collapse in">
+                <ul class="filter">
+                  <xsl:apply-templates select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
+                    <xsl:with-param name="facet_name" select="'mods.yearIssued'" />
+                  </xsl:apply-templates>
+                </ul>
+              </div>
+            </div>
+          </xsl:if>
+
+          <!-- OA specific facet order -> moved worldReadableComplete to bottom -->
           <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='worldReadableComplete']/int">
             <div class="panel panel-default oa">
               <div class="panel-heading" data-toggle="collapse-next">
@@ -362,8 +382,8 @@
             </div>
           </xsl:if>
           
-	  <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='state']/int and
-		        not(mcrxsl:isCurrentUserGuestUser())">
+          <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='state']/int and
+                        not(mcrxsl:isCurrentUserGuestUser())">
             <div class="panel panel-default">
               <div class="panel-heading" data-toggle="collapse-next">
                 <h3 class="panel-title">
@@ -738,7 +758,7 @@
                   <xsl:for-each select="arr[@name='mods.genre']/str">
                     <div class="hit_type">
                       <span class="label label-info">
-			<!--<xsl:value-of select="$mods-genre-i18n" />-->
+                        <!-- <xsl:value-of select="$mods-genre-i18n" /> -->
                         <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" ></xsl:value-of>
                       </span>
                     </div>
