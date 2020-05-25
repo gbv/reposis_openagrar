@@ -60,7 +60,7 @@
   </xsl:variable>
   <!-- END: OA specific changes -->
   
-        <xsl:template match="/response/result|lst[@name='grouped']/lst[@name='returnId']" priority="10">
+  <xsl:template match="/response/result|lst[@name='grouped']/lst[@name='returnId']" priority="10">
     <xsl:variable name="ResultPages">
       <xsl:if test="($hits &gt; 0) and ($hits &gt; $rows)">
         <div class="pagination_box text-center">
@@ -430,6 +430,9 @@
       </div>
 
     </div>
+    <xsl:if test="string-length($MCR.ORCID.OAuth.ClientSecret) &gt; 0">
+      <script src="{$WebApplicationBaseURL}js/mir/mycore2orcid.js" />
+    </xsl:if>
   </xsl:template>
 
   <xsl:template match="doc" priority="10" mode="resultList">
@@ -829,7 +832,6 @@
                 </div>
               </xsl:if>
               <xsl:if test="string-length($MCR.ORCID.OAuth.ClientSecret) &gt; 0">
-                <script src="{$WebApplicationBaseURL}js/mir/mycore2orcid.js" />
                 <div class="orcid-status" data-id="{$identifier}" />
               </xsl:if>
             </div>
