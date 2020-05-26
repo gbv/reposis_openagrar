@@ -27,7 +27,7 @@
   <xsl:variable name="owns" select="document(concat('user:getOwnedUsers:',$uid))/owns" />
 
   <xsl:template match="user" mode="actions">
-    <xsl:variable name="isCurrentUser" select="$CurrentUser = /user/@name" />
+    <xsl:variable name="isCurrentUser" select="$CurrentUser = $uid" />
     <xsl:if test="(string-length($step) = 0) or ($step = 'changedPassword')">
       <xsl:variable name="isUserAdmin" select="acl:checkPermission(const:getUserAdminPermission())" />
       <xsl:choose>
@@ -348,8 +348,8 @@
     <p>
       <xsl:value-of select="i18n:translate('orcid.integration.confirmed.text')" />
     </p>
-    <xsl:if test="string-length(i18n:translate('orcid.integration.import') &gt; 0) and
-      string-length(i18n:translate('orcid.integration.publish') &gt; 0)">
+    <xsl:if test="string-length(normalize-space(i18n:translate('orcid.integration.import')) &gt; 0) and
+      string-length(normalize-space(i18n:translate('orcid.integration.publish')) &gt; 0)">
       <ul style="margin-top:1ex;">
         <li>
           <xsl:value-of select="i18n:translate('orcid.integration.import')" />
@@ -392,8 +392,8 @@
     <p>
       <xsl:value-of select="i18n:translate('orcid.integration.pending.authorize')" />
     </p>
-    <xsl:if test="string-length(i18n:translate('orcid.integration.import') &gt; 0) and
-      string-length(i18n:translate('orcid.integration.publish') &gt; 0)">
+    <xsl:if test="string-length(normalize-space(i18n:translate('orcid.integration.import'))) &gt; 0 and
+      string-length(normalize-space(i18n:translate('orcid.integration.publish'))) &gt; 0">
       <ul style="margin-top:1ex;">
         <li>
           <xsl:value-of select="i18n:translate('orcid.integration.import')" />

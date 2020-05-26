@@ -389,3 +389,9 @@ li[data-fq="mods.refereed:n/a"]  {
 }
 
 
+/**** FIXME: remove in LTS2019, already fixed there *********/
+div.orcid-status, div.orcid-publish {
+  display: block;
+}
+
+
