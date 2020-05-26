@@ -348,8 +348,8 @@
     <p>
       <xsl:value-of select="i18n:translate('orcid.integration.confirmed.text')" />
     </p>
-    <xsl:if test="string-length(normalize-space(i18n:translate('orcid.integration.import')) &gt; 0) and
-      string-length(normalize-space(i18n:translate('orcid.integration.publish')) &gt; 0)">
+    <xsl:if test="string-length(normalize-space(i18n:translate('orcid.integration.import'))) &gt; 0 and
+                  string-length(normalize-space(i18n:translate('orcid.integration.publish'))) &gt; 0">
       <ul style="margin-top:1ex;">
         <li>
           <xsl:value-of select="i18n:translate('orcid.integration.import')" />
@@ -393,7 +393,7 @@
       <xsl:value-of select="i18n:translate('orcid.integration.pending.authorize')" />
     </p>
     <xsl:if test="string-length(normalize-space(i18n:translate('orcid.integration.import'))) &gt; 0 and
-      string-length(normalize-space(i18n:translate('orcid.integration.publish'))) &gt; 0">
+                  string-length(normalize-space(i18n:translate('orcid.integration.publish'))) &gt; 0">
       <ul style="margin-top:1ex;">
         <li>
           <xsl:value-of select="i18n:translate('orcid.integration.import')" />

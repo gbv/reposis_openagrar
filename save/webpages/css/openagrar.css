@@ -394,4 +394,8 @@ div.orcid-status, div.orcid-publish {
   display: block;
 }
 
+div.orcid-publish {
+  padding-left: 88px;
+}
+
 
