@@ -133,11 +133,11 @@ public class MCRUpdateScopusMetricsEventHandler extends MCREventHandlerBase {
         	String type = identifier.getAttributeValue("type");
         	if (type.equals("issn")) {
         		String issn = identifier.getText();
-        		LOGGER.info("Found ISSN in {}, issn={}", obj.getId(), issn);
+        		LOGGER.debug("Found ISSN in {}, issn={}", obj.getId(), issn);
         		String str = "https://api.elsevier.com/content/serial/title?"
             	    	+ "field=SJR,SNIP&view=STANDARD&apiKey=b59e9c2e9550f905bf3dfeabd0ae2c71"
             		    + "&httpAccept=text/xml&issn=" + issn;
-                
+        		LOGGER.info("Get SNIP, SJR from Scopus API: {}", str);
         		try {
         			URL url = new URL(str);
                     HttpURLConnection conn = null;
@@ -151,7 +151,7 @@ public class MCRUpdateScopusMetricsEventHandler extends MCREventHandlerBase {
                 	        SAXBuilder saxBuilder = new SAXBuilder();
                 	        Document document = saxBuilder.build(conn.getInputStream());
                 	        Element root = document.getRootElement();
-                	        LOGGER.info("received xml from source: "+outp.outputString(root));
+                	        LOGGER.debug("received xml from source: "+outp.outputString(root));
                 	        
                 	        if ( root.getChild("error") != null) {
                 	        	LOGGER.info("Error from Scopus API:" + root.getChild("error").getText());
@@ -184,7 +184,7 @@ public class MCRUpdateScopusMetricsEventHandler extends MCREventHandlerBase {
                                 
                                 Element snipValue;
                                 for (Element SNIP : SNIPList.getChildren()) {
-                                    LOGGER.info("Found SNIP: {} ({}) ",SNIP.getText(),SNIP.getAttributeValue("year"));
+                                    LOGGER.debug("Found SNIP: {} ({}) ",SNIP.getText(),SNIP.getAttributeValue("year"));
                                     snipValue = new Element("value");
                                     snipValue.setAttribute("year",SNIP.getAttributeValue("year"));
                                     snipValue.setText(SNIP.getText());
@@ -202,7 +202,7 @@ public class MCRUpdateScopusMetricsEventHandler extends MCREventHandlerBase {
                                 
                                 Element sjrValue;
                                 for (Element SJR:SJRList.getChildren()) {
-                                    LOGGER.info("Found SJR: {} ({}) ",SJR.getText(),SJR.getAttributeValue("year"));
+                                    LOGGER.debug("Found SJR: {} ({}) ",SJR.getText(),SJR.getAttributeValue("year"));
                                     sjrValue = new Element("value");
                                     sjrValue.setAttribute("year",SJR.getAttributeValue("year"));
                                     sjrValue.setText(SJR.getText());
