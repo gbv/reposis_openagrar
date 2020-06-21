@@ -25,10 +25,29 @@ package org.mycore.mir.metrics;
 
 import java.util.List;
 
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jdom2.Content;
+import org.jdom2.Document;
 import org.jdom2.Element;
+import org.jdom2.filter.Filters;
 import org.jdom2.output.XMLOutputter;
+import org.jdom2.JDOMException;
+import org.jdom2.input.SAXBuilder;
+import org.jdom2.xpath.XPathExpression;
+import org.jdom2.xpath.XPathFactory;
+
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLEncoder;
+
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.lang.StringBuilder;
+
 import org.mycore.access.MCRAccessException;
 import org.mycore.common.MCRConstants;
 import org.mycore.common.MCRException;
@@ -81,24 +100,136 @@ public class MCRUpdateScopusMetricsEventHandler extends MCREventHandlerBase {
     	updateScopusMetrics(obj);
     }
 
-    private final static Logger LOGGER = Logger.getLogger(MCRUpdateScopusMetricsEventHandler.class);
-
-    
-    private void ScopusMetrics(MCRObject obj) {
+    private final static Logger LOGGER = LogManager.getLogger(MCRUpdateScopusMetricsEventHandler.class);
+        
+    private void updateScopusMetrics(MCRObject obj) {
     	    	
-		//XMLOutputter outp = new XMLOutputter();
-    	if (!MCRMODSWrapper.isSupported(object)) {
+		XMLOutputter outp = new XMLOutputter();
+    	if (!MCRMODSWrapper.isSupported(obj)) {
             return;
         }
-
-        Element mods = new MCRMODSWrapper(object).getMODS();
+    	MCRMODSWrapper mcrmodsWrapper = new MCRMODSWrapper(obj);
+        Element mods = mcrmodsWrapper.getMODS();
+        
+        XPathFactory xFactory = XPathFactory.instance();
+        XPathExpression<Element> xPathModsExtension = xFactory.compile("mods:extension[@displayLabel='metrics']", Filters.element(),
+    			 null, MCRConstants.MODS_NAMESPACE);
+        XPathExpression<Element> xPathSnipMetric = xFactory.compile("metric[@type='SNIP']", Filters.element(),
+   			 null, MCRConstants.MODS_NAMESPACE);
+        XPathExpression<Element> xPathSjrMetric = xFactory.compile("metric[@type='SJR']", Filters.element(),
+   			 null, MCRConstants.MODS_NAMESPACE);
+    	
+        List<Element> extensions = xPathModsExtension.evaluate(mods);
+    	Element modsExtension;
+    	if (extensions.size() == 0) {
+    		modsExtension = new Element ("extension", MCRConstants.MODS_NAMESPACE);
+    		modsExtension.setAttribute("displayLabel","metrics");
+    		mods.addContent(modsExtension);
+    	} else {
+    		modsExtension = extensions.get(0);
+    	}
         
         for (Element identifier : mods.getChildren("identifier", MCRConstants.MODS_NAMESPACE)) {
-        	String type = relatedItem.getAttributeValue("type");
-        	if (type.equals('issn')) {
-        		LOGGER.info("Found ISSN in {}, issn={}", object.getId(), issn);
+        	String type = identifier.getAttributeValue("type");
+        	if (type.equals("issn")) {
+        		String issn = identifier.getText();
+        		LOGGER.debug("Found ISSN in {}, issn={}", obj.getId(), issn);
+        		String str = "https://api.elsevier.com/content/serial/title?"
+            	    	+ "field=SJR,SNIP&view=STANDARD&apiKey=b59e9c2e9550f905bf3dfeabd0ae2c71"
+            		    + "&httpAccept=text/xml&issn=" + issn;
+        		LOGGER.info("Get SNIP, SJR from Scopus API: {}", str);
+        		try {
+        			URL url = new URL(str);
+                    HttpURLConnection conn = null;
+                    
+        			conn = (HttpURLConnection) url.openConnection();
+                    int response = conn.getResponseCode();
+                    if (response == 200) {
+                    	StringBuilder stringBuilder = new StringBuilder();
+                    	try {
+                    		conn = (HttpURLConnection) url.openConnection();
+                	        SAXBuilder saxBuilder = new SAXBuilder();
+                	        Document document = saxBuilder.build(conn.getInputStream());
+                	        Element root = document.getRootElement();
+                	        LOGGER.debug("received xml from source: "+outp.outputString(root));
+                	        
+                	        if ( root.getChild("error") != null) {
+                	        	LOGGER.info("Error from Scopus API:" + root.getChild("error").getText());
+                	        	continue;
+                	        }
+                            Element entry = root.getChild("entry");
+                            if ( entry.getChild("SNIPList") == null && entry.getChild("SJRList") == null ) {
+                                LOGGER.info("No SNIP or SJR Metrics for " + issn );
+                	            continue;
+                            }
+                            Element SNIPList = entry.getChild("SNIPList");
+                            Element SJRList = entry.getChild("SJRList");
+                            
+                            Element journalMetrics;
+                            if (modsExtension.getChild("journalMetrics") != null) { 
+                            	journalMetrics = modsExtension.getChild("journalMetrics");
+                            } else {
+                            	journalMetrics=new Element ("journalMetrics");
+                         	    modsExtension.addContent(journalMetrics);
+                            }
+                            
+                            
+                            if (SNIPList != null) {
+                            	List<Element> snipMetrics = xPathSnipMetric.evaluate(journalMetrics);
+                            	for (Element snipMetric2 : snipMetrics) {
+                            		snipMetric2.detach();
+                            	}
+                            	Element snipMetric = new Element("metric");
+                                snipMetric.setAttribute("type","SNIP");
+                                
+                                Element snipValue;
+                                for (Element SNIP : SNIPList.getChildren()) {
+                                    LOGGER.debug("Found SNIP: {} ({}) ",SNIP.getText(),SNIP.getAttributeValue("year"));
+                                    snipValue = new Element("value");
+                                    snipValue.setAttribute("year",SNIP.getAttributeValue("year"));
+                                    snipValue.setText(SNIP.getText());
+                                    snipMetric.addContent(snipValue);
+                                }
+                                if (snipMetric.getChildren().size() > 0) journalMetrics.addContent(snipMetric);
+                            }
+                            if (SJRList != null) {
+                                List<Element> sjrMetrics = xPathSjrMetric.evaluate(journalMetrics);
+                                for (Element sjrMetric2 : sjrMetrics) {
+                            		sjrMetric2.detach();
+                            	}
+                                Element sjrMetric = new Element("metric");
+                                sjrMetric.setAttribute("type","SJR");
+                                
+                                Element sjrValue;
+                                for (Element SJR:SJRList.getChildren()) {
+                                    LOGGER.debug("Found SJR: {} ({}) ",SJR.getText(),SJR.getAttributeValue("year"));
+                                    sjrValue = new Element("value");
+                                    sjrValue.setAttribute("year",SJR.getAttributeValue("year"));
+                                    sjrValue.setText(SJR.getText());
+                                    sjrMetric.addContent(sjrValue);                                
+                                }
+                                if (sjrMetric.getChildren().size() > 0) journalMetrics.addContent(sjrMetric);
+                            }
+                            
+                        
+                    	} catch (org.jdom2.JDOMException e) {
+                    		LOGGER.info("JDOMException - didn't add Scopus Metrics");
+                    		LOGGER.info(e);
+                    	}
+                    } else {
+                	    LOGGER.info("No 200 Response from ScopusAPI - didn't add Scopus Metrics");
+                    }
+        		} catch (MalformedURLException e) {
+            		LOGGER.info("MalformedURLException - didn't add Scopus Metrics");
+            		LOGGER.info(e);
+            	} catch (IOException e) {
+            		LOGGER.info("IOException - didn't add Scopus Metrics");
+            		LOGGER.info(e);
+            	}                 
         	}
         }
+        
+        mcrmodsWrapper.setMODS(mods);
     }
     
 }
