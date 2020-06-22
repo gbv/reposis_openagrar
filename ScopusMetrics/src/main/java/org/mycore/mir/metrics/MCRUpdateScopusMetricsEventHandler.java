@@ -58,6 +58,7 @@ import org.mycore.datamodel.metadata.MCRMetaLinkID;
 import org.mycore.datamodel.metadata.MCRMetadataManager;
 import org.mycore.datamodel.metadata.MCRObject;
 import org.mycore.datamodel.metadata.MCRObjectID;
+import org.mycore.datamodel.metadata.MCRObjectService;
 import org.mycore.mods.MCRMODSWrapper;
 
 import org.mycore.common.xml.MCRURIResolver;
@@ -147,8 +148,7 @@ public class MCRUpdateScopusMetricsEventHandler extends MCREventHandlerBase {
                     if (response == 200) {
                     	StringBuilder stringBuilder = new StringBuilder();
                     	try {
-                    		conn = (HttpURLConnection) url.openConnection();
-                	        SAXBuilder saxBuilder = new SAXBuilder();
+                    		SAXBuilder saxBuilder = new SAXBuilder();
                 	        Document document = saxBuilder.build(conn.getInputStream());
                 	        Element root = document.getRootElement();
                 	        LOGGER.debug("received xml from source: "+outp.outputString(root));
@@ -210,7 +210,9 @@ public class MCRUpdateScopusMetricsEventHandler extends MCREventHandlerBase {
                                 }
                                 if (sjrMetric.getChildren().size() > 0) journalMetrics.addContent(sjrMetric);
                             }
-                            
+                            if (SNIPList != null || SJRList != null) {
+                                obj.getService().setDate(MCRObjectService.DATE_TYPE_MODIFYDATE);
+                            }
                         
                     	} catch (org.jdom2.JDOMException e) {
                     		LOGGER.info("JDOMException - didn't add Scopus Metrics");
@@ -229,7 +231,7 @@ public class MCRUpdateScopusMetricsEventHandler extends MCREventHandlerBase {
         	}
         }
         
-        mcrmodsWrapper.setMODS(mods);
+        
     }
     
 }
