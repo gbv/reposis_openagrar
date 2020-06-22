@@ -218,6 +218,8 @@ public class MCRUpdateScopusMetricsEventHandler extends MCREventHandlerBase {
                     		LOGGER.info("JDOMException - didn't add Scopus Metrics");
                     		LOGGER.info(e);
                     	}
+                    } else if (response == 401 || response == 403) {
+                    	LOGGER.error("Acces denied to the Scopus API - didn't add Scopus Metrics");
                     } else {
                 	    LOGGER.info("No 200 Response from ScopusAPI - didn't add Scopus Metrics");
                     }
