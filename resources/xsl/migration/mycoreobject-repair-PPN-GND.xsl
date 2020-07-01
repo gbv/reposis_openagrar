@@ -7,17 +7,16 @@
   xmlns:mcrdataurl="xalan://org.mycore.datamodel.common.MCRDataURL">
   
   <xsl:include href="copynodes.xsl" />
-  <xsl:include href="editor/mods-node-utils.xsl" />
-  <xsl:include href="mods-utils.xsl"/>
-  <xsl:include href="coreFunctions.xsl"/>
-  
-  <xsl:template match="mods:mods/mods:name/mods:nameIdentifier[starts-with(.,'(DE-601)')]">
+    
+  <xsl:template match="mods:mods/mods:name/mods:nameIdentifier[@type='gnd'][starts-with(.,'(DE-601)')]">
   </xsl:template>
   
-  <xsl:template match="mods:mods/mods:name/mods:nameIdentifier[starts-with(.,'(DE-588)')]">
-    <xsl:copy>
+  <xsl:template match="mods:mods/mods:name/mods:nameIdentifier[@type='gnd'][starts-with(.,'(DE-588)')]">
+    <mods:nameIdentifier type="gnd">
       <xsl:value-of select="substring-after(.,'(DE-588)')" />
-    </xsl:copy>  
+    </mods:nameIdentifier>
   </xsl:template>
+  
+  
   
 </xsl:stylesheet>
