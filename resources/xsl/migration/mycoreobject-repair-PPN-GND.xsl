@@ -16,13 +16,5 @@
       <xsl:value-of select="substring-after(.,'(DE-588)')" />
     </mods:nameIdentifier>
   </xsl:template>
-  
-  <!-- Set the prefix mods to all mods nodes. -->
-  <xsl:template match="*[contains(namespace-uri(),'www.loc.gov/mods')]">  
-    <xsl:element name="mods:{local-name()}"> 
-      <xsl:copy-of select="namespace::*" />
-      <xsl:apply-templates select="node()|@*" />
-    </xsl:element>
-  </xsl:template>
-  
+    
 </xsl:stylesheet>
