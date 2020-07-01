@@ -12,9 +12,12 @@
   </xsl:template>
   
   <xsl:template match="mods:mods/mods:name/mods:nameIdentifier[@type='gnd'][starts-with(.,'(DE-588)')]">
-    <mods:nameIdentifier type="gnd">
-      <xsl:value-of select="substring-after(.,'(DE-588)')" />
-    </mods:nameIdentifier>
+    <xsl:variable name="gnd" select="substring-after(.,'(DE-588)')"/>
+    <xsl:if test="not(../mods:nameIdentifier[@type='gnd'][text()=$gnd])">
+      <mods:nameIdentifier type="gnd">
+        <xsl:value-of select="$gnd" />
+      </mods:nameIdentifier>
+    </xsl:if>
   </xsl:template>
     
 </xsl:stylesheet>
