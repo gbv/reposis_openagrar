@@ -102,6 +102,40 @@ public class MCRUpdateScopusMetricsEventHandler extends MCREventHandlerBase {
     }
 
     private final static Logger LOGGER = LogManager.getLogger(MCRUpdateScopusMetricsEventHandler.class);
+    
+    public static void setValues(Element MetricList, Element journalMetrics, String MetricName) {
+    	XPathFactory xFactory = XPathFactory.instance();
+    	Element metric;
+    	XPathExpression<Element> xPathMetric = xFactory.compile("metric[@type='" + MetricName + "']", Filters.element(),
+      			 null, MCRConstants.MODS_NAMESPACE);
+    	List<Element> metrics = xPathMetric.evaluate(journalMetrics);
+    	if (metrics.isEmpty()) {
+    		metric = new Element("metric");
+            metric.setAttribute("type", MetricName);
+            journalMetrics.addContent(metric);
+    	} else {
+    		metric = (Element) metrics.get(0);
+    	}
+    	
+        for (Element SNIP : MetricList.getChildren()) {
+        	String value = SNIP.getText();
+        	String year = SNIP.getAttributeValue("year");
+            LOGGER.debug("Found " + MetricName + ": {} ({}) ",value,year);
+        	XPathExpression<Element> xPathValue = xFactory.compile("value[@year='" + year + "']", Filters.element(),
+         			 null, MCRConstants.MODS_NAMESPACE);
+       	    List<Element> valueNodes = xPathValue.evaluate(metric);
+       	    if (valueNodes.isEmpty()) {
+       	    	Element node = new Element("value");
+                node.setAttribute("year",year);
+                node.setText(value);
+                metric.addContent(node);
+       	    } else {
+       	    	for(Element node : valueNodes){
+       	    		node.setText(value);
+       	    	}
+       	    }
+        }
+    }
         
     private void updateScopusMetrics(MCRObject obj) {
     	    	
@@ -115,11 +149,7 @@ public class MCRUpdateScopusMetricsEventHandler extends MCREventHandlerBase {
         XPathFactory xFactory = XPathFactory.instance();
         XPathExpression<Element> xPathModsExtension = xFactory.compile("mods:extension[@displayLabel='metrics']", Filters.element(),
     			 null, MCRConstants.MODS_NAMESPACE);
-        XPathExpression<Element> xPathSnipMetric = xFactory.compile("metric[@type='SNIP']", Filters.element(),
-   			 null, MCRConstants.MODS_NAMESPACE);
-        XPathExpression<Element> xPathSjrMetric = xFactory.compile("metric[@type='SJR']", Filters.element(),
-   			 null, MCRConstants.MODS_NAMESPACE);
-    	
+        
         List<Element> extensions = xPathModsExtension.evaluate(mods);
     	Element modsExtension;
     	if (extensions.size() == 0) {
@@ -175,40 +205,10 @@ public class MCRUpdateScopusMetricsEventHandler extends MCREventHandlerBase {
                             
                             
                             if (SNIPList != null) {
-                            	List<Element> snipMetrics = xPathSnipMetric.evaluate(journalMetrics);
-                            	for (Element snipMetric2 : snipMetrics) {
-                            		snipMetric2.detach();
-                            	}
-                            	Element snipMetric = new Element("metric");
-                                snipMetric.setAttribute("type","SNIP");
-                                
-                                Element snipValue;
-                                for (Element SNIP : SNIPList.getChildren()) {
-                                    LOGGER.debug("Found SNIP: {} ({}) ",SNIP.getText(),SNIP.getAttributeValue("year"));
-                                    snipValue = new Element("value");
-                                    snipValue.setAttribute("year",SNIP.getAttributeValue("year"));
-                                    snipValue.setText(SNIP.getText());
-                                    snipMetric.addContent(snipValue);
-                                }
-                                if (snipMetric.getChildren().size() > 0) journalMetrics.addContent(snipMetric);
+                            	setValues(SNIPList,journalMetrics,"SNIP");
                             }
                             if (SJRList != null) {
-                                List<Element> sjrMetrics = xPathSjrMetric.evaluate(journalMetrics);
-                                for (Element sjrMetric2 : sjrMetrics) {
-                            		sjrMetric2.detach();
-                            	}
-                                Element sjrMetric = new Element("metric");
-                                sjrMetric.setAttribute("type","SJR");
-                                
-                                Element sjrValue;
-                                for (Element SJR:SJRList.getChildren()) {
-                                    LOGGER.debug("Found SJR: {} ({}) ",SJR.getText(),SJR.getAttributeValue("year"));
-                                    sjrValue = new Element("value");
-                                    sjrValue.setAttribute("year",SJR.getAttributeValue("year"));
-                                    sjrValue.setText(SJR.getText());
-                                    sjrMetric.addContent(sjrValue);                                
-                                }
-                                if (sjrMetric.getChildren().size() > 0) journalMetrics.addContent(sjrMetric);
+                            	setValues(SJRList,journalMetrics,"SJR");
                             }
                             if (SNIPList != null || SJRList != null) {
                                 obj.getService().setDate(MCRObjectService.DATE_TYPE_MODIFYDATE);

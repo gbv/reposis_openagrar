@@ -398,41 +398,16 @@
 
   <xsl:template match="mods:extension[@displayLabel='characteristics']" mode="oa">
     <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
-      <tr>
-        <td valign="top" class="metaname">
-          <xsl:value-of select="concat(i18n:translate('component.mods.metaData.dictionary.characteristics'),':')" />
-        </td>
-        <td class="metavalue">
-          <table class="table table-condensed">
-            <tr>
-              <th>
-                <xsl:value-of select="i18n:translate('component.mods.metaData.dictionary.year')" />
-              </th>
-              <th>
-                <xsl:value-of select="i18n:translate('component.mods.metaData.dictionary.impact')" />
-              </th>
-              <th>
-                <xsl:value-of select="i18n:translate('component.mods.metaData.dictionary.refereed')" />
-              </th>
-            </tr>
-            <xsl:for-each select="chars">
-              <tr>
-                <td>
-                  <xsl:value-of select="@year" />
-                </td>
-                <td>
-                  <xsl:value-of select="@factor" />
-                </td>
-                <td>
-                  <xsl:if test="@refereed">
-                    <xsl:value-of select="i18n:translate(concat('component.mods.metaData.dictionary.refereed.',@refereed))" />
-                  </xsl:if>
-                </td>
-              </tr>
-            </xsl:for-each>
-          </table>
-        </td>
-      </tr>
+      <xsl:if test="chars/@refereed">
+        <tr>
+          <td valign="top" class="metaname">
+            <xsl:value-of select="concat(i18n:translate('component.mods.metaData.dictionary.characteristics'),':')" />
+          </td>
+          <td class="metavalue">
+            <xsl:value-of select="i18n:translate(concat('component.mods.metaData.dictionary.refereed.',chars/@refereed))" />
+          </td>
+        </tr>
+      </xsl:if>
     </xsl:if>
   </xsl:template>
   
@@ -467,6 +442,7 @@
                 </xsl:for-each>
               </tr>
               <xsl:for-each select="//journalMetrics/metric/value[not(preceding::value/@year = @year)]">
+                <xsl:sort select="@year" data-type="number"/>
                 <xsl:variable name="year" select="@year"/>
                 <tr>
                   <td>

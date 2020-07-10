@@ -156,5 +156,113 @@
       display="global" />
     <xed:validate xpath="//mods:part/@order" type="integer" display="global" i18n="mir.validation.order" />
   </xed:template>
+  
+  <xed:template id="cleanup-rules-oa">
+    <xed:cleanup-rule xpath="//mods:extension[@displayLabel='metrics']" relevant-if="(string-length(journalMetrics/metric/value/text()) &gt; 0) " />
+  </xed:template>
+  
+  <xed:template id="extension.characteristics">
+    <div class="form-group {$xed-validation-marker}">
+      <label class="col-md-3 control-label">
+        <xed:output i18n="component.mods.metaData.dictionary.refereed" />
+      </label>
+      <div class="col-md-6">
+        <xed:bind xpath="mods:extension[@displayLabel='characteristics']/chars/@refereed">
+          <select class="form-control" style="font-weight:bold;">
+            <option value="">
+              <xed:output i18n="mir.select.optional" />
+            </option>
+            <option value="yes">
+              <xed:output i18n="mir.characteristics.yes" />
+            </option>
+            <option value="no">
+              <xed:output i18n="mir.characteristics.no" />
+            </option>
+          </select>
+        </xed:bind>
+      </div>
+      <mir:help-pmud help-text="{i18n:mir.help.extension.characteristics}" />
+    </div>
+  </xed:template>
+  
+  <xed:template id="extension.journalmetrics">
+    <fieldset>
+      <legend class="mir-fieldset-legend">
+        Journal Metriken
+      </legend>
+      <div class="mir-fieldset-content">
+        <div class="form-group">
+          <div class="row">
+            <label class="col-md-2 col-md-offset-3 col-form-label">
+              <xed:output i18n="component.mods.metaData.dictionary.year" />
+            </label>
+            <label class="col-md-2 col-form-label">
+              <xed:output value="'JCR'" />
+            </label>
+          </div>
+          <xed:repeat xpath="mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value">
+            <div class="row">
+              <label class="col-md-2 col-md-offset-3">
+                <xed:bind xpath="@year">
+                  <input type="text" class="form-control" placeholder="{i18n:mir.placeholder.characteristics.year}" />
+                </xed:bind>
+              </label>
+              <label class="col-md-2">
+                <input type="text" class="form-control" placeholder="{i18n:mir.placeholder.characteristics.factor}" />
+              </label>
+              <mir:help-pmud help-text="{i18n:mir.help.extension.characteristics}" pmud="true" />
+            </div>
+          </xed:repeat>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <label class="col-md-2 col-md-offset-3 col-form-label">
+              <xed:output i18n="component.mods.metaData.dictionary.year" />
+            </label>
+            <label class="col-md-2 col-form-label">
+              <xed:output value="'SNIP'" />
+            </label>
+          </div>
+          <xed:repeat xpath="mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='SNIP']/value">
+            <div class="row">
+              <label class="col-md-2 col-md-offset-3">
+                <xed:bind xpath="@year">
+                  <input type="text" class="form-control" placeholder="{i18n:mir.placeholder.characteristics.year}" />
+                </xed:bind>
+              </label>
+              <label class="col-md-2">
+                <input type="text" class="form-control" placeholder="'SNIP'" />
+              </label>
+              <mir:help-pmud help-text="{i18n:mir.help.extension.characteristics}" pmud="true" />
+            </div>
+          </xed:repeat>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <label class="col-md-2 col-md-offset-3 col-form-label">
+              <xed:output i18n="component.mods.metaData.dictionary.year" />
+            </label>
+            <label class="col-md-2 col-form-label">
+              <xed:output value="'SJR'" />
+            </label>
+          </div>
+          <xed:repeat xpath="mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='SJR']/value">
+            <div class="row">
+              <label class="col-md-2 col-md-offset-3">
+                <xed:bind xpath="@year">
+                  <input type="text" class="form-control" placeholder="{i18n:mir.placeholder.characteristics.year}" />
+                </xed:bind>
+              </label>
+              <label class="col-md-2">
+                <input type="text" class="form-control" placeholder="'SJR" />
+              </label>
+              <mir:help-pmud help-text="{i18n:mir.help.extension.characteristics}" pmud="true" />
+            </div>
+          </xed:repeat>
+        </div>  
+      </div>
+    </fieldset>
+
+  </xed:template>
 
 </xed:template>
