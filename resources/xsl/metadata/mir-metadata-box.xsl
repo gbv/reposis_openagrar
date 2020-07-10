@@ -442,6 +442,7 @@
                 </xsl:for-each>
               </tr>
               <xsl:for-each select="//journalMetrics/metric/value[not(preceding::value/@year = @year)]">
+                <xsl:sort select="@year" data-type="number"/>
                 <xsl:variable name="year" select="@year"/>
                 <tr>
                   <td>
