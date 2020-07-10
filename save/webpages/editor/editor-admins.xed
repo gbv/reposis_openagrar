@@ -45,14 +45,15 @@
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="abstract.repeated" />
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-openagrar.xed" ref="source" />
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="openAIRE" />
-        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="extension.characteristics" />
+        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-openagrar.xed" ref="extension.characteristics" />
+        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-openagrar.xed" ref="extension.journalmetrics" />
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-openagrar.xed" ref="oa.annual_review" />
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="related.item.search.of.all.items" />
 
         <xed:include uri="webapp:editor/editor-includes.xed" ref="cancel.submit" />
         <xed:include uri="webapp:editor/editor-includes.xed" ref="cleanup-rules" />
+        <xed:include uri="webapp:editor/editor-includes-openagrar.xed" ref="cleanup-rules-oa" />
         <xed:include uri="webapp:editor/editor-includes-openagrar.xed" ref="validation-rules" />
-
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="javascript" />
         <!-- frame for modal window -->
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="modal.name" />
