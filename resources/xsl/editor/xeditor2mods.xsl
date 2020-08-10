@@ -279,5 +279,14 @@
       <xsl:apply-templates select="mods:holdingExternal" />
     </xsl:copy>
   </xsl:template>
+  
+  <xsl:template match="mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value">
+    <xsl:variable name="value" select="."/>
+    <xsl:copy>
+      <xsl:copy-of select="@*" />
+      <xsl:value-of select="document(concat('encrypt:',$value))/value"/>
+    </xsl:copy>
+  </xsl:template>
+  
 
 </xsl:stylesheet>
