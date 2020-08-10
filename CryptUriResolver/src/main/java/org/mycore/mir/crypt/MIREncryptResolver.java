@@ -19,6 +19,7 @@ import org.jdom2.input.SAXBuilder;
 import org.jdom2.transform.JDOMSource;
 
 import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
 import javax.crypto.KeyGenerator;
 import javax.crypto.Cipher;
 import java.security.GeneralSecurityException;

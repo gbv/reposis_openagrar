@@ -54,6 +54,9 @@ public class MIRDecryptResolver implements URIResolver {
         	byte[] utf8Bytes = cipher.doFinal(encryptedBytes);
 	        decryptedString = new String(utf8Bytes, "UTF8");
 	        LOGGER.info("DecyptedString: {}", decryptedString );
+        } catch (java.lang.IllegalArgumentException e) {
+        	decryptedString = value;
+        	LOGGER.info("catch java.lang.IllegalArgumentException - i.e. value not encoded - return orignal value: {}", decryptedString );
     	} catch ( NoSuchAlgorithmException | InvalidKeyException | UnsupportedEncodingException e) {
     		throw new TransformerException("Error while building document!", e);
     	} catch ( GeneralSecurityException e) {
