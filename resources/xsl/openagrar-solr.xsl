@@ -152,5 +152,9 @@
     <xsl:for-each select="//mods:identifier[@type='issn']">
       <field name="mods.identifier.issn"><xsl:value-of select="."/></field> 
     </xsl:for-each>
+    <xsl:variable name="yearIssued" select="2019"/>
+    <xsl:if test="//mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]">
+      <field name="mods.extension.metric.jcr"><xsl:value-of select="document(concat('encrypt:','1.5'))/value"/></field>
+    </xsl:if>
   </xsl:template>
 </xsl:stylesheet>

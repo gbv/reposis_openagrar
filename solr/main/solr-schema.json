@@ -152,5 +152,14 @@
       "stored": false,
       "multiValued":true
     }
+  },
+  {
+    "add-field": {
+      "name": "mods.extension.metric.jcr",
+      "type": "string",
+      "indexed": true,
+      "stored": false,
+      "multiValued":true
+    }
   }
 ]
