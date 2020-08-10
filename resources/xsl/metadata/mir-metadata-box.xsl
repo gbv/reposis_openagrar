@@ -450,7 +450,15 @@
                   </td>
                   <xsl:for-each select="//journalMetrics/metric">
                     <td>
-                      <xsl:value-of select="value[@year = $year]"/>
+                      <xsl:choose>
+                        <xsl:when test="@type='JCR'">
+                          <xsl:variable name="decrypturi" select="concat('decrypt:',value[@year = $year])"/>
+                          <xsl:value-of select="document($decrypturi)/value"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                          <xsl:value-of select="value[@year = $year]"/>
+                        </xsl:otherwise>
+                      </xsl:choose>
                     </td>
                   </xsl:for-each>
                 </tr>
