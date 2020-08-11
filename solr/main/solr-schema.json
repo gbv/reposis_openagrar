@@ -161,7 +161,7 @@
       "stored": false,
       "multiValued":true
     }
-  }
+  },
   {
     "add-field": {
       "name": "oa.statistic.metric.jcr.class1Yb",
