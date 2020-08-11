@@ -37,9 +37,16 @@
       } else {
         year=new Date().getFullYear();
       }
+      var JCRClasses1Yb=false;
+      if (searchParams.has("JCRClasses1Yb") === true &amp;&amp; searchParams.get("JCRClasses1Yb") == 'true' ) {
+        JCRClasses1Yb=true;
+      } 
       
       $(document).ready( function() {
         $('h1').text(" Statistik - JKI Jahresstatistik " + year);
+        var year_jcr = year;
+        if (JCRClasses1Yb) year_jcr = year -1;
+        $('#text_jcr').text(" mit den JCR von (" + year_jcr + ")");
       });
       
       var q_query = "mods.yearIssued:" + year;
@@ -173,11 +180,13 @@
       var q_instZO='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_zo"';
       var q_instZR='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_zr"';
       
-      var q_jcrclass1 = '(oa.statistic.metric.jcr.class:"&lt; 1")';
-      var q_jcrclass2 = '(oa.statistic.metric.jcr.class:"1-3")';
-      var q_jcrclass3 = '(oa.statistic.metric.jcr.class:"3-6")';
-      var q_jcrclass4 = '(oa.statistic.metric.jcr.class:"6-9")';
-      var q_jcrclass5 = '(oa.statistic.metric.jcr.class:"&gt; 9")';
+      var Fieldname = (JCRClasses1Yb) ? 'oa.statistic.metric.jcr.class1Yb' : 'oa.statistic.metric.jcr.class';
+      
+      var q_jcrclass1 = '(' + Fieldname + ':"&lt; 1")';
+      var q_jcrclass2 = '(' + Fieldname + ':"1-3")';
+      var q_jcrclass3 = '(' + Fieldname + ':"3-6")';
+      var q_jcrclass4 = '(' + Fieldname + ':"6-9")';
+      var q_jcrclass5 = '(' + Fieldname + ':"&gt; 9")';
       
     </script>
     <script src='../../js/searchcount.js'> </script>
@@ -187,6 +196,8 @@
     
     <div class="row">
       <h1>Statistik - JKI Jahresstatistik </h1>
+      
+      <p id="text_jcr"> Text IP</p>
       
       <table>
         <tr>
