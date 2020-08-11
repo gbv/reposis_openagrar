@@ -475,14 +475,13 @@
   <xsl:template match="mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']" mode="oa">
     <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
       <xsl:variable name="yearIssued" select="substring(//mods:mods/mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf'],1,4)"/>
-      <xsl:variable name="yearIssued1Yb" select="$yearIssued"/>
       <tr>
         <td valign="top" class="metaname">
           <xsl:value-of select="concat('Journal Metrics',':')" />
         </td>
         <td class="metavalue">
           <table class="table table-condensed">
-            <xsl:for-each select="journalMetrics/metric">
+            <xsl:for-each select="journalMetrics/metric[value/@year = $yearIssued]">
               <tr>
                 <td>
                   <xsl:value-of select="@type"/>
