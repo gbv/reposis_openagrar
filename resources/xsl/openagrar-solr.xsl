@@ -152,34 +152,50 @@
     <xsl:for-each select="//mods:identifier[@type='issn']">
       <field name="mods.identifier.issn"><xsl:value-of select="."/></field> 
     </xsl:for-each>
+    
     <xsl:variable name="yearIssued" select="substring(//mods:mods/mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf'],1,4)"/>
-    <xsl:variable name="yearIssued1Yb" select="$yearIssued"/>
+    <xsl:variable name="yearIssued1Yb" select="$yearIssued - 1"/>
     <xsl:if test="//mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]">
       <xsl:variable name="encryptedJCR" select="//mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]"/>
       <xsl:variable name="JCR" select="document(concat('decrypt:',$encryptedJCR))/value"/>
-      <field name="debug.JCR"><xsl:value-of select="$JCR"/></field>
-      
-      <xsl:if test="number($JCR) = $JCR">
-        <field name="oa.statistic.metric.jcr.class">
-          <xsl:choose>
-            <xsl:when test="$JCR &lt; 1">
-              <xsl:value-of select="'&lt; 1'"></xsl:value-of>
-            </xsl:when>
-            <xsl:when test="1 &lt;= $JCR and $JCR &lt; 3">
-              <xsl:value-of select="'1-3'"></xsl:value-of>
-            </xsl:when>
-            <xsl:when test="3 &lt;= $JCR and $JCR &lt; 6">
-              <xsl:value-of select="'3-6'"></xsl:value-of>
-            </xsl:when>
-            <xsl:when test="6 &lt;= $JCR and $JCR &lt; 9">
-              <xsl:value-of select="'6-9'"></xsl:value-of>
-            </xsl:when>
-            <xsl:when test="$JCR &gt;= 9">
-              <xsl:value-of select="'&gt; 9'"></xsl:value-of>
-            </xsl:when>
-          </xsl:choose>
-        </field>
-      </xsl:if>
+      <xsl:variable name="encryptedJCR1Yb" select="//mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued1Yb]"/>
+      <xsl:variable name="JCR1Yb" select="document(concat('decrypt:',$encryptedJCR1Yb))/value"/>
+      <xsl:call-template name="JCR2JCRClass">
+        <xsl:with-param name="JCR" select="$JCR"/>
+        <xsl:with-param name="Fieldname" select="'oa.statistic.metric.jcr.class'"/>
+      </xsl:call-template>
+      <xsl:call-template name="JCR2JCRClass">
+        <xsl:with-param name="JCR" select="$JCR1Yb"/>
+        <xsl:with-param name="Fieldname" select="'oa.statistic.metric.jcr.class1Yb'"/>
+      </xsl:call-template>
     </xsl:if>
   </xsl:template>
+  
+  <xsl:template name="JCR2JCRClass">
+    <xsl:param name = "Fieldname" />
+    <xsl:param name = "JCR" />
+
+    <xsl:if test="number($JCR) = $JCR">
+      <field name="{$Fieldname}">
+        <xsl:choose>
+          <xsl:when test="$JCR &lt; 1">
+            <xsl:value-of select="'&lt; 1'"></xsl:value-of>
+          </xsl:when>
+          <xsl:when test="1 &lt;= $JCR and $JCR &lt; 3">
+            <xsl:value-of select="'1-3'"></xsl:value-of>
+          </xsl:when>
+          <xsl:when test="3 &lt;= $JCR and $JCR &lt; 6">
+            <xsl:value-of select="'3-6'"></xsl:value-of>
+          </xsl:when>
+          <xsl:when test="6 &lt;= $JCR and $JCR &lt; 9">
+            <xsl:value-of select="'6-9'"></xsl:value-of>
+          </xsl:when>
+          <xsl:when test="$JCR &gt;= 9">
+            <xsl:value-of select="'&gt; 9'"></xsl:value-of>
+          </xsl:when>
+        </xsl:choose>
+      </field>
+    </xsl:if>
+  </xsl:template>
+  
 </xsl:stylesheet>
