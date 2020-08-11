@@ -155,7 +155,16 @@
   },
   {
     "add-field": {
-      "name": "mods.extension.metric.jcr",
+      "name": "oa.statistic.metric.jcr.class",
+      "type": "string",
+      "indexed": true,
+      "stored": false,
+      "multiValued":true
+    }
+  }
+  {
+    "add-field": {
+      "name": "oa.statistic.metric.jcr.class1Yb",
       "type": "string",
       "indexed": true,
       "stored": false,
