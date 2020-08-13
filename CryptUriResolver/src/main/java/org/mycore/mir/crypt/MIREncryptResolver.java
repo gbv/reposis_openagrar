@@ -29,6 +29,9 @@ import java.io.UnsupportedEncodingException;
 
 import org.mycore.common.MCRConstants;
 import org.mycore.datamodel.common.MCRDataURL;
+import org.mycore.common.config.MCRConfiguration2;
+import org.mycore.common.config.MCRConfigurationException;
+import org.mycore.access.MCRAccessManager;
 
 public class MIREncryptResolver implements URIResolver {
 
@@ -38,10 +41,12 @@ public class MIREncryptResolver implements URIResolver {
 
     @Override
     public Source resolve(String s, String s1) throws TransformerException {
-        final String value = s.substring("decrypt:".length());
+        String s2 = s.substring("decrypt:".length());
+        final String keyID = (s2.indexOf(":") >= 0) ? s2.substring(0,s2.indexOf(":")) : "key1";
+        final String value = (s2.indexOf(":") >= 0) ? s2.substring(s2.indexOf(":") + 1) : s2;
         
+        //String encodedKey = "FwoNZoiScGvNDCIlSt8/7A=="; 
         String encryptedString = "";
-        String encodedKey = "FwoNZoiScGvNDCIlSt8/7A==";
         
         try {
         	// Implement Key Generation
@@ -49,18 +54,25 @@ public class MIREncryptResolver implements URIResolver {
         	String tmpEncodedKey = java.util.Base64.getEncoder().encodeToString(tmpSecretKey.getEncoded());
             LOGGER.info("Temporaly Secret Key: {}", tmpEncodedKey );
             
-            byte[] decodedKey = java.util.Base64.getDecoder().decode(encodedKey);
-            SecretKey secretKey = new SecretKeySpec(decodedKey, 0, decodedKey.length, "AES"); 
-	        Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5PADDING");
-	        cipher.init(Cipher.ENCRYPT_MODE, secretKey);
-	        byte[] utf8Bytes = value.getBytes("UTF8");
-	        byte[] encryptedBytes = cipher.doFinal(utf8Bytes);
-	        encryptedString = java.util.Base64.getEncoder().encodeToString(encryptedBytes);
-	        LOGGER.info("EncyptedString: {}", encryptedString );
-    	} catch ( NoSuchAlgorithmException | InvalidKeyException | UnsupportedEncodingException e) {
-    		throw new TransformerException("Error while building document!", e);
+            if (MCRAccessManager.checkPermission("key:" + keyID , "encrypt" )) {
+            	String encodedKey = MCRConfiguration2.getStringOrThrow("MCR.URIResolver.Keys." + keyID);
+	            byte[] decodedKey = java.util.Base64.getDecoder().decode(encodedKey);
+	            SecretKey secretKey = new SecretKeySpec(decodedKey, 0, decodedKey.length, "AES"); 
+		        Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5PADDING");
+		        cipher.init(Cipher.ENCRYPT_MODE, secretKey);
+		        byte[] utf8Bytes = value.getBytes("UTF8");
+		        byte[] encryptedBytes = cipher.doFinal(utf8Bytes);
+		        encryptedString = java.util.Base64.getEncoder().encodeToString(encryptedBytes);
+		        LOGGER.info("EncyptedString: {}", encryptedString );
+            } else {
+            	throw new TransformerException("No Permission in ACL to encrypt with the key(" + keyID + ")");
+            }
+        } catch (MCRConfigurationException e) {
+            throw new TransformerException("Can't encrypt value - missed key (" + keyID + ") in properties.", e);
+        } catch ( NoSuchAlgorithmException | InvalidKeyException | UnsupportedEncodingException e) {
+    		throw new TransformerException("Can't encrypt value - wrong configuration", e);
     	} catch ( GeneralSecurityException e) {
-    		throw new TransformerException("Error while building document!", e);
+    		throw new TransformerException("Can't encrypt value.", e);
     	}
         final Element root = new Element("value");
         root.setText(encryptedString);

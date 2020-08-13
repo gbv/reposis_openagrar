@@ -29,6 +29,9 @@ import java.io.UnsupportedEncodingException;
 
 import org.mycore.common.MCRConstants;
 import org.mycore.datamodel.common.MCRDataURL;
+import org.mycore.common.config.MCRConfiguration2;
+import org.mycore.common.config.MCRConfigurationException;
+import org.mycore.access.MCRAccessManager;
 
 
 
@@ -40,27 +43,39 @@ public class MIRDecryptResolver implements URIResolver {
 
     @Override
     public Source resolve(String s, String s1) throws TransformerException {
-        final String value = s.substring("decrypt:".length());
+        String s2 = s.substring("decrypt:".length());
+        final String keyID = (s2.indexOf(":") >= 0) ? s2.substring(0,s2.indexOf(":")) : "key1";
+        final String value = (s2.indexOf(":") >= 0) ? s2.substring(s2.indexOf(":") + 1) : s2;
         
-        String encodedKey = "FwoNZoiScGvNDCIlSt8/7A=="; 
+        //String encodedKey = "FwoNZoiScGvNDCIlSt8/7A=="; 
         String decryptedString = "";
         
         try {
-        	byte[] decodedKey = java.util.Base64.getDecoder().decode(encodedKey);
-            SecretKey secretKey = new SecretKeySpec(decodedKey, 0, decodedKey.length, "AES"); 
-        	Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5PADDING");
-        	cipher.init(Cipher.DECRYPT_MODE, secretKey);
-        	byte[] encryptedBytes = java.util.Base64.getDecoder().decode(value);
-        	byte[] utf8Bytes = cipher.doFinal(encryptedBytes);
-	        decryptedString = new String(utf8Bytes, "UTF8");
-	        LOGGER.info("DecyptedString: {}", decryptedString );
+        	if (MCRAccessManager.checkPermission("key:" + keyID , "decrypt" )) {
+        		String encodedKey = MCRConfiguration2.getStringOrThrow("MCR.URIResolver.Keys." + keyID);
+            	byte[] decodedKey = java.util.Base64.getDecoder().decode(encodedKey);
+                SecretKey secretKey = new SecretKeySpec(decodedKey, 0, decodedKey.length, "AES"); 
+            	Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5PADDING");
+            	cipher.init(Cipher.DECRYPT_MODE, secretKey);
+            	byte[] encryptedBytes = java.util.Base64.getDecoder().decode(value);
+            	byte[] utf8Bytes = cipher.doFinal(encryptedBytes);
+    	        decryptedString = new String(utf8Bytes, "UTF8");
+    	        LOGGER.info("DecyptedString: {}", decryptedString );
+        	} else {
+        		LOGGER.info("No Permission in ACL to decrypt with the key(" + keyID + ") ");
+        		decryptedString = value;
+        	} 
+        } catch (MCRConfigurationException e) {
+            String msg = "Can't decrypt value - missed key (" + keyID + ") in properties.";
+            LOGGER.info(msg, e);
+            decryptedString = value;
         } catch (java.lang.IllegalArgumentException e) {
         	decryptedString = value;
         	LOGGER.info("catch java.lang.IllegalArgumentException - i.e. value not encoded - return orignal value: {}", decryptedString );
     	} catch ( NoSuchAlgorithmException | InvalidKeyException | UnsupportedEncodingException e) {
-    		throw new TransformerException("Error while building document!", e);
+    		throw new TransformerException("Can't decrypt value - wrong configuration", e);
     	} catch ( GeneralSecurityException e) {
-    		throw new TransformerException("Error while building document!", e);
+    		throw new TransformerException("Can't decrypt value.", e);
     	}
         final Element root = new Element("value");
         root.setText(decryptedString);

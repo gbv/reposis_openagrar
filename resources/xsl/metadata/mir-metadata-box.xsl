@@ -2,7 +2,8 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xalan="http://xml.apache.org/xalan"
   xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions"
-  exclude-result-prefixes="i18n mods xlink xalan mcrxsl">
+  xmlns:acl="xalan://org.mycore.access.MCRAccessManager"
+  exclude-result-prefixes="i18n mods xlink xalan mcrxsl acl">
   <xsl:import href="xslImport:modsmeta:metadata/mir-metadata-box.xsl" />
   <xsl:include href="modsmetadata.xsl" />
   <!-- copied from http://www.loc.gov/standards/mods/v3/MODS3-4_HTML_XSLT1-0.xsl -->
@@ -295,7 +296,7 @@
               <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@displayLabel='metrics']" />
               <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']" />
             </xsl:if>
-
+            
             <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:name[@type='corporate'][@ID or @authorityURI=$institutesURI]" />
             <!-- END: OA specific changes -->
           </table>
@@ -453,8 +454,15 @@
                     <td>
                       <xsl:choose>
                         <xsl:when test="@type='JCR'">
-                          <xsl:variable name="decrypturi" select="concat('decrypt:',value[@year = $year])"/>
-                          <xsl:value-of select="document($decrypturi)/value"/>
+                          <xsl:choose>
+                            <xsl:when test="acl:checkPermission('key:key1','decrypt')">
+                              <xsl:variable name="decrypturi" select="concat('decrypt:key1:',value[@year = $year])"/>
+                              <xsl:value-of select="document($decrypturi)/value"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                              <xsl:value-of select="'Cant decrypt JCR'"/>
+                            </xsl:otherwise>
+                          </xsl:choose>
                         </xsl:when>
                         <xsl:otherwise>
                           <xsl:value-of select="value[@year = $year]"/>
@@ -473,36 +481,41 @@
   </xsl:template>
   
   <xsl:template match="mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']" mode="oa">
-    <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
-      <xsl:variable name="yearIssued" select="substring(//mods:mods/mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf'],1,4)"/>
-      <tr>
-        <td valign="top" class="metaname">
-          <xsl:value-of select="concat('Journal Metrics',':')" />
-        </td>
-        <td class="metavalue">
-          <table class="table table-condensed">
-            <xsl:for-each select="journalMetrics/metric[value/@year = $yearIssued]">
-              <tr>
-                <td>
-                  <xsl:value-of select="@type"/>
-                </td>
-                <td>
-                  <xsl:choose>
-                    <xsl:when test="@type='JCR'">
-                      <xsl:variable name="decrypturi" select="concat('decrypt:',value[@year = $yearIssued])"/>
-                      <xsl:value-of select="document($decrypturi)/value"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                      <xsl:value-of select="value[@year=$yearIssued]"/>
-                    </xsl:otherwise>
-                  </xsl:choose>
-                </td>
-              </tr>
-            </xsl:for-each>
-          </table>
-        </td>
-      </tr>
-    </xsl:if>
+    <xsl:variable name="yearIssued" select="substring(//mods:mods/mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf'],1,4)"/>
+    <tr>
+      <td valign="top" class="metaname">
+        <xsl:value-of select="concat('Journal Metrics',':')" />
+      </td>
+      <td class="metavalue">
+        <table class="table table-condensed">
+          <xsl:for-each select="journalMetrics/metric[value/@year = $yearIssued]">
+            <tr>
+              <td>
+                <xsl:value-of select="@type"/>
+              </td>
+              <td>
+                <xsl:choose>
+                  <xsl:when test="@type='JCR'">
+                    <xsl:choose>
+                      <xsl:when test="acl:checkPermission('key:key1','decrypt')">
+                        <xsl:variable name="decrypturi" select="concat('decrypt:key1:',value[@year = $yearIssued])"/>
+                        <xsl:value-of select="document($decrypturi)/value"/>
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <xsl:value-of select="'Cant decrypt JCR'"/>
+                      </xsl:otherwise>
+                    </xsl:choose>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:value-of select="value[@year=$yearIssued]"/>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </td>
+            </tr>
+          </xsl:for-each>
+        </table>
+      </td>
+    </tr>
   </xsl:template>
 
 </xsl:stylesheet>

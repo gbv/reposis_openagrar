@@ -38,7 +38,7 @@
     <xsl:variable name="value" select="."/>
     <xsl:copy>
       <xsl:copy-of select="@*" />
-      <xsl:value-of select="document(concat('decrypt:',$value))/value"/>
+      <xsl:value-of select="document(concat('decrypt:key1:',$value))/value"/>
     </xsl:copy>
   </xsl:template>
 
