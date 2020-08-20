@@ -582,7 +582,10 @@
             <label class="col-md-2">
               <input type="text" class="form-control" placeholder="{i18n:mir.placeholder.characteristics.factor}" />
             </label>
-            <mir:help-pmud help-text="{i18n:mir.help.extension.characteristics}" pmud="true" />
+            <div class="col-md-3 {@class}">
+              <xsl:call-template name="mir-helpbutton" />
+              <xsl:call-template name="mir-pmud" />
+            </div>
           </div>
         </xed:repeat>
       </xsl:when>

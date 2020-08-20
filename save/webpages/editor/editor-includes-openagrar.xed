@@ -201,7 +201,7 @@
               <xed:output value="'JCR'" />
             </label>
           </div>
-          <mir:JCREdit />
+          <mir:JCREdit help-text="{i18n:mir.help.extension.jcr}" />
         </div>
         <div class="form-group">
           <div class="row">
@@ -222,7 +222,7 @@
               <label class="col-md-2">
                 <input type="text" class="form-control" placeholder="'SNIP'" />
               </label>
-              <mir:help-pmud help-text="{i18n:mir.help.extension.characteristics}" pmud="true" />
+              <mir:help-pmud help-text="{i18n:mir.help.extension.snip}" pmud="true" />
             </div>
           </xed:repeat>
         </div>
@@ -245,7 +245,7 @@
               <label class="col-md-2">
                 <input type="text" class="form-control" placeholder="'SJR" />
               </label>
-              <mir:help-pmud help-text="{i18n:mir.help.extension.characteristics}" pmud="true" />
+              <mir:help-pmud help-text="{i18n:mir.help.extension.sjr}" pmud="true" />
             </div>
           </xed:repeat>
         </div>  
