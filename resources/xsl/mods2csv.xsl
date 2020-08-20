@@ -109,7 +109,7 @@ zu klären:
 <!-- ************************************************************************************ -->
 
   <xsl:template match="/">
-    <xsl:text>Titel;Nebensachtitel;Autoren;Herausgeber;Betreuer;erschienen in;Buch-Autoren;Konferenz;Konferenz-Zeitraum;Veranstaltungsort;Genre;Seitenangaben;Heftangaben;Bandangaben;ISBN / ISSN;URN;DOI;Verlag;Verlagsort;Veröffentlichungsdatum;referiert;Jahresberichtskategorie;Institution&#xA;</xsl:text>
+    <xsl:text>Titel;Nebensachtitel;Autoren;Herausgeber;Betreuer;erschienen in;Buch-Autoren;Konferenz;Konferenz-Zeitraum;Veranstaltungsort;Genre;Seitenangaben;Heftangaben;Bandangaben;ISBN / ISSN;URN;DOI;Verlag;Verlagsort;Veröffentlichungsdatum;referiert;Jahresberichtskategorie;Institution;JCR;JCR_1Yb&#xA;</xsl:text>
     <xsl:for-each select="//mods:mods">
       <xsl:call-template name="convertToCsv" />
       <xsl:text>&#xA;</xsl:text>
@@ -299,6 +299,19 @@ zu klären:
       </xsl:for-each>
     <xsl:text>&quot;;</xsl:text>
 
+    <xsl:text>&quot;</xsl:text>
+      <xsl:variable name="yearIssued" select="substring(mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf'],1,4)"/>
+      <xsl:for-each select="mods:relatedItem[@type='series' or @type='host']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year = $yearIssued]">
+        <xsl:value-of select="."/>
+      </xsl:for-each>
+    <xsl:text>&quot;;</xsl:text>
+    
+    <xsl:text>&quot;</xsl:text>
+      <xsl:variable name="yearIssued1Yb" select="$yearIssued - 1"/>
+      <xsl:for-each select="mods:relatedItem[@type='series' or @type='host']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year = $yearIssued1Yb]">
+        <xsl:value-of select="."/>
+      </xsl:for-each>
+    <xsl:text>&quot;;</xsl:text>
   </xsl:template>
 
 
