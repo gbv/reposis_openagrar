@@ -152,5 +152,23 @@
       "stored": false,
       "multiValued":true
     }
+  },
+  {
+    "add-field": {
+      "name": "oa.statistic.metric.jcr.class",
+      "type": "text_lower",
+      "indexed": true,
+      "stored": false,
+      "multiValued":false
+    }
+  },
+  {
+    "add-field": {
+      "name": "oa.statistic.metric.jcr.class1Yb",
+      "type": "text_lower",
+      "indexed": true,
+      "stored": false,
+      "multiValued":false
+    }
   }
 ]

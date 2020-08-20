@@ -2,7 +2,8 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mcr="http://www.mycore.org/" xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:mods="http://www.loc.gov/mods/v3" xmlns:mcrmods="xalan://org.mycore.mods.classification.MCRMODSClassificationSupport" xmlns:mcrxml="xalan://org.mycore.common.xml.MCRXMLFunctions"
   xmlns:mcrdataurl="xalan://org.mycore.datamodel.common.MCRDataURL" xmlns:mcrid="xalan://org.mycore.datamodel.metadata.MCRObjectID" xmlns:exslt="http://exslt.org/common"
-  exclude-result-prefixes="mcrmods mcrid xlink mcr mcrxml mcrdataurl exslt" version="1.0"
+  xmlns:acl="xalan://org.mycore.access.MCRAccessManager"
+  exclude-result-prefixes="mcrmods mcrid xlink mcr mcrxml mcrdataurl exslt acl" version="1.0"
 >
 
   <xsl:include href="copynodes.xsl" />
@@ -279,5 +280,21 @@
       <xsl:apply-templates select="mods:holdingExternal" />
     </xsl:copy>
   </xsl:template>
+  
+  <xsl:template match="mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value">
+    <xsl:variable name="value" select="."/>
+    <xsl:copy>
+      <xsl:copy-of select="@*" />
+      <xsl:choose>
+        <xsl:when test="acl:checkPermission('key:key1','encrypt')">
+          <xsl:value-of select="document(concat('encrypt:key1:',$value))/value"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$value"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:copy>
+  </xsl:template>
+  
 
 </xsl:stylesheet>

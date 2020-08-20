@@ -2,7 +2,8 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xed="http://www.mycore.de/xeditor"
   xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation" xmlns:mir="http://www.mycore.de/mir"
-  exclude-result-prefixes="xsl mir i18n">
+  xmlns:acl="xalan://org.mycore.access.MCRAccessManager"
+  exclude-result-prefixes="xsl mir i18n acl">
 
   <xsl:include href="copynodes.xsl" />
   <xsl:variable name="institutesURI">
@@ -566,6 +567,36 @@
         </div>
       </div>
     </xed:bind>
+  </xsl:template>
+  
+  <xsl:template match="mir:JCREdit">
+    <xsl:choose>
+      <xsl:when test="acl:checkPermission('key:key1','encrypt')">
+        <xed:repeat xpath="mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value">
+          <div class="row">
+            <label class="col-md-2 col-md-offset-3">
+              <xed:bind xpath="@year">
+                <input type="text" class="form-control" placeholder="{i18n:mir.placeholder.characteristics.year}" />
+              </xed:bind>
+            </label>
+            <label class="col-md-2">
+              <input type="text" class="form-control" placeholder="{i18n:mir.placeholder.characteristics.factor}" />
+            </label>
+            <div class="col-md-3 {@class}">
+              <xsl:call-template name="mir-helpbutton" />
+              <xsl:call-template name="mir-pmud" />
+            </div>
+          </div>
+        </xed:repeat>
+      </xsl:when>
+      <xsl:otherwise>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-3">
+            No Permission to edit the JCR.
+          </div>
+        </div>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
 </xsl:stylesheet>
