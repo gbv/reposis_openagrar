@@ -156,19 +156,19 @@
   {
     "add-field": {
       "name": "oa.statistic.metric.jcr.class",
-      "type": "string",
+      "type": "text_lower",
       "indexed": true,
       "stored": false,
-      "multiValued":true
+      "multiValued":false
     }
   },
   {
     "add-field": {
       "name": "oa.statistic.metric.jcr.class1Yb",
-      "type": "string",
+      "type": "text_lower",
       "indexed": true,
       "stored": false,
-      "multiValued":true
+      "multiValued":false
     }
   }
 ]
