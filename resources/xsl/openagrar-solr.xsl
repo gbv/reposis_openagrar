@@ -162,6 +162,7 @@
         <xsl:with-param name="JCR" select="$JCR"/>
         <xsl:with-param name="Fieldname" select="'oa.statistic.metric.jcr.class'"/>
       </xsl:call-template>
+    </xsl:if>
     <xsl:if test="//mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued1Yb]">
       <xsl:variable name="encryptedJCR1Yb" select="//mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued1Yb]"/>
       <xsl:variable name="JCR1Yb" select="document(concat('decrypt:',$encryptedJCR1Yb))/value"/>
