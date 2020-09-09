@@ -158,12 +158,13 @@
     <xsl:if test="//mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]">
       <xsl:variable name="encryptedJCR" select="//mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]"/>
       <xsl:variable name="JCR" select="document(concat('decrypt:',$encryptedJCR))/value"/>
-      <xsl:variable name="encryptedJCR1Yb" select="//mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued1Yb]"/>
-      <xsl:variable name="JCR1Yb" select="document(concat('decrypt:',$encryptedJCR1Yb))/value"/>
       <xsl:call-template name="JCR2JCRClass">
         <xsl:with-param name="JCR" select="$JCR"/>
         <xsl:with-param name="Fieldname" select="'oa.statistic.metric.jcr.class'"/>
       </xsl:call-template>
+    <xsl:if test="//mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued1Yb]">
+      <xsl:variable name="encryptedJCR1Yb" select="//mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued1Yb]"/>
+      <xsl:variable name="JCR1Yb" select="document(concat('decrypt:',$encryptedJCR1Yb))/value"/>
       <xsl:call-template name="JCR2JCRClass">
         <xsl:with-param name="JCR" select="$JCR1Yb"/>
         <xsl:with-param name="Fieldname" select="'oa.statistic.metric.jcr.class1Yb'"/>
