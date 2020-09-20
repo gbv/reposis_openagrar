@@ -1,31 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MyCoReWebPage>
   <section xml:lang="de" title="Hinweis zur Barrierefreiheit">
-    <div class="row">
-      <div class="col-12">
-
-        <h2> Erklärung zur Barrierefreiheit <small class="text-muted">(Stand der Erklärung:
-            21.09.2020)</small>
-        </h2>
-
-      </div>
-    </div>
-    <div class="row mt-3">
-      <div class="col-12">
+    
+    <div>
+      <h1> Erklärung zur Barrierefreiheit <small class="text-muted">(Stand der Erklärung:
+        21.09.2020)</small> </h1>
+      
+      <div class="row">
+        <div class="col-md-8 oa-borderbox" lang="de">
 
         <p> Das Bundesministerium für Ernährung und Landwirtschaft (BMEL) ist bemüht, seine
           Website <a href="https://www.openagrar.de">www.openagrar.de</a>
           im Einklang mit den nationalen Rechtsvorschriften zur Umsetzung der Richtlinie (EU)
           2016/2102 des Europäischen Parlaments und des Rates barrierefrei zugänglich zu machen. </p>
 
-      </div>
-    </div>
-
-
-    <div class="row mt-3">
-      <div class="col-12">
-
-        <h3> Stand der Vereinbarung mit den Anforderungen </h3>
+        <h2> Stand der Vereinbarung mit den Anforderungen </h2>
 
         <p>Aufgrund der Überprüfung gemäß Selbsteinschätzung nach BITV-Test ist die Webseite mit
           den zuvor genannten Anforderungen nicht an allen Stellen vereinbar. Wir arbeiten derzeit
@@ -116,30 +105,21 @@
             Die entsprechende "Role" wird im Rahmen eines Updates ergänzt.</dd>
         </dl>
         <p>Die identifizierten Defizite und Mängel befinden sich aktuell in einem kontinuierlichen Verbesserungsprozess, der sukzessive abgearbeitet wird.</p>
-      </div>
-    </div>
 
 
-    <div class="row mt-3">
-      <div class="col-12">
-        <h3> Erstellung dieser Erklärung zur Barrierefreiheit </h3>
+        <h2> Erstellung dieser Erklärung zur Barrierefreiheit </h2>
 
         <p>
           Diese Erklärung wurde am 21.09.2020 erstellt und auf Basis der BITV / WCAG-Selbstbewertung <a href="https://www.bitv-test.de">www.bitv-test.de</a> erstellt.</p>
-      </div>
-    </div>
 
 
-    
-    <div class="row mt-3">
-      <div class="col-12">
-        <h3> Barrieren melden: Feedback und Kontaktangaben </h3>
+        <h2> Barrieren melden: Feedback und Kontaktangaben </h2>
 
-        <p>Bitte informieren Sie uns, wenn Sie in unseren Webauftritten auf erläuterungsbedürftige Inhalte oder Inhalte, die schwer zugänglich sind, stoßen:<br /><br />
+        <p>Bitte informieren Sie uns, wenn Sie in unseren Webauftritten auf erläuterungsbedürftige Inhalte oder Inhalte, die schwer zugänglich sind, stoßen:<br />
           <a href="mailto:barrierefreiheit@openagrar.de">barrierefreiheit@openagrar.de</a>
         </p>
 
-        <p class="border-left pl-5">
+        <p class="pl-5">
           <strong>Dienstsitz Bonn</strong><br />
           Besucheranschrift: Rochusstraße 1, 53123 Bonn<br />
           Postanschrift: Postfach 14 02 70, 53107 Bonn<br />
@@ -152,14 +132,8 @@
           Telefon: 03 0 / 1 85 29 - 0<br />
           Telefax: 03 0 / 1 85 29 - 42 62<br />
         </p>
-      </div>
-    </div>
 
-
-    
-    <div class="row mt-3">
-      <div class="col-12">
-        <h3> Schlichtungsverfahren </h3>
+        <h2> Schlichtungsverfahren </h2>
 
         <p>Beim Beauftragten der Bundesregierung für die Belange von Menschen mit Behinderungen gibt es eine
           Schlichtungsstelle gemäß § 16 BGG. Die Schlichtungsstelle hat die Aufgabe, Konflikte zwischen Menschen
@@ -178,7 +152,7 @@
         
         <p>Sie erreichen die Schlichtungsstelle unter folgender Adresse:</p>
 
-        <p class="border-left pl-5">
+        <p class="pl-5">
           Schlichtungsstelle nach dem Behindertengleichstellungsgesetz<br />
           bei dem Beauftragten der Bundesregierung für die Belange von Menschen mit Behinderungen<br />
           Mauerstraße 53<br />
@@ -189,6 +163,7 @@
           
         </p>
       </div>
+    </div>
     </div>
   </section>
   <meta>
