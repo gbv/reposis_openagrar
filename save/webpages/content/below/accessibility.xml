@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MyCoReWebPage>
+  <section xml:lang="de" title="Hinweis zur Barrierefreiheit">
+    <div class="row">
+      <div class="col-12">
+
+        <h2> Erklärung zur Barrierefreiheit <small class="text-muted">(Stand der Erklärung:
+            21.09.2020)</small>
+        </h2>
+
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12">
+
+        <p> Das Bundesministerium für Ernährung und Landwirtschaft (BMEL) ist bemüht, seine
+          Website <a href="https://www.openagrar.de">www.openagrar.de</a>
+          im Einklang mit den nationalen Rechtsvorschriften zur Umsetzung der Richtlinie (EU)
+          2016/2102 des Europäischen Parlaments und des Rates barrierefrei zugänglich zu machen. </p>
+
+      </div>
+    </div>
+
+
+    <div class="row mt-3">
+      <div class="col-12">
+
+        <h3> Stand der Vereinbarung mit den Anforderungen </h3>
+
+        <p>Aufgrund der Überprüfung gemäß Selbsteinschätzung nach BITV-Test ist die Webseite mit
+          den zuvor genannten Anforderungen nicht an allen Stellen vereinbar. Wir arbeiten derzeit
+          daran, die Barrieren so schnell wie möglich zu beheben.</p>
+        
+        <p>
+          Die Webseite https://www.openagrar.de deren Funktionalität und Darstellungsform auf
+          gängigen Endgeräten, sind mit der Richtlinie (EU) 2016/2102 und mit den Web Content
+          Accessibility Guidlines 2.0 ist aus den folgenden Gründen noch nicht abschließend
+          barrierefrei:
+        </p>
+
+        <dl>
+          <dt>Unsere Webauftritte enthalten keine Informationen in Gebärdensprache und in leichter Sprache.</dt>
+          <dd class="ml-4">
+            Nach Rücksprachen mit entsprechenden Verbänden wird die Vorlesefunktion der persönlichen Screenreader
+            bevorzugt, daher verzichtet die Website auf dieses Angebot.
+            Wir bemühen uns, eine möglichst einfache Sprache zu benutzen.<br />
+            Auf Grund der komplexen Inhalte, die zumindest teilweise in unseren Webauftritten veröffentlicht
+            werden, ist eine einfache Sprachgestaltung (beispielsweise der Verzicht auf Fachbegriffe) nicht
+            immer möglich.
+          </dd>
+
+          <dt>Im Webauftritt eingebundene Videos</dt>
+          <dd class="ml-4">Die Bereitstellung der Videos mit einer Audiodeskription konnte bislang
+              nicht realisiert werden.</dd>
+          
+          <dt>Alternativtexte (1.1.1 a-c )</dt>
+          <dd class="ml-4">An einigen Stellen fehlen die Alternativtexte. Bei einem nächsten Update werden diese ergänzt werden.</dd>
+          
+          <dt>Alternativen für Audiodateien und stumme Videos (1.2.1a)</dt>
+          <dd class="ml-4">
+            Audiodateien und stumme Videodateien sind nicht mit gleichwertigen Medienalternativen versehen.<br />
+            Wir bemühen uns zukünftige selbst produzierte und erstveröffentlichte Audio und stumme Videodateien
+            mit alternativen Medien zuversehen. Auf die Erstellung von Werken von Dritten, die wir in unserem
+            Repositorium nicht erstveröffentlichen, sondern nur einstellen haben wir kein Einfluss.
+            
+          </dd>
+          
+          <dt>Aufgezeichnete Videos mit Untertiteln (1.2.2a)</dt>
+          <dd class="ml-4">
+            Aufgezeichnete Videos haben keinen Untertitel.<br />
+            Wir bemühen uns zukünftig Videos mit Untertitel zu versehen. Auf die Erstellung von Werken von Dritten,
+            die wir in unserem Repositorium nicht erstveröffentlichen, sondern nur einstellen haben wir kein Einfluss.
+            
+          </dd>
+          
+          <dt>Audiodeskription oder Volltext-Alternative für Videos (1.2.3a, 1.2.5a)</dt>
+          <dd class="ml-4">
+            Für informationstragende visuelle Videoinhalte ist keine Audiodeskription oder Volltext-Alternative bereitgestellt.<br />
+            Wir bemühen uns für informationstragende visuelle Videoinhalte eine Audiodeskription oder Volltext-Alternative
+            bereitzustellen. Auf die Erstellung von Werken von Dritten, die wir in unserem Repositorium nicht erstveröffentlichen,
+            sondern nur einstellen haben wir kein Einfluss.
+          </dd>
+          
+          <dt>Videos (live) mit Untertiteln 1.2.4a</dt>
+          <dd class="ml-4">
+            Es sind keine reinen Live-Übertragungen vorhanden.
+          </dd>
+          
+          <dt>HTML-Strukurelemente (1.3.1 a-f )</dt>
+          <dd class="ml-4">Einige HTML-Strukurelemente sind nur teilweise barrierefrei, da die entsprechenden Bootstrap-Klassen fehlen.
+            Eine Überarbeitung ist in Arbeit.</dd>
+          
+          <dt>Eingabefelder zu Nutzerdaten vermitteln den Zweck (1.3.5a)</dt>
+          <dd class="ml-4">Formulare nutzen keine Autovervollständigung. Bei Formularen fehlen die „autocomplete“-Attribute, was das Ausfüllen der Formulare erschwert.
+            Bei einem Update soll die Funktionalität künftig ergänzt werden.</dd>
+          
+          <dt>Kontraste von Texten ausreichend (1.4.3)</dt>
+          <dd class="ml-4">Da das grundsätzliche Layout der Webseite vor dem Erscheinen der Richtlinie (EU) 2016/2102 erstellt wurde, ist das Kontrastverhältnis von 4,5:1 nicht grundsätzlich sichergestellt.
+            An einer Lösung wird gearbeitet.</dd>
+          
+          <dt>Aktuelle Position des Fokus deutlich (2.4.7a)</dt>
+          <dd class="ml-4">Der Fokus ist bei der Bedienung mit der Tastatur nicht immer erkennbar.
+            Die Anpassung des Fokus-Managements erfolgt bei der nächsten grundlegenden Überarbeitung der Website.</dd>
+          
+          <dt>Anderssprachige Wörter und Abschnitte ausgezeichnet 3.1.2a</dt>
+          <dd class="ml-4">Anderssprachige Wörter und Abschnitte sind nicht mit dem lang-Attribut ausgezeichnet.<br />
+            Bei der nächsten grundlegenden Überarbeitung der Website soll die Funktionalität künftig ergänzt werden.
+          </dd>
+          
+          <dt>Fehlererkennung (3.3.1a)</dt>
+          <dd class="ml-4">Angaben in Formularen werden vor dem Abschicken nicht automatisch überprüft. 
+            Bei der nächsten grundlegenden Überarbeitung der Website soll die Funktionalität künftig ergänzt werden.</dd>
+          
+          <dt>Statusmeldungen programmatisch verfügbar (4.1.3a)</dt>
+          <dd class="ml-4">Es erfolgt weder visuell noch im Screenreader ein Hinweis das, das Dokument auf die Merkliste gesetzt wurde.
+            Die entsprechende "Role" wird im Rahmen eines Updates ergänzt.</dd>
+        </dl>
+        <p>Die identifizierten Defizite und Mängel befinden sich aktuell in einem kontinuierlichen Verbesserungsprozess, der sukzessive abgearbeitet wird.</p>
+      </div>
+    </div>
+
+
+    <div class="row mt-3">
+      <div class="col-12">
+        <h3> Erstellung dieser Erklärung zur Barrierefreiheit </h3>
+
+        <p>
+          Diese Erklärung wurde am 21.09.2020 erstellt und auf Basis der BITV / WCAG-Selbstbewertung <a href="https://www.bitv-test.de">www.bitv-test.de</a> erstellt.</p>
+      </div>
+    </div>
+
+
+    
+    <div class="row mt-3">
+      <div class="col-12">
+        <h3> Barrieren melden: Feedback und Kontaktangaben </h3>
+
+        <p>Bitte informieren Sie uns, wenn Sie in unseren Webauftritten auf erläuterungsbedürftige Inhalte oder Inhalte, die schwer zugänglich sind, stoßen:<br /><br />
+          <a href="mailto:barrierefreiheit@openagrar.de">barrierefreiheit@openagrar.de</a>
+        </p>
+
+        <p class="border-left pl-5">
+          <strong>Dienstsitz Bonn</strong><br />
+          Besucheranschrift: Rochusstraße 1, 53123 Bonn<br />
+          Postanschrift: Postfach 14 02 70, 53107 Bonn<br />
+          Telefon: 02 28 / 9 95 29 - 0<br />
+          Telefax: 02 28 / 9 95 29 - 42 62<br /><br />
+          
+          <strong>Dienstsitz Berlin</strong><br />
+          Besucheranschrift: Wilhelmstraße 54, 10117 Berlin<br />
+          Postanschrift: 11055 Berlin<br />
+          Telefon: 03 0 / 1 85 29 - 0<br />
+          Telefax: 03 0 / 1 85 29 - 42 62<br />
+        </p>
+      </div>
+    </div>
+
+
+    
+    <div class="row mt-3">
+      <div class="col-12">
+        <h3> Schlichtungsverfahren </h3>
+
+        <p>Beim Beauftragten der Bundesregierung für die Belange von Menschen mit Behinderungen gibt es eine
+          Schlichtungsstelle gemäß § 16 BGG. Die Schlichtungsstelle hat die Aufgabe, Konflikte zwischen Menschen
+          mit Behinderungen und öffentlichen Stellen des Bundes zu lösen.</p>
+        
+        <p>
+          Sollten Sie der Ansicht sein, durch eine nicht ausreichende barrierefreie Gestaltung von <a href="https://www.openagrar.de">www.openagrar.de</a>
+          benachteiligt zu sein, können Sie sich an die Schlichtungsstelle BGG wenden:
+        </p>
+        
+        <p>
+          Auf der Internetseite der Schlichtungsstelle finden Sie alle Informationen zum Schlichtungsverfahren. Dort können Sie nachlesen,
+          wie ein Schlichtungsverfahren abläuft und wie Sie den Antrag auf Schlichtung stellen. Sie können den Antrag auch in Leichter
+          Sprache oder in Deutscher Gebärdensprache stellen.
+        </p>
+        
+        <p>Sie erreichen die Schlichtungsstelle unter folgender Adresse:</p>
+
+        <p class="border-left pl-5">
+          Schlichtungsstelle nach dem Behindertengleichstellungsgesetz<br />
+          bei dem Beauftragten der Bundesregierung für die Belange von Menschen mit Behinderungen<br />
+          Mauerstraße 53<br />
+          10117 Berlin<br /><br />
+          Telefon: 030 18 527-2805<br />
+          E-Mail: <a href="mailto:info@schlichtungsstelle-bgg.de">info@schlichtungsstelle-bgg.de</a><br />
+          Internet: <a href="https://www.schlichtungsstelle-bgg.de">www.schlichtungsstelle-bgg.de</a><br />
+          
+        </p>
+      </div>
+    </div>
+  </section>
+  <meta>
+    <log lastEditor="ustahl" date="2020-09-21" time="11:24"/>
+  </meta>
+</MyCoReWebPage>
