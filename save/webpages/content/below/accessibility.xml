@@ -21,27 +21,38 @@
           daran, die Barrieren so schnell wie möglich zu beheben.</p>
         
         <p>
-          Die Webseite https://www.openagrar.de deren Funktionalität und Darstellungsform auf
+          Die Webseite <a href="https://www.openagrar.de">www.openagrar.de</a> deren Funktionalität und Darstellungsform auf
           gängigen Endgeräten, sind mit der Richtlinie (EU) 2016/2102 und mit den Web Content
           Accessibility Guidlines 2.0 ist aus den folgenden Gründen noch nicht abschließend
           barrierefrei:
         </p>
 
         <dl>
+          <dt>Im Webauftritt eingebundene Dokumente (.pdf, .doc, etc.)</dt>
+          <dd class="ml-4">
+            Dokumente, die vor September 2020 eingestellt wurden, sind gegebenenfalls
+            nicht barrierefrei. Aufgrund der sehr großen Anzahl der Dokumente, können
+            diese nicht in ein barrierefreies Format umgewandelt werden, da zum Teil die
+            Ausgangsformate fehlen und eine nachträgliche Bearbeitung der Dokumente
+            unverhältnismäßig arbeitsaufwendig ist.<br />
+            Dokumente, die von Dritten bereitgestellt werden, liegen eventuell nicht
+            barrierefrei vor (siehe § 9 Abs. 2 Satz 2 NBGG).<br/>
+            Bei neu erscheinenden Dokumenten die in den Verantwortungsbereich der
+            Universitätsbibliothek fallen, streben wir an, künftig zeitnah eine
+            barrierefreie Version zur Verfügung zu stellen. Für alle weiteren Dokumente
+            halten wir unsere Datenlieferanten an, die Anforderungen zur Barrierefreiheit zu
+            beachten.
+          </dd>
+
           <dt>Unsere Webauftritte enthalten keine Informationen in Gebärdensprache und in leichter Sprache.</dt>
           <dd class="ml-4">
             Nach Rücksprachen mit entsprechenden Verbänden wird die Vorlesefunktion der persönlichen Screenreader
-            bevorzugt, daher verzichtet die Website auf dieses Angebot.
-            Wir bemühen uns, eine möglichst einfache Sprache zu benutzen.<br />
+            bevorzugt, daher verzichtet die Website auf dieses Angebot. Wir bemühen uns, eine möglichst einfache Sprache zu benutzen.<br />
             Auf Grund der komplexen Inhalte, die zumindest teilweise in unseren Webauftritten veröffentlicht
             werden, ist eine einfache Sprachgestaltung (beispielsweise der Verzicht auf Fachbegriffe) nicht
             immer möglich.
           </dd>
 
-          <dt>Im Webauftritt eingebundene Videos</dt>
-          <dd class="ml-4">Die Bereitstellung der Videos mit einer Audiodeskription konnte bislang
-              nicht realisiert werden.</dd>
-          
           <dt>Alternativtexte (1.1.1 a-c )</dt>
           <dd class="ml-4">An einigen Stellen fehlen die Alternativtexte. Bei einem nächsten Update werden diese ergänzt werden.</dd>
           
@@ -59,7 +70,6 @@
             Aufgezeichnete Videos haben keinen Untertitel.<br />
             Wir bemühen uns zukünftig Videos mit Untertitel zu versehen. Auf die Erstellung von Werken von Dritten,
             die wir in unserem Repositorium nicht erstveröffentlichen, sondern nur einstellen haben wir kein Einfluss.
-            
           </dd>
           
           <dt>Audiodeskription oder Volltext-Alternative für Videos (1.2.3a, 1.2.5a)</dt>
@@ -69,12 +79,7 @@
             bereitzustellen. Auf die Erstellung von Werken von Dritten, die wir in unserem Repositorium nicht erstveröffentlichen,
             sondern nur einstellen haben wir kein Einfluss.
           </dd>
-          
-          <dt>Videos (live) mit Untertiteln 1.2.4a</dt>
-          <dd class="ml-4">
-            Es sind keine reinen Live-Übertragungen vorhanden.
-          </dd>
-          
+
           <dt>HTML-Strukurelemente (1.3.1 a-f )</dt>
           <dd class="ml-4">Einige HTML-Strukurelemente sind nur teilweise barrierefrei, da die entsprechenden Bootstrap-Klassen fehlen.
             Eine Überarbeitung ist in Arbeit.</dd>
@@ -116,7 +121,17 @@
         <h2> Barrieren melden: Feedback und Kontaktangaben </h2>
 
         <p>Bitte informieren Sie uns, wenn Sie in unseren Webauftritten auf erläuterungsbedürftige Inhalte oder Inhalte, die schwer zugänglich sind, stoßen:<br />
-          <a href="mailto:barrierefreiheit@openagrar.de">barrierefreiheit@openagrar.de</a>
+          <strong>Wir sind per E-Mail erreichbar über: </strong><br />
+          <span class="madress">IB [at] julius-kuehn.de</span><br /><br />
+          
+          <strong>Unsere Postadresse lautet:</strong><br />
+          Julius Kühn-Institut (JKI) –<br />
+          Bundesforschungsinstitut für Kulturpflanzen<br />
+          Informationszentrum und Bibliothek<br />
+          Königin-Luise-Str. 19<br />
+          14195 Berlin<br />
+          Tel.: 030 8304 2100<br />
+          Fax.: 030 8304 2103<br />
         </p>
 
         <h2> Schlichtungsverfahren </h2>
@@ -152,7 +167,7 @@
           Mauerstraße 53<br />
           10117 Berlin<br /><br />
           Telefon: 030 18 527-2805<br />
-          E-Mail: <a href="mailto:info@schlichtungsstelle-bgg.de">info@schlichtungsstelle-bgg.de</a><br />
+          E-Mail: <span class="madress">info [at] schlichtungsstelle-bgg.de</span><br />
           Internet: <a href="http://www.schlichtungsstelle-bgg.de">www.schlichtungsstelle-bgg.de</a><br />
           
         </p>
