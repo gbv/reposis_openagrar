@@ -263,6 +263,9 @@
           </xsl:otherwise>
         </xsl:choose>
       </mods:identifier>
-  </xsl:template>  
+  </xsl:template> 
+  
+  <xsl:template match="mods:genre[@authority = 'marcgt']">
+  </xsl:template> 
   
 </xsl:stylesheet>
