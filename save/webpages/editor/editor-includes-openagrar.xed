@@ -273,7 +273,7 @@
         <mir:dateRange xpath="mods:originInfo[@eventType='publication_print']/mods:dateIssued[@encoding='w3cdtf']" help-text="{i18n:mir.help.date.publicationprint.range}"
           class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.publicationprint.range" />
         <mir:dateRange xpath="mods:originInfo[@eventType='publication_online']/mods:dateIssued[@encoding='w3cdtf']" help-text="{i18n:mir.help.date.publicationonline.range}"
-          class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.issuedonline.range" />
+          class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.publicationonline.range" />
         <mir:dateRange xpath="mods:originInfo[@eventType='digitalisation']/mods:dateIssued[@encoding='w3cdtf']" help-text="{i18n:mir.help.date.digitalisation.issued.range}"
           class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.digitalisation.issued.range" />
         <mir:dateRange xpath="mods:originInfo[@eventType='creation']/mods:dateCreated[@encoding='w3cdtf']" help-text="{i18n:mir.help.date.created.range}"
