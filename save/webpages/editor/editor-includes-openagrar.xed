@@ -253,5 +253,43 @@
     </fieldset>
 
   </xed:template>
+  
+  <xed:template id="date.range.extended.datetimepicker">
+    <fieldset class="dateExtended_box">
+      <legend class="mir-fieldset-legend hiddenDetail">
+        <div class="form-group row datetimepicker {$xed-validation-marker}">
+          <label class="col-md-3 col-form-label text-right">
+            <xed:output i18n="mir.date.issued.range" />
+          </label>
+          <div class="col-md-6 center-vertical">
+            <mir:dateRangeInput xpath="mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf']" class="datetimepicker mainDate"
+              placeholder="{i18n:mir.placeholder.date}" type="publication" />
+            <span class="fas fa-chevron-down expand-item" title="{i18n:mir.help.expand}" aria-hidden="true"></span>
+          </div>
+          <mir:help-pmud help-text="{i18n:mir.help.date.issued.10}" pmud="false" />
+        </div>
+      </legend>
+      <div class="mir-fieldset-content dateExtended-container d-none">
+        <mir:dateRange xpath="mods:originInfo[@eventType='publication_print']/mods:dateIssued[@encoding='w3cdtf']" help-text="{i18n:mir.help.date.publicationprint.range}"
+          class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.publicationprint.range" />
+        <mir:dateRange xpath="mods:originInfo[@eventType='publication_online']/mods:dateIssued[@encoding='w3cdtf']" help-text="{i18n:mir.help.date.publicationonline.range}"
+          class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.publicationonline.range" />
+        <mir:dateRange xpath="mods:originInfo[@eventType='digitalisation']/mods:dateIssued[@encoding='w3cdtf']" help-text="{i18n:mir.help.date.digitalisation.issued.range}"
+          class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.digitalisation.issued.range" />
+        <mir:dateRange xpath="mods:originInfo[@eventType='creation']/mods:dateCreated[@encoding='w3cdtf']" help-text="{i18n:mir.help.date.created.range}"
+          class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.created.range" />
+        <mir:dateRange xpath="mods:originInfo[@eventType='collection']/mods:dateCaptured[@encoding='w3cdtf']" help-text="{i18n:mir.help.date.collected.range}"
+          class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.collected.range" />
+        <mir:dateRange xpath="mods:originInfo[@eventType='review']/mods:dateOther[@type='reviewed'][@encoding='w3cdtf']" help-text="{i18n:mir.help.date.reviewed.range}"
+          class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.reviewed.range" />
+        <mir:dateRange xpath="mods:originInfo[@eventType='update']/mods:dateModified[@encoding='w3cdtf']" help-text="{i18n:mir.help.date.updated.range}"
+          class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.updated.range" />
+        <mir:dateRange xpath="mods:originInfo[@eventType='creation']/mods:dateOther[@type='accepted'][@encoding='w3cdtf']" help-text="{i18n:mir.help.date.accepted.range}"
+          class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.accepted.range" />
+        <mir:dateRange xpath="mods:originInfo[@eventType='creation']/mods:dateOther[@type='submitted'][@encoding='w3cdtf']" help-text="{i18n:mir.help.date.submitted.range}"
+          class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.submitted.range" />
+      </div>
+    </fieldset>
+  </xed:template>
 
 </xed:template>
