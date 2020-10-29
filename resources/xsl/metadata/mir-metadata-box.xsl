@@ -169,6 +169,18 @@
               mode="present" />
             <xsl:apply-templates select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf']"
               mode="present" />
+            <xsl:apply-templates select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:originInfo[@eventType='publication_print']/mods:dateIssued[@encoding='w3cdtf']"
+              mode="present" >
+              <xsl:with-param name="label" select="i18n:translate('component.mods.metaData.dictionary.dateIssued.print')" />
+            </xsl:apply-templates>
+            <xsl:apply-templates select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:originInfo[@eventType='publication_online']/mods:dateIssued[@encoding='w3cdtf']"
+              mode="present" >
+              <xsl:with-param name="label" select="i18n:translate('component.mods.metaData.dictionary.dateIssued.online')" />
+            </xsl:apply-templates>
+            <xsl:apply-templates select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:originInfo[@eventType='digitalisation']/mods:dateIssued[@encoding='w3cdtf']"
+              mode="present" >
+              <xsl:with-param name="label" select="i18n:translate('component.mods.metaData.dictionary.dateIssued.digitalisation')" />
+            </xsl:apply-templates>
             <xsl:apply-templates select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:originInfo[@eventType='update']/mods:dateModified"
               mode="present" />
             <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:identifier[@type!='open-aire' and @type!='intern' and @type!='issn']" />
