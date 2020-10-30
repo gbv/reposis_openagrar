@@ -258,18 +258,18 @@
     <fieldset class="dateExtended_box">
       <legend class="mir-fieldset-legend hiddenDetail">
         <div class="form-group row datetimepicker {$xed-validation-marker}">
-          <label class="col-md-3 col-form-label text-right">
+          <label class="col-md-3 control-label">
             <xed:output i18n="mir.date.issued.range" />
           </label>
           <div class="col-md-6 center-vertical">
             <mir:dateRangeInput xpath="mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf']" class="datetimepicker mainDate"
               placeholder="{i18n:mir.placeholder.date}" type="publication" />
-            <span class="fas fa-chevron-down expand-item" title="{i18n:mir.help.expand}" aria-hidden="true"></span>
+            <span class="fa fa-chevron-down expand-item" title="{i18n:mir.help.expand}" aria-hidden="true"></span>
           </div>
           <mir:help-pmud help-text="{i18n:mir.help.date.issued.10}" pmud="false" />
         </div>
       </legend>
-      <div class="mir-fieldset-content dateExtended-container d-none">
+      <div class="mir-fieldset-content dateExtended-container hidden">
         <mir:dateRange xpath="mods:originInfo[@eventType='publication_print']/mods:dateIssued[@encoding='w3cdtf']" help-text="{i18n:mir.help.date.publicationprint.range}"
           class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.publicationprint.range" />
         <mir:dateRange xpath="mods:originInfo[@eventType='publication_online']/mods:dateIssued[@encoding='w3cdtf']" help-text="{i18n:mir.help.date.publicationonline.range}"
