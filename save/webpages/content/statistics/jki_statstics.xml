@@ -50,13 +50,13 @@
       });
       
       var q_query = "mods.yearIssued:" + year;
-      var q_refArticle="mods.refereed:yes AND mods.genre:article AND mods.genre.host:journal";
+      var q_refArticle="mods.refereed:yes AND mods.genre:article AND (mods.genre.host:journal OR mods.genre.host:issue)";
       var q_refBook="(mods.genre:book OR (mods.genre:chapter AND (mods.genre.host:book OR mods.genre.host:series)))";
-      var q_nRefArticle="NOT (mods.refereed:yes) AND mods.genre:article AND mods.genre.host:journal";
+      var q_nRefArticle="NOT (mods.refereed:yes) AND mods.genre:article AND (mods.genre.host:journal OR mods.genre.host:issue)";
       var q_nRefConf="NOT (mods.refereed:yes) AND mods.genre:article AND mods.genre.host:proceedings";
       var q_refConf="mods.refereed:yes AND mods.genre:article AND mods.genre.host:proceedings";
       
-      var q_instAll= '(mods.affiliation:*julius* OR mods.affiliation:*jki*)' ;
+      var q_instAll= '(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*)' ;
       var instA = [
                     "julius kuhn-institut, institut fur pflanzenschutz in ackerbau und grunland",
                     "julius kuhn-institut (jki), bundesforschungsinstitut fur kulturpflanzen, institut fur pflanzenschutz in ackerbau und grunland, braunschweig, deutschland",
@@ -162,26 +162,27 @@
       //var q_instZO= createAffiQuery (instZO);
       //var q_instZR= createAffiQuery (instZR);
 
-      var q_instA ='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_a"';
-      var q_instAG='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_ag"';
-      var q_instAT='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_at"';
-      var q_instBS='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_bs"';
-      var q_instBI='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_bi"';
-      var q_instEP='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_ep"';
-      var q_instGF='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_gf"';
-      var q_instOVP='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_opv"';
-      var q_instOW='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_ow"';
-      var q_instPB='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_pb"';
-      var q_instRS='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_rs"';
-      var q_instSB='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_sb"';
-      var q_instSF='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_stfo"';
-      var q_instZG='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_zg"';
-      var q_instZL='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_zl"';
-      var q_instZO='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_zo"';
-      var q_instZR='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_zr"';
+      var q_instA ='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_a"';
+      var q_instAG='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_ag"';
+      var q_instAT='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_at"';
+      var q_instBS='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_bs"';
+      var q_instBI='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_bi"';
+      var q_instEP='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_ep"';
+      var q_instGF='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_gf"';
+      var q_instOVP='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_opv"';
+      var q_instOW='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_ow"';
+      var q_instPB='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_pb"';
+      var q_instRS='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_rs"';
+      var q_instSB='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_sb"';
+      var q_instSF='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_stfo"';
+      var q_instZG='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_zg"';
+      var q_instZL='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_zl"';
+      var q_instZO='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_zo"';
+      var q_instZR='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_zr"';
       
       var Fieldname = (JCRClasses1Yb) ? 'oa.statistic.metric.jcr.class1Yb' : 'oa.statistic.metric.jcr.class';
       
+      var q_jcrclass0 = 'NOT (' + Fieldname + ':[0 TO *])';
       var q_jcrclass1 = '(' + Fieldname + ':"&lt; 1")';
       var q_jcrclass2 = '(' + Fieldname + ':"1-3")';
       var q_jcrclass3 = '(' + Fieldname + ':"3-6")';
@@ -223,29 +224,28 @@
           <td class="head_inst"> Institut für Reben-züchtung (ZR) </td>
         </tr>
         <tr>
-          <td> </td>
+          <td rowspan="7"> Referierte Beiträge in wiss. Fachzeitschriften </td>
           <td> 0 </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instAll)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instA)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instAG)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instAT)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instBS)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instBI)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instEP)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instGF)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOVP)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOW)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instPB)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instRS)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instSB)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instSF)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZG)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZL)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZO)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZR)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instAll + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instA + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instAG + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instAT + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instBS + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instBI + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instEP + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instGF + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOVP + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOW + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instPB + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instRS + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instSB + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instSF + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZG + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZL + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZO + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZR + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
-          <td rowspan="5"> Referierte Beiträge in wiss. Fachzeitschriften </td>
           <td> &lt; 1 </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instAll + ' AND ' + q_jcrclass1)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instA + ' AND ' + q_jcrclass1)" data-printAsLink="true"/> </td>
@@ -330,7 +330,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZR+ ' AND ' + q_jcrclass4)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
-          <td> &gt; 9 </td>
+          <td> &gt;=9 </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instAll + ' AND ' + q_jcrclass5)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instA + ' AND ' + q_jcrclass5)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instAG + ' AND ' + q_jcrclass5)" data-printAsLink="true"/> </td>
@@ -349,6 +349,27 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZL + ' AND ' + q_jcrclass5)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZO + ' AND ' + q_jcrclass5)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZR+ ' AND ' + q_jcrclass5)" data-printAsLink="true"/> </td>
+        </tr>
+        <tr>
+          <td>  </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instAll )" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instA )" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instAG )" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instAT )" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instBS )" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instBI )" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instEP )" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instGF )" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOVP )" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOW )" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instPB )" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instRS )" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instSB )" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instSF )" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZG )" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZL )" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZO )" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZR )" data-printAsLink="true"/> </td>
         </tr>
         <tr>
           <td > Monografien, Buchbeiträge in editierten Buchreihen </td>
