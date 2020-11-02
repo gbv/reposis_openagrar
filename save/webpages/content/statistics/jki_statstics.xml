@@ -50,9 +50,9 @@
       });
       
       var q_query = "mods.yearIssued:" + year;
-      var q_refArticle="mods.refereed:yes AND mods.genre:article AND mods.genre.host:journal";
+      var q_refArticle="mods.refereed:yes AND mods.genre:article AND (mods.genre.host:journal OR mods.genre.host:issue)";
       var q_refBook="(mods.genre:book OR (mods.genre:chapter AND (mods.genre.host:book OR mods.genre.host:series)))";
-      var q_nRefArticle="NOT (mods.refereed:yes) AND mods.genre:article AND mods.genre.host:journal";
+      var q_nRefArticle="NOT (mods.refereed:yes) AND mods.genre:article AND (mods.genre.host:journal OR mods.genre.host:issue)";
       var q_nRefConf="NOT (mods.refereed:yes) AND mods.genre:article AND mods.genre.host:proceedings";
       var q_refConf="mods.refereed:yes AND mods.genre:article AND mods.genre.host:proceedings";
       
@@ -162,23 +162,23 @@
       //var q_instZO= createAffiQuery (instZO);
       //var q_instZR= createAffiQuery (instZR);
 
-      var q_instA ='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_a"';
-      var q_instAG='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_ag"';
-      var q_instAT='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_at"';
-      var q_instBS='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_bs"';
-      var q_instBI='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_bi"';
-      var q_instEP='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_ep"';
-      var q_instGF='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_gf"';
-      var q_instOVP='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_opv"';
-      var q_instOW='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_ow"';
-      var q_instPB='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_pb"';
-      var q_instRS='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_rs"';
-      var q_instSB='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_sb"';
-      var q_instSF='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_stfo"';
-      var q_instZG='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_zg"';
-      var q_instZL='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_zl"';
-      var q_instZO='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_zo"';
-      var q_instZR='(mods.affiliation:*julius* OR mods.affiliation:*jki*) AND category.top:"mir_institutes:jki_zr"';
+      var q_instA ='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_a"';
+      var q_instAG='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_ag"';
+      var q_instAT='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_at"';
+      var q_instBS='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_bs"';
+      var q_instBI='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_bi"';
+      var q_instEP='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_ep"';
+      var q_instGF='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_gf"';
+      var q_instOVP='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_opv"';
+      var q_instOW='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_ow"';
+      var q_instPB='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_pb"';
+      var q_instRS='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_rs"';
+      var q_instSB='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_sb"';
+      var q_instSF='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_stfo"';
+      var q_instZG='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_zg"';
+      var q_instZL='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_zl"';
+      var q_instZO='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_zo"';
+      var q_instZR='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_zr"';
       
       var Fieldname = (JCRClasses1Yb) ? 'oa.statistic.metric.jcr.class1Yb' : 'oa.statistic.metric.jcr.class';
       
