@@ -56,7 +56,7 @@
       var q_nRefConf="NOT (mods.refereed:yes) AND mods.genre:article AND mods.genre.host:proceedings";
       var q_refConf="mods.refereed:yes AND mods.genre:article AND mods.genre.host:proceedings";
       
-      var q_instAll= '(mods.affiliation:*julius* OR mods.affiliation:*jki*)' ;
+      var q_instAll= '(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*)' ;
       var instA = [
                     "julius kuhn-institut, institut fur pflanzenschutz in ackerbau und grunland",
                     "julius kuhn-institut (jki), bundesforschungsinstitut fur kulturpflanzen, institut fur pflanzenschutz in ackerbau und grunland, braunschweig, deutschland",
