@@ -46,7 +46,7 @@
         $('h1').text(" Statistik - JKI Jahresstatistik " + year);
         var year_jcr = year;
         if (JCRClasses1Yb) year_jcr = year -1;
-        $('#text_jcr').text(" mit den JCR von (" + year_jcr + ")");
+        $('#text_jcr').text(" mit den IF von (" + year_jcr + ")");
       });
       
       var q_query = "mods.yearIssued:" + year;
@@ -203,7 +203,7 @@
       <table>
         <tr>
           <td> <b>Veröffentlichungsform </b></td>
-          <td> <b>IP </b> </td>
+          <td> <b>IF </b> </td>
           <td> <b>JKI Gesamt</b> </td>
           <td class="head_inst"> Institut für Pflanzen-schutz in Ackerbau und Grünland (A) </td>
           <td class="head_inst"> Institut für nationale und inter-nationale Angelegen- heiten der Pflanzen- gesundheit (AG) </td>
@@ -351,7 +351,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZR+ ' AND ' + q_jcrclass5)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
-          <td>  </td>
+          <td> ∑ </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instAll )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instA )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instAG )" data-printAsLink="true"/> </td>
