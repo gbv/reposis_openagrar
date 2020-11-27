@@ -160,7 +160,17 @@
     
     <xsl:variable name="yearIssued" select="substring(//mods:mods/mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf'],1,4)"/>
     <xsl:variable name="yearIssued1Yb" select="$yearIssued - 1"/>
-    <xsl:if test="//mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]">
+    <xsl:variable name="encryptedJCR">
+      <xsl:choose>
+        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]">
+          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]"/>
+        </xsl:when>
+        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:relatedItem/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]">
+          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]"/>
+        </xsl:when>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:if test="$encryptedJCR">
       <xsl:variable name="encryptedJCR" select="//mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]"/>
       <xsl:variable name="JCR" select="document(concat('decrypt:',$encryptedJCR))/value"/>
       <xsl:call-template name="JCR2JCRClass">
@@ -168,8 +178,17 @@
         <xsl:with-param name="Fieldname" select="'oa.statistic.metric.jcr.class'"/>
       </xsl:call-template>
     </xsl:if>
-    <xsl:if test="//mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued1Yb]">
-      <xsl:variable name="encryptedJCR1Yb" select="//mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued1Yb]"/>
+    <xsl:variable name="encryptedJCR1Yb">
+      <xsl:choose>
+        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued1Yb]">
+          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued1Yb]"/>
+        </xsl:when>
+        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:relatedItem/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued1Yb]">
+          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued1Yb]"/>
+        </xsl:when>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:if test="$encryptedJCR1Yb">
       <xsl:variable name="JCR1Yb" select="document(concat('decrypt:',$encryptedJCR1Yb))/value"/>
       <xsl:call-template name="JCR2JCRClass">
         <xsl:with-param name="JCR" select="$JCR1Yb"/>
