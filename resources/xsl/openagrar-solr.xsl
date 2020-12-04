@@ -151,14 +151,23 @@
         </xsl:choose>
       </xsl:otherwise>
     </xsl:choose>
-    <xsl:for-each select="//mods:identifier[@type='isbn']">
+    <xsl:for-each select="mods:identifier[@type='isbn']">
       <field name="mods.identifier.isbn"><xsl:value-of select="."/></field> 
     </xsl:for-each>
-    <xsl:for-each select="//mods:identifier[@type='issn']">
+    <xsl:for-each select="mods:reltedItem[@type='host']/mods:identifier[@type='isbn']">
+      <field name="mods.identifier.isbn"><xsl:value-of select="."/></field> 
+    </xsl:for-each>
+    <xsl:for-each select="mods:identifier[@type='issn']">
+      <field name="mods.identifier.issn"><xsl:value-of select="."/></field> 
+    </xsl:for-each>
+    <xsl:for-each select="mods:reltedItem[@type='host' or @type='series']/mods:identifier[@type='issn']">
+      <field name="mods.identifier.issn"><xsl:value-of select="."/></field> 
+    </xsl:for-each>
+    <xsl:for-each select="mods:reltedItem[@type='host']/mods:reltedItem[@type='host' or @type='series']/mods:identifier[@type='issn']">
       <field name="mods.identifier.issn"><xsl:value-of select="."/></field> 
     </xsl:for-each>
     
-    <xsl:variable name="yearIssued" select="substring(//mods:mods/mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf'],1,4)"/>
+    <xsl:variable name="yearIssued" select="substring(mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf'],1,4)"/>
     <xsl:variable name="yearIssued1Yb" select="$yearIssued - 1"/>
     <xsl:variable name="encryptedJCR">
       <xsl:choose>
@@ -171,7 +180,6 @@
       </xsl:choose>
     </xsl:variable>
     <xsl:if test="$encryptedJCR">
-      <xsl:variable name="encryptedJCR" select="//mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]"/>
       <xsl:variable name="JCR" select="document(concat('decrypt:',$encryptedJCR))/value"/>
       <xsl:call-template name="JCR2JCRClass">
         <xsl:with-param name="JCR" select="$JCR"/>
