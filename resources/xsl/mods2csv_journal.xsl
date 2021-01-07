@@ -25,7 +25,7 @@
     <xsl:variable name="year2Yb" select="$year - 2"/>
     <xsl:variable name="year3Yb" select="$year - 3"/>
     <xsl:variable name="year4Yb" select="$year - 4"/>
-    <xsl:text>Titel;Nebensachtitel;Autoren;Herausgeber;Genre;ISSN;Verlag;Verlagsort;referiert;</xsl:text>
+    <xsl:text>Titel;Nebensachtitel;Autoren;Herausgeber;Genre;ISSN;Verlag;Verlagsort;Veröffentlichung;referiert;</xsl:text>
     <xsl:value-of select="concat('JCR_',$year,';JCR_',$year1Yb,';JCR_',$year2Yb,';JCR_',$year3Yb,';JCR_',$year4Yb)"/>
     <xsl:text>&#xA;</xsl:text>
     <xsl:for-each select="//mods:mods">
