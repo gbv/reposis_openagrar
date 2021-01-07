@@ -263,6 +263,12 @@ MCR.OAIDataProvider.MetadataFormat.oai_datacite.Schema=http://schema.datacite.or
   MCR.ContentTransformer.mods2csv.Stylesheet=%MCR.ContentTransformer.mods.Stylesheet%,xsl/mods2csv.xsl
   MCR.ContentTransformer.mods2csv.FileExtension=csv
 
+##############################################################################
+# Export MODS to CSV for journals                                            #
+##############################################################################
+  MCR.ContentTransformer.mods2csv_journal.Class=org.mycore.common.content.transformer.MCRXSLTransformer
+  MCR.ContentTransformer.mods2csv_journal.Stylesheet=%MCR.ContentTransformer.mods.Stylesheet%,xsl/mods2csv_jounal.xsl
+  MCR.ContentTransformer.mods2csv_journal.FileExtension=csv
 
 ##############################################################################
 # Error Page                                                                 #
