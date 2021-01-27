@@ -25,6 +25,16 @@
       </xed:bind>
     </div>
   </xed:template>
+  
+  <xed:template id="platform">
+    <div class="mir-form-group-body">
+      <xed:bind xpath="mods:relatedItem[@type='series']">
+        <xed:bind xpath="@xlink:href" initially="{$MIR.projectid.default}_mods_00000000"> <input id="relItem-series" type="hidden" /> </xed:bind>
+        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="title.series.relItemsearch" />
+        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="year.issued.relItem" />
+      </xed:bind>
+    </div>
+  </xed:template>
 
   <xed:template id="book">
     <div class="mir-form-group-body">
