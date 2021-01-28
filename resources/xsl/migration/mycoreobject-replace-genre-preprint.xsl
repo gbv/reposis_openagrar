@@ -19,7 +19,7 @@
     </xsl:copy>  
   </xsl:template>
   
-  <xsl:template match="mods:mods/mods:genre[contains('classifications/genres',@authorityURI)]">
+  <xsl:template match="mods:mods/mods:genre[contains(@authorityURI,'classifications/genres')]">
     
   </xsl:template> 
   
