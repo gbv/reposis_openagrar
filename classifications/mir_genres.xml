@@ -151,6 +151,11 @@
         <label xml:lang="en" text="Professional declaration" />
       </category>
     </category>
+    <category ID="preprint">
+      <label xml:lang="en" text="Preprint" />
+      <label xml:lang="de" text="Preprint" />
+      <label xml:lang="x-hosts" text="series standalone platform" />
+    </category>
     <category ID="issue">
       <label xml:lang="en" text="Issue" />
       <label xml:lang="x-hosts" text="journal" />
@@ -183,6 +188,11 @@
       <label xml:lang="x-hosts" text="standalone" />
       <label xml:lang="en" text="Series" />
       <label xml:lang="de" text="Serie" />
+    </category>
+    <category ID="platform">
+      <label xml:lang="x-hosts" text="standalone" />
+      <label xml:lang="en" text="Publication Platform" />
+      <label xml:lang="de" text="Publikationsplattform" />
     </category>
     <category ID="interview">
       <label xml:lang="x-hosts" text="journal standalone" />
