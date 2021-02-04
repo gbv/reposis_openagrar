@@ -177,5 +177,18 @@
       "indexed": true,
       "multiValued":false
     }
+  },
+  {
+    "add-field": {
+      "name": "mods.dateIssued.statistic",
+      "type": "string"
+    }
+  },
+  {
+    "add-field": {
+        "name":"mods.yearIssued.statistic",
+        "type":"pint",
+        "multiValued":false
+    }
   }
 ]
