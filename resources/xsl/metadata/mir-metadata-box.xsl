@@ -7,7 +7,7 @@
   <xsl:import href="xslImport:modsmeta:metadata/mir-metadata-box.xsl" />
   <xsl:include href="modsmetadata.xsl" />
   <!-- copied from http://www.loc.gov/standards/mods/v3/MODS3-4_HTML_XSLT1-0.xsl -->
-  <xsl:include href="date.statistic.xsl"/>
+  <xsl:include href="../date.statistic.xsl"/>
 
   <xsl:key use="@type" name="title-by-type" match="//mods:mods/mods:titleInfo" />
 
