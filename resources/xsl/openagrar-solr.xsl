@@ -8,6 +8,7 @@
   exclude-result-prefixes="mods mcrxsl xlink"
 >
   <xsl:import href="xslImport:solr-document:openagrar-solr.xsl" />
+  <xsl:include href="date.statistic.xsl"/>
 
   <xsl:template match="mycoreobject[contains(@ID,'_mods_')]">
     <xsl:apply-imports />
@@ -167,44 +168,17 @@
       <field name="mods.identifier.issn"><xsl:value-of select="."/></field> 
     </xsl:for-each>
     
-    <xsl:variable name="dateIssued">
-      <xsl:call-template name="date2number">
-        <xsl:with-param name="date" select="mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf']"/>
-      </xsl:call-template>
-    </xsl:variable>
-    <xsl:variable name="dateIssued_print">
-      <xsl:call-template name="date2number">
-        <xsl:with-param name="date" select="mods:originInfo[@eventType='publication_print']/mods:dateIssued[@encoding='w3cdtf']"/>
-      </xsl:call-template>
-    </xsl:variable>
-    <xsl:variable name="dateIssued_online">
-      <xsl:call-template name="date2number">
-        <xsl:with-param name="date" select="mods:originInfo[@eventType='publication_online']/mods:dateIssued[@encoding='w3cdtf']"/>
+    <xsl:variable name="dateIssued_statistics">
+      <xsl:call-template name="getDateStatistic">
+        <xsl:with-param name="mods" select=".."/>
       </xsl:call-template>
     </xsl:variable>
     
-    <xsl:choose>
-      <xsl:when test="$dateIssued &lt;= $dateIssued_online and $dateIssued &lt;= $dateIssued_print">
-        <field name="mods.dateIssued.statistic"> <xsl:value-of select="mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf']" /> </field>
-        <field name="mods.yearIssued.statistic"> <xsl:value-of select="substring($dateIssued,1,4)" /> </field>
-      </xsl:when>
-      <xsl:when test="$dateIssued_online &lt; $dateIssued and $dateIssued_online &lt; $dateIssued_print">
-        <field name="mods.dateIssued.statistic"> <xsl:value-of select="mods:originInfo[@eventType='publication_online']/mods:dateIssued[@encoding='w3cdtf']" /> </field>
-        <field name="mods.yearIssued.statistic"> <xsl:value-of select="substring($dateIssued_online,1,4)" /> </field>
-      </xsl:when>
-      <xsl:when test="$dateIssued_print &lt; $dateIssued_online and $dateIssued_print &lt; $dateIssued">
-        <field name="mods.dateIssued.statistic"> <xsl:value-of select="mods:originInfo[@eventType='publication_print']/mods:dateIssued[@encoding='w3cdtf']" /> </field>
-        <field name="mods.yearIssued.statistic"> <xsl:value-of select="substring($dateIssued_print,1,4)" /> </field>
-      </xsl:when>
-      <xsl:otherwise>
-        <field name="mods.dateIssued.statistic"> <xsl:value-of select="'Error: no date selected.'" /> </field>
-        <field name="mods.yearIssued.statistic"> <xsl:value-of select="'Error: no date selected.'" /> </field>
-      </xsl:otherwise>
-    </xsl:choose>
-    
+    <field name="mods.dateIssued.statistic"> <xsl:value-of select="$dateIssued_statistics" /> </field>
+    <field name="mods.yearIssued.statistic"> <xsl:value-of select="substring($dateIssued_statistics,1,4)" /> </field>
         
     <!-- JCR -->
-    <xsl:variable name="yearIssued" select="substring(mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf'],1,4)"/>
+    <xsl:variable name="yearIssued" select="substring($dateIssued_statistics,1,4)"/>
     <xsl:variable name="yearIssued1Yb" select="$yearIssued - 1"/>
     <xsl:variable name="encryptedJCR">
       <xsl:choose>
@@ -241,24 +215,6 @@
       </xsl:call-template>
     </xsl:if>
     <!-- / JCR -->
-  </xsl:template>
-  
-  <xsl:template name="date2number">
-    <xsl:param name = "date" />
-    <xsl:choose>
-      <xsl:when test="10 = string-length($date)">
-        <xsl:value-of select="translate($date,'-','')"/>
-      </xsl:when>
-      <xsl:when test="7 = string-length($date)">
-        <xsl:value-of select="translate(concat($date,'-00'),'-','')"/>
-      </xsl:when>
-      <xsl:when test="4 = string-length($date)">
-        <xsl:value-of select="translate(concat($date,'-00-00'),'-','')"/>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:value-of select="'99990000'"/>
-      </xsl:otherwise>
-    </xsl:choose>
   </xsl:template>
   
   <xsl:template name="JCR2JCRClass">
