@@ -7,6 +7,7 @@
   <xsl:import href="xslImport:modsmeta:metadata/mir-metadata-box.xsl" />
   <xsl:include href="modsmetadata.xsl" />
   <!-- copied from http://www.loc.gov/standards/mods/v3/MODS3-4_HTML_XSLT1-0.xsl -->
+  <xsl:include href="../date.statistic.xsl"/>
 
   <xsl:key use="@type" name="title-by-type" match="//mods:mods/mods:titleInfo" />
 
@@ -493,7 +494,12 @@
   </xsl:template>
   
   <xsl:template match="mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']" mode="oa">
-    <xsl:variable name="yearIssued" select="substring(//mods:mods/mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf'],1,4)"/>
+    <xsl:variable name="dateIssued_statistics">
+      <xsl:call-template name="getDateStatistic">
+        <xsl:with-param name="mods" select="//mods:mods"/>
+      </xsl:call-template>
+    </xsl:variable>
+    <xsl:variable name="yearIssued" select="substring($dateIssued_statistics,1,4)"/>
     <tr>
       <td valign="top" class="metaname">
         <xsl:value-of select="concat('Journal Metrics',':')" />
