@@ -3,7 +3,7 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation" exclude-result-prefixes="xalan i18n">
   <xsl:param name="CurrentLang" />
 
-  <xsl:include href="../date.statistic.xsl"/>
+  <xsl:include href="date.statistic.xsl"/>
 
   <xsl:output
     encoding="UTF-8"
