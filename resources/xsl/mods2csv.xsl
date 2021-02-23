@@ -3,6 +3,8 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation" exclude-result-prefixes="xalan i18n">
   <xsl:param name="CurrentLang" />
 
+  <xsl:include href="../date.statistic.xsl"/>
+
   <xsl:output
     encoding="UTF-8"
     media-type="text/csv"
@@ -298,9 +300,15 @@ zu klären:
         <xsl:value-of select="document(concat('classification:metadata:0:children:mir_institutes:',$institute))//category/label[@xml:lang=$CurrentLang]/@text" />
       </xsl:for-each>
     <xsl:text>&quot;;</xsl:text>
+    
+    <xsl:variable name="dateIssued_statistics">
+      <xsl:call-template name="getDateStatistic">
+        <xsl:with-param name="mods" select="//mods:mods"/>
+      </xsl:call-template>
+    </xsl:variable>
 
     <xsl:text>&quot;</xsl:text>
-      <xsl:variable name="yearIssued" select="substring(mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf'],1,4)"/>
+      <xsl:variable name="yearIssued" select="substring($dateIssued_statistics,1,4)"/>
       <xsl:for-each select="mods:relatedItem[@type='series' or @type='host']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year = $yearIssued]">
         <xsl:value-of select="."/>
       </xsl:for-each>
