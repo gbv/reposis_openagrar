@@ -291,5 +291,17 @@
       </div>
     </fieldset>
   </xed:template>
+  
+  <xed:template id="title.platform">
+    <mir:textfield xpath="mods:titleInfo/mods:title" label="mir.title.platform" help-text="{i18n:mir.help.title.platform}" class="required"
+      required="true" required-i18n="mir.validation.title.platform" />
+  </xed:template>
+  
+  <xed:template id="hostInstitution">
+    <xed:bind xpath="mods:name[@type='corporate']">
+      <xed:bind xpath="mods:role/mods:roleTerm[@authority='marcrelator'][@type='code']" initially="his" />
+      <mir:textfield xpath="mods:namePart" label="mir.hostInstitution" help-text="{i18n:mir.help.hostInstitution}" placeholder="{i18n:mir.placeholder.hostInstitution}" />
+    </xed:bind>
+  </xed:template>
 
 </xed:template>
