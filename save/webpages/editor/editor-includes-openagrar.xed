@@ -142,7 +142,7 @@
     <xed:validate xpath="//mods:mods/mods:genre[@authorityURI=$mir_genres/label[@xml:lang='x-uri']/@text]/@valueURIxEditor" required="true"
       i18n="mir.validation.genre" display="global" />
     <!-- don't validate author, date issued and rights for journal etc.  -->
-    <xed:if test="//mods:mods/mods:genre[@valueURIxEditor!='journal'][@valueURIxEditor!='newspaper'][@valueURIxEditor!='series'][@valueURIxEditor!='plattform'][@valueURIxEditor!='lecture']">
+    <xed:if test="//mods:mods/mods:genre[@valueURIxEditor!='journal'][@valueURIxEditor!='newspaper'][@valueURIxEditor!='series'][@valueURIxEditor!='platform'][@valueURIxEditor!='lecture']">
       <xed:validate xpath="//mods:mods/mods:accessCondition[@type='use and reproduction']" required="true" i18n="mir.validation.rights" display="global" />
     </xed:if>
 
@@ -298,10 +298,25 @@
   </xed:template>
   
   <xed:template id="hostInstitution">
-    <xed:bind xpath="mods:name[@type='corporate']">
+    <xed:bind xpath="mods:name[@type='corporate'][mods:role/mods:roleTerm[@authority='marcrelator'][@type='code']='his']" />
+    <mir:person.repeated help-text="{i18n:mir.help.hostInstitution}">
+      <xed:include uri="xslStyle:items2options:classification:editor:-1:children:marcrelator" />
+    </mir:person.repeated>
+    <!--<xed:bind xpath="mods:name[@type='corporate']">
       <xed:bind xpath="mods:role/mods:roleTerm[@authority='marcrelator'][@type='code']" initially="his" />
       <mir:textfield xpath="mods:namePart" label="mir.hostInstitution" help-text="{i18n:mir.help.hostInstitution}" placeholder="{i18n:mir.placeholder.hostInstitution}" />
-    </xed:bind>
+    </xed:bind>-->
+  </xed:template>
+  
+  <xed:template id="title.platform.relItemsearch">
+    <mir:relItemsearch searchengine="title" genre="platform" responsefield="mods.title" xpath="mods:titleInfo/mods:title" label="mir.title"
+      help-text="{i18n:mir.help.platform.title}" class="required" required="true" required-i18n="mir.validation.title.platform" />
+  </xed:template>
+  
+  <xed:template id="platform.volume">
+    <mir:textfield xpath="mods:part/mods:detail[@type='volume']/mods:number" label="mir.platform.volume" help-text="{i18n:mir.help.platform.volume}"
+      placeholder="{i18n:mir.placeholder.platform.volume}" class="mir-modspart" 
+      required="true" required-i18n="mir.validation.platform.volume"/>
   </xed:template>
 
 </xed:template>
