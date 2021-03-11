@@ -229,6 +229,7 @@
 
   <xed:template id="preprint">
     <xed:include uri="webapp:editor/editor-genres.xed" ref="publication.common" />
+    <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="date.issued" />
   </xed:template>
 
   <xed:template id="flyer">
@@ -534,9 +535,8 @@
   </xed:template>
   
   <xed:template id="platform">
-    <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="title" />
-    <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="editor.repeated" />
-    <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="language" />
+    <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-openagrar.xed" ref="title.platform" />
+    <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-openagrar.xed" ref="hostInstitution" />
     <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="sdnb.repeat" />
     <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="link.repeated" />
     <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="subject.simple" />
@@ -546,7 +546,7 @@
   <xed:template id="submit">
     <xed:include uri="webapp:editor/editor-includes.xed" ref="cancel.submit" />
     <xed:include uri="webapp:editor/editor-includes.xed" ref="cleanup-rules" />
-    <xed:include uri="webapp:editor/editor-includes.xed" ref="validation-rules" />
+    <xed:include uri="webapp:editor/editor-includes-openagrar.xed" ref="validation-rules" />
   </xed:template>
 
 </xed:template>
