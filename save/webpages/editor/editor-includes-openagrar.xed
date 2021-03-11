@@ -310,7 +310,7 @@
   
   <xed:template id="title.platform.relItemsearch">
     <mir:relItemsearch searchengine="title" genre="platform" responsefield="mods.title" xpath="mods:titleInfo/mods:title" label="mir.title"
-      help-text="{i18n:mir.help.platform.title}" class="required" required="true" required-i18n="mir.validation.title.platform" />
+      help-text="{i18n:mir.help.platform.title}" class="required" required-i18n="mir.validation.title.platform" />
   </xed:template>
   
   <xed:template id="platform.volume">
