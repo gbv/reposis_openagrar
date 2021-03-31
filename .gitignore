@@ -9,4 +9,5 @@ messages_en.resolved.properties
 mycore.active.properties
 mycore.properties
 mycore.resolved.properties
-resources/META-INF/persistence.xml
+*.iml
+target
