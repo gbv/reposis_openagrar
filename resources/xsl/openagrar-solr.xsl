@@ -88,6 +88,20 @@
         </field>
       </xsl:for-each>
     </xsl:for-each>
+    <xsl:for-each select="mods:relatedItem[@type='host' or @type='series']/mods:part">
+      <xsl:if test="mods:detail[@type='issue']">
+        <field name="mods.part.issue"><xsl:value-of select="mods:detail[@type='issue']"/></field>
+      </xsl:if>
+      <xsl:if test="mods:detail[@type='volume']">
+        <field name="mods.part.volume"><xsl:value-of select="mods:detail[@type='volume']"/></field>
+      </xsl:if>
+      <xsl:if test="mods:extent[@unit='pages']/mods:start">
+        <field name="mods.part.pages.start"><xsl:value-of select="mods:extent[@unit='pages']/mods:start"/></field>
+      </xsl:if>
+      <xsl:if test="mods:extent[@unit='pages']/mods:end">
+        <field name="mods.part.pages.end"><xsl:value-of select="mods:extent[@unit='pages']/mods:end"/></field>
+      </xsl:if>
+    </xsl:for-each>
     <xsl:for-each select="mods:relatedItem[@type='host']/mods:genre">
       <field name="mods.genre.host">
         <xsl:value-of select="substring-after(@valueURI,'#')" />

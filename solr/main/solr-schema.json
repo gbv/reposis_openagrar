@@ -190,5 +190,41 @@
         "type":"pint",
         "multiValued":false
     }
+  },
+  {
+    "add-field": {
+        "name":"mods.part.issue",
+        "type":"string",
+        "indexed": true,
+        "stored": true,
+        "multiValued":true
+    }
+  },
+  {
+    "add-field": {
+        "name":"mods.part.volume",
+        "type":"string",
+        "indexed": true,
+        "stored": true,
+        "multiValued":true
+    }
+  },
+  {
+    "add-field": {
+        "name":"mods.part.pages.start",
+        "type":"string",
+        "indexed": true,
+        "stored": true,
+        "multiValued":true
+    }
+  },
+  {
+    "add-field": {
+        "name":"mods.part.pages.end",
+        "type":"string",
+        "indexed": true,
+        "stored": true,
+        "multiValued":true
+    }
   }
 ]
