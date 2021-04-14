@@ -18,6 +18,9 @@
           var li = $('<li></li>');
           li.append ('<a href="jki_statstics.xml?year=' + i + '&amp;JCRClasses1Yb=true">' + i + ' mit JCR vom Vorjahr</a>');
           $("#jki_statistic").append(li);
+          li = $('<li></li>');
+          li.append ('<a href="jki_statstics.xml?year=' + i + '&amp;JCRClasses2Yb=true">' + i + ' mit JCR von 2 Jahren zuvor</a>');
+          $("#jki_statistic").append(li);
         }
       });
       

@@ -180,6 +180,14 @@
   },
   {
     "add-field": {
+      "name": "oa.statistic.metric.jcr.class2Yb",
+      "type": "text_lower",
+      "indexed": true,
+      "multiValued":false
+    }
+  },
+  {
+    "add-field": {
       "name": "mods.dateIssued.statistic",
       "type": "string"
     }
