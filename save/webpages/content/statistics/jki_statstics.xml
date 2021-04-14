@@ -185,8 +185,9 @@
       var q_instZO='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_zo"';
       var q_instZR='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_zr"';
       
-      var Fieldname = (JCRClasses1Yb) ? 'oa.statistic.metric.jcr.class1Yb' : 'oa.statistic.metric.jcr.class';
-      Fieldname = (JCRClasses2Yb) ? 'oa.statistic.metric.jcr.class2Yb' : 'oa.statistic.metric.jcr.class';
+      var Fieldname = 'oa.statistic.metric.jcr.class'; 
+      if (JCRClasses1Yb) Fieldname ='oa.statistic.metric.jcr.class1Yb';
+      if (JCRClasses2Yb) Fieldname ='oa.statistic.metric.jcr.class2Yb';
       
       var q_jcrclass0 = 'NOT (' + Fieldname + ':[0 TO *])';
       var q_jcrclass1 = '(' + Fieldname + ':"&lt; 1")';
