@@ -40,12 +40,17 @@
       var JCRClasses1Yb=false;
       if (searchParams.has("JCRClasses1Yb") === true &amp;&amp; searchParams.get("JCRClasses1Yb") == 'true' ) {
         JCRClasses1Yb=true;
+      }
+      var JCRClasses2Yb=false;
+      if (searchParams.has("JCRClasses2Yb") === true &amp;&amp; searchParams.get("JCRClasses2Yb") == 'true' ) {
+        JCRClasses2Yb=true;
       } 
       
       $(document).ready( function() {
         $('h1').text(" Statistik - JKI Jahresstatistik " + year);
         var year_jcr = year;
         if (JCRClasses1Yb) year_jcr = year -1;
+        if (JCRClasses2Yb) year_jcr = year -2;
         $('#text_jcr').text(" mit den IF von (" + year_jcr + ")");
       });
       
@@ -181,6 +186,7 @@
       var q_instZR='(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*) AND category.top:"mir_institutes:jki_zr"';
       
       var Fieldname = (JCRClasses1Yb) ? 'oa.statistic.metric.jcr.class1Yb' : 'oa.statistic.metric.jcr.class';
+      Fieldname = (JCRClasses2Yb) ? 'oa.statistic.metric.jcr.class2Yb' : 'oa.statistic.metric.jcr.class';
       
       var q_jcrclass0 = 'NOT (' + Fieldname + ':[0 TO *])';
       var q_jcrclass1 = '(' + Fieldname + ':"&lt; 1")';

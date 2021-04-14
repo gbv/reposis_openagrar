@@ -180,6 +180,7 @@
     <!-- JCR -->
     <xsl:variable name="yearIssued" select="substring($dateIssued_statistics,1,4)"/>
     <xsl:variable name="yearIssued1Yb" select="$yearIssued - 1"/>
+    <xsl:variable name="yearIssued2Yb" select="$yearIssued - 1"/>
     <xsl:variable name="encryptedJCR">
       <xsl:choose>
         <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]">
@@ -212,6 +213,23 @@
       <xsl:call-template name="JCR2JCRClass">
         <xsl:with-param name="JCR" select="$JCR1Yb"/>
         <xsl:with-param name="Fieldname" select="'oa.statistic.metric.jcr.class1Yb'"/>
+      </xsl:call-template>
+    </xsl:if>
+    <xsl:variable name="encryptedJCR2Yb">
+      <xsl:choose>
+        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued2Yb]">
+          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued2Yb]"/>
+        </xsl:when>
+        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:relatedItem/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued2Yb]">
+          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued2Yb]"/>
+        </xsl:when>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:if test="$encryptedJCR2Yb">
+      <xsl:variable name="JCR2Yb" select="document(concat('decrypt:',$encryptedJCR2Yb))/value"/>
+      <xsl:call-template name="JCR2JCRClass">
+        <xsl:with-param name="JCR" select="$JCR2Yb"/>
+        <xsl:with-param name="Fieldname" select="'oa.statistic.metric.jcr.class2Yb'"/>
       </xsl:call-template>
     </xsl:if>
     <!-- / JCR -->
