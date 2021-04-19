@@ -41,7 +41,7 @@
         </div>
 
         <nav>
-          <ul class="nav navbar-nav pull-right">
+          <ul class="navbar-nav ml-auto flex-row">
             <xsl:call-template name="mir.loginMenu" />
             <xsl:call-template name="mir.languageMenu" />
           </ul>
@@ -91,7 +91,7 @@
     <div class="container">
       <div class="row">
         <div class="col-9">
-          <ul class="internal_links nav navbar-nav">
+          <ul class="internal_links navbar-nav ml-auto flex-row">
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='below']/*" />
           </ul>
           
@@ -169,7 +169,7 @@
     </xsl:variable>
 
     <li class="dropdown" id="basket-list-item">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="{$basketTitle}">
+      <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" title="{$basketTitle}">
         <xsl:value-of select="i18n:translate('basket')" />
         <sup>
           <xsl:value-of select="$entryCount" />
@@ -177,7 +177,7 @@
       </a>
       <ul class="dropdown-menu" role="menu">
         <li>
-          <a href="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}?type={$basket/@type}&amp;action=show">
+          <a class="dropdown-item" href="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}?type={$basket/@type}&amp;action=show">
             <xsl:value-of select="i18n:translate('basket.open')" />
           </a>
         </li>

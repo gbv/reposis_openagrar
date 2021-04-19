@@ -288,6 +288,7 @@ html body #powered_by {
 .flatmir-footer .container {
   margin-top: 0px;
   margin-bottom: 0px;
+  adding: 1em;
 }
 #sponsored_by {
   background-color: #F9F9F9;
@@ -307,8 +308,8 @@ html body footer .internal_links {
   padding-left: 0px;
 }
 #oa-copyright {
-  margin-top: 150px;
   position: absolute;
+  bottom: 0;
 }
 
 
