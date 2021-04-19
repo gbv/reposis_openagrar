@@ -1,0 +1,10 @@
+update classification from uri resource:classifications/author_role.xml
+update classification from uri resource:classifications/annual_review.xml
+update classification from uri resource:classifications/dataciteResType.xml
+update classification from uri resource:classifications/marcrelator.xml
+update classification from uri resource:classifications/mir_genres.xml
+update classification from uri resource:classifications/mir_institutes.xml
+update classification from uri resource:classifications/mir_licenses.xml
+update classification from uri resource:classifications/noteTypes.xml
+update classification from uri resource:classifications/rfc5646.xml
+update classification from uri resource:classifications/typeOfResource.xml
