@@ -26,9 +26,8 @@
       <div id="options_nav_box" class="mir-prop-nav">
 
         <div class="searchfield_box" title="{i18n:translate('mir.navsearch.title')}">
-          <form action="{$WebApplicationBaseURL}servlets/solr/find" class="navbar-form navbar-left" role="search">
+          <form action="{$WebApplicationBaseURL}servlets/solr/find" class="navbar-form form-inline" role="search">
             <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
-            <div class="form-group">
               <input name="condQuery" placeholder="{i18n:translate('mir.navsearch.placeholder')}" class="form-control search-query" id="searchInput" type="text" />
               <xsl:choose>
                 <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
@@ -38,7 +37,6 @@
                   <input name="owner" type="hidden" value="createdby:{$CurrentUser}" />
                 </xsl:when>
               </xsl:choose>
-            </div>
           </form>
         </div>
 
@@ -52,28 +50,31 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="navbar navbar-default mir-main-nav">
-      <div class="container">
+    <div class="navbar navbar-expand mir-main-nav">
+
+    <div class="container">
+
 
         <div class="navbar-header">
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".mir-main-nav-entries">
-            <span class="sr-only"> Toggle navigation </span>
-            <span class="icon-bar">
-            </span>
-            <span class="icon-bar">
-            </span>
-            <span class="icon-bar">
-            </span>
+          <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#mir-main-nav-collapse-box"
+                  aria-controls="mir-main-nav-collapse-box"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
           </button>
         </div>
 
-        <nav class="collapse navbar-collapse mir-main-nav-entries">
-          <ul class="nav navbar-nav pull-right">
+        <nav class="collapse navbar-collapse mir-main-nav-entries float-right">
+          <ul class="nav navbar-nav p-2 ml-auto">
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='search']" />
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='browse']" />
             <xsl:call-template name="oa.basketMenu" />
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='register']/*" />
-            <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='publish']" />
+            <!--<xsl:apply-templates select="$loaded_navigation_xml/menu[@id='publish']" />-->
           </ul>
         </nav>
 
