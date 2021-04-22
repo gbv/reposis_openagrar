@@ -375,7 +375,7 @@
           <xsl:if test="mods:part/mods:detail[@type='volume']/mods:number">
             <xsl:value-of
               select="concat('Vol. ',mods:part/mods:detail[@type='volume']/mods:number)" />
-            <xsl:if test="mods:part/mods:detail[@type='issue']/mods:number">
+            <xsl:if test="mods:part/mods:detail[@type='issue']/mods:number or mods:part/mods:detail[@type='articlenumber'] ">
               <xsl:text>, </xsl:text>
             </xsl:if>
           </xsl:if>
@@ -384,7 +384,15 @@
             <xsl:value-of
               select="concat('H. ',mods:part/mods:detail[@type='issue']/mods:number)" />
           </xsl:if>
-          <xsl:if test="mods:part/mods:detail[@type='issue']/mods:number and (mods:part/mods:date or mods:originInfo[@eventType='publication']/mods:dateIssued)">
+          <xsl:if test="mods:part/mods:detail[@type='issue']/mods:number and (mods:part/mods:detail[@type='articlenumber'] or mods:part/mods:date or mods:originInfo[@eventType='publication']/mods:dateIssued)">
+            <xsl:text> </xsl:text>
+          </xsl:if> 
+          <!-- Articlenumber -->
+          <xsl:if test="mods:part/mods:detail[@type='articlenumber']/mods:number">
+            <xsl:value-of
+              select="concat(i18n:translate('mir.articlenumber.short'),mods:part/mods:detail[@type='articlenumber']/mods:number)" />
+          </xsl:if>
+          <xsl:if test="mods:part/mods:detail[@type='articlenumber']/mods:number and (mods:part/mods:date or mods:originInfo[@eventType='publication']/mods:dateIssued)">
             <xsl:text> </xsl:text>
           </xsl:if>
           <xsl:if test="mods:part/mods:date or mods:originInfo[@eventType='publication']/mods:dateIssued[not(@point='start')][not(@point='end')]">

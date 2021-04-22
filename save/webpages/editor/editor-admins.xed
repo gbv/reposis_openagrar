@@ -48,7 +48,7 @@
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-openagrar.xed" ref="extension.characteristics" />
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-openagrar.xed" ref="extension.journalmetrics" />
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-openagrar.xed" ref="oa.annual_review" />
-        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="related.item.search.of.all.items" />
+        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-openagrar.xed" ref="related.item.search.of.all.items" />
 
         <xed:include uri="webapp:editor/editor-includes.xed" ref="cancel.submit" />
         <xed:include uri="webapp:editor/editor-includes.xed" ref="cleanup-rules" />
