@@ -103,7 +103,7 @@
             <label xml:lang="de">Dokument erfassen</label>
             <label xml:lang="en">Submit Document</label>
         </item>
-        <item href="/content/publish/importPPN.xml" type="intern">
+        <item href="/content/publish/importPPN.xml" type="intern" replaceMenu="false" constrainPopUp="false">
             <label xml:lang="de">Publizieren (PPN Import)</label>
             <label xml:lang="en">Publish (PPN Import)</label>
         </item>
