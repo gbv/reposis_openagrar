@@ -10,3 +10,9 @@ mycore.active.properties
 mycore.properties
 mycore.resolved.properties
 resources/META-INF/persistence.xml
+CryptUriResolver/target/
+DOIRegistration/target/
+ScopusMetrics/target/
+lib/openagrar-crypt-uriresolver-plugin-2018.06.0.2-SNAPSHOT.jar
+lib/openagrar-doi-plugin-2018.06.0.3-SNAPSHOT.jar
+lib/openagrar-scopus-metrics-plugin-2018.06.0.2-SNAPSHOT.jar
