@@ -6,7 +6,22 @@
 // set the defaults for all responsive levels here
 // no (xl) media query necessary (desktop first)
 
-
+.card-header {
+  color: white;
+  background-color: $primary;
+  padding: 10px;
+  margin: 10px -1px;
+}
+.card-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: inherit;
+}
+.card-footer {
+  background-color: $oaCardFooterBack;
+  border-top: 1px solid $oaCardFooterBack;
+}
 
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(lg) {

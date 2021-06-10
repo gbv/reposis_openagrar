@@ -6,6 +6,13 @@
 // set the defaults for all responsive levels here
 // no (xl) media query necessary (desktop first)
 
+.btn {
+  padding: 10px 15px;
+}
+
+:not(.input-group-btn) > .btn {
+  margin-right: 5px;
+}
 
 
 // Large devices (desktops) and below: <= 1200px

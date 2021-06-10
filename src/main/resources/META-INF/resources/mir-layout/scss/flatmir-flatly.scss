@@ -43,3 +43,6 @@
 @import "project_styles/_common";     // stlyes without a own file
 
 @import "project_styles/_section-home";     // settings for homepage only
+
+// TODO: remove after migration
+@import "project_styles/_move2sass";   // include old css rules
