@@ -306,6 +306,15 @@
         "stored": true,
         "multiValued":true
     }
+  },
+  {
+    "add-field": {
+        "name":"mods.physicalDescription.extent",
+        "type":"string",
+        "indexed": false,
+        "stored": true,
+        "multiValued":true
+    }
   }
   
 ]

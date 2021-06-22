@@ -276,6 +276,10 @@
     <xsl:for-each select="mods:location/mods:url">
       <field name="mods.location.url"><xsl:value-of select="."/></field> 
     </xsl:for-each>
+    <xsl:for-each select="mods:physicalDescription/mods:extent">
+      <field name="mods.physicalDescription.extent"><xsl:value-of select="."/></field> 
+    </xsl:for-each>
+    
     
   </xsl:template>
   
