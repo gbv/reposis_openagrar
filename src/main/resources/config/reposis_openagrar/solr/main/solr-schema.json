@@ -60,14 +60,6 @@
   },
   {
     "add-field": {
-        "name":"mods.subject",
-        "type":"text_de",
-        "multiValued":true,
-        "indexed":true,
-        "stored":false}
-  },
-  {
-    "add-field": {
         "name":"corporate",
         "type":"string",
         "multiValued":true}
