@@ -19,6 +19,21 @@
         <label xml:lang="x-hosts" text="proceedings" />
         <label xml:lang="de" text="Abstract / Zusammenfassung" />
       </category>
+      <category ID="correction">
+        <label xml:lang="en" text="Correction" />
+        <label xml:lang="de" text="Korrektur" />
+        <label xml:lang="x-hosts" text="journal" />
+      </category>
+      <category ID="short_communications">
+        <label xml:lang="x-hosts" text="journal" />
+        <label xml:lang="en" text="Short Communications" />
+        <label xml:lang="de" text="Mitteilungen und Nachrichten" />
+      </category>
+      <category ID="letter_to_the_editor">
+        <label xml:lang="en" text="Letter to the editor" />
+        <label xml:lang="x-hosts" text="journal " />
+        <label xml:lang="de" text="Letter to the editor" />
+      </category>
       <category ID="chapter">
         <label xml:lang="en" text="Book chapter" />
         <label xml:lang="de" text="Buchkapitel" />
