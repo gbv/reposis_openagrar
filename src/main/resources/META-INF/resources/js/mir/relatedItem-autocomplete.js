@@ -10,7 +10,7 @@ var BloodhoundConf = {
             return list;
         },
         prepare : function(query, settings) {
-            var param = "%2BshelfLocator%3A" + query + "*";
+            var param = "+%2BshelfLocator%3A" + query + "*";
 			param += "+%2BobjectType%3A%22mods%22";
 			param += "&fl=mods.title%2Cid%2Cidentifier.type.isbn%2CshelfLocator";
 			param += "&version=4.5&rows=20&wt=json";
@@ -42,13 +42,13 @@ var BloodhoundConf = {
         transform : function(list) {
 			list = list.response.docs;
 			$.each(list, function(index, item) {
-				item.name = item['identifier.type.issn'] + ' - ' + item['mods.title'][0];
-				item.value = item['identifier.type.issn'];
+				item.name = item['mods.identifier.issn'] + ' - ' + item['mods.title'][0];
+				item.value = item['mods.identifier.issn'];
 			});
 			return list;
 		},
 		prepare : function(query, settings) {
-		    var param = "%2Bidentifier.type.issn%3A"+query+"*";
+		    var param = "+%2Bmods.identifier.issn%3A"+query+"*";
 			param += "+%2BobjectType%3A%22mods%22";
 			param += "&fl=mods.title%2Cid%2Cidentifier.type.issn";
 			param += "&version=4.5&rows=20&wt=json";
@@ -67,9 +67,9 @@ var BloodhoundConf = {
 			return list;
 		},
 		prepare : function(query, settings) {
-		    var param = "%2Bmods.title.autocomplete%3A*" + query.replace(/ /g,"\\ ") + "*+";
+		    var param = "+%2Bmods.title.autocomplete%3A*" + query.replace(/ /g,"\\ ") + "*+";
 			param += "%2BobjectType%3A%22mods%22";
-			param += "&fl=mods.title%2Cid%2Cidentifier.type.issn%2Cidentifier.type.isbn%2CshelfLocator";
+			param += "&fl=mods.title%2Cid%2Cmods.identifier.issn%2Cidentifier.type.isbn%2CshelfLocator";
 			param += "&version=4.5&rows=20&wt=json";
 
 			settings.url = settings.url.replace("%QUERY", param);
@@ -92,7 +92,7 @@ var BloodhoundConf = {
 			return list;
 		},
 		prepare : function(query, settings) {
-		    var param = "%2Bmods.title.autocomplete%3A*" + query.replace(/ /g,"\\ ") + "*+";
+		    var param = "+%2Bmods.title.autocomplete%3A*" + query.replace(/ /g,"\\ ") + "*+";
 			param += "%2BobjectType%3A%22mods%22";
 			param += "&fl=mods.title%2Cid%2Cmods.title.host%2Cmods.title.series";
 			param += "&version=4.5&rows=20&wt=json";
@@ -200,7 +200,7 @@ function getModsAfterTrans(fieldset, relItemid) {
 		dataType : "xml"
 	}).done(function(xml) {
 		fillFieldset(fieldset, xml)
-	}).error(function() {
+	}).fail(function() {
 		console.log("Mycore Propertie 'MCR.ContentTransformer.mods2xeditor.Stylesheet' not set");
 		getMods(fieldset, relItemid)
 	});
@@ -241,9 +241,9 @@ function fillFieldset(fieldset, xml) {
 }
 
 function createbadge(inputgroup, relItemid) {
-	badge = '<a href="../receive/' + relItemid + '" target="_blank" class="badge"> ';
+	badge = '<a href="../receive/' + relItemid + '" target="_blank" class="badge badge-primary"> ';
 	badge += 'intern ';
-	badge += '<span class="glyphicon glyphicon-remove-circle relItem-reset"> </span>';
+	badge += '<span class="far fa-times-circle relItem-reset"> </span>';
 	badge += '</a>';
 
 	inputgroup.find(".searchbadge").html(badge);
