@@ -667,7 +667,7 @@
       <xsl:when test="acl:checkPermission('key:key1','encrypt')">
         <xed:repeat xpath="mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value">
           <div class="row">
-            <label class="col-md-2 col-md-offset-3">
+            <label class="col-md-2 offset-md-3">
               <xed:bind xpath="@year">
                 <input type="text" class="form-control" placeholder="{i18n:mir.placeholder.characteristics.year}" />
               </xed:bind>
