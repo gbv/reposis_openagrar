@@ -88,6 +88,45 @@
         </field>
       </xsl:for-each>
     </xsl:for-each>
+    <xsl:for-each select="mods:relatedItem[@type='host' or @type='series']/mods:part">
+      <xsl:if test="mods:detail[@type='issue']">
+        <field name="mods.part.issue"><xsl:value-of select="mods:detail[@type='issue']"/></field>
+      </xsl:if>
+      <xsl:if test="mods:detail[@type='volume']">
+        <field name="mods.part.volume"><xsl:value-of select="mods:detail[@type='volume']"/></field>
+      </xsl:if>
+      <xsl:if test="mods:extent[@unit='pages']/mods:start">
+        <field name="mods.part.pages.start"><xsl:value-of select="mods:extent[@unit='pages']/mods:start"/></field>
+      </xsl:if>
+      <xsl:if test="mods:extent[@unit='pages']/mods:end">
+        <field name="mods.part.pages.end"><xsl:value-of select="mods:extent[@unit='pages']/mods:end"/></field>
+      </xsl:if>
+      <xsl:if test="mods:detail[@type='articlenumber']">
+        <field name="mods.part.articlenumber"><xsl:value-of select="mods:detail[@type='articlenumber']"/></field>
+      </xsl:if>
+    </xsl:for-each>
+    <xsl:for-each select="mods:relatedItem[@type='host']/mods:relatedItem[@type='series']">
+      <xsl:if test="mods:titleInfo[not(@type)]/mods:title">
+        <field name="mods.title.series.host"><xsl:value-of select="mods:titleInfo[not(@type)]/mods:title"/></field>
+      </xsl:if>
+    </xsl:for-each>
+    <xsl:for-each select="mods:relatedItem[@type='host']/mods:relatedItem[@type='host' or @type='series']/mods:part">
+      <xsl:if test="mods:detail[@type='issue']">
+        <field name="mods.part.issue.host"><xsl:value-of select="mods:detail[@type='issue']"/></field>
+      </xsl:if>
+      <xsl:if test="mods:detail[@type='volume']">
+        <field name="mods.part.volume.host"><xsl:value-of select="mods:detail[@type='volume']"/></field>
+      </xsl:if>
+      <xsl:if test="mods:extent[@unit='pages']/mods:start">
+        <field name="mods.part.pages.start.host"><xsl:value-of select="mods:extent[@unit='pages']/mods:start"/></field>
+      </xsl:if>
+      <xsl:if test="mods:extent[@unit='pages']/mods:end">
+        <field name="mods.part.pages.end.host"><xsl:value-of select="mods:extent[@unit='pages']/mods:end"/></field>
+      </xsl:if>
+      <xsl:if test="mods:detail[@type='articlenumber']">
+        <field name="mods.part.articlenumber.host"><xsl:value-of select="mods:detail[@type='articlenumber']"/></field>
+      </xsl:if>
+    </xsl:for-each>
     <xsl:for-each select="mods:relatedItem[@type='host']/mods:genre">
       <field name="mods.genre.host">
         <xsl:value-of select="substring-after(@valueURI,'#')" />
@@ -180,6 +219,7 @@
     <!-- JCR -->
     <xsl:variable name="yearIssued" select="substring($dateIssued_statistics,1,4)"/>
     <xsl:variable name="yearIssued1Yb" select="$yearIssued - 1"/>
+    <xsl:variable name="yearIssued2Yb" select="$yearIssued - 2"/>
     <xsl:variable name="encryptedJCR">
       <xsl:choose>
         <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]">
@@ -214,7 +254,33 @@
         <xsl:with-param name="Fieldname" select="'oa.statistic.metric.jcr.class1Yb'"/>
       </xsl:call-template>
     </xsl:if>
+    <xsl:variable name="encryptedJCR2Yb">
+      <xsl:choose>
+        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued2Yb]">
+          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued2Yb]"/>
+        </xsl:when>
+        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:relatedItem/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued2Yb]">
+          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued2Yb]"/>
+        </xsl:when>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:if test="$encryptedJCR2Yb">
+      <xsl:variable name="JCR2Yb" select="document(concat('decrypt:',$encryptedJCR2Yb))/value"/>
+      <xsl:call-template name="JCR2JCRClass">
+        <xsl:with-param name="JCR" select="$JCR2Yb"/>
+        <xsl:with-param name="Fieldname" select="'oa.statistic.metric.jcr.class2Yb'"/>
+      </xsl:call-template>
+    </xsl:if>
     <!-- / JCR -->
+    
+    <xsl:for-each select="mods:location/mods:url">
+      <field name="mods.location.url"><xsl:value-of select="."/></field> 
+    </xsl:for-each>
+    <xsl:for-each select="mods:physicalDescription/mods:extent">
+      <field name="mods.physicalDescription.extent"><xsl:value-of select="."/></field> 
+    </xsl:for-each>
+    
+    
   </xsl:template>
   
   <xsl:template name="JCR2JCRClass">

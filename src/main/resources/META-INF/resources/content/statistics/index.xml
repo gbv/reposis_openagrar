@@ -12,11 +12,14 @@
         var year1=year-5;
         if (year1 &lt; 2018) year1 = 2018;
         for (i = year1; i &lt;= year; i++) {
-          var li = $('<li></li>');
+          var li = $('<li />');
           li.append ('<a href="jki_statstics.xml?year=' + i + '">' + i + '</a>');
           $("#jki_statistic").append(li); 
-          var li = $('<li></li>');
+          var li = $('<li />');
           li.append ('<a href="jki_statstics.xml?year=' + i + '&amp;JCRClasses1Yb=true">' + i + ' mit JCR vom Vorjahr</a>');
+          $("#jki_statistic").append(li);
+          li = $('<li />');
+          li.append ('<a href="jki_statstics.xml?year=' + i + '&amp;JCRClasses2Yb=true">' + i + ' mit JCR von 2 Jahren zuvor</a>');
           $("#jki_statistic").append(li);
         }
       });
@@ -58,13 +61,13 @@
             <li><a href="mri_inst_repCat_pubyear.xml">MRI</a></li>
             <li><a href="ti_inst_repCat_pubyear.xml">TI</a></li>
           </ul>
-  </div>
-         <div class="row">
+        </div>
+        <div class="row">
           <h3> JKI Jahresstatistik </h3>
           <ul id="jki_statistic">
             
           </ul>
-  </div>
+        </div>
       </section>
     </form>
   </section>

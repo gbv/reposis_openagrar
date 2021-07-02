@@ -172,6 +172,14 @@
   },
   {
     "add-field": {
+      "name": "oa.statistic.metric.jcr.class2Yb",
+      "type": "text_lower",
+      "indexed": true,
+      "multiValued":false
+    }
+  },
+  {
+    "add-field": {
       "name": "mods.dateIssued.statistic",
       "type": "string"
     }
@@ -182,5 +190,123 @@
         "type":"pint",
         "multiValued":false
     }
+  },
+  {
+    "add-field": {
+        "name":"mods.part.issue",
+        "type":"string",
+        "indexed": true,
+        "stored": true,
+        "multiValued":true
+    }
+  },
+  {
+    "add-field": {
+        "name":"mods.part.volume",
+        "type":"string",
+        "indexed": true,
+        "stored": true,
+        "multiValued":true
+    }
+  },
+  {
+    "add-field": {
+        "name":"mods.part.pages.start",
+        "type":"string",
+        "indexed": true,
+        "stored": true,
+        "multiValued":true
+    }
+  },
+  {
+    "add-field": {
+        "name":"mods.part.pages.end",
+        "type":"string",
+        "indexed": true,
+        "stored": true,
+        "multiValued":true
+    }
+  },
+  {
+    "add-field": {
+        "name":"mods.part.articlenumber",
+        "type":"string",
+        "indexed": true,
+        "stored": true,
+        "multiValued":true
+    }
+  },
+  {
+    "add-field": {
+        "name":"mods.part.issue.host",
+        "type":"string",
+        "indexed": true,
+        "stored": true,
+        "multiValued":true
+    }
+  },
+  {
+    "add-field": {
+        "name":"mods.part.volume.host",
+        "type":"string",
+        "indexed": true,
+        "stored": true,
+        "multiValued":true
   }
+  },
+  {
+    "add-field": {
+        "name":"mods.part.pages.start.host",
+        "type":"string",
+        "indexed": true,
+        "stored": true,
+        "multiValued":true
+    }
+  },
+  {
+    "add-field": {
+        "name":"mods.part.pages.end.host",
+        "type":"string",
+        "indexed": true,
+        "stored": true,
+        "multiValued":true
+    }
+  },
+  {
+    "add-field": {
+        "name":"mods.part.articlenumber.host",
+        "type":"string",
+        "indexed": true,
+        "stored": true,
+        "multiValued":true
+    }
+  },
+  {
+    "add-field": {
+        "name":"mods.title.series.host",
+        "type":"string",
+        "indexed": false,
+        "stored": true,
+        "multiValued":true
+    }
+  },
+  {
+    "add-field": {
+        "name":"mods.location.url",
+        "type":"string",
+        "indexed": false,
+        "stored": true,
+        "multiValued":true
+    }
+  },
+  {
+    "add-field": {
+        "name":"mods.physicalDescription.extent",
+        "type":"string",
+        "indexed": false,
+        "stored": true,
+        "multiValued":true
+    }
+  }
+  
 ]
