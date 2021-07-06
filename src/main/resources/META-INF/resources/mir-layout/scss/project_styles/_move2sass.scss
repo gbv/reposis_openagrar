@@ -36,9 +36,13 @@ html {
   min-height: 100%;
 }
 body {
-  font-size: 14px;
   font-family: "Lato",Arial,Helvetica,sans-serif;
   color: #444;
+}
+#page.container,
+footer > .container {
+  padding-left: 8px;
+  padding-right: 0px;
 }
 html body #page {
   background-color: #F9F9F9;
@@ -459,6 +463,20 @@ dd {
   margin-bottom: 1rem;
 }
 
+.result_searchline button {
+  font-size: 0.875rem;
+}
+.search_box button .fas,
+.basket_form .fas {
+  padding-right: 0.375rem;
+}
+
+// TODO: remove this in mir and then here, use variable instead
+.pagination {
+  a {
+    color: $success;
+  }
+}
 
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(lg) {

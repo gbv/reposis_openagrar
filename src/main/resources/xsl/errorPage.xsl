@@ -5,15 +5,18 @@
   <xsl:variable name="PageTitle" select="i18n:translate('titles.pageTitle.error',concat(' ',/mcr_error/@HttpError))" />
 
   <xsl:template match="/mcr_error">
+    <h1>
+      Es ist ein Fehler aufgetreten
+    </h1>
     <div class="row">
-      <div class="col-md-12" lang="de">
+      <div class="col-md-8 oa-borderbox" lang="de">
         <xsl:choose>
           <xsl:when test="contains(exception/trace,'Could not link to unknown category marcrelator')">
               <h2>Unbekannte Personenrolle</h2>
               <p>
                 Eine Person in dieser Aufnahme hat eine Rolle, die  nicht in der Klassifikation
-                MARC-Relator-Rollen enthalten ist. Bitte wenden sie sich an einen Administrator des 
-                Systems, damit dieser die Rolle mit folgendem Kürzel nachtragen kann: 
+                MARC-Relator-Rollen enthalten ist. Bitte wenden sie sich an einen Administrator des
+                Systems, damit dieser die Rolle mit folgendem Kürzel nachtragen kann:
                 <br/> <br/>
                 <xsl:value-of select="substring-before(substring-after(exception/trace,'category marcrelator:'),'at')"/>
                 <br/> <br/>
@@ -49,7 +52,7 @@
               <br/><br/>
               Vielen Dank!</p>
           </xsl:when>
-          
+
           <xsl:otherwise>
               <h2><xsl:value-of select="."></xsl:value-of></h2>
               <p>Es ist leider ein Fehler aufgetreten. Sollte dies wiederholt der Fall sein,

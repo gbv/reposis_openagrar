@@ -28,14 +28,14 @@
   <xsl:variable name="query">
   	<xsl:value-of select="$params/str[@name='q']"/>
   </xsl:variable>
-  
+
   <xsl:variable name="instID">
     <xsl:if test="not (contains(substring-after($query,'mir_institutes:'),'mir_institutes:'))">
   	  <xsl:value-of select="substring-before(substring-after($query,'mir_institutes:'),'&quot;')"/>
   	</xsl:if>
   </xsl:variable>
-  
-  
+
+
   <xsl:variable name="institut_str">
   	<xsl:if test="string-length($instID) &gt; 0">
   	  <xsl:variable name="intitutes" select="document(concat('classification:metadata:0:parents:mir_institutes:',$instID))" />
@@ -47,7 +47,7 @@
       </xsl:for-each>
     </xsl:if>
   </xsl:variable>
-  
+
   <xsl:variable name="nameGND">
     <xsl:if test="not (contains(substring-after($query,'mods.nameIdentifier:'),'mods.nameIdentifier:'))">
       <xsl:choose>
@@ -60,17 +60,17 @@
       </xsl:choose>
     </xsl:if>
   </xsl:variable>
-  
-  
+
+
   <xsl:variable name="name_str">
     <xsl:if test="string-length($nameGND) &gt; 0">
       <xsl:variable name="names" select="document(concat($WebApplicationBaseURL,'/servlets/solr/personindex?XSL.Style=xml&amp;terms.regex=.*:gnd:',$nameGND))" />
   	  <xsl:value-of select="substring-before($names//int[contains(@name,$nameGND)]/@name,':gnd')"/>
-      
+
     </xsl:if>
   </xsl:variable>
   <!-- END: OA specific changes -->
-  
+
   <xsl:template match="/response/result|lst[@name='grouped']/lst[@name='returnId']" priority="10">
     <xsl:variable name="ResultPages">
       <xsl:if test="($hits &gt; 0) and ($hits &gt; $rows)">
@@ -92,15 +92,18 @@
           <!-- START: OA specific changes -->
           <xsl:choose>
             <xsl:when test="string-length($institut_str) &gt; 0">
-              <span class="resultText"><xsl:value-of select="i18n:translate('results.text')" /></span>
+              <span class="resultText"><xsl:value-of select="i18n:translate('oa.results.textfor')" /></span>
               <xsl:text> </xsl:text>
               <xsl:value-of select="$institut_str"/>
             </xsl:when>
             <xsl:when test="string-length($name_str) &gt; 0">
-              <span class="resultText"><xsl:value-of select="i18n:translate('results.text')" /></span>
+              <span class="resultText"><xsl:value-of select="i18n:translate('oa.results.textfor')" /></span>
               <xsl:text> </xsl:text>
               <xsl:value-of select="$name_str"/>
             </xsl:when>
+            <xsl:otherwise>
+              <span class="resultText"><xsl:value-of select="i18n:translate('oa.results.text')" /></span>
+            </xsl:otherwise>
           </xsl:choose>
           <!-- END: OA specific changes -->
         </h1>
@@ -126,7 +129,7 @@
         <div class="search_box">
           <xsl:variable name="searchlink" select="concat($proxyBaseURL, $HttpSession, $solrParams)" />
           <form action="{$searchlink}" class="search_form" method="post">
-            <div class="input-group input-group-sm">
+            <div class="input-group">
               <div class="input-group-btn input-group-prepend">
                 <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" value="all" id="search_type_button">
                   <span id="search_type_label">
@@ -284,9 +287,9 @@
         <xsl:copy-of select="$ResultPages" />
       </div>
 
-      
+
       <div class="col-12 col-sm-4 result_filter">
-        
+
         <div class="row result_export">
           <div class="col-12">
             <xsl:if test="$hits &gt; 0">
@@ -296,7 +299,7 @@
             </xsl:if>
           </div>
         </div>
-        
+
         <!-- OA specific facet mods.refereed -->
         <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='mods.refereed']/int or
                       /response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='mods.refereed.public']/int">
@@ -327,7 +330,7 @@
           </div>
         </xsl:if>
         <!-- END specific facet -->
-        
+
         <!-- OA specific changes: " and $hits &gt; 0" -->
         <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='mods.genre']/int and $hits &gt; 0">
           <div class="card genre">
@@ -344,7 +347,7 @@
                 </xsl:apply-templates>
               </ul>
             </div>
-          </div>  
+          </div>
           <!-- START: OA specific changes -->
           <div class="card">
             <div class="card-header" data-toggle="collapse-next">
@@ -360,7 +363,7 @@
                 </xsl:apply-templates>
               </ul>
             </div>
-          </div> 
+          </div>
           <!--
           <div class="card">
             <div class="card-header" data-toggle="collapse-next">
@@ -387,8 +390,8 @@
                     <xsl:with-param name="i18nPrefix" select="'oa.genres.composite'" />
                     <xsl:with-param name="i18nCallback" select="'printGenresComposite'" />
                   </xsl:apply-templates>
-                  
-                  
+
+
                 </xsl:for-each>
               </ul>
             </div>
@@ -429,7 +432,7 @@
               </div>
             </div>
           </xsl:if>
-          
+
           <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='state']/int and
                         not(mcrxsl:isCurrentUserGuestUser())">
             <div class="card">
@@ -449,7 +452,7 @@
             </div>
           </xsl:if>
           <!-- END: OA specific changes -->
-          
+
         </xsl:if>
         <xsl:if test="$MIR.testEnvironment='true'"> <!-- filters in development, show only in test environments -->
           <xsl:call-template name="print.classiFilter">
@@ -1153,7 +1156,7 @@
     </xsl:variable>
     <xsl:value-of select="$linkText" />
   </xsl:template>
-  
+
   <xsl:template match="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
     <xsl:param name="facet_name" />
     <xsl:param name="classId" />
@@ -1165,9 +1168,9 @@
       <xsl:with-param name="i18nPrefix" select="$i18nPrefix"/>
       <xsl:with-param name="i18nCallback" select="$i18nCallback"/>
     </xsl:apply-templates>
-    
+
   </xsl:template>
-  
+
   <xsl:template match="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst/int">
     <xsl:param name="facet_name" />
     <xsl:param name="classId" />

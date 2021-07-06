@@ -162,7 +162,7 @@
         </xsl:variable>
         <xsl:if test="$refereed='yes'">
           <div class="oa_refereed">
-            <span class="label label-info" title="{i18n:translate('oa.refereed')}">
+            <span class="badge badge-info" title="{i18n:translate('oa.refereed')}">
               <xsl:value-of select="i18n:translate('oa.refereed')" />
             </span>
           </div>

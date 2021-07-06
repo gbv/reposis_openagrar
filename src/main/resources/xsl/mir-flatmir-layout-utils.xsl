@@ -69,7 +69,7 @@
         </div>
 
         <nav class="collapse navbar-collapse mir-main-nav-entries float-right">
-          <ul class="nav navbar-nav p-2 ml-auto">
+          <ul class="nav navbar-nav pr-0 pt-2 pb-2 pl-0 ml-auto">
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='search']" />
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='browse']" />
             <xsl:call-template name="oa.basketMenu" />
@@ -94,7 +94,7 @@
           <ul class="internal_links navbar-nav ml-auto flex-row">
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='below']/*" />
           </ul>
-          
+
           <xsl:variable name="tmp" select="calendar:new()"/>
           <p id="oa-copyright"><xsl:value-of select="concat('© ', calendar:get($tmp, 1), ' OpenAgrar')"/></p>
         </div>
@@ -115,7 +115,7 @@
           </div>
           <div id="powered_by">
             <a href="http://www.mycore.de">
-              <img src="{$WebApplicationBaseURL}mir-layout/images/mycore_logo_small_invert.png" title="{$mcr_version}" alt="powered by MyCoRe" />
+              <img src="{$WebApplicationBaseURL}images/logos/mycore_logo_small_invert.png" title="{$mcr_version}" alt="powered by MyCoRe" />
             </a>
           </div>
         </div>
