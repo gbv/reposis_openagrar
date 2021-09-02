@@ -74,7 +74,7 @@
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='browse']" />
             <xsl:call-template name="oa.basketMenu" />
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='register']/*" />
-            <!--<xsl:apply-templates select="$loaded_navigation_xml/menu[@id='publish']" />-->
+            <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='publish']" />
           </ul>
         </nav>
 
