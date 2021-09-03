@@ -7,20 +7,19 @@
     <script src='../../js/statistic.js'> </script>
     <script src='../../js/URIParams.js'> </script>
   </section>
-     
+
   <section xml:lang="de">
     <div class="row">
-      <h1>Statistik für <span id="pst_person_name"> </span></h1>
-      
-      <div  id="pst_statisticbrowser"> </div>
-      
-      
+      <div class="col-12">
+        <h1>Statistik für <span id="pst_person_name"> </span></h1>
+        <div id="pst_statisticbrowser"></div>
+      </div>
     </div>
     <script type="text/javascript">
       $(document).ready( function() {
         var name=getUrlParameter('name');
         var nameIdentifier=getUrlParameter('nameIdentifier');
-        
+
         element=$('#pst_statisticbrowser');
         classification = null;
         rootCategory = null;
@@ -30,7 +29,7 @@
         hideEmptyElements="true";
         lang="de";
         fq=["objectType:mods","mods.nameIdentifier:" + nameIdentifier ,"mods.yearIssued:[2012 TO 2018]"];
-        
+
         $('#pst_person_name').html(name);
         var stBrowser = new Statisticsbrowser(
                           element,
@@ -44,23 +43,21 @@
                           fq);
         stBrowser.init();
       });
-
     </script>
   </section>
-    
+
   <section xml:lang="en">
     <div class="row">
-      <h1>Statistics for <span id="pst_person_name"> </span></h1>
-      
-      <div  id="pst_statisticbrowser"> </div>
-      
-      
+      <div class="col-12">
+        <h1>Statistics for <span id="pst_person_name"> </span></h1>
+        <div  id="pst_statisticbrowser" />
+      </div>
     </div>
     <script type="text/javascript">
       $(document).ready( function() {
         var name=getUrlParameter('name');
         var nameIdentifier=getUrlParameter('nameIdentifier');
-        
+
         element=$('#pst_statisticbrowser');
         classification = null;
         rootCategory = null;
@@ -70,7 +67,7 @@
         hideEmptyElements="true";
         lang="en";
         fq=["objectType:mods","mods.nameIdentifier:" + nameIdentifier ,"mods.yearIssued:[2012 TO 2018]"];
-        
+
         $('#pst_person_name').html(name);
         var stBrowser = new Statisticsbrowser(
                           element,
@@ -84,8 +81,7 @@
                           fq);
         stBrowser.init();
       });
-
     </script>
   </section>
-  
+
 </MyCoReWebPage>

@@ -6,40 +6,40 @@
   <section xml:lang="all">
     <script src='../../js/statistic.js'> </script>
   </section>
-     
+
   <section xml:lang="de">
     <div class="row">
-      <h1>Statistik - BfR Genre</h1>
-      <p> 
-        Die Publikationen des BfR nach Jahr, Genre und referiert.
-      </p>
-      <div  class="row" 
-        data-mirelementtype="Statisticsbrowser"
-        data-facets='["mods.yearIssued","mods.genre","mods.refereed"]'
-        data-fq='["objectType:mods","category.top:\"mir_institutes:bfr\""]'
-        data-expandAllElements="true"
-        data-hideEmptyElements="true"
-        data-lang="de"
-      >
+      <div class="col-12">
+        <h1>Statistik - BfR Genre</h1>
+        <p>
+          Die Publikationen des BfR nach Jahr, Genre und referiert.
+        </p>
+        <div
+          data-mirelementtype="Statisticsbrowser"
+          data-facets='["mods.yearIssued","mods.genre","mods.refereed"]'
+          data-fq='["objectType:mods","category.top:\"mir_institutes:bfr\""]'
+          data-expandAllElements="true"
+          data-hideEmptyElements="true"
+          data-lang="de" />
       </div>
     </div>
   </section>
-    
+
   <section xml:lang="en">
     <div class="row">
-      <h1>Statistic - BfR Genre</h1>
-      <p> 
-        The publications of BfR per year, genre and refeered.
-      </p>
-      <div  class="row" 
-        data-mirelementtype="Statisticsbrowser"
-        data-facets='["mods.yearIssued","mods.genre","mods.refereed"]'
-        data-fq='["objectType:mods","category.top:\"mir_institutes:bfr\""]'
-        data-hideEmptyElement="true"
-        data-lang="en"
-      >
+      <div class="col-12">
+        <h1>Statistic - BfR Genre</h1>
+        <p>
+          The publications of BfR per year, genre and refeered.
+        </p>
+        <div
+          data-mirelementtype="Statisticsbrowser"
+          data-facets='["mods.yearIssued","mods.genre","mods.refereed"]'
+          data-fq='["objectType:mods","category.top:\"mir_institutes:bfr\""]'
+          data-hideEmptyElement="true"
+          data-lang="en" />
       </div>
     </div>
   </section>
-  
+
 </MyCoReWebPage>

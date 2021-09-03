@@ -6,43 +6,43 @@
   <section xml:lang="all">
     <script src='../../js/statistic.js'> </script>
   </section>
-     
+
   <section xml:lang="de">
     <div class="row">
-      <h1>Statistik - JKI Genre</h1>
-      <p> 
-        Die Publikationen des JKI nach Genre und referiert für die Jahre 2012 bis 2018.
-      </p>
-      <div  class="row" 
-        data-mirelementtype="Statisticsbrowser"
-        data-facets='["mods.genre","mods.refereed"]'
-        data-horizontalFacet="mods.yearIssued"
-        data-fq='["objectType:mods","category.top:\"mir_institutes:jki\"","mods.yearIssued:[2012 TO 2018]"]'
-        data-expandAllElements="true"
-        data-hideEmptyElements="true"
-        data-lang="de"
-      >
+      <div class="col-12">
+        <h1>Statistik - JKI Genre</h1>
+        <p>
+          Die Publikationen des JKI nach Genre und referiert für die Jahre 2012 bis 2018.
+        </p>
+        <div
+          data-mirelementtype="Statisticsbrowser"
+          data-facets='["mods.genre","mods.refereed"]'
+          data-horizontalFacet="mods.yearIssued"
+          data-fq='["objectType:mods","category.top:\"mir_institutes:jki\"","mods.yearIssued:[2012 TO 2018]"]'
+          data-expandAllElements="true"
+          data-hideEmptyElements="true"
+          data-lang="de" />
       </div>
     </div>
   </section>
-    
+
   <section xml:lang="en">
     <div class="row">
-      <h1>Statistic - BfR Genre</h1>
-      <p> 
-        The publications of BfR per year, genre and refeered.
-      </p>
-      <div  class="row" 
-        data-mirelementtype="Statisticsbrowser"
-        data-facets='["mods.genre","mods.refereed"]'
-        data-horizontalFacet="mods.yearIssued"
-        data-fq='["objectType:mods","category.top:\"mir_institutes:bfr\"","mods.yearIssued:[2012 TO 2018]"]'
-        data-expandAllElements="true"
-        data-hideEmptyElement="true"
-        data-lang="en"
-      >
+      <div class="col-12">
+        <h1>Statistic - BfR Genre</h1>
+        <p>
+          The publications of BfR per year, genre and refeered.
+        </p>
+        <div
+          data-mirelementtype="Statisticsbrowser"
+          data-facets='["mods.genre","mods.refereed"]'
+          data-horizontalFacet="mods.yearIssued"
+          data-fq='["objectType:mods","category.top:\"mir_institutes:bfr\"","mods.yearIssued:[2012 TO 2018]"]'
+          data-expandAllElements="true"
+          data-hideEmptyElement="true"
+          data-lang="en" />
       </div>
     </div>
   </section>
-  
+
 </MyCoReWebPage>

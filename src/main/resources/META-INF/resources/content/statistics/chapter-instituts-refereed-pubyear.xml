@@ -6,26 +6,26 @@
   <section xml:lang="all">
     <script src='../../js/statistic.js'> </script>
   </section>
-     
+
   <section xml:lang="de">
     <div class="row">
-      <h1>Statistik - Buchbeiträge </h1>
-      <p> 
-        Alle Kapitel/Artikel in Büchern/Sammelwerk/Tagungsband, nach Institut und Jahr mit refieriert Angabe. 
-      </p>
-      <div  class="row" 
-        data-mirelementtype="Statisticsbrowser"
-        data-classification="mir_institutes"
-        data-facets='["mods.refereed"]'
-        data-horizontalFacet="mods.yearIssued"
-        data-fq='["objectType:mods","mods.genre:chapter OR mods.genre:article","mods.genre.host:book OR mods.genre.host:collection OR mods.genre.host:proceedings","mods.yearIssued:[2012 TO 2019]"]'
-        data-hideEmptyElements="true"
-        data-expandAllElements="true"
-        data-maxClassificationDeep="1"
-        data-lang="de"
-      >
+      <div class="col-12">
+        <h1>Statistik - Buchbeiträge </h1>
+        <p>
+          Alle Kapitel/Artikel in Büchern/Sammelwerk/Tagungsband, nach Institut und Jahr mit refieriert Angabe.
+        </p>
+        <div
+          data-mirelementtype="Statisticsbrowser"
+          data-classification="mir_institutes"
+          data-facets='["mods.refereed"]'
+          data-horizontalFacet="mods.yearIssued"
+          data-fq='["objectType:mods","mods.genre:chapter OR mods.genre:article","mods.genre.host:book OR mods.genre.host:collection OR mods.genre.host:proceedings","mods.yearIssued:[2012 TO 2019]"]'
+          data-hideEmptyElements="true"
+          data-expandAllElements="true"
+          data-maxClassificationDeep="1"
+          data-lang="de" />
       </div>
     </div>
   </section>
-    
+
 </MyCoReWebPage>

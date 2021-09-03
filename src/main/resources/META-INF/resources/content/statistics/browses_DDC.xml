@@ -5,23 +5,15 @@
   <section title="Statistics" xml:lang="en"/>
   <section xml:lang="all">
     <script src='../../js/statistic.js'> </script>
-
-      <section xml:lang="de">
-
-        <div class="row">
+    <div class="row">
+      <div class="col-12">
+        <section xml:lang="de">
           <h1>Browsen nach DDC</h1>
-        </div>
-      </section>
-
-      
-
-
-      <div class="row" 
-        data-mirelementtype="Statisticsbrowser"
-        data-classification="SDNB"
-      >
+        </section>
+        <div
+          data-mirelementtype="Statisticsbrowser"
+          data-classification="SDNB" />
       </div>
-
-
+    </div>
   </section>
 </MyCoReWebPage>

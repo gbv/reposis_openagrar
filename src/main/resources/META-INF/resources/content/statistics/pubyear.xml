@@ -6,41 +6,41 @@
   <section xml:lang="all">
     <script src='../../js/statistic.js'> </script>
   </section>
-     
+
   <section xml:lang="de">
     <div class="row">
-      <h1>Statistik - Veröffentlichungsjahr</h1>
-      <p> 
-        Die Publikationen in OpenAgrar nach Veröffentlichungsjahr.
-      </p>
-      <div  class="row" 
-        data-mirelementtype="Statisticsbrowser"
-        data-facets='["mods.yearIssued"]'
-        data-fq='["objectType:mods"]'
-        data-expandAllElements="true"
-        data-hideEmptyElements="true"
-        data-lang="de"
-      >
+      <div class="col-12">
+        <h1>Statistik - Veröffentlichungsjahr</h1>
+        <p>
+          Die Publikationen in OpenAgrar nach Veröffentlichungsjahr.
+        </p>
+        <div
+          data-mirelementtype="Statisticsbrowser"
+          data-facets='["mods.yearIssued"]'
+          data-fq='["objectType:mods"]'
+          data-expandAllElements="true"
+          data-hideEmptyElements="true"
+          data-lang="de" />
       </div>
     </div>
   </section>
-    
+
   <section xml:lang="en">
     <div class="row">
-      <h1>Statistic - year of publication</h1>
-      <p> 
-        The publications per year of publication.
-      </p>
-      <div  class="row" 
-        data-mirelementtype="Statisticsbrowser"
-        data-facets='["mods.yearIssued"]'
-        data-fq='["objectType:mods"]'
-        data-expandAllElements="true"
-        data-hideEmptyElements="true"
-        data-lang="en"
-      >
+      <div class="col-12">
+        <h1>Statistic - year of publication</h1>
+        <p>
+          The publications per year of publication.
+        </p>
+        <div
+          data-mirelementtype="Statisticsbrowser"
+          data-facets='["mods.yearIssued"]'
+          data-fq='["objectType:mods"]'
+          data-expandAllElements="true"
+          data-hideEmptyElements="true"
+          data-lang="en" />
       </div>
     </div>
   </section>
-  
+
 </MyCoReWebPage>

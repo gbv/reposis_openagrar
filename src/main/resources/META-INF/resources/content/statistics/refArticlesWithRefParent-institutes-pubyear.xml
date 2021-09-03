@@ -6,23 +6,23 @@
   <section xml:lang="all">
     <script src='../../js/statistic.js'> </script>
   </section>
-     
+
   <section xml:lang="de">
     <div class="row">
-      <h1>Statistik - refierierte Artikel</h1>
-      <p> 
-        Alle refierierten Artikel mit ebenfalls referierten Parents nach Institut und Jahr.
-      </p>
-      <div  class="row" 
-        data-mirelementtype="Statisticsbrowser"
-        data-classification="mir_institutes"
-        data-horizontalFacet="mods.yearIssued"
-        data-fq='["objectType:mods","mods.genre:article","mods.refereed:yes","mods.yearIssued:[2012 TO 2019]","{!join from=id to=parent}mods.refereed:yes"]'
-        data-hideEmptyElements="true"
-        data-lang="de"
-      >
+      <div class="col-12">
+        <h1>Statistik - refierierte Artikel</h1>
+        <p>
+          Alle refierierten Artikel mit ebenfalls referierten Parents nach Institut und Jahr.
+        </p>
+        <div
+          data-mirelementtype="Statisticsbrowser"
+          data-classification="mir_institutes"
+          data-horizontalFacet="mods.yearIssued"
+          data-fq='["objectType:mods","mods.genre:article","mods.refereed:yes","mods.yearIssued:[2012 TO 2019]","{!join from=id to=parent}mods.refereed:yes"]'
+          data-hideEmptyElements="true"
+          data-lang="de" />
       </div>
     </div>
   </section>
-    
+
 </MyCoReWebPage>

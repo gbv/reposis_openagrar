@@ -12,25 +12,25 @@
           method="get"
           action="../../editor/editor-dynamic.xed">
 
-
       <section xml:lang="de">
+        <div class="row">
+          <div class="col-12">
+            <h1>Statistiken</h1>
 
-        <div class="row">
-          <h1>Statistiken</h1>
-        </div>
-        <div class="row">
-          <h3> </h3>
-          <a href="test_statistic.xml"> Teststatistik</a>
-        </div>
-        <div class="row">
-          <h3>Browsen:</h3>
-          <ul>
-            <li> <a href="browses_institutes.xml"> Browsen nach Einrichtungen</a></li>
-            <li> <a href="browses_genre.xml"> Browsen nach Genre </a></li>
-            <li> <a href="browses_ddc.xml"> Browsen nach DDC</a></li>
-          </ul>
+            <h3>Test</h3>
+            <a href="test_statistic.xml"> Teststatistik</a>
+
+            <h3>Browsen:</h3>
+            <ul>
+              <li> <a href="browses_institutes.xml"> Browsen nach Einrichtungen</a></li>
+              <li> <a href="browses_genre.xml"> Browsen nach Genre </a></li>
+              <li> <a href="browses_ddc.xml"> Browsen nach DDC</a></li>
+            </ul>
+          </div>
         </div>
       </section>
+
     </form>
+
   </section>
 </MyCoReWebPage>
