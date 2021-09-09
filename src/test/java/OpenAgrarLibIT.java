@@ -16,6 +16,7 @@
  * along with MyCoRe.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+import org.junit.After;
 import org.junit.Test;
 import org.mycore.common.selenium.MCRSeleniumTestBase;
 import org.openqa.selenium.By;
@@ -29,6 +30,13 @@ public class OpenAgrarLibIT extends MCRSeleniumTestBase {
         driver.get("http://localhost:9107/openagrar/content/index.xml");
         driver.waitFor(ExpectedConditions.titleContains("Willkommen auf den Seiten des Publikationsservers OpenAgrar"));
         driver.waitAndFindElement(By.xpath("//*[contains(text(), 'Publikationsservers OpenAgrar')]"));
+    }
+
+
+
+    @After
+    public void tearDown() {
+        takeScreenshot();
     }
 
 
