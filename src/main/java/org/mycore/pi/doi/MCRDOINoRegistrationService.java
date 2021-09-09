@@ -8,8 +8,8 @@ import org.mycore.pi.exceptions.MCRPersistentIdentifierException;
 
 public class MCRDOINoRegistrationService extends MCRPIService<MCRDigitalObjectIdentifier> {
 
-    public MCRDOINoRegistrationService(String serviceID) {
-        super(serviceID, "doi");
+    public MCRDOINoRegistrationService() {
+        super("doi");
     }
 
     @Override
@@ -27,8 +27,6 @@ public class MCRDOINoRegistrationService extends MCRPIService<MCRDigitalObjectId
                 getClass().getName() + " doesn't support additional information! (" + additional + ")");
         }
     }
-
-
 
 
 
