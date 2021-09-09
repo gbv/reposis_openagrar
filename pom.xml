@@ -32,6 +32,14 @@
   <properties>
     <MCR.AppName>openagrar</MCR.AppName>
   </properties>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
   <repositories>
     <!-- central is required for bibsonomy not to take over every artifact -->
     <repository>
