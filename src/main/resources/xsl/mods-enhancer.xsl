@@ -157,7 +157,7 @@
   <xsl:template match="journalMetrics/metric[@type='JCR']/value" >
     <value>
       <xsl:copy-of select="@*" />
-      <xsl:variable name="decrypturi" select="concat('decrypt:',.)"/>
+      <xsl:variable name="decrypturi" select="concat('crypt:decrypt:jcr:',.)"/>
       <xsl:value-of select="document($decrypturi)/value"/>
     </value>
   </xsl:template>

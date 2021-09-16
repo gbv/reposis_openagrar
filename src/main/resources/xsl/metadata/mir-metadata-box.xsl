@@ -449,8 +449,8 @@
                       <xsl:choose>
                         <xsl:when test="@type='JCR'">
                           <xsl:choose>
-                            <xsl:when test="acl:checkPermission('key:key1','decrypt')">
-                              <xsl:variable name="decrypturi" select="concat('decrypt:key1:',value[@year = $year])"/>
+                            <xsl:when test="acl:checkPermission('crypt:cipher:jcr','decrypt')">
+                              <xsl:variable name="decrypturi" select="concat('crypt:decrypt:jcr:',value[@year = $year])"/>
                               <xsl:value-of select="document($decrypturi)/value"/>
                             </xsl:when>
                             <xsl:otherwise>
@@ -496,8 +496,8 @@
                 <xsl:choose>
                   <xsl:when test="@type='JCR'">
                     <xsl:choose>
-                      <xsl:when test="acl:checkPermission('key:key1','decrypt')">
-                        <xsl:variable name="decrypturi" select="concat('decrypt:key1:',value[@year = $yearIssued])"/>
+                      <xsl:when test="acl:checkPermission('crypt:cipher:jcr','decrypt')">
+                        <xsl:variable name="decrypturi" select="concat('crypt:decrypt:jcr:',value[@year = $yearIssued])"/>
                         <xsl:value-of select="document($decrypturi)/value"/>
                       </xsl:when>
                       <xsl:otherwise>

@@ -286,8 +286,8 @@
     <xsl:copy>
       <xsl:copy-of select="@*" />
       <xsl:choose>
-        <xsl:when test="acl:checkPermission('key:key1','encrypt')">
-          <xsl:value-of select="document(concat('encrypt:key1:',$value))/value"/>
+        <xsl:when test="acl:checkPermission('crypt:cipher:jcr','encrypt')">
+          <xsl:value-of select="document(concat('crypt:encrypt:jcr:',$value))/value"/>
         </xsl:when>
         <xsl:otherwise>
           <xsl:value-of select="$value"/>

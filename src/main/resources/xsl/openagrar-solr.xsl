@@ -231,7 +231,7 @@
       </xsl:choose>
     </xsl:variable>
     <xsl:if test="$encryptedJCR">
-      <xsl:variable name="JCR" select="document(concat('decrypt:',$encryptedJCR))/value"/>
+      <xsl:variable name="JCR" select="document(concat('crypt:decrypt:jcr:',$encryptedJCR))/value"/>
       <xsl:call-template name="JCR2JCRClass">
         <xsl:with-param name="JCR" select="$JCR"/>
         <xsl:with-param name="Fieldname" select="'oa.statistic.metric.jcr.class'"/>
@@ -248,7 +248,7 @@
       </xsl:choose>
     </xsl:variable>
     <xsl:if test="$encryptedJCR1Yb">
-      <xsl:variable name="JCR1Yb" select="document(concat('decrypt:',$encryptedJCR1Yb))/value"/>
+      <xsl:variable name="JCR1Yb" select="document(concat('crypt:decrypt:jcr:',$encryptedJCR1Yb))/value"/>
       <xsl:call-template name="JCR2JCRClass">
         <xsl:with-param name="JCR" select="$JCR1Yb"/>
         <xsl:with-param name="Fieldname" select="'oa.statistic.metric.jcr.class1Yb'"/>
@@ -265,7 +265,7 @@
       </xsl:choose>
     </xsl:variable>
     <xsl:if test="$encryptedJCR2Yb">
-      <xsl:variable name="JCR2Yb" select="document(concat('decrypt:',$encryptedJCR2Yb))/value"/>
+      <xsl:variable name="JCR2Yb" select="document(concat('crypt:decrypt:jcr:',$encryptedJCR2Yb))/value"/>
       <xsl:call-template name="JCR2JCRClass">
         <xsl:with-param name="JCR" select="$JCR2Yb"/>
         <xsl:with-param name="Fieldname" select="'oa.statistic.metric.jcr.class2Yb'"/>
