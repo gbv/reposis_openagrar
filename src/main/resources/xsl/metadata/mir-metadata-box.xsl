@@ -181,6 +181,20 @@
                              mode="present" />
         <xsl:apply-templates select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf']"
                              mode="present" />
+        <!-- Begin: OA specific Date Types -->
+        <xsl:apply-templates select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:originInfo[@eventType='publication_print']/mods:dateIssued[@encoding='w3cdtf']"
+          mode="present" >
+          <xsl:with-param name="label" select="i18n:translate('component.mods.metaData.dictionary.dateIssued.print')" />
+        </xsl:apply-templates>
+        <xsl:apply-templates select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:originInfo[@eventType='publication_online']/mods:dateIssued[@encoding='w3cdtf']"
+          mode="present" >
+          <xsl:with-param name="label" select="i18n:translate('component.mods.metaData.dictionary.dateIssued.online')" />
+        </xsl:apply-templates>
+        <xsl:apply-templates select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:originInfo[@eventType='digitalisation']/mods:dateIssued[@encoding='w3cdtf']"
+          mode="present" >
+          <xsl:with-param name="label" select="i18n:translate('component.mods.metaData.dictionary.dateIssued.digitalisation')" />
+        </xsl:apply-templates>
+        <!-- End: OA specific Date Types -->
         <xsl:apply-templates select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:originInfo[@eventType='update']/mods:dateModified"
                              mode="present" />
         <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:identifier[@type!='open-aire' and @type!='intern' and @type!='issn']" />
@@ -266,7 +280,10 @@
             </td>
           </tr>
         </xsl:for-each>
-        <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[not(@generator)]" />
+            <!-- START: OA specific changes -->
+            <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[not(@generator) and
+                                                        not(@authorityURI='https://www.openagrar.de/classifications/annual_review')]" />
+            <!-- END: OA specific changes -->
         <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:part/mods:extent" />
         <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:location/mods:url" />
         <xsl:call-template name="printMetaDate.mods">
@@ -276,8 +293,10 @@
           <xsl:with-param name="nodes" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:location/mods:shelfLocator" />
           <xsl:with-param name="label" select="i18n:translate('mir.shelfmark')" />
         </xsl:call-template>
-        <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:name[@type='corporate'][@ID or @authorityURI=$institutesURI]" />
-        <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@displayLabel='characteristics']" />
+            <!-- START: OA specific changes -->
+            <!-- xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:name[@type='corporate'][@ID or @authorityURI=$institutesURI]" />
+            <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@displayLabel='characteristics']" / -->
+            <!-- END: OA specific changes -->
         <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:note">
           <xsl:variable name="myURI" select="concat('classification:metadata:0:children:noteTypes:',mcrxsl:regexp(@type,' ', '_'))" />
           <xsl:variable name="x-access">
@@ -293,6 +312,17 @@
             </xsl:call-template>
           </xsl:if>
         </xsl:for-each>
+
+            <!-- START: OA specific changes -->
+            <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
+              <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@displayLabel='characteristics']" />
+              <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem/mods:extension[@displayLabel='metrics']" />
+              <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@displayLabel='metrics']" />
+              <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']" />
+            </xsl:if>
+            
+            <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:name[@type='corporate'][@ID or @authorityURI=$institutesURI]" />
+            <!-- END: OA specific changes -->
       </table>
 
     </div>
@@ -356,7 +386,7 @@
           <xsl:if test="mods:part/mods:detail[@type='volume']/mods:number">
             <xsl:value-of
                     select="concat('Vol. ',mods:part/mods:detail[@type='volume']/mods:number)" />
-            <xsl:if test="mods:part/mods:detail[@type='issue']/mods:number">
+            <xsl:if test="mods:part/mods:detail[@type='issue']/mods:number or mods:part/mods:detail[@type='articlenumber'] ">
               <xsl:text>, </xsl:text>
             </xsl:if>
           </xsl:if>
@@ -365,7 +395,15 @@
             <xsl:value-of
                     select="concat('H. ',mods:part/mods:detail[@type='issue']/mods:number)" />
           </xsl:if>
-          <xsl:if test="mods:part/mods:detail[@type='issue']/mods:number and (mods:part/mods:date or mods:originInfo[@eventType='publication']/mods:dateIssued)">
+          <xsl:if test="mods:part/mods:detail[@type='issue']/mods:number and (mods:part/mods:detail[@type='articlenumber'] or mods:part/mods:date or mods:originInfo[@eventType='publication']/mods:dateIssued)">
+            <xsl:text> </xsl:text>
+          </xsl:if> 
+          <!-- Articlenumber -->
+          <xsl:if test="mods:part/mods:detail[@type='articlenumber']/mods:number">
+            <xsl:value-of
+              select="concat(i18n:translate('mir.articlenumber.short'),mods:part/mods:detail[@type='articlenumber']/mods:number)" />
+          </xsl:if>
+          <xsl:if test="mods:part/mods:detail[@type='articlenumber']/mods:number and (mods:part/mods:date or mods:originInfo[@eventType='publication']/mods:dateIssued)">
             <xsl:text> </xsl:text>
           </xsl:if>
           <xsl:if test="mods:part/mods:date or mods:originInfo[@eventType='publication']/mods:dateIssued[not(@point='start')][not(@point='end')]">
