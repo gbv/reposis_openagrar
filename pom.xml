@@ -25,7 +25,7 @@
     <artifactId>reposis_parent</artifactId>
     <version>2021.06-SNAPSHOT</version>
   </parent>
-  <groupId>de.vzg.ubo</groupId>
+  <groupId>de.vzg.reposis</groupId>
   <artifactId>reposis_openagrar</artifactId>
   <version>2021.06-SNAPSHOT</version>
   <name>Open Agrar</name>
