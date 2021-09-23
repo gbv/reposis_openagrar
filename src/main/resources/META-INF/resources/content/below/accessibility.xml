@@ -15,16 +15,13 @@
           2016/2102 des Europäischen Parlaments und des Rates barrierefrei zugänglich zu machen. </p>
 
         <h2> Stand der Vereinbarung mit den Anforderungen </h2>
-
-        <p>Aufgrund der Überprüfung gemäß Selbsteinschätzung nach BITV-Test ist die Webseite mit
-          den zuvor genannten Anforderungen nicht an allen Stellen vereinbar. Wir arbeiten derzeit
-          daran, die Barrieren so schnell wie möglich zu beheben.</p>
         
-        <p>
-          Die Webseite <a href="https://www.openagrar.de">www.openagrar.de</a> deren Funktionalität und Darstellungsform auf
-          gängigen Endgeräten, sind mit der Richtlinie (EU) 2016/2102 und mit den Web Content
-          Accessibility Guidlines 2.0 ist aus den folgenden Gründen noch nicht abschließend
-          barrierefrei:
+        <p> Teil der Barrierefreiheitserklärung sind zwei BITV Test. Beim ersten 
+          <a href="accessibility_test_mir.xml">Test </a>stehen die funktionalen
+          Teile und das Design im Fokus beim anderen <a href="accessibility_test_content.xml"> Test </a>
+          die statischen Inhalte. Die dort aufgelisteten 
+          unterschiedlichen technischen Defizite und Mängel, die eine barrierefreie Nutzung der Webseite erschweren,
+          werden sukzessive behoben.
         </p>
 
         <dl>
@@ -36,7 +33,7 @@
             Ausgangsformate fehlen und eine nachträgliche Bearbeitung der Dokumente
             unverhältnismäßig arbeitsaufwendig ist.<br />
             Dokumente, die von Dritten bereitgestellt werden, liegen eventuell nicht
-            barrierefrei vor (siehe § 9 Abs. 2 Satz 2 NBGG).<br/>
+            barrierefrei vor (siehe § 9 Abs. 2 Satz 2 NBGG).<br/>
             Bei neu erscheinenden Dokumenten die in den Verantwortungsbereich der
             Universitätsbibliothek fallen, streben wir an, künftig zeitnah eine
             barrierefreie Version zur Verfügung zu stellen. Für alle weiteren Dokumente
@@ -53,64 +50,8 @@
             immer möglich.
           </dd>
 
-          <dt>Alternativtexte (1.1.1 a-c )</dt>
-          <dd class="ml-4">An einigen Stellen fehlen die Alternativtexte. Bei einem nächsten Update werden diese ergänzt werden.</dd>
-          
-          <dt>Alternativen für Audiodateien und stumme Videos (1.2.1a)</dt>
-          <dd class="ml-4">
-            Audiodateien und stumme Videodateien sind nicht mit gleichwertigen Medienalternativen versehen.<br />
-            Wir bemühen uns zukünftige selbst produzierte und erstveröffentlichte Audio und stumme Videodateien
-            mit alternativen Medien zuversehen. Auf die Erstellung von Werken von Dritten, die wir in unserem
-            Repositorium nicht erstveröffentlichen, sondern nur einstellen haben wir kein Einfluss.
-            
-          </dd>
-          
-          <dt>Aufgezeichnete Videos mit Untertiteln (1.2.2a)</dt>
-          <dd class="ml-4">
-            Aufgezeichnete Videos haben keinen Untertitel.<br />
-            Wir bemühen uns zukünftig Videos mit Untertitel zu versehen. Auf die Erstellung von Werken von Dritten,
-            die wir in unserem Repositorium nicht erstveröffentlichen, sondern nur einstellen haben wir kein Einfluss.
-          </dd>
-          
-          <dt>Audiodeskription oder Volltext-Alternative für Videos (1.2.3a, 1.2.5a)</dt>
-          <dd class="ml-4">
-            Für informationstragende visuelle Videoinhalte ist keine Audiodeskription oder Volltext-Alternative bereitgestellt.<br />
-            Wir bemühen uns für informationstragende visuelle Videoinhalte eine Audiodeskription oder Volltext-Alternative
-            bereitzustellen. Auf die Erstellung von Werken von Dritten, die wir in unserem Repositorium nicht erstveröffentlichen,
-            sondern nur einstellen haben wir kein Einfluss.
-          </dd>
-
-          <dt>HTML-Strukurelemente (1.3.1 a-f )</dt>
-          <dd class="ml-4">Einige HTML-Strukurelemente sind nur teilweise barrierefrei, da die entsprechenden Bootstrap-Klassen fehlen.
-            Eine Überarbeitung ist in Arbeit.</dd>
-          
-          <dt>Eingabefelder zu Nutzerdaten vermitteln den Zweck (1.3.5a)</dt>
-          <dd class="ml-4">Formulare nutzen keine Autovervollständigung. Bei Formularen fehlen die „autocomplete“-Attribute, was das Ausfüllen der Formulare erschwert.
-            Bei einem Update soll die Funktionalität künftig ergänzt werden.</dd>
-          
-          <dt>Kontraste von Texten ausreichend (1.4.3)</dt>
-          <dd class="ml-4">Da das grundsätzliche Layout der Webseite vor dem Erscheinen der Richtlinie (EU) 2016/2102 erstellt wurde, ist das Kontrastverhältnis von 4,5:1 nicht grundsätzlich sichergestellt.
-            An einer Lösung wird gearbeitet.</dd>
-          
-          <dt>Aktuelle Position des Fokus deutlich (2.4.7a)</dt>
-          <dd class="ml-4">Der Fokus ist bei der Bedienung mit der Tastatur nicht immer erkennbar.
-            Die Anpassung des Fokus-Managements erfolgt bei der nächsten grundlegenden Überarbeitung der Website.</dd>
-          
-          <dt>Anderssprachige Wörter und Abschnitte ausgezeichnet 3.1.2a</dt>
-          <dd class="ml-4">Anderssprachige Wörter und Abschnitte sind nicht mit dem lang-Attribut ausgezeichnet.<br />
-            Bei der nächsten grundlegenden Überarbeitung der Website soll die Funktionalität künftig ergänzt werden.
-          </dd>
-          
-          <dt>Fehlererkennung (3.3.1a)</dt>
-          <dd class="ml-4">Angaben in Formularen werden vor dem Abschicken nicht automatisch überprüft. 
-            Bei der nächsten grundlegenden Überarbeitung der Website soll die Funktionalität künftig ergänzt werden.</dd>
-          
-          <dt>Statusmeldungen programmatisch verfügbar (4.1.3a)</dt>
-          <dd class="ml-4">Es erfolgt weder visuell noch im Screenreader ein Hinweis das, das Dokument auf die Merkliste gesetzt wurde.
-            Die entsprechende "Role" wird im Rahmen eines Updates ergänzt.</dd>
+          <p>Die identifizierten Defizite und Mängel befinden sich aktuell in einem kontinuierlichen Verbesserungsprozess, der sukzessive abgearbeitet wird.</p>
         </dl>
-        <p>Die identifizierten Defizite und Mängel befinden sich aktuell in einem kontinuierlichen Verbesserungsprozess, der sukzessive abgearbeitet wird.</p>
-
 
         <h2> Erstellung dieser Erklärung zur Barrierefreiheit </h2>
 

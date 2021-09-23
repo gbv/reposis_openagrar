@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MyCoReWebPage>
+<MyCoReWebPage>
+  <section xml:lang="de" title="Protokoll über die Prüfung vom Betreiber redaktionell betreuter Inhalte auf Barrierefreit">
+    <div class="row">
+      <div class="col-md-10" lang="de">
+        <h1>Protokoll über die Prüfung vom Betreiber redaktionell betreuter Inhalte auf Barrierefreit</h1>
+        <p>
+          Datum der Prüfung: 9.9.2021 
+        </p>
+        <h2>Gegenstand der Prüfung</h2>
+        <p>
+          Bei folgende Seiten wurde der Inhalt auf leichte Sprache, Verwendung von Abkürzungen und Fremdwörtern, 
+          Beschriftung von verwendeten Bilder und Grafiken geprüft.<br/>
+          Die geprüften Seiten sind:
+          <ul>
+            <li>Startseite</li>
+            <li>Impressum</li>
+            <li>Kontakt</li>
+            <li>Datenschutz</li>
+            <li>Registrieren</li>
+          </ul>
+        </p>
+        <h2>Protoll</h2>
+        <h3>9.1.1.1b Alternativtexte für Grafiken und Objekte: nicht anwendbar</h3>
+        <p>
+          Es werden keine Grafiken verwendet.
+        </p>
+        <h3>9.1.2. Alternativen für Audiodateien und stumme Videos</h3>
+        <p>
+          Es werden keine Videos oder Audios verwendet.
+        </p>
+        <h3>9.1.3.1d Inhalte gegliedert: ja</h3>
+        <p>
+          Die Texte sind durch die entsprechenden Strukturelemente sinnvoll gegliedert.
+        </p>
+        <h3>9.2.4.2a Sinnvolle Dokumenttitel: ja</h3>
+        <p>
+          Der Dokumenttitel enthält zwei Bestandteile: eine immer gleiche, 
+          allgemeine Bezeichnung des Webauftritts und eine unterscheidende,
+          individuelle Bezeichnung der jeweiligen Seite.
+        </p>
+        <h3>9.2.4.6a Aussagekräftige Überschriften und Beschriftungen: ja</h3>
+        <p>
+          Die Überschriften bezeichnen exakt den durch sie strukturierten Inhalt. Beschriftungen
+          sind nicht vorhanden.
+        </p>
+        <h3>9.3.1.2a Anderssprachige Wörter und Abschnitte ausgezeichnet: nicht anwendbar</h3>
+        <p>
+          Anderssprachige Wörter und Abschnitte sind nicht vorhanden.
+        </p>
+        
+      </div>
+    </div>
+  </section>
+  <meta>
+    <log lastEditor="administrator" date="2018-11-27" time="12:30" />
+  </meta>
+</MyCoReWebPage>
