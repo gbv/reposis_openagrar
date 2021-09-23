@@ -49,6 +49,11 @@
         <xsl:value-of select="." />
       </field>
     </xsl:for-each>
+    <xsl:for-each select="mods:name[mods:role/mods:roleTerm[@authority='marcrelator' and (@type='text' and text()='editor') or (@type='code' and text()='edt')]]/mods:affiliation">
+      <field name="mods.editor.affiliation">
+        <xsl:value-of select="." />
+      </field>
+    </xsl:for-each>
     <xsl:for-each
       select="mods:name[mods:role/mods:roleTerm[@authority='marcrelator' and (@type='text' and text()='author') or (@type='code' and text()='aut')]]">
       <xsl:if test="position()=1">
