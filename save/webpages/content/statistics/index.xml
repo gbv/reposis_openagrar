@@ -16,6 +16,18 @@
           li.append ('<a href="jki_statstics.xml?year=' + i + '&amp;JCRClasses2Yb=true">' + i + ' mit JCR von 2 Jahren zuvor</a>');
           $("#jki_statistic").append(li);
         }
+        
+        for (i = year1; i &lt;= year; i++) {
+          var li = $('<li />');
+          li.append ('<a href="jki_statstics_2020.xml?year=' + i + '">' + i + '</a>');
+          $("#jki_statistic_2020").append(li); 
+          var li = $('<li />');
+          li.append ('<a href="jki_statstics_2020.xml?year=' + i + '&amp;JCRClasses1Yb=true">' + i + ' mit JCR vom Vorjahr</a>');
+          $("#jki_statistic_2020").append(li);
+          li = $('<li />');
+          li.append ('<a href="jki_statstics_2020.xml?year=' + i + '&amp;JCRClasses2Yb=true">' + i + ' mit JCR von 2 Jahren zuvor</a>');
+          $("#jki_statistic_2020").append(li);
+        }
       });
       
     </script>
@@ -62,6 +74,12 @@
 
 <ul id="jki_statistic">
 </ul>
+</div>
+<div class="row">
+  <h3>JKI Jahresstatistik 2020</h3>
+
+  <ul id="jki_statistic_2020">
+  </ul>
 </div>
 </section>
 </form>
