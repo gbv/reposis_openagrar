@@ -21,11 +21,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>de.vzg.reposis</groupId>
+    <groupId>de.gbv.reposis</groupId>
     <artifactId>reposis_mir_parent</artifactId>
     <version>2021.06-SNAPSHOT</version>
   </parent>
-  <groupId>de.vzg.reposis</groupId>
   <artifactId>reposis_openagrar</artifactId>
   <version>2021.06-SNAPSHOT</version>
   <name>Open Agrar</name>
