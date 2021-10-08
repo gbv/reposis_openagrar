@@ -65,6 +65,7 @@
       var q_refReview="mods.refereed:yes AND mods.genre:review AND (mods.genre.host:journal OR mods.genre.host:issue)";
       var q_refResearchData="mods.genre:research_data";
       var q_refLexicon="mods.genre:entry";
+      var q_refCollProc="(mods.genre:collection OR mods.genre:proceedings OR mods.genre:issue OR mods.genre:festschrift)";
       var q_refRest="(mods.genre:report OR mods.genre:research_results OR mods.genre:declaration OR mods.genre:methods_description OR mods.genre:letter_to_the_editor)";
       
       var q_instAll= '(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*)' ;
@@ -500,26 +501,26 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refLexicon + ' AND ' + q_instZR)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
-          <td> Herausgeberschaften   </td>
+          <td> Herausgeberschaften von Sammelwerken, Tagungsbänden, Sonderheften einer Zeitschrift </td>
           <td />
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_instAll_editor)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_instA_editor)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_instAG_editor)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_instAT_editor)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_instBS_editor)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_instBI_editor)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_instEP_editor)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_instGF_editor)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_instOVP_editor)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_instOW_editor)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_instPB_editor)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_instRS_editor)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_instSB_editor)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_instSF_editor)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_instZG_editor)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_instZL_editor)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_instZO_editor)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_instZR_editor)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instAll_editor)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instA_editor)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instAG_editor)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instAT_editor)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instBS_editor)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instBI_editor)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instEP_editor)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instGF_editor)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instOVP_editor)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instOW_editor)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instPB_editor)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instRS_editor)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instSB_editor)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instSF_editor)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instZG_editor)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instZL_editor)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instZO_editor)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instZR_editor)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
           <td> Sonstige Publikationen (Einzelbewertung durch Leitung erforderlich) </td>
