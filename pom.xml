@@ -22,7 +22,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>de.vzg.reposis</groupId>
-    <artifactId>reposis_parent</artifactId>
+    <artifactId>reposis_mir_parent</artifactId>
     <version>2021.06-SNAPSHOT</version>
   </parent>
   <groupId>de.vzg.reposis</groupId>
