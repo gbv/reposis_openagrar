@@ -12,6 +12,7 @@ pipeline {
                    anyOf {
                         branch 'main'
                         branch '2021.06'
+                        branch '2021.06.x'
                    }
                }
             }
@@ -27,6 +28,7 @@ pipeline {
                anyOf {
                     branch 'main'
                     branch '2021.06'
+                    branch '2021.06.x'
                }
             }
             steps {
