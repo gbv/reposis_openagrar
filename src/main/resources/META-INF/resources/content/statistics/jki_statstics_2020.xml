@@ -67,7 +67,7 @@
       var q_refLexicon="mods.genre:entry";
       var q_refCollProc="(mods.genre:collection OR mods.genre:proceedings OR mods.genre:issue OR mods.genre:festschrift)";
       var q_refAbstractConf="mods.genre:abstract AND mods.genre.host:proceedings";
-      var q_refAbstractJour="mods.genre:abstract AND mods.genre.host:journal";
+      var q_refAbstractJour="mods.genre:abstract AND (mods.genre.host:journal OR mods.genre.host:issue)";
       var q_refRest="(mods.genre:report OR mods.genre:research_results OR mods.genre:declaration OR mods.genre:methods_description OR mods.genre:letter_to_the_editor)";
       
       var q_instAll= '(mods.author.affiliation:*julius* OR mods.author.affiliation:*jki*)' ;
