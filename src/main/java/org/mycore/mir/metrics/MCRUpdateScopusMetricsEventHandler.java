@@ -52,6 +52,7 @@ import org.mycore.access.MCRAccessException;
 import org.mycore.common.MCRConstants;
 import org.mycore.common.MCRException;
 import org.mycore.common.MCRPersistenceException;
+import org.mycore.common.config.MCRConfiguration2;
 import org.mycore.common.events.MCREvent;
 import org.mycore.common.events.MCREventHandlerBase;
 import org.mycore.datamodel.metadata.MCRMetaLinkID;
@@ -67,8 +68,6 @@ import org.mycore.datamodel.metadata.MCRMetaElement;
 import org.mycore.datamodel.metadata.MCRMetaXML;
 
 
-
-
 /**
  * 
  * update the mods
@@ -77,7 +76,10 @@ import org.mycore.datamodel.metadata.MCRMetaXML;
  */
 public class MCRUpdateScopusMetricsEventHandler extends MCREventHandlerBase {
 
-    /* (non-Javadoc)
+	private static final String ScopusApiUrl = MCRConfiguration2.getString("MIR.Scopus.API.URL").orElse(null); 
+	private static final String ScopusApiKey = MCRConfiguration2.getString("MIR.Scopus.API.Key").orElse(null);
+	
+	/* (non-Javadoc)
      * @see org.mycore.common.events.MCREventHandlerBase#handleObjectCreated(org.mycore.common.events.MCREvent, org.mycore.datamodel.metadata.MCRObject)
      */
     @Override
@@ -143,6 +145,9 @@ public class MCRUpdateScopusMetricsEventHandler extends MCREventHandlerBase {
     	if (!MCRMODSWrapper.isSupported(obj)) {
             return;
         }
+    	if (ScopusApiUrl== null || ScopusApiKey==null) {
+    		return;
+    	}
     	MCRMODSWrapper mcrmodsWrapper = new MCRMODSWrapper(obj);
         Element mods = mcrmodsWrapper.getMODS();
         
@@ -165,8 +170,8 @@ public class MCRUpdateScopusMetricsEventHandler extends MCREventHandlerBase {
         	if (type.equals("issn")) {
         		String issn = identifier.getText();
         		LOGGER.debug("Found ISSN in {}, issn={}", obj.getId(), issn);
-        		String str = "https://api.elsevier.com/content/serial/title?"
-            	    	+ "field=SJR,SNIP&view=STANDARD&apiKey=b59e9c2e9550f905bf3dfeabd0ae2c71"
+        		String str = ScopusApiUrl + "serial/title?"
+            	    	+ "field=SJR,SNIP&view=STANDARD&apiKey=" + ScopusApiKey
             		    + "&httpAccept=text/xml&issn=" + issn;
         		LOGGER.info("Get SNIP, SJR from Scopus API: {}", str);
         		try {
