@@ -5,7 +5,8 @@
   xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:mods="http://www.loc.gov/mods/v3"
   xmlns:math="http://exslt.org/math"
-  exclude-result-prefixes="xlink mcr" version="1.0"
+  xmlns:acl="xalan://org.mycore.access.MCRAccessManager"
+  exclude-result-prefixes="xlink mcr acl" version="1.0"
 >
 
   <xsl:template match="noteLocationCorp">
@@ -62,5 +63,19 @@
     </mods:affiliation>
   </xsl:template> -->
 
+  <xsl:template match="mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value">
+    <xsl:variable name="value" select="."/>
+    <xsl:copy>
+      <xsl:copy-of select="@*" />
+      <xsl:choose>
+        <xsl:when test="acl:checkPermission('crypt:cipher:jcr','encrypt')">
+          <xsl:value-of select="document(concat('crypt:encrypt:jcr:',$value))/value"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$value"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:copy>
+  </xsl:template>
 
 </xsl:stylesheet>

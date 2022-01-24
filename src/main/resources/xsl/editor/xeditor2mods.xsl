@@ -47,7 +47,7 @@
       <xsl:apply-templates select="node()" />
     </xsl:copy>
   </xsl:template>
-
+  <!--
   <xsl:template match="mods:titleInfo|mods:abstract">
     <xsl:choose>
       <xsl:when test="mcrxml:isHtml(mods:nonSort/text()) or mcrxml:isHtml(mods:title/text()) or mcrxml:isHtml(mods:subTitle/text()) or mcrxml:isHtml(text())">
@@ -96,6 +96,7 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+  -->
 
   <!-- create value URI using valueURIxEditor and authorityURI -->
   <xsl:template match="@valueURIxEditor">
@@ -280,21 +281,5 @@
       <xsl:apply-templates select="mods:holdingExternal" />
     </xsl:copy>
   </xsl:template>
-  
-  <xsl:template match="mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value">
-    <xsl:variable name="value" select="."/>
-    <xsl:copy>
-      <xsl:copy-of select="@*" />
-      <xsl:choose>
-        <xsl:when test="acl:checkPermission('crypt:cipher:jcr','encrypt')">
-          <xsl:value-of select="document(concat('crypt:encrypt:jcr:',$value))/value"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of select="$value"/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:copy>
-  </xsl:template>
-  
 
 </xsl:stylesheet>
