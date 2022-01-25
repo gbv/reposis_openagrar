@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section title="Arbeitshilfen" xml:lang="de"/>
+  <section title="Dashboard" xml:lang="en"/>
+  <section xml:lang="all">
+    
+    <script src='../../js/checkIndexedValues.js'> </script>
+    
+    <h1> Prüfung des Indexes </h1>
+    
+    <h2> prüfen der JKI Statstik relevanten Werte </h2>
+    <div class="row">
+      <p>
+        Prüfen ob Genre, Hostgenre, Affiliation und das für Statistik verwendete Jahr korrekt indexiert wurden.
+      </p>
+      <br/>
+      <ol>
+        <li> Holen der Daten vom Index - <span id="step_getIndex"></span></li>
+        <li> Prüfen der Dokumente - <span id="step_checkObjects"></span></li>
+      </ol>
+      <div id="errorDiv">
+      </div>
+      <div id="falseCheckedTitles" style="height: 300px;width: 1000px;overflow-y: scroll;border: solid thin black;">
+        <ul id="falseCheckedTitles_ul">
+        </ul>  
+      </div>
+      <br/>
+      <div id="repairList" style="height: 300px;width: 1000px;overflow-y: scroll;border: solid thin black;">
+          
+      </div>
+    </div>
+    
+  </section>
+</MyCoReWebPage>

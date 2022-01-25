@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section title="Arbeitshilfen" xml:lang="de"/>
+  <section title="Dashboard" xml:lang="en"/>
+  <section xml:lang="all">
+    
+    <script src='../../js/checkObjectIndex.js'> </script>
+        
+    <h1> Prüfung des Indexes </h1>
+    
+    <h2> nicht indexierte Aufnahmen </h2>
+    <div class="row">
+      <p>
+        Alle Titel die vorhanden sind, aber nicht indexiert wurden.
+      </p>
+      <br/>
+      <div id="nonindexedTitles" style="height: 300px;width: 600px;overflow-y: scroll;border: solid thin black;">
+        <div style="text-align:center;color:gray;" ><i class="fa fa-spinner" aria-hidden="true"></i> </div>  
+      </div>
+    </div>
+    
+  </section>
+</MyCoReWebPage>

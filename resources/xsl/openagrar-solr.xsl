@@ -214,7 +214,7 @@
     
     <xsl:variable name="dateIssued_statistics">
       <xsl:call-template name="getDateStatistic">
-        <xsl:with-param name="mods" select="//mods:mods"/>
+        <xsl:with-param name="mods" select="."/>
       </xsl:call-template>
     </xsl:variable>
     
