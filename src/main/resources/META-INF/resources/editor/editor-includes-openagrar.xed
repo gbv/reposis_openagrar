@@ -256,7 +256,7 @@
   
   <xed:template id="date.range.extended.datetimepicker">
     <fieldset class="dateExtended_box">
-      <legend class="mir-fieldset-legend">
+      <legend class="mir-fieldset-legend hiddenDetail">
         <div class="form-group row datetimepicker {$xed-validation-marker}">
           <label class="col-md-3 col-form-label text-right">
             <xed:output i18n="mir.date.issued.range" />
