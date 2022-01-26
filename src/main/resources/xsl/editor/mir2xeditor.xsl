@@ -50,6 +50,14 @@
     </xsl:if>
   </xsl:template>
 
+  <xsl:template name="mir-required-relItem">
+    <xsl:if test="@required='true'">
+      <xed:validate required="true" relevant-if="../../@xlink:href=''" display="global">
+        <xsl:value-of select="i18n:translate(@required-i18n)" />
+      </xed:validate>
+    </xsl:if>
+  </xsl:template>
+
   <xsl:template name="mir-textfield">
     <label class="col-md-3 col-form-label text-right">
       <xsl:if test="@label">
@@ -634,7 +642,7 @@
             <xsl:call-template name="mir-pmud" />
           </xsl:if>
         </div>
-        <xsl:call-template name="mir-required" />
+        <xsl:call-template name="mir-required-relItem" />
       </div>
     </xed:bind>
   </xsl:template>
