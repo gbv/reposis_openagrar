@@ -3,14 +3,10 @@ $(document).ready(function() {
 
   // replace placeholder USERNAME with username
   var userID = $("#currentUser strong").html();
-  var newHrefShort = 'https://www.openagrar.de/servlets/solr/select?q=createdby:' + userID + '&fq=objectType:mods';
-  $("a[href='https://www.openagrar.de/servlets/solr/select?q=createdby:USERNAME']").attr('href', newHrefShort);
-  var newHref = 'https://openagrar.bmel-forschung.de/servlets/solr/select?q=createdby:' + userID + '&fq=objectType:mods';
-  $("a[href='https://openagrar.bmel-forschung.de/servlets/solr/select?q=createdby:USERNAME']").attr('href', newHref);
-  var newHrefTest = 'https://reposis-test.gbv.de/openagrar/servlets/solr/select?q=createdby:' + userID + '&fq=objectType:mods';
-  $("a[href='https://reposis-test.gbv.de/openagrar/servlets/solr/select?q=createdby:USERNAME']").attr('href', newHrefTest);
-
-
+  var newHrefShort = webApplicationBaseURL + 'servlets/solr/select?q=createdby:' + userID + '&fq=objectType:mods';
+  var oldHrefShort = webApplicationBaseURL + 'servlets/solr/select?q=createdby:USERNAME';
+  $("a[href='" + oldHrefShort + "']").attr('href', newHrefShort);
+  
 // spam protection for mails
   $('span.madress').each(function(i) {
       var text = $(this).text();
