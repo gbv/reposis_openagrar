@@ -5,45 +5,48 @@
   <!-- ========== extend editor-genres.xed ========== -->
   <xed:modify ref="admin.fields">
     <xed:remove  ref="embargo"/>
-    <xed:include ref="embargo"     after="genre"/>
+    <xed:include ref="embargo"     before="title.complex.repeated"/>
     <xed:remove  ref="access"/>
-    <xed:include ref="access"      after="genre"/>
+    <xed:include ref="access"      before="title.complex.repeated"/>
     <xed:remove  ref="rights"/>
-    <xed:include ref="rights"      after="genre"/>
+    <xed:include ref="rights"      before="title.complex.repeated"/>
     <xed:remove  ref="copyrightMD" />
-    <xed:include ref="copyrightMD" after="genre"/>
-    <xed:remove  ref="oa.date.range.extended.datetimepicker" />
+    <xed:include ref="copyrightMD" before="title.complex.repeated"/>
+    <xed:remove  ref="date.range.extended.datetimepicker" />
     <xed:include ref="oa.date.range.extended.datetimepicker" after="conference.itemsearch"/>
-    <xed:remove  ref="institutes">
-    
-    <xed:include ref="oa.source" after="abstract.repeated"/>
-    <xed:include ref="oa.extension.characteristics" after="abstract.repeated"/>
-    <xed:include ref="oa.extension.journalmetrics" after="abstract.repeated"/>
+    <xed:remove  ref="openAIRE" />
+    <xed:remove  ref="shelfmark" />
+    <xed:remove  ref="institutes" />
+    <xed:include ref="oa.source"                    before="related.item.search.of.all.items"/>
+    <xed:include ref="openAIRE"                     before="related.item.search.of.all.items"/>
+    <xed:include ref="oa.extension.characteristics" before="related.item.search.of.all.items"/>
+    <xed:include ref="oa.extension.journalmetrics"  before="related.item.search.of.all.items"/>
+    <xed:include ref="oa.annual_review"             before="related.item.search.of.all.items"/>
     <xed:remove  ref="comment.complex"/>    
   </xed:modify>
 
   <xed:modify ref="genres.book">
-    <xed:include ref="embargo.datetimepicker" before="title.original">
+    <xed:include ref="embargo.datetimepicker" before="title.original"/>
     <xed:include ref="rights"                 before="title.original"/>  
   </xed:modify>
   
   <xed:modify ref="genres.collection">
-    <xed:include ref="embargo.datetimepicker" before="title.original">
+    <xed:include ref="embargo.datetimepicker" before="title.original"/>
     <xed:include ref="rights"                 before="title.original"/>  
   </xed:modify>
   
   <xed:modify ref="genres.festschrift">
-    <xed:include ref="embargo.datetimepicker" before="title.original">
+    <xed:include ref="embargo.datetimepicker" before="title.original"/>
     <xed:include ref="rights"                 before="title.original"/>  
   </xed:modify>
   
   <xed:modify ref="genres.lexicon">
-    <xed:include ref="embargo.datetimepicker" before="title.original">
+    <xed:include ref="embargo.datetimepicker" before="title.original"/>
     <xed:include ref="rights"                 before="title.original"/>  
   </xed:modify>
   
   <xed:modify ref="genres.proceedings">
-    <xed:include ref="embargo.datetimepicker" before="title.original">
+    <xed:include ref="embargo.datetimepicker" before="title.original"/>
     <xed:include ref="rights"                 before="title.original"/>  
   </xed:modify>
   
@@ -52,57 +55,62 @@
     <xed:remove  ref="institutes"/>
     <xed:remove  ref="comment"/>
     <xed:remove  ref="shelfmark"/>
+    <xed:remove  ref="embargo.datetimepicker"/>
     <xed:include ref="oa.annual_review"       after="abstract.simple"/>
   </xed:modify>
   
-  <xed:modify id="genres.journal.common">
+  <xed:modify ref="genres.journal.common">
     <xed:include ref="identifier.managed"     after="identifier.zdbid"/>
     <xed:include ref="link.repeated"          after="identifier.zdbid"/>
+    <xed:remove  ref="comment"/>
+    <xed:remove  ref="shelfmark"/>
   </xed:modify>
   
   <xed:modify ref="genres.thesis">
-    <xed:include ref="embargo.datetimepicker" before="titles.thesis">
+    <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
     <xed:include ref="rights"                 before="titles.thesis"/>  
     <xed:include ref="subject.simple"         before="classification"/>
   </xed:modify>
   
   <xed:modify ref="genres.dissertation">
-    <xed:include ref="embargo.datetimepicker" before="titles.thesis">
-    <xed:include ref="rights"                 before="titles.thesis"/>  
+    <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
+    <xed:include ref="rights"                 before="titles.thesis"/>
+    <xed:remove  ref="comment"/>  
   </xed:modify>
   
   <xed:modify ref="genres.habilitation">
-    <xed:include ref="embargo.datetimepicker" before="titles.thesis">
-    <xed:include ref="rights"                 before="titles.thesis"/>  
+    <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
+    <xed:include ref="rights"                 before="titles.thesis"/>
+    <xed:remove  ref="comment"/>  
   </xed:modify>
   
   <xed:modify ref="genres.diploma_thesis">
-    <xed:include ref="embargo.datetimepicker" before="titles.thesis">
+    <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
     <xed:include ref="rights"                 before="titles.thesis"/>  
   </xed:modify>
   
   <xed:modify ref="genres.master_thesis">
-    <xed:include ref="embargo.datetimepicker" before="titles.thesis">
+    <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
     <xed:include ref="rights"                 before="titles.thesis"/>  
   </xed:modify> 
   
   <xed:modify ref="genres.bachelor_thesis">
-    <xed:include ref="embargo.datetimepicker" before="titles.thesis">
+    <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
     <xed:include ref="rights"                 before="titles.thesis"/>  
   </xed:modify>
   
   <xed:modify ref="genres.student_resarch_project">
-    <xed:include ref="embargo.datetimepicker" before="titles.thesis">
+    <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
     <xed:include ref="rights"                 before="titles.thesis"/>  
   </xed:modify>
   
   <xed:modify ref="genres.magister_thesis">
-    <xed:include ref="embargo.datetimepicker" before="titles.thesis">
+    <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
     <xed:include ref="rights"                 before="titles.thesis"/>  
   </xed:modify>
   
   <xed:modify ref="genres.exam">
-    <xed:include ref="embargo.datetimepicker" before="titles.thesis">
+    <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
     <xed:include ref="rights"                 before="titles.thesis"/>  
   </xed:modify>
   
@@ -111,17 +119,18 @@
     <xed:remove  ref="institutes"/>
     <xed:remove  ref="comment"/>
     <xed:remove  ref="shelfmark"/>
+    <xed:remove  ref="embargo.datetimepicker"/>
     <xed:include ref="oa.annual_review"       after="abstract.simple"/>
   </xed:modify>
   
   <xed:modify ref="genres.teaching_material">
-    <xed:include ref="embargo.datetimepicker" before="titles.thesis">
+    <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
     <xed:include ref="rights"                 before="titles.thesis"/>  
     <xed:include ref="oa.annual_review"       after="abstract.simple"/>
   </xed:modify>
   
   <xed:modify ref="genres.publication.common">
-    <xed:include ref="embargo.datetimepicker" before="title.original">
+    <xed:include ref="embargo.datetimepicker" before="title.original"/>
     <xed:remove  ref="rights"/>
     <xed:include ref="rights"                 before="title.original"/> 
     <xed:remove  ref="institutes"/>
@@ -131,7 +140,7 @@
   </xed:modify>
   
   <xed:modify ref="genres.report.common">
-    <xed:include ref="embargo.datetimepicker" before="title">
+    <xed:include ref="embargo.datetimepicker" before="title"/>
     <xed:remove  ref="rights"/>
     <xed:include ref="rights"                 before="title"/>
     <xed:remove  ref="institutes"/>
@@ -141,7 +150,7 @@
   </xed:modify>
   
   <xed:modify ref="genres.entry">
-    <xed:include ref="embargo.datetimepicker" before="title.original">
+    <xed:include ref="embargo.datetimepicker" before="title.original"/>
     <xed:remove  ref="rights"/>
     <xed:include ref="rights"                 before="title.original"/>
     <xed:remove  ref="institutes"/>
@@ -151,7 +160,7 @@
   </xed:modify>
   
   <xed:modify ref="genres.preface">
-    <xed:include ref="embargo.datetimepicker" before="title">
+    <xed:include ref="embargo.datetimepicker" before="title"/>
     <xed:remove  ref="rights"/>
     <xed:include ref="rights"                 before="title"/>
     <xed:remove  ref="institutes"/>
@@ -161,7 +170,7 @@
   </xed:modify>
   
   <xed:modify ref="genres.interview">
-    <xed:include ref="embargo.datetimepicker" before="title">
+    <xed:include ref="embargo.datetimepicker" before="title"/>
     <xed:remove  ref="rights"/>
     <xed:include ref="rights"                 before="title"/>
     <xed:remove  ref="institutes"/>
@@ -171,7 +180,7 @@
   </xed:modify>
   
   <xed:modify ref="genres.speech">
-    <xed:include ref="embargo.datetimepicker" before="title">
+    <xed:include ref="embargo.datetimepicker" before="title"/>
     <xed:remove  ref="rights"/>
     <xed:include ref="rights"                 before="title"/>
     <xed:remove  ref="institutes"/>
@@ -181,7 +190,7 @@
   </xed:modify>
   
   <xed:modify ref="genres.patent">
-    <xed:include ref="embargo.datetimepicker" before="title">
+    <xed:include ref="embargo.datetimepicker" before="title"/>
     <xed:remove  ref="rights"/>
     <xed:include ref="rights"                 before="title"/>
     <xed:remove  ref="institutes"/>
@@ -191,7 +200,7 @@
   </xed:modify>
   
   <xed:modify ref="genres.poster">
-    <xed:include ref="embargo.datetimepicker" before="title">
+    <xed:include ref="embargo.datetimepicker" before="title"/>
     <xed:remove  ref="rights"/>
     <xed:include ref="rights"                 before="title"/>
     <xed:remove  ref="institutes"/>
@@ -201,7 +210,8 @@
   </xed:modify>
   
   <xed:modify ref="genres.research_data">
-    <xed:include ref="embargo.datetimepicker" before="title">
+    <xed:remove  ref="embargo.datetimepicker"/>
+    <xed:include ref="embargo.datetimepicker" before="title"/>
     <xed:remove  ref="access"/>
     <xed:include ref="access"                 before="title"/>
     <xed:remove  ref="copyrightMD"/>
@@ -210,11 +220,14 @@
     <xed:include ref="rights"                 before="title"/>
     <xed:remove  ref="institutes"/>
     <xed:remove  ref="comment"/>
-    <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:remove  ref="cartographics"/>
+    <xed:remove  ref="related.item.link" />
+    <xed:include ref="related.item.link"      after="subject.simple"/>
+    <xed:include ref="oa.annual_review"       after="physical.description.note"/>
   </xed:modify>
   
   <xed:modify ref="genres.lecture">
-    <xed:include ref="embargo.datetimepicker" before="title">
+    <xed:include ref="embargo.datetimepicker" before="title"/>
     <xed:remove  ref="rights"/>
     <xed:include ref="rights"                 before="title"/>
     <xed:remove  ref="institutes"/>
@@ -224,7 +237,7 @@
   </xed:modify>
   
   <xed:modify ref="genres.picture">
-    <xed:include ref="embargo.datetimepicker" before="title.nonrequired">
+    <xed:include ref="embargo.datetimepicker" before="title.nonrequired"/>
     <xed:remove  ref="rights"/>
     <xed:include ref="rights"                 before="title.nonrequired"/>
     <xed:remove  ref="institutes"/>
@@ -251,32 +264,49 @@
   
   <!-- ========== OA specific genres ========== -->
   <xed:template id="genres.abstract">
-    <xed:include uri="webapp:editor/editor-genres.xed" ref="publication.common" />
+    <xed:include ref="genres.publication.common" />
   </xed:template>
 
   <xed:template id="genres.preprint">
-    <xed:include uri="webapp:editor/editor-genres.xed" ref="publication.common" />
-    <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="date.issued" />
+    <xed:include ref="genres.publication.common" />
+    <xed:include ref="date.issued" />
   </xed:template>
 
   <xed:template id="genres.flyer">
-    <xed:include uri="webapp:editor/editor-genres.xed" ref="publication.common" />
+    <xed:include ref="genres.publication.common" />
   </xed:template>
 
   <xed:template id="genres.conferenceObject">
-    <xed:include uri="webapp:editor/editor-genres.xed" ref="publication.common" />
+    <xed:include ref="genres.publication.common" />
   </xed:template>
   
   <xed:template id="genres.methods_description">
-    <xed:include uri="webapp:editor/editor-genres.xed" ref="report.common" />
+    <xed:include uri="webapp:editor/editor-genres.xed" ref="genres.report.common" />
+  </xed:template>
+  
+  <xed:template id="genres.monograph">
+    <xed:include ref="embargo.datetimepicker" />
+    <xed:include ref="rights" />
+    <xed:include ref="title.original" />
+    <xed:include ref="author.repeated" />
+    <xed:include ref="genres.book.common" />
+  </xed:template>
+  
+  <xed:template id="genres.platform">
+    <xed:include ref="title.platform" />
+    <xed:include ref="hostInstitution" />
+    <xed:include ref="sdnb.repeat" />
+    <xed:include ref="link.repeated" />
+    <xed:include ref="subject.simple" />
+    <xed:include ref="abstract.simple" />
   </xed:template>
   
   <xed:template id="hosts.platform">
     <div class="mir-form-group-body">
       <xed:bind xpath="mods:relatedItem[@type='series']">
         <xed:bind xpath="@xlink:href" initially="{$MIR.projectid.default}_mods_00000000"> <input id="relItem-platform" type="hidden" /> </xed:bind>
-        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-openagrar.xed" ref="title.platform.relItemsearch" />
-        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-openagrar.xed" ref="platform.volume" />
+        <xed:include ref="title.platform.relItemsearch" />
+        <xed:include ref="platform.volume" />
       </xed:bind>
     </div>
   </xed:template>
@@ -285,19 +315,35 @@
     <div class="mir-form-group-body">
       <xed:bind xpath="mods:relatedItem[@type='host']">
         <xed:bind xpath="@xlink:href" initially="{$MIR.projectid.default}_mods_00000000"> <input id="relItem-issue" type="hidden" /> </xed:bind>
-        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-openagrar.xed" ref="title.issue.relItemsearch" />
-        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-openagrar.xed" ref="identifier.issn.issue.relItemsearch" />
+        <xed:include ref="title.issue.relItemsearch" />
+        <xed:include ref="identifier.issn.issue.relItemsearch" />
       </xed:bind>
-      <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="year.issued.relItem" />
+      <xed:include ref="year.issued.relItem" />
       <xed:bind xpath="mods:relatedItem[@type='host']">
-        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="host.volume" />
-        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="host.issue" />
-        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="host.pages" />
+        <xed:include ref="host.volume" />
+        <xed:include ref="host.issue" />
+        <xed:include ref="host.pages" />
       </xed:bind>
     </div>
   </xed:template>
   
   <!-- ========== OA specific templates ========== -->
+  <xed:template id="oa.in.out">
+    <xed:source uri="xslStyle:import/remove-genres,import/mods2mycoreobject,editor/oa-mods2xeditor,editor/mods2xeditor:enrich:import:buildxml:_rootName_=mods:mods&amp;mods:identifier={$modsId}&amp;mods:identifier/@type={$type}" />
+    <xed:source uri="xslStyle:PPN-mods-simple,mir-PPN-import,mycoreobject-migrate-nameIdentifier,editor/mods2xeditor:http://unapi.k10plus.de/?id={$MIR.PPN.DatabaseList}:ppn:{$ppn}&amp;format=mods36" />
+    <xed:source uri="xslStyle:editor/oa-mods2xeditor,editor/mods2xeditor:{$sourceUri}" />
+    <xed:source uri="xslStyle:mycoreobject-editor,editor/oa-mods2xeditor,editor/mods2xeditor:mcrobject:{$id}" />
+    <xed:source uri="xslStyle:mycoreobject-copyof,editor/oa-mods2xeditor,editor/mods2xeditor:mcrobject:{$copyofid}" />
+    <xed:source uri="xslStyle:mods-addPreceding,mycoreobject-copyof,editor/oa-mods2xeditor,editor/mods2xeditor:mcrobject:{$oldVersion}" />
+    <xed:source uri="xslStyle:as{$relatedItemType},editor/oa-mods2xeditor,editor/mods2xeditor:mcrobject:{$relatedItemId}" />
+
+    <xed:cancel
+      url="../servlets/MCRLockServlet?action=unlock&amp;id={$id}&amp;url=/receive/{$id}?XSL.Status.Message=mir.editstatus.canceled&amp;XSL.Status.Style=danger" />
+    <xed:cancel url="{$cancelUrl}?XSL.Status.Message=mir.editstatus.canceled&amp;XSL.Status.Style=danger" />
+    <xed:cancel url="../index.html?XSL.Status.Message=mir.editstatus.canceled&amp;XSL.Status.Style=danger" />
+    <xed:post-processor xsl="editor/xeditor2mods.xsl" />
+  </xed:template>
+  
   <xed:template id="oa.date.range.extended.datetimepicker">
     <!-- This template provide additional dates (online_publication and print_publication)-->
     <fieldset class="dateExtended_box">

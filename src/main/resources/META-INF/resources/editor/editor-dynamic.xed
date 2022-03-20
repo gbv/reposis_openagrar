@@ -12,7 +12,7 @@
     <xed:preload uri="webapp:editor/editor-hosts.xed" />
     <xed:preload uri="{$MIR.EditorForms.CustomIncludes}" />
 
-    <xed:include uri="webapp:editor/editor-includes-openagrar.xed" ref="in.out" />
+    <xed:include ref="oa.in.out" />
 
     <xed:bind xpath="/mycoreobject">
       <xed:include ref="mycore.common" />
