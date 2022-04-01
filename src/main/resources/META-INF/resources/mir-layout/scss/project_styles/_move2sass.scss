@@ -85,6 +85,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 // fix person details popup OA-235
 .popover-header {
   margin-top: 0;
+  padding-right: 2.5rem; // TODO: has to fixed in MIR
 }
 .popoverclose {
   top: 0;
