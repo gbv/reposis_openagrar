@@ -6,7 +6,13 @@
 // set the defaults for all responsive levels here
 // no (xl) media query necessary (desktop first)
 
-
+  #editor-buttons {
+    position: sticky;
+    bottom: 0;
+    padding: 1.5rem 0 1rem 0;
+    background-color: rgba(249, 249, 249, 0.7);
+    margin-top: 2rem;
+  }
 
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(lg) {
