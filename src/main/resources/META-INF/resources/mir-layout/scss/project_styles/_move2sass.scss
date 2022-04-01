@@ -75,9 +75,20 @@ html body #page #main_content .jumbotwo h2 {
   color: white;
 }
 
+// hotfix: headlines in bs4 has no longer margins
+// TODO: adjust layout to this new behavior
 h1, .h1, h2, .h2, h3, .h3 {
   margin-top: 21px;
   margin-bottom: 10.5px;
+}
+// repairs hot fix side effects
+// fix person details popup OA-235
+.popover-header {
+  margin-top: 0;
+}
+.popoverclose {
+  top: 0;
+  right: 0;
 }
 
 /* ****************** header and logos ****************** */

@@ -6,7 +6,11 @@
 // set the defaults for all responsive levels here
 // no (xl) media query necessary (desktop first)
 
-:not(.input-group-btn):not(.btn-group) > .btn {
+// TODO: probably it is better to set a whitelist of elements
+// instead of defining a blacklist
+// intension of this rule was, to prevent missing space between buttons
+// is this a bs3 to bs4 issue?
+:not(.input-group-btn):not(.btn-group):not(.popover-header) > .btn {
   margin-right: 5px;
 }
 
