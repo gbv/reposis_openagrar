@@ -8,7 +8,7 @@
 Die in OpenAgrar erfassten Daten können lesend über zwei Schnittstellen abgegriffen werden:
 <ul>
   <li>die standardisierte <a href="../../servlets/OAIDataProvider?verb=Identify">OAI-PMH 2.0-Schnittstelle</a> (<a href="http://www.openarchives.org/OAI/openarchivesprotocol.html">Dokumentation</a>) stellt die Daten in verschiedenen Metadatenformaten wir MarcXML, MODS, DC und Datacite-XML zur Verfügung</li>
-  <li>die REST-API von MyCoRe in <a href="../../api/v1/openapi.json">Version 1</a> (<a href="https://www.mycore.de/documentation/interfaces/interface_rest/">Dokumentation</a>) und <a href="../../api/v1/openapi.json">Version 2</a> (<a href="https://www.mycore.de/documentation/interfaces/interface_rest_v2/">Dokumentation</a>) bietet mehr Zugriffsmöglichkeiten ist jedoch proprietär</li>
+  <li>die REST-API von MyCoRe, dem verwendeten Software-Framework von OpenAgrar, in <a href="../../api/v1/openapi.json">Version 1</a> (<a href="https://www.mycore.de/documentation/interfaces/interface_rest/">Dokumentation</a>) und <a href="../../api/v1/openapi.json">Version 2</a> (<a href="https://www.mycore.de/documentation/interfaces/interface_rest_v2/">Dokumentation</a>) bietet mehr Zugriffsmöglichkeiten ist jedoch proprietär</li>
 </ul>
 Bei Fragen <a href="contact.xml">wenden Sie sich gern an uns</a>.
 </p>
