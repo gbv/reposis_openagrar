@@ -126,18 +126,31 @@
             <!-- END: OA specific changes -->
           </xsl:if>
         </xsl:for-each>
-        <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem[not(@type='host')]">
+            <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem[not(@type='host' and @xlink:href)]">
+              <xsl:variable name="relItemLabel">
           <xsl:choose>
+                  <xsl:when test="@displayLabel">
+                    <xsl:value-of select="@displayLabel"/>
+                  </xsl:when>
+                  <xsl:when test="@type">
+                    <xsl:value-of select="i18n:translate(concat('mir.relatedItem.', @type))"/>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:value-of select="i18n:translate('mir.relatedItem')"/>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:variable>
+              <xsl:choose>
             <xsl:when test="@xlink:href">
               <xsl:call-template name="printMetaDate.mods.relatedItems">
                 <xsl:with-param name="parentID" select="./@xlink:href" />
-                <xsl:with-param name="label" select="i18n:translate(concat('mir.relatedItem.', @type))" />
+                    <xsl:with-param name="label" select="$relItemLabel" />
               </xsl:call-template>
             </xsl:when>
             <xsl:otherwise>
-              <xsl:call-template name="printMetaDate.mods">
-                <xsl:with-param name="nodes" select="./mods:titleInfo/mods:title" />
-                <xsl:with-param name="label" select="i18n:translate(concat('mir.relatedItem.', @type))" />
+                  <xsl:call-template name="printMetaDate.mods.relatedItems">
+                    <xsl:with-param name="parentID" select="''" />
+                    <xsl:with-param name="label" select="$relItemLabel" />
               </xsl:call-template>
             </xsl:otherwise>
           </xsl:choose>
@@ -386,7 +399,7 @@
           <xsl:if test="mods:part/mods:detail[@type='volume']/mods:number">
             <xsl:value-of
                     select="concat('Vol. ',mods:part/mods:detail[@type='volume']/mods:number)" />
-            <xsl:if test="mods:part/mods:detail[@type='issue']/mods:number or mods:part/mods:detail[@type='articlenumber'] ">
+            <xsl:if test="mods:part/mods:detail[@type='issue']/mods:number or mods:part/mods:detail[@type='article_number'] ">
               <xsl:text>, </xsl:text>
             </xsl:if>
           </xsl:if>
@@ -395,15 +408,15 @@
             <xsl:value-of
                     select="concat('H. ',mods:part/mods:detail[@type='issue']/mods:number)" />
           </xsl:if>
-          <xsl:if test="mods:part/mods:detail[@type='issue']/mods:number and (mods:part/mods:detail[@type='articlenumber'] or mods:part/mods:date or mods:originInfo[@eventType='publication']/mods:dateIssued)">
+          <xsl:if test="mods:part/mods:detail[@type='issue']/mods:number and (mods:part/mods:detail[@type='article_number'] or mods:part/mods:date or mods:originInfo[@eventType='publication']/mods:dateIssued)">
             <xsl:text> </xsl:text>
           </xsl:if> 
-          <!-- Articlenumber -->
-          <xsl:if test="mods:part/mods:detail[@type='articlenumber']/mods:number">
+          <!-- Article number -->
+          <xsl:if test="mods:part/mods:detail[@type='article_number']/mods:number">
             <xsl:value-of
-              select="concat(i18n:translate('mir.articlenumber.short'),mods:part/mods:detail[@type='articlenumber']/mods:number)" />
+              select="concat(i18n:translate('mir.articlenumber.short'),mods:part/mods:detail[@type='article_number']/mods:number)" />
           </xsl:if>
-          <xsl:if test="mods:part/mods:detail[@type='articlenumber']/mods:number and (mods:part/mods:date or mods:originInfo[@eventType='publication']/mods:dateIssued)">
+          <xsl:if test="mods:part/mods:detail[@type='article_number']/mods:number and (mods:part/mods:date or mods:originInfo[@eventType='publication']/mods:dateIssued)">
             <xsl:text> </xsl:text>
           </xsl:if>
           <xsl:if test="mods:part/mods:date or mods:originInfo[@eventType='publication']/mods:dateIssued[not(@point='start')][not(@point='end')]">

@@ -106,8 +106,8 @@
       <xsl:if test="mods:extent[@unit='pages']/mods:end">
         <field name="mods.part.pages.end"><xsl:value-of select="mods:extent[@unit='pages']/mods:end"/></field>
       </xsl:if>
-      <xsl:if test="mods:detail[@type='articlenumber']">
-        <field name="mods.part.articlenumber"><xsl:value-of select="mods:detail[@type='articlenumber']"/></field>
+      <xsl:if test="mods:detail[@type='article_number']">
+        <field name="mods.part.articlenumber"><xsl:value-of select="mods:detail[@type='article_number']"/></field>
       </xsl:if>
     </xsl:for-each>
     <xsl:for-each select="mods:relatedItem[@type='host']/mods:relatedItem[@type='series']">
@@ -128,8 +128,8 @@
       <xsl:if test="mods:extent[@unit='pages']/mods:end">
         <field name="mods.part.pages.end.host"><xsl:value-of select="mods:extent[@unit='pages']/mods:end"/></field>
       </xsl:if>
-      <xsl:if test="mods:detail[@type='articlenumber']">
-        <field name="mods.part.articlenumber.host"><xsl:value-of select="mods:detail[@type='articlenumber']"/></field>
+      <xsl:if test="mods:detail[@type='article_number']">
+        <field name="mods.part.articlenumber.host"><xsl:value-of select="mods:detail[@type='article_number']"/></field>
       </xsl:if>
     </xsl:for-each>
     <xsl:for-each select="mods:relatedItem[@type='host']/mods:genre">
