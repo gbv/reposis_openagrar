@@ -8,7 +8,12 @@
 // set the defaults for all responsive levels here
 // no (xl) media query necessary (desktop first)
 
-
+h4.mir-toc-section-title {
+  font-size: 1rem;
+  margin-bottom: 0.15rem;
+  color: #444;
+  font-weight: bold;
+}
 
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(lg) {

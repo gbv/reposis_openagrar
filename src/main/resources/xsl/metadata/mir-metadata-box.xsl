@@ -128,7 +128,7 @@
         </xsl:for-each>
             <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem[not(@type='host' and @xlink:href)]">
               <xsl:variable name="relItemLabel">
-          <xsl:choose>
+                <xsl:choose>
                   <xsl:when test="@displayLabel">
                     <xsl:value-of select="@displayLabel"/>
                   </xsl:when>
@@ -405,8 +405,7 @@
           </xsl:if>
           <!-- Issue -->
           <xsl:if test="mods:part/mods:detail[@type='issue']/mods:number">
-            <xsl:value-of
-                    select="concat('H. ',mods:part/mods:detail[@type='issue']/mods:number)" />
+            <xsl:value-of select="concat('H. ',mods:part/mods:detail[@type='issue']/mods:number)" />
           </xsl:if>
           <xsl:if test="mods:part/mods:detail[@type='issue']/mods:number and (mods:part/mods:detail[@type='article_number'] or mods:part/mods:date or mods:originInfo[@eventType='publication']/mods:dateIssued)">
             <xsl:text> </xsl:text>
