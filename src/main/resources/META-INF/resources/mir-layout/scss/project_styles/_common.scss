@@ -12,7 +12,12 @@ h4.mir-toc-section-title {
   font-size: 1rem;
   margin-bottom: 0.15rem;
   color: #444;
-  font-weight: bold;
+}
+
+.mir-toc-section-object-link, .mir-toc-section-page, .mir-toc-section-author {
+  line-height: 1.1;
+  color: #999;
+  font-size: smaller;
 }
 
 // Large devices (desktops) and below: <= 1200px
