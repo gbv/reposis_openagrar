@@ -55,7 +55,7 @@
   {
     "add-field": {
         "name":"mods.annual_review",
-        "type":"pint",
+        "type":"string",
         "multiValued":true}
   },
   {
