@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MyCoReWebPage><section xml:lang="de" title="Statistiken" /><section xml:lang="en" title="Statistics" /><section xml:lang="all"><div><script src="../../js/statistic.js"> </script><script>
+<MyCoReWebPage>
+  <section xml:lang="de" title="Statistiken">
+    <script src="../../js/statistic.js"> </script>
+    <script>
       $(document).ready( function() {
         $("#jki_statistic").empty();
         var year=new Date().getFullYear();
@@ -31,57 +34,68 @@
       });
       
     </script>
-<form action="../../editor/editor-dynamic.xed" class="form-horizontal" id="submit_publication" method="get" role="form">
-<section xml:lang="de">
-<div class="row">
-<h1>Statistiken</h1>
-</div>
+    <form action="../../editor/editor-dynamic.xed" class="form-horizontal" id="submit_publication" method="get" role="form">
 
-<ul>
-	<li><a href="pubyear.xml">Publikationen nach Jahr </a></li>
-</ul>
+    <div class="row">
+      <div class="col-12">
+      <h1>Statistiken</h1>
 
-<div class="row">
-<h3>Genre - referiert (2012-2018)</h3>
+    
+      <ul>
+        <li><a href="pubyear.xml">Publikationen nach Jahr </a></li>
+      </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Genre - referiert (2012-2018)</h3>
+        
+        <p>Anzahl der Publikationen nach Genre und referiert für die Jahre 2012-2018</p>
+        
+        <ul>
+        	<li><a href="bfr_genre_ref_pubyear.xml">BfR</a></li>
+        	<li><a href="fli_genre_ref_pubyear.xml">FLI</a></li>
+        	<li><a href="jki_genre_ref_pubyear.xml">JKI</a></li>
+        	<li><a href="mri_genre_ref_pubyear.xml">MRI</a></li>
+        	<li><a href="ti_genre_ref_pubyear.xml">TI</a></li>
+        </ul>
+      </div>
+    </div>
 
-<p>Anzahl der Publikationen nach Genre und referiert für die Jahre 2012-2018</p>
+    <div class="row">
+      <div class="col-12">
+        <h3>Jahresberichtskategorien (2016)</h3>
+        
+        <p>Anzahl der Publikationen nach Institut und Jahresberichtskategorien für das Jahr 2016</p>
+        
+        <ul>
+        	<li><a href="bfr_inst_repCat_pubyear.xml">BfR</a></li>
+        	<li><a href="fli_inst_repCat_pubyear.xml">FLI</a></li>
+        	<li><a href="jki_inst_repCat_pubyear.xml">JKI</a></li>
+        	<li><a href="mri_inst_repCat_pubyear.xml">MRI</a></li>
+        	<li><a href="ti_inst_repCat_pubyear.xml">TI</a></li>
+        </ul>
+      </div>
+    </div>
 
-<ul>
-	<li><a href="bfr_genre_ref_pubyear.xml">BfR</a></li>
-	<li><a href="fli_genre_ref_pubyear.xml">FLI</a></li>
-	<li><a href="jki_genre_ref_pubyear.xml">JKI</a></li>
-	<li><a href="mri_genre_ref_pubyear.xml">MRI</a></li>
-	<li><a href="ti_genre_ref_pubyear.xml">TI</a></li>
-</ul>
-</div>
+    <div class="row">
+      <div class="col-12">
+        <h3>JKI Jahresstatistik</h3>
 
-<div class="row">
-<h3>Jahresberichtskategorien (2016)</h3>
+        <ul id="jki_statistic">
+        </ul>
+      </div>
+    </div>
 
-<p>Anzahl der Publikationen nach Institut und Jahresberichtskategorien für das Jahr 2016</p>
+    <div class="row">
+      <div class="col-12">
+        <h3>JKI Jahresstatistik 2020</h3>
 
-<ul>
-	<li><a href="bfr_inst_repCat_pubyear.xml">BfR</a></li>
-	<li><a href="fli_inst_repCat_pubyear.xml">FLI</a></li>
-	<li><a href="jki_inst_repCat_pubyear.xml">JKI</a></li>
-	<li><a href="mri_inst_repCat_pubyear.xml">MRI</a></li>
-	<li><a href="ti_inst_repCat_pubyear.xml">TI</a></li>
-</ul>
-</div>
+        <ul id="jki_statistic_2020">
+        </ul>
+      </div>
+    </div>
+  </form>
 
-<div class="row">
-<h3>JKI Jahresstatistik</h3>
-
-<ul id="jki_statistic">
-</ul>
-</div>
-<div class="row">
-  <h3>JKI Jahresstatistik 2020</h3>
-
-  <ul id="jki_statistic_2020">
-  </ul>
-</div>
 </section>
-</form>
-</div>
-</section><meta><log lastEditor="ikleinod" date="2021-05-19" time="15:06" /></meta></MyCoReWebPage>
+<meta><log lastEditor="kneumann" date="2022-04-13" time="08:06" /></meta></MyCoReWebPage>
