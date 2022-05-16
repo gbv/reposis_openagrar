@@ -134,7 +134,7 @@
     </field>
 
     <xsl:choose>
-      <xsl:when test="string(number(.)) = 'NaN'">
+      <xsl:when test="string(number(.)) = 'NaN' and floor(.) = .">
         <field name="{$field}.str">
           <xsl:value-of select="." />
         </field>
