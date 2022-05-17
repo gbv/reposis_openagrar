@@ -2,13 +2,14 @@
 
 <!-- Builds solr fields used for table of contents -->
 
-<xsl:stylesheet version="3.0"
+<xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xalan="http://xml.apache.org/xalan"
   xmlns:mods="http://www.loc.gov/mods/v3"
-  exclude-result-prefixes="xlink mods">
+  exclude-result-prefixes="xalan xlink mods">
 
-  <xsl:import href="xslImport:solr-document-3:toc/solr-fields4toc-3.xsl" />
+  <xsl:import href="xslImport:solr-document:toc/solr-fields4toc.xsl" />
 
   <xsl:param name="MIR.TableOfContents.RolesToDisplay" select="'cre aut edt trl ive ivr hnr'" />
 
