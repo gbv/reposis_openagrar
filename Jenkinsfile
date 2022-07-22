@@ -11,8 +11,8 @@ pipeline {
                not {
                    anyOf {
                         branch 'main'
-                        branch '2021.06'
-                        branch '2021.06.x'
+                        branch '2022.06'
+                        branch '2022.06.x'
                    }
                }
             }
@@ -27,8 +27,8 @@ pipeline {
             when {
                anyOf {
                     branch 'main'
-                    branch '2021.06'
-                    branch '2021.06.x'
+                    branch '2022.06'
+                    branch '2022.06.x'
                }
             }
             steps {
