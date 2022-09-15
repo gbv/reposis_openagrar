@@ -129,7 +129,7 @@
         <div class="search_box">
           <xsl:variable name="searchlink" select="concat($proxyBaseURL, $HttpSession, $solrParams)" />
           <form action="{$searchlink}" class="search_form" method="post">
-            <div class="input-group">
+            <div class="input-group input-group-sm">
               <div class="input-group-btn input-group-prepend">
                 <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" value="all" id="search_type_button">
                   <span id="search_type_label">
@@ -528,7 +528,18 @@
 
     <!-- derivate variables -->
     <xsl:variable name="derivates" select="key('derivate', $identifier)" />
-    <xsl:variable name="derivid" select="$derivates/str[@name='derivateMaindoc'][1]/../str[@name='id']" />
+    <!-- <xsl:variable name="derivid" select="$derivates/str[@name='derivateMaindoc'][1]/../str[@name='id']"/> -->
+    <xsl:variable name="derivid">
+      <xsl:choose>
+        <xsl:when test="count($derivates[count(arr[@name='derivateType']/str[text() = 'content'])&gt;0 and count(str[@name='derivateMaindoc']) &gt; 0])&gt;0">
+          <xsl:value-of select="$derivates[count(arr[@name='derivateType']/str[text() = 'content'])&gt;0 and count(str[@name='derivateMaindoc']) &gt; 0][1]/str[@name='id']"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="''"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="derivate" select="$derivates[str[@name='id']=$derivid]"/>
     <xsl:variable name="maindoc" select="$derivates/str[@name='derivateMaindoc'][1]" />
     <xsl:variable name="derivbase" select="concat($ServletsBaseURL,'MCRFileNodeServlet/',$derivid,'/')" />
     <xsl:variable name="derivifs" select="concat($derivbase,$maindoc,$HttpSession)" />
@@ -577,7 +588,7 @@
                 <div class="btn-group">
                   <a data-toggle="dropdown" class="btn btn-secondary dropdown-toggle" href="#">
                     <i class="fas fa-cog"></i>
-                    Aktionen
+                    <xsl:value-of select="concat(' ',i18n:translate('mir.actions'))" />
                     <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-right">
@@ -641,136 +652,117 @@
 
 <!-- document preview -->
           <div class="hit_download_box">
+            <xsl:variable name="viewerLink">
+              <xsl:choose>
+                <xsl:when test="string-length($derivid) = 0">
+                  <!-- no link to no derivate -->
+                </xsl:when>
+
+                <xsl:when test="not(acl:checkPermissionForReadingDerivate($derivid))">
+                  <!-- no link if we can not read -->
+                </xsl:when>
+
+                <xsl:when test="$derivate/str[@name='iviewFile']">
+                  <xsl:value-of select="concat($WebApplicationBaseURL, 'rsc/viewer/', $derivid,'/', $derivate/str[@name='iviewFile'])"/>
+                </xsl:when>
+                <xsl:when test="translate(str:tokenize($derivate/str[@name='derivateMaindoc'],'.')[position()=last()],'PDF','pdf') = 'pdf'">
+                  <xsl:variable name="filePath" select="concat($derivate/str[@name='id'],'/',mcr:encodeURIPath($derivate/str[@name='derivateMaindoc']),$HttpSession)"/>
+                  <xsl:choose>
+                    <xsl:when test="mcrxsl:isMobileDevice($UserAgent)">
+                      <!-- for mobile users just show the file link -->
+                      <xsl:value-of select="$derivifs"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <!-- only desktop users get the mycore-viewer -->
+                      <xsl:variable name="q">
+                        <xsl:call-template name="detectSearchParam"/>
+                      </xsl:variable>
+                      <xsl:value-of select="concat($WebApplicationBaseURL, 'rsc/viewer/', $filePath, $q)"/>
+                    </xsl:otherwise>
+                  </xsl:choose>
+                </xsl:when>
+              </xsl:choose>
+            </xsl:variable>
+
+            <!-- choose which derivate is responsible for the thumbnail -->
+            <xsl:variable name="displayDerivateID">
+              <xsl:choose>
+                <!-- first priority has the thumbnail derivate -->
+                <xsl:when test="count($derivates[arr[@name='derivateType']/str/text() = 'thumbnail' and count(str[@name='derivateMaindoc']) &gt; 0])&gt;0">
+                  <xsl:value-of select="$derivates[arr[@name='derivateType']/str/text() = 'thumbnail' and count(str[@name='derivateMaindoc']) &gt; 0][1]/str[@name='id']"/>
+                </xsl:when>
+                <!-- second priority has the first other derivate with a maindoc -->
+                <xsl:when test="count($derivates[count(str[@name='derivateMaindoc']) &gt; 0])&gt;0">
+                  <xsl:value-of select="$derivates[count(str[@name='derivateMaindoc']) &gt; 0][1]/str[@name='id']"/>
+                </xsl:when>
+              </xsl:choose>
+            </xsl:variable>
+            <xsl:variable name="displayDerivate" select="$derivates[str[@name='id'] = $displayDerivateID]"/>
+
+            <!-- produces the thumbnail html-->
+            <xsl:variable name="imageElement">
+              <xsl:choose>
+                <!-- when the thumbnail derivate has pdf as maindoc or a iviewFile, then use the iiif api -->
+                <xsl:when
+                        test="$displayDerivate/str[@name='iviewFile'] or translate(str:tokenize($displayDerivate/str[@name='derivateMaindoc'],'.')[position()=last()],'PDF','pdf') = 'pdf'">
+                  <div class="hit_icon">
+                    <xsl:choose>
+                      <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
+                        <xsl:attribute name="data-iiif-jwt">
+                          <xsl:value-of select="concat($WebApplicationBaseURL, 'api/iiif/image/v2/thumbnail/', $identifier,'/full/!300,300/0/default.jpg')"/>
+                        </xsl:attribute>
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <xsl:attribute name="style">
+                          <xsl:variable name="apos">'</xsl:variable>
+                          <xsl:value-of
+                                  select="concat('background-image: url(', $apos, $WebApplicationBaseURL, 'api/iiif/image/v2/thumbnail/', $identifier, '/full/!300,300/0/default.jpg',$apos,')')"/>
+                        </xsl:attribute>
+                      </xsl:otherwise>
+                    </xsl:choose>
+                  </div>
+                </xsl:when>
+                <!-- when there is no content derivate then use disabled icon -->
+                <xsl:when test="string-length($derivid)=0">
+                  <img class="hit_icon" src="{$WebApplicationBaseURL}images/icons/icon_common_disabled.png"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}images/icons/icon_common.png');" />
+                  <!-- if not, then the content type decides a icon -->
+                  <xsl:variable name="contentType" select="document(concat('ifs:/',$derivid))/mcr_directory/children/child[name=$maindoc]/contentType"/>
+                  <xsl:variable name="fileType" select="document('webapp:FileContentTypes.xml')/FileContentTypes/type[mime=$contentType]/@ID"/>
+                  <xsl:choose>
+                    <xsl:when test="$fileType='pdf' or $fileType='msexcel' or $fileType='xlsx' or $fileType='msword97' or $fileType='docx' or $fileType='pptx' or $fileType='msppt' or $fileType='zip'">
+                      <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_{$fileType}.svg"/>
+                    </xsl:when>
+                    <xsl:when test="$fileType='png' or $fileType='jpeg' or $fileType='tiff' or $fileType='gif' or $fileType='bmp'">
+                      <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_image.svg"/>
+                    </xsl:when>
+                    <xsl:when test="$fileType='mp3' or $fileType='wav' or $fileType='m4a' or $fileType='m4b' or $fileType='wma'">
+                      <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_audio.svg"/>
+                    </xsl:when>
+                    <xsl:when test="$fileType='mpeg4' or $fileType='m4v' or $fileType='avi' or $fileType='wmv' or $fileType='asf'">
+                      <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_video.svg"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_default.svg"/>
+                    </xsl:otherwise>
+                  </xsl:choose>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:variable>
+
             <xsl:choose>
-
-              <!-- we got a derivate -->
-              <xsl:when test="string-length($derivid) &gt; 0">
-                <xsl:choose>
-
-                  <!-- show IView thumbnail as preview -->
-                  <xsl:when test="$derivates/str[@name='iviewFile']">
-                    <!-- xsl:call-template name="iViewLinkPrev">
-                      <xsl:with-param name="mcrid" select="$identifier" />
-                      <xsl:with-param name="derivate" select="$derivid" />
-                      <xsl:with-param name="fileName" select="$derivates/str[@name='iviewFile'][1]" />
-                    </xsl:call-template -->
-
-                    <xsl:variable name="viewerLink" select="concat($WebApplicationBaseURL, 'rsc/viewer/', $derivid,'/', $derivates/str[@name='iviewFile'][1])" />
-                    <xsl:choose>
-                      <xsl:when test="acl:checkPermissionForReadingDerivate($derivid)">
-                        <a class="hit_option hit_download" href="{$viewerLink}" title="{$mods-genre-i18n}">
-                          <div class="hit_icon"
-                            style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');"
-                          >
-                          </div>
-                        </a>
-                      </xsl:when>
-                      <xsl:otherwise>
-                        <div class="hit_icon"
-                          style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');"
-                        >
-                        </div>
-                      </xsl:otherwise>
-                    </xsl:choose>
-
-                  </xsl:when>
-
-                  <!-- show PDF thumbnail as preview -->
-                  <xsl:when test="translate(str:tokenize($derivates/str[@name='derivateMaindoc'][1],'.')[position()=last()],'PDF','pdf') = 'pdf'">
-                    <xsl:variable name="filePath"
-                      select="concat($derivates/str[@name='id'][1],'/',mcr:encodeURIPath($derivates/str[@name='derivateMaindoc'][1]),$HttpSession)" />
-                    <xsl:variable name="viewerLink">
-                      <xsl:choose>
-                        <xsl:when test="mcrxsl:isMobileDevice($UserAgent)">
-                          <xsl:value-of select="$derivifs" />
-                        </xsl:when>
-                        <xsl:otherwise>
-                          <xsl:variable name="q">
-                            <xsl:call-template name="detectSearchParam" />
-                          </xsl:variable>
-                          <xsl:value-of select="concat($WebApplicationBaseURL, 'rsc/viewer/', $filePath, $q)" />
-                        </xsl:otherwise>
-                      </xsl:choose>
-                    </xsl:variable>
-                    <xsl:choose>
-                      <xsl:when test="acl:checkPermissionForReadingDerivate($derivid)">
-                        <a class="hit_option hit_download" href="{$viewerLink}" title="{$mods-genre-i18n}">
-                          <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');">
-                          </div>
-                        </a>
-                      </xsl:when>
-                      <xsl:otherwise>
-                        <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');">
-                        </div>
-                      </xsl:otherwise>
-                    </xsl:choose>
-                  </xsl:when>
-
-                  <!-- show default icon with mime-type download icon -->
-                  <xsl:otherwise>
-
-                    <xsl:variable name="contentType" select="document(concat('ifs:/',$derivid))/mcr_directory/children/child[name=$maindoc]/contentType" />
-                    <xsl:variable name="fileType" select="document('webapp:FileContentTypes.xml')/FileContentTypes/type[mime=$contentType]/@ID" />
-
-                    <xsl:choose>
-                      <xsl:when test="acl:checkPermissionForReadingDerivate($derivid)">
-                        <a class="hit_option hit_download" href="{$hitHref}" title="">
-                          <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}images/icons/icon_common.png');" />
-                          <xsl:choose>
-                            <xsl:when
-                              test="$fileType='pdf' or $fileType='msexcel' or $fileType='xlsx' or $fileType='msword97' or $fileType='docx' or $fileType='pptx' or $fileType='msppt' or $fileType='zip'"
-                            >
-                              <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_{$fileType}.svg" />
-                            </xsl:when>
-                            <xsl:when test="$fileType='png' or $fileType='jpeg' or $fileType='tiff' or $fileType='gif' or $fileType='bmp'">
-                              <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_image.svg" />
-                            </xsl:when>
-                            <xsl:when test="$fileType='mp3' or $fileType='wav' or $fileType='m4a' or $fileType='m4b' or $fileType='wma'">
-                              <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_audio.svg" />
-                            </xsl:when>
-                            <xsl:when test="$fileType='mpeg4' or $fileType='m4v' or $fileType='avi' or $fileType='wmv' or $fileType='asf'">
-                              <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_video.svg" />
-                            </xsl:when>
-                            <xsl:otherwise>
-                              <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_default.svg" />
-                            </xsl:otherwise>
-                          </xsl:choose>
-                        </a>
-                      </xsl:when>
-                      <xsl:otherwise>
-                        <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}images/icons/icon_common.png');" />
-                        <xsl:choose>
-                          <xsl:when
-                            test="$fileType='pdf' or $fileType='msexcel' or $fileType='xlsx' or $fileType='msword97' or $fileType='docx' or $fileType='pptx' or $fileType='msppt' or $fileType='zip'"
-                          >
-                            <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_{$fileType}.svg" />
-                          </xsl:when>
-                          <xsl:when test="$fileType='png'">
-                            <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_image.svg" />
-                          </xsl:when>
-                          <xsl:when test="$fileType='mp3'">
-                            <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_audio.svg" />
-                          </xsl:when>
-                          <xsl:when test="$fileType='mpg4'">
-                            <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_video.svg" />
-                          </xsl:when>
-                          <xsl:otherwise>
-                            <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_default.svg" />
-                          </xsl:otherwise>
-                        </xsl:choose>
-                      </xsl:otherwise>
-                    </xsl:choose>
-                  </xsl:otherwise>
-                </xsl:choose>
-
+              <xsl:when test="string-length($viewerLink) &gt;0">
+                <a class="hit_option hit_download" href="{$viewerLink}" title="{$mods-genre-i18n}">
+                  <xsl:copy-of select="$imageElement"/>
+                </a>
               </xsl:when>
-
-              <!-- no derivate -->
               <xsl:otherwise>
-                <!-- show default icon -->
-                <img class="hit_icon" src="{$WebApplicationBaseURL}images/icons/icon_common_disabled.png" />
+                <xsl:copy-of select="$imageElement"/>
               </xsl:otherwise>
             </xsl:choose>
+
           </div>
 
 <!-- hit type -->
@@ -889,17 +881,6 @@
               <xsl:choose>
                 <xsl:when test="./str[@name='search_result_link_text']">
                   <xsl:value-of select="./str[@name='search_result_link_text']" />
-                  <xsl:if test="not(contains(./str[@name='search_result_link_text'], '...')) and ./str[@name='mods.title.subtitle']">
-                    <xsl:variable name="mylength" select="75 - string-length(./str[@name='search_result_link_text'])" />
-                    <xsl:if test="$mylength &gt; 7">
-                      <span class="subtitle">
-                        <xsl:value-of select="concat(' : ', substring(./str[@name='mods.title.subtitle'],1, $mylength))" />
-                        <xsl:if test="string-length(./str[@name='mods.title.subtitle']) &gt; $mylength">
-                          ...
-                        </xsl:if>
-                      </span>
-                    </xsl:if>
-                  </xsl:if>
                 </xsl:when>
                 <xsl:when test="./str[@name='fileName']">
                   <xsl:value-of select="./str[@name='fileName']" />
@@ -1140,6 +1121,7 @@
     </xsl:choose>
   </xsl:template>
 
+<!-- START: OA specific changes -->
   <xsl:template name="i18nCallback">
     <xsl:param name="value"/>
     <xsl:variable name="genre" select="substring-before($value,'.')"/>
@@ -1156,6 +1138,7 @@
     </xsl:variable>
     <xsl:value-of select="$linkText" />
   </xsl:template>
+<!-- END: OA specific changes -->
 
   <xsl:template match="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
     <xsl:param name="facet_name" />
