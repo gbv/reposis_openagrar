@@ -67,16 +67,16 @@
             <label xml:lang="en" text="Other (X1)" />
             <label xml:lang="de" text="Sonstige Berichte (X1)" />
         </category>
-        <category ID="2827aa42-40d3-456b-98bf-79986cd95f3c">
+        <category ID="K">
             <label xml:lang="en" text="Conference Contribution" />
             <label xml:lang="de" text="Konferenzbeiträge (K)" />
-            <category ID="b3145e6e-2e67-400f-8ec6-d6984a59357c">
+            <category ID="K1">
+                <label xml:lang="en" text="Poster/Lecture/Article external (K1)" />
+                <label xml:lang="de" text="Poster/Vortrag/Aufsatz extern (K1)" />
+            </category>
+            <category ID="K2">
                 <label xml:lang="en" text="Poster/Lecture/Article internal (K2)" />
                 <label xml:lang="de" text="Poster/Vortrag/Aufsatz intern (K2)" />
-            </category>
-            <category ID="c24023bb-e788-4edc-b59e-a6396fc4ddf6">
-                <label xml:lang="en" text="Poster/Lecture/Article external (K2)" />
-                <label xml:lang="de" text="Poster/Vortrag/Aufsatz extern (K1)" />
             </category>
         </category>
         <category ID="ID">
