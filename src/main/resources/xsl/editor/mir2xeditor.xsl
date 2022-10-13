@@ -673,7 +673,7 @@
   <xsl:template match="mir:JCREdit">
     <xsl:choose>
       <xsl:when test="acl:checkPermission('crypt:cipher:jcr','decrypt')">
-        <xed:repeat xpath="mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value">
+        <xed:repeat xpath="mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value">
           <div class="row">
             <label class="col-md-2 offset-md-3">
               <xed:bind xpath="@year">

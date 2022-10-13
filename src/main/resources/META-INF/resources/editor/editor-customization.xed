@@ -393,7 +393,7 @@
         <xed:output i18n="component.mods.metaData.dictionary.refereed" />
       </label>
       <div class="col-md-6">
-        <xed:bind xpath="mods:extension[@displayLabel='characteristics']/chars/@refereed">
+        <xed:bind xpath="mods:extension[@type='characteristics']/chars/@refereed">
           <select class="form-control" style="font-weight:bold;">
             <option value="">
               <xed:output i18n="mir.select.optional" />
@@ -437,7 +437,7 @@
               <xed:output value="'SNIP'" />
             </label>
           </div>
-          <xed:repeat xpath="mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='SNIP']/value">
+          <xed:repeat xpath="mods:extension[@type='metrics']/journalMetrics/metric[@type='SNIP']/value">
             <div class="row">
               <label class="col-md-2 offset-md-3">
                 <xed:bind xpath="@year">
@@ -460,7 +460,7 @@
               <xed:output value="'SJR'" />
             </label>
           </div>
-          <xed:repeat xpath="mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='SJR']/value">
+          <xed:repeat xpath="mods:extension[@type='metrics']/journalMetrics/metric[@type='SJR']/value">
             <div class="row">
               <label class="col-md-2 offset-md-3">
                 <xed:bind xpath="@year">
@@ -621,7 +621,7 @@
   </xed:template>
   
   <xed:template id="oa.cleanup-rules">
-    <xed:cleanup-rule xpath="//mods:extension[@displayLabel='metrics']" relevant-if="(string-length(journalMetrics/metric/value/text()) &gt; 0) " />
+    <xed:cleanup-rule xpath="//mods:extension[@type='metrics']" relevant-if="(string-length(journalMetrics/metric/value/text()) &gt; 0) " />
   </xed:template>
   
 </xed:template>

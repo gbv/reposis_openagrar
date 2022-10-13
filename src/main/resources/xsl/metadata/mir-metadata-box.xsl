@@ -308,7 +308,7 @@
         </xsl:call-template>
             <!-- START: OA specific changes -->
             <!-- xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:name[@type='corporate'][@ID or @authorityURI=$institutesURI]" />
-            <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@displayLabel='characteristics']" / -->
+            <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@type='characteristics']" / -->
             <!-- END: OA specific changes -->
         <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:note">
           <xsl:variable name="myURI" select="concat('classification:metadata:0:children:noteTypes:',mcrxsl:regexp(@type,' ', '_'))" />
@@ -328,9 +328,9 @@
 
             <!-- START: OA specific changes -->
             <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
-              <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@displayLabel='characteristics']" />
-              <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem/mods:extension[@displayLabel='metrics']" />
-              <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@displayLabel='metrics']" />
+              <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@type='characteristics']" />
+              <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem/mods:extension[@type='metrics']" />
+              <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@type='metrics']" />
               <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']" />
             </xsl:if>
             
@@ -442,7 +442,7 @@
     </xsl:for-each>
   </xsl:template>
 
-  <xsl:template match="mods:extension[@displayLabel='characteristics']" mode="oa">
+  <xsl:template match="mods:extension[@type='characteristics']" mode="oa">
     <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
       <xsl:if test="chars/@refereed">
         <tr>
@@ -457,7 +457,7 @@
     </xsl:if>
   </xsl:template>
 
-  <xsl:template match="mods:extension[@displayLabel='metrics']" mode="oa">
+  <xsl:template match="mods:extension[@type='metrics']" mode="oa">
 
     <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
       <xsl:for-each select="articleMetrics/metric">
@@ -524,7 +524,7 @@
     </xsl:if>
   </xsl:template>
 
-  <xsl:template match="mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']" mode="oa">
+  <xsl:template match="mods:relatedItem[@type='host' or @type='series']/mods:extension[@type='metrics']" mode="oa">
     <xsl:variable name="dateIssued_statistics">
       <xsl:call-template name="getDateStatistic">
         <xsl:with-param name="mods" select="//mods:mods"/>

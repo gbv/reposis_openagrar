@@ -34,7 +34,7 @@
   <xsl:template match="mods:relatedItem/mods:name[@ID]">
   </xsl:template>
   
-  <xsl:template match="mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value">
+  <xsl:template match="mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value">
     <xsl:variable name="value" select="."/>
     <xsl:copy>
       <xsl:copy-of select="@*" />

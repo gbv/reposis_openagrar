@@ -309,14 +309,14 @@ zu klären:
 
     <xsl:text>&quot;</xsl:text>
       <xsl:variable name="yearIssued" select="substring($dateIssued_statistics,1,4)"/>
-      <xsl:for-each select="mods:relatedItem[@type='series' or @type='host']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year = $yearIssued]">
+      <xsl:for-each select="mods:relatedItem[@type='series' or @type='host']/mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value[@year = $yearIssued]">
         <xsl:value-of select="."/>
       </xsl:for-each>
     <xsl:text>&quot;;</xsl:text>
     
     <xsl:text>&quot;</xsl:text>
       <xsl:variable name="yearIssued1Yb" select="$yearIssued - 1"/>
-      <xsl:for-each select="mods:relatedItem[@type='series' or @type='host']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year = $yearIssued1Yb]">
+      <xsl:for-each select="mods:relatedItem[@type='series' or @type='host']/mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value[@year = $yearIssued1Yb]">
         <xsl:value-of select="."/>
       </xsl:for-each>
     <xsl:text>&quot;;</xsl:text>

@@ -23,10 +23,10 @@
   <parent>
     <groupId>de.gbv.reposis</groupId>
     <artifactId>reposis_mir_parent</artifactId>
-    <version>2021.06-SNAPSHOT</version>
+    <version>2022.06-SNAPSHOT</version>
   </parent>
   <artifactId>reposis_openagrar</artifactId>
-  <version>2021.06-SNAPSHOT</version>
+  <version>2022.06-SNAPSHOT</version>
   <name>Open Agrar</name>
   <properties>
     <MCR.AppName>openagrar</MCR.AppName>
@@ -89,20 +89,8 @@
       <artifactId>jakarta.servlet-api</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-api</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.jdom</groupId>
-      <artifactId>jdom2</artifactId>
-    </dependency>
-    <dependency>
       <groupId>org.mycore</groupId>
       <artifactId>mycore-base</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.mycore</groupId>
-      <artifactId>mycore-mods</artifactId>
     </dependency>
     <dependency>
       <groupId>org.mycore</groupId>

@@ -7,7 +7,7 @@
   <xsl:include href="coreFunctions.xsl"/>
   
   
-  <xsl:template match="mods:mods/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value">
+  <xsl:template match="mods:mods/mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value">
     <value>
       <xsl:copy-of select="@*" />
       <xsl:variable name="value" select="."/>

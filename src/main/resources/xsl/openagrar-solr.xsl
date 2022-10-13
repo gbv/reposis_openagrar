@@ -227,11 +227,11 @@
     <xsl:variable name="yearIssued2Yb" select="$yearIssued - 2"/>
     <xsl:variable name="encryptedJCR">
       <xsl:choose>
-        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]">
-          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]"/>
+        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]">
+          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]"/>
         </xsl:when>
-        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:relatedItem/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]">
-          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]"/>
+        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:relatedItem/mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]">
+          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued]"/>
         </xsl:when>
       </xsl:choose>
     </xsl:variable>
@@ -244,11 +244,11 @@
     </xsl:if>
     <xsl:variable name="encryptedJCR1Yb">
       <xsl:choose>
-        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued1Yb]">
-          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued1Yb]"/>
+        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued1Yb]">
+          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued1Yb]"/>
         </xsl:when>
-        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:relatedItem/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued1Yb]">
-          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued1Yb]"/>
+        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:relatedItem/mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued1Yb]">
+          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued1Yb]"/>
         </xsl:when>
       </xsl:choose>
     </xsl:variable>
@@ -261,11 +261,11 @@
     </xsl:if>
     <xsl:variable name="encryptedJCR2Yb">
       <xsl:choose>
-        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued2Yb]">
-          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued2Yb]"/>
+        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued2Yb]">
+          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued2Yb]"/>
         </xsl:when>
-        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:relatedItem/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued2Yb]">
-          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued2Yb]"/>
+        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:relatedItem/mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued2Yb]">
+          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value[@year=$yearIssued2Yb]"/>
         </xsl:when>
       </xsl:choose>
     </xsl:variable>

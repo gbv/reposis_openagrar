@@ -119,19 +119,19 @@
     <xsl:variable name="year3Yb" select="$year - 3"/>
     <xsl:variable name="year4Yb" select="$year - 4"/>
     <xsl:text>&quot;</xsl:text>
-    <xsl:value-of select="mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year = $year]"/>
+    <xsl:value-of select="mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value[@year = $year]"/>
     <xsl:text>&quot;;</xsl:text>
     <xsl:text>&quot;</xsl:text>
-    <xsl:value-of select="mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year = $year1Yb]"/>
+    <xsl:value-of select="mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value[@year = $year1Yb]"/>
     <xsl:text>&quot;;</xsl:text>
     <xsl:text>&quot;</xsl:text>
-    <xsl:value-of select="mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year = $year2Yb]"/>
+    <xsl:value-of select="mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value[@year = $year2Yb]"/>
     <xsl:text>&quot;;</xsl:text>
     <xsl:text>&quot;</xsl:text>
-    <xsl:value-of select="mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year = $year3Yb]"/>
+    <xsl:value-of select="mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value[@year = $year3Yb]"/>
     <xsl:text>&quot;;</xsl:text>
     <xsl:text>&quot;</xsl:text>
-    <xsl:value-of select="mods:extension[@displayLabel='metrics']/journalMetrics/metric[@type='JCR']/value[@year = $year4Yb]"/>
+    <xsl:value-of select="mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value[@year = $year4Yb]"/>
     <xsl:text>&quot;</xsl:text>
     
   </xsl:template>
