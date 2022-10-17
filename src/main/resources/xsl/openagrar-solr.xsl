@@ -199,16 +199,16 @@
     <xsl:for-each select="mods:identifier[@type='isbn']">
       <field name="mods.identifier.isbn"><xsl:value-of select="."/></field> 
     </xsl:for-each>
-    <xsl:for-each select="mods:reltedItem[@type='host']/mods:identifier[@type='isbn']">
+    <xsl:for-each select="mods:relatedItem[@type='host']/mods:identifier[@type='isbn']">
       <field name="mods.identifier.isbn"><xsl:value-of select="."/></field> 
     </xsl:for-each>
     <xsl:for-each select="mods:identifier[@type='issn']">
       <field name="mods.identifier.issn"><xsl:value-of select="."/></field> 
     </xsl:for-each>
-    <xsl:for-each select="mods:reltedItem[@type='host' or @type='series']/mods:identifier[@type='issn']">
+    <xsl:for-each select="mods:relatedItem[@type='host' or @type='series']/mods:identifier[@type='issn']">
       <field name="mods.identifier.issn"><xsl:value-of select="."/></field> 
     </xsl:for-each>
-    <xsl:for-each select="mods:reltedItem[@type='host']/mods:reltedItem[@type='host' or @type='series']/mods:identifier[@type='issn']">
+    <xsl:for-each select="mods:relatedItem[@type='host']/mods:relatedItem[@type='host' or @type='series']/mods:identifier[@type='issn']">
       <field name="mods.identifier.issn"><xsl:value-of select="."/></field> 
     </xsl:for-each>
     
@@ -220,7 +220,19 @@
     
     <field name="mods.dateIssued.statistic"> <xsl:value-of select="$dateIssued_statistics" /> </field>
     <field name="mods.yearIssued.statistic"> <xsl:value-of select="substring($dateIssued_statistics,1,4)" /> </field>
-        
+
+
+    <field name="mods.dateIssuedPrint">
+      <xsl:call-template name="date2number">
+        <xsl:with-param name="date" select="mods:originInfo[@eventType='publication_print']/mods:dateIssued[@encoding='w3cdtf']"/>
+      </xsl:call-template>
+    </field>
+    <field name="mods.dateIssuedOnline">
+      <xsl:call-template name="date2number">
+        <xsl:with-param name="date" select="mods:originInfo[@eventType='publication_online']/mods:dateIssued[@encoding='w3cdtf']"/>
+      </xsl:call-template>
+    </field>
+
     <!-- JCR -->
     <xsl:variable name="yearIssued" select="substring($dateIssued_statistics,1,4)"/>
     <xsl:variable name="yearIssued1Yb" select="$yearIssued - 1"/>
