@@ -193,6 +193,20 @@
   },
   {
     "add-field": {
+        "name":"mods.dateIssuedPrint",
+        "type":"mods.date_range",
+        "multiValued":false
+    }
+  },
+  {
+    "add-field": {
+        "name":"mods.dateIssuedOnline",
+        "type":"mods.date_range",
+        "multiValued":false
+    }
+  },
+  {
+    "add-field": {
         "name":"mods.part.issue",
         "type":"string",
         "indexed": true,
