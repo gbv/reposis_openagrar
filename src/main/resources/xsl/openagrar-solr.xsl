@@ -223,14 +223,10 @@
 
 
     <field name="mods.dateIssuedPrint">
-      <xsl:call-template name="date2number">
-        <xsl:with-param name="date" select="mods:originInfo[@eventType='publication_print']/mods:dateIssued[@encoding='w3cdtf']"/>
-      </xsl:call-template>
+      <xsl:value-of select="mods:originInfo[@eventType='publication_print']/mods:dateIssued[@encoding='w3cdtf']"/>
     </field>
     <field name="mods.dateIssuedOnline">
-      <xsl:call-template name="date2number">
-        <xsl:with-param name="date" select="mods:originInfo[@eventType='publication_online']/mods:dateIssued[@encoding='w3cdtf']"/>
-      </xsl:call-template>
+      <xsl:value-of select="mods:originInfo[@eventType='publication_online']/mods:dateIssued[@encoding='w3cdtf']"/>
     </field>
 
     <!-- JCR -->
