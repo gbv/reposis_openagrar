@@ -370,7 +370,6 @@
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="nameType" />
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="namePart.repeated" />
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="person.affiliation" />
-          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="nameIdentifier.repeated" />
         </div>
       </fieldset>
     </xed:repeat>
@@ -445,8 +444,7 @@
         <div class="mir-fieldset-content personExtended-container d-none">
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="nameType" />
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="namePart.repeated" />
-          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="person.affiliation" /> 
-          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="nameIdentifier.repeated" />
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="person.affiliation" />
         </div>
       </fieldset>
     </xed:repeat>
@@ -630,7 +628,8 @@
         <div class="col-md-6">
           <div class="input-group">
             <input class="form-control relItemsearch" data-searchengine="{@searchengine}" data-genre="{@genre}"
-                   data-valuexpath="//mods:mods/{@xpath}" data-provide="typeahead" type="text" autocomplete="off"/>
+                   data-valuexpath="//mods:mods/{@xpath}" data-provide="typeahead" type="text" autocomplete="off"
+                   placeholder="{@placeholder}" />
             <span class="input-group-addon searchbadge"> </span>
           </div>
         </div>
@@ -669,7 +668,22 @@
       </div>
     </xed:bind>
   </xsl:template>
-  
+
+  <xsl:template match="mir:editorConfig">
+    <xsl:variable name="editorProperties" select="document('property:MIR.WebConfig.Editor.*')"/>
+    <xsl:if test="$editorProperties">
+      <xsl:element name="script">
+        <xsl:for-each select="$editorProperties/properties/entry">
+          <xsl:text>window["</xsl:text>
+          <xsl:value-of select="@key"/>
+          <xsl:text>"] = </xsl:text>
+          <xsl:value-of select="."/>
+          <xsl:text>;</xsl:text>
+        </xsl:for-each>
+      </xsl:element>
+    </xsl:if>
+  </xsl:template>
+
   <xsl:template match="mir:JCREdit">
     <xsl:choose>
       <xsl:when test="acl:checkPermission('crypt:cipher:jcr','decrypt')">
