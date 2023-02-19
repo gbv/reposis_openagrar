@@ -133,6 +133,7 @@
   <section xml:lang="de">
     
     <div class="row">
+      <div class="col-12">
       <h1>Statistik - JKI Jahresstatistik </h1>
       
       <p id="text_jcr"> Text IP</p>
@@ -667,6 +668,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refRest + ' AND ' + q_instG )" data-printAsLink="true"/> </td>
         </tr>
       </table>
+      </div>
     </div>
   </section>
   
