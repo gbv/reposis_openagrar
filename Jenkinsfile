@@ -17,7 +17,7 @@ pipeline {
                }
             }
             steps {
-                withMaven (maven: 'mvn', jdk: 'OJDK11') {
+                withMaven (maven: 'mvn', jdk: 'OJDK17') {
                     sh 'mvn -U clean verify'
                 }
             }
@@ -32,7 +32,7 @@ pipeline {
                }
             }
             steps {
-                    withMaven (maven: 'mvn', jdk: 'OJDK11', mavenSettingsConfig: 'maven-deploy-settings') {
+                    withMaven (maven: 'mvn', jdk: 'OJDK17', mavenSettingsConfig: 'maven-deploy-settings') {
                         withCredentials([
                         usernamePassword(credentialsId: 'ossrhs01', passwordVariable: 'PASSWORD_VAR', usernameVariable: 'USERNAME_VAR'),
                         usernamePassword(credentialsId: 'gpg', passwordVariable: 'KEYPW_VAR', usernameVariable: 'KEYID_VAR')
