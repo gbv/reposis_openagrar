@@ -621,7 +621,8 @@
   </xed:template>
   
   <xed:template id="oa.cleanup-rules">
-    <xed:cleanup-rule xpath="//mods:extension[@type='metrics']" relevant-if="(string-length(journalMetrics/metric/value/text()) &gt; 0) " />
+    <xed:cleanup-rule xpath="//mods:extension[@type='metrics']" relevant-if="(string-length(journalMetrics/metric/value/text()) &gt; 0)" />
+    <xed:cleanup-rule xpath="//mods:extension[@type='characteristics']" relevant-if="(string-length(chars/@refereed) &gt; 0)" />
   </xed:template>
   
 </xed:template>
