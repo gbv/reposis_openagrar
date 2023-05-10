@@ -137,28 +137,9 @@
         </xsl:if>
         <!-- START: OA specific changes -->
         <xsl:variable name="refereed">
-          <xsl:choose>
-            <xsl:when test="$mods/mods:extension/chars/@refereed">
-              <xsl:value-of select="$mods/mods:extension/chars/@refereed"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:choose>
-                <xsl:when test="$mods/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed">
-                  <xsl:value-of select="$mods/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed"/>
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:choose>
-                    <xsl:when test="$mods/mods:relatedItem[@type='host']/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed">
-                      <xsl:value-of select="$mods/mods:relatedItem[@type='host']/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                      <xsl:value-of select="'no'"/>
-                    </xsl:otherwise>
-                  </xsl:choose>
-                </xsl:otherwise>
-              </xsl:choose>
-            </xsl:otherwise>
-          </xsl:choose>
+          <xsl:call-template name="getCharacteristicsRefereed">
+            <xsl:with-param name="mods" select="."/>
+          </xsl:call-template>
         </xsl:variable>
         <xsl:if test="$refereed='yes'">
           <div class="oa_refereed">
