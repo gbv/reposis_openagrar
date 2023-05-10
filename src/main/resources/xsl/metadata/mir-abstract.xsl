@@ -138,7 +138,7 @@
         <!-- START: OA specific changes -->
         <xsl:variable name="refereed">
           <xsl:call-template name="getCharacteristicsRefereed">
-            <xsl:with-param name="mods" select="."/>
+            <xsl:with-param name="mods" select="$mods"/>
           </xsl:call-template>
         </xsl:variable>
         <xsl:if test="$refereed='yes'">
