@@ -12,6 +12,9 @@
 
   <xsl:import  href="xslImport:modsmeta:metadata/mir-abstract.xsl" />
   <xsl:include href="resource:xsl/mir-utils.xsl" />
+  <!-- oa specific includes-->
+  <xsl:include href="../characteristics.refereed.xsl"/>
+  <!--oa specific includes end -->
 
   <xsl:variable name="objectID" select="/mycoreobject/@ID" />
   <xsl:variable name="modsPart" select="concat('mods.part.', $objectID)" />
