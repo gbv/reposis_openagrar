@@ -476,6 +476,23 @@
         </td>
         <td class="metavalue">
           <xsl:value-of select="i18n:translate(concat('component.mods.metaData.dictionary.refereed.', $refereed))" />
+          <div class="d-none" id="N102AC-content">
+            <dl>
+              <dt><xsl:value-of select="$lvl1_refereed"/></dt>
+              <dd><xsl:value-of select="$lvl1_genre"/></dd>
+              <dt><xsl:value-of select="$lvl2_refereed"/></dt>
+              <dd><xsl:value-of select="$lvl2_genre"/></dd>
+              <dt><xsl:value-of select="$lvl3_refereed"/></dt>
+              <dd><xsl:value-of select="$lvl3_genre"/></dd>
+              <dt><xsl:value-of select="$lvl4_refereed"/></dt>
+              <dd><xsl:value-of select="$lvl4_genre"/></dd>
+            </dl>
+          </div>
+          <a title="" class="personPopover" 
+              id="N102CB" 
+              data-original-title="referiert <div class=&quot;popoverclose btn btn-xs&quot;><i class=&quot;fa fa-times&quot;></i></div>">
+              <span class="fa fa-info-circle"> </span>
+          </a>
           (
           <xsl:value-of select="$lvl1_refereed"/><xsl:value-of select="$lvl1_genre"/>
           , <xsl:value-of select="$lvl2_refereed"/><xsl:value-of select="$lvl2_genre"/>
