@@ -14,10 +14,16 @@ h4.mir-toc-section-title {
   color: #444;
 }
 
-.mir-toc-section-object-link, .mir-toc-section-page, .mir-toc-section-author {
+.mir-toc-section-object-link,
+.mir-toc-section-page,
+.mir-toc-section-author {
   line-height: 1.1;
   color: #999;
   font-size: smaller;
+}
+
+.mir-toc-section-label {
+  display: inline;
 }
 
 // Large devices (desktops) and below: <= 1200px
