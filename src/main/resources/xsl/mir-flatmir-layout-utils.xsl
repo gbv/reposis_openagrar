@@ -14,7 +14,7 @@
 
     <div id="header_box" class="clearfix container">
       <div id="project_logo_box">
-        <a href="https://www.bfr.bund.de/"><img id="logo_bfr" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_bfr.svg" alt="" /></a>
+        <a href="https://www.bfr.bund.de/"><img id="logo_bfr" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_bfr_23.svg" alt="" /></a>
         <a href="https://www.thuenen.de/"><img id="logo_thuenen" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_thuenen.svg" alt="" /></a>
         <a href="https://www.mri.bund.de/"><img id="logo_mri" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_mri.svg" alt="" /></a>
         <a href="https://www.fli.de/"><img id="logo_fli" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_fli.svg" alt="" /></a>
