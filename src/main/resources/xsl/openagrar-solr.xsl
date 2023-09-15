@@ -22,13 +22,6 @@
         <xsl:value-of select="mods:title" />
       </field>
     </xsl:for-each>
-    <xsl:for-each select="mods:subject">
-      <xsl:for-each select="mods:topic">
-        <field name="mods.subject">
-          <xsl:value-of select="." />
-        </field>
-      </xsl:for-each>
-    </xsl:for-each>
     <xsl:for-each select="mods:location/mods:physicalLocation">
       <field name="mods.physicalLocation">
         <xsl:value-of select="." />

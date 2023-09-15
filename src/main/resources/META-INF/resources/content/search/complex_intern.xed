@@ -47,9 +47,6 @@
                             <option value="mods.subject">
                               <xed:output i18n="editor.search.oa.subject" />
                             </option>
-                            <option value="topic">
-                              <xed:output i18n="mir.subject.topic" />
-                            </option>
                             <option value="mods.annual_review">
                               <xed:output i18n="editor.search.oa.annualReviewYear" />
                             </option>
