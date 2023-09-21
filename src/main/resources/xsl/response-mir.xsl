@@ -301,16 +301,17 @@
         </div>
 
         <!-- OA specific facet dateIssued -->
-        <xsl:variable name="timebarField" select="'mods.dateIssuedPrint'"/>
-        <div class="card">
+        <xsl:variable name="timebarField" select="'mods.dateIssuedOnline'"/>
+        <div class="card oa-dateIssuedOnlineFacet">
             <div class="card-header" data-toggle="collapse-next">
                 <h3 class="card-title">
-                    <xsl:value-of select="i18n:translate('mir.search_facet.date.dateIssuedPrint')"/>
+                    <xsl:value-of select="i18n:translate('mir.search_facet.date.dateIssuedOnline')"/>
                 </h3>
             </div>
             <div class="card-body collapse show">
                 <script src="{$WebApplicationBaseURL}js/timebar.js" type="text/javascript"></script>
-                <div data-timebar="true"
+                <div class="oa-dateIssuedOnlineTimebar"
+                     data-timebar="true"
                      data-timebar-height="100"
                      data-search-field="{$timebarField}"
                      data-timebar-start="0001-01-01T00:00:00Z"

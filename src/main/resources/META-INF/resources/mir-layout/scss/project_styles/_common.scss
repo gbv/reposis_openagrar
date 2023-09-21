@@ -26,6 +26,13 @@ h4.mir-toc-section-title {
   display: inline;
 }
 
+div.oa-dateIssuedOnlineTimebar > div:nth-child(1) {
+  border-bottom: solid 1px #b0c6d7;
+}
+div.oa-dateIssuedOnlineFacet div.tb-tooltip {
+  color: #f9f9f9 !important;
+}
+
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(lg) {
   // add/overwrite styles for responsive level lg and lower
