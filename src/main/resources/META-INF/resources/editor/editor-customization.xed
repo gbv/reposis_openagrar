@@ -4,6 +4,9 @@
 
   <!-- ========== extend editor-genres.xed ========== -->
   <xed:modify ref="admin.fields">
+    <!-- TODO: remove in LTS2023 - is per default than  -->
+    <xed:include ref="name.extended.full.repeated" after="name.extended.repeated" />
+    <xed:remove  ref="name.extended.repeated"/>
     <xed:remove  ref="embargo"/>
     <xed:include ref="embargo"     before="title.complex.repeated"/>
     <xed:remove  ref="access"/>
