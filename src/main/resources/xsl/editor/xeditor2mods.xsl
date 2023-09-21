@@ -146,7 +146,13 @@
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <mods:nameIdentifier type="{$type}" typeURI="{$uri}">
+    <mods:nameIdentifier type="{$type}">
+      <xsl:if test="string-length($uri) &gt; 0">
+        <xsl:attribute name="typeURI">
+          <xsl:value-of select="$uri" />
+        </xsl:attribute>
+      </xsl:if>
+
       <xsl:value-of select="." />
     </mods:nameIdentifier>
   </xsl:template>
@@ -214,10 +220,10 @@
       </xsl:if>
       <xsl:choose>
         <xsl:when test="@simpleEditor">
-          <xsl:copy-of select="node()[name()!='mods:namePart']" />
+          <xsl:apply-templates select="node()[name()!='mods:namePart']" />
         </xsl:when>
         <xsl:otherwise>
-          <xsl:copy-of select="node()" />
+          <xsl:apply-templates />
         </xsl:otherwise>
       </xsl:choose>
       <xsl:if test="(not(mods:namePart[@type='family']) or @simpleEditor)  and mods:displayForm and @type='personal'">
