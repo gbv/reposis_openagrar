@@ -300,6 +300,29 @@
           </div>
         </div>
 
+        <!-- OA specific facet dateIssued -->
+        <xsl:variable name="timebarField" select="'mods.dateIssuedPrint'"/>
+        <div class="card">
+            <div class="card-header" data-toggle="collapse-next">
+                <h3 class="card-title">
+                    <xsl:value-of select="i18n:translate('mir.search_facet.date.dateIssuedPrint')"/>
+                </h3>
+            </div>
+            <div class="card-body collapse show">
+                <script src="{$WebApplicationBaseURL}js/timebar.js" type="text/javascript"></script>
+                <div data-timebar="true"
+                     data-timebar-height="100"
+                     data-search-field="{$timebarField}"
+                     data-timebar-start="0001-01-01T00:00:00Z"
+                     data-timebar-end="NOW"
+                     data-timebar-gap="+1YEAR"
+                     data-timebar-mincount="1"
+                >
+                </div>
+            </div>
+        </div>
+
+
         <!-- OA specific facet mods.refereed -->
         <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='mods.refereed']/int or
                       /response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='mods.refereed.public']/int">
