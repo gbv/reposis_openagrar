@@ -573,28 +573,7 @@
     <mir:relItemsearch searchengine="issn" genre="issue" responsefield="identifier.type.issn" xpath="mods:identifier[@type='issn']" label="mir.identifier.issn"
       help-text="{i18n:mir.help.identifier.issn}" />
   </xed:template>
-  
-  <!-- Unused Template for main author, ....-->
-  <xed:template id="person.authorRole.openagrar">
-    <xed:bind xpath="mods:role/mods:roleTerm[@authorityURI='https://www.openagrar.de/classifications/author_role']">
-       <xed:bind xpath="@valueURIxEditor" /> 
-       <div class="form-group {$xed-validation-marker}">
-        <label class="col-md-3 col-form-label">
-          <xed:output i18n="oa.authorRole" />
-        </label>
-        <div class="col-md-6">
-          <select class="form-control form-control-inline">
-            <option value="">
-              <xed:output i18n="mir.select.optional" />
-            </option>
-            <xed:include uri="xslStyle:items2options:classification:editor:-1:children:author_role" />
-          </select>
-        </div>
-        <mir:help-pmud help-text="{i18n:oa.authorRole.help}" />
-      </div> 
-    </xed:bind>
-  </xed:template>
-  
+
   <!-- Unused Template for affiliation 2 institute-->
   <xed:template id="person.affiliation.openagrar">
     <xed:bind xpath="mods:affiliation">
