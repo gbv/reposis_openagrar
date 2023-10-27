@@ -6,30 +6,6 @@
 // set the defaults for all responsive levels here
 // no (xl) media query necessary (desktop first)
 
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/EsvMC5un3kjyUhB9ZEPPwg.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/1YwB1sO8YE1Lyjf12WNiUA.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/H2DMvhDLycM56KNuAtbJYA.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-
 /* ****************** global settings ******************* */
 html {
   position: relative;
@@ -204,9 +180,6 @@ html body header #searchInput {
 .navbar-default .navbar-nav > li {
   background-color: #00487D;
 }
-.mir-main-nav nav .navbar-nav .dropdown-menu > .active > a {
-  background-color: #85bc7c;
-}
 .mir-main-nav {
     box-shadow: unset;
 }
@@ -235,11 +208,6 @@ html body header #searchInput {
 }
 .mir-main-nav .dropdown-item {
   color: white;
-}
-.mir-main-nav nav .navbar-nav .dropdown-menu > li > a:hover,
-.mir-main-nav nav .navbar-nav .dropdown-menu > li > a:focus {
-  color: white;
-  background-color: #179dff;
 }
 .mir-main-nav .nav > li > a {
   padding: 10px 0px 8px 17px;
@@ -275,13 +243,6 @@ html body header #searchInput {
 .mir-main-nav nav .navbar-nav .dropdown-menu::before {
     border-color: transparent transparent #00487D transparent;
 }
-.mir-main-nav nav .navbar-nav .dropdown-menu {
-  background-color: #00487D;
-  border: 0px !important;
-  box-shadow: 0 0 0 !important;
-  padding: 0px;
-}
-
 .mir-main-nav nav .navbar-nav .dropdown-menu > li > a {
   border-top: 1px solid #F9F9F9;
   padding-top: 9px;
