@@ -2,6 +2,7 @@
 <mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="annual_review">
   <label xml:lang="de" text="Jahresberichtskategorien" />
   <label xml:lang="en" text="Annual Report Categories" />
+  <label xml:lang="x-uri" text="https://www.openagrar.de/classifications/annual_review" />
   <categories>
     <category ID="Z">
       <label xml:lang="de" text="Zeitschriftenbeiträge (Z)" />
@@ -69,7 +70,7 @@
     </category>
     <category ID="K">
       <label xml:lang="de" text="Konferenzbeiträge (K)" />
-      <label xml:lang="en" text="Conference Contribution" />
+      <label xml:lang="en" text="Conference Contribution (K)" />
       <category ID="K1">
         <label xml:lang="de" text="Poster/Vortrag/Aufsatz extern (K1)" />
         <label xml:lang="en" text="Poster/Lecture/Article external (K1)" />
@@ -80,20 +81,24 @@
       </category>
     </category>
     <category ID="ID">
-      <label xml:lang="de" text="Im Druck" />
-      <label xml:lang="en" text="On print" />
+      <label xml:lang="de" text="Im Druck (ID)" />
+      <label xml:lang="en" text="On print (ID)" />
+    </category>
+    <category ID="FD">
+      <label xml:lang="de" text="Forschungsdaten (FD)" />
+      <label xml:lang="en" text="Research Data (FD)" />
     </category>
     <category ID="TR">
       <label xml:lang="de" text="Project brief (TR)" />
       <label xml:lang="en" text="Project brief (TR)" />
     </category>
     <category ID="NZ">
-      <label xml:lang="de" text="Nicht zugeordnet" />
-      <label xml:lang="en" text="Not assigned" />
+      <label xml:lang="de" text="Nicht zugeordnet (NZ)" />
+      <label xml:lang="en" text="Not assigned (NZ)" />
     </category>
     <category ID="NJ">
-      <label xml:lang="de" text="Nicht im Jahresbericht" />
-      <label xml:lang="en" text="Not within annual report" />
+      <label xml:lang="de" text="Nicht im Jahresbericht (NJ)" />
+      <label xml:lang="en" text="Not within annual report (NJ)" />
     </category>
   </categories>
 </mycoreclass>
