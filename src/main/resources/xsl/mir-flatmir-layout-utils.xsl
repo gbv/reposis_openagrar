@@ -24,22 +24,6 @@
 	<a href="{$WebApplicationBaseURL}"><img id="logo_oa" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_oa.svg" alt="" /></a>
       </div>
       <div id="options_nav_box" class="mir-prop-nav">
-
-        <div class="searchfield_box" title="{i18n:translate('mir.navsearch.title')}">
-          <form action="{$WebApplicationBaseURL}servlets/solr/find" class="navbar-form form-inline" role="search">
-            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
-              <input name="condQuery" placeholder="{i18n:translate('mir.navsearch.placeholder')}" class="form-control search-query" id="searchInput" type="text" />
-              <xsl:choose>
-                <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
-                  <input name="owner" type="hidden" value="createdby:*" />
-                </xsl:when>
-                <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
-                  <input name="owner" type="hidden" value="createdby:{$CurrentUser}" />
-                </xsl:when>
-              </xsl:choose>
-          </form>
-        </div>
-
         <nav>
           <ul class="navbar-nav ml-auto flex-row">
             <xsl:call-template name="mir.loginMenu" />
@@ -49,39 +33,58 @@
       </div>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="navbar navbar-expand mir-main-nav">
+    <div class="oa-main-menu">
+      <div class="container">
+        <div class="oa-main-menu__row">
+          <div class="oa-main-menu__search">
 
-    <div class="container">
+            <div class="searchfield_box" title="{i18n:translate('mir.navsearch.title')}">
+              <form action="{$WebApplicationBaseURL}servlets/solr/find" class="navbar-form form-inline" role="search">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                  <input name="condQuery" placeholder="{i18n:translate('mir.navsearch.placeholder')}" class="form-control search-query" id="searchInput" type="text" />
+                  <xsl:choose>
+                    <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
+                      <input name="owner" type="hidden" value="createdby:*" />
+                    </xsl:when>
+                    <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
+                      <input name="owner" type="hidden" value="createdby:{$CurrentUser}" />
+                    </xsl:when>
+                  </xsl:choose>
+              </form>
+            </div>
 
+          </div>
+          <div class="oa-main-menu__menu">
 
-        <div class="navbar-header">
-          <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-toggle="collapse"
-                  data-target="#mir-main-nav-collapse-box"
-                  aria-controls="mir-main-nav-collapse-box"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+            <div class="navbar navbar-expand">
+              <button
+                      class="navbar-toggler"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#mir-main-nav-entries"
+                      aria-controls="mir-main-nav-entries"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <nav class="collapse navbar-collapse mir-main-nav-entries">
+                <ul class="nav navbar-nav">
+                  <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='search']" />
+                  <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='browse']" />
+                  <xsl:call-template name="oa.basketMenu" />
+                  <xsl:call-template name="project.generate_single_menu_entry">
+                    <xsl:with-param name="menuID" select="'register'"/>
+                  </xsl:call-template>
+                  <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='publish']" />
+                </ul>
+              </nav>
+            </div>
+
+          </div>
         </div>
-
-        <nav class="collapse navbar-collapse mir-main-nav-entries float-right">
-          <ul class="nav navbar-nav pr-0 pt-2 pb-2 pl-0 ml-auto">
-            <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='search']" />
-            <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='browse']" />
-            <xsl:call-template name="oa.basketMenu" />
-            <xsl:call-template name="project.generate_single_menu_entry">
-              <xsl:with-param name="menuID" select="'register'"/>
-            </xsl:call-template>
-            <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='publish']" />
-          </ul>
-        </nav>
-
-      </div><!-- /container -->
+      </div>
     </div>
+
   </xsl:template>
 
   <xsl:template name="mir.jumbotwo">

@@ -6,6 +6,20 @@
 // set the defaults for all responsive levels here
 // no (xl) media query necessary (desktop first)
 
+  .oa-main-menu {
+    border-top: 2px solid #00487D;
+    background-color: #F9F9F9;
+    &__row {
+      display: flex;
+      margin-top: -38px;
+    }
+    &__search {
+      flex: 1 1 auto;
+      align-self: center;
+    }
+    &__menu {
+    }
+  }
 
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(lg) {
