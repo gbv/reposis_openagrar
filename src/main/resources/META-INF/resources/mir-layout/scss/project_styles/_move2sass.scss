@@ -130,6 +130,7 @@ html body header #header_box {
 /* ****************** searchfield_box ******************* */
 .searchfield_box {
   height: 40px;
+  width:625px;
   background: transparent url("../../../../images/searchbar.png") no-repeat top left;
 }
 
@@ -153,7 +154,7 @@ html body header #searchInput {
   background: transparent url("../../../../images/searchbar_input.png") no-repeat top left;
   background-size: 100% 100%;
   margin-right: 15px;
-  flex: 1 1 auto;
+  width: 487px;
 }
 .searchfield_box .navbar-form {
   height: 100%;
