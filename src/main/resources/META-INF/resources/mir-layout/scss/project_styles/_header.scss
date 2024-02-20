@@ -10,6 +10,64 @@
     margin-bottom: 1.5rem;
   }
 
+  header {
+    background-color: white;
+  }
+  html body header #header_box {
+    margin: 0px auto 20px auto;
+    background: transparent url("../../../../images/back_head.png") no-repeat top left 8px;
+    min-height: 281px;
+    position: relative;
+  }
+  .head_logo {
+      position: absolute;
+      height: 40px;
+  }
+   #logo_oa {
+     left: 20px;
+     top: 64px;
+     height: 110px;
+   }
+  #logo_bfr {
+      left: 1000px;
+      top: 184px;
+  }
+  #logo_thuenen {
+    left: 891px;
+    top: 184px;
+  }
+  #logo_mri {
+    left: 796px;
+    top: 184px;
+  }
+  #logo_fli {
+    left: 714px;
+    top: 184px;
+  }
+  #logo_jki {
+    left: 637px;
+    top: 177px;
+    height: 46px;
+  }
+  #logo_dbfz {
+    left: 566px;
+    top: 181px;
+    height: 43px;
+  }
+  #logo_bvl {
+    left: 479px;
+    top: 185px;
+    height: 38px;
+  }
+  #site_logo {
+    position:absolute;
+    top:10px;
+    left:0px;
+  }
+  #oa_re3data {
+    margin: 5px 0px 30px 0px;
+  }
+
 // Large devices (desktops) and below: <1200px
 @include media-breakpoint-down(lg) {
   // add/overwrite styles for responsive level lg and lower

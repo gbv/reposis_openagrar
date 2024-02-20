@@ -5,6 +5,17 @@
 // set the defaults for all responsive levels here
 // no (xl) media query necessary (desktop first)
 
+  // hotfix: headlines in bs4 has no longer margins
+  // TODO: adjust layout to this new behavior
+  h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 21px;
+    margin-bottom: 10.5px;
+  }
+
+  html body #page #main_content .jumbotwo h2 {
+    font-size: 21px;
+    margin: 21px 0 10px 0;
+  }
 
 // Large devices (desktops) and below: <1200px
 @include media-breakpoint-down(lg) {

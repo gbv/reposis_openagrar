@@ -6,6 +6,47 @@
 // set the defaults for all responsive levels here
 // no (xl) media query necessary (desktop first)
 
+  html body #powered_by {
+    text-align: right;
+    background-color: #00487D;
+    border-top: 0;
+    padding: 5px 0;
+  }
+
+  #sponsored_by {
+    background-color: #F9F9F9;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+  .flatmir-footer .nav > li > a:hover, .nav > li > a:focus {
+      text-decoration: underline;
+      //background-color: inherit;
+  }
+  html body footer .internal_links {
+    width: 100%;
+  }
+  .internal_links > li:nth-child(1) > a:nth-child(1) {
+    padding-left: 0px;
+  }
+  #oa-copyright {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .internal_links > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+  }
+  .internal_links > li > a {
+    line-height: 21px;
+  }
+  .internal_links > li > a {
+    padding-top: 19.5px;
+    padding-bottom: 19.5px;
+  }
 
 // Large devices (desktops) and below: <1200px
 @include media-breakpoint-down(lg) {

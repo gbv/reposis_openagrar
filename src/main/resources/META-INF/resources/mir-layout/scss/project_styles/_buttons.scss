@@ -14,6 +14,14 @@
   margin-right: 5px;
 }
 
+  .info-button {
+    font-size: 12px;
+    margin-top: 2px;
+  }
+  .pmud-button .btn {
+    margin-top: 2px;
+    font-size: 12px;
+  }
 
 // Large devices (desktops) and below: <1200px
 @include media-breakpoint-down(lg) {
