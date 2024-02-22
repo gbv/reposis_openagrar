@@ -36,9 +36,9 @@
     <div class="oa-main-menu">
       <div class="container">
         <div class="oa-main-menu__row">
-          <div class="oa-main-menu__search">
+          <nav class="navbar navbar-expand-lg navbar-light">
 
-            <div class="searchfield_box" title="{i18n:translate('mir.navsearch.title')}">
+            <div class="searchfield_box oa-main-menu__search" title="{i18n:translate('mir.navsearch.title')}">
               <form action="{$WebApplicationBaseURL}servlets/solr/find" class="navbar-form form-inline" role="search">
                 <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
                   <input name="condQuery" placeholder="{i18n:translate('mir.navsearch.placeholder')}" class="form-control search-query" id="searchInput" type="text" />
@@ -53,34 +53,37 @@
               </form>
             </div>
 
-          </div>
-          <div class="oa-main-menu__menu">
-
-            <div class="navbar navbar-expand">
+            <div>
               <button
-                      class="navbar-toggler"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#mir-main-nav-entries"
-                      aria-controls="mir-main-nav-entries"
-                      aria-expanded="false"
-                      aria-label="Toggle navigation">
+                class="navbar-toggler oa-main-menu__menu"
+                type="button"
+                data-toggle="collapse"
+                data-target="#mir-main-nav-entries"
+                aria-controls="mir-main-nav-entries"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-text">Menü</span>
                 <span class="navbar-toggler-icon"></span>
+                <i class="navbar-toggler-close fas fa-times"></i>
               </button>
-              <nav class="collapse navbar-collapse mir-main-nav-entries">
-                <ul class="nav navbar-nav">
-                  <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='search']" />
-                  <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='browse']" />
-                  <xsl:call-template name="oa.basketMenu" />
-                  <xsl:call-template name="project.generate_single_menu_entry">
-                    <xsl:with-param name="menuID" select="'register'"/>
-                  </xsl:call-template>
-                  <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='publish']" />
-                </ul>
-              </nav>
             </div>
 
-          </div>
+
+            <div
+              id="mir-main-nav-entries"
+              class="collapse navbar-collapse oa-main-menu__menu">
+              <ul class="nav navbar-nav">
+                <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='search']" />
+                <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='browse']" />
+                <xsl:call-template name="oa.basketMenu" />
+                <xsl:call-template name="project.generate_single_menu_entry">
+                  <xsl:with-param name="menuID" select="'register'"/>
+                </xsl:call-template>
+                <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='publish']" />
+              </ul>
+            </div>
+
+          </nav>
         </div>
       </div>
     </div>
