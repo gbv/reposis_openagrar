@@ -21,6 +21,7 @@ $danger:  #9c0000;
 $body-bg: #F9F9F9;
 $oa-blue: #179dff;
 $oa-black: #223;
+$oa-text:  #444;
 
 // --------------------------------------------------
 //  project settings
@@ -45,6 +46,7 @@ $web-font-path: "https://webfonts.gbv.de/css2?family=Lato:ital,wght@0,400;0,700;
 $font-family-sans-serif: 'Lato', Arial, Helvetica, sans-serif;
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base: $font-family-sans-serif;
+$body-color: $oa-text;
 
 $font-size-base: 1rem;
 

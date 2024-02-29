@@ -10,17 +10,9 @@
     position: relative;
     min-height: 100%;
   }
-  body {
-    font-family: "Lato",Arial,Helvetica,sans-serif;
-    color: #444;
-  }
-  #page.container,
-  footer > .container {
+
+  #page {
     padding-left: 8px;
-    padding-right: 0px;
-  }
-  html body #page {
-    background-color: #F9F9F9;
   }
 
 // Large devices (desktops) and below: <1200px
@@ -41,4 +33,7 @@
 // Extra small devices (portrait phones): <576px
 @include media-breakpoint-down(xs) {
   // add/overwrite styles for responsive level xs
+  #page {
+    padding-left: 15px;
+  }
 }

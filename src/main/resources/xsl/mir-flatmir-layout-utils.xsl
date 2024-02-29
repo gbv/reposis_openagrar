@@ -13,6 +13,7 @@
   <xsl:template name="mir.navigation">
 
     <div id="header_box" class="clearfix container">
+      <a href="{$WebApplicationBaseURL}"><img id="logo_oa" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_oa.svg" alt="" /></a>
       <div id="project_logo_box">
         <a href="https://www.bfr.bund.de/"><img id="logo_bfr" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_bfr_23.svg" alt="" /></a>
         <a href="https://www.thuenen.de/"><img id="logo_thuenen" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_thuenen.svg" alt="" /></a>
@@ -21,7 +22,6 @@
         <a href="https://www.julius-kuehn.de/"><img id="logo_jki" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_jki.svg" alt="" /></a>
         <a href="https://www.dbfz.de/"><img id="logo_dbfz" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_dbfz.svg" alt="" /></a>
         <a href="https://www.bvl.bund.de/"><img id="logo_bvl" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_bvl.png" alt="" /></a>
-	<a href="{$WebApplicationBaseURL}"><img id="logo_oa" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_oa.svg" alt="" /></a>
       </div>
       <div id="options_nav_box" class="mir-prop-nav">
         <nav>
@@ -125,16 +125,14 @@
   <xsl:template name="mir.footer">
     <xsl:variable name="mcr_version" select="concat('MyCoRe ',mcrver:getCompleteVersion())" />
     <div class="container">
+
       <div class="row">
-        <div class="col-9">
-          <ul class="internal_links navbar-nav ml-auto flex-row">
+        <div class="col-12 col-sm-6 col-lg-9">
+          <ul class="internal_links">
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='below']/*" />
           </ul>
-
-          <xsl:variable name="tmp" select="calendar:new()"/>
-          <p id="oa-copyright"><xsl:value-of select="concat('© ', calendar:get($tmp, 1), ' OpenAgrar')"/></p>
         </div>
-        <div class="col-3 text-center">
+        <div class="col-12 col-sm-6 col-lg-3 text-right">
           <div id="sponsored_by">
             <xsl:choose>
               <xsl:when test="$CurrentLang='en'">
@@ -149,13 +147,23 @@
               </xsl:otherwise>
             </xsl:choose>
           </div>
-          <div id="powered_by">
-            <a href="http://www.mycore.de">
-              <img src="{$WebApplicationBaseURL}images/logos/mycore_logo_small_invert.png" title="{$mcr_version}" alt="powered by MyCoRe" />
-            </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="credits">
+            <xsl:variable name="tmp" select="calendar:new()"/>
+            <p id="oa-copyright"><xsl:value-of select="concat('© ', calendar:get($tmp, 1), ' OpenAgrar')"/></p>
+            <div id="powered_by">
+              <a href="http://www.mycore.de">
+                <img src="{$WebApplicationBaseURL}images/logos/mycore_logo_small_invert.png" title="{$mcr_version}" alt="powered by MyCoRe" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
 
     <!-- Matomo/Piwik -->

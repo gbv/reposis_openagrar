@@ -190,6 +190,10 @@
     }
   }
 
+  #oa_re3data {
+    margin: 5px 0px 30px 0px;
+  }
+
 // Large devices (desktops) and below: <1200px
 @include media-breakpoint-down(lg) {
   // add/overwrite styles for responsive level lg and lower
@@ -208,4 +212,7 @@
 // Extra small devices (portrait phones): <576px
 @include media-breakpoint-down(xs) {
   // add/overwrite styles for responsive level xs
+  .oa-borderbox {
+    margin: 20px 15px 40px 15px;
+  }
 }
