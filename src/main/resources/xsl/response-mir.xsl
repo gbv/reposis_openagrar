@@ -63,11 +63,12 @@
 
 
   <xsl:variable name="name_str">
-    <xsl:if test="string-length($nameGND) &gt; 0">
+    <!-- Remove to avoid Certificate Issue when calling /servlets/solr/personindex
+      <xsl:if test="string-length($nameGND) &gt; 0">
       <xsl:variable name="names" select="document(concat($WebApplicationBaseURL,'/servlets/solr/personindex?XSL.Style=xml&amp;terms.regex=.*:gnd:',$nameGND))" />
   	  <xsl:value-of select="substring-before($names//int[contains(@name,$nameGND)]/@name,':gnd')"/>
 
-    </xsl:if>
+    </xsl:if>-->
   </xsl:variable>
   <!-- END: OA specific changes -->
 
