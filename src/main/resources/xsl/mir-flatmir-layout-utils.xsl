@@ -13,6 +13,7 @@
   <xsl:template name="mir.navigation">
 
     <div id="header_box" class="clearfix container">
+      <a href="{$WebApplicationBaseURL}"><img id="logo_oa" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_oa.svg" alt="" /></a>
       <div id="project_logo_box">
         <a href="https://www.bfr.bund.de/"><img id="logo_bfr" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_bfr_23.svg" alt="" /></a>
         <a href="https://www.thuenen.de/"><img id="logo_thuenen" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_thuenen.svg" alt="" /></a>
@@ -21,25 +22,8 @@
         <a href="https://www.julius-kuehn.de/"><img id="logo_jki" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_jki.svg" alt="" /></a>
         <a href="https://www.dbfz.de/"><img id="logo_dbfz" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_dbfz.svg" alt="" /></a>
         <a href="https://www.bvl.bund.de/"><img id="logo_bvl" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_bvl.png" alt="" /></a>
-	<a href="{$WebApplicationBaseURL}"><img id="logo_oa" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_oa.svg" alt="" /></a>
       </div>
       <div id="options_nav_box" class="mir-prop-nav">
-
-        <div class="searchfield_box" title="{i18n:translate('mir.navsearch.title')}">
-          <form action="{$WebApplicationBaseURL}servlets/solr/find" class="navbar-form form-inline" role="search">
-            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
-              <input name="condQuery" placeholder="{i18n:translate('mir.navsearch.placeholder')}" class="form-control search-query" id="searchInput" type="text" />
-              <xsl:choose>
-                <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
-                  <input name="owner" type="hidden" value="createdby:*" />
-                </xsl:when>
-                <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
-                  <input name="owner" type="hidden" value="createdby:{$CurrentUser}" />
-                </xsl:when>
-              </xsl:choose>
-          </form>
-        </div>
-
         <nav>
           <ul class="navbar-nav ml-auto flex-row">
             <xsl:call-template name="mir.loginMenu" />
@@ -49,39 +33,61 @@
       </div>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="navbar navbar-expand mir-main-nav">
+    <div class="oa-main-menu">
+      <div class="container">
+        <div class="oa-main-menu__row">
+          <nav class="navbar navbar-expand-lg navbar-light">
 
-    <div class="container">
+            <div class="searchfield_box oa-main-menu__search" title="{i18n:translate('mir.navsearch.title')}">
+              <form action="{$WebApplicationBaseURL}servlets/solr/find" class="navbar-form form-inline" role="search">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                  <input name="condQuery" placeholder="{i18n:translate('mir.navsearch.placeholder')}" class="form-control search-query" id="searchInput" type="text" />
+                  <xsl:choose>
+                    <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
+                      <input name="owner" type="hidden" value="createdby:*" />
+                    </xsl:when>
+                    <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
+                      <input name="owner" type="hidden" value="createdby:{$CurrentUser}" />
+                    </xsl:when>
+                  </xsl:choose>
+              </form>
+            </div>
+
+            <div>
+              <button
+                class="navbar-toggler oa-main-menu__menu"
+                type="button"
+                data-toggle="collapse"
+                data-target="#mir-main-nav-entries"
+                aria-controls="mir-main-nav-entries"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-text">Menü</span>
+                <span class="navbar-toggler-icon"></span>
+                <i class="navbar-toggler-close fas fa-times"></i>
+              </button>
+            </div>
 
 
-        <div class="navbar-header">
-          <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-toggle="collapse"
-                  data-target="#mir-main-nav-collapse-box"
-                  aria-controls="mir-main-nav-collapse-box"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+            <div
+              id="mir-main-nav-entries"
+              class="collapse navbar-collapse oa-main-menu__menu">
+              <ul class="nav navbar-nav">
+                <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='search']" />
+                <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='browse']" />
+                <xsl:call-template name="oa.basketMenu" />
+                <xsl:call-template name="project.generate_single_menu_entry">
+                  <xsl:with-param name="menuID" select="'register'"/>
+                </xsl:call-template>
+                <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='publish']" />
+              </ul>
+            </div>
+
+          </nav>
         </div>
-
-        <nav class="collapse navbar-collapse mir-main-nav-entries float-right">
-          <ul class="nav navbar-nav pr-0 pt-2 pb-2 pl-0 ml-auto">
-            <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='search']" />
-            <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='browse']" />
-            <xsl:call-template name="oa.basketMenu" />
-            <xsl:call-template name="project.generate_single_menu_entry">
-              <xsl:with-param name="menuID" select="'register'"/>
-            </xsl:call-template>
-            <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='publish']" />
-          </ul>
-        </nav>
-
-      </div><!-- /container -->
+      </div>
     </div>
+
   </xsl:template>
 
   <xsl:template name="mir.jumbotwo">
@@ -119,16 +125,14 @@
   <xsl:template name="mir.footer">
     <xsl:variable name="mcr_version" select="concat('MyCoRe ',mcrver:getCompleteVersion())" />
     <div class="container">
+
       <div class="row">
-        <div class="col-9">
-          <ul class="internal_links navbar-nav ml-auto flex-row">
+        <div class="col-12 col-sm-6 col-lg-9">
+          <ul class="internal_links">
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='below']/*" />
           </ul>
-
-          <xsl:variable name="tmp" select="calendar:new()"/>
-          <p id="oa-copyright"><xsl:value-of select="concat('© ', calendar:get($tmp, 1), ' OpenAgrar')"/></p>
         </div>
-        <div class="col-3 text-center">
+        <div class="col-12 col-sm-6 col-lg-3 text-right">
           <div id="sponsored_by">
             <xsl:choose>
               <xsl:when test="$CurrentLang='en'">
@@ -143,13 +147,23 @@
               </xsl:otherwise>
             </xsl:choose>
           </div>
-          <div id="powered_by">
-            <a href="http://www.mycore.de">
-              <img src="{$WebApplicationBaseURL}images/logos/mycore_logo_small_invert.png" title="{$mcr_version}" alt="powered by MyCoRe" />
-            </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="credits">
+            <xsl:variable name="tmp" select="calendar:new()"/>
+            <p id="oa-copyright"><xsl:value-of select="concat('© ', calendar:get($tmp, 1), ' OpenAgrar')"/></p>
+            <div id="powered_by">
+              <a href="http://www.mycore.de">
+                <img src="{$WebApplicationBaseURL}images/logos/mycore_logo_small_invert.png" title="{$mcr_version}" alt="powered by MyCoRe" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
 
     <!-- Matomo/Piwik -->

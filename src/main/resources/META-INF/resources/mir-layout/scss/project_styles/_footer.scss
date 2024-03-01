@@ -6,23 +6,80 @@
 // set the defaults for all responsive levels here
 // no (xl) media query necessary (desktop first)
 
+  #sponsored_by {
+    background-color: $body-bg;
+    border-radius: 4px;
+    margin-top: .5rem;
+    margin-right: -15px;
+    width: 203px;
+    display: inline-block;
+    a {
+      display: block;
+    }
+  }
 
-// Large devices (desktops) and below: <= 1200px
+  html body #powered_by {
+    text-align: right;
+    background-color: transparent;
+    border-top: 0;
+    padding: 0 0;
+    margin-right: -15px;
+  }
+
+  .internal_links {
+    display: flex;
+    margin-left: -23px;
+    li {
+      padding: 0.5rem 1rem;
+      a {
+        padding: 0;
+        &:hover,
+        &:focus,
+        &:active {
+          text-decoration: underline;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .credits {
+    margin-top: 3rem;
+    margin-left: -7px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
+
+// Large devices (desktops) and below: <1200px
 @include media-breakpoint-down(lg) {
   // add/overwrite styles for responsive level lg and lower
 }
 
-// Medium devices (tablets) and below: <= 992px
+// Medium devices (tablets) and below: <992px
 @include media-breakpoint-down(md) {
   // add/overwrite styles for responsive level md and lower
+  .internal_links {
+    flex-direction: column;
+  }
 }
 
-// Small devices (landscape phones) and below: <= 768px
+// Small devices (landscape phones) and below: <768px
 @include media-breakpoint-down(sm) {
   // add/overwrite styles for responsive level sm and lower
 }
 
-// Extra small devices (portrait phones): <= 576px
+// Extra small devices (portrait phones): <576px
 @include media-breakpoint-down(xs) {
   // add/overwrite styles for responsive level xs
+  .internal_links {
+    margin-left: -1rem;
+  }
+  #sponsored_by,
+  html body #powered_by {
+    margin-right: 0;
+  }
+
 }
