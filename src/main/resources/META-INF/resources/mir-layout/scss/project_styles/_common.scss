@@ -8,47 +8,211 @@
 // set the defaults for all responsive levels here
 // no (xl) media query necessary (desktop first)
 
-h4.mir-toc-section-title {
-  font-size: 1rem;
-  margin-bottom: 0.15rem;
-  color: #444;
-}
+  h4.mir-toc-section-title {
+    font-size: 1rem;
+    margin-bottom: 0.15rem;
+    color: #444;
+  }
 
-.mir-toc-section-object-link,
-.mir-toc-section-page,
-.mir-toc-section-author {
-  line-height: 1.1;
-  color: #999;
-  font-size: smaller;
-}
+  .mir-toc-section-object-link,
+  .mir-toc-section-page,
+  .mir-toc-section-author {
+    line-height: 1.1;
+    color: #999;
+    font-size: smaller;
+  }
 
-.mir-toc-section-label {
-  display: inline;
-}
+  .mir-toc-section-label {
+    display: inline;
+  }
 
-div.oa-dateIssuedOnlineTimebar > div:nth-child(1) {
-  border-bottom: solid 1px #b0c6d7;
-}
-div.oa-dateIssuedOnlineFacet div.tb-tooltip {
-  color: #f9f9f9 !important;
-}
+  div.oa-dateIssuedOnlineTimebar > div:nth-child(1) {
+    border-bottom: solid 1px #b0c6d7;
+  }
+  div.oa-dateIssuedOnlineFacet div.tb-tooltip {
+    color: #f9f9f9 !important;
+  }
 
-// Large devices (desktops) and below: <= 1200px
+  .oa-borderbox {
+    border-radius: 3px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 20px 0px 40px 15px;
+  }
+  .panel {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 3px
+  }
+
+  .panel-default > .panel-heading,
+  .result_body .result_filter .panel .panel-heading,
+  .panel-heading {
+    background-color: #00487D;
+    color: white;
+    padding: 10px;
+    margin: 10px -1px;
+  }
+  .result_body .result_filter .panel .panel-heading .panel-title {
+    color: white;
+  }
+
+  // repairs hot fix side effects
+  // fix person details popup OA-235
+  .popover-header {
+    margin-top: 0;
+    padding-right: 2.5rem; // TODO: has to fixed in MIR
+  }
+  .popoverclose {
+    top: 0;
+    right: 0;
+  }
+
+  /* *********************** editor *********************** */
+  .oa-noteLocationCorp > div {
+    padding-top: 20px;
+  }
+  .oa-noteLocationCorp > label {
+    margin-top: 20px;
+  }
+  .oa-noteLocationCorp-meta {
+    margin-top: 20px;
+    display: block;
+  }
+
+  /* *********************** result page *********************** */
+  .result_headline h1 {
+    color: #693;
+    font-weight: bold;
+  }
+  .result_headline h1 span.resultText {
+    color: #666;
+    font-weight: normal;
+  }
+  .result_headline h2 {
+    color: #666;
+    font-size: 20px;
+  }
+
+  .hit_option .fa-bookmark {
+    margin-right: 3px;
+  }
+
+
+  /* *********************** altmetrics *********************** */
+
+  div#_altmetric_popover_el.altmetric-embed div#_altmetric_container.altmetric_container div#_altmetric_popover_inner .altmetric-popover-content {
+    background-color: #f9f9f9 !important;
+  }
+
+  /* ******************* temp statistic browser ***************** */
+
+  .statisticBrowser a {
+      text-decoration: none !important;
+  }
+
+  .statisticBrowser tbody td {
+      white-space:nowrap;
+  }
+
+  .sbSquare {
+      color: #aaa;
+  }
+
+  /****************** temp refeered badge ************************/
+  .hit_refereed {
+      float: left;
+      margin-left: 5px;
+      color: #aeafb3;
+  }
+
+  #badges .oa_refereed {
+      display: inline;
+      color: #aeafb3;
+  }
+
+
+  /**** FIXME: quick hack for sorting of refereed fields *********/
+  div.result_filter ul.filter {
+    display: flex;
+    flex-direction: column;
+  }
+  li[data-fq="mods.refereed.public:yes"]  {
+    order: 1;
+  }
+  li[data-fq="mods.refereed.public:no"] {
+    order: 2;
+  }
+
+  li[data-fq="mods.refereed:yes"]  {
+    order: 1;
+  }
+  li[data-fq="mods.refereed:no"] {
+    order: 2;
+  }
+  li[data-fq="mods.refereed:n/a"]  {
+    order: 3;
+  }
+
+
+  /**** FIXME: remove in LTS2019, already fixed there *********/
+  div.orcid-status, div.orcid-publish {
+    display: block;
+  }
+
+  div.orcid-publish {
+    padding-left: 88px;
+  }
+
+  .pl-5, .px-5 {
+    padding-left: 3rem !important;
+  }
+  .ml-4, .mx-4 {
+    margin-left: 1.5rem !important;
+  }
+  dd {
+    margin-bottom: 1rem;
+  }
+
+  .result_searchline button {
+    font-size: 0.875rem;
+  }
+  .search_box button .fas,
+  .basket_form .fas {
+    padding-right: 0.375rem;
+  }
+
+  // TODO: remove this in mir and then here, use variable instead
+  .pagination {
+    a {
+      color: $success;
+    }
+  }
+
+  #oa_re3data {
+    margin: 5px 0px 30px 0px;
+  }
+
+// Large devices (desktops) and below: <1200px
 @include media-breakpoint-down(lg) {
   // add/overwrite styles for responsive level lg and lower
 }
 
-// Medium devices (tablets) and below: <= 992px
+// Medium devices (tablets) and below: <992px
 @include media-breakpoint-down(md) {
   // add/overwrite styles for responsive level md and lower
 }
 
-// Small devices (landscape phones) and below: <= 768px
+// Small devices (landscape phones) and below: <768px
 @include media-breakpoint-down(sm) {
   // add/overwrite styles for responsive level sm and lower
 }
 
-// Extra small devices (portrait phones): <= 576px
+// Extra small devices (portrait phones): <576px
 @include media-breakpoint-down(xs) {
   // add/overwrite styles for responsive level xs
+  .oa-borderbox {
+    margin: 20px 15px 40px 15px;
+  }
 }
