@@ -10,6 +10,7 @@
   <!-- copied from http://www.loc.gov/standards/mods/v3/MODS3-4_HTML_XSLT1-0.xsl -->
   <!-- oa specific includes-->
   <xsl:include href="../date.statistic.xsl"/>
+  <xsl:include href="../characteristics.refereed.xsl"/>
   <!--oa specific includes end -->
 
   <xsl:key use="@type" name="title-by-type" match="//mods:mods/mods:titleInfo" />
@@ -329,11 +330,15 @@
             <!-- START: OA specific changes -->
             <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
               <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@type='characteristics']" />
-              <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem/mods:extension[@type='metrics']" />
+              <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem[@type='series' or @type='host']/mods:extension[@type='characteristics']" />
+              <xsl:call-template name="print_refereed">
+                <xsl:with-param name="mods" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods"/>
+              </xsl:call-template>
+              <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem[@type='series' or @type='host']/mods:extension[@type='metrics']" />
               <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@type='metrics']" />
               <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']" />
             </xsl:if>
-            
+
             <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:name[@type='corporate'][@ID or @authorityURI=$institutesURI]" />
             <!-- END: OA specific changes -->
       </table>
@@ -409,7 +414,7 @@
           </xsl:if>
           <xsl:if test="mods:part/mods:detail[@type='issue']/mods:number and (mods:part/mods:detail[@type='article_number'] or mods:part/mods:date or mods:originInfo[@eventType='publication']/mods:dateIssued)">
             <xsl:text> </xsl:text>
-          </xsl:if> 
+          </xsl:if>
           <!-- Article number -->
           <xsl:if test="mods:part/mods:detail[@type='article_number']/mods:number">
             <xsl:value-of
@@ -442,7 +447,80 @@
     </xsl:for-each>
   </xsl:template>
 
-  <xsl:template match="mods:extension[@type='characteristics']" mode="oa">
+  <xsl:template name="print_refereed">
+    <xsl:param name = "mods" />
+    <xsl:variable name="refereed">
+      <xsl:call-template name="getCharacteristicsRefereed">
+        <xsl:with-param name="mods" select="$mods"/>
+      </xsl:call-template>
+    </xsl:variable>
+    <xsl:variable name="lvl1" select="$mods"/>
+    <xsl:variable name="lvl2" select="$mods/mods:relatedItem[@type='host' or @type='series']"/>
+    <xsl:variable name="lvl3" select="$mods/mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']"/>
+    <xsl:variable name="lvl4" select="$mods/mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']"/>
+
+    <xsl:variable name="lvl1_refereed" select="$lvl1/mods:extension[@type='characteristics']/chars/@refereed"/>
+    <xsl:variable name="lvl2_refereed" select="$lvl2/mods:extension[@type='characteristics']/chars/@refereed"/>
+    <xsl:variable name="lvl3_refereed" select="$lvl3/mods:extension[@type='characteristics']/chars/@refereed"/>
+    <xsl:variable name="lvl4_refereed" select="$lvl4/mods:extension[@type='characteristics']/chars/@refereed"/>
+
+    <xsl:variable name="lvl1_genre" select="substring-after($lvl1/mods:genre[contains(@authorityURI,'classifications/genres')]/@valueURI,'#')"/>
+    <xsl:variable name="lvl2_genre" select="substring-after($lvl2/mods:genre[contains(@authorityURI,'classifications/genres')]/@valueURI,'#')"/>
+    <xsl:variable name="lvl3_genre" select="substring-after($lvl3/mods:genre[contains(@authorityURI,'classifications/genres')]/@valueURI,'#')"/>
+    <xsl:variable name="lvl4_genre" select="substring-after($lvl4/mods:genre[contains(@authorityURI,'classifications/genres')]/@valueURI,'#')"/>
+
+    <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
+      <tr>
+        <td valign="top" class="metaname">
+          <xsl:value-of select="concat(i18n:translate('component.mods.metaData.dictionary.characteristics'),':')" />
+        </td>
+        <td class="metavalue">
+          <xsl:value-of select="i18n:translate(concat('component.mods.metaData.dictionary.refereed.', $refereed))" />
+          <div class="d-none" id="example-content">
+            <dl>
+              <dt><xsl:value-of select="$lvl1_refereed"/></dt>
+              <dd><xsl:value-of select="$lvl1_genre"/></dd>
+              <dt><xsl:value-of select="$lvl2_refereed"/></dt>
+              <dd><xsl:value-of select="$lvl2_genre"/></dd>
+              <dt><xsl:value-of select="$lvl3_refereed"/></dt>
+              <dd><xsl:value-of select="$lvl3_genre"/></dd>
+              <dt><xsl:value-of select="$lvl4_refereed"/></dt>
+              <dd><xsl:value-of select="$lvl4_genre"/></dd>
+            </dl>
+          </div>
+          <a
+            id="example"
+            title="Referiert"
+            class="personPopover">
+              <span class="fa fa-info-circle" />
+          </a>
+          (
+          <xsl:value-of select="$lvl1_refereed"/><xsl:value-of select="$lvl1_genre"/>
+          , <xsl:value-of select="$lvl2_refereed"/><xsl:value-of select="$lvl2_genre"/>
+          , <xsl:value-of select="$lvl3_refereed"/><xsl:value-of select="$lvl3_genre"/>
+          , <xsl:value-of select="$lvl4_refereed"/><xsl:value-of select="$lvl4_genre"/>
+          )
+        </td>
+      </tr>
+    </xsl:if>
+  </xsl:template>
+
+  <xsl:template match="mods:mods/mods:reltedItem[@type='series' or @type='host']/mods:extension[@type='characteristics']" mode="oa">
+    <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
+      <xsl:if test="chars/@refereed">
+        <tr>
+          <td valign="top" class="metaname">
+            <xsl:value-of select="concat(i18n:translate('component.mods.metaData.dictionary.characteristicsOfJournal'),':')" />
+          </td>
+          <td class="metavalue">
+            <xsl:value-of select="i18n:translate(concat('component.mods.metaData.dictionary.refereed.',chars/@refereed))" />
+          </td>
+        </tr>
+      </xsl:if>
+    </xsl:if>
+  </xsl:template>
+
+  <xsl:template match="mods:mods/mods:extension[@type='characteristics']" mode="oa">
     <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
       <xsl:if test="chars/@refereed">
         <tr>
@@ -531,40 +609,42 @@
       </xsl:call-template>
     </xsl:variable>
     <xsl:variable name="yearIssued" select="substring($dateIssued_statistics,1,4)"/>
-    <tr>
-      <td valign="top" class="metaname">
-        <xsl:value-of select="concat('Journal Metrics',':')" />
-      </td>
-      <td class="metavalue">
-        <table class="table table-condensed">
-          <xsl:for-each select="journalMetrics/metric[value/@year = $yearIssued]">
-            <tr>
-              <td>
-                <xsl:value-of select="@type"/>
-              </td>
-              <td>
-                <xsl:choose>
-                  <xsl:when test="@type='JCR'">
-                    <xsl:choose>
-                      <xsl:when test="acl:checkPermission('crypt:cipher:jcr','decrypt')">
-                        <xsl:variable name="decrypturi" select="concat('crypt:decrypt:jcr:',value[@year = $yearIssued])"/>
-                        <xsl:value-of select="document($decrypturi)/value"/>
-                      </xsl:when>
-                      <xsl:otherwise>
-                        <xsl:value-of select="'Cant decrypt JCR'"/>
-                      </xsl:otherwise>
-                    </xsl:choose>
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <xsl:value-of select="value[@year=$yearIssued]"/>
-                  </xsl:otherwise>
-                </xsl:choose>
-              </td>
-            </tr>
-          </xsl:for-each>
-        </table>
-      </td>
-    </tr>
+    <xsl:if test="journalMetrics/metric[value/@year = $yearIssued]">
+      <tr>
+        <td valign="top" class="metaname">
+          <xsl:value-of select="concat('Journal Metrics',':')" />
+        </td>
+        <td class="metavalue">
+          <table class="table table-condensed">
+            <xsl:for-each select="journalMetrics/metric[value/@year = $yearIssued]">
+              <tr>
+                <td>
+                  <xsl:value-of select="@type"/>
+                </td>
+                <td>
+                  <xsl:choose>
+                    <xsl:when test="@type='JCR'">
+                      <xsl:choose>
+                        <xsl:when test="acl:checkPermission('crypt:cipher:jcr','decrypt')">
+                          <xsl:variable name="decrypturi" select="concat('crypt:decrypt:jcr:',value[@year = $yearIssued])"/>
+                          <xsl:value-of select="document($decrypturi)/value"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                          <xsl:value-of select="'Cant decrypt JCR'"/>
+                        </xsl:otherwise>
+                      </xsl:choose>
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <xsl:value-of select="value[@year=$yearIssued]"/>
+                    </xsl:otherwise>
+                  </xsl:choose>
+                </td>
+              </tr>
+            </xsl:for-each>
+          </table>
+        </td>
+      </tr>
+    </xsl:if>
   </xsl:template>
 
 </xsl:stylesheet>
