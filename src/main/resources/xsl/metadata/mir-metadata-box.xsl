@@ -295,7 +295,7 @@
         </xsl:for-each>
             <!-- START: OA specific changes -->
             <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[not(@generator) and
-                                                        not(@authorityURI='https://www.openagrar.de/classifications/annual_review')]" />
+                                                     not(@authorityURI='https://www.openagrar.de/classifications/annual_review')]" />
             <!-- END: OA specific changes -->
         <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:part/mods:extent" />
         <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:location/mods:url" />
@@ -332,6 +332,9 @@
               <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem/mods:extension[@type='metrics']" />
               <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@type='metrics']" />
               <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']" />
+              <!-- <xsl:if test="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification/@edition"><xsl:value-of select="concat(' [' + mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification/@edition, ']')" /></xsl:if> -->
+              <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']/@edition" /> -->
+              <!-- <xsl:value-of select="concat(' [' + mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']/@edition, ']')" /> -->
             </xsl:if>
             
             <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:name[@type='corporate'][@ID or @authorityURI=$institutesURI]" />
@@ -565,6 +568,19 @@
         </table>
       </td>
     </tr>
+  </xsl:template>
+
+  <xsl:template match="mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']/@edition" mode="oa">
+    <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
+        <tr>
+          <td valign="top" class="metaname">
+            <xsl:value-of select="concat(i18n:translate('component.mods.metaData.dictionary.annual_review.edition'),':')" />
+          </td>
+          <td class="metavalue">
+            <xsl:value-of select="." />
+          </td>
+        </tr>
+      </xsl:if>
   </xsl:template>
 
 </xsl:stylesheet>
