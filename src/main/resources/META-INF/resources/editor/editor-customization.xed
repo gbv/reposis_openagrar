@@ -507,6 +507,9 @@
             </xed:bind>
           </div>
           <mir:textfield xpath="@edition" label="oa.annualReview.edition" placeholder="{i18n:oa.placeholder.annualReview}" id="oa-annualReview-edition" />
+          <xed:if test="//mods:classification/@edition">
+                  <xed:validate xpath="//mods:classification/@edition" min="1000" max="9999" type="integer" i18n="mir.validation.edition" display="global" />
+          </xed:if>
         </xed:bind>
 
         <xed:repeat xpath="noteLocationCorp">
