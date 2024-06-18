@@ -7,9 +7,8 @@
   xmlns:xlink="http://www.w3.org/1999/xlink"
   exclude-result-prefixes="mods mcrxsl xlink"
 >
-  <xsl:import href="xslImport:solr-document:openagrar-solr.xsl" />
+ <xsl:import href="xslImport:solr-document:openagrar-solr.xsl" />
   <xsl:include href="date.statistic.xsl"/>
-
   <xsl:template match="mycoreobject[contains(@ID,'_mods_')]">
     <xsl:apply-imports />
     <!-- fields from mycore-mods -->
@@ -60,19 +59,41 @@
         </field>
       </xsl:if>
     </xsl:for-each>
-    <xsl:for-each
+
+	<xsl:for-each
       select="mods:name[mods:role/mods:roleTerm[@authority='marcrelator' and (@type='text' and text()='author') or (@type='code' and text()='aut')]]">
-      <xsl:if test="position()= last()">
-        <field name="mods.lastAuthor">
-          <xsl:for-each select="mods:displayForm | mods:namePart | text()">
-            <xsl:value-of select="concat(' ',mcrxsl:normalizeUnicode(.))" />
-          </xsl:for-each>
-        </field>
-        <field name="mods.lastAuthor.affiliation">
-          <xsl:value-of select="mods:affiliation" />
-        </field>
-      </xsl:if>
-    </xsl:for-each>
+		  <xsl:variable name="autrole">
+			  <xsl:choose>
+				<xsl:when test="./mods:role/mods:roleTerm[substring-after(@valueURI, '#')='main_author']">
+					<xsl:text>mainAuthor</xsl:text>
+				</xsl:when>
+				<xsl:when test="count(//mods:roleTerm[substring-after(@valueURI, '#')='main_author'])=0 and position()=1">
+					<xsl:text>mainAuthor</xsl:text>
+				</xsl:when>
+				<xsl:when test="./mods:role/mods:roleTerm[substring-after(@valueURI, '#')='co_author']">
+					<xsl:text>coAuthor</xsl:text>
+				</xsl:when>
+				<xsl:when test="./mods:role/mods:roleTerm[substring-after(@valueURI, '#')='corresponding_author']">
+					<xsl:text>correspondingAuthor</xsl:text>
+				</xsl:when>
+				<xsl:when test="./mods:role/mods:roleTerm[substring-after(@valueURI, '#')='last_author']">
+					<xsl:text>lastAuthor</xsl:text>
+				</xsl:when>
+				<xsl:when test="count(//mods:roleTerm[substring-after(@valueURI, '#')='last_author'])=0 and position()=last()">
+					<xsl:text>lastAuthor</xsl:text>
+				</xsl:when>
+			</xsl:choose>
+		</xsl:variable>
+		<field name="{concat('mods.', $autrole)}">
+			<xsl:for-each select="mods:displayForm | mods:namePart | text()">
+				<xsl:value-of select="concat(' ',.)" />
+			</xsl:for-each>
+		</field>
+		<field name="{concat('mods.', $autrole, '.affiliation')}">
+				<xsl:value-of select="mods:affiliation" />
+	   </field>
+   </xsl:for-each> 
+   
     <xsl:for-each select="mods:genre[contains(@authorityURI,'classifications/genres')]">
       <xsl:variable name="genre" select="."/>
       <xsl:if test="not(../mods:relatedItem[@type='host'])">
