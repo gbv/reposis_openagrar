@@ -131,6 +131,38 @@
   },
   {
     "add-field": {
+      "name": "mods.coAuthor",
+      "type": "mods.collatedGERMAN",
+      "indexed": true,
+      "stored": false
+    }
+  },
+  {
+    "add-field": {
+      "name": "mods.coAuthor.affiliation",
+      "type": "mods.collatedGERMAN",
+      "indexed": true,
+      "stored": false
+    }
+  },
+  {
+    "add-field": {
+      "name": "mods.correspondingAuthor",
+      "type": "mods.collatedGERMAN",
+      "indexed": true,
+      "stored": false
+    }
+  },
+  {
+    "add-field": {
+      "name": "mods.correspondingAuthor.affiliation",
+      "type": "mods.collatedGERMAN",
+      "indexed": true,
+      "stored": false
+    }
+  },
+  {
+    "add-field": {
       "name": "mods.lastAuthor",
       "type": "mods.collatedGERMAN",
       "indexed": true,
