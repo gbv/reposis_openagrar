@@ -47,37 +47,63 @@
         <xsl:value-of select="." />
       </field>
     </xsl:for-each>
-    <xsl:for-each select="mods:name[mods:role/mods:roleTerm[@authority='marcrelator' and (@type='text' and text()='author') or (@type='code' and text()='aut')]]">
-      <xsl:variable name="autrole">
-        <xsl:choose>
-          <xsl:when test="./mods:role/mods:roleTerm[substring-after(@valueURI, '#')='main_author']">
-            <xsl:text>mainAuthor</xsl:text>
-          </xsl:when>
-          <xsl:when test="count(//mods:roleTerm[substring-after(@valueURI, '#')='main_author'])=0 and position()=1">
-            <xsl:text>mainAuthor</xsl:text>
-          </xsl:when>
-          <xsl:when test="./mods:role/mods:roleTerm[substring-after(@valueURI, '#')='co_author']">
-            <xsl:text>coAuthor</xsl:text>
-          </xsl:when>
-          <xsl:when test="./mods:role/mods:roleTerm[substring-after(@valueURI, '#')='corresponding_author']">
-            <xsl:text>correspondingAuthor</xsl:text>
-          </xsl:when>
-          <xsl:when test="./mods:role/mods:roleTerm[substring-after(@valueURI, '#')='last_author']">
-            <xsl:text>lastAuthor</xsl:text>
-          </xsl:when>
-          <xsl:when test="count(//mods:roleTerm[substring-after(@valueURI, '#')='last_author'])=0 and position()=last()">
-            <xsl:text>lastAuthor</xsl:text>
-          </xsl:when>
-        </xsl:choose>
-      </xsl:variable>
-      <field name="{concat('mods.', $autrole)}">
-        <xsl:for-each select="mods:displayForm | mods:namePart | text()">
-          <xsl:value-of select="concat(' ',.)" />
-        </xsl:for-each>
-      </field>
-      <field name="{concat('mods.', $autrole, '.affiliation')}">
-        <xsl:value-of select="mods:affiliation" />
-      </field>
+    <xsl:for-each
+      select="mods:name[mods:role/mods:roleTerm[@authority='marcrelator' and (@type='text' and text()='author') or (@type='code' and text()='aut')]]">
+      <xsl:choose>
+        <xsl:when test="not(../mods:name/mods:role/mods:roleTerm[contains(@valueURI, '#')])">
+          <xsl:variable name="autrole">
+            <xsl:choose>
+              <xsl:when test="position()=1">
+                <xsl:text>mainAuthor</xsl:text>
+              </xsl:when>	
+              <xsl:when test="position()=last()">
+                <xsl:text>lastAuthor</xsl:text>
+              </xsl:when>
+              <xsl:otherwise>
+               <xsl:text>noRole</xsl:text>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:variable>						
+          <xsl:if test="$autrole != 'noRole'">
+            <field name="{concat('mods.', $autrole)}">
+              <xsl:for-each select="mods:displayForm | mods:namePart | text()">
+                <xsl:value-of select="concat(' ',mcrxsl:normalizeUnicode(.))" />
+              </xsl:for-each>
+            </field>
+            <field name="{concat('mods.', $autrole, '.affiliation')}">
+              <xsl:value-of select="mods:affiliation" />
+            </field>
+          </xsl:if>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:for-each select="mods:role/mods:roleTerm[contains(@valueURI, '#')]">
+            <xsl:variable name="autrole">
+              <xsl:choose>
+                <xsl:when test="substring-after(@valueURI, '#') ='main_author'">
+                  <xsl:text>mainAuthor</xsl:text>
+                </xsl:when>
+                <xsl:when test="substring-after(@valueURI, '#') ='co_author'">
+                  <xsl:text>coAuthor</xsl:text>
+                </xsl:when>
+                <xsl:when test="substring-after(@valueURI, '#') ='corresponding_author'">
+                  <xsl:text>correspondingAuthor</xsl:text>
+                </xsl:when>
+                <xsl:when test="substring-after(@valueURI, '#') ='last_author'">
+                  <xsl:text>lastAuthor</xsl:text>
+                </xsl:when>
+              </xsl:choose>
+            </xsl:variable>
+            <field name="{concat('mods.', $autrole)}">
+              <xsl:for-each select="../../mods:displayForm | ../../mods:namePart | ../../text()">
+                <xsl:value-of select="concat(' ',mcrxsl:normalizeUnicode(.))" />
+              </xsl:for-each>
+            </field>
+            <field name="{concat('mods.', $autrole, '.affiliation')}">
+              <xsl:value-of select="../../mods:affiliation" />
+            </field>
+          </xsl:for-each>
+        </xsl:otherwise>
+      </xsl:choose>
     </xsl:for-each> 
     <xsl:for-each select="mods:genre[contains(@authorityURI,'classifications/genres')]">
       <xsl:variable name="genre" select="."/>
