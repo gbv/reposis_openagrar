@@ -66,13 +66,32 @@
           </xsl:variable>						
           <xsl:if test="$autrole != 'noRole'">
             <field name="{concat('mods.', $autrole)}">
-              <xsl:for-each select="mods:displayForm | mods:namePart | text()">
-                <xsl:value-of select="concat(' ',mcrxsl:normalizeUnicode(.))" />
-              </xsl:for-each>
+			  <xsl:choose>
+			    <xsl:when test="mods:displayForm">
+				  <xsl:value-of select="mcrxsl:normalizeUnicode(mods:displayForm)" />
+			    </xsl:when>
+			    <xsl:when test="mods:namePart">
+                  <xsl:for-each select="mods:namePart">
+				    <xsl:choose>
+					  <xsl:when test="@type='family'">
+						  <xsl:value-of select="concat(mcrxsl:normalizeUnicode(.), ',')" />
+					  </xsl:when>
+					  <xsl:when test="@type='given'">
+						 <xsl:value-of select="concat(' ',mcrxsl:normalizeUnicode(.))" />
+					  </xsl:when>
+					  <xsl:otherwise>
+						  <xsl:value-of select="concat(mcrxsl:normalizeUnicode(.), ' ')" />
+					  </xsl:otherwise>
+					</xsl:choose>    
+                  </xsl:for-each>
+                </xsl:when>
+              </xsl:choose>
             </field>
-            <field name="{concat('mods.', $autrole, '.affiliation')}">
-              <xsl:value-of select="mods:affiliation" />
-            </field>
+            <xsl:if test="mods:affiliation">
+              <field name="{concat('mods.', $autrole, '.affiliation')}">
+                <xsl:value-of select="mods:affiliation" />
+              </field>
+            </xsl:if>
           </xsl:if>
         </xsl:when>
         <xsl:otherwise>
@@ -94,13 +113,32 @@
               </xsl:choose>
             </xsl:variable>
             <field name="{concat('mods.', $autrole)}">
-              <xsl:for-each select="../../mods:displayForm | ../../mods:namePart | ../../text()">
-                <xsl:value-of select="concat(' ',mcrxsl:normalizeUnicode(.))" />
-              </xsl:for-each>
+			  <xsl:choose>
+			    <xsl:when test="../../mods:displayForm">
+				  <xsl:value-of select="mcrxsl:normalizeUnicode(../../mods:displayForm)" />
+			    </xsl:when>
+			    <xsl:when test="../../mods:namePart">
+				  <xsl:for-each select="../../mods:namePart">
+					<xsl:choose>
+					  <xsl:when test="@type='family'">
+						  <xsl:value-of select="concat(mcrxsl:normalizeUnicode(.), ',')" />
+					  </xsl:when>
+					  <xsl:when test="@type='given'">
+						 <xsl:value-of select="concat(' ',mcrxsl:normalizeUnicode(.))" />
+					  </xsl:when>
+					  <xsl:otherwise>
+						  <xsl:value-of select="concat(mcrxsl:normalizeUnicode(.), ' ')" />
+					  </xsl:otherwise>
+					</xsl:choose>                    
+                  </xsl:for-each>
+			    </xsl:when>
+			  </xsl:choose>             
             </field>
-            <field name="{concat('mods.', $autrole, '.affiliation')}">
-              <xsl:value-of select="../../mods:affiliation" />
-            </field>
+            <xsl:if test="../../mods:affiliation">
+              <field name="{concat('mods.', $autrole, '.affiliation')}">
+                <xsl:value-of select="../../mods:affiliation" />
+              </field>
+            </xsl:if>
           </xsl:for-each>
         </xsl:otherwise>
       </xsl:choose>
