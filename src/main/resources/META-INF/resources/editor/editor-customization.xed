@@ -519,7 +519,11 @@
       <xed:repeat xpath="annualReviewComposit">
         <div class="mir-fieldset-content">
           <xed:bind xpath="mods:classification[@displayLabel='annual_review'][@authorityURI='https://www.openagrar.de/classifications/annual_review']">
+<<<<<<< HEAD
             <div class="form-group row">
+=======
+            <div class="form-group row  oa-noteLocationCorp">
+>>>>>>> 2da2d11 (OA-237 Saubere Erfassung von mehreren Berichtsjahren)
               <label class="col-md-3 col-form-label text-right">
                 <xed:output i18n="oa.annualReview" />
               </label>
@@ -532,7 +536,11 @@
                     </select>
                   </div>
                 </div>
+<<<<<<< HEAD
                 <mir:help-pmud help-text="{i18n:oa.help.annualReview}" pmud="true" />
+=======
+                <mir:help-pmud help-text="{i18n:oa.help.annualReview}" pmud="false" />
+>>>>>>> 2da2d11 (OA-237 Saubere Erfassung von mehreren Berichtsjahren)
               </xed:bind>
             </div>
             <mir:textfield xpath="@edition" label="oa.annualReview.edition" placeholder="{i18n:oa.placeholder.annualReview}" 
