@@ -9,7 +9,7 @@
   exclude-result-prefixes="xlink mcr acl" version="1.0"
 >
 
-  <xsl:template match="noteLocationCorp">
+  <xsl:template match="annualReviewComposit">
     <xsl:variable name="repeaterId">
       <xsl:choose>
         <xsl:when test="mods:name/@ID">
@@ -23,6 +23,14 @@
     <xsl:apply-templates select="mods:name" mode="addIDToName">
       <xsl:with-param name="ID" select="$repeaterId" />
     </xsl:apply-templates>
+    <xsl:for-each select="mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']">
+      <xsl:copy>
+        <xsl:attribute name="IDREF">
+          <xsl:value-of select="$repeaterId" />
+        </xsl:attribute>
+        <xsl:apply-templates select='@*|node()' />
+      </xsl:copy>
+    </xsl:for-each>
     <xsl:for-each select="mods:note">
       <xsl:copy>
         <xsl:attribute name="xlink:href" namespace="http://www.w3.org/1999/xlink">
@@ -44,6 +52,8 @@
       </xsl:copy>
     </xsl:for-each>
   </xsl:template>
+  
+  <xsl:template match="mods:classification[contains(@authorityURI,'annual_review') and not(@IDREF)]"/> 
 
   <xsl:template match="mods:name" mode="addIDToName">
     <xsl:param name="ID" />
@@ -55,6 +65,7 @@
     </xsl:copy>
   </xsl:template>
   
+
   <!-- <xsl:template match="mods:affiliation[@xlink:href='https://www.openagrar.de/classifications/mir_institutes#']">
     <mods:affiliation>
       <xsl:attribute name="xlink:href">

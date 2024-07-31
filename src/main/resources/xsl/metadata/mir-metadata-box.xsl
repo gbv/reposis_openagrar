@@ -331,8 +331,6 @@
               <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@type='characteristics']" />
               <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem/mods:extension[@type='metrics']" />
               <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@type='metrics']" />
-              <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']" />
-              <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']/@edition" />
             </xsl:if>
             
             <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:name[@type='corporate'][@ID or @authorityURI=$institutesURI]" />
@@ -345,6 +343,8 @@
 
 
   <!-- OA specific templates -->
+  
+  <!-- OA specific templates -->
   <xsl:template match="mods:name[@type='corporate' and @ID]" mode="oa">
     <xsl:variable name="id" select="concat('#', @ID)" />
     <tr>
@@ -356,23 +356,36 @@
       </td>
     </tr>
     <xsl:if
-      test="(not(mcrxsl:isCurrentUserGuestUser()) and ./../mods:note[@xlink:href=$id]) or (./../mods:location/mods:physicalLocation[@xlink:href=$id])">
+      test="(not(mcrxsl:isCurrentUserGuestUser()) and ./../mods:note[@xlink:href=$id]) or (./../mods:location/mods:physicalLocation[@xlink:href=$id]) 
+        or (../../mods:mods/mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review'])">
       <tr>
         <td colspan="2">
           <table class="metaData">
+            <xsl:call-template name="printMetaDate.mods">
+              <xsl:with-param name="nodes" select="./../mods:location/mods:physicalLocation[@xlink:href=$id]" />
+            </xsl:call-template>
             <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
+			  <xsl:variable name="idref"><xsl:value-of select="substring-after($id, '#')"/></xsl:variable>
+              <xsl:choose>
+			    <xsl:when test="../../mods:mods/mods:classification/@IDREF">								
+			      <xsl:apply-templates mode="present" select="../../mods:mods/mods:classification[@IDREF=$idref]" />
+			      <xsl:apply-templates mode="oa" select="../../mods:mods/mods:classification[@IDREF=$idref]/@edition" />
+			    </xsl:when>
+                <xsl:otherwise>
+				  <xsl:apply-templates mode="present" select="../../mods:mods/mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']" />
+			      <xsl:apply-templates mode="oa" select="../../mods:mods/mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']/@edition" />
+                </xsl:otherwise>
+			  </xsl:choose>
               <xsl:call-template name="printMetaDate.mods">
                 <xsl:with-param name="nodes" select="./../mods:note[@xlink:href=$id]" />
               </xsl:call-template>
             </xsl:if>
-            <xsl:call-template name="printMetaDate.mods">
-              <xsl:with-param name="nodes" select="./../mods:location/mods:physicalLocation[@xlink:href=$id]" />
-            </xsl:call-template>
           </table>
         </td>
       </tr>
     </xsl:if>
   </xsl:template>
+  
 
   <xsl:template name="printMetaDate.mods.relatedItem.oa">
     <xsl:param name="parentID" />
@@ -569,7 +582,6 @@
   </xsl:template>
 
   <xsl:template match="mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']/@edition" mode="oa">
-    <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
         <tr>
           <td valign="top" class="metaname">
             <xsl:value-of select="concat(i18n:translate('component.mods.metaData.dictionary.annual_review.edition'),':')" />
@@ -578,7 +590,6 @@
             <xsl:value-of select="." />
           </td>
         </tr>
-      </xsl:if>
   </xsl:template>
 
 </xsl:stylesheet>
