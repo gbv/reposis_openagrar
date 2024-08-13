@@ -1,371 +1,693 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MyCoReWebPage><section xml:lang="de" title="Erfassungsrichtlinien"><div class="row">
 <div class="col-md-10" lang="de">
-<h1>Erfassungsrichtlinien</h1>
+<h2 class="part" data-endline="8" data-startline="8" id="Eingabe-Autoren" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-weight: 600; line-height: 1.25; margin-top: 24px; margin-bottom: 16px; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238); letter-spacing: 0.35px;">Eingabe Autoren</h2>
 
-<h2> </h2>
+<h2 class="part" data-endline="11" data-startline="11" id="Folgende-Regeln-gelten-für-die-Erfassung-von-Personennamen" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-weight: 600; line-height: 1.25; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em; letter-spacing: 0.35px;">Ansetzung von Personennamen:</h2>
 
-<h2><a name="_Toc4589727"><strong>Eingabe Autoren</strong></a></h2>
+<p class="part" data-endline="18" data-startline="14" style="box-sizing: border-box; margin: 0px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px;">Namen sind immer in der Form “Nachname, Vorname” zu erfassen",</p>
 
-<p> </p>
+<p class="part" data-endline="18" data-startline="14" style="box-sizing: border-box; margin: 0px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px;">z.B. Aarestrup, Frank M.</p>
 
-<p>Folgende Regeln gelten für die Erfassung von Personennamen:</p>
+<p class="part" data-endline="18" data-startline="14" style="box-sizing: border-box; margin: 0px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px;"><br style="box-sizing: border-box;" />
+Wenn möglich den vollständig ausgeschriebenen Namen erfassen, dieser kann nachträglich für die Zitation durch die Anwendung eingekürzt werden.<br style="box-sizing: border-box;" />
+Immer ein Leerzeichen nach dem Komma setzen.<br style="box-sizing: border-box;" />
+Bei Verwendung von Initialen ebenfalls ein Leerzeichen nach dem Punkt setzten.</p>
 
-<p> </p>
+<p class="part" data-endline="18" data-startline="14" style="box-sizing: border-box; margin: 0px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px;"><br style="box-sizing: border-box;" />
+Bei Autoren aus den eigenen Einrichtungen muss die GND-Nummer verlinkt werden. Sollte keine GND-Nummer vorhanden sein, muss eine neue angelegt werden. Jede Einrichtung pflegt ihre GND-Daten selbst. Es empfiehlt sich mit einer eigenen GND-Liste zu arbeiten, um sicherzustellen, dass für einen Autor immer dieselbe GND-Nummer verwendet wird. So lassen sich Probleme durch Dubletten in der GND oder gleiche Namen besser vermeiden.</p>
 
-<ul>
-	<li>Namen sind immer in der Form "Nachname, Vorname" zu erfassen", z.B. Aarestrup, Frank M.</li>
-	<li>Wenn möglich den vollständig ausgeschriebenen Namen erfassen, dieser kann nachträglich für die Zitation durch die Anwendung eingekürzt werden.</li>
-	<li>Immer ein Leerzeichen nach dem Komma setzen.</li>
-	<li>Bei Verwendung von Initialen ebenfalls ein Leerzeichen nach dem Punkt setzten.</li>
-	<li>Bei Autoren aus den eigenen Einrichtungen muss die GND-Nummer verlinkt werden. Sollte keine GND-Nummer vorhanden sein, muss eine neue angelegt werden. Es empfiehlt sich mit einer eigenen GND-Liste zu arbeiten, um sicher zu stellen, dass für einen Autor immer dieselbe GND-Nummer verwendet wird. So lassen sich Probleme durch Dubletten in der GND oder gleiche Namen besser vermeiden.</li>
-</ul>
+<p class="part" data-endline="20" data-startline="20" style="box-sizing: border-box; margin: 0px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px;">HINWEIS: Eingabe von Corresponding Author, First Author, Co-Author: Funktion noch offen, wird in Zusammenhang mit Affiliation-Feld gelöst. Erster und letzter Autor wird derzeit über Reihenfolge ausgegeben.</p>
 
-<h2> </h2>
+<h2 class="part" data-endline="11" data-startline="11" id="Folgende-Regeln-gelten-für-die-Erfassung-von-Personennamen" style="font-weight: 600; line-height: 1.25; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em; letter-spacing: 0.35px;">Verknüpfung mit der GND und weitere Identifikatoren:</h2>
 
-<p>Eingabe von Corresponding Author, First Author, Co-Author: Funktion noch offen</p>
+<h2 class="part" data-endline="24" data-startline="24" id="Eingabe-Institutszugehörigkeiten" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-weight: 600; line-height: 1.25; margin-top: 24px; margin-bottom: 16px; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238); letter-spacing: 0.35px;">Eingabe Institutszugehörigkeiten</h2>
 
-<p>Was sind die Hinweise, worauf ist zu achten?</p>
+<p class="part" data-endline="27" data-startline="27" style="box-sizing: border-box; margin: 0px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px;">Die Zugehörigkeiten / Affiliations werden unter den Autorennamen eingefügt.</p>
 
-<h2> </h2>
+<p class="part" data-endline="29" data-startline="29" style="box-sizing: border-box; margin: 0px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px;">NEU Vorschlag verkürzte Eingabe der Affiliations, nur in Englisch und Deutsch, nur Einrichtung, Einzelinstitut, Land. Die Sprache für die Affiliation richtet sich nach der Sprache des jeweiligen Beitrags.</p>
 
-<h2><a name="_Toc4589728"><strong>Eingabe Institutszugehörigkeiten</strong></a></h2>
+<h3 class="part" data-endline="33" data-startline="33" id="Für-JKI-Angehörige-wird-sie-wie-folgt-angesetzt" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-weight: 600; line-height: 1.25; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em; letter-spacing: 0.35px;">Für JKI-Angehörige wird sie wie folgt angesetzt:</h3>
 
-<p> </p>
+<p class="part" data-endline="35" data-startline="35" style="box-sizing: border-box; margin: 0px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px;">Julius Kühn-Institut (JKI), entsprechendes Einzelinstitut, Land</p>
 
-<p>Die Zugehörigkeiten / Affiliations werden unter den Autorennamen eingefügt. Je nachdem in welcher Sprache der Beitrag verfasst wird, wird die Zugehörigkeit auch in dieser Sprache aufgeführt.</p>
+<p class="part" data-endline="37" data-startline="37" style="box-sizing: border-box; margin: 0px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px;">ODER</p>
 
-<p> </p>
+<p class="part" data-endline="39" data-startline="39" style="box-sizing: border-box; margin: 0px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px;">Julius Kühn-Institute (JKI), entsprechendes Einzelinstitut, Land</p>
 
-<p>Für JKI-Angehörige wird sie wie folgt angesetzt:</p>
+<p class="part" data-endline="43" data-startline="43" style="box-sizing: border-box; margin: 0px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px;">Beispiel:</p>
 
-<p>Julius Kühn-Institut (JKI), Bundesforschungsinstitut für Kulturpflanzen, entsprechendes Institut, eventuell Land</p>
+<p class="part" data-endline="45" data-startline="45" style="box-sizing: border-box; margin: 0px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px;">Julius Kühn-Institut (JKI), Institut für Epidemiologie und Pathogendiagnostik, Deutschland</p>
 
-<p>ODER</p>
+<p class="part" data-endline="47" data-startline="47" style="box-sizing: border-box; margin: 0px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px;">ODER</p>
 
-<p>Julius Kühn-Institute (JKI), Federal Research Centre for Cultivated Plants, entsprechendes Institut, eventuell Land</p>
+<p class="part" data-endline="49" data-startline="49" style="box-sizing: border-box; margin: 0px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px;">Julius Kühn-Institute (JKI), Institute for Epidemiology and Pathogen Diagnostics, Germany</p>
 
-<p> </p>
+<p class="part" data-endline="52" data-startline="52" style="box-sizing: border-box; margin: 0px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px;">NEU: Die Angabe der Stadt und ggf. aufgenommener Adressen entfällt, da sonst für Einzelinstitute mit mehreren Standorten mehrfache Einträge in den Affiliations entstehen.</p>
 
-<p><strong>Beispiel:</strong></p>
+<p class="part" data-endline="55" data-startline="55" style="box-sizing: border-box; margin: 0px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px;">NEU: Bei Autoren, die nicht zu den an OpenAgrar beteiligten Einrichtungen gehören, wird die Zugehörigkeit der Angaben auf dem Paper kopiert und entsprechend den Vorgaben oben (Einrichtung, entsprechendes Einzelinstitut, Land).</p>
 
-<p>Julius Kühn-Institut (JKI), Bundesforschungsinstitut für Kulturpflanzen, Institut für Epidemiologie und Pathogendiagnostik, Braunschweig, Deutschland</p>
+<h3 class="part" data-endline="59" data-startline="59" id="Ansetzung-bei-mehreren-Institutszugehörigkeiten" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-weight: 600; line-height: 1.25; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em; letter-spacing: 0.35px;">Ansetzung bei mehreren Institutszugehörigkeiten</h3>
 
-<p>ODER</p>
+<p class="part" data-endline="61" data-startline="61" style="box-sizing: border-box; margin: 0px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px;">Bisher werden mehrere Institutszugehörigkeiten mit Semikolon getrennt. Wichtig ist, dass die der eigenen Einrichtung zuerst steht, da bei Datenexporten möglicherweise nur die erste / nur eine Affiliation übernommen wird. Eine endgültige Lösung für die Affiliationen steht noch aus.</p>
 
-<p>Julius Kühn-Institute (JKI), Federal Research Centre for Cultivated Plants, Institute for Epidemiology and Pathogen Diagnostics, Brunswick, Germany</p>
+<h2 class="part" data-endline="63" data-startline="63" id="Vergabe-mehrere-Dokumententypen" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-weight: 600; line-height: 1.25; margin-top: 24px; margin-bottom: 16px; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238); letter-spacing: 0.35px;">Vergabe mehrere Dokumententypen</h2>
 
-<p> </p>
-
-<p> </p>
-
-<p>Bei Autoren, die nicht zu unserern EInrichtungen gehören, wird die Zugehörigkeit entsprechend der Angaben auf dem Paper kopiert.</p>
-
-<p> </p>
-
-<p>Ansetzung bei mehreren Institutszugehörigkeiten?</p>
-
-<p> </p>
-
-<h2><a name="_Toc4589729"><strong>Artikel</strong></a></h2>
-
-<p> </p>
-
-<p>Achtung: Kontrolle mit Hilfe der DOI oder des Titels, ob ein Artikel schon erfasst ist. (Empfehlenswert bei Artikeln mit Autoren verschiedener Einrichtungen)</p>
-
-<p> </p>
-
-<h3><a name="_Toc4589730">Erfassung von Artikeln über die DOI</a></h3>
-
-<p> </p>
-
-<ol>
-	<li>Über den Reiter Publizieren auf Dokument erfassen klicken.</li>
-	<li>Als Publikationstyp Artikel festlegen.</li>
-	<li>DOI im vorgesehen Feld eingeben und auf weiter klicken.</li>
-	<li>Lizenz wählen und Datensatz speichern.</li>
-	<li>Datensatz noch einmal im Admin-Editor öffnen und fehlende Angaben und GND-Nummern ergänzen sowie Autorenreihenfolge prüfen.</li>
-	<li>Wichtig: im Feld Related Item mit der entsprechenden Zeitschrift verknüpfen. Die Verknüpfung fehlt, auch wenn der Name der Zeitschrift im Titel eingetragen ist. Dazu Namen der Zeitschrift kopieren und über Publikation auswählen im Suchfeld suchen und auswählen.</li>
-</ol>
-
-<p> </p>
-
-<h3><a name="_Toc4589731">Manuelle Erfassung von Artikeln</a></h3>
-
-<p> </p>
-
-<h2><a name="_Toc4589732"><strong>Bücher</strong></a></h2>
-
-<p> </p>
-
-<ol>
-	<li>Prüfen, welche Form eines Buches vorliegt. àMonografie àSammelwerk à Tagungsband ODER Hochschulschrift (hier wählen, um welche Form es sich handelt, z.B. Dissertation, Habilitation)</li>
-	<li>Prüfen, ob entsprechender Datensatz schon vorhanden ist und ggf. fehlende Angaben ergänzen.</li>
-</ol>
-
-<p> </p>
-
-<h4>Manuelle Eingabe</h4>
-
-<p> </p>
-
-<h4>Eingabe über PPN</h4>
-
-<p> </p>
-
-<ul>
-	<li>derzeit nicht möglich</li>
-</ul>
-
-<p> </p>
-
-<p>Monografie: Dokumenttyp noch benötigt</p>
-
-<p>Sammelwerk</p>
-
-<p>Tagungsband</p>
-
-<p> </p>
-
-<h2><a name="_Toc4589733"><strong>Eingabe von Serientiteln</strong></a></h2>
-
-<p> </p>
-
-<h2><a name="_Toc4589734"><strong>Kapitel / Buchbeitrag</strong></a></h2>
-
-<ul>
-	<li>Eingabe von Einzelbeiträgen in Monografien und Sammelwerken</li>
-</ul>
-
-<p> </p>
-
-<ol>
-	<li>Prüfen, ob ein Datensatz des Buches schon vorhanden ist und ggf. fehlende Angaben ergänzen.</li>
-	<li>Dann über das Feld „Aktionen“ Buchkapitel anwählen.</li>
-	<li value="3">Publikationstyp auf „veröffentlicht“ setzen und die entsprechende Zugriffsberechtigung aus dem Drop-Down-Menü anwählen.</li>
-	<li value="4">Titel, Autoren (siehe Ansetzung Autoren), Seitenzahlen und Jahreszahl angeben.</li>
-</ol>
-
-<p> </p>
-
-<h2><a name="_Toc4589735"><strong>Konferenzbeiträge</strong></a></h2>
-
-<p>[noch zu besprechen]</p>
-
-<p> </p>
-
-<h2><a name="_Toc4589736"><strong>Einzelbeiträge in Tagungen</strong></a></h2>
-
-<p> </p>
-
-<ol>
-	<li> Kategorien auswählen
-	<ol style="list-style-type:lower-alpha;">
-		<li>Kategorie: Publikationstyp: Poster/Vortrag und Abstract/Zusammenfassung (diese Reihenfolge)</li>
-	</ol>
+<ul class="part" data-endline="69" data-startline="65" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; padding-left: 2em; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px;">
+	<li data-endline="65" data-startline="65" style="box-sizing: border-box;">Vergabe mehrerer Dokumententypen für einen Datensatz vermeiden. Dies führt beim Export der Daten in andere Systeme zu Problemen. Oft wird so nur der erste Dokumententyp übernommen. Bei nicht eineitlicher Aufnahme der Dokumetentypen können so Daten unsauber exportiert werden. Z.B. Unterschiedliche Datensätze mit der Reihenfolge “Vortrag UND Abstract” und “Abstract UND Vortrag”. Im Fremdsystem oder beim Export der Daten erscheinen als Dokumententyp sowohl Vortrag als auch Abstract.</li>
+	<li data-endline="69" data-startline="66" style="box-sizing: border-box; margin-top: 0.25em;">nur einen Dokumententyp verwenden, nähere Einordnung, Eingrenzung über das Feld Materialart/Ressourcetype möglich
+	<ul style="box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; padding-left: 2em;">
+		<li data-endline="67" data-startline="67" style="box-sizing: border-box;">Materialart nicht als Dokumententyp vergeben, sondern als Art, siehe Dokumententyp Karten / noch Klärungsbedarf</li>
+		<li data-endline="69" data-startline="68" style="box-sizing: border-box; margin-top: 0.25em;">bei Beiträgen in Tagungsbänden nur Abstract oder Artikel verwenden, (Eingrenzung nach Vortrag- oder Posterabtract kann als Art erfolgen --&gt; noch nicht im Produktivsystem realisiert)</li>
+		<li data-endline="69" data-startline="68" style="box-sizing: border-box; margin-top: 0.25em;">Dokumententyp Vortrag und Poster verwenden bei Vortrags- und Posterfolien</li>
+	</ul>
 	</li>
-</ol>
+</ul>
 
-<p>ODER</p>
+<h3 class="part" data-endline="70" data-startline="70" id="Generell" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-weight: 600; line-height: 1.25; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em; letter-spacing: 0.35px;">Generell</h3>
 
-<ol style="list-style-type:lower-alpha;">
-	<li value="2">Poster/Vortrag und Artikel/Aufsatz, wenn der Beitrag vom Umfang mehr als ein Abstract und Keywords hat und Artikelcharakter hat.</li>
-</ol>
+<p class="part" data-endline="72" data-startline="72" style="box-sizing: border-box; margin: 0px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px;">Achtung: Kontrolle mit Hilfe z.B. der DOI oder des Titels, ob ein Dokument schon erfasst ist. (Empfehlenswert bei Dokumenten mit Autoren verschiedener Einrichtungen).</p>
 
-<p> </p>
+<p class="part" data-endline="74" data-startline="74" style="box-sizing: border-box; margin: 0px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px;">Hinweis zur Eingabe des Titels: Sofern Teile des Titels in der Vorlage kursiv geschrieben werden (z.B. lateinische Bezeichnung von Schaderregern etc.) soll dies ebenfalls im Titel abgebildet werden. Derzeit funktioniert das über die Eingabe von HTML-Code, dabei wird das als kursiv geschriebene Wort in &lt;i&gt; &lt;/i&gt; eingefasst, z.B. <span style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px;">&lt;i&gt;kursiv&lt;/i&gt; </span><i style="box-sizing: border-box;"><i style="box-sizing: border-box;">.</i></i></p>
 
-<ol>
-	<li value="2">Nur die Poster/Vorträge von unseren eigenen Wissenschaftlern aufnehmen.</li>
-</ol>
+<h1 class="part" data-endline="78" data-startline="78" id="Importieren-von-Daten-über-Identifier" style="box-sizing: border-box; margin: 24px 0px 16px; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Importieren von Daten über Identifier</i></i></h1>
 
-<p> </p>
+<h3 class="part" data-endline="80" data-startline="80" id="Erfassung-von-Artikeln-über-die-DOI" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Erfassung von Artikeln über die DOI</i></i></h3>
 
-<h3><a name="_Toc4589737">Konferenzangabe</a></h3>
+<p class="part" data-endline="88" data-startline="83" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Über den Reiter Publizieren auf Dokument erfassen klicken.<br style="box-sizing: border-box;" />
+Als Publikationstyp Artikel festlegen.<br style="box-sizing: border-box;" />
+DOI im vorgesehen Feld eingeben und auf weiter klicken.<br style="box-sizing: border-box;" />
+Lizenz wählen und Datensatz speichern.<br style="box-sizing: border-box;" />
+Datensatz noch einmal im Admin-Editor öffnen und fehlende Angaben und GND-Nummern ergänzen sowie Autorenreihenfolge prüfen.<br style="box-sizing: border-box;" />
+Wichtig: im Feld Related Item mit der entsprechenden Zeitschrift verknüpfen. Die Verknüpfung fehlt, auch wenn der Name der Zeitschrift im Titel eingetragen ist. Dazu Namen der Zeitschrift kopieren und über Publikation auswählen im Suchfeld suchen und auswählen.</i></i></p>
 
-<p> </p>
+<h3 class="part" data-endline="90" data-startline="90" id="Erfassung-von-Büchern-über-die-PPN" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Erfassung von Büchern über die PPN</i></i></h3>
 
-<p>Die Konferenzangabe in der jeweiligen Sprache, wie auch der Vortrag/Poster ist, erfassen. Die Kategorie jeweils im Datensatz von der Tagung, sowie auch vom einzelnen Vortrag/Poster erfassen.</p>
+<p class="part" data-endline="94" data-startline="92" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">PPN des Buches im GBV heraussuchen. Über den Reiter Publizieren auf Dokument erfassen klicken.<br style="box-sizing: border-box;" />
+Als Publikationstyp entsprechenden Buchtyp (Hinweise siehe unten) festlegen.<br style="box-sizing: border-box;" />
+PPN im vorgesehen Feld eingeben und auf weiter klicken.</i></i></p>
 
-<p> </p>
+<p class="part" data-endline="100" data-startline="96" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Prüfen, welche Form eines Buches vorliegt. - Monografie - Sammelwerk - Tagungsband ODER Hochschulschrift (hier wählen, um welche Form es sich handelt, z.B. Dissertation, Habilitation)<br style="box-sizing: border-box;" />
+Buch kann nicht mehr als Dokumetentyp gewählt werden und ordnet nur die jeweiligen Buchtypen (Nacharbeit nötig).<br style="box-sizing: border-box;" />
+Hinweis:<br style="box-sizing: border-box;" />
+Derzeit funktioniert nur der PPN-Import, der über den Reiter “Publizieren”.<br style="box-sizing: border-box;" />
+Der PPN-Import über den Reiter “Dokument erfassen” funktioniert nicht.</i></i></p>
 
-<p>Konferenztitel ; Konferenzort, Land ; Datumsangabe</p>
+<h3 class="part" data-endline="102" data-startline="102" id="Erfassung-von-Zeitschriften-und-Serientiteln-über-die-ZDB-ID" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Erfassung von Zeitschriften und Serientiteln über die ZDB-ID</i></i></h3>
 
-<p>ODER</p>
+<p class="part" data-endline="107" data-startline="104" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">ZDB-ID der Zeitschrift oder Serie heraussuchen. Über den Reiter Publizieren auf Dokument erfassen klicken.<br style="box-sizing: border-box;" />
+Als Publikationstyp Zeitschrift oder Serie festlegen.<br style="box-sizing: border-box;" />
+ZDB-ID im vorgesehen Feld eingeben und auf weiter klicken. Datensatz speichern und nochmals über “Bearbeiten im Admin-Formular” öffnen. Daten prüfen und ggf. ergänzen. Wichtig: Wenn die Zeitschrift “referiert” ist, im Datensatz ergänzen.<br style="box-sizing: border-box;" />
+Weitere Hinweise zur Eingabe von Zeitschriften im Bereich “Zeitschriften”.</i></i></p>
 
-<p>Konferenztitel ; Konferenzort, Land ; Datumsangabe ; Konferenzort, Land ; Datumsangabe</p>
+<p class="part" data-endline="107" data-startline="104" style="box-sizing: border-box; margin: 0px 0px 16px;"><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:14px;">Bei Bänden in Serientiteln darauf achten, dass bei Related Item „In Serie“ angewählt ist und nicht „Erschienen in“.</span></span></p>
 
-<p> </p>
+<p class="part" data-endline="107" data-startline="104" style="box-sizing: border-box; margin: 0px 0px 16px;"> </p>
 
-<p><strong>Beispiel:</strong></p>
+<h3 class="part" data-endline="109" data-startline="109" id="Erfassung-von-Daten-über-Scopus-ID" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Erfassung von Daten über Scopus-ID</i></i></h3>
 
-<p>60. Deutsche Pflanzenschutztagung ; Halle-Wittenberg, Deutschland ; 2016.09.20-23</p>
+<p class="part" data-endline="110" data-startline="110" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">??</i></i></p>
 
-<p>ODER</p>
+<h3 class="part" data-endline="112" data-startline="112" id="Erfassung-von-Daten-über-Pubmed-ID" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Erfassung von Daten über Pubmed-ID</i></i></h3>
 
-<p>MAgPIE workshop ; Rome, Italy ; 2013.04.22-24 ; Madrid, Spain ; 2013.11.13-15</p>
+<p class="part" data-endline="113" data-startline="113" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">??</i></i></p>
 
-<p>ACHTUNG: Trennung der Felder gewünscht.</p>
+<h3 class="part" data-endline="115" data-startline="115" id="Erfassung-von-Daten-über-ISBN" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Erfassung von Daten über ISBN</i></i></h3>
 
-<p> </p>
+<p class="part" data-endline="116" data-startline="116" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">??</i></i></p>
 
-<h2><a name="_Toc4589738"><strong>Zeitschriften</strong></a></h2>
+<h3 class="part" data-endline="118" data-startline="118" id="Erfassung-von-Daten-über-ISSN" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Erfassung von Daten über ISSN</i></i></h3>
 
-<p> </p>
+<p class="part" data-endline="119" data-startline="119" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">??</i></i></p>
 
-<ol>
-	<li>Kontrolle, ob eine Zeitschrift schon erfasst ist. [Kontrolle ISSN, ZDB-ID, Titel – bei ISSN und ZDB-ID immer auch die Alternative (Druck oder elektronisch) prüfen!] Kann Open Agrar selbst nicht auch einen Abgleich machen, ob eine Zeitschrift schon angelegt ist oder nicht? Und dann eine entsprechende Info an den Bearbeiter geben?</li>
-	<li>Bei Neuerfassung einer Zeitschrift immer ISSNs und ZDB-IDs aller Ausgaben dieser Zeitschrift erfassen! (Druck, elektronisch, Vorgänger) -&gt; Sind alle Nummern richtig erfasst, wird die Zeitschrift bei der Suche auch gefunden.</li>
-	<li>Referiert Ja oder Nein nachtragen
-	<ol style="list-style-type:lower-alpha;">
-		<li>Die referiert-Angaben müssen teilweise auf den Verlagseiten der Zeitschrift nachrecherchiert werden. Hinweise darauf sind peer reviewed oder ein Editorial Board.</li>
-	</ol>
+<h3 class="part" data-endline="121" data-startline="121" id="Erfassung-von-Daten-über-IEEE" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Erfassung von Daten über IEEE</i></i></h3>
+
+<p class="part" data-endline="122" data-startline="122" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">??</i></i></p>
+
+<h2 class="part" data-endline="124" data-startline="124" id="Manuelle-Erfassung-von-Dokumenten" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Manuelle Erfassung von Dokumenten</i></i></h2>
+
+<p class="part" data-endline="126" data-startline="126" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Über den Reiter “Publizieren” das “Admin-Formular” wählen. Gewünschten Dokumententyp auswählen (z.B. Kapitel oder Artikel) und die für diesen Dokumententyp erforderlichen Datenfelder ausfüllen. Über “related item” lässt sich das übergeordnete Dokument (z.B. Buch oder Zeitschrift) verknüpfen, sofern das übergeordnete Dokument vorhanden ist.</i></i></p>
+
+<h2 class="part" data-endline="128" data-startline="128" id="Anhängen-von-Tochter-Dokumenten-an-Elterndokumente" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Anhängen von Tochter-Dokumenten an Elterndokumente</i></i></h2>
+
+<p class="part" data-endline="130" data-startline="130" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Über die Suchfunktion das Elterndokument suchen und auswählen (z.B. Zeitschrift oder Buch). Über den Reiter “Aktionen” den zu erfassenden Dokumententyp des Tochterdokuments anwählen. Es öffnet sich das mit dem gewählten Dokumentenyp ausgewählte Formular. Die für diesen Dokumententyp erforderlichen Datenfelder ausfüllen. Das Feld “related item” ist bereits mit dem übergeordneten Eltern-Dokument (z.B. Zeitschrift, Buch) verknüpft.</i></i></p>
+
+<h2 class="part" data-endline="132" data-startline="132" id="NEU-Ansetzung-der-Artikelnummer-und-Bandangaben-bei-Artikeln-die-nur-online--online-first-erscheinen" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Ansetzung der Artikelnummer und Bandangaben bei Artikeln, die nur online / online first erscheinen</i></i></h2>
+
+<p class="part" data-endline="135" data-startline="135" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Für die richtige Anzeige der Zitierung dürfen die Felder </i>Volume, Heft, Artikelnummer oder Seiten <i style="box-sizing: border-box;">nicht mit anderen Angaben bzw. Zusätzen wie online first, Art., Artikelnummer, Art.-No., ahead of print etc. befüllt werden. Die reine Nummerierung von Seiten bei Artikeln mit Artikelnummer oder online first Status, die nicht den zitierbaren Seitenangaben im Heft entspricht, sollte nicht in das Feld Seiten eingetragen werden (Dafür Feld Umfang nutzen). </i>Online-Artikel werden i.d.R. ohne Zusätze zitiert. <i style="box-sizing: border-box;">Das führt sonst zu einer unsauberen Zitierweise bei der Anzeige und beim Import. Es könnten so die Zusätze wie „Artikel-Nummer“, "online first"oder die Seitennummerierung anstelle der Artikelnummer in der Zitierung erscheinen, z.B.: </i></i></p>
+
+<p class="part" data-endline="135" data-startline="135" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">anstelle von</i></i></p>
+
+<p class="part" data-endline="135" data-startline="135" style="box-sizing: border-box; margin: 0px 0px 16px;">Heyman, L., Höfle, R., Kicherer, A., Trapp, O., Ait Barka, E., Töpfer, R., &amp; Höfte, M. (2021). The Durability of Quantitative Host Resistance and Variability in Pathogen Virulence in the Interaction Between European Grapevine Cultivars and Plasmopara viticola. Frontiers in Agronomy, 3, <strong>Article 684023.</strong></p>
+
+<p class="part" data-endline="135" data-startline="135" style="box-sizing: border-box; margin: 0px 0px 16px;"><font face="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><span style="font-size: 16px; letter-spacing: 0.35px;"><i>wird zitiert</i></span></font></p>
+
+<p class="part" data-endline="135" data-startline="135" style="box-sizing: border-box; margin: 0px 0px 16px;">Heyman, L., Höfle, R., Kicherer, A., Trapp, O., Ait Barka, E., Töpfer, R., &amp; Höfte, M. (2021). The Durability of Quantitative Host Resistance and Variability in Pathogen Virulence in the Interaction Between European Grapevine Cultivars and Plasmopara viticola. Frontiers in Agronomy, 3, <strong>1-20.</strong></p>
+
+<p class="part" data-endline="139" data-startline="139" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Autor/innen (Jahr): Titel. Zeitschrift. Artikelnummer. DOI</i></i></p>
+
+<h1 class="part" data-endline="144" data-startline="144" id="Hinweise-zu-einzelnen-Bereichen-im-Admin-Formular" style="box-sizing: border-box; margin: 24px 0px 16px; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Hinweise zu einzelnen Bereichen im Admin-Formular</i></i></h1>
+
+<h2 class="part" data-endline="146" data-startline="146" id="Bereich-Lizenzen" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Bereich Lizenzen</i></i></h2>
+
+<ul class="part" data-endline="149" data-startline="148" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; padding-left: 2em;">
+	<li data-endline="149" data-startline="148" style="box-sizing: border-box;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Hinweis: Sofern ein Beitrag eine CC Lizenz hat,darf/soll als Zugriffsberechtigung “uneingeschränkt” eingeben werden</i></i></li>
+</ul>
+
+<h2 class="part" data-endline="150" data-startline="150" id="Bereich-Titel" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Bereich Titel</i></i></h2>
+
+<h3 class="part" data-endline="152" data-startline="152" id="Veröffentlichung-Datum" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Veröffentlichung/ Datum</i></i></h3>
+
+<p class="part" data-endline="154" data-startline="153" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">NEU<br style="box-sizing: border-box;" />
+Das Feld “Veröffentlichung” muss immer mit dem aktuellen Datum des Beitrags ausgefüllt sein. Eine Eingrenzung des Datums, z.B. bei Änderung des online first in ein Print Datum kann über den kleinen Pfeil vorgenommen werden. Es muss immer das Feld “Veröffentlichung” UND das Feld “Veröffentlichung (Online)” und/oder das (durch Änderung der Vrlagsangaben später ergänzte) Feld “Veröffentlichung (Print)” gemeinsam ausgefüllt werden. Das Feld “Veröffentlichung” wird hier verwendet für die Anzeige der Publikationen und die Suchfunktion. Die eingrenzenden Datumsfelder, z.B. das Feld “Veröffentlichung (Online)”, für die Statistikseiten.</i></i></p>
+
+<table class="part" data-endline="163" data-startline="158" style="border-collapse: collapse; border-spacing: 0px; background-color: transparent; margin-top: 0px; margin-bottom: 16px; display: block; width: 728px; overflow: auto; word-break: keep-all;">
+	<thead style="box-sizing: border-box;">
+		<tr style="box-sizing: border-box; border-top: 1px solid rgb(204, 204, 204);">
+			<th style="box-sizing: border-box; padding: 6px 13px; text-align: left; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Art</i></i></th>
+			<th style="box-sizing: border-box; padding: 6px 13px; text-align: left; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Beschreibung</i></i></th>
+		</tr>
+	</thead>
+	<tbody style="box-sizing: border-box;">
+		<tr style="box-sizing: border-box; border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Veröffentlichung</i></i></td>
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">allg. Datum der Veröffentlichung</i></i></td>
+		</tr>
+		<tr style="box-sizing: border-box; background-color: rgb(248, 248, 248); border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Veröffentlichung (Online)</i></i></td>
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Zeitpunkt an dem das das Dokument online erschienen ist (besonders wichtig bei online first Publikationen, d.h. bei online-Veröffentlichung vor Erscheinen des Beitrags im Zeitschriftenheft / in Print)</i></i></td>
+		</tr>
+		<tr style="box-sizing: border-box; border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Veröffentlichung (Print)</i></i></td>
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Zeitpunkt an dem das das Dokument in einer Printpublikation erschienen ist</i></i></td>
+		</tr>
+		<tr style="box-sizing: border-box; background-color: rgb(248, 248, 248); border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Veröffentlichung (Digitalisat)</i></i></td>
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Zeitpunkt an dem das Digitalisat des Dokuments veröffentlich wurde (Retrodigitalisierung)</i></i></td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 class="part" data-endline="165" data-startline="165" id="Bereich-Schlagwortgruppe" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Bereich Schlagwortgruppe</i></i></h2>
+
+<h2 class="part" data-endline="167" data-startline="167" id="Bereich-Abstract-Beschreibung" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Bereich Abstract, Beschreibung</i></i></h2>
+
+<h2 class="part" data-endline="169" data-startline="169" id="Bereich-Projektinformation-OpenAIRE" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Bereich Projektinformation (OpenAIRE)</i></i></h2>
+
+<h2 class="part" data-endline="171" data-startline="171" id="Bereich-Journal-Metriken" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Bereich Journal Metriken</i></i></h2>
+
+<h2 class="part" data-endline="173" data-startline="173" id="Bereich-related-item" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Bereich related item</i></i></h2>
+
+<ul class="part" data-endline="177" data-startline="174" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; padding-left: 2em;">
+	<li data-endline="177" data-startline="174" style="box-sizing: border-box;">
+	<p style="box-sizing: border-box; margin: 16px 0px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Hinweis: Verweis nur in eine Richtung / in einem Dokument setzten. Nicht in beiden. Dies kann zu Zirkelbezug und weiteren Fehlern führen</i></i></p>
+
+	<p style="box-sizing: border-box; margin: 16px 0px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Es sind Regeln explizit für jede Verweisart notwendig:</i></i></p>
 	</li>
-	<li>Verlag ergänzen und die DDC-Sachgruppe der DNB</li>
-	<li>Erscheinungsort, Sprache und DNB-Sachgruppen ergänzen, da diese beim Import nicht mitkommen</li>
-	<li>Nachnutzungsrechte ergänzen, falls bekannt</li>
-	<li>Als URL immer den Link zur Uni Regensburg, dann kann jeder gleich sehen, ob er Zugriff auf die Zeitschrift hat oder nicht. Ist für unsere Nutzer sicher ganz wichtig.</li>
+</ul>
+
+<p class="part" data-endline="183" data-startline="178" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">andere Version – immer vom später auf das eher publizierte<br style="box-sizing: border-box;" />
+anderes Format – immer vom später auf das eher publizierte<br style="box-sizing: border-box;" />
+Vorgänger/Nachfolger – immer nur Vorgänger<br style="box-sizing: border-box;" />
+Referenziert/wird referenziert von – immer nur referenziert<br style="box-sizing: border-box;" />
+Definition referenziert: Die Publikation referenziert die Forschungsdaten.<br style="box-sizing: border-box;" />
+Für die Definitionen ist auch die MODS-Dokumentation nochmal hilfreich: <a href="https://www.loc.gov/standards/mods/userguide/relateditem.html" rel="noopener" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none;" target="_blank">https://www.loc.gov/standards/mods/userguide/relateditem.html</a></i></i></p>
+
+<ul class="part" data-endline="187" data-startline="186" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; padding-left: 2em;">
+	<li data-endline="187" data-startline="186" style="box-sizing: border-box;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">über related item lassen sich falsch zugeordnete Elterndokumente verändern und Tochterdokumente “umhängen”</i></i></li>
+</ul>
+
+<h1 class="part" data-endline="188" data-startline="188" id="Konferenzbeiträge" style="box-sizing: border-box; margin: 24px 0px 16px; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Konferenzbeiträge</i></i></h1>
+
+<p class="part" data-endline="189" data-startline="189" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">[noch zu besprechen]</i></i></p>
+
+<h2 class="part" data-endline="193" data-startline="193" id="Einzelbeiträge-in-Tagungensbänden" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Einzelbeiträge in Tagungensbänden</i></i></h2>
+
+<p class="part" data-endline="195" data-startline="195" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Für Einzelbeiträge in Tagungenbänden können die Publiktionstypen Artikel/Aufsatz und Abstract verwendet werden.</i></i></p>
+
+<p class="part" data-endline="197" data-startline="197" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Sofern der Beitrag vom Umfang über das Abstract und Keywords hinausgeht und eine Einleitung, einen Methodenteil und ein Fazit hat, wird Artikel/Aufsatz verwendet (Prüfen auf Artikelcharakter).</i></i></p>
+
+<p class="part" data-endline="199" data-startline="199" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Die Dokumemtentypen Poster und Vortrag sollen nicht bei Tagungsbänden verwendet werden. Diese werden genutzt für die Poster- bzw. Vortragsfolien.</i></i></p>
+
+<p class="part" data-endline="202" data-startline="202" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Nur die Poster/Vorträge von unseren eigenen Wissenschaftlern aufnehmen.</i></i></p>
+
+<h2 class="part" data-endline="204" data-startline="204" id="Einzelbeiträge-in-Tagungen-ohne-Tagungsband" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Einzelbeiträge in Tagungen ohne Tagungsband</i></i></h2>
+
+<p class="part" data-endline="206" data-startline="206" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Für Tagungen oder Tagungsbeiträge für die kein Tagungsband erschienen ist, wird kein “fiktiver” Tagungsband angelegt. Diese Beiträge stehen einzeln. Es muss aber das Feld Konferenz nach unten genannten Schema ausgefüllt werden.</i></i></p>
+
+<p class="part" data-endline="208" data-startline="208" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Vorschlag / Wunsch seitens GBV: Die Tagungen sollen über die GND ebenfalls erfasst werden. So lassen sich alle Dokumente, die zu einer Tagung erschienen sind, unabhängig eines Tagungsbandes abrufen. Hier müssten die Konferenz-GNDs ebenso wie die Personen-GNDs durch die Einrichtungen gepflegt werden.</i></i></p>
+
+<h2 class="part" data-endline="210" data-startline="210" id="Konferenzangabe" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Konferenzangabe</i></i></h2>
+
+<p class="part" data-endline="213" data-startline="213" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Die Konferenzangabe in der jeweiligen Sprache, wie auch der Vortrag/Poster ist, erfassen. Die Kategorie jeweils im Datensatz von der Tagung, sowie auch vom einzelnen Vortrag/Poster erfassen.</i></i></p>
+
+<p class="part" data-endline="217" data-startline="217" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Konferenztitel ; Konferenzort, Land ; Datumsangabe</i></i></p>
+
+<p class="part" data-endline="219" data-startline="219" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">ODER</i></i></p>
+
+<p class="part" data-endline="221" data-startline="221" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Konferenztitel ; Konferenzort, Land ; Datumsangabe ; Konferenzort, Land ; Datumsangabe</i></i></p>
+
+<p class="part" data-endline="225" data-startline="225" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Beispiel:</i></i></p>
+
+<ol class="part" data-endline="228" data-startline="227" start="60" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; padding-left: 2em;">
+	<li data-endline="228" data-startline="227" style="box-sizing: border-box;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Deutsche Pflanzenschutztagung ; Halle-Wittenberg, Deutschland ; 2016.09.20-23</i></i></li>
 </ol>
 
-<p> </p>
+<p class="part" data-endline="229" data-startline="229" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">ODER</i></i></p>
 
-<h2><a name="_Toc4589739"><strong>Forschungsdaten</strong></a></h2>
+<p class="part" data-endline="231" data-startline="231" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">MAgPIE workshop ; Rome, Italy ; 2013.04.22-24 ; Madrid, Spain ; 2013.11.13-15</i></i></p>
 
-<p> </p>
+<p class="part" data-endline="233" data-startline="233" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">ACHTUNG: Trennung der Felder gewünscht.</i></i></p>
 
-<h2><a name="_Toc4589740"><strong>weitere Veröffentlichungen</strong></a></h2>
+<p class="part" data-endline="235" data-startline="235" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">TO DO: Ansetzung, wenn der Zeitraum über verschiedene Monate, vllt Jahreswechsel läuft:</i></i></p>
 
-<h3><a name="_Toc4589741">Report</a></h3>
+<h2 class="part" data-endline="237" data-startline="237" id="Zeitschriften" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Zeitschriften</i></i></h2>
 
-<h3> </h3>
+<p class="part" data-endline="247" data-startline="240" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Kontrolle, ob eine Zeitschrift schon erfasst ist. [Kontrolle ISSN, ZDB-ID, Titel – bei ISSN und ZDB-ID immer auch die Alternative (Druck oder elektronisch) prüfen!] Kann Open Agrar selbst nicht auch einen Abgleich machen, ob eine Zeitschrift schon angelegt ist oder nicht? Und dann eine entsprechende Info an den Bearbeiter geben?<br style="box-sizing: border-box;" />
+Bei Neuerfassung einer Zeitschrift immer ISSNs und ZDB-IDs aller Ausgaben dieser Zeitschrift erfassen! (Druck, elektronisch, Vorgänger) -&gt; Sind alle Nummern richtig erfasst, wird die Zeitschrift bei der Suche auch gefunden.<br style="box-sizing: border-box;" />
+Referiert Ja oder Nein nachtragen<br style="box-sizing: border-box;" />
+Die referiert-Angaben müssen teilweise auf den Verlagseiten der Zeitschrift nachrecherchiert werden. Hinweise darauf sind peer reviewed oder ein Editorial Board.<br style="box-sizing: border-box;" />
+Verlag ergänzen und die DDC-Sachgruppe der DNB<br style="box-sizing: border-box;" />
+Erscheinungsort, Sprache und DNB-Sachgruppen ergänzen, da diese beim Import nicht mitkommen<br style="box-sizing: border-box;" />
+Nachnutzungsrechte ergänzen, falls bekannt<br style="box-sizing: border-box;" />
+Als URL immer den Link zur Uni Regensburg, dann kann jeder gleich sehen, ob er Zugriff auf die Zeitschrift hat oder nicht. Ist für unsere Nutzer sicher ganz wichtig.</i></i></p>
 
-<h3><a name="_Toc4589742">Fachliche Stellungnahme</a></h3>
+<p class="part" data-endline="249" data-startline="249" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">ACHTUNG NEU</i></i></p>
 
-<h3> </h3>
+<p class="part" data-endline="252" data-startline="251" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Beim Anlegen neuer Zeitschriftendatensätze werden diesen nicht automatisch Impact Faktoren (IF) zugeordnet, da kein „Echtzeitabgleich“ beim Anlegen mit den IF-csv erfolgt. Der Abgleich erfolgt immer Mitte des laufenden Jahres (Juli).<br style="box-sizing: border-box;" />
+Problem: Artikel in neu angelegten Zeitschriften mit IF, die z.B. für die Internetdarstellung in der Rubrik „mit IF“ zugeordnet werden sollen, bekommen kein IF zugeordnet und erscheinen als Artikel ohne IF. Als Übergangslösung für die Einpfleger/innen: Nach Anlegen eines neuen Zeitschriftensatzes müssen die IF auf Zeitschriftenlevel manuell eingetragen werden.</i></i></p>
 
-<h3><a name="_Toc4589743">Flyer</a></h3>
+<h2 class="part" data-endline="258" data-startline="258" id="weitere-Veröffentlichungen" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">weitere Veröffentlichungen</i></i></h2>
 
-<h3> </h3>
+<p class="part" data-endline="259" data-startline="259" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">[für weitere Hinweise zur Eingabe, sofern die allgemeinen Hinweise zur Erfassung nicht ausreichen]</i></i></p>
 
-<h3><a name="_Toc4589744">Rezension</a></h3>
+<h3 class="part" data-endline="261" data-startline="261" id="Forschungsdaten" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Forschungsdaten</i></i></h3>
 
-<h3> </h3>
+<h3 class="part" data-endline="263" data-startline="263" id="Report" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Report</i></i></h3>
 
-<h3><a name="_Toc4589745">Interview</a></h3>
+<h3 class="part" data-endline="265" data-startline="265" id="Fachliche-Stellungnahme" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Fachliche Stellungnahme</i></i></h3>
 
-<h3> </h3>
+<h3 class="part" data-endline="267" data-startline="267" id="Flyer" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Flyer</i></i></h3>
 
-<h3><a name="_Toc4589746">Filmbeitrag</a></h3>
+<h3 class="part" data-endline="269" data-startline="269" id="Rezension" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Rezension</i></i></h3>
 
-<h3> </h3>
+<h3 class="part" data-endline="271" data-startline="271" id="Interview" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Interview</i></i></h3>
 
-<h3><a name="_Toc4589747">Hausinterne Veröffentlichungen</a></h3>
+<h3 class="part" data-endline="273" data-startline="273" id="Filmbeitrag" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Filmbeitrag</i></i></h3>
 
-<p> </p>
+<h3 class="part" data-endline="275" data-startline="275" id="Hausinterne-Veröffentlichungen" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Hausinterne Veröffentlichungen</i></i></h3>
 
-<h2><a name="_Toc4589748"><strong>Publikationstypen</strong></a></h2>
+<h2 class="part" data-endline="278" data-startline="278" id="Publikationstypen" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Publikationstypen</i></i></h2>
 
-<table border="1" cellpadding="0" cellspacing="0">
+<table border="1" cellpadding="0" cellspacing="0" style="width:728px;" width="0">
+	<thead>
+		<tr>
+			<th>
+			<p><strong><em>Name</em></strong></p>
+			</th>
+			<th>
+			<p><strong><em>Beschreibung</em></strong></p>
+			</th>
+		</tr>
+	</thead>
 	<tbody>
 		<tr>
-			<td style="width:168px;">
-			<p>Name</p>
+			<td>
+			<p><em>Artikel</em></p>
 			</td>
-			<td style="width:446px;">
-			<p>Beschreibung</p>
-			</td>
-		</tr>
-		<tr>
-			<td style="width:168px;">
-			<p>Artikel</p>
-			</td>
-			<td style="width:446px;">
-			<p>wissenschaftlicher Artikel</p>
+			<td>
+			<p><em>Ein Artikel ist ein Artikel, der in einer wissenschaftlichen oder praxisorientierten Zeitschrift, einem periodisch oder fortlaufend erscheinenden Medium veröffentlicht ist. Es ist ein abgeschlossener unselbstständiger Beitrag zu einem abgegrenzten Thema / einer Fragestellung, erstellt durch ein oder mehrere Autoren, der zusammen mit anderen Beiträgen einer Zeitschrift veröffentlicht wurde.</em></p>
 			</td>
 		</tr>
 		<tr>
-			<td style="width:168px;">
-			<p>Aufsatz</p>
+			<td>
+			<p><em>Korrektur</em></p>
 			</td>
-			<td style="width:446px;">
+			<td>
+			<p><em>Korrektur / Corrigendum zu einem wissenschaftlichen Artikel.</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Mitteilungen/Nachrichten</em></p>
+			</td>
+			<td>
+			<p><em>Kurzmitteilungen in wissenschaftlichen Zeitschriften. </em>Kleine Beiträge in einer wissenschaftlichen Zeitschrift, einem periodisch oder fortlaufend erscheinenden Medium. Sie dienen der kurzen und knappen Information über verschiedene Sachverhalte, Tagungshinweise oder Personalia.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Kapitel</em></p>
+			</td>
+			<td>
+			<p><em>Ein Buchkapitel ist ein (wissenschaftlicher) Beitrag, der in einem (wissenschaftlichen) Buch (Monografie, Sammelwerk) veröffentlicht ist. Es ist ein abgeschlossener unselbstständiger Beitrag zu einem abgegrenzten Thema / einer Fragestellung, erstellt durch ein oder mehrere Autoren.</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Monografie</em></p>
+			</td>
+			<td>
+			<p><em>Eine Monographie ist ein Buch, <u>geschrieben</u> von einem oder mehreren Autoren, das sich einem spezifischen Thema widmet und dieses umfassend und unter Berücksichtigung der relevanten Forschungsergebnisse darstellt. Ein selbstständiges, abgeschlossenes Werk einzelner oder mehrerer Autoren.</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Sammelwerk</em></p>
+			</td>
+			<td>
+			<p><em>Ein Buch, das von einer oder mehreren Personen <u>herausgegeben</u> wurde. Es enthält Beiträge in Form von Kapiteln oder Aufsätzen verschiedener Autoren</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Festschrift</em></p>
+			</td>
+			<td>
+			<p><em>Eine Form des Sammelwerks, die aus Anlass eines Jubiläums herausgegeben wird. Weitere Erläuterungen siehe Sammelwerk.</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Tagungsband</em></p>
+			</td>
+			<td>
+			<p><em>Eine Form des Sammelwerks, die aus Anlass eines Kongresses, Workshops oder einer Tagung herausgegeben wird. Weitere Erläuterungen siehe Sammelwerk.</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Dissertation</em></p>
+			</td>
+			<td>
+			<p><em>Eine Dissertation ist eine wissenschaftliche Arbeit für den Erwerb des Doktorgrades.</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Habilitation</em></p>
+			</td>
+			<td>
+			<p><em>Eine Habilitation ist eine wissenschaftliche Arbeit für den Erwerb der universitären Lehrbefähigung.</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Diplomarbeit</em></p>
+			</td>
+			<td>
 			<p> </p>
 			</td>
 		</tr>
 		<tr>
-			<td style="width:168px;">
-			<p>Beitrag</p>
+			<td>
+			<p><em>Forschungsbericht</em></p>
 			</td>
-			<td style="width:446px;">
-			<p> </p>
-			</td>
-		</tr>
-		<tr>
-			<td style="width:168px;">
-			<p>Buch</p>
-			</td>
-			<td style="width:446px;">
-			<p>Kann eine Monografie, ein Sammelwerk etc. sein.</p>
+			<td>
+			<p>Ein Forschungsbericht ist eine öffentliche wissenschaftliche Publikation, die entweder von der Institution herausgegeben wird, in der die Forschung stattfindet, oder im Auftrag einer Institution angefertigt wurde. Dieser Publikationstyp enthält auch: Gutachten, Forschungs- und Abschlussberichte öffentlicher Einrichtungen, wissenschaftliche Expertisen und Studien].</p>
 			</td>
 		</tr>
 		<tr>
-			<td style="width:168px;">
-			<p>Kapitel</p>
+			<td>
+			<p><em>Report</em></p>
 			</td>
-			<td style="width:446px;">
-			<p>Kapitel eines Buches</p>
-			</td>
-		</tr>
-		<tr>
-			<td style="width:168px;">
-			<p> </p>
-			</td>
-			<td style="width:446px;">
-			<p> </p>
+			<td>
+			<p>Ein Arbeitspapier ist eine öffentliche wissenschaftliche Publikation, die entweder von der Institution herausgegeben wird, in der die Forschung stattfindet, oder im Auftrag einer Institution angefertigt wurde. Dieser Publikationstyp enthält auch: Gutachten, Forschungs- und Abschlussberichte öffentlicher Einrichtungen, wissenschaftliche Expertisen und Studien. („Report“ ist definiert als „Arbeitspapier“ im KDSF) </p>
 			</td>
 		</tr>
 		<tr>
-			<td style="width:168px;">
-			<p>Mitteilungen/Nachrichten</p>
+			<td>
+			<p>Vorwort/ Nachwort</p>
 			</td>
-			<td style="width:446px;">
-			<p>Kurzmitteilungen in wissenschaftlichen Zeitschriften</p>
-			</td>
-		</tr>
-		<tr>
-			<td style="width:168px;">
-			<p>Monografie</p>
-			</td>
-			<td style="width:446px;">
-			<p>Ein selbstständiges, abgeschlossenes Werk einzelner oder mehrerer Autoren.</p>
+			<td>
+			<p>Editorial. Durch den Herausgeber oder im Auftrag des Herausgebers verfasster Text, der die Meinung der Redaktion /des Herausgebergremiums widergibt.</p>
 			</td>
 		</tr>
 		<tr>
-			<td style="width:168px;">
-			<p>Report</p>
+			<td>
+			<p>Review (Artikel)</p>
 			</td>
-			<td style="width:446px;">
-			<p>Texte und Berichte, die nicht anderen Kategorien zugeordnet werden können.</p>
-			</td>
-		</tr>
-		<tr>
-			<td style="width:168px;">
-			<p>Sammelwerk</p>
-			</td>
-			<td style="width:446px;">
-			<p>Abgeschlossenes Werk, welches einzelne Beiträge verschiedener Autoren versammelt. In der Regel verfügt es über einen oder mehrere Herausgeber.</p>
+			<td>
+			<p>Ein Review ist ein Überblicksartikel, der die Summe von veröffentlichten wissenschaftlichen Arbeiten zu einem Thema zusammenfasst; normalerweise von einer besonders qualifizierten Person geschrieben.</p>
 			</td>
 		</tr>
 		<tr>
-			<td style="width:168px;">
-			<p>Tagungsband</p>
+			<td>
+			<p><em>Review (Rezension)</em></p>
 			</td>
-			<td style="width:446px;">
-			<p>Sammlung von Beiträgen einer wissenschaftlichen Tagung. Darunter fallen Konferenzbände, Proceedings, Abstractbände</p>
+			<td>
+			<p>Kritische Besprechung eines Buches, einer wissenschaftlichen Veröffentlichung in einer Zeitung oder Zeitschrift.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Fachliche Stellungnahme</em></p>
+			</td>
+			<td>
+			<p><em>todo</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Preprint</em></p>
+			</td>
+			<td>
+			<p><em>Wissenschaftlicher Artikel, der in einem wissenschaftlichen Repositorium, z.B. arXiv.org, oder einer Datenbank veröffentlicht wird ohne Peer Review bzw. Begutachtung noch ausstehend.</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Letter to the editor</em></p>
+			</td>
+			<td>
+			<p><em>Zuschrift an den Editor</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Zeitschrift</em></p>
+			</td>
+			<td>
+			<p><em>Periodisch oder fortlaufend erscheinenden Medium.</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Serie / Schriftenreihe / Reihe</em></p>
+			</td>
+			<td>
+			<p><em>Fortlaufende, in unregelmäßigen Abständen erscheinende Publikationsform, die unter einem gemeinsamen Gesamttitel (= Serien- oder Reihentitel) erscheint. Sie enthält Publikationen (Monografien, Sammelwerke), die jeweils in sich abgeschlossen sind, aber in einem allgemeinen thematischen Bezug zu einander stehen.</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Zeitschriftenheft</em></p>
+			</td>
+			<td>
+			<p><em>Gesamtes Heft einer Zeitschrift. Ein Heft kann z.B. Monatlich erscheinen, thematisch spezifisch sein und enthält mehrere gleichartige oder verschieden Beiträge wie Artikel, Editorials, Short Communication usw.</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Lexikon</em></p>
+			</td>
+			<td>
+			<p><em>Nach Stichwörtern alphabetisch geordnetes Nachschlagewerk.</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Lexikoneintrag</em></p>
+			</td>
+			<td>
+			<p><em>Beitrag in einem Nachschlagewerk.</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Abstract / Zusammenfassung</em></p>
+			</td>
+			<td>
+			<p><em>Abstract ist ein kurzer Text, der eine Präsentation an einer Konferenz zusammenfasst und entweder in einer wissenschaftlichen Zeitschrift oder in einem Konferenzband veröffentlicht wurde.</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Vortrag</em></p>
+			</td>
+			<td>
+			<p><em>Vortragsfolien sind öffentlich zugängliche visuelle Darstellungen von mündlichen Beiträgen auf wissenschaftlichen Veranstaltungen.</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Poster</em></p>
+			</td>
+			<td>
+			<p><em>Ein Konferenzposter ist eine visuelle Präsentation wissenschaftlicher Ergebnisse, die als Poster auf einer Konferenz präsentiert wurden.</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Flyer</em></p>
+			</td>
+			<td>
+			<p><em>Flugblatt, Merkblatt oder Handzettel</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Forschungsdaten</em></p>
+			</td>
+			<td>
+			<p><em>Ein öffentlich zugängliches Set von strukturierten Beobachtungen, Messungen oder Fakten, die in einem Forschungsprojekt erfasst oder zu wissenschaftlichen Zwecken aufbereitet wurden (Scientific Use Files). Eine Dokumentation dazu muss zugänglich sein.</em></p>
+
+			<p><em>[Dieser Publikationstyp enthält auch: Karten &amp; Bilder, Digitalisat, Virtuelle Ausstellung , Film.]</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Methodenbeschreibung</em></p>
+			</td>
+			<td>
+			<p><em>Wissenschaftlicher Beitrag, der eine Vorgehensweise zur Lösung einer Forschungsfrage beschreibt.</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Hausinterne Veröffentlichung</em></p>
+			</td>
+			<td>
+			<p><em>Unveröffentlichter Beitrag für hausinterne Kommunikation.</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Film/Video</em></p>
+			</td>
+			<td>
+			<p><em>Mitschnitte aus Fernsehsendungen, in Eigenproduktion erstellte Filme, z.B. Imagefilm.</em></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><em>Tondokument</em></p>
+			</td>
+			<td>
+			<p><em>Audio. Das Werk enthält relevante Anteile an akustischen Quellen. Beispiele sind Schallplatten, Tonbandkassetten, Audio-Dateien.</em></p>
 			</td>
 		</tr>
 	</tbody>
 </table>
 
+<h1 class="part" data-endline="300" data-startline="300" id="Impaktfaktoren" style="box-sizing: border-box; margin: 24px 0px 16px; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Impaktfaktoren</i></i></h1>
+
+<ul class="part" data-endline="303" data-startline="301" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; padding-left: 2em;">
+	<li data-endline="301" data-startline="301" style="box-sizing: border-box;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">liegen verschlüsselt vor und sind nur für Angemeldete sichtbar , werden über related item an untergeordnete Dokumente vererbt, (Vorjahresfaktor und aktueller)</i></i></li>
+	<li data-endline="303" data-startline="302" style="box-sizing: border-box; margin-top: 0.25em;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">wenn Zeitschriftenheft dazwischenhängt, wird es ebenfalls vererbt (wird noch geprüft)</i></i></li>
+</ul>
+
+<h1 class="part" data-endline="304" data-startline="304" id="Generieren-von-DOI-über-OA" style="box-sizing: border-box; margin: 24px 0px 16px; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Generieren von DOI über OA</i></i></h1>
+
+<ul class="part" data-endline="306" data-startline="305" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; padding-left: 2em;">
+	<li data-endline="306" data-startline="305" style="box-sizing: border-box;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">welche Metadatenfelder müssen für welchen Dokumententyp befüllt werden, damit die Daten sauber gemappt werden?</i></i></li>
+</ul>
+
+<h1 class="part" data-endline="307" data-startline="307" id="PRÜFEN--Aufräumarbeiten--offene-Fragen" style="box-sizing: border-box; margin: 24px 0px 16px; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">PRÜFEN / Aufräumarbeiten / offene Fragen</i></i></h1>
+
+<table class="part" data-endline="331" data-startline="310" style="border-collapse: collapse; border-spacing: 0px; background-color: transparent; margin-top: 0px; margin-bottom: 16px; display: block; width: 728px; overflow: auto; word-break: keep-all;">
+	<thead style="box-sizing: border-box;">
+		<tr style="box-sizing: border-box; border-top: 1px solid rgb(204, 204, 204);">
+			<th style="box-sizing: border-box; padding: 6px 13px; text-align: left; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">TO DO</i></i></th>
+		</tr>
+	</thead>
+	<tbody style="box-sizing: border-box;">
+		<tr style="box-sizing: border-box; border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;"><a href="https://www.openagrar.de/receive/openagrar_mods_00055087" rel="noopener" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none;" target="_blank">https://www.openagrar.de/receive/openagrar_mods_00055087</a> Kann Dokumententyp Bild gelöscht werden? / Verbereitungskarten eher als Forschungsdaten aufnehmen bzw. nach deren Inhalt mit der Eingrenzung nach Bild bzw. Karte über die Materialart? Frage an FLI</i></i></td>
+		</tr>
+		<tr style="box-sizing: border-box; background-color: rgb(248, 248, 248); border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Bitte bereinigen / OA-Dokumente immer als Zugriffsberechtigung uneingeschränkt aufnehmen <a href="https://www.openagrar.de/servlets/solr/select?q=%2Bcategory.top:%22mir_licenses:oa%22+%2BderCount:%7b0+TO+*%5d+%2BobjectType:%22mods%22&amp;fl=*&amp;sort=mods.dateIssued+desc&amp;rows=20&amp;version=4.5&amp;mask=content/search/complex_intern.xed&amp;fq=worldReadableComplete:false" rel="noopener" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none;" target="_blank">OA-Publikationen mit angehängtem OA-Dokument auf dem eine Zugriffsbeschränkung liegt</a> (8)</i></i></td>
+		</tr>
+		<tr style="box-sizing: border-box; border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">OA-Publikationen ohne frei verfügbare Datei:</i></i></td>
+		</tr>
+		<tr style="box-sizing: border-box; background-color: rgb(248, 248, 248); border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">• <a href="https://www.openagrar.de/servlets/solr/select?q=%2Bcategory.top:%22mir_institutes:jki%22+%2Bcategory.top:%22mir_licenses:oa%22+%2BobjectType:%22mods%22&amp;fl=*&amp;sort=mods.dateIssued+desc&amp;rows=20&amp;version=4.5&amp;mask=content/search/complex_intern.xed&amp;fq=worldReadableComplete:false" rel="noopener" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none;" target="_blank">JKI</a> (271) erledigt, YB</i></i></td>
+		</tr>
+		<tr style="box-sizing: border-box; border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">• <a href="https://www.openagrar.de/servlets/solr/select?q=%2Bcategory.top:%22mir_institutes:fli%22+%2Bcategory.top:%22mir_licenses:oa%22+%2BobjectType:%22mods%22&amp;fl=*&amp;sort=mods.dateIssued+desc&amp;rows=20&amp;version=4.5&amp;mask=content/search/complex_intern.xed&amp;fq=worldReadableComplete:false" rel="noopener" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none;" target="_blank">FLI</a> (65)</i></i></td>
+		</tr>
+		<tr style="box-sizing: border-box; background-color: rgb(248, 248, 248); border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">• <a href="https://www.openagrar.de/servlets/solr/select?q=%2Bcategory.top:%22mir_institutes:mri%22+%2Bcategory.top:%22mir_licenses:oa%22+%2BobjectType:%22mods%22&amp;fl=*&amp;sort=mods.dateIssued+desc&amp;rows=20&amp;version=4.5&amp;mask=content/search/complex_intern.xed&amp;fq=worldReadableComplete:false" rel="noopener" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none;" target="_blank">MRI</a> (26)</i></i></td>
+		</tr>
+		<tr style="box-sizing: border-box; border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">• <a href="https://www.openagrar.de/servlets/solr/select?q=%2Bcategory.top:%22mir_institutes:ti%22+%2Bcategory.top:%22mir_licenses:oa%22+%2BobjectType:%22mods%22&amp;fl=*&amp;sort=mods.dateIssued+desc&amp;rows=20&amp;version=4.5&amp;mask=content/search/complex_intern.xed&amp;fq=worldReadableComplete:false" rel="noopener" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none;" target="_blank">TI</a> (89)</i></i></td>
+		</tr>
+		<tr style="box-sizing: border-box; background-color: rgb(248, 248, 248); border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">• <a href="https://www.openagrar.de/servlets/solr/select?q=%2Bcategory.top:%22mir_institutes:bfr_201406%22+%2Bcategory.top:%22mir_licenses:oa%22+%2BobjectType:%22mods%22&amp;fl=*&amp;sort=mods.dateIssued+desc&amp;rows=20&amp;version=4.5&amp;mask=content/search/complex_intern.xed&amp;fq=worldReadableComplete:false" rel="noopener" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none;" target="_blank">BfR</a> (29)</i></i></td>
+		</tr>
+		<tr style="box-sizing: border-box; border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">• <a href="https://www.openagrar.de/servlets/solr/select?q=%2Bcategory.top:%22mir_institutes:ble%22+%2Bcategory.top:%22mir_licenses:oa%22+%2BobjectType:%22mods%22&amp;fl=*&amp;sort=mods.dateIssued+desc&amp;rows=20&amp;version=4.5&amp;mask=content/search/complex_intern.xed&amp;fq=worldReadableComplete:false" rel="noopener" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none;" target="_blank">BLE</a> (2)</i></i></td>
+		</tr>
+		<tr style="box-sizing: border-box; background-color: rgb(248, 248, 248); border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">• <a href="https://www.openagrar.de/servlets/solr/select?q=%2Bcategory.top:%22mir_institutes:dbfz%22+%2Bcategory.top:%22mir_licenses:oa%22+%2BobjectType:%22mods%22&amp;fl=*&amp;sort=mods.dateIssued+desc&amp;rows=20&amp;version=4.5&amp;mask=content/search/complex_intern.xed&amp;fq=worldReadableComplete:false" rel="noopener" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none;" target="_blank">DBFZ</a> (132)</i></i></td>
+		</tr>
+		<tr style="box-sizing: border-box; border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">• <a href="https://www.openagrar.de/servlets/solr/select?q=NOT(category.top:mir_institutes*)+%2Bcategory.top:%22mir_licenses:oa%22+%2BobjectType:%22mods%22&amp;fl=*&amp;sort=mods.dateIssued+desc&amp;rows=20&amp;version=4.5&amp;mask=content/search/complex_intern.xed&amp;fq=worldReadableComplete:false" rel="noopener" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none;" target="_blank">ohne Einrichtungszuordung</a> (465)</i></i></td>
+		</tr>
+		<tr style="box-sizing: border-box; background-color: rgb(248, 248, 248); border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"> </td>
+		</tr>
+		<tr style="box-sizing: border-box; border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Da der Dokumentenyp Buch kein Publikationstyp mehr ist, muss diese Kategorie bereinigt und entsprechend nach Monografie, Sammelwerk, Tagungsband (bitte Beschreibung der Dokumententypen beachten) geändert werden. Publikationen mit Dokumenttyp „Buch“. Publikationen mit Dokumenttyp „Buch“:</i></i></td>
+		</tr>
+		<tr style="box-sizing: border-box; background-color: rgb(248, 248, 248); border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">• <a href="https://www.openagrar.de/servlets/solr/select?core=main&amp;q=mods.genre:book+AND+category.top:%22mir_institutes:jki%22&amp;wt=xml" rel="noopener" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none;" target="_blank">JKI</a> (186) erledigt!</i></i></td>
+		</tr>
+		<tr style="box-sizing: border-box; border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">• <a href="https://www.openagrar.de/servlets/solr/select?core=main&amp;q=mods.genre:book+AND+category.top:%22mir_institutes:fli%22&amp;wt=xml" rel="noopener" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none;" target="_blank">FLI</a> (188)</i></i></td>
+		</tr>
+		<tr style="box-sizing: border-box; background-color: rgb(248, 248, 248); border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">• <a href="https://www.openagrar.de/servlets/solr/select?core=main&amp;q=mods.genre:book+AND+category.top:%22mir_institutes:mri%22&amp;wt=xml" rel="noopener" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none;" target="_blank">MRI</a> (255)</i></i></td>
+		</tr>
+		<tr style="box-sizing: border-box; border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">• <a href="https://www.openagrar.de/servlets/solr/select?core=main&amp;q=mods.genre:book+AND+category.top:%22mir_institutes:ti%22&amp;wt=xml" rel="noopener" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none;" target="_blank">TI</a> (8.537)</i></i></td>
+		</tr>
+		<tr style="box-sizing: border-box; background-color: rgb(248, 248, 248); border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">• <a href="https://www.openagrar.de/servlets/solr/select?core=main&amp;q=mods.genre:book+AND+category.top:%22mir_institutes:bfr_201406%22&amp;wt=xml" rel="noopener" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none;" target="_blank">BfR</a> (116)</i></i></td>
+		</tr>
+		<tr style="box-sizing: border-box; border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">• <a href="https://www.openagrar.de/servlets/solr/select?core=main&amp;q=mods.genre:book+AND+category.top:%22mir_institutes:dbfz%22&amp;wt=xml" rel="noopener" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none;" target="_blank">DBFZ</a> (111)</i></i></td>
+		</tr>
+		<tr style="box-sizing: border-box; background-color: rgb(248, 248, 248); border-top: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 6px 13px; border: 1px solid rgb(221, 221, 221);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">• [Ohne Einrichtungszuordnung] (1.648) erledigt!</i></i></td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 class="part" data-endline="334" data-startline="334" id="Fragen" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Fragen</i></i></h2>
+
+<ul class="part" data-endline="337" data-startline="336" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; padding-left: 2em;">
+	<li data-endline="337" data-startline="336" style="box-sizing: border-box;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Kann Rolle Bearbeiter ebenfalls die Möglichkeit zu löschen erhalten? Derzeit kann dies nur Admin. So könnten durch Import generierte Dubletten oder versehentlich falsch angehängte PDFs direkt gelöscht werden, ohne dies an einen Admin weitergeben zu müssen.</i></i></li>
+</ul>
+
+<h2 class="part" data-endline="338" data-startline="338" id="Zyklen-vermeiden" style="box-sizing: border-box; font-family: inherit; font-weight: 600; line-height: 1.25; color: inherit; margin-top: 24px; margin-bottom: 16px; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238);"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Zyklen vermeiden</i></i></h2>
+
+<p class="part" data-endline="339" data-startline="339" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Es sind Regeln explizit für jede Verweisart notwendig:</i></i></p>
+
+<ul class="part" data-endline="344" data-startline="340" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; padding-left: 2em;">
+	<li data-endline="340" data-startline="340" style="box-sizing: border-box;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">andere Version – immer vom später auf das eher publizierte</i></i></li>
+	<li data-endline="341" data-startline="341" style="box-sizing: border-box; margin-top: 0.25em;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">anderes Format – immer vom später auf das eher publizierte</i></i></li>
+	<li data-endline="342" data-startline="342" style="box-sizing: border-box; margin-top: 0.25em;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Vorgänger/Nachfolger – immer nur Vorgänger</i></i></li>
+	<li data-endline="344" data-startline="343" style="box-sizing: border-box; margin-top: 0.25em;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Referenziert/wird referenziert von – immer nur referenziert</i></i></li>
+</ul>
+
+<p class="part" data-endline="346" data-startline="345" style="box-sizing: border-box; margin: 0px 0px 16px;"><i style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; letter-spacing: 0.35px; margin-bottom: 0px !important;"><i style="box-sizing: border-box;">Definition referenziert: Die Publikation referenziert die Forschungsdaten.<br style="box-sizing: border-box;" />
+Für die Definitionen ist auch die MODS-Dokumentation nochmal hilfreich: <a href="https://www.loc.gov/standards/mods/userguide/relateditem.html" rel="noopener" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none;" target="_blank">https://www.loc.gov/standards/mods/userguide/relateditem.html</a></i></i></p>
+
 <p> </p>
 </div>
-</div>
-</section><meta><log lastEditor="ustahl" date="2019-03-29" time="15:55" /></meta></MyCoReWebPage>
+</div><p>
+
+</p><p> </p><p>
+</p></section><meta><log lastEditor="vkappes" date="2024-04-22" time="10:48" /></meta></MyCoReWebPage>
