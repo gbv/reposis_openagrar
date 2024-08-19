@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MyCoReWebPage><section xml:lang="en" title="Contact"><div>
-<h3><span style="font-size:26px;">Contact</span></h3>
+<h1>Contact</h1>
 
 <p>The OpenAgrar repository was planned by the libraries of the research institutions affiliated with the Federal Ministry of Food and Agriculture (BMEL) and the Federal Office for Agriculture and Food. It was developed and set up together with the Verbundzentrale des GBV (VZG).<br />
     For questions regarding the publications in OpenAgrar or the repository framework MyCoRe and the database server please contact the libraries or the Head Office of the GBV (VZG), respectively.</p>
 
-<h3><span style="font-size:20px;">Federal Research Institute for Animal Health - Friedrich-Loeffler-Institut (FLI)</span></h3>
+<h3>Federal Research Institute for Animal Health - Friedrich-Loeffler-Institut (FLI)</h3>
 
 <p>Südufer 10<br />
 17493 Greifswald - Insel Riems<br />
@@ -17,7 +17,7 @@ Tel.: +4938351 7 1119<br />
 Fax: +4938351 7 1151<br />
 E-Mail: <span class="madress">bibliothek.riems [at] fli.de</span></p>
 
-<h3><span style="font-size:20px;">Federal Research Institute for Rural Areas, Forestry and Fisheries -Thünen-Institut </span></h3>
+<h3>Federal Research Institute for Rural Areas, Forestry and Fisheries -Thünen-Institut</h3>
 
 <p>Bundesallee 50<br />
 38116 Braunschweig<br />
@@ -27,7 +27,7 @@ Internet: <a href="https://www.thuenen.de/en/">https://www.thuenen.de/en/</a><br
 <strong>Centre for Information Management</strong><br />
 E-Mail: <span class="madress">zi [at] thuenen.de</span></p>
 
-<h3><span style="font-size:20px;">Federal Research Centre for Cultivated Plants - Julius Kühn-Institut (JKI)</span></h3>
+<h3>Federal Research Centre for Cultivated Plants - Julius Kühn-Institut (JKI)</h3>
 
 <p>Erwin-Baur-Straße 27<br />
 06484 Quedlinburg<br />
@@ -37,7 +37,7 @@ Fax: +493946 47 255<br />
 Internet: <a href="https://www.julius-kuehn.de/en/information-centre-and-library/">https://www.julius-kuehn.de/en/information-centre-and-library/</a><br />
 E-Mail: <span class="madress">IB [at] julius-kuehn.de</span></p>
 
-<h3><span style="font-size:20px;">Federal Research Institute of Nutrition and Food - Max Rubner-Institut (MRI)</span></h3>
+<h3>Federal Research Institute of Nutrition and Food - Max Rubner-Institut (MRI)</h3>
 
 <p>Haid-und-Neu-Str. 9<br />
 76131 Karlsruhe<br />
@@ -49,7 +49,7 @@ Tel.: +49721 6625 600<br />
 Fax: +49721 6625 602<br />
 E-Mail: <span class="madress">openagrar [at] mri.bund.de</span></p>
 
-<h3><span style="font-size:20px;">German Federal Institute for risk assessment (BfR)</span></h3>
+<h3>German Federal Institute for risk assessment (BfR)</h3>
 
 <p>Max-Dohrn-Straße 8-10<br />
 10589 Berlin<br />
@@ -57,11 +57,11 @@ Tel.: +4930 18412 0<br />
 Fax: +4930 18412 4741<br />
 <strong>Library</strong><br />
 Internet: <a href="http://www.bfr.bund.de/de/bibliothek-6902.html">http://www.bfr.bund.de/de/bibliothek-6902.html </a><br />
-Tel.: +4930 18412 4524<br />
-Fax: +4930 18412 4718<br />
+Tel.: +4930 18412 90100<br />
+Fax: +4930 18412 90199<br />
 E-Mail: <span class="madress">bibliothek [at] bfr.bund.de</span></p>
 
-<h3><span style="font-size:20px;">Deutsches Biomasseforschungszentrum gemeinnützige GmbH (DBFZ)</span></h3>
+<h3>Deutsches Biomasseforschungszentrum gemeinnützige GmbH (DBFZ)</h3>
 
 <p>Torgauer Straße 116<br />
 04347 Leipzig<br />
@@ -73,7 +73,7 @@ Tel.: +49341 2434 447<br />
 Fax: +49341 2434 133<br />
 E-Mail: <span class="madress">bib [at] dbfz.de</span></p>
 
-<h3><span style="font-size:20px;">Federal Office of Consumer Protection and Food Safety (BVL)</span></h3>
+<h3>Federal Office of Consumer Protection and Food Safety (BVL)</h3>
 
 <p>Mauerstr. 39-42<br />
 10117 Berlin<br />
@@ -84,18 +84,7 @@ Tel.: +4930 18444 04020<br />
 Fax: +4930 18444 89999<br />
 E-Mail: <span class="madress">bibliothek [at] bvl.bund.de</span></p>
 
-
-<h3><span style="font-size:20px;">Federal Office for Agriculture and Food</span></h3>
-
-<p>Deichmanns Aue 29<br />
-53179 Bonn<br />
-Tel.: +49228 99 6845 0<br />
-Fax: +49228 99 6845 3101<br />
-Contact: Helmut Michels<br />
-Tel.: +49228 6845 7181<br />
-E-Mail: <span class="madress">helmut.michels [at] ble.de</span> or <span class="madress">openagrar [at] bmel-forschung.de</span></p>
-
-<h3><span style="font-size:20px;">Head Office of the GBV (VZG)</span></h3>
+<h3>Head Office of the GBV (VZG)</h3>
 
 <p>Platz der Göttinger Sieben 1<br />
 37073 Göttingen<br />
@@ -108,9 +97,16 @@ E-Mail: <span class="madress">dms-list [at] lists.gbv.de</span></p>
 </section>
 
 
+<section xml:lang="de" title="Kontakt"><div>
+<h1>Kontakt</h1>
 
-<section xml:lang="de" title="Kontakt"><div><h3><span style="font-size:26px;">Kontakt</span></h3>
-<p>Der Publikationsserver OpenAgrar wurde von den Bibliotheken im Geschäftsbereich des BMEL und der Bundesanstalt für Landwirtschaft und Ernährung (BLE) konzipiert und in Zusammenarbeit mit der Verbundzentrale des GBV (VZG) aufgebaut.</p><p>Für fachliche Fragen kontaktieren Sie bitte die entsprechenden Bibliotheken und Informationszentren. Fragen zum Repository-framework MyCoRe und dem Datenbankserver beantwortet Ihnen die Verbundzentrale des GBV (VZG).</p><h3>Friedrich-Loeffler-Institut (FLI)</h3><p>Südufer 10<br />
+<p>Der Publikationsserver OpenAgrar wurde von den Bibliotheken im Geschäftsbereich des BMEL und der Bundesanstalt für Landwirtschaft und Ernährung (BLE) konzipiert und in Zusammenarbeit mit der Verbundzentrale des GBV (VZG) aufgebaut.</p>
+
+<p>Für fachliche Fragen kontaktieren Sie bitte die entsprechenden Bibliotheken und Informationszentren. Fragen zum Repository-framework MyCoRe und dem Datenbankserver beantwortet Ihnen die Verbundzentrale des GBV (VZG).</p>
+
+<h3>Friedrich-Loeffler-Institut (FLI)</h3>
+
+<p>Südufer 10<br />
 17493 Greifswald - Insel Riems<br />
 Tel.: 038351 7 0<br />
 Fax: 038351 7 151<br />
@@ -118,19 +114,31 @@ Fax: 038351 7 151<br />
 Internet: <a href="https://www.fli.de/de/service/bibliotheken/">https://www.fli.de/de/service/bibliotheken/</a><br />
 Tel.: 038351 7 1119<br />
 Fax: 038351 7 1151<br />
-E-Mail: <span class="madress">bibliothek.riems [at] fli.de</span></p><h3>Thünen-Institut</h3><p>Bundesallee 50<br />
+E-Mail: <span class="madress">bibliothek.riems [at] fli.de</span></p>
+
+<h3>Thünen-Institut</h3>
+
+<p>Bundesallee 50<br />
 38116 Braunschweig<br />
 Tel.: 0531 596 0<br />
 Fax: 0531 596 1099<br />
 Internet: <a href="http://www.thuenen.de">http://www.thuenen.de</a><br />
 <strong>Zentrum für Informationsmanagement</strong><br />
-E-Mail: <span class="madress">zi [at] thuenen.de</span></p><h3>Julius Kühn-Institut (JKI)</h3><p>Erwin-Baur-Straße 27<br />
+E-Mail: <span class="madress">zi [at] thuenen.de</span></p>
+
+<h3>Julius Kühn-Institut (JKI)</h3>
+
+<p>Erwin-Baur-Straße 27<br />
 06484 Quedlinburg<br />
 Tel.: 03946 47 0<br />
 Fax: 03946 47 255<br />
 <strong>Informationszentrum und Bibliothek</strong><br />
 Internet: <a href="https://www.julius-kuehn.de/ib/">https://www.julius-kuehn.de/ib/</a><br />
-E-Mail: <span class="madress">IB [at] julius-kuehn.de</span></p><h3>Max Rubner-Institut</h3><p>Haid-und-Neu-Str. 9<br />
+E-Mail: <span class="madress">IB [at] julius-kuehn.de</span></p>
+
+<h3>Max Rubner-Institut</h3>
+
+<p>Haid-und-Neu-Str. 9<br />
 76131 Karlsruhe<br />
 Tel.: 0721 6625 0<br />
 Fax: 0721 6625 111<br />
@@ -138,15 +146,18 @@ Fax: 0721 6625 111<br />
 Internet: <a href="https://www.mri.bund.de/de/service/bibliothek/">https://www.mri.bund.de/de/service/bibliothek/</a><br />
 Tel.: 0721 6625 600<br />
 Fax: 0721 6625 602<br />
-E-Mail: <span class="madress">openagrar [at] mri.bund.de</span></p><h3>Bundesinstitut für Risikobewertung (BfR)</h3>
+E-Mail: <span class="madress">openagrar [at] mri.bund.de</span></p>
+
+<h3>Bundesinstitut für Risikobewertung (BfR)</h3>
+
 <p>Max-Dohrn-Straße 8-10<br />
 10589 Berlin<br />
 Tel.: 030 18412 0<br />
 Fax: 030 18412 4741<br />
 <strong>Bibliothek </strong><br />
 Internet: <a href="http://www.bfr.bund.de/de/bibliothek-6902.html">http://www.bfr.bund.de/de/bibliothek-6902.html </a><br />
-Tel.: 030 18412 4524<br />
-Fax: 030 18412 4718<br />
+Tel.: 030 18412 90100<br />
+Fax: 030 18412 90199<br />
 E-Mail: <span class="madress">bibliothek [at] bfr.bund.de</span></p>
 <h3>Deutsches Biomasseforschungszentrum gemeinnützige GmbH (DBFZ)</h3>
 <p>Torgauer Straße 116<br />
@@ -158,7 +169,7 @@ Internet: <a href="https://www.dbfz.de/">https://www.dbfz.de/</a><br />
 Tel.: 0341 2434 447<br />
 Fax: 0341 2434 133<br />
 E-Mail: <span class="madress">bib [at] dbfz.de</span></p>
-<h3><span style="font-size:20px;">Bundesamt für Verbraucherschutz und Lebensmittelsicherheit (BVL)</span></h3>
+<h3>Bundesamt für Verbraucherschutz und Lebensmittelsicherheit (BVL)</h3>
 <p>Mauerstr. 39-42<br />
 10117 Berlin<br />
 Tel.: +4930 18444 0<br />
@@ -167,15 +178,6 @@ Internet: <a href="https://www.bvl.bund.de/DE/Home/homepage_node.html">https://w
 Tel.: +4930 18444 04020<br />
 Fax: +4930 18444 89999<br />
 E-Mail: <span class="madress">bibliothek [at] bvl.bund.de</span></p>
-<h3>Bundesanstalt für Landwirtschaft und Ernährung (BLE)</h3><p>Zentrale in Bonn:<br />
-Deichmanns Aue 29<br />
-53179 Bonn<br />
-Telefon: 0228 99 6845 0<br />
-Telefax: 0228 99 6845 3101<br />
-<strong>Referat 416 - "Informationsdienste"</strong><br />
-Ansprechpartner: Helmut Michels<br />
-Telefon: 0228 6845 7181<br />
-E-Mail: <span class="madress">helmut.michels [at] ble.de</span> oder <span class="madress">openagar [at] bmel-forschung.de</span></p>
 <h3>Verbundzentrale des GBV (VZG)</h3>
 <p>Platz der Göttinger Sieben 1<br />
 37073 Göttingen<br />
@@ -183,4 +185,7 @@ Tel.: 0551 39 5207<br />
 Fax: 0551 39 13980<br />
 <strong>Digitale Bibliothek, Reposis</strong><br />
 Internet: <a href="https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-repository-service">https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-repository-service</a><br />
-E-Mail: <span class="madress">dms-list [at] lists.gbv.de</span></p></div></section><meta><log lastEditor="ustahl" date="2018-01-24" time="10:59" /></meta></MyCoReWebPage>
+E-Mail: <span class="madress">dms-list [at] lists.gbv.de</span></p>
+</div>
+</section><meta>
+<log lastEditor="tbeyer" date="2023-07-04" time="14:27" /></meta></MyCoReWebPage>

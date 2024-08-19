@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="mir_licenses">
   <label xml:lang="de" text="Lizenzen" />
-  <label xml:lang="x-uri" text="http://www.mycore.org/classifications/mir_licenses" />
   <label xml:lang="en" text="Licenses" />
+  <label xml:lang="x-uri" text="http://www.mycore.org/classifications/mir_licenses" />
   <categories>
     <category ID="rights_reserved">
       <label xml:lang="de" text="Alle Rechte vorbehalten" />
@@ -14,22 +14,22 @@
       <url xlink:href="https://open-access.net/" xlink:type="locator" />
       <category ID="cc_4.0">
         <label xml:lang="de" text="Creative Commons 4.0 International Lizenzen" />
-        <label xml:lang="x-group" text="true" />
         <label xml:lang="en" text="Creative Commons 4.0 International Lizences" />
+        <label xml:lang="x-group" text="true" />
         <url xlink:href="https://creativecommons.org/licenses/" xlink:type="locator" />
         <category ID="cc_by_4.0">
-          <label xml:lang="en" text="CC BY 4.0" description="Attribution 4.0" />
           <label xml:lang="de" text="CC BY 4.0" description="Namensnennung 4.0" />
+          <label xml:lang="en" text="CC BY 4.0" description="Attribution 4.0" />
           <url xlink:href="https://creativecommons.org/licenses/by/4.0/" xlink:type="locator" />
         </category>
         <category ID="cc_by-sa_4.0">
-          <label xml:lang="en" text="CC BY-SA 4.0" description="Attribution-ShareAlike 4.0" />
           <label xml:lang="de" text="CC BY-SA 4.0" description="Namensnennung - Weitergabe unter gleichen Bedingungen 4.0" />
+          <label xml:lang="en" text="CC BY-SA 4.0" description="Attribution-ShareAlike 4.0" />
           <url xlink:href="https://creativecommons.org/licenses/by-sa/4.0/" xlink:type="locator" />
         </category>
         <category ID="cc_by-nd_4.0">
-          <label xml:lang="en" text="CC BY-ND 4.0" description="Attribution-NoDerivatives 4.0" />
           <label xml:lang="de" text="CC BY-ND 4.0" description="Namensnennung - Keine Bearbeitungen 4.0" />
+          <label xml:lang="en" text="CC BY-ND 4.0" description="Attribution-NoDerivatives 4.0" />
           <url xlink:href="https://creativecommons.org/licenses/by-nd/4.0/" xlink:type="locator" />
         </category>
         <category ID="cc_by-nc_4.0">
@@ -64,8 +64,8 @@
           <url xlink:href="https://creativecommons.org/licenses/by-sa/3.0/" xlink:type="locator" />
         </category>
         <category ID="cc_by-nd_3.0">
-          <label xml:lang="en" text="CC BY-ND 3.0" description="Attribution-NoDerivatives 3.0" />
           <label xml:lang="de" text="CC BY-ND 3.0" description="Namensnennung - Keine Bearbeitungen 3.0" />
+          <label xml:lang="en" text="CC BY-ND 3.0" description="Attribution-NoDerivatives 3.0" />
           <url xlink:href="https://creativecommons.org/licenses/by-nd/3.0/" xlink:type="locator" />
         </category>
         <category ID="cc_by-nc_3.0">
@@ -99,8 +99,8 @@
           <url xlink:href="https://creativecommons.org/licenses/by-sa/2.0/" xlink:type="locator" />
         </category>
         <category ID="cc_by-nd_2.0">
-          <label xml:lang="en" text="CC BY-ND 2.0" description="Attribution-NoDerivatives 2.0" />
           <label xml:lang="de" text="CC BY-ND 2.0" description="Namensnennung - Keine Bearbeitungen 2.0" />
+          <label xml:lang="en" text="CC BY-ND 2.0" description="Attribution-NoDerivatives 2.0" />
           <url xlink:href="https://creativecommons.org/licenses/by-nd/2.0/" xlink:type="locator" />
         </category>
         <category ID="cc_by-nc_2.0">
@@ -109,13 +109,13 @@
           <url xlink:href="https://creativecommons.org/licenses/by-nc/2.0/" xlink:type="locator" />
         </category>
         <category ID="cc_by-nc-sa_2.0">
-          <label xml:lang="en" text="CC BY-NC-SA 2.0" description="Attribution-NonCommercial-ShareAlike 2.0" />
           <label xml:lang="de" text="CC BY-NC-SA 2.0" description="Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 2.0" />
+          <label xml:lang="en" text="CC BY-NC-SA 2.0" description="Attribution-NonCommercial-ShareAlike 2.0" />
           <url xlink:href="https://creativecommons.org/licenses/by-nc-sa/2.0/" xlink:type="locator" />
         </category>
         <category ID="cc_by-nc-nd_2.0">
-          <label xml:lang="en" text="CC BY-NC-ND 2.0" description="Attribution-NonCommercial-NoDerivatives 2.0" />
           <label xml:lang="de" text="CC BY-NC-ND 2.0" description="Namensnennung - Nicht kommerziell - Keine Bearbeitungen 2.0" />
+          <label xml:lang="en" text="CC BY-NC-ND 2.0" description="Attribution-NonCommercial-NoDerivatives 2.0" />
           <url xlink:href="https://creativecommons.org/licenses/by-nc-nd/2.0/" xlink:type="locator" />
         </category>
       </category>
@@ -124,8 +124,8 @@
         <url xlink:href="https://creativecommons.org/publicdomain/zero/1.0/" xlink:type="locator" />
       </category>
       <category ID="ogl">
-        <label xml:lang="en" text="Open Government Licence" />
         <label xml:lang="de" text="Open Government Licence" />
+        <label xml:lang="en" text="Open Government Licence" />
         <url xlink:href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/open-government-licence/" xlink:type="locator" />
         <category ID="ogl_3.0">
           <label xml:lang="de" text="OGL 3.0" />
@@ -149,8 +149,8 @@
       </category>
     </category>
     <category ID="odc_pddl">
-      <label xml:lang="en" text="PDDL - Public Domain Dedication and License" />
       <label xml:lang="de" text="PDDL - Public Domain Dedication and License" />
+      <label xml:lang="en" text="PDDL - Public Domain Dedication and License" />
     </category>
     <category ID="odc_by">
       <label xml:lang="de" text="ODC-By - Attribution License" />
@@ -159,6 +159,11 @@
     <category ID="odc_odbl">
       <label xml:lang="de" text="ODC-ODbL - Open Database License" />
       <label xml:lang="en" text="ODC-ODbL - Open Database License" />
+    </category>
+    <category ID="dl-by-de/2.0">
+      <label xml:lang="de" text="Datenlizenz Deutschland – Namensnennung – Version 2.0" />
+      <label xml:lang="en" text="Data licence Germany – attribution – version 2.0" />
+      <url xlink:href="https://www.govdata.de/dl-de/by-2-0" xlink:type="locator" />
     </category>
   </categories>
 </mycoreclass>

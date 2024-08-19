@@ -122,11 +122,57 @@
     }
   },
   {
+    "replace-field": {
+      "name": "mods.mainAuthor",
+      "type": "mods.collatedGERMAN",
+      "indexed": true,
+      "stored": false,
+      "multiValued":true
+    }
+  },
+  {
     "add-field": {
       "name": "mods.mainAuthor.affiliation",
       "type": "mods.collatedGERMAN",
       "indexed": true,
-      "stored": false
+      "stored": false,
+      "multiValued":true
+    }
+  },
+  {
+    "add-field": {
+      "name": "mods.coAuthor",
+      "type": "mods.collatedGERMAN",
+      "indexed": true,
+      "stored": false,
+      "multiValued":true
+    }
+  },
+  {
+    "add-field": {
+      "name": "mods.coAuthor.affiliation",
+      "type": "mods.collatedGERMAN",
+      "indexed": true,
+      "stored": false,
+      "multiValued":true
+    }
+  },
+  {
+    "add-field": {
+      "name": "mods.correspondingAuthor",
+      "type": "mods.collatedGERMAN",
+      "indexed": true,
+      "stored": false,
+      "multiValued":true
+    }
+  },
+  {
+    "add-field": {
+      "name": "mods.correspondingAuthor.affiliation",
+      "type": "mods.collatedGERMAN",
+      "indexed": true,
+      "stored": false,
+      "multiValued":true
     }
   },
   {
@@ -166,7 +212,8 @@
       "name": "mods.lastAuthor",
       "type": "mods.collatedGERMAN",
       "indexed": true,
-      "stored": false
+      "stored": false,
+      "multiValued":true
     }
   },
   {
@@ -174,7 +221,8 @@
       "name": "mods.lastAuthor.affiliation",
       "type": "mods.collatedGERMAN",
       "indexed": true,
-      "stored": false
+      "stored": false,
+      "multiValued":true
     }
   },
   {
