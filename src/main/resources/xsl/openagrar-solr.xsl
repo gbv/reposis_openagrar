@@ -49,7 +49,7 @@
     </xsl:for-each>
     <xsl:for-each select="mods:name[mods:role/mods:roleTerm[@authority='marcrelator' and (@type='text' and text()='author') or (@type='code' and text()='aut')]]">
       <xsl:choose>
-        <xsl:when test="not(../mods:name/mods:role/mods:roleTerm[contains(@valueURI, '#')])">
+        <xsl:when test="not(../mods:name/mods:role/mods:roleTerm[contains(@valueURI, 'author_roles#')])">
           <xsl:variable name="autrole">
             <xsl:choose>
               <xsl:when test="position()=1">
@@ -94,7 +94,7 @@
           </xsl:if>
         </xsl:when>
         <xsl:otherwise>
-          <xsl:for-each select="mods:role/mods:roleTerm[contains(@valueURI, '#')]">
+          <xsl:for-each select="mods:role/mods:roleTerm[contains(@valueURI, 'author_roles#')]">
             <xsl:variable name="autrole">
               <xsl:choose>
                 <xsl:when test="substring-after(@valueURI, '#') ='main_author'">
