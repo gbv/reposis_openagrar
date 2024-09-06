@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xed:template xmlns:xed="http://www.mycore.de/xeditor" xmlns:mir="http://www.mycore.de/mir">
+
+  <!-- ========== extend editor-genres.xed ========== -->
+  <xed:modify ref="admin.fields">
+    <!-- TODO: remove in LTS2023 - is per default than  -->
+    <xed:include ref="name.extended.full.repeated" after="name.extended.repeated" />
+    <xed:remove  ref="name.extended.repeated"/>
+    <xed:remove  ref="embargo"/>
+    <xed:include ref="embargo"     before="title.complex.repeated"/>
+    <xed:remove  ref="access"/>
+    <xed:include ref="access"      before="title.complex.repeated"/>
+    <xed:remove  ref="rights"/>
+    <xed:include ref="rights"      before="title.complex.repeated"/>
+    <xed:remove  ref="copyrightMD" />
+    <xed:include ref="copyrightMD" before="title.complex.repeated"/>
+    <xed:remove  ref="date.range.extended.datetimepicker" />
+    <xed:include ref="oa.date.range.extended.datetimepicker" after="conference.itemsearch"/>
+    <xed:remove  ref="openAIRE" />
+    <xed:remove  ref="shelfmark" />
+    <xed:remove  ref="institutes" />
+    <xed:include ref="oa.source"                    before="related.item.search.of.all.items"/>
+    <xed:include ref="openAIRE"                     before="related.item.search.of.all.items"/>
+    <xed:include ref="oa.extension.characteristics" before="related.item.search.of.all.items"/>
+    <xed:include ref="oa.extension.journalmetrics"  before="related.item.search.of.all.items"/>
+    <xed:include ref="oa.annual_review"             before="related.item.search.of.all.items"/>    
+    <xed:remove  ref="validation-rules"/>   
+    <xed:include ref="validation-rules-oa"          before="related.item.search.of.all.items"/>
+    <xed:remove  ref="comment.complex" /> 
+    <xed:include ref="comment.complex"              after="oa.annual_review"/>
+  </xed:modify>
+
+  <xed:modify ref="genres.book">
+    <xed:include ref="embargo.datetimepicker" before="title.original"/>
+    <xed:include ref="rights"                 before="title.original"/>  
+  </xed:modify>
+  
+  <xed:modify ref="genres.collection">
+    <xed:include ref="embargo.datetimepicker" before="title.original"/>
+    <xed:include ref="rights"                 before="title.original"/>  
+  </xed:modify>
+  
+  <xed:modify ref="genres.festschrift">
+    <xed:include ref="embargo.datetimepicker" before="title.original"/>
+    <xed:include ref="rights"                 before="title.original"/>  
+  </xed:modify>
+  
+  <xed:modify ref="genres.lexicon">
+    <xed:include ref="embargo.datetimepicker" before="title.original"/>
+    <xed:include ref="rights"                 before="title.original"/>  
+  </xed:modify>
+  
+  <xed:modify ref="genres.proceedings">
+    <xed:include ref="embargo.datetimepicker" before="title.original"/>
+    <xed:include ref="rights"                 before="title.original"/>  
+  </xed:modify>
+  
+  <xed:modify ref="genres.book.common">
+    <xed:remove  ref="rights"/>
+    <xed:remove  ref="institutes"/>
+    <xed:remove  ref="comment"/>
+    <xed:remove  ref="shelfmark"/>
+    <xed:remove  ref="embargo.datetimepicker"/>
+    <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        after="oa.annual_review"/>
+  </xed:modify>
+  
+  <xed:modify ref="genres.journal.common">
+    <xed:include ref="identifier.managed"     after="identifier.zdbid"/>
+    <xed:include ref="link.repeated"          after="identifier.zdbid"/>
+    <xed:remove  ref="comment"/>
+    <xed:remove  ref="shelfmark"/>
+  </xed:modify>
+  
+  <xed:modify ref="genres.thesis">
+    <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
+    <xed:include ref="rights"                 before="titles.thesis"/>  
+    <xed:include ref="subject.simple"         before="classification"/>
+  </xed:modify>
+  
+  <xed:modify ref="genres.dissertation">
+    <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
+    <xed:include ref="rights"                 before="titles.thesis"/>
+    <xed:remove  ref="comment"/>  
+  </xed:modify>
+  
+  <xed:modify ref="genres.habilitation">
+    <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
+    <xed:include ref="rights"                 before="titles.thesis"/>
+    <xed:remove  ref="comment"/>  
+  </xed:modify>
+  
+  <xed:modify ref="genres.diploma_thesis">
+    <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
+    <xed:include ref="rights"                 before="titles.thesis"/>  
+  </xed:modify>
+  
+  <xed:modify ref="genres.master_thesis">
+    <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
+    <xed:include ref="rights"                 before="titles.thesis"/>  
+  </xed:modify> 
+  
+  <xed:modify ref="genres.bachelor_thesis">
+    <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
+    <xed:include ref="rights"                 before="titles.thesis"/>  
+  </xed:modify>
+  
+  <xed:modify ref="genres.student_resarch_project">
+    <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
+    <xed:include ref="rights"                 before="titles.thesis"/>  
+  </xed:modify>
+  
+  <xed:modify ref="genres.magister_thesis">
+    <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
+    <xed:include ref="rights"                 before="titles.thesis"/>  
+  </xed:modify>
+  
+  <xed:modify ref="genres.exam">
+    <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
+    <xed:include ref="rights"                 before="titles.thesis"/>  
+  </xed:modify>
+  
+  <xed:modify ref="genres.thesis.common">
+    <xed:remove  ref="rights"/>
+    <xed:remove  ref="institutes"/>
+    <xed:remove  ref="comment"/>
+    <xed:remove  ref="shelfmark"/>
+    <xed:remove  ref="embargo.datetimepicker"/>
+    <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        after="oa.annual_review"/>
+  </xed:modify>
+  
+  <xed:modify ref="genres.teaching_material">
+    <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
+    <xed:include ref="rights"                 before="titles.thesis"/>  
+    <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        after="oa.annual_review"/>
+  </xed:modify>
+  
+  <xed:modify ref="genres.publication.common">
+    <xed:include ref="embargo.datetimepicker" before="title.original"/>
+    <xed:remove  ref="rights"/>
+    <xed:include ref="rights"                 before="title.original"/> 
+    <xed:remove  ref="institutes"/>
+    <xed:remove  ref="comment"/>
+    <xed:remove  ref="shelfmark"/> 
+    <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        after="oa.annual_review"/>
+  </xed:modify>
+  
+  <xed:modify ref="genres.report.common">
+    <xed:include ref="embargo.datetimepicker" before="title"/>
+    <xed:remove  ref="rights"/>
+    <xed:include ref="rights"                 before="title"/>
+    <xed:remove  ref="institutes"/>
+    <xed:remove  ref="comment"/>
+    <xed:remove  ref="shelfmark"/>
+    <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        after="oa.annual_review"/>
+  </xed:modify>
+  
+  <xed:modify ref="genres.entry">
+    <xed:include ref="embargo.datetimepicker" before="title.original"/>
+    <xed:remove  ref="rights"/>
+    <xed:include ref="rights"                 before="title.original"/>
+    <xed:remove  ref="institutes"/>
+    <xed:remove  ref="comment"/>
+    <xed:remove  ref="shelfmark"/>
+    <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        after="oa.annual_review"/>
+  </xed:modify>
+  
+  <xed:modify ref="genres.preface">
+    <xed:include ref="embargo.datetimepicker" before="title"/>
+    <xed:remove  ref="rights"/>
+    <xed:include ref="rights"                 before="title"/>
+    <xed:remove  ref="institutes"/>
+    <xed:remove  ref="comment"/>
+    <xed:remove  ref="shelfmark"/>
+    <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        after="oa.annual_review"/>
+  </xed:modify>
+  
+  <xed:modify ref="genres.interview">
+    <xed:include ref="embargo.datetimepicker" before="title"/>
+    <xed:remove  ref="rights"/>
+    <xed:include ref="rights"                 before="title"/>
+    <xed:remove  ref="institutes"/>
+    <xed:remove  ref="comment"/>
+    <xed:remove  ref="shelfmark"/>
+    <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        after="oa.annual_review"/>
+  </xed:modify>
+  
+  <xed:modify ref="genres.speech">
+    <xed:include ref="embargo.datetimepicker" before="title"/>
+    <xed:remove  ref="rights"/>
+    <xed:include ref="rights"                 before="title"/>
+    <xed:remove  ref="institutes"/>
+    <xed:remove  ref="comment"/>
+    <xed:remove  ref="shelfmark"/>
+    <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        after="oa.annual_review"/>
+  </xed:modify>
+  
+  <xed:modify ref="genres.patent">
+    <xed:include ref="embargo.datetimepicker" before="title"/>
+    <xed:remove  ref="rights"/>
+    <xed:include ref="rights"                 before="title"/>
+    <xed:remove  ref="institutes"/>
+    <xed:remove  ref="comment"/>
+    <xed:remove  ref="shelfmark"/>
+    <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        after="oa.annual_review"/>
+  </xed:modify>
+  
+  <xed:modify ref="genres.poster">
+    <xed:include ref="embargo.datetimepicker" before="title"/>
+    <xed:remove  ref="rights"/>
+    <xed:include ref="rights"                 before="title"/>
+    <xed:remove  ref="institutes"/>
+    <xed:remove  ref="comment"/>
+    <xed:remove  ref="shelfmark"/>
+    <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        after="oa.annual_review"/>
+  </xed:modify>
+  
+  <xed:modify ref="genres.research_data">
+    <xed:remove  ref="embargo.datetimepicker"/>
+    <xed:include ref="embargo.datetimepicker" before="title"/>
+    <xed:remove  ref="access"/>
+    <xed:include ref="access"                 before="title"/>
+    <xed:remove  ref="copyrightMD"/>
+    <xed:include ref="copyrightMD"            before="title"/>
+    <xed:remove  ref="rights"/>
+    <xed:include ref="rights"                 before="title"/>
+    <xed:remove  ref="institutes"/>
+    <xed:remove  ref="comment"/>
+    <xed:remove  ref="cartographics"/>
+    <xed:remove  ref="related.item.link" />
+    <xed:include ref="related.item.link"      after="subject.simple"/>
+    <xed:include ref="oa.annual_review"       after="physical.description.note"/>
+    <xed:include ref="comment.complex"        after="oa.annual_review"/>
+  </xed:modify>
+  
+  <xed:modify ref="genres.lecture">
+    <xed:include ref="embargo.datetimepicker" before="title"/>
+    <xed:remove  ref="rights"/>
+    <xed:include ref="rights"                 before="title"/>
+    <xed:remove  ref="institutes"/>
+    <xed:remove  ref="comment"/>
+    <xed:remove  ref="shelfmark"/>
+    <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        after="oa.annual_review"/>
+  </xed:modify>
+  
+  <xed:modify ref="genres.picture">
+    <xed:include ref="embargo.datetimepicker" before="title.nonrequired"/>
+    <xed:remove  ref="rights"/>
+    <xed:include ref="rights"                 before="title.nonrequired"/>
+    <xed:remove  ref="institutes"/>
+    <xed:remove  ref="comment"/>
+    <xed:remove  ref="shelfmark"/>
+    <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        after="oa.annual_review"/>
+  </xed:modify>
+  
+  <xed:modify ref="hosts.journal">
+    <xed:remove  ref="shelfmark.journal.relItemsearch"/>
+  </xed:modify>
+  
+  <xed:modify ref="hosts.newspaper">
+    <xed:remove  ref="shelfmark.journal.relItemsearch"/>
+  </xed:modify>
+  
+  <xed:modify ref="validation-rules">
+    <xed:include  ref="oa.validation.noTitleFor.Proceedings"/>
+  </xed:modify>
+  
+  <xed:modify ref="cleanup-rules">
+    <xed:include  ref="oa.cleanup-rules"/>
+  </xed:modify>
+  
+  <!-- ========== OA specific genres ========== -->
+  <xed:template id="genres.abstract">
+    <xed:include ref="genres.publication.common" />
+  </xed:template>
+
+  <xed:template id="genres.preprint">
+    <xed:include ref="genres.publication.common" />
+    <xed:include ref="date.issued" />
+  </xed:template>
+
+  <xed:template id="genres.flyer">
+    <xed:include ref="genres.publication.common" />
+  </xed:template>
+
+  <xed:template id="genres.conferenceObject">
+    <xed:include ref="genres.publication.common" />
+  </xed:template>
+  
+  <xed:template id="genres.methods_description">
+    <xed:include uri="webapp:editor/editor-genres.xed" ref="genres.report.common" />
+  </xed:template>
+  
+  <xed:template id="genres.monograph">
+    <xed:include ref="embargo.datetimepicker" />
+    <xed:include ref="rights" />
+    <xed:include ref="title.original" />
+    <xed:include ref="author.repeated" />
+    <xed:include ref="genres.book.common" />
+  </xed:template>
+  
+  <xed:template id="genres.platform">
+    <xed:include ref="title.platform" />
+    <xed:include ref="hostInstitution" />
+    <xed:include ref="sdnb.repeat" />
+    <xed:include ref="link.repeated" />
+    <xed:include ref="subject.simple" />
+    <xed:include ref="abstract.simple" />
+  </xed:template>
+  
+  <xed:template id="hosts.platform">
+    <div class="mir-form-group-body">
+      <xed:bind xpath="mods:relatedItem[@type='series']">
+        <xed:bind xpath="@xlink:href" initially="{$MIR.projectid.default}_mods_00000000"> <input id="relItem-platform" type="hidden" /> </xed:bind>
+        <xed:include ref="title.platform.relItemsearch" />
+        <xed:include ref="platform.volume" />
+      </xed:bind>
+    </div>
+  </xed:template>
+  
+  <xed:template id="hosts.issue">
+    <div class="mir-form-group-body">
+      <xed:bind xpath="mods:relatedItem[@type='host']">
+        <xed:bind xpath="@xlink:href" initially="{$MIR.projectid.default}_mods_00000000"> <input id="relItem-issue" type="hidden" /> </xed:bind>
+        <xed:include ref="title.issue.relItemsearch" />
+        <xed:include ref="identifier.issn.issue.relItemsearch" />
+      </xed:bind>
+      <xed:include ref="year.issued.relItem" />
+      <xed:bind xpath="mods:relatedItem[@type='host']">
+        <xed:include ref="host.volume" />
+        <xed:include ref="host.issue" />
+        <xed:include ref="host.pages" />
+      </xed:bind>
+    </div>
+  </xed:template>
+  
+  <!-- ========== OA specific templates ========== -->
+  <xed:template id="in.out">
+    <xed:source uri="xslStyle:import/remove-genres,import/mods2mycoreobject,editor/oa-mods2xeditor,editor/mods2xeditor:enrich:import:buildxml:_rootName_=mods:mods&amp;mods:identifier={$modsId}&amp;mods:identifier/@type={$type}" />
+    <xed:source uri="xslStyle:RDF-mods-journal,editor/oa-mods2xeditor,editor/mods2xeditor:http://ld.zdb-services.de/data/{$zdbid}.rdf" />
+    <xed:source uri="xslStyle:mycoreobject-editor,editor/oa-mods2xeditor,editor/mods2xeditor:mcrobject:{$id}" />
+    <xed:source uri="xslStyle:mycoreobject-copyof,editor/oa-mods2xeditor,editor/mods2xeditor:mcrobject:{$copyofid}" />
+    <xed:source uri="xslStyle:mods-addPreceding,mycoreobject-copyof,editor/oa-mods2xeditor,editor/mods2xeditor:mcrobject:{$oldVersion}" />
+    <xed:source uri="xslStyle:as{$relatedItemType},editor/oa-mods2xeditor,editor/mods2xeditor:mcrobject:{$relatedItemId}" />
+
+    <xed:cancel
+      url="../servlets/MCRLockServlet?action=unlock&amp;id={$id}&amp;url=/receive/{$id}?XSL.Status.Message=mir.editstatus.canceled&amp;XSL.Status.Style=danger" />
+    <xed:cancel url="{$cancelUrl}?XSL.Status.Message=mir.editstatus.canceled&amp;XSL.Status.Style=danger" />
+    <xed:cancel url="../index.html?XSL.Status.Message=mir.editstatus.canceled&amp;XSL.Status.Style=danger" />
+    <xed:post-processor class="org.mycore.mir.editor.MIRPostProcessor" xsl="editor/xeditor2mods.xsl" />
+    
+  </xed:template>
+  
+  <xed:template id="oa.date.range.extended.datetimepicker">
+    <!-- This template provide additional dates (online_publication and print_publication)-->
+    <fieldset class="dateExtended_box">
+      <legend class="mir-fieldset-legend hiddenDetail">
+        <div class="form-group row datetimepicker {$xed-validation-marker}">
+          <label class="col-md-3 col-form-label text-right">
+            <xed:output i18n="mir.date.issued.range" />
+          </label>
+          <div class="col-md-6 center-vertical">
+            <mir:dateRangeInput xpath="mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf']" class="datetimepicker mainDate"
+              placeholder="{i18n:mir.placeholder.date}" type="publication" />
+            <span class="fas fa-chevron-down expand-item" title="{i18n:mir.help.expand}" aria-hidden="true"></span>
+          </div>
+          <mir:help-pmud help-text="{i18n:mir.help.date.issued.10}" pmud="false" />
+        </div>
+      </legend>
+      <div class="mir-fieldset-content dateExtended-container d-none">
+        <mir:dateRange xpath="mods:originInfo[@eventType='publication_print']/mods:dateIssued[@encoding='w3cdtf']" help-text="{i18n:mir.help.date.publicationprint.range}"
+          class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.publicationprint.range" />
+        <mir:dateRange xpath="mods:originInfo[@eventType='publication_online']/mods:dateIssued[@encoding='w3cdtf']" help-text="{i18n:mir.help.date.publicationonline.range}"
+          class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.publicationonline.range" />
+        <mir:dateRange xpath="mods:originInfo[@eventType='digitalisation']/mods:dateIssued[@encoding='w3cdtf']" help-text="{i18n:mir.help.date.digitalisation.issued.range}"
+          class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.digitalisation.issued.range" />
+        <mir:dateRange xpath="mods:originInfo[@eventType='creation']/mods:dateCreated[@encoding='w3cdtf']" help-text="{i18n:mir.help.date.created.range}"
+          class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.created.range" />
+        <mir:dateRange xpath="mods:originInfo[@eventType='collection']/mods:dateCaptured[@encoding='w3cdtf']" help-text="{i18n:mir.help.date.collected.range}"
+          class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.collected.range" />
+        <mir:dateRange xpath="mods:originInfo[@eventType='review']/mods:dateOther[@type='reviewed'][@encoding='w3cdtf']" help-text="{i18n:mir.help.date.reviewed.range}"
+          class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.reviewed.range" />
+        <mir:dateRange xpath="mods:originInfo[@eventType='update']/mods:dateModified[@encoding='w3cdtf']" help-text="{i18n:mir.help.date.updated.range}"
+          class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.updated.range" />
+        <mir:dateRange xpath="mods:originInfo[@eventType='creation']/mods:dateOther[@type='accepted'][@encoding='w3cdtf']" help-text="{i18n:mir.help.date.accepted.range}"
+          class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.accepted.range" />
+        <mir:dateRange xpath="mods:originInfo[@eventType='creation']/mods:dateOther[@type='submitted'][@encoding='w3cdtf']" help-text="{i18n:mir.help.date.submitted.range}"
+          class="datetimepicker" placeholder="{i18n:mir.placeholder.date}" label="mir.date.submitted.range" />
+      </div>
+    </fieldset>
+  </xed:template>
+  
+  <xed:template id="oa.source">
+    <mir:textarea xpath="mods:relatedItem[@type='isReferencedBy']/mods:titleInfo/mods:title" label="oa.source" help-text="{i18n:oa.help.source}" rows="3" />
+  </xed:template>
+  
+  <xed:template id="oa.extension.characteristics">
+    <div class="form-group row {$xed-validation-marker}">
+      <label class="col-md-3 col-form-label text-right">
+        <xed:output i18n="component.mods.metaData.dictionary.refereed" />
+      </label>
+      <div class="col-md-6">
+        <xed:bind xpath="mods:extension[@type='characteristics']/chars/@refereed">
+          <select class="form-control" style="font-weight:bold;">
+            <option value="">
+              <xed:output i18n="mir.select.optional" />
+            </option>
+            <option value="yes">
+              <xed:output i18n="mir.characteristics.yes" />
+            </option>
+            <option value="no">
+              <xed:output i18n="mir.characteristics.no" />
+            </option>
+          </select>
+        </xed:bind>
+      </div>
+      <mir:help-pmud help-text="{i18n:mir.help.extension.characteristics}" />
+    </div>
+  </xed:template>
+  
+  <xed:template id="oa.extension.journalmetrics">
+    <fieldset>
+      <legend class="mir-fieldset-legend">
+        Journal Metriken
+      </legend>
+      <div class="mir-fieldset-content">
+        <div class="form-group">
+          <div class="row">
+            <label class="col-md-2 offset-md-3 col-form-label">
+              <xed:output i18n="component.mods.metaData.dictionary.year" />
+            </label>
+            <label class="col-md-2 col-form-label">
+              <xed:output value="'JCR'" />
+            </label>
+          </div>
+          <mir:JCREdit help-text="{i18n:mir.help.extension.jcr}" />
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <label class="col-md-2 offset-md-3 col-form-label">
+              <xed:output i18n="component.mods.metaData.dictionary.year" />
+            </label>
+            <label class="col-md-2 col-form-label">
+              <xed:output value="'SNIP'" />
+            </label>
+          </div>
+          <xed:repeat xpath="mods:extension[@type='metrics']/journalMetrics/metric[@type='SNIP']/value">
+            <div class="row">
+              <label class="col-md-2 offset-md-3">
+                <xed:bind xpath="@year">
+                  <input type="text" class="form-control" placeholder="{i18n:mir.placeholder.characteristics.year}" />
+                </xed:bind>
+              </label>
+              <label class="col-md-2">
+                <input type="text" class="form-control" placeholder="'SNIP'" />
+              </label>
+              <mir:help-pmud help-text="{i18n:mir.help.extension.snip}" pmud="true" />
+            </div>
+          </xed:repeat>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <label class="col-md-2 offset-md-3 col-form-label">
+              <xed:output i18n="component.mods.metaData.dictionary.year" />
+            </label>
+            <label class="col-md-2 col-form-label">
+              <xed:output value="'SJR'" />
+            </label>
+          </div>
+          <xed:repeat xpath="mods:extension[@type='metrics']/journalMetrics/metric[@type='SJR']/value">
+            <div class="row">
+              <label class="col-md-2 offset-md-3">
+                <xed:bind xpath="@year">
+                  <input type="text" class="form-control" placeholder="{i18n:mir.placeholder.characteristics.year}" />
+                </xed:bind>
+              </label>
+              <label class="col-md-2">
+                <input type="text" class="form-control" placeholder="'SJR" />
+              </label>
+              <mir:help-pmud help-text="{i18n:mir.help.extension.sjr}" pmud="true" />
+            </div>
+          </xed:repeat>
+        </div>  
+      </div>
+    </fieldset>
+  </xed:template>
+  
+  <xed:template id="oa.annual_review">
+    <fieldset>
+      <legend class="mir-fieldset-legend">
+        <xed:output i18n="oa.fieldset" />
+      </legend>
+      <xed:repeat xpath="annualReviewComposit">
+        <div class="mir-fieldset-content">
+          <xed:bind xpath="mods:classification[@displayLabel='annual_review'][@authorityURI='https://www.openagrar.de/classifications/annual_review']">
+            <div class="form-group row  oa-noteLocationCorp">
+              <label class="col-md-3 col-form-label text-right">
+                <xed:output i18n="oa.annualReview" />
+              </label>
+              <xed:bind xpath="@valueURIxEditor" initially="">
+                <div class="col-md-6">
+                  <div class="controls">
+                    <select class="form-control form-control-inline">
+                     <option value=""><xed:output i18n="mir.select.optional" /></option>
+                     <xed:include uri="xslStyle:items2options:classification:editor:-1:children:annual_review" />
+                    </select>
+                  </div>
+                </div>
+                <mir:help-pmud help-text="{i18n:oa.help.annualReview}" pmud="false" />
+              </xed:bind>
+            </div>
+            <mir:textfield xpath="@edition" label="oa.annualReview.edition" placeholder="{i18n:oa.placeholder.annualReview}" 
+              id="oa-annualReview-edition" />
+            <xed:if test="//mods:classification/@edition">
+              <xed:validate xpath="//mods:classification/@edition" min="1000" max="9999" type="integer" 
+                i18n="mir.validation.edition" display="global" />
+            </xed:if>
+          </xed:bind>
+
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label text-right">
+              <xed:output i18n="mir.institution" />
+              :
+            </label>
+            <div class="col-md-6">
+              <xed:load-resource name="mir_institutes" uri="classification:metadata:-1:children:mir_institutes" />
+              <xed:bind xpath="mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]">
+                <xed:bind xpath="mods:role/mods:roleTerm[@authority='marcrelator'][@type='code']" initially="his" /><!--  Host institution [his] -->
+                  <xed:bind xpath="@valueURIxEditor">
+                    <select class="form-control form-control-inline">
+                      <option value="">
+                        <xed:output i18n="mir.select.optional" />
+                      </option>
+                      <xed:include uri="xslStyle:items2options:classification:editor:-1:children:mir_institutes" />
+                    </select>
+                  </xed:bind>
+                </xed:bind>  
+            </div>
+            <mir:help-pmud help-text="{i18n:mir.help.institutes}" pmud="true" />
+          </div>
+
+          <mir:textarea xpath="mods:note[@type='admin']" label="mir.comment" help-text="{i18n:mir.help.comment}" rows="3" />
+          <mir:textfield xpath="mods:location/mods:physicalLocation" label="oa.physicalLocation" help-text="{i18n:oa.help.physicalLocation}" />
+        </div>
+      </xed:repeat>
+
+    </fieldset>
+  </xed:template>
+  
+  <xed:template id="title.platform">
+    <mir:textfield xpath="mods:titleInfo/mods:title" label="mir.title.platform" help-text="{i18n:mir.help.title.platform}" class="required"
+      required="true" required-i18n="mir.validation.title.platform" />
+  </xed:template>
+  
+  <xed:template id="hostInstitution">
+    <xed:bind xpath="mods:name[@type='corporate'][mods:role/mods:roleTerm[@authority='marcrelator'][@type='code']='his']" />
+    <mir:person.repeated help-text="{i18n:mir.help.hostInstitution}">
+      <xed:include uri="xslStyle:items2options:classification:editor:-1:children:marcrelator" />
+    </mir:person.repeated>
+    <!--<xed:bind xpath="mods:name[@type='corporate']">
+      <xed:bind xpath="mods:role/mods:roleTerm[@authority='marcrelator'][@type='code']" initially="his" />
+      <mir:textfield xpath="mods:namePart" label="mir.hostInstitution" help-text="{i18n:mir.help.hostInstitution}" placeholder="{i18n:mir.placeholder.hostInstitution}" />
+    </xed:bind>-->
+  </xed:template>
+  
+  <xed:template id="title.platform.relItemsearch">
+    <mir:relItemsearch searchengine="title" genre="platform" responsefield="mods.title" xpath="mods:titleInfo/mods:title" label="mir.title"
+      help-text="{i18n:mir.help.platform.title}" class="required" required-i18n="mir.validation.title.platform" />
+  </xed:template>
+  
+  <xed:template id="platform.volume">
+    <mir:textfield xpath="mods:part/mods:detail[@type='volume']/mods:number" label="mir.platform.volume" help-text="{i18n:mir.help.platform.volume}"
+      placeholder="{i18n:mir.placeholder.platform.volume}" class="mir-modspart" 
+      required="true" required-i18n="mir.validation.platform.volume"/>
+  </xed:template>
+  
+  <xed:template id="title.issue.relItemsearch">
+    <mir:relItemsearch searchengine="title_ptitle" genre="issue" responsefield="mods.title" xpath="mods:titleInfo/mods:title" label="mir.title.issue"
+      help-text="{i18n:mir.help.title.issue}" class="required" />
+  </xed:template>
+  
+  <xed:template id="identifier.issn.issue.relItemsearch">
+    <mir:relItemsearch searchengine="issn" genre="issue" responsefield="identifier.type.issn" xpath="mods:identifier[@type='issn']" label="mir.identifier.issn"
+      help-text="{i18n:mir.help.identifier.issn}" />
+  </xed:template>
+
+  <!-- Unused Template for affiliation 2 institute-->
+  <xed:template id="person.affiliation.openagrar">
+    <xed:bind xpath="mods:affiliation">
+       <!-- Attribute 'xlink:href' is not allowed to appear in element 'mods:affiliation'. -->
+       <!-- xed:bind xpath="@xlink:href" set="https://www.openagrar.de/classifications/mir_institutes#" / --> 
+       <div class="form-group {$xed-validation-marker}">
+        <label class="col-md-3 col-form-label">
+          <xed:output i18n="mir.affiliation" />
+        </label>
+        <div class="col-md-6">
+          <select class="form-control form-control-inline">
+            <option value="">
+              <xed:output i18n="mir.select.optional" />
+            </option>
+            <xed:include uri="xslStyle:items2options:classification:editor:-1:children:mir_institutes" />
+          </select>
+        </div>
+        <mir:help-pmud help-text="{i18n:mir.help.affiliation}" />
+      </div> 
+    </xed:bind>
+  </xed:template>
+  
+  <xed:template id="oa.validation.noTitleFor.Proceedings">
+    <xed:if test="//mods:mods/mods:genre[@valueURIxEditor!='proceedings']">
+      <xed:validate xpath="//mods:mods/mods:titleInfo/mods:title" required="true" i18n="mir.validation.title" display="global" />
+    </xed:if>
+  </xed:template>
+  
+  <xed:template id="oa.cleanup-rules">
+    <xed:cleanup-rule xpath="//mods:extension[@type='metrics']" relevant-if="(string-length(journalMetrics/metric/value/text()) &gt; 0)" />
+    <xed:cleanup-rule xpath="//mods:extension[@type='characteristics']" relevant-if="(string-length(chars/@refereed) &gt; 0)" />
+  </xed:template>
+  
+  <!-- Differs to validation-rules only in the rule for the iso8601 encoding. Could be removed on MIR Update-->
+  <xed:template id="validation-rules-oa">
+    <xed:load-resource name="mir_genres" uri="classification:metadata:-1:children:mir_genres" />
+    <xed:validate xpath="//mods:mods/mods:genre[@authorityURI=$mir_genres/label[@xml:lang='x-uri']/@text]/@valueURIxEditor" required="true"
+      i18n="mir.validation.genre" display="global" />
+    <!-- don't validate rights for specified genres configured in MIR.Editor.Validate.Genre.Licence -->
+    <xed:if test="//mods:mods/mods:genre[not(contains(concat(' ',$MIR.Editor.Validate.Genre.Licence,' '),concat(' ',@valueURIxEditor,' ')))]">
+      <xed:validate xpath="//mods:mods/mods:accessCondition[@type='use and reproduction']" required="true" i18n="mir.validation.rights" display="global" />
+    </xed:if>
+
+    <xed:validate xpath="//mods:mods/mods:identifier[@type='isbn']|//mods:relatedItem[contains(@xlink:href,'mods_00000000')]/mods:identifier[@type='isbn']" matches="^((978|979)-?)?([\d -]{12}|\d{9})(\d|X)$" i18n="mir.validation.isbn" display="global" />
+    <xed:validate xpath="//mods:mods/mods:identifier[@type='issn']|//mods:relatedItem[contains(@xlink:href,'mods_00000000')]/mods:identifier[@type='issn']" matches="[\dX]{4}\-[\dX]{4}" i18n="mir.validation.issn" display="global" />
+    <xed:validate xpath="//mods:mods/mods:identifier[@type='doi']" matches="10\.\d+.*" i18n="mir.validation.doi" display="global" />
+    <xed:validate xpath="//mods:mods/mods:identifier[@type='hdl']" matches="\S+/\S+" i18n="mir.validation.handle" display="global" />
+    <xed:validate xpath="//mods:mods/mods:identifier[@type='urn']" matches="urn:nbn:[a-z]{2}:\S*" i18n="mir.validation.urn" display="global" />
+    <xed:validate xpath="//mods:mods/mods:identifier[@type='ppn']" class="org.mycore.mir.validation.MIRValidationHelper" method="validatePPN" display="global" i18n="mir.validation.ppn" />
+    <xed:validate xpath="//mods:url|//mods:abstract/@xlink:href" matches="(ftp|http|https)://[\w\d.]+\S*" i18n="mir.validation.url" display="global" />
+    <xed:validate xpath="//mods:*[@encoding='w3cdtf'][not(ancestor::mods:recordInfo)]|//mods:mods/mods:accessCondition[@type='embargo']" matches="\d{4}(\-\d{2}(\-\d{2})?)?" type="datetime" format="yyyy;yyyy-MM;yyyy-MM-dd" i18n="mir.validation.date"
+      display="global" />
+    <xed:validate xpath="//mods:*[@encoding='iso8601'][not(ancestor::mods:recordInfo)]" matches="\d{4}(\d{2}(\d{2})?)?(T\d{2}\d{2}\d{2})?(\/\d{4}(\d{2}(\d{2})?)?(T\d{2}\d{2}\d{2})?)?" display="global"  i18n="mir.validation.date.iso8601"/>
+    <xed:validate xpath="//mods:part/@order" type="integer" display="global" i18n="mir.validation.order" />
+  </xed:template>
+  
+  <xed:template id="related.item.search.of.all.items">
+    <fieldset>
+      <legend class="mir-fieldset-legend">Related Item</legend><!-- TODO: i18n -->
+      <xed:repeat xpath="mods:relatedItem" min="1" max="10">
+        <div class="mir-fieldset-content mir-related-item-search">
+          <div class="form-group row">
+            <div class="col-md-3">
+              <xed:bind xpath="@type">
+                <select class="form-control">
+                  <option value="host">
+                    <xed:output i18n="mir.relatedItem.host" />
+                  </option>
+                  <option value="series">
+                    <xed:output i18n="mir.relatedItem.series" />
+                  </option>
+                  <option value="preceding">
+                    <xed:output i18n="mir.relatedItem.preceding" />
+                  </option>
+                  <option value="original">
+                    <xed:output i18n="mir.relatedItem.original" />
+                  </option>
+                  <option value="isReferencedBy">
+                    <xed:output i18n="mir.relatedItem.isReferencedBy" />
+                  </option>
+                  <option value="references">
+                    <xed:output i18n="mir.relatedItem.references" />
+                  </option>
+                  <option value="reviewOf">
+                    <xed:output i18n="mir.relatedItem.reviewOf" />
+                  </option>
+                  <option value="otherVersion">
+                    <xed:output i18n="mir.relatedItem.otherVersion" />
+                  </option>
+                  <option value="otherFormat">
+                    <xed:output i18n="mir.relatedItem.otherFormat" />
+                  </option>
+                </select>
+              </xed:bind>
+            </div>
+            <div class="col-md-6">
+              <div class="controls form-inline">
+                <input type="button" class="form-control mir-relatedItem-select" value="{i18n:mir.editing.related.select}" />
+                <span />
+                <xed:bind xpath="@xlink:href">
+                  <input type="hidden" />
+                </xed:bind>
+              </div>
+            </div>
+            <mir:help-pmud help-text="{i18n:mir.help.related.item}" pmud="true" />
+          </div>
+          <xed:include ref="title.nonrequired" />
+          <xed:include ref="genre.simple.nonrequired" />
+          <mir:textfield xpath="mods:location/mods:url[@access='raw object']" help-text="{i18n:mir.help.link.raw_object}"
+              placeholder="{i18n:mir.placeholder.abstract.link}" />
+          <xed:include ref="host.volume" />
+          <xed:include ref="host.issue" />
+          <xed:include ref="host.articlenumber" />
+          <xed:include ref="host.pages" />
+          <xed:include ref="host.order" />
+        </div>
+      </xed:repeat>
+      <script src="{$WebApplicationBaseURL}js/mir/relatedItem-modal.min.js" type="text/javascript"></script>
+      <xed:validate xpath="//mods:relatedItem[@xlink:href!='']" test="(@type!='isReferencedBy')" i18n="mir.validation.relatedItem" display="global" />
+    </fieldset>
+  </xed:template>
+   
+</xed:template>
+
+
