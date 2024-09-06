@@ -491,7 +491,7 @@
       <xed:repeat xpath="annualReviewComposit">
         <div class="mir-fieldset-content">
           <xed:bind xpath="mods:classification[@displayLabel='annual_review'][@authorityURI='https://www.openagrar.de/classifications/annual_review']">
-            <div class="form-group row  oa-noteLocationCorp">
+            <div class="form-group row">
               <label class="col-md-3 col-form-label text-right">
                 <xed:output i18n="oa.annualReview" />
               </label>
@@ -504,7 +504,7 @@
                     </select>
                   </div>
                 </div>
-                <mir:help-pmud help-text="{i18n:oa.help.annualReview}" pmud="false" />
+                <mir:help-pmud help-text="{i18n:oa.help.annualReview}" pmud="true" />
               </xed:bind>
             </div>
             <mir:textfield xpath="@edition" label="oa.annualReview.edition" placeholder="{i18n:oa.placeholder.annualReview}" 
@@ -534,7 +534,7 @@
                   </xed:bind>
                 </xed:bind>  
             </div>
-            <mir:help-pmud help-text="{i18n:mir.help.institutes}" pmud="true" />
+            <mir:help-pmud help-text="{i18n:mir.help.institutes}" pmud="false" />
           </div>
 
           <mir:textarea xpath="mods:note[@type='admin']" label="mir.comment" help-text="{i18n:mir.help.comment}" rows="3" />
