@@ -34,7 +34,7 @@
       <label xml:lang="en" text="intern comment" />
       <label xml:lang="de" text="interner Kommentar" />
       <label xml:lang="x-acces" text="editor admin" />
-      <label xml:lang="x-disabled" text="true" />
+      <label xml:lang="x-disable" text="true" />
     </category>
   </categories>
 </mycoreclass>
