@@ -47,6 +47,9 @@
   
   <xsl:template match="mods:relatedItem/mods:name[@ID]">
   </xsl:template>
+
+  <xsl:template match="mods:relatedItem/mods:classification[@IDREF]">
+  </xsl:template>
   
   <xsl:template match="mods:extension[@type='metrics']/journalMetrics/metric[@type='JCR']/value">
     <xsl:variable name="value" select="."/>
