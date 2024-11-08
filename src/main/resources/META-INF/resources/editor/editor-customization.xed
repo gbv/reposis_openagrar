@@ -25,34 +25,40 @@
     <xed:include ref="oa.extension.characteristics" before="related.item.search.of.all.items"/>
     <xed:include ref="oa.extension.journalmetrics"  before="related.item.search.of.all.items"/>
     <xed:include ref="oa.annual_review"             before="related.item.search.of.all.items"/>
-    <xed:remove  ref="comment.complex"/>    
+    <xed:remove  ref="comment.complex"/>
+    <xed:include ref="comment.complex"              before="related.item.search.of.all.items"/>    
     <xed:remove  ref="validation-rules"/>   
     <xed:include ref="validation-rules-oa"          before="related.item.search.of.all.items"/>
   </xed:modify>
 
   <xed:modify ref="genres.book">
     <xed:include ref="embargo.datetimepicker" before="title.original"/>
-    <xed:include ref="rights"                 before="title.original"/>  
+    <xed:include ref="rights"                 before="title.original"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/> 
   </xed:modify>
   
   <xed:modify ref="genres.collection">
     <xed:include ref="embargo.datetimepicker" before="title.original"/>
-    <xed:include ref="rights"                 before="title.original"/>  
+    <xed:include ref="rights"                 before="title.original"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>  
   </xed:modify>
   
   <xed:modify ref="genres.festschrift">
     <xed:include ref="embargo.datetimepicker" before="title.original"/>
-    <xed:include ref="rights"                 before="title.original"/>  
+    <xed:include ref="rights"                 before="title.original"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>  
   </xed:modify>
   
   <xed:modify ref="genres.lexicon">
     <xed:include ref="embargo.datetimepicker" before="title.original"/>
-    <xed:include ref="rights"                 before="title.original"/>  
+    <xed:include ref="rights"                 before="title.original"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>  
   </xed:modify>
   
   <xed:modify ref="genres.proceedings">
     <xed:include ref="embargo.datetimepicker" before="title.original"/>
-    <xed:include ref="rights"                 before="title.original"/>  
+    <xed:include ref="rights"                 before="title.original"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>  
   </xed:modify>
   
   <xed:modify ref="genres.book.common">
@@ -62,6 +68,7 @@
     <xed:remove  ref="shelfmark"/>
     <xed:remove  ref="embargo.datetimepicker"/>
     <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>
   </xed:modify>
   
   <xed:modify ref="genres.journal.common">
@@ -69,12 +76,14 @@
     <xed:include ref="link.repeated"          after="identifier.zdbid"/>
     <xed:remove  ref="comment"/>
     <xed:remove  ref="shelfmark"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>
   </xed:modify>
   
   <xed:modify ref="genres.thesis">
     <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
     <xed:include ref="rights"                 before="titles.thesis"/>  
     <xed:include ref="subject.simple"         before="classification"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>
   </xed:modify>
   
   <xed:modify ref="genres.dissertation">
@@ -87,6 +96,7 @@
     <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
     <xed:include ref="rights"                 before="titles.thesis"/>
     <xed:remove  ref="comment"/>  
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>
   </xed:modify>
   
   <xed:modify ref="genres.diploma_thesis">
@@ -96,27 +106,32 @@
   
   <xed:modify ref="genres.master_thesis">
     <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
-    <xed:include ref="rights"                 before="titles.thesis"/>  
+    <xed:include ref="rights"                 before="titles.thesis"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>  
   </xed:modify> 
   
   <xed:modify ref="genres.bachelor_thesis">
     <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
-    <xed:include ref="rights"                 before="titles.thesis"/>  
+    <xed:include ref="rights"                 before="titles.thesis"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>  
   </xed:modify>
   
   <xed:modify ref="genres.student_resarch_project">
     <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
-    <xed:include ref="rights"                 before="titles.thesis"/>  
+    <xed:include ref="rights"                 before="titles.thesis"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>  
   </xed:modify>
   
   <xed:modify ref="genres.magister_thesis">
     <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
-    <xed:include ref="rights"                 before="titles.thesis"/>  
+    <xed:include ref="rights"                 before="titles.thesis"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>  
   </xed:modify>
   
   <xed:modify ref="genres.exam">
     <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
-    <xed:include ref="rights"                 before="titles.thesis"/>  
+    <xed:include ref="rights"                 before="titles.thesis"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>  
   </xed:modify>
   
   <xed:modify ref="genres.thesis.common">
@@ -126,12 +141,14 @@
     <xed:remove  ref="shelfmark"/>
     <xed:remove  ref="embargo.datetimepicker"/>
     <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>
   </xed:modify>
   
   <xed:modify ref="genres.teaching_material">
     <xed:include ref="embargo.datetimepicker" before="titles.thesis"/>
     <xed:include ref="rights"                 before="titles.thesis"/>  
     <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>
   </xed:modify>
   
   <xed:modify ref="genres.publication.common">
@@ -142,6 +159,7 @@
     <xed:remove  ref="comment"/>
     <xed:remove  ref="shelfmark"/> 
     <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>
   </xed:modify>
   
   <xed:modify ref="genres.report.common">
@@ -152,6 +170,7 @@
     <xed:remove  ref="comment"/>
     <xed:remove  ref="shelfmark"/>
     <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>
   </xed:modify>
   
   <xed:modify ref="genres.entry">
@@ -162,6 +181,7 @@
     <xed:remove  ref="comment"/>
     <xed:remove  ref="shelfmark"/>
     <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>
   </xed:modify>
   
   <xed:modify ref="genres.preface">
@@ -172,6 +192,7 @@
     <xed:remove  ref="comment"/>
     <xed:remove  ref="shelfmark"/>
     <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>
   </xed:modify>
   
   <xed:modify ref="genres.interview">
@@ -182,6 +203,7 @@
     <xed:remove  ref="comment"/>
     <xed:remove  ref="shelfmark"/>
     <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>
   </xed:modify>
   
   <xed:modify ref="genres.speech">
@@ -192,6 +214,7 @@
     <xed:remove  ref="comment"/>
     <xed:remove  ref="shelfmark"/>
     <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>
   </xed:modify>
   
   <xed:modify ref="genres.patent">
@@ -202,6 +225,7 @@
     <xed:remove  ref="comment"/>
     <xed:remove  ref="shelfmark"/>
     <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>
   </xed:modify>
   
   <xed:modify ref="genres.poster">
@@ -212,6 +236,7 @@
     <xed:remove  ref="comment"/>
     <xed:remove  ref="shelfmark"/>
     <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>
   </xed:modify>
   
   <xed:modify ref="genres.research_data">
@@ -229,6 +254,7 @@
     <xed:remove  ref="related.item.link" />
     <xed:include ref="related.item.link"      after="subject.simple"/>
     <xed:include ref="oa.annual_review"       after="physical.description.note"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>
   </xed:modify>
   
   <xed:modify ref="genres.lecture">
@@ -239,6 +265,7 @@
     <xed:remove  ref="comment"/>
     <xed:remove  ref="shelfmark"/>
     <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>
   </xed:modify>
   
   <xed:modify ref="genres.picture">
@@ -249,6 +276,7 @@
     <xed:remove  ref="comment"/>
     <xed:remove  ref="shelfmark"/>
     <xed:include ref="oa.annual_review"       after="abstract.simple"/>
+    <xed:include ref="comment.complex"        before="related.item.search.of.all.items"/>
   </xed:modify>
   
   <xed:modify ref="hosts.journal">
