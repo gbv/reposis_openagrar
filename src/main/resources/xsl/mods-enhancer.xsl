@@ -162,4 +162,25 @@
     </value>
   </xsl:template>
 
+  <xsl:template match="mods:note" mode="mods2mods">
+    <xsl:variable name="myURI" select="concat('classification:metadata:0:children:noteTypes:',mcrxsl:regexp(@type,' ', '_'))" />
+    <xsl:variable name="x-access">
+      <xsl:value-of select="document($myURI)//label[@xml:lang='x-access']/@text"/>
+    </xsl:variable>
+    <xsl:choose> 
+      <xsl:when test="mcrxsl:isCurrentUserInRole('admin')">
+        <xsl:copy-of select="."/>			
+      </xsl:when> 
+      <xsl:when test="mcrxsl:isCurrentUserInRole('editor') and contains($x-access, 'editor')">
+        <xsl:copy-of select="."/>
+      </xsl:when>
+      <xsl:when test="mcrxsl:isCurrentUserInRole('submitter') and contains($x-access, 'submitter')">
+        <xsl:copy-of select="."/>
+      </xsl:when>
+      <xsl:when test="mcrxsl:isCurrentUserGuestUser() and contains($x-access, 'guest')">
+        <xsl:copy-of select="."/>
+      </xsl:when>
+    </xsl:choose> 
+  </xsl:template>
+
 </xsl:stylesheet>
