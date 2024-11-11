@@ -168,7 +168,7 @@
       <xsl:value-of select="document($myURI)//label[@xml:lang='x-access']/@text"/>
     </xsl:variable>
     <xsl:choose> 
-      <xsl:when test="mcrxsl:isCurrentUserInRole('admin')">
+      <xsl:when test="mcrxsl:isCurrentUserInRole('admin') and contains($x-access, 'admin')">
         <xsl:copy-of select="."/>			
       </xsl:when> 
       <xsl:when test="mcrxsl:isCurrentUserInRole('editor') and contains($x-access, 'editor')">
