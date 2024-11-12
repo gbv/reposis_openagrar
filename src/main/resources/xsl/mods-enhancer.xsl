@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xalan="http://xml.apache.org/xalan" xmlns:xlink="http://www.w3.org/1999/xlink"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions" exclude-result-prefixes="xalan mcrxsl">
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions" xmlns:str="http://exslt.org/strings" exclude-result-prefixes="xalan mcrxsl">
   <xsl:include href="copynodes.xsl" />
+  <xsl:include href="str.tokenize.xsl"/>
   <xsl:param name="WebApplicationBaseURL" />
   <xsl:param name="ServletsBaseURL" select="''" />
   <xsl:variable name="relacode" select="document('resource:relacode.xml')/relacode" />
   <xsl:key name="relacode" match="code" use="@key" />
+
 
   <xsl:variable name="ifsTemp">
     <xsl:for-each select="mycoreobject/structure/derobjects/derobject[mcrxsl:isDisplayedEnabledDerivate(@xlink:href)]">
@@ -165,22 +167,27 @@
   <xsl:template match="mods:note" mode="mods2mods">
     <xsl:variable name="myURI" select="concat('classification:metadata:0:children:noteTypes:',mcrxsl:regexp(@type,' ', '_'))" />
     <xsl:variable name="x-access">
-      <xsl:value-of select="document($myURI)//label[@xml:lang='x-access']/@text"/>
+      <xsl:value-of select="document($myURI)//label[@xml:lang='x-access']/@text"/> 
     </xsl:variable>
-    <xsl:choose> 
-      <xsl:when test="mcrxsl:isCurrentUserInRole('admin') and contains($x-access, 'admin')">
-        <xsl:copy-of select="."/>			
-      </xsl:when> 
-      <xsl:when test="mcrxsl:isCurrentUserInRole('editor') and contains($x-access, 'editor')">
+    <xsl:choose>      
+      <xsl:when test="contains($x-access, ' ')">
+        <xsl:variable name="note"><xsl:copy-of select="."/></xsl:variable>
+        <xsl:for-each select="str:tokenize($x-access, ' ')">
+          <xsl:if test="mcrxsl:isCurrentUserInRole(.)">
+            <xsl:copy-of select="$note"/>
+          </xsl:if> 
+        </xsl:for-each> 
+      </xsl:when>
+      <xsl:when test="($x-access = 'guest') and mcrxsl:isCurrentUserGuestUser()">
         <xsl:copy-of select="."/>
       </xsl:when>
-      <xsl:when test="mcrxsl:isCurrentUserInRole('submitter') and contains($x-access, 'submitter')">
-        <xsl:copy-of select="."/>
-      </xsl:when>
-      <xsl:when test="mcrxsl:isCurrentUserGuestUser() and contains($x-access, 'guest')">
-        <xsl:copy-of select="."/>
-      </xsl:when>
+      <xsl:otherwise>
+        <xsl:if test="mcrxsl:isCurrentUserInRole($x-access)">
+          <xsl:copy-of select="."/>
+        </xsl:if>
+      </xsl:otherwise>
     </xsl:choose> 
   </xsl:template>
+  
 
 </xsl:stylesheet>
