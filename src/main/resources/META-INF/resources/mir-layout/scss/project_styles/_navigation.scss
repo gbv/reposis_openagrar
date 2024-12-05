@@ -89,6 +89,15 @@
     }
   }
 
+  .datepicker-dropdown {
+    &.dropdown-menu {
+      background-color: white;
+      text-shadow: 1px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      border: 1px solid #ddd;
+    }
+  }
+
 
 
 // Large devices (desktops) and below: < 1200px
