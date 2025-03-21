@@ -190,8 +190,25 @@
     }
   }
 
+  .oa-data-providers {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 0 3rem 0;
+    .oa-data-provider {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
   #oa_re3data {
-    margin: 5px 0px 30px 0px;
+    img {
+      max-width: 100%;
+    }
+  }
+  #oa_agris {
+    img {
+      max-height: 180px;
+    }
   }
 
 // Large devices (desktops) and below: <1200px
