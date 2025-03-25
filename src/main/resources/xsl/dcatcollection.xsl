@@ -33,30 +33,30 @@
 
   <xsl:template match="@* | text()" />
 
-  <xsl:template match="/dcatcollection">
+ <xsl:template match="/dcatcollection">
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dct="http://purl.org/dc/terms/"
              xmlns:dcat="http://www.w3.org/ns/dcat#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:org="http://www.w3.org/ns/org#">
       <dcat:Catalog>
-        <dct:description xml:lang="de">Open Data Katalog des Open Agrar Repositoriums</dct:description>
-        <dct:description xml:lang="en">Open Data Catalogue of Open Agrar Repository</dct:description>
+		<dct:description xml:lang="de">Open Data Katalog des Open Agrar Repositoriums</dct:description>
+		<dct:description xml:lang="en">Open Data Catalogue of Open Agrar Repository</dct:description>
         <dct:publisher>
-          <foaf:Organization>
+          <foaf:Agent>
             <foaf:name>Open Agrar Repositorium</foaf:name>
-            <dct:type>foaf:Organization</dct:type>
-          </foaf:Organization>
+          </foaf:Agent>
         </dct:publisher>
-        <dct:title>Open Agrar Forschungsdaten</dct:title>
-        <dct:license rdf:resource="https://www.dcat-ap.de/def/licenses/20210721#dl-by-de/2.0"/>
+        <dct:title>Open Agrar Datasets</dct:title>
         <foaf:homepage rdf:resource="https://opendata.stadt-muenster.de/welcomehttps://www.openagrar.de/content/index.xml"/>
         <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
-        <dcat:dataset>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+        <dcat:theme rdf:resource="{concat($dctTheme, 'AGRI')}"/>
         <xsl:for-each select="mycoreobject">
-          <dcat:Dataset rdf:about="{concat($OAURL,./@ID, '#dataset')}">
-            <xsl:apply-templates />
-            <xsl:call-template name="derivates"/>
-          </dcat:Dataset>
+		  <dcat:dataset>
+		    <dcat:Dataset rdf:about="{concat($OAURL,./@ID)}">
+              <xsl:apply-templates />
+              <xsl:call-template name="derivates"/>
+            </dcat:Dataset>
+          </dcat:dataset>
         </xsl:for-each>
-        </dcat:dataset>
       </dcat:Catalog>
     </rdf:RDF>
   </xsl:template>
@@ -64,21 +64,17 @@
   <xsl:template match="mycoreobject/metadata/def.modsContainer/modsContainer">
     <xsl:apply-templates />
   </xsl:template>
-
-
-
-
-
-
-  <!-- Must have: dcat:Catalog + dcat:Dataset -->
+  
+ 
   <xsl:template match="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods">
+	<rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
     <xsl:call-template name="title" />
     <xsl:call-template name="description" />
     <xsl:call-template name="publisher" />
     <xsl:call-template name="creator" />
     <xsl:call-template name="issued" />
     <xsl:call-template name="language" />
-    <!-- <xsl:call-template name="license" /> -->
+    <xsl:call-template name="license" /> 
   </xsl:template>
 
   <xsl:template name="creator">
@@ -131,19 +127,28 @@
 
 
   <xsl:template name="publisher">
-    <xsl:if test="mods:originInfo[@eventType='publication']">
-      <dct:publisher>
-        <foaf:Agent>
-          <foaf:name><xsl:value-of select="mods:originInfo[@eventType='publication']/mods:publisher[1]" /></foaf:name>
-        </foaf:Agent>
-      </dct:publisher>
-    </xsl:if>
+	<xsl:choose>
+      <xsl:when test="./mods:originInfo/mods:publisher">
+        <dct:publisher>
+          <foaf:Agent>
+            <foaf:name><xsl:value-of select="./mods:originInfo/mods:publisher" /></foaf:name>
+          </foaf:Agent>
+        </dct:publisher>
+      </xsl:when>
+      <xsl:otherwise>
+		  <dct:publisher>
+          <foaf:Agent>
+            <foaf:name>NO PUBLISHER</foaf:name>
+          </foaf:Agent>
+        </dct:publisher>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template name="issued">
     <xsl:if test="mods:originInfo[@eventType='publication']">
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">
-        <xsl:value-of select="concat(mods:originInfo[@eventType='publication']/mods:dateIssued[1], 'T00:00:00')" />
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">
+        <xsl:value-of select="substring(mods:originInfo[@eventType='publication']/mods:dateIssued[1], 1,4)" />
       </dct:issued>
     </xsl:if>
   </xsl:template>
@@ -155,35 +160,37 @@
         <xsl:value-of select="." />
       </dct:description>
     </xsl:for-each>
-  </xsl:template>
-
-  <xsl:template name="URLs">
-    <xsl:for-each select="mods:location/mods:url">
-      <dcat:dataset>
-        <dcat:Dataset rdf:about="{concat(., '#dataset')}">
-          <!-- Title and description are mandatory for dataset. Take them from dcat:Catalog  -->
-          <xsl:call-template name="title"/>
-          <xsl:call-template name="description"/>
-          <dcat:accessURL rdf:resource="{.}" />
-          <xsl:call-template name="keywords" />
-          <!-- Theme in Agrar Open is always AGRI -->
-          <dcat:theme rdf:resource="{concat($dctTheme, 'AGRI')}"/>
-        </dcat:Dataset>
-      </dcat:dataset>
-    </xsl:for-each>
-
+    <xsl:if test="count(mods:abstract[not(@contentType='text/xml')]) = 0">
+		 <dct:description xml:lang="en">No Abstract available</dct:description>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template name="derivates">
-
+    
     <xsl:for-each select="structure/derobjects/derobject">
-      <xsl:variable name="objectID"><xsl:value-of select="./@xlink:href"/></xsl:variable>
-      <dcat:distribution>
-        <xsl:attribute name="rdf:resource">
-          <xsl:value-of select="concat($OAFileURL, $objectID, maindoc)"/>
-        </xsl:attribute>
-
-      </dcat:distribution>
+		 <xsl:variable name="objectID"><xsl:value-of select="./@xlink:href"/></xsl:variable>
+          <dcat:distribution>
+		    <dcat:Distribution>
+              <xsl:attribute name="rdf:resource">
+              <xsl:value-of select="concat($OAURL, $objectID)"/>
+              </xsl:attribute>
+              <dcat:accessURL>
+				  <xsl:attribute name="rdf:resource">
+					  <xsl:value-of select="concat($OAURL,../../../@ID)"/>
+				  </xsl:attribute>
+		      </dcat:accessURL>
+		      <dcat:downloadURL>
+				  <xsl:attribute name="rdf:resource">
+					  <xsl:value-of select="concat($OAFileURL, maindoc)"/>
+				  </xsl:attribute>
+		      </dcat:downloadURL>
+		      <dct:format>
+				  <xsl:attribute name="rdf:resource">
+					  <xsl:value-of select="concat($dctFileType, translate(substring-after(maindoc, '.'), 'pdf', 'PDF'))"/>
+				  </xsl:attribute>
+		      </dct:format>
+           </dcat:Distribution>
+          </dcat:distribution>
 
     </xsl:for-each>
 
@@ -200,8 +207,8 @@
             <xsl:value-of select="concat($dctLicenseURI, 'cc-zero')" />
           </xsl:when>
           <!-- To check !! -->
-          <xsl:when test="contains(., 'mir_licenses#oa')"><xsl:value-of select="concat($dctLicenseURI, 'other-open')" /></xsl:when>
-          <xsl:when test="contains(., 'mir_licenses#rights_reserved')"><xsl:value-of select="concat($dctLicenseURI, 'other-closed')" /></xsl:when>
+          <xsl:when test="contains(./@xlink:href., 'mir_licenses#oa')"><xsl:value-of select="concat($dctLicenseURI, 'other-open')" /></xsl:when>
+          <xsl:when test="contains(./@xlink:href, 'mir_licenses#rights_reserved')"><xsl:value-of select="concat($dctLicenseURI, 'other-closed')" /></xsl:when>
         </xsl:choose>
       </xsl:variable>
       <!-- Replace last "_" in license by "/" !!! -->
