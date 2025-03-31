@@ -193,11 +193,20 @@
   .oa-data-providers {
     display: flex;
     justify-content: space-evenly;
-    padding: 1rem 0 3rem 0;
-    .oa-data-provider {
+    flex-wrap: wrap;
+    &-start,
+    &-end {
       display: flex;
       flex-direction: column;
       justify-content: center;
+    }
+    .oa-data-provider {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      img {
+        width: 100%;
+      }
     }
   }
   #oa_re3data {

@@ -25,19 +25,26 @@
               Aktuell umfasst das Repositorium <span id="oa-docCounter">100.000</span> Dokumente.</p>
 
             <h2>Datenanbieter für</h2>
-            <!-- Data provider for -->
 
             <div class="oa-data-providers">
-              <div id="oa_re3data" class="oa-data-provider">
-                <object type="image/svg+xml" data="../images/re3data_badge.svg">
-                  <img src="../images/re3data_badge.png" />
-                </object>
+              <div class="oa-data-providers-start">
+                <div id="oa_re3data" class="oa-data-provider">
+                  <object type="image/svg+xml" data="../images/re3data_badge.svg">
+                    <img src="../images/re3data_badge.png" />
+                  </object>
+                </div>
+                <div id="oa_open-aire" class="oa-data-provider">
+                  <a href="https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::2130eb640e0a272898a51da41363542d">
+                    <img src="../images/open-aire.webp" alt="OpenAIRE - Validated Repository (3.0)" />
+                  </a>
+                </div>
               </div>
-              <div id="oa_agris" class="oa-data-provider">
-                <a href="https://www.fao.org/agris/data-provider/federal-ministry-food-and-agriculture">
-                  <img src="../images/ADP_cert_2025.png" alt="Siegel für aktiven Agrar Datenlieferant" />
-                  <!-- Seal of recognition for active Agris data providers -->
-                </a>
+              <div class="oa-data-providers-end">
+                <div id="oa_agris" class="oa-data-provider">
+                  <a href="https://www.fao.org/agris/data-provider/federal-ministry-food-and-agriculture">
+                    <img src="../images/ADP_cert_2025.png" alt="Siegel für aktiven Agrar Datenlieferant" />
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -74,15 +81,24 @@
             <h2>Data provider for</h2>
 
             <div class="oa-data-providers">
-              <div id="oa_re3data" class="oa-data-provider">
-                <object type="image/svg+xml" data="../images/re3data_badge.svg">
-                  <img src="../images/re3data_badge.png" />
-                </object>
+              <div class="oa-data-providers-start">
+                <div id="oa_re3data" class="oa-data-provider">
+                  <object type="image/svg+xml" data="../images/re3data_badge.svg">
+                    <img src="../images/re3data_badge.png" />
+                  </object>
+                </div>
+                <div id="oa_open-aire" class="oa-data-provider">
+                  <a href="https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::2130eb640e0a272898a51da41363542d">
+                    <img src="../images/open-aire.webp" alt="OpenAIRE - Validated Repository (3.0)" />
+                  </a>
+                </div>
               </div>
-              <div id="oa_agris" class="oa-data-provider">
-                <a href="https://www.fao.org/agris/data-provider/federal-ministry-food-and-agriculture">
-                  <img src="../images/ADP_cert_2025.png" alt="Seal of recognition for active Agris data providers" />
-                </a>
+              <div class="oa-data-providers-end">
+                <div id="oa_agris" class="oa-data-provider">
+                  <a href="https://www.fao.org/agris/data-provider/federal-ministry-food-and-agriculture">
+                    <img src="../images/ADP_cert_2025.png" alt="Seal of recognition for active Agris data providers" />
+                  </a>
+                </div>
               </div>
             </div>
 
