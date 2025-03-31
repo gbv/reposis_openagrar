@@ -190,6 +190,28 @@
     }
   }
 
+<<<<<<< Updated upstream
+=======
+  .oa-data-providers {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    &-start,
+    &-end {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .oa-data-provider {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+>>>>>>> Stashed changes
   #oa_re3data {
     margin: 5px 0px 30px 0px;
   }
