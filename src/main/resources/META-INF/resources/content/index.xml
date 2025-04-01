@@ -1,53 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MyCoReWebPage><section xml:lang="de" title="Willkommen auf den Seiten des Publikationsservers OpenAgrar"><div>
-<div class="jumbotwo">
-<h1>Willkommen auf den Seiten des Publikationsservers OpenAgrar</h1>
+<MyCoReWebPage>
+  <section xml:lang="de" title="Willkommen auf den Seiten des Publikationsservers OpenAgrar">
+    <div>
+      <div class="jumbotwo">
+        <h1>Willkommen auf den Seiten des Publikationsservers OpenAgrar</h1>
 
-<div class="row">
-<div class="col-md-8 oa-borderbox" lang="de">
-<h2>Sie suchen Literatur - versuchen Sie es doch hier</h2>
+        <div class="row">
+          <div class="col-md-8 oa-borderbox" lang="de">
 
-<p>OpenAgrar ist das gemeinsame Repositorium der Ressortforschungsinstitute sowie weiterer Bundesbehörden und Einrichtungen im Geschäftsbereich des Bundesministeriums für Ernährung und Landwirtschaft (BMEL). Folgende Institutionen betreiben aktuell das OpenAgrar Repositorium: Deutsches Biomasseforschungszentrum (DBFZ), Julius Kühn-Institut (JKI), Friedrich-Loeffler-Institut (FLI), Max Rubner-Institut (MRI), Thünen-Institut (TI), Bundesinstitut für Risikobewertung (BfR).  In OpenAgrar werden die Veröffentlichungen aus diesen Einrichtungen erfasst, verbreitet, archiviert beziehungsweise Dokumente erstveröffentlicht. Die dort gespeicherten Dokumente und Publikationsnachweise können von jedem Interessierten recherchiert und genutzt werden.</p>
+            <h2>Sie suchen Literatur - versuchen Sie es doch hier</h2>
 
-<p>OpenAgrar verzeichnet unter anderem Dissertationen, Berichte, Konferenz Proceedings, Zeitschriftenbeiträge, Bücher, Institutsschriften sowie Forschungsdaten und AV-Medien. Aktuell umfasst das Repositorium <span id="oa-docCounter">100.000</span> Dokumente.</p>
-  <div id="oa_re3data" class="pull-right">
-    <object type="image/svg+xml" data="../images/re3data_badge.svg"><img src="../images/re3data_badge.png" style="max-width:100%" /></object>
-  </div>
-</div>
-</div>
-</div>
-</div>
-</section>
+            <p>OpenAgrar ist das gemeinsame Repositorium der Ressortforschungsinstitute sowie
+              weiterer Bundesbehörden und Einrichtungen im Geschäftsbereich des Bundesministeriums
+              für Ernährung und Landwirtschaft (BMEL). Folgende Institutionen betreiben aktuell das
+              OpenAgrar Repositorium: Deutsches Biomasseforschungszentrum (DBFZ), Julius
+              Kühn-Institut (JKI), Friedrich-Loeffler-Institut (FLI), Max Rubner-Institut (MRI),
+              Thünen-Institut (TI), Bundesinstitut für Risikobewertung (BfR).  In OpenAgrar werden
+              die Veröffentlichungen aus diesen Einrichtungen erfasst, verbreitet, archiviert
+              beziehungsweise Dokumente erstveröffentlicht. Die dort gespeicherten Dokumente und
+              Publikationsnachweise können von jedem Interessierten recherchiert und genutzt werden.</p>
 
-<section xml:lang="en" title="Welcome to the OpenAgrar repository "><div>
-<div class="jumbotwo">
-<h1>Welcome to the OpenAgrar repository</h1>
+            <p>OpenAgrar verzeichnet unter anderem Dissertationen, Berichte, Konferenz Proceedings,
+              Zeitschriftenbeiträge, Bücher, Institutsschriften sowie Forschungsdaten und AV-Medien.
+              Aktuell umfasst das Repositorium <span id="oa-docCounter">100.000</span> Dokumente.</p>
 
-<div class="row">
-<div class="col-md-8 oa-borderbox" lang="en">
-<h2>You are looking for publications – just try it here</h2>
+            <h2>Datenanbieter für</h2>
 
-<p>OpenAgrar is the collective repository of research institutions affiliated with the Federal Ministry of Food and Agriculture (BMEL) in Germany. Currently it is operated by the following institutions: German Biomass Research Centre (DBFZ), Federal Research Centre for Cultivated Plants (JKI), Federal Research Institute for Animal Health (FLI), Federal Research Institute of Nutrition and Food (MRI), Federal Research Institute for Rural Areas, Forestry and Fisheries (TI), German Federal Institute for risk assessment (BfR). It preserves the scholarly output of its members as a whole.</p>
+            <div class="oa-data-providers">
+              <div class="oa-data-providers-start">
+                <div id="oa_re3data" class="oa-data-provider">
+                  <object type="image/svg+xml" data="../images/re3data_badge.svg">
+                    <img src="../images/re3data_badge.png" />
+                  </object>
+                </div>
+                <div id="oa_open-aire" class="oa-data-provider">
+                  <a href="https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::2130eb640e0a272898a51da41363542d">
+                    <img src="../images/open-aire.webp" alt="OpenAIRE - Validated Repository (3.0)" />
+                  </a>
+                </div>
+              </div>
+              <div class="oa-data-providers-end">
+                <div id="oa_agris" class="oa-data-provider">
+                  <a href="https://www.fao.org/agris/data-provider/federal-ministry-food-and-agriculture">
+                    <img src="../images/ADP_cert_2025.png" alt="Siegel für aktiven Agrar Datenlieferant" />
+                  </a>
+                </div>
+              </div>
+            </div>
 
-<p>OpenAgrar is an open access repository which publishes, stores, archives and distributes publications, publication references and research data. Its resources can be searched and used by everyone. It contains amongst others theses, reports, conference proceedings, journal articles, books, institutional documents, research datasets, videos and interviews. Currently <span id="oa-docCounter">100.000</span> publications are recorded.</p>
-  <div id="oa_re3data" class="pull-right">
-    <object type="image/svg+xml" data="../images/re3data_badge.svg"><img src="../images/re3data_badge.png" style="max-width:100%" /></object>
-  </div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section xml:lang="all">
-<script type="text/javascript" src="../js/jquery.number.js" /><script>
-        $.ajax({
-          type: "GET",
-          url: "../api/v1/search?q=objectType:mods AND state:published&amp;rows=0&amp;wt=json&amp;json.wrf=?",
-          dataType: "jsonp",
-          success: function (data) {
-            $('#oa-docCounter').text($.number(data.response.numFound,0, ',', '.'));
-          },
-        });
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section xml:lang="en" title="Welcome to the OpenAgrar repository ">
+    <div>
+      <div class="jumbotwo">
+        <h1>Welcome to the OpenAgrar repository</h1>
+
+        <div class="row">
+          <div class="col-md-8 oa-borderbox" lang="en">
+            <h2>You are looking for publications – just try it here</h2>
+
+            <p>OpenAgrar is the collective repository of research institutions affiliated with the
+              Federal Ministry of Food and Agriculture (BMEL) in Germany. Currently it is operated
+              by the following institutions: German Biomass Research Centre (DBFZ), Federal Research
+              Centre for Cultivated Plants (JKI), Federal Research Institute for Animal Health
+              (FLI), Federal Research Institute of Nutrition and Food (MRI), Federal Research
+              Institute for Rural Areas, Forestry and Fisheries (TI), German Federal Institute for
+              risk assessment (BfR). It preserves the scholarly output of its members as a whole.</p>
+
+            <p>OpenAgrar is an open access repository which publishes, stores, archives and
+              distributes publications, publication references and research data. Its resources can
+              be searched and used by everyone. It contains amongst others theses, reports,
+              conference proceedings, journal articles, books, institutional documents, research
+              datasets, videos and interviews. Currently <span id="oa-docCounter">100.000</span>
+              publications are recorded.</p>
+
+            <h2>Data provider for</h2>
+
+            <div class="oa-data-providers">
+              <div class="oa-data-providers-start">
+                <div id="oa_re3data" class="oa-data-provider">
+                  <object type="image/svg+xml" data="../images/re3data_badge.svg">
+                    <img src="../images/re3data_badge.png" />
+                  </object>
+                </div>
+                <div id="oa_open-aire" class="oa-data-provider">
+                  <a href="https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::2130eb640e0a272898a51da41363542d">
+                    <img src="../images/open-aire.webp" alt="OpenAIRE - Validated Repository (3.0)" />
+                  </a>
+                </div>
+              </div>
+              <div class="oa-data-providers-end">
+                <div id="oa_agris" class="oa-data-provider">
+                  <a href="https://www.fao.org/agris/data-provider/federal-ministry-food-and-agriculture">
+                    <img src="../images/ADP_cert_2025.png" alt="Seal of recognition for active Agris data providers" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section xml:lang="all">
+    <script type="text/javascript" src="../js/jquery.number.js" />
+    <script>
+      $.ajax({
+      type: "GET",
+      url: "../api/v1/search?q=objectType:mods AND
+      state:published&amp;rows=0&amp;wt=json&amp;json.wrf=?",
+      dataType: "jsonp",
+      success: function (data) {
+      $('#oa-docCounter').text($.number(data.response.numFound,0, ',', '.'));
+      },
+      });
     </script>
-</section>
-<meta><log lastEditor="administrator" date="2018-01-11" time="09:05" /></meta></MyCoReWebPage>
+  </section>
+  <meta>
+    <log lastEditor="administrator" date="2018-01-11" time="09:05" />
+  </meta>
+</MyCoReWebPage>
