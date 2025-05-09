@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import javax.xml.transform.TransformerException;
+//import javax.xml.transform.TransformerException;
 
 import org.jdom2.Element;
 import org.apache.solr.client.solrj.SolrClient;
@@ -15,17 +15,18 @@ import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.mycore.common.MCRException;
+//import org.mycore.common.MCRException;
 import org.mycore.common.config.MCRConfiguration2;
 import org.mycore.common.content.MCRContent;
 import org.mycore.common.content.MCRJDOMContent;
-import org.mycore.common.xml.MCRLayoutService;
+import org.mycore.common.content.transformer.MCRContentTransformerFactory;
+//import org.mycore.common.xml.MCRLayoutService;
 import org.mycore.datamodel.metadata.MCRMetadataManager;
 import org.mycore.datamodel.metadata.MCRObject;
 import org.mycore.datamodel.metadata.MCRObjectID;
 import org.mycore.frontend.servlets.MCRContentServlet;
 import org.mycore.solr.MCRSolrClientFactory;
-import org.xml.sax.SAXException;
+//import org.xml.sax.SAXException;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -102,13 +103,14 @@ public class MCRDCATDEServlet extends MCRContentServlet {
         }
         MCRJDOMContent mcrdata = new MCRJDOMContent(root);
 
-        MCRLayoutService layoutService = new MCRLayoutService();
+        //MCRLayoutService layoutService = new MCRLayoutService();
 
-        try {
-            return layoutService.instance().getTransformedContent(httpServletRequest, httpServletResponse, mcrdata);
-        } catch (final SAXException | TransformerException | IOException e) {
-            throw new MCRException("Exception while transforming MCRContent to DCATDECatalog.", e);
-        }
+        //try {
+            //return layoutService.instance().getTransformedContent(httpServletRequest, httpServletResponse, mcrdata);
+            return MCRContentTransformerFactory.getTransformer("dcatcollection").transform(mcrdata);
+        //} catch (final SAXException | TransformerException | IOException e) {
+           // throw new MCRException("Exception while transforming MCRContent to DCATDECatalog.", e);
+        //}
 
     }
 

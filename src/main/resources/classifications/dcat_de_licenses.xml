@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="dcat_license">
+  <label xml:lang="de" text="DCAT-AP.de-konforme Lizenzen" />
+  <categories>
+    <category ID="dl-zero-de/2.0">
+      <label xml:lang="de" text="Datenlizenz Deutschland – Zero – Version 2.0" />
+    </category>
+    <category ID="dl-by-de/2.0">
+      <label xml:lang="de" text="Datenlizenz Deutschland Namensnennung 2.0" />
+    </category>
+    <category ID="cc-by/4.0">
+      <label xml:lang="de" text="Creative Commons Namensnennung – 4.0 International (CC BY 4.0)" />
+    </category>
+    <category ID="apache">
+      <label xml:lang="de" text="Freie Softwarelizenz der Apache Software Foundation" />
+    </category>
+    <category ID="bsdlicense">
+      <label xml:lang="de" text="BSD Lizenz" />
+    </category>
+    <category ID="cc-by">
+      <label xml:lang="de" text="Creative Commons Namensnennung (CC-BY)" />
+    </category>
+    <category ID="cc-by-de/3.0">
+      <label xml:lang="de" text="Creative Commons Namensnennung 3.0 Deutschland (CC BY 3.0 DE)" />
+    </category>
+    <category ID="cc-by-sa">
+      <label xml:lang="de" text="Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 3.0 Deutschland (CC BY-SA 3.0 DE)" />
+    </category>
+    <category ID="cc-by-sa-de/3.0">
+      <label xml:lang="de" text="Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen (CC-BY-SA)" />
+    </category>
+    <category ID="cc-by-sa/4.0">
+      <label xml:lang="de" text="Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 4.0 International (CC-BY-SA 4.0)" />
+    </category>
+    <category ID="ccpdm/1.0">
+      <label xml:lang="de" text="Public Domain Mark 1.0 (PDM)" />
+    </category>
+    <category ID="cc-zero">
+      <label xml:lang="de" text="Creative Commons CC Zero License (cc-zero)" />
+    </category>
+    <category ID="dl-by-de/1.0">
+      <label xml:lang="de" text="Datenlizenz Deutschland Namensnennung 1.0" />
+    </category>
+    <category ID="geoNutz/20130319">
+      <label xml:lang="de" text="Nutzungsbestimmungen für die Bereitstellung von Geodaten des Bundes" />
+    </category>
+    <category ID="geoNutz/20131001">
+      <label xml:lang="de" text="Nutzungsbestimmungen für die Bereitstellung von Geodaten des Landes Berlin" />
+    </category>
+    <category ID="gfdl">
+      <label xml:lang="de" text="GNU Free Documentation License (GFDL)" />
+    </category>
+    <category ID="gpl/3.0">
+      <label xml:lang="de" text="GNU General Public License version 3.0 (GPLv3)" />
+    </category>
+    <category ID="mozilla">
+      <label xml:lang="de" text="Mozilla Public License 2.0 (MPL)" />
+    </category>
+    <category ID="odbl">
+      <label xml:lang="de" text="Open Data Commons Open Database License (ODbL)" />
+    </category>
+    <category ID="odby">
+      <label xml:lang="de" text="Open Data Commons Attribution License (ODC-BY 1.0)" />
+    </category>
+    <category ID="odcpddl">
+      <label xml:lang="de" text="Open Data Commons Public Domain Dedication and Licence (ODC PDDL)" />
+    </category>
+    <category ID="officialWork">
+      <label xml:lang="de" text="Amtliches Werk, lizenzfrei nach §5 Abs. 1 UrhG" />
+    </category>
+    <category ID="other-open">
+      <label xml:lang="de" text="Andere offene Lizenz" />
+    </category>
+    <category ID="other-opensource">
+      <label xml:lang="de" text="Andere Open Source Lizenz" />
+    </category>
+    <category ID="cc-by-nc">
+      <label xml:lang="de" text="Creative Commons Namensnennung – Nicht kommerziell (CC BY-NC)" />
+    </category>
+    <category ID="cc-by-nc/3.0">
+      <label xml:lang="de" text="Creative Commons Namensnennung –  Nicht kommerziell 3.0 Deutschland (CC BY-NC 3.0 DE)" />
+    </category>
+    <category ID="cc-by-nc/4.0">
+      <label xml:lang="de" text="Creative Commons Namensnennung – Nicht kommerziell 4.0 International (CC BY-NC 4.0)" />
+    </category>
+    <category ID="cc-by-nd">
+      <label xml:lang="de" text="Creative Commons Namensnennung – Keine Bearbeitung (CC BY-ND)" />
+    </category>
+    <category ID="cc-by-nd/3.0">
+      <label xml:lang="de" text="Creative Commons Namensnennung – Keine Bearbeitung 3.0 Unported (CC BY-ND 3.0)" />
+    </category>
+    <category ID="cc-by-nd/4.0">
+      <label xml:lang="de" text="Creative Commons Namensnennung – Keine Bearbeitung 4.0 International (CC BY-ND 4.0)" />
+    </category>
+    <category ID="dl-by-nc-de/1.0">
+      <label xml:lang="de" text="Datenlizenz Deutschland Namensnennung nicht-kommerziell 1.0" />
+    </category>
+    <category ID="other-closed">
+      <label xml:lang="de" text="Andere geschlossene Lizenz" />
+    </category>
+    <category ID="other-commercial">
+      <label xml:lang="de" text="Andere kommerzielle Lizenz" />
+    </category>
+    <category ID="other-freeware">
+      <label xml:lang="de" text="Andere Freeware Lizenz" />
+    </category>
+  </categories>
+</mycoreclass>
