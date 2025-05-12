@@ -17,6 +17,7 @@
   <xsl:variable name="OABaseURL">https://www.openagrar.de/</xsl:variable>
   <xsl:variable name="OAURL"><xsl:value-of select="concat($OABaseURL, 'receive/')" /></xsl:variable>
   <xsl:variable name="OAFileURL"><xsl:value-of select="concat($OABaseURL, 'servlets/MCRFileNodeServlet/')" /></xsl:variable>
+  <xsl:variable name="OAZIPURL"><xsl:value-of select="concat($OABaseURL, 'servlets/MCRZipServlet?id=')" /></xsl:variable>
 
   <!-- Identifier URLs -->
   <xsl:variable name="doiURL">https://doi.org/</xsl:variable>
@@ -186,30 +187,53 @@
   </xsl:template>
 
   <xsl:template name="derivates">
-	  <!-- Dataset documentation -->
-	<xsl:for-each select="structure/derobjects/derobject">
-		<xsl:if test="classification/@categid='documentation'">
-		  <xsl:variable name="MCRID"><xsl:value-of select="../../../@ID" /></xsl:variable>
-	      <foaf:page>
-	        <foaf:Document rdf:resource="{concat($OAFileURL, ../../../@ID, '/', maindoc)}"/>
-	      </foaf:page>
-	    </xsl:if>
-	</xsl:for-each>
-	<!-- Do not create distribution if content-derivates are under embargo -->
+    <xsl:variable name="MCRID"><xsl:value-of select="./@ID" /></xsl:variable>
+    <!-- Dataset documentation -->
+    <xsl:for-each select="structure/derobjects/derobject">
+      <xsl:if test="classification/@categid='documentation'">
+        <foaf:page>
+          <foaf:Document rdf:resource="{concat($OAFileURL, $MCRID, '/', maindoc)}"/>
+        </foaf:page>
+      </xsl:if>
+    </xsl:for-each>
+    <!-- Do not create distribution if content-derivates are under embargo -->
     <xsl:if test="not(metadata/def.modsContainer/modsContainer/mods:mods/mods:accessCondition[@type='embargo'])">
-        <xsl:for-each select="structure/derobjects/derobject">
-		  <!-- Create distribution only if derivate is of categorie "content" or "content_other_format" -->
-		  <xsl:if test="contains(classification/@categid, 'content')">
-          <dcat:distribution>
-            <dcat:Distribution rdf:resource="{concat($OAFileURL, ../../../@ID, '/', maindoc)}">
-              <!-- Mandatory fields: dcat:accessURL -->
-              <dcat:accessURL rdf:resource="{concat($OAURL, ../../../@ID)}" />
-              <dcat:downloadURL rdf:resource="{concat($OAFileURL, ../../../@ID, '/', maindoc)}" />
-              <dct:format rdf:resource="{concat($dctFileType, upper-case(tokenize(maindoc,'\.')[last()]))}"/>
-            </dcat:Distribution>
-          </dcat:distribution>
-          </xsl:if>
+      <xsl:variable name="ifs">
+        <xsl:for-each select="./structure/derobjects/derobject[@xlink:href]">
+          <der id="{@xlink:href}">
+            <xsl:copy-of select="document(concat('xslStyle:mcr_directory-recursive:ifs:',@xlink:href,'/'))" />
+          </der>
         </xsl:for-each>
+      </xsl:variable>
+      <xsl:if test="$ifs/der">
+        <xsl:choose>
+	  <xsl:when test="count($ifs/der/mcr_directory/children//child[@type='file']) &gt; 1">
+	    <dcat:distribution>
+              <dcat:Distribution rdf:resource="{concat($OAZIPURL, $MCRID)}">
+                <!-- Mandatory fields: dcat:accessURL -->
+                <dcat:accessURL rdf:resource="{concat($OAURL, $MCRID)}" />
+                <dcat:downloadURL rdf:resource="{concat($OAZIPURL, $MCRID)}" />
+                <dct:format rdf:resource="{concat($dctFileType, 'ZIP')}"/>
+              </dcat:Distribution>
+            </dcat:distribution>	
+          </xsl:when>
+          <xsl:otherwise>
+	    <xsl:for-each select="structure/derobjects/derobject">
+	    <!-- Create distribution only if derivate is of categorie "content" or "content_other_format" -->
+	      <xsl:if test="contains(classification/@categid, 'content')">
+                <dcat:distribution>
+                  <dcat:Distribution rdf:resource="{concat($OAFileURL, ../../../@ID, '/', maindoc)}">
+                  <!-- Mandatory fields: dcat:accessURL -->
+                    <dcat:accessURL rdf:resource="{concat($OAURL, ../../../@ID)}" />
+                    <dcat:downloadURL rdf:resource="{concat($OAFileURL, ../../../@ID, '/', maindoc)}" />
+                    <dct:format rdf:resource="{concat($dctFileType, upper-case(tokenize(maindoc,'\.')[last()]))}"/>
+                  </dcat:Distribution>
+                </dcat:distribution>
+              </xsl:if>
+            </xsl:for-each>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:if>
     </xsl:if>
   </xsl:template>
 
