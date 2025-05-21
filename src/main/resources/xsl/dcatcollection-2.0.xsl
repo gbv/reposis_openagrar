@@ -5,6 +5,7 @@
                 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                 xmlns:dct="http://purl.org/dc/terms/"
                 xmlns:dcat="http://www.w3.org/ns/dcat#"
+                xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
                 xmlns:foaf="http://xmlns.com/foaf/0.1/"
                 xmlns:org="http://www.w3.org/ns/org#"
                 exclude-result-prefixes="mods xlink">
@@ -25,13 +26,15 @@
   <xsl:variable name="gndURL">https://d-nb.info/gnd/</xsl:variable>
   <xsl:variable name="viafURL">https://viaf.org/viaf/</xsl:variable>
   <xsl:variable name="scopusURL">https://???</xsl:variable>
-
+  <xsl:variable name="OAContributorID">http://dcat-ap.de/def/contributors/openAgrarRepositoriumDerForschungseinrichtungenDesBMEL</xsl:variable>
+  
+  
   <!-- EU Vocabularies -->
   <xsl:variable name="dctLicenseURI">http://dcat-ap.de/def/licenses/</xsl:variable>
   <xsl:variable name="dctLanguageURI">http://publications.europa.eu/resource/authority/language/</xsl:variable>
   <xsl:variable name="dctFileType">http://publications.europa.eu/resource/authority/file-type/</xsl:variable>
   <xsl:variable name="dctTheme">http://publications.europa.eu/resource/authority/data-theme/</xsl:variable>
-  
+  <xsl:variable name="datatype">http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset</xsl:variable>
   <xsl:variable name="rfc5646" select="document('classification:metadata:-1:children:rfc5646')" />
 <!--  <xsl:key name="category" match="category" use="@ID" /> -->
 
@@ -50,6 +53,7 @@
             <dcat:Dataset rdf:about="{concat($OAURL,./@ID)}">
               <xsl:apply-templates />
               <xsl:call-template name="derivates"/>
+              <dcatde:contributorID rdf:resource="{$OAContributorID}" />
             </dcat:Dataset>
           </dcat:dataset>
         </xsl:for-each>
@@ -89,6 +93,7 @@
   <xsl:template match="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods">
     <xsl:call-template name="title" />
     <xsl:call-template name="description" />
+    <dcat:type rdf:resource="{$datatype}" />
     <xsl:call-template name="publisher" />
     <xsl:call-template name="issued" />
     <xsl:call-template name="theme" />
