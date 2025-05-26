@@ -137,12 +137,12 @@
             <xsl:choose>
               <xsl:when test="$CurrentLang='en'">
                 <a href="https://www.bmel.de/EN/">
-                  <img src="{$WebApplicationBaseURL}images/logos/logo_bmelv_en.png" title="Research in the field of BMEL" alt="Research in the field of BMEL" />
+                  <img src="{$WebApplicationBaseURL}images/logos/logo_bmelh_en.svg" title="Research in the field of BMEL" alt="Research in the field of BMEL" />
                 </a>
               </xsl:when>
               <xsl:otherwise>
                 <a href="https://www.bmel.de/">
-                  <img src="{$WebApplicationBaseURL}images/logos/logo_bmelv.png" title="Forschung im Bereich des BMEL" alt="Forschung im Bereich des BMEL" />
+                  <img src="{$WebApplicationBaseURL}images/logos/logo_bmelh_de.svg" title="Forschung im Bereich des BMELH" alt="Forschung im Bereich des BMELH" />
                 </a>
               </xsl:otherwise>
             </xsl:choose>
