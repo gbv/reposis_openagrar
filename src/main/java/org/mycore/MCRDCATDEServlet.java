@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-//import javax.xml.transform.TransformerException;
-
 import org.jdom2.Element;
 import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.SolrQuery;
@@ -15,18 +13,15 @@ import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-//import org.mycore.common.MCRException;
 import org.mycore.common.config.MCRConfiguration2;
 import org.mycore.common.content.MCRContent;
 import org.mycore.common.content.MCRJDOMContent;
 import org.mycore.common.content.transformer.MCRContentTransformerFactory;
-//import org.mycore.common.xml.MCRLayoutService;
 import org.mycore.datamodel.metadata.MCRMetadataManager;
 import org.mycore.datamodel.metadata.MCRObject;
 import org.mycore.datamodel.metadata.MCRObjectID;
 import org.mycore.frontend.servlets.MCRContentServlet;
 import org.mycore.solr.MCRSolrClientFactory;
-//import org.xml.sax.SAXException;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -42,23 +37,25 @@ public class MCRDCATDEServlet extends MCRContentServlet {
             .orElse("*");
 
     // DCATDE Catalog properties
-    private static final String TITLE_DE = MCRConfiguration2.getString("MCR.DCATCatalog.title_de")
+    private final String TITLE_DE = MCRConfiguration2.getString("MCR.DCATCatalog.title_de")
             .orElse("Mycore Forschungsdaten");
-    private static final String TITLE_EN = MCRConfiguration2.getString("MCR.DCATCatalog.title_en")
+    private final String TITLE_EN = MCRConfiguration2.getString("MCR.DCATCatalog.title_en")
             .orElse("Mycore Research Data");
-    private static final String DESCRIPTION_DE = MCRConfiguration2.getString("MCR.DCATCatalog.description_de")
+    private final String DESCRIPTION_DE = MCRConfiguration2.getString("MCR.DCATCatalog.description_de")
             .orElse("Open Data Katalog des Mycore Repositoriums");
-    private static final String DESCRIPTION_EN = MCRConfiguration2.getString("MCR.DCATCatalog.description_en")
+    private final String DESCRIPTION_EN = MCRConfiguration2.getString("MCR.DCATCatalog.description_en")
             .orElse("Open Data Catalog of Mycore Repository");
-    private static final String HOMEPAGE = MCRConfiguration2.getString("MCR.DCATCatalog.homepage")
+    private final String HOMEPAGE = MCRConfiguration2.getString("MCR.DCATCatalog.homepage")
             .orElse("https://www.mycore.de/");
-    private static final List<String> LANGUAGES = MCRConfiguration2.getString("MCR.DCATCatalog.language_list")
+    private final List<String> LANGUAGES = MCRConfiguration2.getString("MCR.DCATCatalog.language_list")
             .stream()
             .flatMap(MCRConfiguration2::splitValue)
             .collect(Collectors.toList());
-    private static final String PUBLISHER = MCRConfiguration2.getString("MCR.DCATCatalog.publisher")
+    private final String PUBLISHER = MCRConfiguration2.getString("MCR.DCATCatalog.publisher")
             .orElse("Mycore Repositorium");
-    private static final String THEME = MCRConfiguration2.getString("MCR.DCATCatalog.theme")
+    private final String THEME = MCRConfiguration2.getString("MCR.DCATCatalog.theme")
+            .orElse("NONE");
+    private final String CONTRIBUTOR = MCRConfiguration2.getString("MCR.DCATCatalog.contributorID")
             .orElse("NONE");
 
     private static final Logger LOGGER = LogManager.getLogger();
@@ -88,6 +85,7 @@ public class MCRDCATDEServlet extends MCRContentServlet {
         root.addContent(new Element("publisher").setText(PUBLISHER));
         root.addContent(new Element("homepage").setText(HOMEPAGE));
         root.addContent(new Element("theme").setText(THEME));
+	    root.addContent(new Element("contributor").setText(CONTRIBUTOR));
 
         for (String lang : LANGUAGES) {
             root.addContent(new Element("language").setText(lang));
@@ -102,16 +100,7 @@ public class MCRDCATDEServlet extends MCRContentServlet {
 
         }
         MCRJDOMContent mcrdata = new MCRJDOMContent(root);
-
-        //MCRLayoutService layoutService = new MCRLayoutService();
-
-        //try {
-            //return layoutService.instance().getTransformedContent(httpServletRequest, httpServletResponse, mcrdata);
-            return MCRContentTransformerFactory.getTransformer("dcatcollection").transform(mcrdata);
-        //} catch (final SAXException | TransformerException | IOException e) {
-           // throw new MCRException("Exception while transforming MCRContent to DCATDECatalog.", e);
-        //}
-
+        return MCRContentTransformerFactory.getTransformer("dcatcollection").transform(mcrdata);
     }
 
 
@@ -119,7 +108,7 @@ public class MCRDCATDEServlet extends MCRContentServlet {
     private List<MCRObjectID> getIdList(HttpServletRequest request){
         List<MCRObjectID> idList = new ArrayList<>();
         Integer start = request.getParameter("start") == null ? 0 : Integer.parseInt(request.getParameter("start"));
-        Integer rows = request.getParameter("rows") == null ? 10 : Integer.parseInt(request.getParameter("rows"));
+        Integer rows = request.getParameter("rows") == null ? 100 : Integer.parseInt(request.getParameter("rows"));
 
         SolrQuery query = new SolrQuery();
         query.setQuery(SOLR_QUERY);

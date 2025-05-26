@@ -5,6 +5,7 @@
                 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                 xmlns:dct="http://purl.org/dc/terms/"
                 xmlns:dcat="http://www.w3.org/ns/dcat#"
+                xmlns:dcatap="http://data.europa.eu/r5r/"
                 xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
                 xmlns:foaf="http://xmlns.com/foaf/0.1/"
                 xmlns:org="http://www.w3.org/ns/org#"
@@ -26,21 +27,26 @@
   <xsl:variable name="gndURL">https://d-nb.info/gnd/</xsl:variable>
   <xsl:variable name="viafURL">https://viaf.org/viaf/</xsl:variable>
   <xsl:variable name="scopusURL">https://???</xsl:variable>
-  <xsl:variable name="OAContributorID">http://dcat-ap.de/def/contributors/openAgrarRepositoriumDerForschungseinrichtungenDesBMEL</xsl:variable>
-  
-  
+
   <!-- EU Vocabularies -->
   <xsl:variable name="dctLicenseURI">http://dcat-ap.de/def/licenses/</xsl:variable>
   <xsl:variable name="dctLanguageURI">http://publications.europa.eu/resource/authority/language/</xsl:variable>
   <xsl:variable name="dctFileType">http://publications.europa.eu/resource/authority/file-type/</xsl:variable>
   <xsl:variable name="dctTheme">http://publications.europa.eu/resource/authority/data-theme/</xsl:variable>
+  <xsl:variable name="hvdcatURI">http://data.europa.eu/bna/c_60182062</xsl:variable>
+  <xsl:variable name="applLegislationURI">http://data.europa.eu/eli/reg_impl/2023/138/oj</xsl:variable>
   <xsl:variable name="datatype">http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset</xsl:variable>
+  
   <xsl:variable name="rfc5646" select="document('classification:metadata:-1:children:rfc5646')" />
+  <xsl:variable name="theme"><xsl:value-of select="/dcatcollection/theme" /></xsl:variable>
+  <xsl:variable name="contributorID"><xsl:value-of select="/dcatcollection/contributor" /></xsl:variable>
+  
 <!--  <xsl:key name="category" match="category" use="@ID" /> -->
 
   <xsl:template match="@* | text()" />
 
   <xsl:template match="/dcatcollection">
+	
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dct="http://purl.org/dc/terms/"
              xmlns:dcat="http://www.w3.org/ns/dcat#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:org="http://www.w3.org/ns/org#">
       <dcat:Catalog>
@@ -53,7 +59,6 @@
             <dcat:Dataset rdf:about="{concat($OAURL,./@ID)}">
               <xsl:apply-templates />
               <xsl:call-template name="derivates"/>
-              <dcatde:contributorID rdf:resource="{$OAContributorID}" />
             </dcat:Dataset>
           </dcat:dataset>
         </xsl:for-each>
@@ -93,6 +98,7 @@
   <xsl:template match="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods">
     <xsl:call-template name="title" />
     <xsl:call-template name="description" />
+    <xsl:call-template name="identifier" />
     <dcat:type rdf:resource="{$datatype}" />
     <xsl:call-template name="publisher" />
     <xsl:call-template name="issued" />
@@ -101,6 +107,7 @@
     <xsl:call-template name="language" />
     <xsl:call-template name="license" />
     <xsl:call-template name="creator" />
+    <xsl:call-template name="contributor" />
   </xsl:template>
 
   <xsl:template name="title">
@@ -186,8 +193,8 @@
   </xsl:template>
   
   <xsl:template name="theme">
-    <xsl:if test="theme != 'NONE'">
-      <dcat:theme rdf:resource="{concat($dctTheme, theme)}"/>
+    <xsl:if test="$theme != 'NONE'">
+      <dcat:theme rdf:resource="{concat($dctTheme, $theme)}"/>
     </xsl:if>
   </xsl:template>
 
@@ -244,27 +251,16 @@
 
 
    <xsl:template name="license">
-    <!-- <xsl:for-each select="mods:accessCondition[@type='use and reproduction']"> -->
     <xsl:for-each select="mods:classification[@generator='mir_licenses2dcat_license-mycore']">
-	  <!--<xsl:variable name="license">
-        <xsl:choose>
-          <xsl:when test="contains(./@xlink:href, 'cc_by')">
-            <xsl:value-of select="concat($dctLicenseURI,'cc-by', translate(substring-after(./@xlink:href, 'cc_by'), '_', '/'))"/>
-          </xsl:when>
-          <xsl:when test="contains(./@xlink:href, 'cc_zero')">
-            <xsl:value-of select="concat($dctLicenseURI, 'cc-zero')" />
-          </xsl:when>
-          <xsl:when test="contains(./@xlink:href., 'mir_licenses#oa')">
-            <xsl:value-of select="concat($dctLicenseURI, 'other-open')" />
-          </xsl:when>
-          <xsl:when test="contains(./@xlink:href, 'mir_licenses#rights_reserved')">
-            <xsl:value-of select="concat($dctLicenseURI, 'other-closed')" />
-          </xsl:when>
-        </xsl:choose>
-      </xsl:variable> -->
       <dct:license rdf:resource="{concat($dctLicenseURI, substring-after(@valueURI, '#'))}"/>
     </xsl:for-each>
     <!-- What to do with copyrightMD ??? -->
+  </xsl:template>
+  
+  <xsl:template name="identifier">
+	<dct:identifier>
+      <xsl:value-of select="../../../../@ID" />
+    </dct:identifier>
   </xsl:template>
 
   <xsl:template name="keywords">
@@ -273,6 +269,12 @@
         <xsl:value-of select="."/>
       </dcat:keyword>
     </xsl:for-each>
+  </xsl:template>
+  
+  <xsl:template name="contributor">
+    <xsl:if test="$contributorID != 'NONE'">
+      <dcatde:contributorID rdf:resource="{$contributorID}" />
+    </xsl:if>
   </xsl:template>
 
   <xsl:template name="language">
