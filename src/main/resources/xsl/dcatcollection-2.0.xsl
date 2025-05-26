@@ -136,7 +136,7 @@
       <xsl:if test="mods:role/mods:roleTerm = 'aut'">
         <dct:creator>
           <rdf:Description>
-            <xsl:if test="mods:nameIdentifier">
+            <xsl:if test="mods:nameIdentifier[@type != 'scopus']">
               <xsl:attribute name="rdf:about">
                 <xsl:choose>
                   <xsl:when test="mods:nameIdentifier[@type='orcid']">
