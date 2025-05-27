@@ -89,22 +89,32 @@
       <artifactId>jakarta.servlet-api</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.apache.solr</groupId>
-      <artifactId>solr-solrj</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
       <groupId>org.mycore</groupId>
       <artifactId>mycore-base</artifactId>
     </dependency>
     <dependency>
       <groupId>org.mycore</groupId>
-      <artifactId>mycore-solr</artifactId>
+      <artifactId>mycore-pi</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.solr</groupId>
+      <artifactId>solr-solrj</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jdom</groupId>
+      <artifactId>jdom2</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.mycore</groupId>
-      <artifactId>mycore-pi</artifactId>
+      <artifactId>mycore-solr</artifactId>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.mycore</groupId>
