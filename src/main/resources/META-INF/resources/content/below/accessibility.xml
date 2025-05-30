@@ -4,12 +4,12 @@
     
     <div>
       <h1> Erklärung zur Barrierefreiheit <small class="text-muted">(Stand der Erklärung:
-        21.09.2020)</small> </h1>
+        27.05.2025)</small> </h1>
       
       <div class="row">
         <div class="col-md-8 oa-borderbox" lang="de">
 
-        <p> Das Bundesministerium für Ernährung und Landwirtschaft (BMEL) ist bemüht, seine
+        <p> Das Bundesministerium für Landwirtschaft, Ernährung und Heimat (BMLEH) ist bemüht, seine
           Website <a href="https://www.openagrar.de">www.openagrar.de</a>
           im Einklang mit den nationalen Rechtsvorschriften zur Umsetzung der Richtlinie (EU)
           2016/2102 des Europäischen Parlaments und des Rates barrierefrei zugänglich zu machen. </p>
@@ -117,6 +117,6 @@
     </div>
   </section>
   <meta>
-    <log lastEditor="ustahl" date="2020-09-21" time="11:24"/>
+    <log lastEditor="ustahl" date="2025-05-30" time="11:22" />
   </meta>
 </MyCoReWebPage>

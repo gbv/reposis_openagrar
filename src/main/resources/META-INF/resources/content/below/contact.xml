@@ -2,7 +2,7 @@
 <MyCoReWebPage><section xml:lang="en" title="Contact"><div>
 <h1>Contact</h1>
 
-<p>The OpenAgrar repository was planned by the libraries of the research institutions affiliated with the Federal Ministry of Food and Agriculture (BMEL) and the Federal Office for Agriculture and Food. It was developed and set up together with the Verbundzentrale des GBV (VZG).<br />
+<p>The OpenAgrar repository was planned by the libraries of the research institutions affiliated with the Federal Ministry of Agriculture, Food and Regional Identity (BMLEH) and the Federal Office for Agriculture and Food. It was developed and set up together with the Verbundzentrale des GBV (VZG).<br />
     For questions regarding the publications in OpenAgrar or the repository framework MyCoRe and the database server please contact the libraries or the Head Office of the GBV (VZG), respectively.</p>
 
 <h3>Federal Research Institute for Animal Health - Friedrich-Loeffler-Institut (FLI)</h3>
@@ -100,7 +100,7 @@ E-Mail: <span class="madress">dms-list [at] lists.gbv.de</span></p>
 <section xml:lang="de" title="Kontakt"><div>
 <h1>Kontakt</h1>
 
-<p>Der Publikationsserver OpenAgrar wurde von den Bibliotheken im Geschäftsbereich des BMEL und der Bundesanstalt für Landwirtschaft und Ernährung (BLE) konzipiert und in Zusammenarbeit mit der Verbundzentrale des GBV (VZG) aufgebaut.</p>
+<p>Der Publikationsserver OpenAgrar wurde von den Bibliotheken im Geschäftsbereich des BMLEH und der Bundesanstalt für Landwirtschaft und Ernährung (BLE) konzipiert und in Zusammenarbeit mit der Verbundzentrale des GBV (VZG) aufgebaut.</p>
 
 <p>Für fachliche Fragen kontaktieren Sie bitte die entsprechenden Bibliotheken und Informationszentren. Fragen zum Repository-framework MyCoRe und dem Datenbankserver beantwortet Ihnen die Verbundzentrale des GBV (VZG).</p>
 
@@ -188,4 +188,4 @@ Internet: <a href="https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-re
 E-Mail: <span class="madress">dms-list [at] lists.gbv.de</span></p>
 </div>
 </section><meta>
-<log lastEditor="tbeyer" date="2023-07-04" time="14:27" /></meta></MyCoReWebPage>
+<log lastEditor="tbeyer" date="2025-05-30" time="11:22" /></meta></MyCoReWebPage>

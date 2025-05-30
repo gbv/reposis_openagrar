@@ -171,7 +171,7 @@
         <p>
           <ul>
             <li>Icons der Institute im header brechen aus</li>
-            <li>Schrift des Logos dem BMEL im Footer durchbricht rechte weiße Kante</li>
+            <li>Schrift des Logos dem BMLEH im Footer durchbricht rechte weiße Kante</li>
             <li>Suchschlitz der Schnellsuche wird überdeckt von Button für die Suchen</li>
             <li>Suche: Alle Treffer der Seite merken nicht vollständig sichbar.</li>
             <li>Detailansicht: Zugriffsstatistik -  Bezeichner brechen flasch um.</li>
@@ -247,7 +247,7 @@
           Nicht erkennbarer Fokus:
           <ul>
             <li>Links zu den Instituten im Header</li>
-            <li>Footer Link zu BMEL - weißer Kasten </li>
+            <li>Footer Link zu BMLEH - weißer Kasten </li>
             <li>Detailansicht: Icons für CC-Lizenzen</li>
             <li>Detailansicht: Icons im Zitieren panel.</li>
             <li>Detailansicht: Link auf nächstes letztes Suchergebnis</li>
@@ -346,6 +346,6 @@
     </div>
   </section>
   <meta>
-    <log lastEditor="administrator" date="2020-12-10" time="12:30" />
+    <log lastEditor="administrator" date="2025-05-30" time="11:22" />
   </meta>
 </MyCoReWebPage>
