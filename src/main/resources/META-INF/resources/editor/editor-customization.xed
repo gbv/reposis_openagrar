@@ -20,6 +20,8 @@
     <xed:remove  ref="openAIRE" />
     <xed:remove  ref="shelfmark" />
     <xed:remove  ref="institutes" />
+    <xed:remove ref="govdata.dcat.hvd" />
+    <xed:include ref="govdata.dcat.hvd"		  		before="embargo" /> 
     <xed:include ref="oa.source"                    before="related.item.search.of.all.items"/>
     <xed:include ref="openAIRE"                     before="related.item.search.of.all.items"/>
     <xed:include ref="oa.extension.characteristics" before="related.item.search.of.all.items"/>
@@ -29,6 +31,7 @@
     <xed:include ref="comment.complex"              before="related.item.search.of.all.items"/>    
     <xed:remove  ref="validation-rules"/>   
     <xed:include ref="validation-rules-oa"          before="related.item.search.of.all.items"/>
+
   </xed:modify>
 
   <xed:modify ref="genres.book">
@@ -721,6 +724,27 @@
     </fieldset>
   </xed:template>
   
+  <xed:template id="govdata.dcat.hvd">
+<!-- 	<xed:if test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin')"> -->
+    <xed:repeat xpath="mods:classification[@authority='dcatHVD'][@displayLabel='dcatHVD']">
+      <div class="form-group row">
+        <label class="col-md-3 col-form-label text-right">
+          <xed:output i18n="mir.hvdCategories" />
+          :
+        </label>
+        <div class="col-md-6">
+          <select class="form-control form-control-inline mir-form__js-select--large">
+            <option value="">
+              <xed:output i18n="mir.select" />
+            </option>
+            <xed:include uri="xslStyle:items2options:classification:editor:-1:children:dcat_hvd_categories" />
+          </select>
+        </div>
+        <mir:help-pmud help-text="{i18n:mir.help.dcat.hvd}" pmud="true"/>
+      </div>
+    </xed:repeat>
+    <!-- </xed:if> -->
+  </xed:template> 
   
   
 </xed:template>

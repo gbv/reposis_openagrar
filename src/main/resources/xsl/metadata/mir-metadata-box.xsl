@@ -295,7 +295,9 @@
         </xsl:for-each>
             <!-- START: OA specific changes -->
             <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[not(@generator) and
-                                                     not(@authorityURI='https://www.openagrar.de/classifications/annual_review')]" />
+                                                     not(@authorityURI='https://www.openagrar.de/classifications/annual_review') and not(@authority='dcatHVD')]" />
+            <xsl:call-template name="dcatHVD" />
+                                       
             <!-- END: OA specific changes -->
         <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:part/mods:extent" />
         <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:location/mods:url" />
@@ -590,6 +592,19 @@
             <xsl:value-of select="." />
           </td>
         </tr>
+  </xsl:template>
+  
+  <xsl:template name="dcatHVD">
+    <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@authority='dcatHVD']">
+      <tr>
+        <td class="metaname" valign="top">
+          <xsl:value-of select="concat(i18n:translate('component.mods.metaData.dictionary.dcathvd'),':')" />
+        </td>
+        <td class="metavalue">
+          <xsl:value-of select="document(concat('classification:metadata:0:children:dcat_hvd_categories:', ./text()))//category/label[@xml:lang=$CurrentLang]/@text"/>
+         </td>
+      </tr>
+    </xsl:for-each>
   </xsl:template>
 
 </xsl:stylesheet>
