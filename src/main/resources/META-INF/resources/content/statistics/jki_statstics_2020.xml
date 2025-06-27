@@ -75,10 +75,11 @@
       var q_instA  =q_instAll + ' AND category.top:"mir_institutes:jki_a"';
       var q_instAG =q_instAll + ' AND category.top:"mir_institutes:jki_ag"';
       var q_instAT =q_instAll + ' AND category.top:"mir_institutes:jki_at"';
-      var q_instBS =q_instAll + ' AND category.top:"mir_institutes:jki_bs"';
       var q_instBI =q_instAll + ' AND category.top:"mir_institutes:jki_bi"';
+      var q_instBS =q_instAll + ' AND category.top:"mir_institutes:jki_bs"';
       var q_instDK =q_instAll + ' AND category.top:"mir_institutes:jki_dk"';
       var q_instEP =q_instAll + ' AND category.top:"mir_institutes:jki_ep"';
+      var q_instG  =q_instAll + ' AND category.top:"mir_institutes:G"';
       var q_instGF =q_instAll + ' AND category.top:"mir_institutes:jki_gf"';
       var q_instOVP=q_instAll + ' AND category.top:"mir_institutes:jki_opv"';
       var q_instOW =q_instAll + ' AND category.top:"mir_institutes:jki_ow"';
@@ -90,7 +91,6 @@
       var q_instZL =q_instAll + ' AND category.top:"mir_institutes:jki_zl"';
       var q_instZO =q_instAll + ' AND category.top:"mir_institutes:jki_zo"';
       var q_instZR =q_instAll + ' AND category.top:"mir_institutes:jki_zr"';
-      var q_instG  =q_instAll + ' AND category.top:"mir_institutes:G"';
       var q_instWS =q_instAll + ' AND category.top:"mir_institutes:jki_ws"';
       
       var q_instAll_editor= '(mods.editor.affiliation:*julius* OR mods.editor.affiliation:*jki*)' ;
@@ -98,10 +98,11 @@
       var q_instA_editor  =q_instAll_editor + ' AND category.top:"mir_institutes:jki_a"';
       var q_instAG_editor =q_instAll_editor + ' AND category.top:"mir_institutes:jki_ag"';
       var q_instAT_editor =q_instAll_editor + ' AND category.top:"mir_institutes:jki_at"';
-      var q_instBS_editor =q_instAll_editor + ' AND category.top:"mir_institutes:jki_bs"';
       var q_instBI_editor =q_instAll_editor + ' AND category.top:"mir_institutes:jki_bi"';
+      var q_instBS_editor =q_instAll_editor + ' AND category.top:"mir_institutes:jki_bs"';
       var q_instDK_editor =q_instAll_editor + ' AND category.top:"mir_institutes:jki_dk"';
       var q_instEP_editor =q_instAll_editor + ' AND category.top:"mir_institutes:jki_ep"';
+      var q_instG_editor  =q_instAll_editor + ' AND category.top:"mir_institutes:G"';
       var q_instGF_editor =q_instAll_editor + ' AND category.top:"mir_institutes:jki_gf"';
       var q_instOVP_editor=q_instAll_editor + ' AND category.top:"mir_institutes:jki_opv"';
       var q_instOW_editor =q_instAll_editor + ' AND category.top:"mir_institutes:jki_ow"';
@@ -113,7 +114,6 @@
       var q_instZL_editor =q_instAll_editor + ' AND category.top:"mir_institutes:jki_zl"';
       var q_instZO_editor =q_instAll_editor + ' AND category.top:"mir_institutes:jki_zo"';
       var q_instZR_editor =q_instAll_editor + ' AND category.top:"mir_institutes:jki_zr"';
-      var q_instG_editor  =q_instAll_editor + ' AND category.top:"mir_institutes:G"';
       var q_instWS_editor =q_instAll_editor + ' AND category.top:"mir_institutes:jki_ws"';
       
       var Fieldname = 'oa.statistic.metric.jcr.class'; 
@@ -154,6 +154,7 @@
           <td class="head_inst"> Institut für Bienen-schutz (BS) </td>
           <td class="head_inst"> Institut für Digitalisierung und Künstliche Intelligenz (DK) </td>
           <td class="head_inst"> Institut für Epidemio-logie und Pathogen-diagnostik (EP) </td>
+          <td class="head_inst"> Institut für Pflanzenschutz in Gartenbau und urbanem Grün (G) </td>
           <td class="head_inst"> Institut für Pflanzen-schutz in Gartenbau und Forst (GF) </td>
           <td class="head_inst"> Institut für ökologische Chemie, Pflanzen-analytik und Vorrats-schutz (ÖPV)</td>
           <td class="head_inst"> Institut für Pflanzen-schutz in Obst- und Weinbau (OW) </td>
@@ -165,7 +166,6 @@
           <td class="head_inst"> Institut für Züchtungs-forschung an landwirt-schaftlichen Kulturen (ZL) </td>
           <td class="head_inst"> Institut für Züchtungs-forschung an Obst (ZO) </td>
           <td class="head_inst"> Institut für Reben-züchtung (ZR) </td>
-          <td class="head_inst"> Institut für Pflanzenschutz in Gartenbau und urbanem Grün (G) </td>
           <td class="head_inst"> Institut für Waldschutz (WS) </td>
         </tr>
         <tr>
@@ -179,6 +179,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instBS + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instDK + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instEP + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instG  + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instGF + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOVP + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOW + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
@@ -190,7 +191,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZL + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZO + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZR + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instG  + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instWS + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
@@ -203,6 +203,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instBS + ' AND ' + q_jcrclass1)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instDK + ' AND ' + q_jcrclass1)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instEP + ' AND ' + q_jcrclass1)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instG  + ' AND ' + q_jcrclass1)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instGF + ' AND ' + q_jcrclass1)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOVP + ' AND ' + q_jcrclass1)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOW + ' AND ' + q_jcrclass1)" data-printAsLink="true"/> </td>
@@ -214,7 +215,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZL + ' AND ' + q_jcrclass1)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZO + ' AND ' + q_jcrclass1)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZR + ' AND ' + q_jcrclass1)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instG  + ' AND ' + q_jcrclass1)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instWS + ' AND ' + q_jcrclass1)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
@@ -227,6 +227,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instBS + ' AND ' + q_jcrclass2)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instDK + ' AND ' + q_jcrclass2)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instEP + ' AND ' + q_jcrclass2)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instG  + ' AND ' + q_jcrclass2)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instGF + ' AND ' + q_jcrclass2)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOVP + ' AND ' + q_jcrclass2)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOW + ' AND ' + q_jcrclass2)" data-printAsLink="true"/> </td>
@@ -238,7 +239,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZL + ' AND ' + q_jcrclass2)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZO + ' AND ' + q_jcrclass2)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZR + ' AND ' + q_jcrclass2)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instG  + ' AND ' + q_jcrclass2)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instWS + ' AND ' + q_jcrclass2)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
@@ -251,6 +251,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instBS + ' AND ' + q_jcrclass3)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instDK + ' AND ' + q_jcrclass3)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instEP + ' AND ' + q_jcrclass3)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instG  + ' AND ' + q_jcrclass3)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instGF + ' AND ' + q_jcrclass3)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOVP + ' AND ' + q_jcrclass3)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOW + ' AND ' + q_jcrclass3)" data-printAsLink="true"/> </td>
@@ -262,7 +263,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZL + ' AND ' + q_jcrclass3)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZO + ' AND ' + q_jcrclass3)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZR + ' AND ' + q_jcrclass3)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instG  + ' AND ' + q_jcrclass3)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instWS + ' AND ' + q_jcrclass3)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
@@ -275,6 +275,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instBS + ' AND ' + q_jcrclass4)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instDK + ' AND ' + q_jcrclass4)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instEP + ' AND ' + q_jcrclass4)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instG  + ' AND ' + q_jcrclass4)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instGF + ' AND ' + q_jcrclass4)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOVP + ' AND ' + q_jcrclass4)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOW + ' AND ' + q_jcrclass4)" data-printAsLink="true"/> </td>
@@ -286,7 +287,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZL + ' AND ' + q_jcrclass4)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZO + ' AND ' + q_jcrclass4)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZR + ' AND ' + q_jcrclass4)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instG  + ' AND ' + q_jcrclass4)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instWS + ' AND ' + q_jcrclass4)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
@@ -299,6 +299,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instBS + ' AND ' + q_jcrclass5)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instDK + ' AND ' + q_jcrclass5)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instEP + ' AND ' + q_jcrclass5)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instG  + ' AND ' + q_jcrclass5)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instGF + ' AND ' + q_jcrclass5)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOVP + ' AND ' + q_jcrclass5)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOW + ' AND ' + q_jcrclass5)" data-printAsLink="true"/> </td>
@@ -310,7 +311,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZL + ' AND ' + q_jcrclass5)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZO + ' AND ' + q_jcrclass5)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZR + ' AND ' + q_jcrclass5)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instG  + ' AND ' + q_jcrclass5)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instWS + ' AND ' + q_jcrclass5)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
@@ -323,6 +323,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instBS )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instDK )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instEP )" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instG  )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instGF )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOVP )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instOW )" data-printAsLink="true"/> </td>
@@ -334,7 +335,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZL )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZO )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instZR )" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instG  )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instWS )" data-printAsLink="true"/> </td>
         </tr>
         <tr>
@@ -348,6 +348,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instBS + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instDK + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instEP + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instG  + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instGF + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instOVP + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instOW + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
@@ -359,7 +360,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instZL + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instZO + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instZR + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instG  + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instWS + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
         </tr>
         
@@ -374,6 +374,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instBS + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instDK + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instEP + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instG  + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instGF + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instOVP + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instOW + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
@@ -385,7 +386,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instZL + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instZO + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instZR + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instG  + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefEditorial + ' AND ' + q_instWS + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
         </tr>
         
@@ -400,6 +400,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instBS + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instDK + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instEP + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instG  + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instGF + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instOVP + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instOW + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
@@ -411,7 +412,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instZL + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instZO + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instZR + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instG  + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instWS + ' AND ' + q_refParent)" data-printAsLink="true"/> </td>
         </tr>
         
@@ -426,6 +426,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instBS + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instDK + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instEP + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instG  + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instGF + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instOVP + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instOW + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
@@ -437,7 +438,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instZL + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instZO + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instZR + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instG  + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefShortCom + ' AND ' + q_instWS + ' AND ' + q_nRefParent)" data-printAsLink="true"/> </td>
         </tr>
         
@@ -452,6 +452,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instBS)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instDK)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instEP)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instG )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instGF)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instOVP)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instOW)" data-printAsLink="true"/> </td>
@@ -463,7 +464,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instZL)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instZO)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instZR)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instG )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refBook + ' AND ' + q_instWS)" data-printAsLink="true"/> </td>
         </tr>
         <tr >
@@ -477,6 +477,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instBS)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instDK)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instEP)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instG )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instGF)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instOVP)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instOW)" data-printAsLink="true"/> </td>
@@ -488,7 +489,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instZL)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instZO)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instZR)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instG )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefArticle + ' AND ' + q_instWS)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
@@ -502,6 +502,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instBS)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instDK)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instEP)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instG )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instGF)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instOVP)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instOW)" data-printAsLink="true"/> </td>
@@ -513,7 +514,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instZL)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instZO)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instZR)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instG )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_nRefConf + ' AND ' + q_instWS)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
@@ -527,6 +527,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instBS)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instDK)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instEP)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instG )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instGF)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instOVP)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instOW)" data-printAsLink="true"/> </td>
@@ -538,7 +539,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instZL)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instZO)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instZR)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instG )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refConf + ' AND ' + q_instWS)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
@@ -552,6 +552,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refReview + ' AND ' + q_instBS)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refReview + ' AND ' + q_instDK)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refReview + ' AND ' + q_instEP)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refReview + ' AND ' + q_instG )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refReview + ' AND ' + q_instGF)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refReview + ' AND ' + q_instOVP)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refReview + ' AND ' + q_instOW)" data-printAsLink="true"/> </td>
@@ -563,7 +564,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refReview + ' AND ' + q_instZL)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refReview + ' AND ' + q_instZO)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refReview + ' AND ' + q_instZR)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refReview + ' AND ' + q_instG )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refReview + ' AND ' + q_instWS)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
@@ -577,6 +577,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refResearchData + ' AND ' + q_instBS)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refResearchData + ' AND ' + q_instDK)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refResearchData + ' AND ' + q_instEP)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refResearchData + ' AND ' + q_instG )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refResearchData + ' AND ' + q_instGF)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refResearchData + ' AND ' + q_instOVP)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refResearchData + ' AND ' + q_instOW)" data-printAsLink="true"/> </td>
@@ -588,7 +589,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refResearchData + ' AND ' + q_instZL)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refResearchData + ' AND ' + q_instZO)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refResearchData + ' AND ' + q_instZR)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refResearchData + ' AND ' + q_instG )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refResearchData + ' AND ' + q_instWS)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
@@ -602,6 +602,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refLexicon + ' AND ' + q_instBS)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refLexicon + ' AND ' + q_instDK)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refLexicon + ' AND ' + q_instEP)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refLexicon + ' AND ' + q_instG )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refLexicon + ' AND ' + q_instGF)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refLexicon + ' AND ' + q_instOVP)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refLexicon + ' AND ' + q_instOW)" data-printAsLink="true"/> </td>
@@ -613,7 +614,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refLexicon + ' AND ' + q_instZL)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refLexicon + ' AND ' + q_instZO)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refLexicon + ' AND ' + q_instZR)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refLexicon + ' AND ' + q_instG )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refLexicon + ' AND ' + q_instWS)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
@@ -627,6 +627,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instBS_editor)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instDK_editor)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instEP_editor)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instG_editor )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instGF_editor)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instOVP_editor)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instOW_editor)" data-printAsLink="true"/> </td>
@@ -638,7 +639,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instZL_editor)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instZO_editor)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instZR_editor)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instG_editor )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND '  + q_refCollProc + ' AND ' + q_instWS_editor)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
@@ -652,6 +652,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractConf + ' AND ' + q_instBS)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractConf + ' AND ' + q_instDK)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractConf + ' AND ' + q_instEP)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractConf + ' AND ' + q_instG )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractConf + ' AND ' + q_instGF)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractConf + ' AND ' + q_instOVP)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractConf + ' AND ' + q_instOW)" data-printAsLink="true"/> </td>
@@ -663,7 +664,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractConf + ' AND ' + q_instZL)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractConf + ' AND ' + q_instZO)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractConf + ' AND ' + q_instZR)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractConf + ' AND ' + q_instG )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractConf + ' AND ' + q_instWS)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
@@ -677,6 +677,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractJour + ' AND ' + q_instBS)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractJour + ' AND ' + q_instDK)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractJour + ' AND ' + q_instEP)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractJour + ' AND ' + q_instG )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractJour + ' AND ' + q_instGF)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractJour + ' AND ' + q_instOVP)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractJour + ' AND ' + q_instOW)" data-printAsLink="true"/> </td>
@@ -688,7 +689,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractJour + ' AND ' + q_instZL)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractJour + ' AND ' + q_instZO)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractJour + ' AND ' + q_instZR)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractJour + ' AND ' + q_instG )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refAbstractJour + ' AND ' + q_instWS)" data-printAsLink="true"/> </td>
         </tr>
         <tr>
@@ -702,6 +702,7 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refRest + ' AND ' + q_instBS)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refRest + ' AND ' + q_instDK)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refRest + ' AND ' + q_instEP)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refRest + ' AND ' + q_instG )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refRest + ' AND ' + q_instGF)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refRest + ' AND ' + q_instOVP)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refRest + ' AND ' + q_instOW)" data-printAsLink="true"/> </td>
@@ -713,7 +714,6 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refRest + ' AND ' + q_instZL)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refRest + ' AND ' + q_instZO)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refRest + ' AND ' + q_instZR)" data-printAsLink="true"/> </td>
-          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refRest + ' AND ' + q_instG )" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refRest + ' AND ' + q_instWS)" data-printAsLink="true"/> </td>
         </tr>
       </table>
