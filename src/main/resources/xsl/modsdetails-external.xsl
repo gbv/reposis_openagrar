@@ -33,6 +33,7 @@
   <xsl:param name="MIR.ImageWare.Enabled" />
   <xsl:param name="MIR.Workflow.Menu" select="'false'" />
   <xsl:param name="MCR.Module-iview2.SupportedContentTypes"/>
+  <xsl:param name="MIR.Strategy.EditPIRoles" />
 
   <xsl:include href="workflow-util.xsl" />
   <xsl:include href="mir-mods-utils.xsl" />
