@@ -185,7 +185,7 @@
         <xsl:for-each select="structure/derobjects/derobject">
           <xsl:variable name="objectID"><xsl:value-of select="./@xlink:href"/></xsl:variable>
           <dcat:distribution>
-            <dcat:Distribution rdf:resource="{concat($OAURL, $objectID)}">
+            <dcat:Distribution rdf:about="{concat($OAURL, $objectID)}">
               <!-- Mandatory fields: dcat:accessURL -->
               <dcat:accessURL rdf:resource="{concat($OAURL,../../../@ID)}" />
               <dcat:downloadURL rdf:resource="{concat($OAFileURL, maindoc)}" />
@@ -197,7 +197,7 @@
       <xsl:otherwise>
         <xsl:variable name="objectID"><xsl:value-of select="./@ID"/></xsl:variable>
         <dcat:distribution>
-          <dcat:Distribution rdf:resource="{concat($OAURL, $objectID)}">
+          <dcat:Distribution rdf:about="{concat($OAURL, $objectID)}">
             <dcat:accessURL rdf:resource="{concat($OAURL,$objectID)}" />
           </dcat:Distribution>
         </dcat:distribution>

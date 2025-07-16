@@ -221,7 +221,7 @@
         <xsl:choose>
 	  <xsl:when test="count($ifs/der/mcr_directory/children//child[@type='file']) &gt; 1">
 	    <dcat:distribution>
-              <dcat:Distribution rdf:resource="{concat($OAZIPURL, $MCRID)}">
+              <dcat:Distribution rdf:about="{concat($OAZIPURL, $MCRID)}">
                 <!-- Mandatory fields: dcat:accessURL -->
                 <dcat:accessURL rdf:resource="{concat($OAURL, $MCRID)}" />
                 <dcat:downloadURL rdf:resource="{concat($OAZIPURL, $MCRID)}" />
@@ -234,7 +234,7 @@
 	    <!-- Create distribution only if derivate is of categorie "content" or "content_other_format" -->
 	      <xsl:if test="contains(classification/@categid, 'content')">
                 <dcat:distribution>
-                  <dcat:Distribution rdf:resource="{concat($OAFileURL, ../../../@ID, '/', maindoc)}">
+                  <dcat:Distribution rdf:about="{concat($OAFileURL, ../../../@ID, '/', maindoc)}">
                   <!-- Mandatory fields: dcat:accessURL -->
                     <dcat:accessURL rdf:resource="{concat($OAURL, ../../../@ID)}" />
                     <dcat:downloadURL rdf:resource="{concat($OAFileURL, ../../../@ID, '/', maindoc)}" />
