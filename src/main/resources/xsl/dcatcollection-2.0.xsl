@@ -73,7 +73,7 @@
     <dct:description xml:lang="en"><xsl:value-of select="description[@lang='en']" /></dct:description>
 
     <dct:publisher>
-      <foaf:Agent>
+      <foaf:Agent rdf:about="{publisher_ror}">
         <foaf:name><xsl:value-of select="publisher" /></foaf:name>
       </foaf:Agent>
     </dct:publisher>
@@ -173,17 +173,13 @@
     </xsl:for-each>
   </xsl:template>
 
-
+  <!-- for the moment we ignore mods:originInfo/mods:publisher and set this hard -->
   <xsl:template name="publisher">
-    <xsl:if test="mods:originInfo/mods:publisher">
-      <dct:publisher>
-        <foaf:Agent>
-          <foaf:name>
-            <xsl:value-of select="mods:originInfo/mods:publisher" />
-          </foaf:name>
-        </foaf:Agent>
-      </dct:publisher>
-    </xsl:if>
+    <dct:publisher>
+      <foaf:Agent rdf:about="https://ror.org/04jw21793">
+        <foaf:name>Bundesministerium für Landwirtschaft, Ernährung und Heimat</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
   </xsl:template>
 
   <xsl:template name="issued">

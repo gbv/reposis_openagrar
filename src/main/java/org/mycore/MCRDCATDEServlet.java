@@ -38,13 +38,13 @@ public class MCRDCATDEServlet extends MCRContentServlet {
 
     // DCATDE Catalog properties
     private final String TITLE_DE = MCRConfiguration2.getString("MCR.DCATCatalog.title_de")
-            .orElse("Mycore Forschungsdaten");
+            .orElse("MyCoRe Forschungsdaten");
     private final String TITLE_EN = MCRConfiguration2.getString("MCR.DCATCatalog.title_en")
-            .orElse("Mycore Research Data");
+            .orElse("MyCoRe Research Data");
     private final String DESCRIPTION_DE = MCRConfiguration2.getString("MCR.DCATCatalog.description_de")
-            .orElse("Open Data Katalog des Mycore Repositoriums");
+            .orElse("Open Data Katalog des MyCoRe Repositoriums");
     private final String DESCRIPTION_EN = MCRConfiguration2.getString("MCR.DCATCatalog.description_en")
-            .orElse("Open Data Catalog of Mycore Repository");
+            .orElse("Open Data Catalog of MyCoRe Repository");
     private final String HOMEPAGE = MCRConfiguration2.getString("MCR.DCATCatalog.homepage")
             .orElse("https://www.mycore.de/");
     private final List<String> LANGUAGES = MCRConfiguration2.getString("MCR.DCATCatalog.language_list")
@@ -52,7 +52,9 @@ public class MCRDCATDEServlet extends MCRContentServlet {
             .flatMap(MCRConfiguration2::splitValue)
             .collect(Collectors.toList());
     private final String PUBLISHER = MCRConfiguration2.getString("MCR.DCATCatalog.publisher")
-            .orElse("Mycore Repositorium");
+            .orElse("MyCoRe Repositorium");
+    private final String PUBLISHER_ROR = MCRConfiguration2.getString("MCR.DCATCatalog.publisher_ror")
+        .orElse("NONE");
     private final String THEME = MCRConfiguration2.getString("MCR.DCATCatalog.theme")
             .orElse("NONE");
     private final String CONTRIBUTOR = MCRConfiguration2.getString("MCR.DCATCatalog.contributorID")
@@ -83,6 +85,7 @@ public class MCRDCATDEServlet extends MCRContentServlet {
         root.addContent(descriptionEN);
 
         root.addContent(new Element("publisher").setText(PUBLISHER));
+        root.addContent(new Element("publisher_ror").setText(PUBLISHER_ROR));
         root.addContent(new Element("homepage").setText(HOMEPAGE));
         root.addContent(new Element("theme").setText(THEME));
 	    root.addContent(new Element("contributor").setText(CONTRIBUTOR));
