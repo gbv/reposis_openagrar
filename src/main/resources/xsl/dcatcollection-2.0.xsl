@@ -202,7 +202,7 @@
     <xsl:for-each select="structure/derobjects/derobject">
       <xsl:if test="classification[contains(@categid,'documentation')]">
         <foaf:page>
-          <foaf:Document rdf:resource="{concat($OAFileURL, $MCRID, '/', maindoc)}"/>
+          <foaf:Document rdf:resource="{concat($OAFileURL, ../../../@ID, '/', maindoc)}"/>
         </foaf:page>
       </xsl:if>
     </xsl:for-each>
