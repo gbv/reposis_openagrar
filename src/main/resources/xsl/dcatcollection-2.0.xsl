@@ -22,6 +22,7 @@
   <xsl:variable name="OAZIPURL"><xsl:value-of select="concat($OABaseURL, 'servlets/MCRZipServlet/openagrar_derivate_')" /></xsl:variable>
 
   <!-- Identifier URLs -->
+  <xsl:variable name="rorURL">https://ror.org/</xsl:variable>
   <xsl:variable name="doiURL">https://doi.org/</xsl:variable>
   <xsl:variable name="orcidURL">https://orcid.org/</xsl:variable>
   <xsl:variable name="gndURL">https://d-nb.info/gnd/</xsl:variable>
@@ -138,16 +139,19 @@
       <xsl:if test="mods:role/mods:roleTerm = 'aut'">
         <dct:creator>
           <rdf:Description>
-            <xsl:if test="mods:nameIdentifier[@type != 'scopus']">
+            <xsl:if test="mods:nameIdentifier[@type != lower-case('scopus')]">
               <xsl:attribute name="rdf:about">
                 <xsl:choose>
-                  <xsl:when test="mods:nameIdentifier[@type='orcid']">
+				  <xsl:when test="mods:nameIdentifier[@type=lower-case('ror')]">
+                    <xsl:value-of select="concat($rorURL, mods:nameIdentifier[lower-case(@type)='ror'])"/>
+                  </xsl:when>
+                  <xsl:when test="mods:nameIdentifier[@type=lower-case('orcid')]">
                     <xsl:value-of select="concat($orcidURL, mods:nameIdentifier[lower-case(@type)='orcid'])"/>
                   </xsl:when>
-                  <xsl:when test="mods:nameIdentifier[@type='gnd']">
+                  <xsl:when test="mods:nameIdentifier[@type=lower-case('gnd')]">
                     <xsl:value-of select="concat($gndURL, mods:nameIdentifier[lower-case(@type)='gnd'])"/>
                   </xsl:when>
-                  <xsl:when test="mods:nameIdentifier[@type='viaf']">
+                  <xsl:when test="mods:nameIdentifier[@type=lower-case('viaf')]">
                     <xsl:value-of select="concat($viafURL, mods:nameIdentifier[lower-case(@type)='viaf'])"/>
                   </xsl:when>
                  <!-- <xsl:when test="mods:nameIdentifier[@type='scopus']">
@@ -202,7 +206,7 @@
     <xsl:for-each select="structure/derobjects/derobject">
       <xsl:if test="classification[contains(@categid,'documentation')]">
         <foaf:page>
-          <foaf:Document rdf:resource="{concat($OAFileURL, ../../../@ID, '/', maindoc)}"/>
+          <foaf:Document rdf:resource="{concat($OAFileURL, @xlink:href, '/', maindoc)}"/>
         </foaf:page>
       </xsl:if>
     </xsl:for-each>
