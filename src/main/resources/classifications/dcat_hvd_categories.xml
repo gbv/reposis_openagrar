@@ -213,7 +213,7 @@
       </category>
       <category ID="c_b7de66cd">
         <label xml:lang="en" text="Energy resources"/>
-        <label xml:lang="de" text="Hor"/>
+        <label xml:lang="de" text="Energiequellen"/>
       </category>
       <category ID="c_7b8fbb64">
         <label xml:lang="en" text="Environmental monitoring facilities"/>
@@ -253,7 +253,7 @@
       </category>
       <category ID="c_b7f6a4f3">
         <label xml:lang="en" text="Nature preservation and biodiversity"/>
-        <label xml:lang="de" text="Hor"/>
+        <label xml:lang="de" text="Erhaltung der Natur und der biologischen Vielfalt"/>
       </category>
       <category ID="c_e4358335">
         <label xml:lang="en" text="Noise"/>
@@ -390,3 +390,5 @@
     </category>
   </categories>
 </mycoreclass>
+
+
