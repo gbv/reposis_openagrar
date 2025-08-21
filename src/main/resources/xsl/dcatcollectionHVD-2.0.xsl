@@ -43,7 +43,8 @@
   <xsl:variable name="accessRights" select="document('classification:metadata:-1:children:mir_licenses')" />
   <xsl:variable name="theme"><xsl:value-of select="/dcatcollection/theme" /></xsl:variable>
   <xsl:variable name="contributorID"><xsl:value-of select="/dcatcollection/contributor" /></xsl:variable>
-  
+
+  <xsl:variable name="knownFormat">csv,pdf,xlsx,zip</xsl:variable>  
 <!--  <xsl:key name="category" match="category" use="@ID" /> -->
 
   <xsl:template match="@* | text()" />
@@ -209,9 +210,7 @@
     <!-- Dataset documentation -->
     <xsl:for-each select="structure/derobjects/derobject">
       <xsl:if test="classification[contains(@categid,'documentation')]">
-        <foaf:page>
-          <foaf:Document rdf:resource="{concat($OAFileURL, $MCRID, '/', maindoc)}"/>
-        </foaf:page>
+        <foaf:page rdf:resource="{concat($OAFileURL, $MCRID, '/', maindoc)}"/>
       </xsl:if>
     </xsl:for-each>
     <!-- Do not create distribution if content-derivates are under embargo -->
@@ -249,7 +248,9 @@
                   <!-- Mandatory fields: dcat:accessURL -->
                   <dcat:accessURL rdf:resource="{concat($OAURL, ../../../@ID)}" />
                   <dcat:downloadURL rdf:resource="{concat($OAFileURL, ../../../@ID, '/', maindoc)}" />
-                  <dct:format rdf:resource="{concat($dctFileType, upper-case(tokenize(maindoc,'\.')[last()]))}"/>
+                  <xsl:if test="contains($knownFormats, tokenize(maindoc,'\.')[last()])">
+						<dct:format rdf:resource="{concat($dctFileType, upper-case(tokenize(maindoc,'\.')[last()]))}"/>
+					</xsl:if>
                   <foaf:page rdf:resource="{concat($OAURL, $MCRID)}" />
                   <xsl:if test="../../../metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@generator='mir_licenses2dcat_license-mycore']">
 				    <dct:license rdf:resource="{concat($dctLicenseURI, substring-after(../../../metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@generator='mir_licenses2dcat_license-mycore'][1]/@valueURI, '#'))}"/>

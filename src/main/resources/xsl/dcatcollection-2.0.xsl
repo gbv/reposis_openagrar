@@ -41,6 +41,7 @@
   <xsl:variable name="theme"><xsl:value-of select="/dcatcollection/theme" /></xsl:variable>
   <xsl:variable name="contributorID"><xsl:value-of select="/dcatcollection/contributor" /></xsl:variable>
   
+  <xsl:variable name="knownFormat">csv,pdf,xlsx,zip</xsl:variable>
 <!--  <xsl:key name="category" match="category" use="@ID" /> -->
 
   <xsl:template match="@* | text()" />
@@ -203,9 +204,7 @@
     <!-- Dataset documentation -->
     <xsl:for-each select="structure/derobjects/derobject">
       <xsl:if test="classification/@categid='documentation'">
-        <foaf:page>
-          <foaf:Document rdf:resource="{concat($OAFileURL, $MCRID, '/', maindoc)}"/>
-        </foaf:page>
+        <foaf:page rdf:resource="{concat($OAFileURL, $MCRID, '/', maindoc)}"/>
       </xsl:if>
     </xsl:for-each>
     <!-- Do not create distribution if content-derivates are under embargo -->
@@ -230,18 +229,20 @@
             </dcat:distribution>	
           </xsl:when>
           <xsl:otherwise>
-	    <xsl:for-each select="structure/derobjects/derobject">
-	    <!-- Create distribution only if derivate is of categorie "content" or "content_other_format" -->
-	      <xsl:if test="contains(classification/@categid, 'content')">
-                <dcat:distribution>
-                  <dcat:Distribution rdf:resource="{concat($OAFileURL, ../../../@ID, '/', maindoc)}">
-                  <!-- Mandatory fields: dcat:accessURL -->
-                    <dcat:accessURL rdf:resource="{concat($OAURL, ../../../@ID)}" />
-                    <dcat:downloadURL rdf:resource="{concat($OAFileURL, ../../../@ID, '/', maindoc)}" />
-                    <dct:format rdf:resource="{concat($dctFileType, upper-case(tokenize(maindoc,'\.')[last()]))}"/>
-                  </dcat:Distribution>
-                </dcat:distribution>
-              </xsl:if>
+			<xsl:for-each select="structure/derobjects/derobject">
+			<!-- Create distribution only if derivate is of categorie "content" or "content_other_format" -->
+			  <xsl:if test="contains(classification/@categid, 'content')">
+				<dcat:distribution>
+				  <dcat:Distribution rdf:resource="{concat($OAFileURL, ../../../@ID, '/', maindoc)}">
+				  <!-- Mandatory fields: dcat:accessURL -->
+					<dcat:accessURL rdf:resource="{concat($OAURL, ../../../@ID)}" />
+					<dcat:downloadURL rdf:resource="{concat($OAFileURL, ../../../@ID, '/', maindoc)}" />
+					<xsl:if test="contains($knownFormats, tokenize(maindoc,'\.')[last()])">
+						<dct:format rdf:resource="{concat($dctFileType, upper-case(tokenize(maindoc,'\.')[last()]))}"/>
+					</xsl:if>
+				  </dcat:Distribution>
+				</dcat:distribution>
+			  </xsl:if>
             </xsl:for-each>
           </xsl:otherwise>
         </xsl:choose>
