@@ -42,7 +42,7 @@
   <xsl:variable name="theme"><xsl:value-of select="/dcatcollection/theme" /></xsl:variable>
   <xsl:variable name="contributorID"><xsl:value-of select="/dcatcollection/contributor" /></xsl:variable>
   
-  <xsl:variable name="knownFormat" select="csv,pdf,xlsx,zip" />
+  <xsl:variable name="knownFormats" select="csv,pdf,xlsx,zip" />
   
 <!--  <xsl:key name="category" match="category" use="@ID" /> -->
 
