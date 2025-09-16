@@ -209,7 +209,7 @@
       </category>
       <category ID="c_4ba9548e">
         <label xml:lang="en" text="Emissions"/>
-        <label xml:lang="de" text="Emissionen)"/>
+        <label xml:lang="de" text="Emissionen"/>
       </category>
       <category ID="c_b7de66cd">
         <label xml:lang="en" text="Energy resources"/>
@@ -349,7 +349,7 @@
       </category>
       <category ID="c_b72b721f">
         <label xml:lang="en" text="National accounts – GDP main aggregates"/>
-        <label xml:lang="de" text="olkswirtschaftliche Gesamtrechnungen – BIP-Hauptaggregate"/>
+        <label xml:lang="de" text="Volkswirtschaftliche Gesamtrechnungen – BIP-Hauptaggregate"/>
       </category>
       <category ID="c_95da87c7">
         <label xml:lang="en" text="National accounts – key indicators on corporations"/>
