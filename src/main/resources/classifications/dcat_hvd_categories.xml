@@ -1,394 +1,392 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="dcat_hvd_categories">
-  <label xml:lang="en" text="DCAT-AP HVD Categories" description="Categories of DCAT-AP for Hight Valued Datasets"/>
-  <label xml:lang="de" text="DCAT-AP HVD Kategorien" description="Kategorien der DCAT-AP für die Kennzeichnung Hochwärtiger Datensätze"/>
-  <label xml:lang="x-uri" text="http://data.europa.eu/r5r/hvdCategory"/>
+  <label xml:lang="de" text="DCAT-AP HVD Kategorien" description="Kategorien der DCAT-AP für die Kennzeichnung Hochwärtiger Datensätze" />
+  <label xml:lang="en" text="DCAT-AP HVD Categories" description="Categories of DCAT-AP for Hight Valued Datasets" />
+  <label xml:lang="x-uri" text="http://data.europa.eu/r5r/hvdCategory" />
   <categories>
     <category ID="c_164e0bf5">
-      <label xml:lang="en" text="Meteorological"/>
-      <label xml:lang="de" text="Meteorologie"/>
+      <label xml:lang="de" text="Meteorologie" />
+      <label xml:lang="en" text="Meteorological" />
       <category ID="c_36807466">
-        <label xml:lang="en" text="Climate data: validated observations"/>
-        <label xml:lang="de" text="Klimadaten: validierte Beobachtungen"/>
+        <label xml:lang="de" text="Klimadaten: validierte Beobachtungen" />
+        <label xml:lang="en" text="Climate data: validated observations" />
       </category>
       <category ID="c_13e3cf16">
-        <label xml:lang="en" text="NWP model data"/>
-        <label xml:lang="de" text="NWP-Modelldaten"/>
+        <label xml:lang="de" text="NWP-Modelldaten" />
+        <label xml:lang="en" text="NWP model data" />
       </category>
       <category ID="c_3af3368c">
-        <label xml:lang="en" text="Observations data measured by weather stations"/>
-        <label xml:lang="de" text="Beobachtungsmessdaten von Wetterstationen"/>
+        <label xml:lang="de" text="Beobachtungsmessdaten von Wetterstationen" />
+        <label xml:lang="en" text="Observations data measured by weather stations" />
       </category>
       <category ID="c_d13a4420">
-        <label xml:lang="en" text="Radar data"/>
-        <label xml:lang="de" text="Radardaten"/>
+        <label xml:lang="de" text="Radardaten" />
+        <label xml:lang="en" text="Radar data" />
       </category>
       <category ID="c_be47b010">
-        <label xml:lang="en" text="Weather alerts"/>
-        <label xml:lang="de" text="Wetterwarnungen"/>
+        <label xml:lang="de" text="Wetterwarnungen" />
+        <label xml:lang="en" text="Weather alerts" />
       </category>
     </category>
     <category ID="c_a9135398">
-      <label xml:lang="en" text="Companies and company ownership"/>
-      <label xml:lang="de" text="Unternehmen und Eigentümerschaft von Unternehmen"/>
+      <label xml:lang="de" text="Unternehmen und Eigentümerschaft von Unternehmen" />
+      <label xml:lang="en" text="Companies and company ownership" />
       <category ID="c_56a1bf47">
-        <label xml:lang="en" text="Basic company information: key attributes"/>
-        <label xml:lang="de" text="Grundlegende Angaben zum Unternehmen: Schlüsselattribute"/>
+        <label xml:lang="de" text="Grundlegende Angaben zum Unternehmen: Schlüsselattribute" />
+        <label xml:lang="en" text="Basic company information: key attributes" />
       </category>
       <category ID="c_8f0fac04">
-        <label xml:lang="en" text="Company documents and accounts"/>
-        <label xml:lang="de" text="Unternehmensunterlagen und -abschlüsse"/>
+        <label xml:lang="de" text="Unternehmensunterlagen und -abschlüsse" />
+        <label xml:lang="en" text="Company documents and accounts" />
       </category>
     </category>
     <category ID="c_ac64a52d">
-      <label xml:lang="en" text="Geospatial"/>
-      <label xml:lang="de" text="Georaum"/>
+      <label xml:lang="de" text="Georaum" />
+      <label xml:lang="en" text="Geospatial" />
       <category ID="c_c3de25e4">
-        <label xml:lang="en" text="Addresses"/>
-        <label xml:lang="de" text="Adressen"/>
+        <label xml:lang="de" text="Adressen" />
+        <label xml:lang="en" text="Addresses" />
       </category>
       <category ID="c_9427236f">
-        <label xml:lang="en" text="Administrative units"/>
-        <label xml:lang="de" text="Verwaltungseinheiten"/>
+        <label xml:lang="de" text="Verwaltungseinheiten" />
+        <label xml:lang="en" text="Administrative units" />
       </category>
       <category ID="c_642643e6e">
-        <label xml:lang="en" text="Agricultural parcels"/>
-        <label xml:lang="de" text="Landwirtschaftliche Parzellen"/>
+        <label xml:lang="de" text="Landwirtschaftliche Parzellen" />
+        <label xml:lang="en" text="Agricultural parcels" />
       </category>
       <category ID="c_60182062">
-        <label xml:lang="en" text="Buildings"/>
-        <label xml:lang="de" text="Gebäude"/>
+        <label xml:lang="de" text="Gebäude" />
+        <label xml:lang="en" text="Buildings" />
       </category>
       <category ID="c_6a3f6896">
-        <label xml:lang="en" text="Cadastral parcels"/>
-        <label xml:lang="de" text="Flurstücke/Grundstücke (Katasterparzellen)"/>
+        <label xml:lang="de" text="Flurstücke/Grundstücke (Katasterparzellen)" />
+        <label xml:lang="en" text="Cadastral parcels" />
       </category>
       <category ID="c_6c2bb82d">
-        <label xml:lang="en" text="Geographical names"/>
-        <label xml:lang="de" text="Geografische Bezeichnungen"/>
+        <label xml:lang="de" text="Geografische Bezeichnungen" />
+        <label xml:lang="en" text="Geographical names" />
       </category>
       <category ID="c_fbd2fc3f">
-        <label xml:lang="en" text="Reference parcels "/>
-        <label xml:lang="de" text="Referenzparzellen"/>
+        <label xml:lang="de" text="Referenzparzellen" />
+        <label xml:lang="en" text="Reference parcels " />
       </category>
     </category>
     <category ID="c_b79e35eb">
-      <label xml:lang="en" text="Mobility"/>
-      <label xml:lang="de" text="Mobilität"/>
+      <label xml:lang="de" text="Mobilität" />
+      <label xml:lang="en" text="Mobility" />
       <category ID="c_4b74ea13">
-        <label xml:lang="en" text="Transport networks "/>
-        <label xml:lang="de" text="Verkehrsnetze"/>
+        <label xml:lang="de" text="Verkehrsnetze" />
+        <label xml:lang="en" text="Transport networks " />
       </category>
       <category ID="c_b151a0ba">
-        <label xml:lang="en" text="Inland waterways datasets"/>
-        <label xml:lang="de" text="Binnenschifffahrtsdatensätze"/>
+        <label xml:lang="de" text="Binnenschifffahrtsdatensätze" />
+        <label xml:lang="en" text="Inland waterways datasets" />
         <category ID="c_1226dc1a">
-          <label xml:lang="en" text="Bank of waterway at mean water level"/>
-          <label xml:lang="de" text="Ufer der Wasserstraße bei Mittelwasser"/>
+          <label xml:lang="de" text="Ufer der Wasserstraße bei Mittelwasser" />
+          <label xml:lang="en" text="Bank of waterway at mean water level" />
         </category>
         <category ID="c_664c9e5a">
-          <label xml:lang="en" text="Boundaries of the fairway/navigation channel"/>
-          <label xml:lang="de" text="Fahrwasser-/Fahrrinnengrenzen"/>
+          <label xml:lang="de" text="Fahrwasser-/Fahrrinnengrenzen" />
+          <label xml:lang="en" text="Boundaries of the fairway/navigation channel" />
         </category>
         <category ID="c_883d0205">
-          <label xml:lang="en" text="Contours of locks and dams"/>
-          <label xml:lang="de" text="Umrisse der Schleusen und Wehre"/>
+          <label xml:lang="de" text="Umrisse der Schleusen und Wehre" />
+          <label xml:lang="en" text="Contours of locks and dams" />
         </category>
         <category ID="c_f76b01e6">
-          <label xml:lang="en" text="Fairway characteristics"/>
-          <label xml:lang="de" text="Fahrwassermerkmale"/>
+          <label xml:lang="de" text="Fahrwassermerkmale" />
+          <label xml:lang="en" text="Fairway characteristics" />
         </category>
         <category ID="c_99bc517f">
-          <label xml:lang="en" text="Isolated dangers in the fairway/navigation channel under and above water"/>
-          <label xml:lang="de" text="Isolierte Gefahrenstellen im Fahrwasser/in der Fahrrinne unter und über Wasser"/>
+          <label xml:lang="de" text="Isolierte Gefahrenstellen im Fahrwasser/in der Fahrrinne unter und über Wasser" />
+          <label xml:lang="en" text="Isolated dangers in the fairway/navigation channel under and above water" />
         </category>
         <category ID="c_298ffb73">
-          <label xml:lang="en" text="Links to the external xml-files with operation times of restricting structures "/>
-          <label xml:lang="de" text="Links zu den externen xml-Dateien mit Betriebszeiten einschränkender Infrastrukturen"/>
+          <label xml:lang="de" text="Links zu den externen xml-Dateien mit Betriebszeiten einschränkender Infrastrukturen" />
+          <label xml:lang="en" text="Links to the external xml-files with operation times of restricting structures " />
         </category>
         <category ID="c_9cbe4435">
-          <label xml:lang="en" text="List of navigation aids and traffic signs"/>
-          <label xml:lang="de" text="Liste der Navigationshilfen und Verkehrszeichen"/>
+          <label xml:lang="de" text="Liste der Navigationshilfen und Verkehrszeichen" />
+          <label xml:lang="en" text="List of navigation aids and traffic signs" />
         </category>
         <category ID="c_3e8e3bf7">
-          <label xml:lang="en" text="Location and characteristics of ports and transhipment sites"/>
-          <label xml:lang="de" text="Lage und Merkmale von Häfen und Umschlagstellen"/>
+          <label xml:lang="de" text="Lage und Merkmale von Häfen und Umschlagstellen" />
+          <label xml:lang="en" text="Location and characteristics of ports and transhipment sites" />
         </category>
         <category ID="c_407951ff">
-          <label xml:lang="en" text="Location of ports and transhipment sites"/>
-          <label xml:lang="de" text="Lage von Häfen und Umschlagstellen"/>
+          <label xml:lang="de" text="Lage von Häfen und Umschlagstellen" />
+          <label xml:lang="en" text="Location of ports and transhipment sites" />
         </category>
         <category ID="c_fa2a1c3a">
-          <label xml:lang="en" text="Long-time obstructions in the fairway and reliability"/>
-          <label xml:lang="de" text="Langzeitbehinderungen im Fahrweg und Zuverlässigkeit"/>
+          <label xml:lang="de" text="Langzeitbehinderungen im Fahrweg und Zuverlässigkeit" />
+          <label xml:lang="en" text="Long-time obstructions in the fairway and reliability" />
         </category>
         <category ID="c_2037ada4e">
-          <label xml:lang="en" text="Navigation rules and recommendations "/>
-          <label xml:lang="de" text="Vorschriften und Empfehlungen für die Schifffahrt"/>
+          <label xml:lang="de" text="Vorschriften und Empfehlungen für die Schifffahrt" />
+          <label xml:lang="en" text="Navigation rules and recommendations " />
         </category>
         <category ID="c_b24028d7">
-          <label xml:lang="en" text="Official aids-to-navigation (e.g. buoys, beacons, lights, notice marks)"/>
-          <label xml:lang="de" text="Offizielle Schifffahrtszeichen (z. B. Tonnen, Baken, Leuchtzeichen, Tafelzeichen)"/>
+          <label xml:lang="de" text="Offizielle Schifffahrtszeichen (z. B. Tonnen, Baken, Leuchtzeichen, Tafelzeichen)" />
+          <label xml:lang="en" text="Official aids-to-navigation (e.g. buoys, beacons, lights, notice marks)" />
         </category>
         <category ID="c_7e19ef26">
-          <label xml:lang="en" text="Other physical limitations on waterways"/>
-          <label xml:lang="de" text="Sonstige physische Beschränkungen auf Wasserstraßen"/>
+          <label xml:lang="de" text="Sonstige physische Beschränkungen auf Wasserstraßen" />
+          <label xml:lang="en" text="Other physical limitations on waterways" />
         </category>
         <category ID="c_e5f69a04">
-          <label xml:lang="en" text="Present and future water levels at gauges"/>
-          <label xml:lang="de" text="Gegenwärtige und zukünftige Wasserstände an den Pegeln"/>
+          <label xml:lang="de" text="Gegenwärtige und zukünftige Wasserstände an den Pegeln" />
+          <label xml:lang="en" text="Present and future water levels at gauges" />
         </category>
         <category ID="c_25f43866">
-          <label xml:lang="en" text="Rates of waterway infrastructure charges"/>
-          <label xml:lang="de" text="Höhe der Abgaben für die Wasserstraßen-Infrastruktur"/>
+          <label xml:lang="de" text="Höhe der Abgaben für die Wasserstraßen-Infrastruktur" />
+          <label xml:lang="en" text="Rates of waterway infrastructure charges" />
         </category>
         <category ID="c_1e787364">
-          <label xml:lang="en" text="Reference data for water level gauges relevant to navigation"/>
-          <label xml:lang="de" text="Referenzdaten für die schifffahrtsrelevanten Pegel"/>
+          <label xml:lang="de" text="Referenzdaten für die schifffahrtsrelevanten Pegel" />
+          <label xml:lang="en" text="Reference data for water level gauges relevant to navigation" />
         </category>
         <category ID="c_03ba8d92">
-          <label xml:lang="en" text="Regular lock and bridge operating times"/>
-          <label xml:lang="de" text="Normale Betriebszeiten der Schleusen und Brücken"/>
+          <label xml:lang="de" text="Normale Betriebszeiten der Schleusen und Brücken" />
+          <label xml:lang="en" text="Regular lock and bridge operating times" />
         </category>
         <category ID="c_f6886b00">
-          <label xml:lang="en" text="Restrictions caused by flood and ice"/>
-          <label xml:lang="de" text="Beschränkungen infolge von Hochwasser und Eis"/>
+          <label xml:lang="de" text="Beschränkungen infolge von Hochwasser und Eis" />
+          <label xml:lang="en" text="Restrictions caused by flood and ice" />
         </category>
         <category ID="c_bc8941d9">
-          <label xml:lang="en" text="Shoreline construction"/>
-          <label xml:lang="de" text="Uferbefestigung"/>
+          <label xml:lang="de" text="Uferbefestigung" />
+          <label xml:lang="en" text="Shoreline construction" />
         </category>
         <category ID="c_593bc53d">
-          <label xml:lang="en" text="Short term changes of aids to navigation "/>
-          <label xml:lang="de" text="Kurzfristige Änderungen bei den Schifffahrtszeichen"/>
+          <label xml:lang="de" text="Kurzfristige Änderungen bei den Schifffahrtszeichen" />
+          <label xml:lang="en" text="Short term changes of aids to navigation " />
         </category>
         <category ID="c_66b946cb">
-          <label xml:lang="en" text="Short term changes of lock and bridge operating times"/>
-          <label xml:lang="de" text="Kurzfristige Änderungen der Betriebszeiten von Schleusen und Brücken"/>
+          <label xml:lang="de" text="Kurzfristige Änderungen der Betriebszeiten von Schleusen und Brücken" />
+          <label xml:lang="en" text="Short term changes of lock and bridge operating times" />
         </category>
         <category ID="c_e50004c6">
-          <label xml:lang="en" text="State of the rivers, canals, locks and bridges"/>
-          <label xml:lang="de" text="Zustand der Flüsse, Kanäle, Schleusen und Brücken"/>
+          <label xml:lang="de" text="Zustand der Flüsse, Kanäle, Schleusen und Brücken" />
+          <label xml:lang="en" text="State of the rivers, canals, locks and bridges" />
         </category>
         <category ID="c_b121e2f6">
-          <label xml:lang="en" text="Temporary obstructions in the fairway"/>
-          <label xml:lang="de" text="Vorübergehende Hindernisse im Fahrwasser"/>
+          <label xml:lang="de" text="Vorübergehende Hindernisse im Fahrwasser" />
+          <label xml:lang="en" text="Temporary obstructions in the fairway" />
         </category>
         <category ID="c_fef208ab">
-          <label xml:lang="en" text="Water depths contours in the navigation channel"/>
-          <label xml:lang="de" text="Tiefenlinien in der Fahrrinne"/>
+          <label xml:lang="de" text="Tiefenlinien in der Fahrrinne" />
+          <label xml:lang="en" text="Water depths contours in the navigation channel" />
         </category>
         <category ID="c_c19af83a">
-          <label xml:lang="en" text="Waterway axis with kilometres indication"/>
-          <label xml:lang="de" text="Wasserstraßenachse mit Kilometerangabe"/>
+          <label xml:lang="de" text="Wasserstraßenachse mit Kilometerangabe" />
+          <label xml:lang="en" text="Waterway axis with kilometres indication" />
         </category>
       </category>
     </category>
     <category ID="c_dd313021">
-      <label xml:lang="en" text="Earth observation and environment"/>
-      <label xml:lang="de" text="Erdbeobachtung und Umwelt"/>
+      <label xml:lang="de" text="Erdbeobachtung und Umwelt" />
+      <label xml:lang="en" text="Earth observation and environment" />
       <category ID="c_63b37dd4">
-        <label xml:lang="en" text="Air"/>
-        <label xml:lang="de" text="Luft"/>
+        <label xml:lang="de" text="Luft" />
+        <label xml:lang="en" text="Air" />
       </category>
       <category ID="c_af646f5b">
-        <label xml:lang="en" text="Area management / restriction / regulation zones &amp; reporting units"/>
-        <label xml:lang="de" text="Bewirtschaftungsgebiete/Schutzgebiete/geregelte Gebiete und Berichterstattungseinheiten"/>
+        <label xml:lang="de" text="Bewirtschaftungsgebiete/Schutzgebiete/geregelte Gebiete und Berichterstattungseinheiten" />
+        <label xml:lang="en" text="Area management / restriction / regulation zones &amp; reporting units" />
       </category>
       <category ID="c_c873f344">
-        <label xml:lang="en" text="Bio-geographical regions"/>
-        <label xml:lang="de" text="Biogeografische Regionen"/>
+        <label xml:lang="de" text="Biogeografische Regionen" />
+        <label xml:lang="en" text="Bio-geographical regions" />
       </category>
       <category ID="c_59e64dd4">
-        <label xml:lang="en" text="Climate"/>
-        <label xml:lang="de" text="Klima"/>
+        <label xml:lang="de" text="Klima" />
+        <label xml:lang="en" text="Climate" />
       </category>
       <category ID="c_315692ad">
-        <label xml:lang="en" text="Elevation"/>
-        <label xml:lang="de" text="Verwaltungseinheiten"/>
+        <label xml:lang="de" text="Verwaltungseinheiten" />
+        <label xml:lang="en" text="Elevation" />
       </category>
       <category ID="c_4ba9548e">
-        <label xml:lang="en" text="Emissions"/>
-        <label xml:lang="de" text="Emissionen"/>
+        <label xml:lang="de" text="Emissionen" />
+        <label xml:lang="en" text="Emissions" />
       </category>
       <category ID="c_b7de66cd">
-        <label xml:lang="en" text="Energy resources"/>
-        <label xml:lang="de" text="Energiequellen"/>
+        <label xml:lang="de" text="Energiequellen" />
+        <label xml:lang="en" text="Energy resources" />
       </category>
       <category ID="c_7b8fbb64">
-        <label xml:lang="en" text="Environmental monitoring facilities"/>
-        <label xml:lang="de" text="Umweltüberwachungseinrichtungen"/>
+        <label xml:lang="de" text="Umweltüberwachungseinrichtungen" />
+        <label xml:lang="en" text="Environmental monitoring facilities" />
       </category>
       <category ID="c_e3f55603e">
-        <label xml:lang="en" text="Geology"/>
-        <label xml:lang="de" text="Geologie"/>
+        <label xml:lang="de" text="Geologie" />
+        <label xml:lang="en" text="Geology" />
       </category>
       <category ID="c_c3919aec">
-        <label xml:lang="en" text="Habitats and biotopes"/>
-        <label xml:lang="de" text="Lebensräume und Biotope"/>
+        <label xml:lang="de" text="Lebensräume und Biotope" />
+        <label xml:lang="en" text="Habitats and biotopes" />
       </category>
       <category ID="c_4d63300b">
-        <label xml:lang="en" text="Horizontal legislation"/>
-        <label xml:lang="de" text="Horizontale Rechtsvorschriften"/>
+        <label xml:lang="de" text="Horizontale Rechtsvorschriften" />
+        <label xml:lang="en" text="Horizontal legislation" />
       </category>
       <category ID="c_06b1eec4">
-        <label xml:lang="en" text="Hydrography"/>
-        <label xml:lang="de" text="Gewässernetz"/>
+        <label xml:lang="de" text="Gewässernetz" />
+        <label xml:lang="en" text="Hydrography" />
       </category>
       <category ID="c_b21e1296">
-        <label xml:lang="en" text="Land cover"/>
-        <label xml:lang="de" text="Bodenbedeckung"/>
+        <label xml:lang="de" text="Bodenbedeckung" />
+        <label xml:lang="en" text="Land cover" />
       </category>
       <category ID="c_ad9ae929">
-        <label xml:lang="en" text="Land use"/>
-        <label xml:lang="de" text="Bodennutzung"/>
+        <label xml:lang="de" text="Bodennutzung" />
+        <label xml:lang="en" text="Land use" />
       </category>
       <category ID="c_4dd389c5">
-        <label xml:lang="en" text="Mineral resources"/>
-        <label xml:lang="de" text="Mineralische Bodenschätze"/>
+        <label xml:lang="de" text="Mineralische Bodenschätze" />
+        <label xml:lang="en" text="Mineral resources" />
       </category>
       <category ID="c_63be22bd">
-        <label xml:lang="en" text="Natural risk zones"/>
-        <label xml:lang="de" text="Gebiete mit naturbedingten Risiken"/>
+        <label xml:lang="de" text="Gebiete mit naturbedingten Risiken" />
+        <label xml:lang="en" text="Natural risk zones" />
       </category>
       <category ID="c_b7f6a4f3">
-        <label xml:lang="en" text="Nature preservation and biodiversity"/>
-        <label xml:lang="de" text="Erhaltung der Natur und der biologischen Vielfalt"/>
+        <label xml:lang="de" text="Erhaltung der Natur und der biologischen Vielfalt" />
+        <label xml:lang="en" text="Nature preservation and biodiversity" />
       </category>
       <category ID="c_e4358335">
-        <label xml:lang="en" text="Noise"/>
-        <label xml:lang="de" text="Lärm"/>
+        <label xml:lang="de" text="Lärm" />
+        <label xml:lang="en" text="Noise" />
       </category>
       <category ID="c_b40e6d46e">
-        <label xml:lang="en" text="Oceanographic geographical features"/>
-        <label xml:lang="de" text="Ozeanografisch-geografische Kennwerte"/>
+        <label xml:lang="de" text="Ozeanografisch-geografische Kennwerte" />
+        <label xml:lang="en" text="Oceanographic geographical features" />
       </category>
       <category ID="c_91185a85">
-        <label xml:lang="en" text="Orthoimagery"/>
-        <label xml:lang="de" text="Orthofotografie"/>
+        <label xml:lang="de" text="Orthofotografie" />
+        <label xml:lang="en" text="Orthoimagery" />
       </category>
       <category ID="c_59c93ba5">
-        <label xml:lang="en" text="Production and industrial facilities"/>
-        <label xml:lang="de" text="Produktions- und Industrieanlagen"/>
+        <label xml:lang="de" text="Produktions- und Industrieanlagen" />
+        <label xml:lang="en" text="Production and industrial facilities" />
       </category>
       <category ID="c_83aa10a6">
-        <label xml:lang="en" text="Protected sites"/>
-        <label xml:lang="de" text="Schutzgebiete"/>
+        <label xml:lang="de" text="Schutzgebiete" />
+        <label xml:lang="en" text="Protected sites" />
       </category>
       <category ID="c_f399050e">
-        <label xml:lang="en" text="Sea regions"/>
-        <label xml:lang="de" text="Meeresregionen"/>
+        <label xml:lang="de" text="Meeresregionen" />
+        <label xml:lang="en" text="Sea regions" />
       </category>
       <category ID="c_87a129d9">
-        <label xml:lang="en" text="Soil"/>
-        <label xml:lang="de" text=" Bodenr"/>
+        <label xml:lang="de" text="Boden" />
+        <label xml:lang="en" text="Soil" />
       </category>
       <category ID="c_793164b6">
-        <label xml:lang="en" text="Species distribution"/>
-        <label xml:lang="de" text="Verteilung der Arten"/>
+        <label xml:lang="de" text="Verteilung der Arten" />
+        <label xml:lang="en" text="Species distribution" />
       </category>
       <category ID="c_38933a65">
-        <label xml:lang="en" text="Waste"/>
-        <label xml:lang="de" text="Abfall"/>
+        <label xml:lang="de" text="Abfall" />
+        <label xml:lang="en" text="Waste" />
       </category>
       <category ID="c_43f88346">
-        <label xml:lang="en" text="Water"/>
-        <label xml:lang="de" text="Wasser"/>
+        <label xml:lang="de" text="Wasser" />
+        <label xml:lang="en" text="Water" />
       </category>
     </category>
     <category ID="c_e1da4e07">
-      <label xml:lang="en" text="Statistics"/>
-      <label xml:lang="de" text="Statistik"/>
+      <label xml:lang="de" text="Statistik" />
+      <label xml:lang="en" text="Statistics" />
       <category ID="c_dd8f4797">
-        <label xml:lang="en" text="Consolidated government gross debt"/>
-        <label xml:lang="de" text="Konsolidierte Bruttoverschuldung des Staates"/>
+        <label xml:lang="de" text="Konsolidierte Bruttoverschuldung des Staates" />
+        <label xml:lang="en" text="Consolidated government gross debt" />
       </category>
       <category ID="c_424bb0b4e">
-        <label xml:lang="en" text="Current healthcare expenditure"/>
-        <label xml:lang="de" text="Laufende Gesundheitsausgaben"/>
+        <label xml:lang="de" text="Laufende Gesundheitsausgaben" />
+        <label xml:lang="en" text="Current healthcare expenditure" />
       </category>
       <category ID="c_a2c6dcd8e">
-        <label xml:lang="en" text="Employment"/>
-        <label xml:lang="de" text="Erwerbstätigkeit"/>
+        <label xml:lang="de" text="Erwerbstätigkeit" />
+        <label xml:lang="en" text="Employment" />
       </category>
       <category ID="c_92874eb2">
-        <label xml:lang="en" text="Environmental accounts and statistics"/>
-        <label xml:lang="de" text="Umweltgesamtrechnungen und -statistiken"/>
+        <label xml:lang="de" text="Umweltgesamtrechnungen und -statistiken" />
+        <label xml:lang="en" text="Environmental accounts and statistics" />
       </category>
       <category ID="c_20cd11bb">
-        <label xml:lang="en" text="EU International trade in goods statistics – exports and imports breakdowns simultaneously by partner, product and flow"/>
-        <label xml:lang="de" text="Statistik des internationalen Warenverkehrs der EU – Ausfuhren und Einfuhren Aufschlüsselung gleichzeitig nach Partnern, Produkten und Warenströmen"/>
+        <label xml:lang="de" text="Statistik des internationalen Warenverkehrs der EU – Ausfuhren und Einfuhren Aufschlüsselung gleichzeitig nach Partnern, Produkten und Warenströmen" />
+        <label xml:lang="en" text="EU International trade in goods statistics – exports and imports breakdowns simultaneously by partner, product and flow" />
       </category>
       <category ID="c_6a7250c1">
-        <label xml:lang="en" text="Fertility"/>
-        <label xml:lang="de" text="Fertilität"/>
+        <label xml:lang="de" text="Fertilität" />
+        <label xml:lang="en" text="Fertility" />
       </category>
       <category ID="c_4ac557e7">
-        <label xml:lang="en" text="Government expenditure and revenue"/>
-        <label xml:lang="de" text="Ausgaben und Einnahmen des Staates"/>
+        <label xml:lang="de" text="Ausgaben und Einnahmen des Staates" />
+        <label xml:lang="en" text="Government expenditure and revenue" />
       </category>
       <category ID="c_c0022235">
-        <label xml:lang="en" text="Harmonised Indices of consumer prices"/>
-        <label xml:lang="de" text="Harmonisierte Verbraucherpreisindizes"/>
+        <label xml:lang="de" text="Harmonisierte Verbraucherpreisindizes" />
+        <label xml:lang="en" text="Harmonised Indices of consumer prices" />
       </category>
       <category ID="c_2aed31f9">
-        <label xml:lang="en" text="Industrial producer price index breakdowns by activity "/>
-        <label xml:lang="de" text="Industrieller Erzeugerpreisindex – Aufschlüsselung nach Tätigkeit"/>
+        <label xml:lang="de" text="Industrieller Erzeugerpreisindex – Aufschlüsselung nach Tätigkeit" />
+        <label xml:lang="en" text="Industrial producer price index breakdowns by activity " />
       </category>
       <category ID="c_34abf8c1">
-        <label xml:lang="en" text="Industrial production"/>
-        <label xml:lang="de" text="Industrieproduktion"/>
+        <label xml:lang="de" text="Industrieproduktion" />
+        <label xml:lang="en" text="Industrial production" />
       </category>
       <category ID="c_a8b937c4">
-        <label xml:lang="en" text="Inequality"/>
-        <label xml:lang="de" text="Ungleichheit"/>
+        <label xml:lang="de" text="Ungleichheit" />
+        <label xml:lang="en" text="Inequality" />
       </category>
       <category ID="articlec_4acb6bf3">
-        <label xml:lang="en" text="Mortality"/>
-        <label xml:lang="de" text="Mortalität"/>
+        <label xml:lang="de" text="Mortalität" />
+        <label xml:lang="en" text="Mortality" />
       </category>
       <category ID="c_b72b721f">
-        <label xml:lang="en" text="National accounts – GDP main aggregates"/>
-        <label xml:lang="de" text="Volkswirtschaftliche Gesamtrechnungen – BIP-Hauptaggregate"/>
+        <label xml:lang="de" text="Volkswirtschaftliche Gesamtrechnungen – BIP-Hauptaggregate" />
+        <label xml:lang="en" text="National accounts – GDP main aggregates" />
       </category>
       <category ID="c_95da87c7">
-        <label xml:lang="en" text="National accounts – key indicators on corporations"/>
-        <label xml:lang="de" text="Volkswirtschaftliche Gesamtrechnungen – Schlüsselindikatoren für Kapitalgesellschaften"/>
+        <label xml:lang="de" text="Volkswirtschaftliche Gesamtrechnungen – Schlüsselindikatoren für Kapitalgesellschaften" />
+        <label xml:lang="en" text="National accounts – key indicators on corporations" />
       </category>
       <category ID="c_59627af3">
-        <label xml:lang="en" text="National accounts – key indicators on households"/>
-        <label xml:lang="de" text="Volkswirtschaftliche Gesamtrechnungen – Schlüsselindikatoren für private Haushalte"/>
+        <label xml:lang="de" text="Volkswirtschaftliche Gesamtrechnungen – Schlüsselindikatoren für private Haushalte" />
+        <label xml:lang="en" text="National accounts – key indicators on households" />
       </category>
       <category ID="c_f2b50efd">
-        <label xml:lang="en" text="Population"/>
-        <label xml:lang="de" text="Bevölkerung"/>
+        <label xml:lang="de" text="Bevölkerung" />
+        <label xml:lang="en" text="Population" />
       </category>
       <category ID="c_317b9493">
-        <label xml:lang="en" text="Population, Fertility, Mortality"/>
-        <label xml:lang="de" text="Bevölkerung, Fertilität, Mortalität"/>
+        <label xml:lang="de" text="Bevölkerung, Fertilität, Mortalität" />
+        <label xml:lang="en" text="Population, Fertility, Mortality" />
       </category>
       <category ID="c_23385471">
-        <label xml:lang="en" text="Potential labour force"/>
-        <label xml:lang="de" text="Potenzielle Arbeitskräfte"/>
+        <label xml:lang="de" text="Potenzielle Arbeitskräfte" />
+        <label xml:lang="en" text="Potential labour force" />
       </category>
       <category ID="c_04bf94a3">
-        <label xml:lang="en" text="Poverty"/>
-        <label xml:lang="de" text="Armut"/>
+        <label xml:lang="de" text="Armut" />
+        <label xml:lang="en" text="Poverty" />
       </category>
       <category ID="c_a3767648">
-        <label xml:lang="en" text="Tourism flows in Europe"/>
-        <label xml:lang="de" text="Tourismusströme in Europa"/>
+        <label xml:lang="de" text="Tourismusströme in Europa" />
+        <label xml:lang="en" text="Tourism flows in Europe" />
       </category>
       <category ID="c_fd4e881c">
-        <label xml:lang="en" text="Unemployment"/>
-        <label xml:lang="de" text="Erwerbslosigkeit"/>
+        <label xml:lang="de" text="Erwerbslosigkeit" />
+        <label xml:lang="en" text="Unemployment" />
       </category>
       <category ID="c_a49ec591">
-        <label xml:lang="en" text="Volume of sales by activity"/>
-        <label xml:lang="de" text="Verkaufsmengen nach Tätigkeit"/>
+        <label xml:lang="de" text="Verkaufsmengen nach Tätigkeit" />
+        <label xml:lang="en" text="Volume of sales by activity" />
       </category>
     </category>
   </categories>
 </mycoreclass>
-
-
