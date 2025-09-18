@@ -20,14 +20,14 @@
     <xed:remove  ref="openAIRE" />
     <xed:remove  ref="shelfmark" />
     <xed:remove  ref="institutes" />
-    <xed:include ref="govdata.dcat.hvd" before="embargo" />
     <xed:include ref="oa.source"                    before="related.item.search.of.all.items"/>
     <xed:include ref="openAIRE"                     before="related.item.search.of.all.items"/>
     <xed:include ref="oa.extension.characteristics" before="related.item.search.of.all.items"/>
     <xed:include ref="oa.extension.journalmetrics"  before="related.item.search.of.all.items"/>
     <xed:include ref="oa.annual_review"             before="related.item.search.of.all.items"/>
+    <xed:include ref="govdata.dcat.hvd"             after="openAIRE" />
     <xed:remove  ref="comment.complex"/>
-    <xed:include ref="comment.complex"              before="related.item.search.of.all.items"/>    
+    <xed:include ref="comment.complex"              before="related.item.search.of.all.items"/>
     <xed:remove  ref="validation-rules"/>   
     <xed:include ref="validation-rules-oa"          before="related.item.search.of.all.items"/>
 
@@ -245,7 +245,7 @@
     <xed:include ref="related.item.link"      after="subject.simple"/>
     <xed:include ref="oa.annual_review"       after="physical.description.note"/>
     <xed:include ref="comment.complex"        after="abstract.simple"/>
-    <xed:include ref="govdata.dcat.hvd"       before="embargo.datetimepicker" />
+    <xed:include ref="govdata.dcat.hvd"       after="openAIRE" />
   </xed:modify>
   
   <xed:modify ref="genres.lecture">
