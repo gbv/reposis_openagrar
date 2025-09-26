@@ -246,6 +246,7 @@
     <xed:include ref="oa.annual_review"       after="physical.description.note"/>
     <xed:include ref="comment.complex"        after="abstract.simple"/>
     <xed:include ref="govdata.dcat.hvd"       after="openAIRE" />
+    <xed:remove  ref="physical.description.note" />
   </xed:modify>
   
   <xed:modify ref="genres.lecture">
