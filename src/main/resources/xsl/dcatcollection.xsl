@@ -12,9 +12,11 @@
 
   <xsl:output method="xml" indent="yes" encoding="UTF-8" />
 
+  <xsl:param name="WebApplicationBaseURL" />
+
   <!-- URLs in use -->
   <!-- open Agrar URLs -->
-  <xsl:variable name="OABaseURL">https://www.openagrar.de/</xsl:variable>
+  <xsl:variable name="OABaseURL" select="$WebApplicationBaseURL" />
   <xsl:variable name="OAURL"><xsl:value-of select="concat($OABaseURL, 'receive/')" /></xsl:variable>
   <xsl:variable name="OAFileURL"><xsl:value-of select="concat($OABaseURL, 'servlets/MCRFileNodeServlet/')" /></xsl:variable>
 

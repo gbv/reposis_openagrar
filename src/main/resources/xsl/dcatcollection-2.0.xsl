@@ -13,15 +13,18 @@
 
 
   <xsl:output method="xml" indent="yes" encoding="UTF-8" />
+  
+  <xsl:param name="WebApplicationBaseURL" />
 
   <!-- URLs in use -->
   <!-- open Agrar URLs -->
-  <xsl:variable name="OABaseURL">https://www.openagrar.de/</xsl:variable>
+  <xsl:variable name="OABaseURL" select="$WebApplicationBaseURL" />
   <xsl:variable name="OAURL"><xsl:value-of select="concat($OABaseURL, 'receive/')" /></xsl:variable>
   <xsl:variable name="OAFileURL"><xsl:value-of select="concat($OABaseURL, 'servlets/MCRFileNodeServlet/')" /></xsl:variable>
-  <xsl:variable name="OAZIPURL"><xsl:value-of select="concat($OABaseURL, 'servlets/MCRZipServlet/openagrar_derivate_')" /></xsl:variable>
+  <xsl:variable name="OAZIPURL"><xsl:value-of select="concat($OABaseURL, 'servlets/MCRZipServlet/')" /></xsl:variable>
 
   <!-- Identifier URLs -->
+  <xsl:variable name="rorURL">https://ror.org/</xsl:variable>
   <xsl:variable name="doiURL">https://doi.org/</xsl:variable>
   <xsl:variable name="orcidURL">https://orcid.org/</xsl:variable>
   <xsl:variable name="gndURL">https://d-nb.info/gnd/</xsl:variable>
@@ -42,7 +45,6 @@
   <xsl:variable name="contributorID"><xsl:value-of select="/dcatcollection/contributor" /></xsl:variable>
   
   <xsl:variable name="knownFormats">csv,docx,pdf,xlsx,zip</xsl:variable>
-  <!--  <xsl:key name="category" match="category" use="@ID" /> -->
 
   <xsl:template match="@* | text()" />
 
@@ -139,16 +141,19 @@
       <xsl:if test="mods:role/mods:roleTerm = 'aut'">
         <dct:creator>
           <rdf:Description>
-            <xsl:if test="mods:nameIdentifier[@type != 'scopus']">
+            <xsl:if test="mods:nameIdentifier[@type != lower-case('scopus')]">
               <xsl:attribute name="rdf:about">
                 <xsl:choose>
-                  <xsl:when test="mods:nameIdentifier[@type='orcid']">
+				  <xsl:when test="mods:nameIdentifier[@type=lower-case('ror')]">
+                    <xsl:value-of select="concat($rorURL, mods:nameIdentifier[lower-case(@type)='ror'])"/>
+                  </xsl:when>
+                  <xsl:when test="mods:nameIdentifier[@type=lower-case('orcid')]">
                     <xsl:value-of select="concat($orcidURL, mods:nameIdentifier[lower-case(@type)='orcid'])"/>
                   </xsl:when>
-                  <xsl:when test="mods:nameIdentifier[@type='gnd']">
+                  <xsl:when test="mods:nameIdentifier[@type=lower-case('gnd')]">
                     <xsl:value-of select="concat($gndURL, mods:nameIdentifier[lower-case(@type)='gnd'])"/>
                   </xsl:when>
-                  <xsl:when test="mods:nameIdentifier[@type='viaf']">
+                  <xsl:when test="mods:nameIdentifier[@type=lower-case('viaf')]">
                     <xsl:value-of select="concat($viafURL, mods:nameIdentifier[lower-case(@type)='viaf'])"/>
                   </xsl:when>
                  <!-- <xsl:when test="mods:nameIdentifier[@type='scopus']">
@@ -202,7 +207,7 @@
     <!-- Dataset documentation -->
     <xsl:for-each select="structure/derobjects/derobject">
       <xsl:if test="classification[contains(@categid,'documentation')]">
-        <foaf:page rdf:resource="{concat($OAFileURL, $MCRID, '/', maindoc)}"/>
+        <foaf:page rdf:resource="{concat($OAFileURL, @xlink:href, '/', maindoc)}"/>
       </xsl:if>
     </xsl:for-each>
     <!-- Do not create distribution if content-derivates are under embargo -->
@@ -215,45 +220,22 @@
         </xsl:for-each>
       </xsl:variable>     
       <xsl:if test="$ifs/der">
-        <xsl:choose>
-          <!-- count content derivates only -->
-          <xsl:when test="(count($ifs/der/mcr_directory/children//child[@type='file']) - 
-                    count(structure/derobjects/derobject/classification[contains(@categid,'documentation')])) &gt; 1">
-            <dcat:distribution>
-              <dcat:Distribution rdf:about="{concat($OAZIPURL, substring-after($MCRID, 'openagrar_mods_'))}">
-                <!-- Mandatory fields: dcat:accessURL -->
-                <dcat:accessURL rdf:resource="{concat($OAURL, $MCRID)}" />
-                <dcat:downloadURL rdf:resource="{concat($OAZIPURL, substring-after($MCRID, 'openagrar_mods_'))}" />
-                <dct:format rdf:resource="{concat($dctFileType, 'ZIP')}"/>
-                <foaf:page rdf:resource="{concat($OAURL, $MCRID)}" />
-                <xsl:if test="../../../metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@generator='mir_licenses2dcat_license-mycore']">
-                  <dct:license rdf:resource="{concat($dctLicenseURI, substring-after(../../../metadata/de.modsContainer/mods/mods:classification[@generator='mir_licenses2dcat_license-mycore'][1]/@valueURI, '#'))}"/>
-                </xsl:if> 
-              </dcat:Distribution>
-            </dcat:distribution>  
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:for-each select="structure/derobjects/derobject">
-              <!-- Create distribution only if derivate is of categorie "content" or "content_other_format" -->
-              <xsl:if test="classification[contains(@categid,'content')]">
-                <dcat:distribution>
-                  <dcat:Distribution rdf:about="{concat($OAFileURL, ../../../@ID, '/', maindoc)}">
-                    <!-- Mandatory fields: dcat:accessURL -->
-                    <dcat:accessURL rdf:resource="{concat($OAURL, ../../../@ID)}" />
-                    <dcat:downloadURL rdf:resource="{concat($OAFileURL, ../../../@ID, '/', maindoc)}" />
-                    <xsl:if test="contains($knownFormats, tokenize(maindoc,'\.')[last()])">
-                      <dct:format rdf:resource="{concat($dctFileType, upper-case(tokenize(maindoc,'\.')[last()]))}"/>
-                    </xsl:if>
-                    <foaf:page rdf:resource="{concat($OAURL, $MCRID)}" />
-                    <xsl:if test="../../../metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@generator='mir_licenses2dcat_license-mycore']">
-                      <dct:license rdf:resource="{concat($dctLicenseURI, substring-after(../../../metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@generator='mir_licenses2dcat_license-mycore'][1]/@valueURI, '#'))}"/>
-                    </xsl:if> 
-                  </dcat:Distribution>
-                </dcat:distribution>
+        <xsl:for-each select="structure/derobjects/derobject[classification[contains(@categid,'content')]]">
+          <!-- Create distribution only if derivate is of category "content" or "content_other_format" -->
+          <dcat:distribution>
+            <dcat:Distribution rdf:about="{concat($OAURL, $MCRID)}">
+              <!-- Mandatory fields: dcat:accessURL -->
+              <!-- TODO: check if derivate contains more than one file -->
+              <dcat:accessURL rdf:resource="{concat($OAFileURL, @xlink:href, '/', maindoc)}" />
+              <xsl:if test="contains($knownFormats, tokenize(maindoc,'\.')[last()])">
+                <dct:format rdf:resource="{concat($dctFileType, upper-case(tokenize(maindoc,'\.')[last()]))}"/>
               </xsl:if>
-            </xsl:for-each>
-          </xsl:otherwise>
-        </xsl:choose>
+              <xsl:if test="../../../metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@generator='mir_licenses2dcat_license-mycore']">
+                <dct:license rdf:resource="{concat($dctLicenseURI, substring-after(../../../metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@generator='mir_licenses2dcat_license-mycore'][1]/@valueURI, '#'))}"/>
+              </xsl:if>
+            </dcat:Distribution>
+          </dcat:distribution>
+        </xsl:for-each>
       </xsl:if>
     </xsl:if>
   </xsl:template>
