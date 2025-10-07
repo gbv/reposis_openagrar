@@ -228,7 +228,6 @@
                 <dcat:accessURL rdf:resource="{concat($OAURL, $MCRID)}" />
                 <dcat:downloadURL rdf:resource="{concat($OAZIPURL, substring-after($MCRID, 'openagrar_mods_'))}" />
                 <dct:format rdf:resource="{concat($dctFileType, 'ZIP')}"/>
-                <foaf:page rdf:resource="{concat($OAURL, $MCRID)}" />
                 <xsl:if test="../../../metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@generator='mir_licenses2dcat_license-mycore']">
                   <dct:license rdf:resource="{concat($dctLicenseURI, substring-after(../../../metadata/de.modsContainer/mods/mods:classification[@generator='mir_licenses2dcat_license-mycore'][1]/@valueURI, '#'))}"/>
                 </xsl:if> 
@@ -245,9 +244,8 @@
                     <dcat:accessURL rdf:resource="{concat($OAURL, ../../../@ID)}" />
                     <dcat:downloadURL rdf:resource="{concat($OAFileURL, ../../../@ID, '/', maindoc)}" />
                     <xsl:if test="contains($knownFormats, tokenize(maindoc,'\.')[last()])">
-						          <dct:format rdf:resource="{concat($dctFileType, upper-case(tokenize(maindoc,'\.')[last()]))}"/>
-					          </xsl:if>
-                    <foaf:page rdf:resource="{concat($OAURL, $MCRID)}" />
+					  <dct:format rdf:resource="{concat($dctFileType, upper-case(tokenize(maindoc,'\.')[last()]))}"/>
+					</xsl:if>
                     <xsl:if test="../../../metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@generator='mir_licenses2dcat_license-mycore']">
                       <dct:license rdf:resource="{concat($dctLicenseURI, substring-after(../../../metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@generator='mir_licenses2dcat_license-mycore'][1]/@valueURI, '#'))}"/>
                     </xsl:if> 
