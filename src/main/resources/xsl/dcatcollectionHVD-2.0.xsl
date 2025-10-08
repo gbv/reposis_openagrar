@@ -228,11 +228,11 @@
         <xsl:for-each select="structure/derobjects/derobject[classification[contains(@categid,'content')]]">
           <!-- Create distribution only if derivate is of category "content" or "content_other_format" -->
           <dcat:distribution>
-            <dcat:Distribution rdf:about="{concat($OAURL, $MCRID)}">
+            <dcat:Distribution rdf:about="{concat($OAURL, @xlink:href)}">
               <!-- Mandatory fields: dcat:accessURL -->
               <!-- TODO: check if derivate contains more than one file -->
               <dcat:accessURL rdf:resource="{concat($OAFileURL, @xlink:href, '/', maindoc)}" />
-              <xsl:if test="contains($knownFormats, tokenize(maindoc,'\.')[last()])">
+              <xsl:if test="contains($knownFormats, tokenize(maindoc,'\.')[last()]) and structure/derobjects/derobject/classification/@categid='content'">
                 <dct:format rdf:resource="{concat($dctFileType, upper-case(tokenize(maindoc,'\.')[last()]))}"/>
               </xsl:if>
               <xsl:if test="../../../metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@generator='mir_licenses2dcat_license-mycore']">
