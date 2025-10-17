@@ -5,30 +5,25 @@
                 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                 xmlns:dct="http://purl.org/dc/terms/"
                 xmlns:dcat="http://www.w3.org/ns/dcat#"
-                xmlns:dcatap="http://data.europa.eu/r5r/"
                 xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
                 xmlns:foaf="http://xmlns.com/foaf/0.1/"
-                xmlns:ns1="http://data.europa.eu/eli/ontology#"
                 xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
                 xmlns:org="http://www.w3.org/ns/org#"
+                xmlns:dcatap="http://data.europa.eu/r5r/"
+ 	            xmlns:ns1="http://data.europa.eu/eli/ontology#"
                 exclude-result-prefixes="mods xlink">
 
 
   <xsl:output method="xml" indent="yes" encoding="UTF-8" />
+  
+  <xsl:param name="WebApplicationBaseURL" />
 
   <!-- URLs in use -->
   <!-- open Agrar URLs -->
-  <xsl:variable name="OABaseURL">https://www.openagrar.de/</xsl:variable>
+  <xsl:variable name="OABaseURL" select="$WebApplicationBaseURL" />
   <xsl:variable name="OAURL"><xsl:value-of select="concat($OABaseURL, 'receive/')" /></xsl:variable>
   <xsl:variable name="OAFileURL"><xsl:value-of select="concat($OABaseURL, 'servlets/MCRFileNodeServlet/')" /></xsl:variable>
-  <xsl:variable name="OAZIPURL"><xsl:value-of select="concat($OABaseURL, 'servlets/MCRZipServlet/openagrar_derivate_')" /></xsl:variable>
-
-  <!-- Identifier URLs -->
-  <xsl:variable name="doiURL">https://doi.org/</xsl:variable>
-  <xsl:variable name="orcidURL">https://orcid.org/</xsl:variable>
-  <xsl:variable name="gndURL">https://d-nb.info/gnd/</xsl:variable>
-  <xsl:variable name="viafURL">https://viaf.org/viaf/</xsl:variable>
-  <xsl:variable name="scopusURL">https://???</xsl:variable>
+  <xsl:variable name="OAZIPURL"><xsl:value-of select="concat($OABaseURL, 'servlets/MCRZipServlet/')" /></xsl:variable>
 
   <!-- EU Vocabularies -->
   <xsl:variable name="dctLicenseURI">http://dcat-ap.de/def/licenses/</xsl:variable>
@@ -43,14 +38,13 @@
   <xsl:variable name="accessRights" select="document('classification:metadata:-1:children:mir_licenses')" />
   <xsl:variable name="theme"><xsl:value-of select="/dcatcollection/theme" /></xsl:variable>
   <xsl:variable name="contributorID"><xsl:value-of select="/dcatcollection/contributor" /></xsl:variable>
-
-  <xsl:variable name="knownFormats">csv,pdf,xlsx,zip</xsl:variable>  
-<!--  <xsl:key name="category" match="category" use="@ID" /> -->
+  
+  <xsl:variable name="knownFormats">csv,docx,pdf,xlsx,zip</xsl:variable>
 
   <xsl:template match="@* | text()" />
 
   <xsl:template match="/dcatcollection">
-	
+    
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dct="http://purl.org/dc/terms/"
              xmlns:dcat="http://www.w3.org/ns/dcat#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:org="http://www.w3.org/ns/org#">
       <dcat:Catalog>
@@ -77,7 +71,7 @@
     <dct:description xml:lang="en"><xsl:value-of select="description[@lang='en']" /></dct:description>
 
     <dct:publisher>
-      <foaf:Agent>
+      <foaf:Agent rdf:about="{publisher_ror}">
         <foaf:name><xsl:value-of select="publisher" /></foaf:name>
       </foaf:Agent>
     </dct:publisher>
@@ -88,7 +82,7 @@
       <xsl:variable name="langcode"><xsl:value-of select="."/></xsl:variable>
       <dct:language>
         <xsl:attribute name="rdf:resource">
-	  <xsl:value-of select="concat($dctLanguageURI,upper-case($rfc5646//category[@ID=$langcode]/label[@xml:lang='x-term']/@text)[1])" />
+      <xsl:value-of select="concat($dctLanguageURI,upper-case($rfc5646//category[@ID=$langcode]/label[@xml:lang='x-term']/@text)[1])" />
         </xsl:attribute>
       </dct:language>
     </xsl:for-each> 
@@ -110,16 +104,16 @@
     <xsl:call-template name="keywords" />
     <xsl:call-template name="language" />
     <xsl:call-template name="creator" />
-    <xsl:call-template name="accessRights" /> 
-    <xsl:call-template name="hvdCategory" />
+    <xsl:call-template name="accessRights" />
+    <xsl:call-template name="hvdCategory" /> 
     <xsl:call-template name="contributor" /> 
   </xsl:template>
 
   <xsl:template name="title">
     <xsl:for-each select="mods:titleInfo">
-	  <xsl:if test="mods:title">
+      <xsl:if test="mods:title">
         <dct:title>
-		  <xsl:copy-of select="./@xml:lang"/>
+          <xsl:copy-of select="./@xml:lang"/>
           <xsl:value-of select="mods:title" />
         </dct:title>
       </xsl:if>
@@ -143,22 +137,9 @@
       <xsl:if test="mods:role/mods:roleTerm = 'aut'">
         <dct:creator>
           <rdf:Description>
-            <xsl:if test="mods:nameIdentifier[@type != 'scopus']">
+            <xsl:if test="mods:nameIdentifier[@typeURI]">
               <xsl:attribute name="rdf:about">
-                <xsl:choose>
-                  <xsl:when test="mods:nameIdentifier[@type='orcid']">
-                    <xsl:value-of select="concat($orcidURL, mods:nameIdentifier[lower-case(@type)='orcid'])"/>
-                  </xsl:when>
-                  <xsl:when test="mods:nameIdentifier[@type='gnd']">
-                    <xsl:value-of select="concat($gndURL, mods:nameIdentifier[lower-case(@type)='gnd'])"/>
-                  </xsl:when>
-                  <xsl:when test="mods:nameIdentifier[@type='viaf']">
-                    <xsl:value-of select="concat($viafURL, mods:nameIdentifier[lower-case(@type)='viaf'])"/>
-                  </xsl:when>
-                 <!-- <xsl:when test="mods:nameIdentifier[@type='scopus']">
-                    <xsl:value-of select="concat($scopusURL, mods:nameIdentifier[lower-case(@type)='scopus'])"/>
-                  </xsl:when> -->
-                </xsl:choose>
+               <xsl:value-of select="concat(mods:nameIdentifier[@typeURI][1]/@typeURI, mods:nameIdentifier[@typeURI][1])"/> 
               </xsl:attribute>
             </xsl:if>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
@@ -178,17 +159,13 @@
     </xsl:for-each>
   </xsl:template>
 
-
+  <!-- for the moment we ignore mods:originInfo/mods:publisher and set this hard -->
   <xsl:template name="publisher">
-    <xsl:if test="mods:originInfo/mods:publisher">
-      <dct:publisher>
-        <foaf:Agent>
-          <foaf:name>
-            <xsl:value-of select="mods:originInfo/mods:publisher" />
-          </foaf:name>
-        </foaf:Agent>
-      </dct:publisher>
-    </xsl:if>
+    <dct:publisher>
+      <foaf:Agent rdf:about="https://ror.org/04jw21793">
+        <foaf:name>Bundesministerium für Landwirtschaft, Ernährung und Heimat</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
   </xsl:template>
 
   <xsl:template name="issued">
@@ -210,7 +187,7 @@
     <!-- Dataset documentation -->
     <xsl:for-each select="structure/derobjects/derobject">
       <xsl:if test="classification[contains(@categid,'documentation')]">
-        <foaf:page rdf:resource="{concat($OAFileURL, $MCRID, '/', maindoc)}"/>
+        <foaf:page rdf:resource="{concat($OAFileURL, @xlink:href, '/', maindoc)}"/>
       </xsl:if>
     </xsl:for-each>
     <!-- Do not create distribution if content-derivates are under embargo -->
@@ -223,50 +200,28 @@
         </xsl:for-each>
       </xsl:variable>     
       <xsl:if test="$ifs/der">
-        <xsl:choose>
-	    <xsl:when test="(count($ifs/der/mcr_directory/children//child[@type='file']) - 
-	              count(structure/derobjects/derobject/classification[contains(@categid,'documentation')])) &gt; 1">
-	      <dcat:distribution>
-            <dcat:Distribution rdf:resource="{concat($OAZIPURL, substring-after($MCRID, 'openagrar_mods_'))}">
+        <xsl:for-each select="structure/derobjects/derobject[classification[contains(@categid,'content')]]">
+          <!-- Create distribution only if derivate is of category "content" or "content_other_format" -->
+          <dcat:distribution>
+            <dcat:Distribution rdf:about="{concat($OAURL, @xlink:href)}">
               <!-- Mandatory fields: dcat:accessURL -->
-              <dcat:accessURL rdf:resource="{concat($OAURL, $MCRID)}" />
-              <dcat:downloadURL rdf:resource="{concat($OAZIPURL, substring-after($MCRID, 'openagrar_mods_'))}" />
-              <dct:format rdf:resource="{concat($dctFileType, 'ZIP')}"/>
-              <foaf:page rdf:resource="{concat($OAURL, $MCRID)}" />
-			  <xsl:if test="../../../metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@generator='mir_licenses2dcat_license-mycore']">
-			    <dct:license rdf:resource="{concat($dctLicenseURI, substring-after(../../../metadata/de.modsContainer/mods/mods:classification[@generator='mir_licenses2dcat_license-mycore'][1]/@valueURI, '#'))}"/>
-			  </xsl:if> 
+              <!-- TODO: check if derivate contains more than one file -->
+              <dcat:accessURL rdf:resource="{concat($OAFileURL, @xlink:href, '/', maindoc)}" />
+              <xsl:if test="contains($knownFormats, tokenize(maindoc,'\.')[last()]) and structure/derobjects/derobject/classification/@categid='content'">
+                <dct:format rdf:resource="{concat($dctFileType, upper-case(tokenize(maindoc,'\.')[last()]))}"/>
+              </xsl:if> 
+              <xsl:if test="../../../metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@generator='mir_licenses2dcat_license-mycore']">
+                <dct:license rdf:resource="{concat($dctLicenseURI, substring-after(../../../metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@generator='mir_licenses2dcat_license-mycore'][1]/@valueURI, '#'))}"/>
+              </xsl:if> 
             </dcat:Distribution>
-          </dcat:distribution>	
-        </xsl:when>
-        <xsl:otherwise>
-	      <xsl:for-each select="structure/derobjects/derobject">
-	        <!-- Create distribution only if derivate is of categorie "content" or "content_other_format" -->
-	        <xsl:if test="classification[contains(@categid,'content')]">
-              <dcat:distribution>
-                <dcat:Distribution rdf:resource="{concat($OAFileURL, ../../../@ID, '/', maindoc)}">
-                  <!-- Mandatory fields: dcat:accessURL -->
-                  <dcat:accessURL rdf:resource="{concat($OAURL, ../../../@ID)}" />
-                  <dcat:downloadURL rdf:resource="{concat($OAFileURL, ../../../@ID, '/', maindoc)}" />
-                  <xsl:if test="contains($knownFormats, tokenize(maindoc,'\.')[last()])">
-						<dct:format rdf:resource="{concat($dctFileType, upper-case(tokenize(maindoc,'\.')[last()]))}"/>
-					</xsl:if>
-                  <foaf:page rdf:resource="{concat($OAURL, $MCRID)}" />
-                  <xsl:if test="../../../metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@generator='mir_licenses2dcat_license-mycore']">
-				    <dct:license rdf:resource="{concat($dctLicenseURI, substring-after(../../../metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@generator='mir_licenses2dcat_license-mycore'][1]/@valueURI, '#'))}"/>
-				  </xsl:if> 
-                </dcat:Distribution>
-               </dcat:distribution>
-              </xsl:if>
-            </xsl:for-each>
-          </xsl:otherwise>
-        </xsl:choose>
+          </dcat:distribution>
+        </xsl:for-each>
       </xsl:if>
     </xsl:if>
   </xsl:template>
 
   <xsl:template name="identifier">
-	<dct:identifier>
+    <dct:identifier>
       <xsl:value-of select="../../../../@ID" />
     </dct:identifier>
   </xsl:template>
@@ -287,7 +242,7 @@
           <xsl:attribute name="rdf:resource">
             <xsl:value-of select="concat($dctLanguageURI,upper-case($rfc5646//category[@ID=$langcode]/label[@xml:lang='x-term']/@text)[1])" />
           </xsl:attribute>
-        </dct:language>   
+        </dct:language>
       </xsl:if>
     </xsl:for-each>
   </xsl:template>
@@ -297,27 +252,27 @@
       <dcatde:contributorID rdf:resource="{$contributorID}" />
     </xsl:if>
   </xsl:template>
-  
+
   <xsl:template name="accessRights">
     <xsl:for-each select="mods:accessCondition[@type='use and reproduction']">
       <xsl:variable name="access"><xsl:value-of select="substring-after(./@xlink:href, '#')"/></xsl:variable>
       <dct:accessRights>
         <dct:RightsStatement rdf:nodeID="{../../../../../@ID}">
           <rdfs:label>
-			<xsl:choose>
-			  <xsl:when test="$accessRights//category[@ID=$access]/label[@xml:lang='de']/@description">
-			    <xsl:value-of select="$accessRights//category[@ID=$access]/label[@xml:lang='de']/@description" />
-			  </xsl:when>
-			  <xsl:otherwise>
-			    <xsl:value-of select="$accessRights//category[@ID=$access]/label[@xml:lang='de']/@text" />
-			  </xsl:otherwise>
-			</xsl:choose>	        
+            <xsl:choose>
+              <xsl:when test="$accessRights//category[@ID=$access]/label[@xml:lang='de']/@description">
+                <xsl:value-of select="$accessRights//category[@ID=$access]/label[@xml:lang='de']/@description" />
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="$accessRights//category[@ID=$access]/label[@xml:lang='de']/@text" />
+              </xsl:otherwise>
+            </xsl:choose>
           </rdfs:label>
         </dct:RightsStatement>
       </dct:accessRights>
     </xsl:for-each> 
   </xsl:template>
-    
+  
   <xsl:template name="hvdCategory">
     <xsl:for-each select="mods:classification[@authority='dcatHVD']">
 	  <dcatap:hvdCategory>
@@ -334,3 +289,5 @@
   </xsl:template>
 
 </xsl:stylesheet>
+
+
