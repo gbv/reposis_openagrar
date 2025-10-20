@@ -12,11 +12,13 @@
       <label xml:lang="de" text="ISBN"/>
       <label xml:lang="en" text="ISBN"/>
       <label xml:lang="x-uri" text="https://identifiers.org/isbn:"/>
+      <label xml:lang="x-registry-url" text="https://registry.identifiers.org/registry/isbn" />
     </category>
     <category ID="issn">
       <label xml:lang="de" text="ISSN"/>
       <label xml:lang="en" text="ISSN"/>
       <label xml:lang="x-uri" text="https://identifiers.org/issn:"/>
+      <label xml:lang="x-registry-url" text="https://registry.identifiers.org/registry/issn" />
     </category>
     <category ID="zdbid">
       <label xml:lang="de" text="ZDB-ID"/>
@@ -26,6 +28,7 @@
       <label xml:lang="de" text="DOI"/>
       <label xml:lang="en" text="DOI"/>
       <label xml:lang="x-uri" text="https://doi.org/"/>
+      <label xml:lang="x-registry-url" text="https://registry.identifiers.org/registry/doi" />
     </category>
     <category ID="hdl">
       <label xml:lang="de" text="Handle"/>
@@ -35,6 +38,7 @@
       <label xml:lang="de" text="URN"/>
       <label xml:lang="en" text="URN"/>
       <label xml:lang="x-uri" text="https://identifiers.org/nbn:"/>
+      <label xml:lang="x-registry-url" text="https://registry.identifiers.org/registry/nbn" />
     </category>
     <category ID="uri">
       <label xml:lang="de" text="URI"/>
