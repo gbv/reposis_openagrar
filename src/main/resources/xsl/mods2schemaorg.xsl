@@ -43,6 +43,10 @@
 
   <xsl:include href="xslInclude:schemaorg" />
   
+  <!-- nameIdentifier registries 
+  temporary solution -->
+  <xsl:variable name="nameRegistries">gnd,orcid,viaf,wikidata,ror,isni</xsl:variable>
+
   <xsl:template match="/">
     <xsl:element name="script">
       <xsl:attribute name="type">application/ld+json</xsl:attribute>
@@ -148,9 +152,16 @@
             <fn:map>
               <fn:string key="@type">PropertyValue</fn:string>
               <xsl:if test="@typeURI != '#'">
-                <fn:string key="propertyID">
-			      <xsl:value-of select="concat('https://registry.identifiers.org/registry/', @type)" />
-                </fn:string>
+				<fn:string key="propertyID">
+				  <xsl:choose>
+				    <xsl:when test="@type = 'urn'">
+					  <xsl:text>https://registry.identifiers.org/registry/nbn</xsl:text>
+				    </xsl:when>
+				    <xsl:otherwise>
+					  <xsl:value-of select="concat('https://registry.identifiers.org/registry/', lower-case(@type))" />
+				    </xsl:otherwise> 
+				  </xsl:choose>
+                </fn:string>                
               </xsl:if>
               <fn:string key="value">
                 <xsl:value-of select="text()" />
@@ -362,36 +373,6 @@
 		  </xsl:for-each>
 		</fn:array>
 	  </xsl:if>
-      
-      <!-- OA-380 -->
-      <!-- #118 -->
-      <!-- <xsl:if test="mods:accessCondition[@type='use and reproduction']">
-        <fn:array key="license">
-          <xsl:for-each select="mods:accessCondition[@type='use and reproduction' and @xlink:href]">
-          <xsl:variable name="trimmed" select="substring-after(normalize-space(@xlink:href),'#')" />
-          <xsl:variable name="licenseURI"
-                      select="concat('classification:metadata:0:children:mir_licenses:',$trimmed)" />
-          <xsl:choose>
-            <xsl:when test="$trimmed='rights_reserved'">
-              <fn:map>
-                <fn:string key="@type">CreativeWork</fn:string>
-                <fn:string key="name">
-                  <xsl:value-of select="document($licenseURI)//category/label[@xml:lang='en']/@text" />
-                </fn:string>
-              </fn:map>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:variable name="url" select="document($licenseURI)//category/url/@xlink:href" />
-              <xsl:if test="string-length($url)>0">
-                <fn:string>
-                  <xsl:value-of select="$url" />
-                </fn:string>
-              </xsl:if>
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:for-each>
-      </fn:array>
-    </xsl:if> -->
     </fn:map>
   </xsl:template>
 
@@ -453,9 +434,14 @@
           <xsl:for-each select="$modsName/mods:nameIdentifier">
             <fn:map>
 			  <fn:string key="@type">PropertyValue</fn:string>
-              <xsl:if test="@typeURI != '#'">
+              <xsl:if test="contains($nameRegistries, lower-case(@type))">
                 <fn:string key="propertyID">
-			      <xsl:value-of select="concat('https://registry.identifiers.org/registry/', @type)" />
+			      <xsl:value-of select="concat('https://registry.identifiers.org/registry/', lower-case(@type))" />
+                </fn:string>
+              </xsl:if>
+              <xsl:if test="lower-case(@type) = 'urn'">
+                <fn:string key="propertyID">
+			      <xsl:text>https://registry.identifiers.org/registry/nbn</xsl:text>
                 </fn:string>
               </xsl:if>
               <fn:string key="value">
