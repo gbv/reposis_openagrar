@@ -94,6 +94,11 @@
                 </div>
               </div>
               <div class="oa-data-providers-end">
+                <div id="oa_fairagro" class="oa-data-provider">
+                  <a href="https://repositories.search-hub.fairagro.net/resource/repository/r3d100012467">
+                    <img src="../images/logos/FAIRagro_SearchHub_g_Logo-v11.svg" alt="FAIRagro Search Hub" />
+                  </a>
+                </div>
                 <div id="oa_agris" class="oa-data-provider">
                   <a href="https://www.fao.org/agris/data-provider/federal-ministry-food-and-agriculture">
                     <img src="../images/ADP_cert_2025.png" alt="Seal of recognition for active Agris data providers" />
@@ -112,8 +117,7 @@
     <script>
       $.ajax({
       type: "GET",
-      url: "../api/v1/search?q=objectType:mods AND
-      state:published&amp;rows=0&amp;wt=json&amp;json.wrf=?",
+      url: "../api/v1/search?q=objectType:mods AND state:published&amp;rows=0&amp;wt=json&amp;json.wrf=?",
       dataType: "jsonp",
       success: function (data) {
       $('#oa-docCounter').text($.number(data.response.numFound,0, ',', '.'));

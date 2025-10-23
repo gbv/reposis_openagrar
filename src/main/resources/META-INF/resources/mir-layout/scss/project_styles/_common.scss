@@ -198,14 +198,16 @@
     &-end {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: start;
+      flex: 0 0 50%;
     }
     .oa-data-provider {
       display: flex;
       flex-direction: column;
       padding: 2rem;
+      align-items: center;
       img {
-        width: 90%;
+        max-width: 90%;
         margin-left: 10px;
       }
     }
@@ -218,6 +220,11 @@
   #oa_agris {
     img {
       max-height: 180px;
+    }
+  }
+  #oa_fairagro {
+    img {
+      padding: 1rem 0;
     }
   }
 
