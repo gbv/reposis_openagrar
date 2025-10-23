@@ -9,6 +9,8 @@
                 xmlns:foaf="http://xmlns.com/foaf/0.1/"
                 xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
                 xmlns:org="http://www.w3.org/ns/org#"
+                xmlns:dcatap="http://data.europa.eu/r5r/"
+                xmlns:ns1="http://data.europa.eu/eli/ontology#"
                 exclude-result-prefixes="mods xlink">
 
 
@@ -23,14 +25,6 @@
   <xsl:variable name="OAFileURL"><xsl:value-of select="concat($OABaseURL, 'servlets/MCRFileNodeServlet/')" /></xsl:variable>
   <xsl:variable name="OAZIPURL"><xsl:value-of select="concat($OABaseURL, 'servlets/MCRZipServlet/')" /></xsl:variable>
 
-  <!-- Identifier URLs -->
-  <xsl:variable name="rorURL">https://ror.org/</xsl:variable>
-  <xsl:variable name="doiURL">https://doi.org/</xsl:variable>
-  <xsl:variable name="orcidURL">https://orcid.org/</xsl:variable>
-  <xsl:variable name="gndURL">https://d-nb.info/gnd/</xsl:variable>
-  <xsl:variable name="viafURL">https://viaf.org/viaf/</xsl:variable>
-  <xsl:variable name="scopusURL">https://???</xsl:variable>
-
   <!-- EU Vocabularies -->
   <xsl:variable name="dctLicenseURI">http://dcat-ap.de/def/licenses/</xsl:variable>
   <xsl:variable name="dctLanguageURI">http://publications.europa.eu/resource/authority/language/</xsl:variable>
@@ -40,7 +34,7 @@
   <xsl:variable name="datatype">http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset</xsl:variable>
   
   <xsl:variable name="rfc5646" select="document('classification:metadata:-1:children:rfc5646')" />
-  <xsl:variable name="accessRights" select="document('classification:metadata:-1:children:mir_licenses')" />
+  <xsl:variable name="accessRights" select="document('classification:metadata:-1:children:mir_licenses')" /> 
   <xsl:variable name="theme"><xsl:value-of select="/dcatcollection/theme" /></xsl:variable>
   <xsl:variable name="contributorID"><xsl:value-of select="/dcatcollection/contributor" /></xsl:variable>
   
@@ -109,7 +103,8 @@
     <xsl:call-template name="keywords" />
     <xsl:call-template name="language" />
     <xsl:call-template name="creator" />
-    <xsl:call-template name="accessRights" /> 
+    <xsl:call-template name="accessRights" />
+    <xsl:call-template name="hvdCategory" /> 
     <xsl:call-template name="contributor" /> 
   </xsl:template>
 
@@ -141,25 +136,9 @@
       <xsl:if test="mods:role/mods:roleTerm = 'aut'">
         <dct:creator>
           <rdf:Description>
-            <xsl:if test="mods:nameIdentifier[@type != lower-case('scopus')]">
-              <xsl:attribute name="rdf:about">
-                <xsl:choose>
-				  <xsl:when test="mods:nameIdentifier[@type=lower-case('ror')]">
-                    <xsl:value-of select="concat($rorURL, mods:nameIdentifier[lower-case(@type)='ror'])"/>
-                  </xsl:when>
-                  <xsl:when test="mods:nameIdentifier[@type=lower-case('orcid')]">
-                    <xsl:value-of select="concat($orcidURL, mods:nameIdentifier[lower-case(@type)='orcid'])"/>
-                  </xsl:when>
-                  <xsl:when test="mods:nameIdentifier[@type=lower-case('gnd')]">
-                    <xsl:value-of select="concat($gndURL, mods:nameIdentifier[lower-case(@type)='gnd'])"/>
-                  </xsl:when>
-                  <xsl:when test="mods:nameIdentifier[@type=lower-case('viaf')]">
-                    <xsl:value-of select="concat($viafURL, mods:nameIdentifier[lower-case(@type)='viaf'])"/>
-                  </xsl:when>
-                 <!-- <xsl:when test="mods:nameIdentifier[@type='scopus']">
-                    <xsl:value-of select="concat($scopusURL, mods:nameIdentifier[lower-case(@type)='scopus'])"/>
-                  </xsl:when> -->
-                </xsl:choose>
+            <xsl:if test="mods:nameIdentifier/@typeURI">
+              <xsl:attribute name="rdf:about">			
+                <xsl:value-of select="concat(mods:nameIdentifier[1]/@typeURI, mods:nameIdentifier[1])"/>
               </xsl:attribute>
             </xsl:if>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
@@ -227,7 +206,7 @@
               <!-- Mandatory fields: dcat:accessURL -->
               <!-- TODO: check if derivate contains more than one file -->
               <dcat:accessURL rdf:resource="{concat($OAFileURL, @xlink:href, '/', maindoc)}" />
-              <xsl:if test="contains($knownFormats, tokenize(maindoc,'\.')[last()] and structure/derobjects/derobject/classification/@categid='content'">
+              <xsl:if test="contains($knownFormats, tokenize(maindoc,'\.')[last()]) and structure/derobjects/derobject/classification/@categid='content'">
                 <dct:format rdf:resource="{concat($dctFileType, upper-case(tokenize(maindoc,'\.')[last()]))}"/>
               </xsl:if>
               <xsl:if test="../../../metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@generator='mir_licenses2dcat_license-mycore']">
@@ -292,5 +271,22 @@
       </dct:accessRights>
     </xsl:for-each> 
   </xsl:template>
+  
+  <xsl:template name="hvdCategory">
+    <xsl:for-each select="mods:classification[@authority='dcatHVD']">
+	  <dcatap:hvdCategory>
+	    <xsl:attribute name="rdf:resource">
+		  <xsl:value-of select="concat($hvdcatURI, .)" />
+		</xsl:attribute>
+	  </dcatap:hvdCategory>
+    </xsl:for-each>
+    <xsl:if test="mods:classification[@authority='dcatHVD']">
+      <dcatap:applicableLegislation>
+        <ns1:LegalResource rdf:about="{$applLegislationURI}"/>
+      </dcatap:applicableLegislation>
+    </xsl:if>
+  </xsl:template>
 
 </xsl:stylesheet>
+
+
