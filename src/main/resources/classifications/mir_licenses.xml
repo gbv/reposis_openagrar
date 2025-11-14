@@ -183,18 +183,18 @@
       <category ID="GPL-2.0-or-later">
         <label xml:lang="de" text="GNU General Public License v2.0 or later" />
         <label xml:lang="en" text="GNU General Public License v2.0 or later" />
-        <label xml:lang="x-mapping" text="gpl/3.0" />
+        <label xml:lang="x-mapping" text="dcat_license:gpl/3.0" />
         <url xlink:href="https://spdx.org/licenses/GPL-2.0-or-later.html" xlink:type="locator" />
       </category>
       <category ID="GPL-3.0-or-later">
         <label xml:lang="de" text="GNU General Public License v3.0 or later" />
         <label xml:lang="en" text="GNU General Public License v3.0 or later" />
-        <label xml:lang="x-mapping" text="gpl/3.0" />
+        <label xml:lang="x-mapping" text="dcat_license:gpl/3.0" />
       </category>
       <category ID="mit">
         <label xml:lang="de" text="MIT License" />
         <label xml:lang="en" text="MIT License" />
-        <label xml:lang="x-mapping" text="other-freeware" />
+        <label xml:lang="x-mapping" text="dcat_license:other-freeware" />
         <url xlink:href="https://spdx.org/licenses/MIT.html" xlink:type="locator" />
       </category>
     </category>
@@ -204,42 +204,42 @@
       <category ID="dl-de-by-2.0">
         <label xml:lang="de" text="Datenlizenz Deutschland – Namensnennung – Version 2.0" />
         <label xml:lang="en" text="Data licence Germany – attribution – version 2.0" />
-        <label xml:lang="x-mapping" text="dl-by-de/2.0" />
+        <label xml:lang="x-mapping" text="dcat_license:dl-by-de/2.0" />
         <url xlink:href="https://spdx.org/licenses/DL-DE-BY-2.0.html" xlink:type="locator" />
       </category>
       <category ID="dl-de-zero-2.0">
         <label xml:lang="de" text="Datenlizenz Deutschland – zero – version 2.0" />
         <label xml:lang="en" text="Data licence Germany – zero – version 2.0" />
-        <label xml:lang="x-mapping" text="dl-zero-de/2.0" />
+        <label xml:lang="x-mapping" text="dcat_license:dl-zero-de/2.0" />
         <url xlink:href="https://spdx.org/licenses/DL-DE-ZERO-2.0.html" xlink:type="locator" />
       </category>
       <category ID="odc-by-1.0">
         <label xml:lang="de" text="Open Data Commons Attribution License v1.0" />
         <label xml:lang="en" text="Open Data Commons Attribution License v1.0" />
-        <label xml:lang="x-mapping" text="odby" />
+        <label xml:lang="x-mapping" text="dcat_license:odby" />
         <url xlink:href="https://spdx.org/licenses/ODC-By-1.0.html" xlink:type="locator" />
       </category>
       <category ID="odbl-1.0">
         <label xml:lang="de" text="Open Data Commons Open Database License v1.0" />
         <label xml:lang="en" text="Open Data Commons Open Database License v1.0" />
-        <label xml:lang="x-mapping" text="odbl" />
+        <label xml:lang="x-mapping" text="dcat_license:odbl" />
         <url xlink:href="https://spdx.org/licenses/ODbL-1.0.html" xlink:type="locator" />
       </category>
       <category ID="odc_pddl">
         <label xml:lang="de" text="PDDL - Public Domain Dedication and License" />
         <label xml:lang="en" text="PDDL - Public Domain Dedication and License" />
-        <label xml:lang="x-mapping" text="odcpddl" />
+        <label xml:lang="x-mapping" text="dcat_license:odcpddl" />
       </category>
       <category ID="pddl-1.0">
         <label xml:lang="de" text="Open Data Commons Public Domain Dedication &amp; License 1.0" />
         <label xml:lang="en" text="Open Data Commons Public Domain Dedication &amp; License 1.0" />
-        <label xml:lang="x-mapping" text="odcpddl" />
+        <label xml:lang="x-mapping" text="dcat_license:odcpddl" />
         <url xlink:href="https://spdx.org/licenses/PDDL-1.0.html" xlink:type="locator" />
       </category>
       <category ID="geoNutzV">
         <label xml:lang="de" text="Nutzung nach GeoNutzV" />
         <label xml:lang="en" text="Usage by GeoNutzV" />
-        <label xml:lang="x-mapping" text="other-closed" />
+        <label xml:lang="x-mapping" text="dcat_license:other-closed" />
         <url xlink:href="https://www.gesetze-im-internet.de/geonutzv/BJNR054700013.html" xlink:type="locator" />
       </category>
     </category>
