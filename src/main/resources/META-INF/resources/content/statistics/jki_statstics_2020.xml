@@ -172,7 +172,7 @@
         </tr>
         <tr>
           <td rowspan="7"> Referierte Beiträge in wiss. Fachzeitschriften </td>
-          <td> 0 </td>
+          <td> =0 </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instAll + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instA + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_query + ' AND ' + q_refArticle + ' AND ' + q_instAG + ' AND ' + q_jcrclass0)" data-printAsLink="true"/> </td>
