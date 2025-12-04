@@ -487,6 +487,7 @@
         </tr>
       </xsl:for-each>
       <xsl:if test="journalMetrics">
+        <xsl:variable name="JournalMetrics" select="journalMetrics"/>
         <tr>
           <td valign="top" class="metaname">
             <xsl:value-of select="concat('Journal Metrics',':')" />
@@ -503,14 +504,14 @@
                   </th>
                 </xsl:for-each>
               </tr>
-              <xsl:for-each select="//journalMetrics/metric/value[not(preceding::value/@year = @year)]">
+              <xsl:for-each select="journalMetrics/metric/value[not(preceding::value/@year = @year)]">
                 <xsl:sort select="@year" data-type="number"/>
                 <xsl:variable name="year" select="@year"/>
                 <tr>
                   <td>
                     <xsl:value-of select="$year"/>
                   </td>
-                  <xsl:for-each select="//journalMetrics/metric">
+                  <xsl:for-each select="$JournalMetrics/metric">
                     <td>
                       <xsl:choose>
                         <xsl:when test="@type='JCR'">
