@@ -165,28 +165,33 @@
   </xsl:template>
 
   <xsl:template match="mods:note" mode="mods2mods">
-    <xsl:variable name="myURI" select="concat('classification:metadata:0:children:noteTypes:',mcrxsl:regexp(@type,' ', '_'))" />
-    <xsl:variable name="x-access">
-      <xsl:value-of select="document($myURI)//label[@xml:lang='x-access']/@text"/> 
-    </xsl:variable>
-    <xsl:choose>      
-      <xsl:when test="contains($x-access, ' ')">
-        <xsl:variable name="note"><xsl:copy-of select="."/></xsl:variable>
-        <xsl:for-each select="str:tokenize($x-access, ' ')">
-          <xsl:if test="mcrxsl:isCurrentUserInRole(.)">
-            <xsl:copy-of select="$note"/>
-          </xsl:if> 
-        </xsl:for-each> 
-      </xsl:when>
-      <xsl:when test="($x-access = 'guest') and mcrxsl:isCurrentUserGuestUser()">
-        <xsl:copy-of select="."/>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:if test="mcrxsl:isCurrentUserInRole($x-access)">
-          <xsl:copy-of select="."/>
-        </xsl:if>
-      </xsl:otherwise>
-    </xsl:choose> 
+     <xsl:if test="./@type">
+      <xsl:variable name="type"><xsl:value-of select="./@type"/></xsl:variable>
+      <xsl:if test="document('classification:metadata:-1:children:noteTypes')//category[@ID=$type]">
+        <xsl:variable name="myURI" select="concat('classification:metadata:0:children:noteTypes:',mcrxsl:regexp(@type,' ', '_'))" />
+        <xsl:variable name="x-access">
+          <xsl:value-of select="document($myURI)//label[@xml:lang='x-access']/@text"/> 
+        </xsl:variable>
+        <xsl:choose>      
+          <xsl:when test="contains($x-access, ' ')">
+            <xsl:variable name="note"><xsl:copy-of select="."/></xsl:variable>
+            <xsl:for-each select="str:tokenize($x-access, ' ')">
+              <xsl:if test="mcrxsl:isCurrentUserInRole(.)">
+                <xsl:copy-of select="$note"/>
+              </xsl:if> 
+            </xsl:for-each> 
+          </xsl:when>
+          <xsl:when test="($x-access = 'guest') and mcrxsl:isCurrentUserGuestUser()">
+            <xsl:copy-of select="."/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:if test="mcrxsl:isCurrentUserInRole($x-access)">
+              <xsl:copy-of select="."/>
+            </xsl:if>
+          </xsl:otherwise>
+        </xsl:choose> 
+      </xsl:if>
+    </xsl:if>
   </xsl:template>
   
 
