@@ -218,6 +218,7 @@
       <label xml:lang="x-hosts" text="standalone" />
       <label xml:lang="de" text="Forschungsdaten" />
       <label xml:lang="en" text="Research Data" />
+      <label xml:lang="x-mapping" text="schemaOrg:Dataset"/>
     </category>
     <category ID="patent">
       <label xml:lang="x-hosts" text="standalone" />
