@@ -27,21 +27,26 @@
   <xsl:param name="MCR.Module-iview2.SupportedContentTypes" />
 
   <!--
+
   Define a transformer
   MCR.ContentTransformer.schemaOrg.Class=org.mycore.common.content.transformer.MCRXSLTransformer
   MCR.ContentTransformer.schemaOrg.Stylesheet=xsl/mods2schemaorg.xsl
   MCR.ContentTransformer.schemaOrg.TransformerFactoryClass=net.sf.saxon.TransformerFactoryImpl
+
   Prevent the layout for the transformer
   MCR.LayoutTransformerFactory.Default.Ignore=%MCR.LayoutTransformerFactory.Default.Ignore%,schemaOrg
+
   Include the <script> tag in the page
   <xsl:copy-of select="document(concat('xslTransform:schemaOrg:mcrobject:', $objectID))" />
+
   -->
 
   <xsl:include href="xslInclude:schemaorg" />
-
+  
   <!-- nameIdentifier registries 
   temporary solution -->
-  <xsl:variable name="nameRegistries">gnd,orcid,viaf,wikidata,ror,isni</xsl:variable>
+  <xsl:variable name="identifierRegistry" select="document('classification:metadata:-1:children:identifier')" />
+  <xsl:variable name="nameIdentifierRegistry" select="document('classification:metadata:-1:children:nameIdentifier')" />
 
   <xsl:template match="/">
     <xsl:element name="script">
@@ -145,20 +150,19 @@
         <!-- output all identifiers -->
         <fn:array key="identifier">
           <xsl:for-each select="mods:identifier">
+			<xsl:variable name="type"><xsl:value-of select="./@type"/></xsl:variable>
             <fn:map>
               <fn:string key="@type">PropertyValue</fn:string>
-              <xsl:if test="@typeURI != '#'">
-				<fn:string key="propertyID">
-				  <xsl:choose>
-				    <xsl:when test="@type = 'urn'">
-					  <xsl:text>https://registry.identifiers.org/registry/nbn</xsl:text>
-				    </xsl:when>
-				    <xsl:otherwise>
-					  <xsl:value-of select="concat('https://registry.identifiers.org/registry/', lower-case(@type))" />
-				    </xsl:otherwise> 
-				  </xsl:choose>
-                </fn:string>                
-              </xsl:if>
+			  <fn:string key="propertyID">
+				<xsl:choose>
+				  <xsl:when test="$identifierRegistry//category[@ID=$type]/label[@xml:lang='x-registry-url']">
+				   <xsl:value-of select="$identifierRegistry//category[@ID=$type]/label[@xml:lang='x-registry-url']/@text"/>
+				  </xsl:when>
+				  <xsl:otherwise>
+				    <xsl:value-of select="$type" />
+				  </xsl:otherwise> 
+				</xsl:choose>
+              </fn:string>                
               <fn:string key="value">
                 <xsl:value-of select="text()" />
               </fn:string>
@@ -239,12 +243,12 @@
           </fn:string>
         </fn:map>
       </xsl:if>
-
+      
       <!-- mainEntityOfPage -->
       <fn:string key="mainEntityOfPage">
         <xsl:value-of select="concat($WebApplicationBaseURL, 'receive/', /mycoreobject/@ID)" />
       </fn:string>
-
+      
 
       <!-- description -->
       <xsl:if test="mods:abstract">
@@ -358,7 +362,7 @@
           </fn:string>
         </xsl:if>
       </xsl:if>
-
+      
       <!-- OA-380#112 add keywords -->
       <xsl:if test="count(mods:subject[@xlink:type='simple']/mods:topic) &gt; 0">
 		<fn:array key="keywords">
@@ -422,24 +426,24 @@
       </xsl:if>
 
       <!-- identifiers -->
-      <!-- add propertyID and url - OA-380#116 
-      This solution requires x-uri attribute in classifications!!! -->
+      <!-- add propertyID and url - OA-380#116 -->
       <xsl:if test="count($modsName/mods:nameIdentifier) &gt; 0">
         <!-- output all identifiers -->
         <fn:array key="identifier">
           <xsl:for-each select="$modsName/mods:nameIdentifier">
+			<xsl:variable name="type"><xsl:value-of select="./@type"/></xsl:variable>
             <fn:map>
 			  <fn:string key="@type">PropertyValue</fn:string>
-              <xsl:if test="contains($nameRegistries, lower-case(@type))">
-                <fn:string key="propertyID">
-			      <xsl:value-of select="concat('https://registry.identifiers.org/registry/', lower-case(@type))" />
-                </fn:string>
-              </xsl:if>
-              <xsl:if test="lower-case(@type) = 'urn'">
-                <fn:string key="propertyID">
-			      <xsl:text>https://registry.identifiers.org/registry/nbn</xsl:text>
-                </fn:string>
-              </xsl:if>
+			  <fn:string key="propertyID">
+                <xsl:choose>
+				  <xsl:when test="$nameIdentifierRegistry//category[@ID=$type]/label[@xml:lang='x-registry-url']">
+                    <xsl:value-of select="$nameIdentifierRegistry//category[@ID=$type]/label[@xml:lang='x-registry-url']/@text"/>
+				  </xsl:when>
+				  <xsl:otherwise>
+				    <xsl:value-of select="$type" />
+				  </xsl:otherwise> 
+			    </xsl:choose>
+			  </fn:string>             
               <fn:string key="value">
                 <xsl:value-of select="text()" />
               </fn:string>
@@ -586,3 +590,4 @@
   </xsl:template>
 
 </xsl:stylesheet>
+
