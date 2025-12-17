@@ -118,22 +118,19 @@
         </fn:string>
       </xsl:if>
 
-      <!-- headline & alternativeHeadline-->
+      <!-- headline & alternativeHeadline
+	Take 1. mods:titleInfo as headline and all further mods:titleInfo as 
+        alternativeHeadline -->
       <fn:string key="headline">
         <xsl:call-template name="buildHeadline">
-          <xsl:with-param name="titleInfo" select="mods:titleInfo[not(@type)]" />
+          <xsl:with-param name="titleInfo" select="mods:titleInfo[1]" />
         </xsl:call-template>
       </fn:string>
-      <!-- OA-380#113 add language-info to headline -->
-      <xsl:if test="mods:titleInfo[1]/@xml:lang">
-        <fn:string key="inLanguage">
-          <xsl:value-of select="mods:titleInfo[1]/@xml:lang" />
-        </fn:string>
-      </xsl:if>
-      <xsl:if test="count(mods:titleInfo) &gt;0 ">
+      <xsl:if test="count(mods:titleInfo) &gt; 1">
         <fn:array key="alternativeHeadline">
+          <xsl:variable name="titles" select="mods:titleInfo" />
           <xsl:for-each select="mods:titleInfo">
-            <xsl:if test="./@type">
+            <xsl:if test="./mods:title/text() != ../mods:titleInfo[1]/mods:title/text()">
               <fn:string>
                 <xsl:call-template name="buildHeadline">
                   <xsl:with-param name="titleInfo" select="." />
@@ -142,6 +139,25 @@
             </xsl:if>
           </xsl:for-each>
         </fn:array>
+      </xsl:if>
+      <!-- OA-380#113 add language-info to headline (inLanguage is repeatable)-->
+      <xsl:if test="mods:language/mods:languageTerm[@authority='rfc5646']">
+        <xsl:choose>
+	      <xsl:when test="count(mods:language/mods:languageTerm[@authority='rfc5646']) &gt; 1">
+	        <fn:array key="inLanguage">
+	          <xsl:for-each select="mods:language/mods:languageTerm[@authority='rfc5646']">
+				<fn:string>
+	              <xsl:value-of select="."/>
+	            </fn:string>
+              </xsl:for-each>
+	        </fn:array>  
+	      </xsl:when>
+	      <xsl:otherwise>
+            <fn:string key="inLanguage">			  
+                <xsl:value-of select="mods:language/mods:languageTerm[@authority='rfc5646']" />
+              </fn:string>
+	      </xsl:otherwise>
+        </xsl:choose>
       </xsl:if>
 
       <!-- identifiers -->
