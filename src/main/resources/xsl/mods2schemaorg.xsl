@@ -260,7 +260,8 @@
         </fn:map>
       </xsl:if>
       
-      <!-- mainEntityOfPage -->
+      
+      <!--  OA-380#117  use mainEntityOfPage for link to dataset-->
       <fn:string key="mainEntityOfPage">
         <xsl:value-of select="concat($WebApplicationBaseURL, 'receive/', /mycoreobject/@ID)" />
       </fn:string>
