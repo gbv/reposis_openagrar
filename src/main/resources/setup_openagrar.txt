@@ -8,3 +8,4 @@ update classification from uri resource:classifications/mir_licenses.xml
 update classification from uri resource:classifications/noteTypes.xml
 update classification from uri resource:classifications/rfc5646.xml
 update classification from uri resource:classifications/typeOfResource.xml
+update classification from uri resource:classifications/schemaOrg.xml
