@@ -25,7 +25,7 @@
 
   <xsl:param name="WebApplicationBaseURL" />
   <xsl:param name="MCR.Module-iview2.SupportedContentTypes" />
-
+  <xsl:param name="MIR.Schemaorg.Licence.DefaultURL" />
   <!--
 
   Define a transformer
@@ -260,7 +260,6 @@
         </fn:map>
       </xsl:if>
       
-      
       <!--  OA-380#117  use mainEntityOfPage for link to dataset-->
       <fn:string key="mainEntityOfPage">
         <xsl:value-of select="concat($WebApplicationBaseURL, 'receive/', /mycoreobject/@ID)" />
@@ -305,8 +304,6 @@
           </fn:string>
         </xsl:if>
       </xsl:if>
-
-      <xsl:apply-templates select="*" mode="extension" />
 
       <!-- child files -->
       <xsl:if test="not(contains($type, 'Dataset'))">
@@ -390,13 +387,48 @@
 		  </xsl:for-each>
 		</fn:array>
 	  </xsl:if>
+	  
+	  <!-- OA-380 #118 -->
+      <xsl:if test="mods:accessCondition[@type='use and reproduction']">
+        <fn:array key="license">
+          <xsl:for-each select="mods:accessCondition[@type='use and reproduction' and @xlink:href]">
+            <xsl:variable name="trimmed" select="substring-after(normalize-space(@xlink:href),'#')" />
+            <xsl:variable name="licenseURI"
+                          select="concat('classification:metadata:0:children:mir_licenses:',$trimmed)" />
+            <xsl:choose>
+			  <xsl:when test="document($licenseURI)//category/url/@xlink:href">           
+                <xsl:choose>
+                  <xsl:when test="$trimmed='rights_reserved'">
+                    <fn:map>
+                      <fn:string key="@type">CreativeWork</fn:string>
+                      <fn:string key="name">
+                        <xsl:value-of select="document($licenseURI)//category/label[@xml:lang='en']/@text" />
+                      </fn:string>
+                    </fn:map>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:variable name="url" select="document($licenseURI)//category/url/@xlink:href" />
+                    <xsl:if test="string-length($url)>0">
+                      <fn:string>
+                        <xsl:value-of select="$url" />
+                      </fn:string>
+                    </xsl:if>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:when>
+              <xsl:otherwise>
+                <fn:string>
+                  <xsl:value-of select="$MIR.Schemaorg.Licence.DefaultURL"/>
+                </fn:string>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:for-each>
+        </fn:array>
+      </xsl:if> 
     </fn:map>
   </xsl:template>
-
-  <xsl:template match="*" mode="extension">
-    <!-- nothing -->
-  </xsl:template>
-
+  
+ 
   <!-- Used to build the headline and alternative headline for all mods objects -->
   <xsl:template name="buildHeadline">
    <xsl:param name="titleInfo" />
