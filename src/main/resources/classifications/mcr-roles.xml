@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="mcr-roles">
+  <label xml:lang="de" text="Systemnutzerrollen" />
+  <label xml:lang="en" text="system user roles" />
+  <label xml:lang="x-uri" text="http://www.mycore.org/classifications/mcr-roles" />
+  <categories>
+    <category ID="admin">
+      <label xml:lang="de" text="Administrator" />
+      <label xml:lang="en" text="Administrator" />
+    </category>
+    <category ID="editor">
+      <label xml:lang="de" text="Bearbeiter" />
+      <label xml:lang="en" text="Editor" />
+    </category>
+    <category ID="submitter">
+      <label xml:lang="de" text="Autoren" />
+      <label xml:lang="en" text="Author" />
+    </category>
+    <category ID="reader">
+      <label xml:lang="de" text="Leser" />
+      <label xml:lang="en" text="Reader" />
+    </category>
+    <category ID="orcid">
+      <label xml:lang="de" text="ORCID-Nutzer" description="Meldet sich nur zur Authentifizierung an, hat ansonsten Gastrechte" />
+      <label xml:lang="en" text="ORCID user" />
+    </category>
+    <category ID="restapi">
+      <label xml:lang="de" text="Schreibender Zugriff für REST-API" />
+      <label xml:lang="en" text="Write Access to REST-API" />
+    </category>
+    <category ID="piadmin">
+      <label xml:lang="de" text="Editor mit PI Adminrechten kann Derivate die PI haben bearbeiten" />
+      <label xml:lang="en" text="Editor with PI admin rights can edit derivatives that have a PI" />
+    </category>
+  </categories>
+</mycoreclass>
