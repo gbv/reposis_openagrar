@@ -28,6 +28,10 @@
       <label xml:lang="de" text="Schreibender Zugriff für REST-API" />
       <label xml:lang="en" text="Write Access to REST-API" />
     </category>
+    <category ID="importer">
+      <label xml:lang="de" text="Importadmin" description="Darf sich in die Importer-GUI anmelden und dort Importe starten und Konfigurationen vornehmen. Sonst keine weiteren Rechte." />
+      <label xml:lang="en" text="Import admin" />
+    </category>
     <category ID="piadmin">
       <label xml:lang="de" text="Editor mit PI Adminrechten kann Derivate die PI haben bearbeiten" />
       <label xml:lang="en" text="Editor with PI admin rights can edit derivatives that have a PI" />
