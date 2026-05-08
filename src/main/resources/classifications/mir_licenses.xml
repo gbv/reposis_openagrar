@@ -15,6 +15,7 @@
       <label xml:lang="de" text="Open-Access" />
       <label xml:lang="en" text="Open Access" />
       <label xml:lang="x-logo" text="/images/licenses/oa_logo.png" />
+      <label xml:lang="x-group" text="true" />
       <url xlink:href="https://open-access.net/" xlink:type="locator" />
       <category ID="cc_4.0">
         <label xml:lang="de" text="Creative Commons 4.0 International Lizenzen" />
