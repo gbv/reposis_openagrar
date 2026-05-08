@@ -9,6 +9,7 @@
       <label xml:lang="en" text="all rights reserved" />
       <label xml:lang="x-dnb-other" text="otherScheme:Urheberrechtsschutz" />
       <label xml:lang="x-mapping" text="dcat_license:other-closed" />
+      <url xlink:href="https://rightsstatements.org/page/InC/1.0/" xlink:type="locator" />
     </category>
     <category ID="oa">
       <label xml:lang="de" text="Open-Access" />
@@ -174,6 +175,7 @@
         <label xml:lang="de" text="Open-Access im Zuge einer Allianz- bzw. Nationallizenz" />
         <label xml:lang="en" text="Open Access related to alliance or national license" />
         <label xml:lang="x-mapping" text="dcat_license:other-closed" />
+        <url xlink:href="https://www.nationallizenzen.de/ueber-nationallizenzen" xlink:type="locator" />
       </category>
     </category>
     <category ID="software_licenses">
@@ -190,6 +192,7 @@
         <label xml:lang="de" text="GNU General Public License v3.0 or later" />
         <label xml:lang="en" text="GNU General Public License v3.0 or later" />
         <label xml:lang="x-mapping" text="dcat_license:gpl/3.0" />
+        <url xlink:href="https://spdx.org/licenses/GPL-3.0-or-later.html" xlink:type="locator" />
       </category>
       <category ID="mit">
         <label xml:lang="de" text="MIT License" />
@@ -229,6 +232,7 @@
         <label xml:lang="de" text="PDDL - Public Domain Dedication and License" />
         <label xml:lang="en" text="PDDL - Public Domain Dedication and License" />
         <label xml:lang="x-mapping" text="dcat_license:odcpddl" />
+        <url xlink:href="https://spdx.org/licenses/PDDL-1.0.html" xlink:type="locator" />
       </category>
       <category ID="pddl-1.0">
         <label xml:lang="de" text="Open Data Commons Public Domain Dedication &amp; License 1.0" />
