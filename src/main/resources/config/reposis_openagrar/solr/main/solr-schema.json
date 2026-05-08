@@ -99,7 +99,7 @@
       "name": "mods.affiliation",
       "type": "mods.collatedGERMAN",
       "indexed": true,
-      "stored": false,
+      "stored": true,
       "multiValued":true
     }
   },
@@ -108,7 +108,7 @@
       "name": "mods.author.affiliation",
       "type": "mods.collatedGERMAN",
       "indexed": true,
-      "stored": false,
+      "stored": true,
       "multiValued":true
     }
   },
@@ -117,7 +117,7 @@
       "name": "mods.editor.affiliation",
       "type": "mods.collatedGERMAN",
       "indexed": true,
-      "stored": false,
+      "stored": true,
       "multiValued":true
     }
   },
@@ -126,7 +126,7 @@
       "name": "mods.mainAuthor",
       "type": "mods.collatedGERMAN",
       "indexed": true,
-      "stored": false,
+      "stored": true,
       "multiValued":true
     }
   },
@@ -135,7 +135,7 @@
       "name": "mods.mainAuthor.affiliation",
       "type": "mods.collatedGERMAN",
       "indexed": true,
-      "stored": false,
+      "stored": true,
       "multiValued":true
     }
   },
@@ -144,7 +144,7 @@
       "name": "mods.coAuthor",
       "type": "mods.collatedGERMAN",
       "indexed": true,
-      "stored": false,
+      "stored": true,
       "multiValued":true
     }
   },
@@ -153,7 +153,7 @@
       "name": "mods.coAuthor.affiliation",
       "type": "mods.collatedGERMAN",
       "indexed": true,
-      "stored": false,
+      "stored": true,
       "multiValued":true
     }
   },
@@ -162,7 +162,7 @@
       "name": "mods.correspondingAuthor",
       "type": "mods.collatedGERMAN",
       "indexed": true,
-      "stored": false,
+      "stored": true,
       "multiValued":true
     }
   },
@@ -171,7 +171,7 @@
       "name": "mods.correspondingAuthor.affiliation",
       "type": "mods.collatedGERMAN",
       "indexed": true,
-      "stored": false,
+      "stored": true,
       "multiValued":true
     }
   },
@@ -180,7 +180,7 @@
       "name": "mods.lastAuthor",
       "type": "mods.collatedGERMAN",
       "indexed": true,
-      "stored": false,
+      "stored": true,
       "multiValued":true
     }
   },
@@ -189,7 +189,7 @@
       "name": "mods.lastAuthor.affiliation",
       "type": "mods.collatedGERMAN",
       "indexed": true,
-      "stored": false,
+      "stored": true,
       "multiValued":true
     }
   },
