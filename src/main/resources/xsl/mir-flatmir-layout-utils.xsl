@@ -17,7 +17,7 @@
       <div id="project_logo_box">
         <a href="https://www.bfr.bund.de/"><img id="logo_bfr" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_bfr_23.svg" alt="" /></a>
         <a href="https://www.thuenen.de/"><img id="logo_thuenen" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_thuenen.svg" alt="" /></a>
-        <a href="https://www.mri.bund.de/"><img id="logo_mri" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_mri.svg" alt="" /></a>
+        <a href="https://www.mri.bund.de/"><img id="logo_mri" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_mri_2026.svg" alt="" /></a>
         <a href="https://www.fli.de/"><img id="logo_fli" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_fli.svg" alt="" /></a>
         <a href="https://www.julius-kuehn.de/"><img id="logo_jki" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_jki.svg" alt="" /></a>
         <a href="https://www.dbfz.de/"><img id="logo_dbfz" class="head_logo" src="{$WebApplicationBaseURL}images/logos/logo_dbfz.svg" alt="" /></a>
