@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xalan="http://xml.apache.org/xalan" xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions" xmlns:str="http://exslt.org/strings" exclude-result-prefixes="xalan mcrxsl">
-  <xsl:include href="copynodes.xsl" />
   <xsl:include href="str.tokenize.xsl"/>
   <xsl:param name="WebApplicationBaseURL" />
   <xsl:param name="ServletsBaseURL" select="''" />
@@ -165,28 +164,33 @@
   </xsl:template>
 
   <xsl:template match="mods:note" mode="mods2mods">
-    <xsl:variable name="myURI" select="concat('classification:metadata:0:children:noteTypes:',mcrxsl:regexp(@type,' ', '_'))" />
-    <xsl:variable name="x-access">
-      <xsl:value-of select="document($myURI)//label[@xml:lang='x-access']/@text"/> 
-    </xsl:variable>
-    <xsl:choose>      
-      <xsl:when test="contains($x-access, ' ')">
-        <xsl:variable name="note"><xsl:copy-of select="."/></xsl:variable>
-        <xsl:for-each select="str:tokenize($x-access, ' ')">
-          <xsl:if test="mcrxsl:isCurrentUserInRole(.)">
-            <xsl:copy-of select="$note"/>
-          </xsl:if> 
-        </xsl:for-each> 
-      </xsl:when>
-      <xsl:when test="($x-access = 'guest') and mcrxsl:isCurrentUserGuestUser()">
-        <xsl:copy-of select="."/>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:if test="mcrxsl:isCurrentUserInRole($x-access)">
-          <xsl:copy-of select="."/>
-        </xsl:if>
-      </xsl:otherwise>
-    </xsl:choose> 
+     <xsl:if test="./@type">
+      <xsl:variable name="type"><xsl:value-of select="./@type"/></xsl:variable>
+      <xsl:if test="document('classification:metadata:-1:children:noteTypes')//category[@ID=$type]">
+        <xsl:variable name="myURI" select="concat('classification:metadata:0:children:noteTypes:',mcrxsl:regexp(@type,' ', '_'))" />
+        <xsl:variable name="x-access">
+          <xsl:value-of select="document($myURI)//label[@xml:lang='x-access']/@text"/> 
+        </xsl:variable>
+        <xsl:choose>      
+          <xsl:when test="contains($x-access, ' ')">
+            <xsl:variable name="note"><xsl:copy-of select="."/></xsl:variable>
+            <xsl:for-each select="str:tokenize($x-access, ' ')">
+              <xsl:if test="mcrxsl:isCurrentUserInRole(.)">
+                <xsl:copy-of select="$note"/>
+              </xsl:if> 
+            </xsl:for-each> 
+          </xsl:when>
+          <xsl:when test="($x-access = 'guest') and mcrxsl:isCurrentUserGuestUser()">
+            <xsl:copy-of select="."/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:if test="mcrxsl:isCurrentUserInRole($x-access)">
+              <xsl:copy-of select="."/>
+            </xsl:if>
+          </xsl:otherwise>
+        </xsl:choose> 
+      </xsl:if>
+    </xsl:if>
   </xsl:template>
   
 

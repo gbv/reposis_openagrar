@@ -111,7 +111,7 @@ public class MCRDCATDEServlet extends MCRContentServlet {
     private List<MCRObjectID> getIdList(HttpServletRequest request){
         List<MCRObjectID> idList = new ArrayList<>();
         Integer start = request.getParameter("start") == null ? 0 : Integer.parseInt(request.getParameter("start"));
-        Integer rows = request.getParameter("rows") == null ? 100 : Integer.parseInt(request.getParameter("rows"));
+        Integer rows = request.getParameter("rows") == null ? 1000 : Integer.parseInt(request.getParameter("rows"));
 
         SolrQuery query = new SolrQuery();
         query.setQuery(SOLR_QUERY);
