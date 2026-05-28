@@ -5,7 +5,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/1.1/eprints http://www.openarchives.org/OAI/1.1/eprints.xsd">
     <content>
       <text>
-        OpenAgrar is the collective repository of research institutions affiliated with the Federal Ministry of Food and Agriculture (BMEL) in Germany.
+        OpenAgrar is the collective repository of research institutions affiliated with the Federal Ministry of Agriculture, Food and Regional Identity (BMLEH) in Germany.
       </text>
       <URL>https://www.openagrar.de/</URL>
     </content>
@@ -24,7 +24,7 @@
     <submissionPolicy>
       <text>
         OpenAgrar is an open access repository which publishes, stores, archives and distributes publications, publication references and research data of research
-        institutions affiliated with the Federal Ministry of Food and Agriculture (BMEL) in Germany.
+        institutions affiliated with the Federal Ministry of Agriculture, Food and Regional Identity (BMLEH) in Germany.
       </text>
       <URL>https://www.openagrar.de/</URL>
     </submissionPolicy>

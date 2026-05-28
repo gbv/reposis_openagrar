@@ -297,7 +297,9 @@
         </xsl:for-each>
             <!-- START: OA specific changes -->
             <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[not(@generator) and
-                                                        not(@authorityURI='https://www.openagrar.de/classifications/annual_review')]" />
+                                                     not(@authorityURI='https://www.openagrar.de/classifications/annual_review') and not(@authority='dcatHVD')]" />
+            <xsl:call-template name="dcatHVD" />
+                                       
             <!-- END: OA specific changes -->
         <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:part/mods:extent" />
         <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:location/mods:url" />
@@ -335,7 +337,6 @@
               </xsl:call-template>
               <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem[@type='series' or @type='host']/mods:extension[@type='metrics']" />
               <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@type='metrics']" />
-              <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']" />
             </xsl:if>
 
             <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:name[@type='corporate'][@ID or @authorityURI=$institutesURI]" />
@@ -348,6 +349,8 @@
 
 
   <!-- OA specific templates -->
+  
+  <!-- OA specific templates -->
   <xsl:template match="mods:name[@type='corporate' and @ID]" mode="oa">
     <xsl:variable name="id" select="concat('#', @ID)" />
     <tr>
@@ -359,23 +362,36 @@
       </td>
     </tr>
     <xsl:if
-      test="(not(mcrxsl:isCurrentUserGuestUser()) and ./../mods:note[@xlink:href=$id]) or (./../mods:location/mods:physicalLocation[@xlink:href=$id])">
+      test="(not(mcrxsl:isCurrentUserGuestUser()) and ./../mods:note[@xlink:href=$id]) or (./../mods:location/mods:physicalLocation[@xlink:href=$id]) 
+        or (../../mods:mods/mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review'])">
       <tr>
         <td colspan="2">
           <table class="metaData">
+            <xsl:call-template name="printMetaDate.mods">
+              <xsl:with-param name="nodes" select="./../mods:location/mods:physicalLocation[@xlink:href=$id]" />
+            </xsl:call-template>
             <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
+			  <xsl:variable name="idref"><xsl:value-of select="substring-after($id, '#')"/></xsl:variable>
+              <xsl:choose>
+			    <xsl:when test="../../mods:mods/mods:classification/@IDREF">								
+			      <xsl:apply-templates mode="present" select="../../mods:mods/mods:classification[@IDREF=$idref]" />
+			      <xsl:apply-templates mode="oa" select="../../mods:mods/mods:classification[@IDREF=$idref]/@edition" />
+			    </xsl:when>
+                <xsl:otherwise>
+				  <xsl:apply-templates mode="present" select="../../mods:mods/mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']" />
+			      <xsl:apply-templates mode="oa" select="../../mods:mods/mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']/@edition" />
+                </xsl:otherwise>
+			  </xsl:choose>
               <xsl:call-template name="printMetaDate.mods">
                 <xsl:with-param name="nodes" select="./../mods:note[@xlink:href=$id]" />
               </xsl:call-template>
             </xsl:if>
-            <xsl:call-template name="printMetaDate.mods">
-              <xsl:with-param name="nodes" select="./../mods:location/mods:physicalLocation[@xlink:href=$id]" />
-            </xsl:call-template>
           </table>
         </td>
       </tr>
     </xsl:if>
   </xsl:template>
+  
 
   <xsl:template name="printMetaDate.mods.relatedItem.oa">
     <xsl:param name="parentID" />
@@ -556,6 +572,7 @@
         </tr>
       </xsl:for-each>
       <xsl:if test="journalMetrics">
+        <xsl:variable name="JournalMetrics" select="journalMetrics"/>
         <tr>
           <td valign="top" class="metaname">
             <xsl:value-of select="concat('Journal Metrics',':')" />
@@ -572,14 +589,14 @@
                   </th>
                 </xsl:for-each>
               </tr>
-              <xsl:for-each select="//journalMetrics/metric/value[not(preceding::value/@year = @year)]">
+              <xsl:for-each select="journalMetrics/metric/value[not(preceding::value/@year = @year)]">
                 <xsl:sort select="@year" data-type="number"/>
                 <xsl:variable name="year" select="@year"/>
                 <tr>
                   <td>
                     <xsl:value-of select="$year"/>
                   </td>
-                  <xsl:for-each select="//journalMetrics/metric">
+                  <xsl:for-each select="$JournalMetrics/metric">
                     <td>
                       <xsl:choose>
                         <xsl:when test="@type='JCR'">
@@ -654,4 +671,29 @@
     </xsl:if>
   </xsl:template>
 
+  <xsl:template match="mods:classification[@authorityURI='https://www.openagrar.de/classifications/annual_review']/@edition" mode="oa">
+        <tr>
+          <td valign="top" class="metaname">
+            <xsl:value-of select="concat(i18n:translate('component.mods.metaData.dictionary.annual_review.edition'),':')" />
+          </td>
+          <td class="metavalue">
+            <xsl:value-of select="." />
+          </td>
+        </tr>
+  </xsl:template>
+  
+  <xsl:template name="dcatHVD">
+    <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[@authority='dcatHVD']">
+      <tr>
+        <td class="metaname" valign="top">
+          <xsl:value-of select="concat(i18n:translate('component.mods.metaData.dictionary.dcathvd'),':')" />
+        </td>
+        <td class="metavalue">
+          <xsl:value-of select="document(concat('classification:metadata:0:children:dcat_hvd_categories:', ./text()))//category/label[@xml:lang=$CurrentLang]/@text"/>
+         </td>
+      </tr>
+    </xsl:for-each>
+  </xsl:template>
+
 </xsl:stylesheet>
+

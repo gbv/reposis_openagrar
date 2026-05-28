@@ -82,15 +82,6 @@
       <div class="col-12">
         <h3>JKI Jahresstatistik</h3>
 
-        <ul id="jki_statistic">
-        </ul>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-12">
-        <h3>JKI Jahresstatistik 2020</h3>
-
         <ul id="jki_statistic_2020">
         </ul>
       </div>

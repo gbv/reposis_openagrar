@@ -1,0 +1,106 @@
+/*  searchfield
+ *  - search field in main menu
+ */
+
+// Extra large devices (large desktops)
+// set the defaults for all responsive levels here
+// no (xl) media query necessary (desktop first)
+
+  .searchfield_box {
+    height: 40px;
+    width:625px;
+    border: 1px solid #CECCCC;
+    border-radius: 4px;
+    background: transparent linear-gradient(0deg, #E4E4E4 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+
+    #searchInput {
+      padding: 0 0 0 25px;
+      margin-top: 0;
+      height: 30px;
+      background: transparent url("../../../../images/searchbar_input.png") no-repeat top left;
+      background-size: 100% 100%;
+      margin-right: 15px;
+      width: 487px;
+    }
+
+    .btn-primary {
+      background: transparent url("../../../../images/searchbar_label.png") no-repeat top left;
+      width: 98px;
+      height: 32px;
+      border-width: 0px;
+      margin: 0 0 0 15px;
+      padding:0;
+    }
+
+    .form-control,
+    input {
+      border-width: 0px;
+    }
+
+    .navbar-form {
+      height: 100%;
+      flex-wrap: nowrap;
+    }
+  }
+
+// Large devices (desktops) and below: < 1200px
+@include media-breakpoint-down(lg) {
+  // add/overwrite styles for responsive level lg and lower
+  .searchfield_box {
+    width:435px;
+    .btn-primary {
+      background: transparent url("../../../../images/searchbar_label-60.png") no-repeat top left;
+      width: 60px;
+    }
+    #searchInput {
+      background: transparent url("../../../../images/searchbar_input-330.png") no-repeat top left;
+      width: 330px;
+    }
+  }
+}
+
+// Medium devices (tablets) and below: < 992px
+@include media-breakpoint-down(md) {
+  // add/overwrite styles for responsive level md and lower
+  .searchfield_box {
+    width:590px;
+    #searchInput {
+      background: transparent url("../../../../images/searchbar_input.png") no-repeat top left;
+      width: 487px;
+    }
+  }
+}
+
+// Small devices (landscape phones) and below: < 768px
+@include media-breakpoint-down(sm) {
+  // add/overwrite styles for responsive level sm and lower
+  .searchfield_box {
+    width:425px;
+    .btn-primary {
+      background: transparent url("../../../../images/searchbar_label-60.png") no-repeat top left;
+      width: 60px;
+    }
+    #searchInput {
+      background: transparent url("../../../../images/searchbar_input-320.png") no-repeat top left;
+      width: 320px;
+    }
+  }
+}
+
+// Extra small devices (portrait phones): < 576px
+@include media-breakpoint-down(xs) {
+  // add/overwrite styles for responsive level xs
+  .searchfield_box {
+    width:230px;
+    #searchInput {
+      width: 100%;
+    }
+    .btn-primary {
+      width: 60px;
+    }
+    #searchInput {
+      background: transparent url("../../../../images/searchbar_input-130.png") no-repeat top left;
+      width: 130px;
+    }
+  }
+}

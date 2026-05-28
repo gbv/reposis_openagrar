@@ -63,11 +63,12 @@
 
 
   <xsl:variable name="name_str">
-    <xsl:if test="string-length($nameGND) &gt; 0">
+    <!-- Remove to avoid Certificate Issue when calling /servlets/solr/personindex
+      <xsl:if test="string-length($nameGND) &gt; 0">
       <xsl:variable name="names" select="document(concat($WebApplicationBaseURL,'/servlets/solr/personindex?XSL.Style=xml&amp;terms.regex=.*:gnd:',$nameGND))" />
   	  <xsl:value-of select="substring-before($names//int[contains(@name,$nameGND)]/@name,':gnd')"/>
 
-    </xsl:if>
+    </xsl:if>-->
   </xsl:variable>
   <!-- END: OA specific changes -->
 
@@ -299,6 +300,30 @@
             </xsl:if>
           </div>
         </div>
+
+        <!-- OA specific facet dateIssued -->
+        <xsl:variable name="timebarField" select="'mods.dateIssuedOnline'"/>
+        <div class="card oa-dateIssuedOnlineFacet">
+            <div class="card-header" data-toggle="collapse-next">
+                <h3 class="card-title">
+                    <xsl:value-of select="i18n:translate('mir.search_facet.date.dateIssuedOnline')"/>
+                </h3>
+            </div>
+            <div class="card-body collapse show">
+                <script src="{$WebApplicationBaseURL}js/timebar.js" type="text/javascript"></script>
+                <div class="oa-dateIssuedOnlineTimebar"
+                     data-timebar="true"
+                     data-timebar-height="100"
+                     data-search-field="{$timebarField}"
+                     data-timebar-start="0001-01-01T00:00:00Z"
+                     data-timebar-end="NOW"
+                     data-timebar-gap="+1YEAR"
+                     data-timebar-mincount="1"
+                >
+                </div>
+            </div>
+        </div>
+
 
         <!-- OA specific facet mods.refereed -->
         <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='mods.refereed']/int or

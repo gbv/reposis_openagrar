@@ -6,25 +6,116 @@
 // set the defaults for all responsive levels here
 // no (xl) media query necessary (desktop first)
 
-// logo and menu container
+  body > header {
+    margin-bottom: 1.5rem;
+    background-color: white;
+
+    #header_box {
+      margin: 0px auto 20px auto;
+      background: transparent url("../../../../images/back_head.png") no-repeat top left 8px;
+      min-height: 281px;
+      position: relative;
+
+      #logo_oa {
+        position: absolute;
+        left: 20px;
+        top: 64px;
+        height: 110px;
+      }
+      #project_logo_box {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: absolute;
+        right: 65px;
+        top: 185px;
+        .head_logo {
+          height: 40px;
+          margin-left: 5px;
+        }
+        #logo_bfr {}
+        #logo_thuenen {}
+        #logo_mri {}
+        #logo_fli {}
+        #logo_jki {
+          height: 46px;
+          margin-top: -6px;
+        }
+        #logo_dbfz {
+          height: 43px;
+          margin-top: -3px;
+        }
+        #logo_bvl {}
+      }
+    }
+  }
 
 
-// Large devices (desktops) and below: <= 1200px
+
+// Large devices (desktops) and below: <1200px
 @include media-breakpoint-down(lg) {
   // add/overwrite styles for responsive level lg and lower
+  body > header > #header_box {
+    background: transparent url("../../../../images/back_head-962.png") no-repeat top left 8px;
+  }
 }
 
-// Medium devices (tablets) and below: <= 992px
+// Medium devices (tablets) and below: <992px
 @include media-breakpoint-down(md) {
   // add/overwrite styles for responsive level md and lower
+  body > header > #header_box {
+    background: transparent url("../../../../images/back_head-742.png") no-repeat top left 8px;
+    #project_logo_box {
+      right: 10px;
+    }
+  }
 }
 
-// Small devices (landscape phones) and below: <= 768px
+// Small devices (landscape phones) and below: <768px
 @include media-breakpoint-down(sm) {
   // add/overwrite styles for responsive level sm and lower
+  body > header > #header_box {
+    background: transparent url("../../../../images/back_head-562.png") no-repeat top left 8px;
+    #project_logo_box {
+      top: 190px;
+      .head_logo {
+        height: 30px;
+      }
+      #logo_jki {
+        height: 36px;
+        margin-top: -6px;
+      }
+      #logo_dbfz {
+        height: 33px;
+        margin-top: -3px;
+      }
+    }
+
+  }
 }
 
-// Extra small devices (portrait phones): <= 576px
+// Extra small devices (portrait phones): <576px
 @include media-breakpoint-down(xs) {
   // add/overwrite styles for responsive level xs
+  body > header > #header_box {
+    background: transparent url("../../../../images/back_head-300.png") no-repeat top left 15px;
+    min-height: 300px;
+    #project_logo_box {
+      right: 15px;
+      left: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      .head_logo {
+        margin-top: 5px;
+      }
+      #logo_jki {
+        margin-top: -1px;
+      }
+      #logo_dbfz {
+        height: 33px;
+        margin-top: 2px;
+      }
+    }
+  }
 }

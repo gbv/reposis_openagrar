@@ -19,7 +19,7 @@
           entscheiden die Forschenden selbst!
         </p>
         <p>
-          Das BMEL und damit alle Einrichtungen, die das gemeinsame Repositorium OpenAgrar betreiben, ist seit 2017 Mitglied bei ORCID. Dies
+          Das BMLEH und damit alle Einrichtungen, die das gemeinsame Repositorium OpenAgrar betreiben, ist seit 2017 Mitglied bei ORCID. Dies
           bedeutet, dass Sie OpenAgrar zur s. g.  "Trusted Party" machen können. Damit wird OpenAgrar Sie bei der Pflege Ihres ORCID-Profils
           und Ihrer persönlichen Publikationsliste unterstützen, indem in OpenAgrar verzeichnete Publikationen in Ihr ORCID-Profil automatisiert
           eintragen werden.
@@ -82,7 +82,7 @@
             Bis auf Ihren Namen und Ihre ORCID (beide sind immer öffentlich) können Sie sämtliche Profilangaben im Hinblick auf ihre Sichtbarkeit verwalten.
           </li>
           <li>
-            Sie bestimmen, welche Rechte Sie verknüpften Datenbanken, sog. Trusted Parties bzw. Trusted Organizations (BMEL, Crossref, Web of Science etc.) einräumen.
+            Sie bestimmen, welche Rechte Sie verknüpften Datenbanken, sog. Trusted Parties bzw. Trusted Organizations (BMLEH, Crossref, Web of Science etc.) einräumen.
           </li>
           <li>
             Eingeräumte Rechte können Sie in Ihrem ORCID-Profil über Account Settings jederzeit kontrollieren, ändern und wieder entziehen.
@@ -191,7 +191,7 @@
           Researchers decide themselves about to which extend this information is publicly available.
         </p>
         <p>
-          From 2017 the Federal Ministry of Food and Agriculture (BMEL) in Germany (and all institutions that manage the open access repository
+          From 2017 the Federal Ministry of Agriculture, Food and Regional Identity (BMLEH) in Germany (and all institutions that manage the open access repository
           OpenAgrar) is an ORCID member. By appointing OpenAgrar as a „trusted party“, the repository will support you in maintaining your ORCID
           profile and your publication list.  With your permission, OpenAgrar will automatically import your publications from OpenAgrar into
           your ORCID profile.
@@ -331,6 +331,6 @@
     </div>
   </section>
     <meta>
-        <log lastEditor="administrator" date="2019-02-13" time="15:56"/>
+        <log lastEditor="administrator" date="2025-05-30" time="11:22"/>
     </meta>
 </MyCoReWebPage>
