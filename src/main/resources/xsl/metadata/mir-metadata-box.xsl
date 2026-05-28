@@ -330,8 +330,6 @@
 
             <!-- START: OA specific changes -->
             <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
-              <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@type='characteristics']" />
-              <xsl:apply-templates mode="oa" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem[@type='series' or @type='host']/mods:extension[@type='characteristics']" />
               <xsl:call-template name="print_refereed">
                 <xsl:with-param name="mods" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods"/>
               </xsl:call-template>
@@ -541,36 +539,6 @@
           </a>
         </td>
       </tr>
-    </xsl:if>
-  </xsl:template>
-
-  <xsl:template match="mods:mods/mods:reltedItem[@type='series' or @type='host']/mods:extension[@type='characteristics']" mode="oa">
-    <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
-      <xsl:if test="chars/@refereed">
-        <tr>
-          <td valign="top" class="metaname">
-            <xsl:value-of select="concat(i18n:translate('component.mods.metaData.dictionary.characteristicsOfJournal'),':')" />
-          </td>
-          <td class="metavalue">
-            <xsl:value-of select="i18n:translate(concat('component.mods.metaData.dictionary.refereed.',chars/@refereed))" />
-          </td>
-        </tr>
-      </xsl:if>
-    </xsl:if>
-  </xsl:template>
-
-  <xsl:template match="mods:mods/mods:extension[@type='characteristics']" mode="oa">
-    <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
-      <xsl:if test="chars/@refereed">
-        <tr>
-          <td valign="top" class="metaname">
-            <xsl:value-of select="concat(i18n:translate('component.mods.metaData.dictionary.characteristics'),':')" />
-          </td>
-          <td class="metavalue">
-            <xsl:value-of select="i18n:translate(concat('component.mods.metaData.dictionary.refereed.',chars/@refereed))" />
-          </td>
-        </tr>
-      </xsl:if>
     </xsl:if>
   </xsl:template>
 
