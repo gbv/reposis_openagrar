@@ -13,29 +13,39 @@
     <xsl:param name = "mods" />
     <xsl:choose>
       <xsl:when test="$mods/mods:extension/chars/@refereed='yes'">
-        <field name="mods.refereed">yes</field>
+        <refereed value="yes" level="1"/>
       </xsl:when>
       <xsl:when test="$mods/mods:extension/chars/@refereed='no'">
-        <field name="mods.refereed">no</field>
+        <refereed value="no" level="1"/>
       </xsl:when>
       <xsl:otherwise>
         <xsl:choose>
           <xsl:when test="$mods/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='yes'">
-            <field name="mods.refereed">yes</field>
+            <refereed value="yes" level="2"/>
           </xsl:when>
           <xsl:when test="$mods/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='no'">
-            <field name="mods.refereed">no</field>
+            <refereed value="no" level="2"/>
           </xsl:when>
           <xsl:otherwise>
             <xsl:choose>
               <xsl:when test="$mods/mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='yes'">
-                <field name="mods.refereed">yes</field>
+                <refereed value="yes" level="3"/>
               </xsl:when>
               <xsl:when test="$mods/mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='no'">
-                <field name="mods.refereed">no</field>
+                <refereed value="no" level="3"/>
               </xsl:when>
               <xsl:otherwise>
-                <field name="mods.refereed">n/a</field>
+                <xsl:choose>
+                  <xsl:when test="$mods/mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='yes'">
+                    <refereed value="yes" level="4"/>
+                  </xsl:when>
+                  <xsl:when test="$mods/mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='no'">
+                    <refereed value="no" level="4"/>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <refereed value="n/a" level="0"/>
+                  </xsl:otherwise>
+                </xsl:choose>
               </xsl:otherwise>
             </xsl:choose>
           </xsl:otherwise>

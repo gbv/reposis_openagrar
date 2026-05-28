@@ -3,7 +3,8 @@
                 xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xalan="http://xml.apache.org/xalan"
                 xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions"
                 xmlns:acl="xalan://org.mycore.access.MCRAccessManager"
-                exclude-result-prefixes="i18n mods xlink xalan mcrxsl acl">
+                xmlns:exslt="http://exslt.org/common"
+                exclude-result-prefixes="i18n mods xlink xalan mcrxsl acl exslt">
   <xsl:import href="xslImport:modsmeta:metadata/mir-metadata-box.xsl" />
   <xsl:include href="modsmetadata.xsl" />
   <xsl:include href="mir-mods-utils.xsl" />
@@ -469,37 +470,75 @@
     <xsl:variable name="lvl3_genre" select="substring-after($lvl3/mods:genre[contains(@authorityURI,'classifications/genres')]/@valueURI,'#')"/>
     <xsl:variable name="lvl4_genre" select="substring-after($lvl4/mods:genre[contains(@authorityURI,'classifications/genres')]/@valueURI,'#')"/>
 
+    <xsl:variable name="lvl1_title" select="$lvl1/mods:titleInfo/mods:title"/>
+    <xsl:variable name="lvl2_title" select="$lvl2/mods:titleInfo/mods:title"/>
+    <xsl:variable name="lvl3_title" select="$lvl3/mods:titleInfo/mods:title"/>
+    <xsl:variable name="lvl4_title" select="$lvl4/mods:titleInfo/mods:title"/>
+
     <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
       <tr>
         <td valign="top" class="metaname">
           <xsl:value-of select="concat(i18n:translate('component.mods.metaData.dictionary.characteristics'),':')" />
         </td>
         <td class="metavalue">
-          <xsl:value-of select="i18n:translate(concat('component.mods.metaData.dictionary.refereed.', $refereed))" />
-          <div class="d-none" id="example-content">
-            <dl>
-              <dt><xsl:value-of select="$lvl1_refereed"/></dt>
-              <dd><xsl:value-of select="$lvl1_genre"/></dd>
-              <dt><xsl:value-of select="$lvl2_refereed"/></dt>
-              <dd><xsl:value-of select="$lvl2_genre"/></dd>
-              <dt><xsl:value-of select="$lvl3_refereed"/></dt>
-              <dd><xsl:value-of select="$lvl3_genre"/></dd>
-              <dt><xsl:value-of select="$lvl4_refereed"/></dt>
-              <dd><xsl:value-of select="$lvl4_genre"/></dd>
-            </dl>
+          <xsl:value-of select="i18n:translate(concat('component.mods.metaData.dictionary.refereed.', exslt:node-set($refereed)/refereed/@value))" />
+          <div class="d-none" id="refereedPopover-content">
+            <table class="table table-sm table-borderless mb-0">
+              <thead>
+                <tr>
+                  <th>Titel</th>
+                  <th>Genre</th>
+                  <th>Referiert</th>
+                </tr>
+              </thead>
+              <tbody>
+                <xsl:if test="$lvl4_title != '' or $lvl4_genre != ''">
+                  <tr>
+                    <xsl:if test="exslt:node-set($refereed)/refereed/@level = '4'">
+                      <xsl:attribute name="class">font-weight-bold</xsl:attribute>
+                    </xsl:if>
+                    <td><xsl:value-of select="$lvl4_title"/></td>
+                    <td><xsl:value-of select="mcrxsl:getDisplayName('mir_genres', $lvl4_genre)"/></td>
+                    <td><xsl:value-of select="$lvl4_refereed"/></td>
+                  </tr>
+                </xsl:if>
+                <xsl:if test="$lvl3_title != '' or $lvl3_genre != ''">
+                  <tr>
+                    <xsl:if test="exslt:node-set($refereed)/refereed/@level = '3'">
+                      <xsl:attribute name="class">font-weight-bold</xsl:attribute>
+                    </xsl:if>
+                    <td><xsl:value-of select="$lvl3_title"/></td>
+                    <td><xsl:value-of select="mcrxsl:getDisplayName('mir_genres', $lvl3_genre)"/></td>
+                    <td><xsl:value-of select="$lvl3_refereed"/></td>
+                  </tr>
+                </xsl:if>
+                <xsl:if test="$lvl2_title != '' or $lvl2_genre != ''">
+                  <tr>
+                    <xsl:if test="exslt:node-set($refereed)/refereed/@level = '2'">
+                      <xsl:attribute name="class">font-weight-bold</xsl:attribute>
+                    </xsl:if>
+                    <td><xsl:value-of select="$lvl2_title"/></td>
+                    <td><xsl:value-of select="mcrxsl:getDisplayName('mir_genres', $lvl2_genre)"/></td>
+                    <td><xsl:value-of select="$lvl2_refereed"/></td>
+                  </tr>
+                </xsl:if>
+                <tr>
+                  <xsl:if test="exslt:node-set($refereed)/refereed/@level = '1'">
+                    <xsl:attribute name="class">font-weight-bold</xsl:attribute>
+                  </xsl:if>
+                  <td><xsl:value-of select="$lvl1_title"/></td>
+                  <td><xsl:value-of select="mcrxsl:getDisplayName('mir_genres', $lvl1_genre)"/></td>
+                  <td><xsl:value-of select="$lvl1_refereed"/></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <a
-            id="example"
+            id="refereedPopover"
             title="Referiert"
             class="personPopover">
               <span class="fa fa-info-circle" />
           </a>
-          (
-          <xsl:value-of select="$lvl1_refereed"/><xsl:value-of select="$lvl1_genre"/>
-          , <xsl:value-of select="$lvl2_refereed"/><xsl:value-of select="$lvl2_genre"/>
-          , <xsl:value-of select="$lvl3_refereed"/><xsl:value-of select="$lvl3_genre"/>
-          , <xsl:value-of select="$lvl4_refereed"/><xsl:value-of select="$lvl4_genre"/>
-          )
         </td>
       </tr>
     </xsl:if>

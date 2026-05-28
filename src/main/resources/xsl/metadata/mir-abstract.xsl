@@ -144,7 +144,7 @@
             <xsl:with-param name="mods" select="$mods"/>
           </xsl:call-template>
         </xsl:variable>
-        <xsl:if test="$refereed='yes'">
+        <xsl:if test="exslt:node-set($refereed)/refereed/@value='yes'">
           <div class="oa_refereed">
             <span class="badge badge-info" title="{i18n:translate('oa.refereed')}">
               <xsl:value-of select="i18n:translate('oa.refereed')" />
