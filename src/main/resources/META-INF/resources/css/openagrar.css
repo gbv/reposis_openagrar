@@ -1,4 +1,0 @@
-/*Fix for personPopover border overflow*/
-.popover {
-  max-width: min-content;
-}
