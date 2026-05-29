@@ -5,10 +5,12 @@
   xmlns:mods="http://www.loc.gov/mods/v3"
   xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions"
   xmlns:xlink="http://www.w3.org/1999/xlink"
-  exclude-result-prefixes="mods mcrxsl xlink"
+  xmlns:exslt="http://exslt.org/common"
+  exclude-result-prefixes="mods mcrxsl xlink exslt"
 >
   <xsl:import href="xslImport:solr-document:openagrar-solr.xsl" />
   <xsl:include href="date.statistic.xsl"/>
+  <xsl:include href="characteristics.refereed.xsl"/>
 
   <xsl:template match="mycoreobject[contains(@ID,'_mods_')]">
     <xsl:apply-imports />
@@ -201,65 +203,15 @@
         <xsl:value-of select="substring-after(@valueURI,'#')" />
       </field>
     </xsl:for-each>
-    <xsl:choose>
-      <xsl:when test="mods:extension/chars/@refereed='yes'">
-        <field name="mods.refereed">yes</field>
-      </xsl:when>
-      <xsl:when test="mods:extension/chars/@refereed='no'">
-        <field name="mods.refereed">no</field>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:choose>
-          <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='yes'">
-            <field name="mods.refereed">yes</field>
-          </xsl:when>
-          <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='no'">
-            <field name="mods.refereed">no</field>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:choose>
-              <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='yes'">
-                <field name="mods.refereed">yes</field>
-              </xsl:when>
-              <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='no'">
-                <field name="mods.refereed">no</field>
-              </xsl:when>
-              <xsl:otherwise>
-                <field name="mods.refereed">n/a</field>
-              </xsl:otherwise>
-            </xsl:choose>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:otherwise>
-    </xsl:choose>
-    <xsl:choose>
-      <xsl:when test="mods:extension/chars/@refereed='yes'">
-        <field name="mods.refereed.public">yes</field>
-      </xsl:when>
-      <xsl:when test="mods:extension/chars/@refereed='no'">
-        <field name="mods.refereed.public">no</field>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:choose>
-          <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='yes'">
-            <field name="mods.refereed.public">yes</field>
-          </xsl:when>
-          <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='no'">
-            <field name="mods.refereed.public">no</field>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:choose>
-              <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='yes'">
-                <field name="mods.refereed.public">yes</field>
-              </xsl:when>
-              <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:relatedItem[@type='host' or @type='series']/mods:extension/chars/@refereed='no'">
-                <field name="mods.refereed.public">no</field>
-              </xsl:when>
-            </xsl:choose>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:otherwise>
-    </xsl:choose>
+    <xsl:variable name="refereed">
+      <xsl:call-template name="getCharacteristicsRefereed">
+        <xsl:with-param name="mods" select="."/>
+      </xsl:call-template>
+    </xsl:variable>
+    <field name="mods.refereed"><xsl:value-of select="exslt:node-set($refereed)/refereed/@value"/></field>
+    <xsl:if test="exslt:node-set($refereed)/refereed/@value='yes' or exslt:node-set($refereed)/refereed/@value='no'">
+      <field name="mods.refereed.public"><xsl:value-of select="exslt:node-set($refereed)/refereed/@value"/></field>
+    </xsl:if>
     <xsl:for-each select="mods:identifier[@type='isbn']">
       <field name="mods.identifier.isbn"><xsl:value-of select="."/></field> 
     </xsl:for-each>
