@@ -549,8 +549,8 @@
           </div>
           <a
             id="refereedPopover"
-            title="Referiert"
             class="personPopover">
+              <xsl:attribute name="title"><xsl:value-of select="i18n:translate('component.mods.metaData.dictionary.refereed')" /></xsl:attribute>
               <span class="fa fa-info-circle" />
           </a>
         </td>
