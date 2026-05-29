@@ -500,9 +500,9 @@
             <table class="table table-sm table-borderless mb-0">
               <thead>
                 <tr>
-                  <th>Titel</th>
-                  <th>Genre</th>
-                  <th>Referiert</th>
+                  <th><xsl:value-of select="i18n:translate('component.mods.metaData.dictionary.title')" /></th>
+                  <th><xsl:value-of select="i18n:translate('component.mods.metaData.dictionary.genre')" /></th>
+                  <th><xsl:value-of select="i18n:translate('component.mods.metaData.dictionary.refereed')" /></th>
                 </tr>
               </thead>
               <tbody>
