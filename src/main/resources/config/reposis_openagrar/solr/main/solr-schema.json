@@ -60,6 +60,12 @@
   },
   {
     "add-field": {
+        "name":"mods.annual_review.ti",
+        "type":"pint",
+        "multiValued":false}
+  },
+  {
+    "add-field": {
         "name":"corporate",
         "type":"string",
         "multiValued":true}

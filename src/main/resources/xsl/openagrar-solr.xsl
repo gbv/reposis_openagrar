@@ -34,6 +34,14 @@
         <xsl:value-of select="@edition" />
       </field>
     </xsl:for-each>
+    <xsl:variable name="mir_institutes_doc" select="document('classification:metadata:-1:children:mir_institutes:ti')" />
+    <xsl:for-each select="mods:name[contains(@authorityURI,'institutes')]
+        [$mir_institutes_doc//category[@ID=substring-after(@valueURI,'#')]][1]">
+      <xsl:variable name="tiInstId" select="substring-after(@valueURI, '#')" />
+      <field name="mods.annual_review.ti">
+        <xsl:value-of select="../mods:classification[@displayLabel='annual_review'][@IDREF=$tiInstId]/@edition" />
+      </field>
+    </xsl:for-each>
     <xsl:for-each select="mods:name/mods:affiliation">
       <field name="mods.affiliation">
         <xsl:value-of select="." />
