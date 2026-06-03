@@ -36,10 +36,10 @@
     </xsl:for-each>
     <xsl:variable name="mir_institutes_doc" select="document('classification:metadata:-1:children:mir_institutes:ti')" />
     <xsl:for-each select="mods:name[contains(@authorityURI,'institutes')]
-        [$mir_institutes_doc//category[@ID=substring-after(@valueURI,'#')]][1]">
-      <xsl:variable name="tiInstId" select="substring-after(@valueURI, '#')" />
+        [substring-after(@valueURI,'#') = $mir_institutes_doc//category/@ID][1]">
+      <xsl:variable name="nameId" select="@ID" />
       <field name="mods.annual_review.ti">
-        <xsl:value-of select="../mods:classification[@displayLabel='annual_review'][@IDREF=$tiInstId]/@edition" />
+        <xsl:value-of select="../mods:classification[@displayLabel='annual_review'][@IDREF=$nameId]/@edition" />
       </field>
     </xsl:for-each>
     <xsl:for-each select="mods:name/mods:affiliation">
