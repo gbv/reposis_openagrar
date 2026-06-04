@@ -31,6 +31,12 @@
           li.append ('<a href="jki_statstics_2020.xml?year=' + i + '&amp;JCRClasses2Yb=true">' + i + ' mit JCR von 2 Jahren zuvor</a>');
           $("#jki_statistic_2020").append(li);
         }
+
+        for (i = year1; i &lt;= year; i++) {
+          var li = $('<li />');
+          li.append ('<a href="ti_annual_review.xml?year=' + i + '">' + i + '</a>');
+          $("#ti_annual_review").append(li);
+        }
       });
       
     </script>
@@ -83,6 +89,17 @@
         <h3>JKI Jahresstatistik</h3>
 
         <ul id="jki_statistic_2020">
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <h3>TI Jahresbericht</h3>
+
+        <p>Anzahl der Dokumente je TI-Institut und Jahresberichtskategorie für das Jahresberichtsjahr</p>
+
+        <ul id="ti_annual_review">
         </ul>
       </div>
     </div>
