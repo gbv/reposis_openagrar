@@ -5,25 +5,12 @@
   <section title="Statistics" xml:lang="en"/>
   <section xml:lang="all">
     <style>
-      th, td {
-        border: 1px solid black !important;
-        padding: 5px;
-        empty-cells: show;
-        text-align: center;
-      }
-      td.inst_name {
-        text-align: left;
-      }
-      .head_cat {
-        vertical-align: bottom;
-        font-size: small;
-      }
-      .head_cat .cat_label {
+      /* Einzige Custom-Regel: vertikale Spaltenbeschriftung (kein Bootstrap-Pendant). */
+      .cat_label {
         writing-mode: vertical-rl;
         transform: rotate(180deg);
         white-space: nowrap;
         margin: 4px auto 0 auto;
-        font-weight: normal;
       }
     </style>
     <script type="text/javascript">
@@ -100,7 +87,7 @@
 
       // Baut eine Kopfzelle (vertikales Label oben, Code unten)
       function buildHeadCell(label, code) {
-        var th = $('&lt;td/&gt;').addClass('head_cat');
+        var th = $('&lt;td/&gt;').addClass('align-bottom text-center small');
         th.append($('&lt;div/&gt;').addClass('cat_label').text(label));
         th.append($('&lt;br/&gt;'));
         th.append($('&lt;b/&gt;').text(code));
@@ -113,14 +100,14 @@
           .attr('data-mirelementtype', 'SearchCountInline')
           .attr('data-query', query)
           .attr('data-printaslink', 'true');
-        return $('&lt;td/&gt;').append(span);
+        return $('&lt;td/&gt;').addClass('text-center').append(span);
       }
 
       // Baut eine Tabellenzeile fuer ein Institut
       function buildRow(label, instId) {
         var iq = instQuery(instId);
         var tr = $('&lt;tr/&gt;');
-        tr.append($('&lt;td/&gt;').addClass('inst_name').text(label));
+        tr.append($('&lt;td/&gt;').addClass('text-left').text(label));
         // Summenspalte (ueber alle Kategorien)
         tr.append(countCell(q_year + ' AND ' + iq));
         // je Jahresberichtskategorie eine Spalte
@@ -142,8 +129,8 @@
 
         // Kopfzeile
         var head = $('&lt;tr/&gt;');
-        head.append($('&lt;td/&gt;').addClass('head_cat').append($('&lt;b/&gt;').text('Institut')));
-        head.append($('&lt;td/&gt;').addClass('head_cat').append($('&lt;b/&gt;').text('Summe')));
+        head.append($('&lt;td/&gt;').addClass('align-bottom text-center small').append($('&lt;b/&gt;').text('Institut')));
+        head.append($('&lt;td/&gt;').addClass('align-bottom text-center small').append($('&lt;b/&gt;').text('Summe')));
         $.each(annual_review_categories, function(i, cat) {
           head.append(buildHeadCell(cat.label, cat.id));
           // Sonderspalte direkt rechts von FD
@@ -171,7 +158,7 @@
         <p>
           Anzahl der Dokumente je TI-Institut und Jahresberichtskategorie für das Jahresberichtsjahr <span id="year_out"/>.
         </p>
-        <table id="ti_stat_table"></table>
+        <table id="ti_stat_table" class="table table-bordered table-sm"></table>
       </div>
     </div>
   </section>
