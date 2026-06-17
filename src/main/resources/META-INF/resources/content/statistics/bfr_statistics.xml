@@ -4,74 +4,7 @@
   <section title="Statistiken" xml:lang="de"/>
   <section title="Statistics" xml:lang="en"/>
   <section xml:lang="all">
-    <style>
-      
-      th, td {
-        border: 1px solid black !important;
-        padding: 5px;
-        empty-cells: show;
-      }
-      
-      .head_inst {
-        vertical-align: top;
-        text-align: center;
-        font-size: small;
-      }
-      
-      .sub_row td:first-child {
-        padding-left: 25px;
-        font-style: italic;
-      }
-    </style>
-    <script type="text/javascript">
-      
-      var searchParams = new URLSearchParams(window.location.search);
-      var year="";
-      if (searchParams.has("year") === true) {
-        year=searchParams.get("year");
-      } else {
-        year=new Date().getFullYear();
-      }
-      
-      $(document).ready( function() {
-        $('h1').text(" Statistik - BfR Jahresstatistik " + year);
-      });
-      
-      var q_year  = 'mods.yearIssued:' + year;
-      var q_state = '(state:published OR state:protected)';
-      
-      // Dokumenttypen (Zeilen)
-      var q_book                   = 'mods.type:monograph';
-      var q_bookSection            = 'mods.type:chapter';
-      var q_confProc               = 'mods.type:abstract';
-      var q_confProcRef            = 'mods.type:abstract AND mods.note.admin:"Referiert"';
-      var q_confSpeaker            = 'mods.type:speech AND -mods.note.admin:"Conference Speaker other"';
-      var q_confSpeakerInvited     = 'mods.type:speech AND mods.note.admin:"Eingeladen"';
-      var q_confSpeakerOther       = 'mods.type:speech AND mods.note.admin:"Conference Speaker other"';
-      var q_journalArticle         = 'mods.type:article AND mods.refereed:yes';
-      var q_journalArticleNRef     = 'mods.type:article AND -mods.refereed:yes';
-      var q_poster                 = 'mods.type:poster';
-      var q_reportEFSA             = 'mods.type:report AND mods.note.admin:"EFSA"';
-      var q_thesis                 = '(mods.type:habilitation OR mods.type:dissertation OR mods.type:diploma_thesis OR mods.type:master_thesis OR mods.type:bachelor_thesis)';
-      var q_thesisBachelor         = 'mods.type:bachelor_thesis';
-      var q_thesisMaster           = '(mods.type:diploma_thesis OR mods.type:master_thesis)';
-      var q_thesisDiss             = '(mods.type:habilitation OR mods.type:dissertation)';
-      
-      // Abteilungen (Spalten)
-      var q_instZ      = 'category.top:"mir_institutes:bfr_2022_Z"';
-      var q_inst1      = 'category.top:"mir_institutes:bfr_2022_1"';
-      var q_inst2      = 'category.top:"mir_institutes:bfr_2022_2"';
-      var q_inst3      = 'category.top:"mir_institutes:bfr_2022_3"';
-      var q_inst4      = 'category.top:"mir_institutes:bfr_2022_4"';
-      var q_inst5      = 'category.top:"mir_institutes:bfr_2022_5"';
-      var q_inst6      = 'category.top:"mir_institutes:bfr_2022_6"';
-      var q_inst7      = 'category.top:"mir_institutes:bfr_2022_7"';
-      var q_inst8      = 'category.top:"mir_institutes:bfr_2022_8"';
-      var q_inst9      = 'category.top:"mir_institutes:bfr_2022_9"';
-      var q_instL      = 'category.top:"mir_institutes:bfr_2022_L"';
-      var q_instAll    = 'category.top:"mir_institutes:bfr_all"';
-      
-    </script>
+    <script src='../../js/bfr_statistics.js'> </script>
     <script src='../../js/searchcount.js'> </script>
   </section>
      
@@ -81,21 +14,21 @@
       <div class="col-12">
       <h1>Statistik - BfR Jahresstatistik </h1>
       
-      <table>
+      <table class="table table-bordered table-sm">
         <tr>
           <td> <b>Kategorien / Abteilungen</b> </td>
-          <td class="head_inst"> AZ </td>
-          <td class="head_inst"> A1 </td>
-          <td class="head_inst"> A2 </td>
-          <td class="head_inst"> A3 </td>
-          <td class="head_inst"> A4 </td>
-          <td class="head_inst"> A5 </td>
-          <td class="head_inst"> A6 </td>
-          <td class="head_inst"> A7 </td>
-          <td class="head_inst"> A8 </td>
-          <td class="head_inst"> A9 </td>
-          <td class="head_inst"> AL </td>
-          <td class="head_inst"> <b>Gesamt</b> </td>
+          <td class="align-top text-center small"> AZ </td>
+          <td class="align-top text-center small"> A1 </td>
+          <td class="align-top text-center small"> A2 </td>
+          <td class="align-top text-center small"> A3 </td>
+          <td class="align-top text-center small"> A4 </td>
+          <td class="align-top text-center small"> A5 </td>
+          <td class="align-top text-center small"> A6 </td>
+          <td class="align-top text-center small"> A7 </td>
+          <td class="align-top text-center small"> A8 </td>
+          <td class="align-top text-center small"> A9 </td>
+          <td class="align-top text-center small"> AL </td>
+          <td class="align-top text-center small"> <b>Gesamt</b> </td>
         </tr>
         <tr>
           <td> Book </td>
@@ -142,8 +75,8 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProc + ' AND ' + q_instL + ' AND ' + q_state)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProc + ' AND ' + q_instAll + ' AND ' + q_state)" data-printAsLink="true"/> </td>
         </tr>
-        <tr class="sub_row">
-          <td> davon referiert </td>
+        <tr>
+          <td class="pl-4 font-italic"> davon referiert </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProcRef + ' AND ' + q_instZ + ' AND ' + q_state)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProcRef + ' AND ' + q_inst1 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProcRef + ' AND ' + q_inst2 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
@@ -172,8 +105,8 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeaker + ' AND ' + q_instL + ' AND ' + q_state)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeaker + ' AND ' + q_instAll + ' AND ' + q_state)" data-printAsLink="true"/> </td>
         </tr>
-        <tr class="sub_row">
-          <td> davon eingeladen </td>
+        <tr>
+          <td class="pl-4 font-italic"> davon eingeladen </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerInvited + ' AND ' + q_instZ + ' AND ' + q_state)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerInvited + ' AND ' + q_inst1 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerInvited + ' AND ' + q_inst2 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
@@ -187,8 +120,8 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerInvited + ' AND ' + q_instL + ' AND ' + q_state)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerInvited + ' AND ' + q_instAll + ' AND ' + q_state)" data-printAsLink="true"/> </td>
         </tr>
-        <tr class="sub_row">
-          <td> Conference Speaker other </td>
+        <tr>
+          <td class="pl-4 font-italic"> Conference Speaker other </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerOther + ' AND ' + q_instZ + ' AND ' + q_state)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerOther + ' AND ' + q_inst1 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerOther + ' AND ' + q_inst2 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
@@ -277,8 +210,8 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesis + ' AND ' + q_instL + ' AND ' + q_state)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesis + ' AND ' + q_instAll + ' AND ' + q_state)" data-printAsLink="true"/> </td>
         </tr>
-        <tr class="sub_row">
-          <td> davon Bachelor </td>
+        <tr>
+          <td class="pl-4 font-italic"> davon Bachelor </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisBachelor + ' AND ' + q_instZ + ' AND ' + q_state)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisBachelor + ' AND ' + q_inst1 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisBachelor + ' AND ' + q_inst2 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
@@ -292,8 +225,8 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisBachelor + ' AND ' + q_instL + ' AND ' + q_state)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisBachelor + ' AND ' + q_instAll + ' AND ' + q_state)" data-printAsLink="true"/> </td>
         </tr>
-        <tr class="sub_row">
-          <td> davon Master/Diplom </td>
+        <tr>
+          <td class="pl-4 font-italic"> davon Master/Diplom </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisMaster + ' AND ' + q_instZ + ' AND ' + q_state)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisMaster + ' AND ' + q_inst1 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisMaster + ' AND ' + q_inst2 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
@@ -307,8 +240,8 @@
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisMaster + ' AND ' + q_instL + ' AND ' + q_state)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisMaster + ' AND ' + q_instAll + ' AND ' + q_state)" data-printAsLink="true"/> </td>
         </tr>
-        <tr class="sub_row">
-          <td> davon Dissertation/Habil </td>
+        <tr>
+          <td class="pl-4 font-italic"> davon Dissertation/Habil </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisDiss + ' AND ' + q_instZ + ' AND ' + q_state)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisDiss + ' AND ' + q_inst1 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
           <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisDiss + ' AND ' + q_inst2 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
