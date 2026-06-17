@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section title="Statistiken" xml:lang="de"/>
+  <section title="Statistics" xml:lang="en"/>
+  <section xml:lang="all">
+    <link rel="stylesheet" type="text/css" href="../../css/ti_annual_review.css" />
+    <script src='../../js/ti_annual_review.js'> </script>
+    <script src='../../js/searchcount.js'> </script>
+  </section>
+
+  <section xml:lang="de">
+    <div class="row">
+      <div class="col-12">
+        <h1>Statistik - TI Jahresbericht</h1>
+        <p>
+          Anzahl der Dokumente je TI-Institut und Jahresberichtskategorie für das Jahresberichtsjahr <span id="year_out"/>.
+        </p>
+        <table id="ti_stat_table" class="table table-bordered table-sm"></table>
+      </div>
+    </div>
+  </section>
+
+</MyCoReWebPage>
