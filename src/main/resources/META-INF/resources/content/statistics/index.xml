@@ -32,10 +32,17 @@
           $("#jki_statistic_2020").append(li);
         }
 
+
         for (i = year1; i &lt;= year; i++) {
           var li = $('<li />');
           li.append ('<a href="ti_annual_review.xml?year=' + i + '">' + i + '</a>');
           $("#ti_annual_review").append(li);
+        }
+        $("#bfr_statistic").empty();
+        for (i = year1; i &lt;= year; i++) {
+          var li = $('<li />');
+          li.append ('<a href="bfr_statistics.xml?year=' + i + '">' + i + '</a>');
+          $("#bfr_statistic").append(li);
         }
       });
       
@@ -98,8 +105,15 @@
         <h3>TI Jahresbericht</h3>
 
         <p>Anzahl der Dokumente je TI-Institut und Jahresberichtskategorie für das Jahresberichtsjahr</p>
+      </div>
+    </div>
 
+    <div class="row">
+      <div class="col-12">
         <ul id="ti_annual_review">
+        <h3>BfR Jahresstatistik</h3>
+
+        <ul id="bfr_statistic">
         </ul>
       </div>
     </div>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section title="Statistiken" xml:lang="de"/>
+  <section title="Statistics" xml:lang="en"/>
+  <section xml:lang="all">
+    <script src='../../js/bfr_statistics.js'> </script>
+    <script src='../../js/searchcount.js'> </script>
+  </section>
+     
+  <section xml:lang="de">
+    
+    <div class="row">
+      <div class="col-12">
+      <h1>Statistik - BfR Jahresstatistik </h1>
+      
+      <table class="table table-bordered table-sm">
+        <tr>
+          <td> <b>Kategorien / Abteilungen</b> </td>
+          <td class="align-top text-center small"> AZ </td>
+          <td class="align-top text-center small"> A1 </td>
+          <td class="align-top text-center small"> A2 </td>
+          <td class="align-top text-center small"> A3 </td>
+          <td class="align-top text-center small"> A4 </td>
+          <td class="align-top text-center small"> A5 </td>
+          <td class="align-top text-center small"> A6 </td>
+          <td class="align-top text-center small"> A7 </td>
+          <td class="align-top text-center small"> A8 </td>
+          <td class="align-top text-center small"> A9 </td>
+          <td class="align-top text-center small"> AL </td>
+          <td class="align-top text-center small"> <b>Gesamt</b> </td>
+        </tr>
+        <tr>
+          <td> Book </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_book + ' AND ' + q_instZ + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_book + ' AND ' + q_inst1 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_book + ' AND ' + q_inst2 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_book + ' AND ' + q_inst3 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_book + ' AND ' + q_inst4 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_book + ' AND ' + q_inst5 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_book + ' AND ' + q_inst6 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_book + ' AND ' + q_inst7 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_book + ' AND ' + q_inst8 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_book + ' AND ' + q_inst9 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_book + ' AND ' + q_instL + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_book + ' AND ' + q_instAll + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+        </tr>
+        <tr>
+          <td> Book Section </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_bookSection + ' AND ' + q_instZ + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_bookSection + ' AND ' + q_inst1 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_bookSection + ' AND ' + q_inst2 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_bookSection + ' AND ' + q_inst3 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_bookSection + ' AND ' + q_inst4 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_bookSection + ' AND ' + q_inst5 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_bookSection + ' AND ' + q_inst6 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_bookSection + ' AND ' + q_inst7 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_bookSection + ' AND ' + q_inst8 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_bookSection + ' AND ' + q_inst9 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_bookSection + ' AND ' + q_instL + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_bookSection + ' AND ' + q_instAll + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+        </tr>
+        <tr>
+          <td> Conference Proceedings </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProc + ' AND ' + q_instZ + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProc + ' AND ' + q_inst1 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProc + ' AND ' + q_inst2 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProc + ' AND ' + q_inst3 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProc + ' AND ' + q_inst4 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProc + ' AND ' + q_inst5 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProc + ' AND ' + q_inst6 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProc + ' AND ' + q_inst7 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProc + ' AND ' + q_inst8 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProc + ' AND ' + q_inst9 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProc + ' AND ' + q_instL + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProc + ' AND ' + q_instAll + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+        </tr>
+        <tr>
+          <td class="pl-4 font-italic"> davon referiert </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProcRef + ' AND ' + q_instZ + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProcRef + ' AND ' + q_inst1 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProcRef + ' AND ' + q_inst2 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProcRef + ' AND ' + q_inst3 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProcRef + ' AND ' + q_inst4 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProcRef + ' AND ' + q_inst5 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProcRef + ' AND ' + q_inst6 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProcRef + ' AND ' + q_inst7 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProcRef + ' AND ' + q_inst8 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProcRef + ' AND ' + q_inst9 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProcRef + ' AND ' + q_instL + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confProcRef + ' AND ' + q_instAll + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+        </tr>
+        <tr>
+          <td> Conference Speaker </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeaker + ' AND ' + q_instZ + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeaker + ' AND ' + q_inst1 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeaker + ' AND ' + q_inst2 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeaker + ' AND ' + q_inst3 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeaker + ' AND ' + q_inst4 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeaker + ' AND ' + q_inst5 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeaker + ' AND ' + q_inst6 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeaker + ' AND ' + q_inst7 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeaker + ' AND ' + q_inst8 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeaker + ' AND ' + q_inst9 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeaker + ' AND ' + q_instL + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeaker + ' AND ' + q_instAll + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+        </tr>
+        <tr>
+          <td class="pl-4 font-italic"> davon eingeladen </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerInvited + ' AND ' + q_instZ + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerInvited + ' AND ' + q_inst1 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerInvited + ' AND ' + q_inst2 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerInvited + ' AND ' + q_inst3 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerInvited + ' AND ' + q_inst4 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerInvited + ' AND ' + q_inst5 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerInvited + ' AND ' + q_inst6 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerInvited + ' AND ' + q_inst7 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerInvited + ' AND ' + q_inst8 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerInvited + ' AND ' + q_inst9 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerInvited + ' AND ' + q_instL + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerInvited + ' AND ' + q_instAll + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+        </tr>
+        <tr>
+          <td class="pl-4 font-italic"> Conference Speaker other </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerOther + ' AND ' + q_instZ + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerOther + ' AND ' + q_inst1 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerOther + ' AND ' + q_inst2 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerOther + ' AND ' + q_inst3 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerOther + ' AND ' + q_inst4 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerOther + ' AND ' + q_inst5 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerOther + ' AND ' + q_inst6 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerOther + ' AND ' + q_inst7 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerOther + ' AND ' + q_inst8 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerOther + ' AND ' + q_inst9 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerOther + ' AND ' + q_instL + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_confSpeakerOther + ' AND ' + q_instAll + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+        </tr>
+        <tr>
+          <td> Journal Article </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticle + ' AND ' + q_instZ + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticle + ' AND ' + q_inst1 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticle + ' AND ' + q_inst2 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticle + ' AND ' + q_inst3 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticle + ' AND ' + q_inst4 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticle + ' AND ' + q_inst5 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticle + ' AND ' + q_inst6 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticle + ' AND ' + q_inst7 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticle + ' AND ' + q_inst8 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticle + ' AND ' + q_inst9 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticle + ' AND ' + q_instL + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticle + ' AND ' + q_instAll + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+        </tr>
+        <tr>
+          <td> Journal Article not reviewed </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticleNRef + ' AND ' + q_instZ + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticleNRef + ' AND ' + q_inst1 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticleNRef + ' AND ' + q_inst2 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticleNRef + ' AND ' + q_inst3 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticleNRef + ' AND ' + q_inst4 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticleNRef + ' AND ' + q_inst5 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticleNRef + ' AND ' + q_inst6 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticleNRef + ' AND ' + q_inst7 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticleNRef + ' AND ' + q_inst8 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticleNRef + ' AND ' + q_inst9 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticleNRef + ' AND ' + q_instL + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_journalArticleNRef + ' AND ' + q_instAll + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+        </tr>
+        <tr>
+          <td> Poster </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_poster + ' AND ' + q_instZ + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_poster + ' AND ' + q_inst1 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_poster + ' AND ' + q_inst2 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_poster + ' AND ' + q_inst3 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_poster + ' AND ' + q_inst4 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_poster + ' AND ' + q_inst5 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_poster + ' AND ' + q_inst6 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_poster + ' AND ' + q_inst7 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_poster + ' AND ' + q_inst8 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_poster + ' AND ' + q_inst9 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_poster + ' AND ' + q_instL + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_poster + ' AND ' + q_instAll + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+        </tr>
+        <tr>
+          <td> Report (EFSA) </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_reportEFSA + ' AND ' + q_instZ + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_reportEFSA + ' AND ' + q_inst1 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_reportEFSA + ' AND ' + q_inst2 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_reportEFSA + ' AND ' + q_inst3 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_reportEFSA + ' AND ' + q_inst4 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_reportEFSA + ' AND ' + q_inst5 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_reportEFSA + ' AND ' + q_inst6 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_reportEFSA + ' AND ' + q_inst7 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_reportEFSA + ' AND ' + q_inst8 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_reportEFSA + ' AND ' + q_inst9 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_reportEFSA + ' AND ' + q_instL + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_reportEFSA + ' AND ' + q_instAll + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+        </tr>
+        <tr>
+          <td> Thesis </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesis + ' AND ' + q_instZ + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesis + ' AND ' + q_inst1 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesis + ' AND ' + q_inst2 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesis + ' AND ' + q_inst3 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesis + ' AND ' + q_inst4 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesis + ' AND ' + q_inst5 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesis + ' AND ' + q_inst6 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesis + ' AND ' + q_inst7 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesis + ' AND ' + q_inst8 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesis + ' AND ' + q_inst9 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesis + ' AND ' + q_instL + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesis + ' AND ' + q_instAll + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+        </tr>
+        <tr>
+          <td class="pl-4 font-italic"> davon Bachelor </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisBachelor + ' AND ' + q_instZ + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisBachelor + ' AND ' + q_inst1 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisBachelor + ' AND ' + q_inst2 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisBachelor + ' AND ' + q_inst3 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisBachelor + ' AND ' + q_inst4 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisBachelor + ' AND ' + q_inst5 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisBachelor + ' AND ' + q_inst6 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisBachelor + ' AND ' + q_inst7 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisBachelor + ' AND ' + q_inst8 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisBachelor + ' AND ' + q_inst9 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisBachelor + ' AND ' + q_instL + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisBachelor + ' AND ' + q_instAll + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+        </tr>
+        <tr>
+          <td class="pl-4 font-italic"> davon Master/Diplom </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisMaster + ' AND ' + q_instZ + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisMaster + ' AND ' + q_inst1 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisMaster + ' AND ' + q_inst2 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisMaster + ' AND ' + q_inst3 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisMaster + ' AND ' + q_inst4 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisMaster + ' AND ' + q_inst5 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisMaster + ' AND ' + q_inst6 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisMaster + ' AND ' + q_inst7 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisMaster + ' AND ' + q_inst8 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisMaster + ' AND ' + q_inst9 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisMaster + ' AND ' + q_instL + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisMaster + ' AND ' + q_instAll + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+        </tr>
+        <tr>
+          <td class="pl-4 font-italic"> davon Dissertation/Habil </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisDiss + ' AND ' + q_instZ + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisDiss + ' AND ' + q_inst1 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisDiss + ' AND ' + q_inst2 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisDiss + ' AND ' + q_inst3 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisDiss + ' AND ' + q_inst4 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisDiss + ' AND ' + q_inst5 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisDiss + ' AND ' + q_inst6 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisDiss + ' AND ' + q_inst7 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisDiss + ' AND ' + q_inst8 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisDiss + ' AND ' + q_inst9 + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisDiss + ' AND ' + q_instL + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+          <td> <span data-mirelementtype="SearchCountInline" data-querycall="return ( q_year + ' AND ' + q_thesisDiss + ' AND ' + q_instAll + ' AND ' + q_state)" data-printAsLink="true"/> </td>
+        </tr>
+      </table>
+      </div>
+    </div>
+  </section>
+
+</MyCoReWebPage>
