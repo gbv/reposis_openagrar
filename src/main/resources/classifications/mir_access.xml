@@ -20,5 +20,9 @@
       <label xml:lang="de" text="nur angemeldete Nutzer oder Nutzer im FLI-Intranet" />
       <label xml:lang="en" text="only logged in users or users in FLI intranet" />
     </category>
+    <category ID="bfr_intranet">
+      <label xml:lang="de" text="BfR Intranet oder Nutzer vom BfR"/>
+      <label xml:lang="en" text="BfR Intranet or BfR User"/>
+    </category>
   </categories>
 </mycoreclass>
