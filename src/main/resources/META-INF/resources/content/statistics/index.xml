@@ -105,12 +105,14 @@
         <h3>TI Jahresbericht</h3>
 
         <p>Anzahl der Dokumente je TI-Institut und Jahresberichtskategorie für das Jahresberichtsjahr</p>
+
+        <ul id="ti_annual_review">
+        </ul>
       </div>
     </div>
 
     <div class="row">
       <div class="col-12">
-        <ul id="ti_annual_review">
         <h3>BfR Jahresstatistik</h3>
 
         <ul id="bfr_statistic">
