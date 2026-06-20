@@ -46,7 +46,7 @@
                   </a>
                 </div>
                 <div id="oa_agris" class="oa-data-provider">
-                  <a href="https://www.fao.org/agris/data-provider/federal-ministry-food-and-agriculture">
+                  <a href="https://agris.fao.org/search/en?area=World%20Environment%20Day&amp;filters=%7B%22providers%22%3A%5B%7B%22operator%22%3A%22any%22%2C%22values%22%3A%5B%22125097%22%2C%22124623%22%2C%22125098%22%2C%22125104%22%2C%22125099%22%2C%22125096%22%2C%22125095%22%5D%7D%5D%7D">
                     <img
                       src="../images/ADP_cert_2026.png"
                       alt="Siegel für aktiven Agrar Datenlieferant" />
@@ -107,7 +107,7 @@
                   </a>
                 </div>
                 <div id="oa_agris" class="oa-data-provider">
-                  <a href="https://www.fao.org/agris/data-provider/federal-ministry-food-and-agriculture">
+                  <a href="https://agris.fao.org/search/en?area=World%20Environment%20Day&amp;filters=%7B%22providers%22%3A%5B%7B%22operator%22%3A%22any%22%2C%22values%22%3A%5B%22125097%22%2C%22124623%22%2C%22125098%22%2C%22125104%22%2C%22125099%22%2C%22125096%22%2C%22125095%22%5D%7D%5D%7D">
                     <img
                       src="../images/ADP_cert_2026.png"
                       alt="Seal of recognition for active Agris data providers" />
