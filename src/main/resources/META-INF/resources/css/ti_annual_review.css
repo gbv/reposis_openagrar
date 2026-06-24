@@ -1,8 +1,0 @@
-/* TI-Jahresbericht-Statistik: einzige Custom-Regel (Bootstrap kann keine Text-Rotation). */
-/* Vertikale Spaltenbeschriftung im Tabellenkopf. */
-.cat_label {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  white-space: nowrap;
-  margin: 4px auto 0 auto;
-}

@@ -124,6 +124,14 @@
       color: #aaa;
   }
 
+  // vertikale Spaltenbeschriftung in Statistik-Tabellen (kein Bootstrap-Pendant)
+  .statistic_vertical_label {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      white-space: nowrap;
+      margin: 4px auto 0 auto;
+  }
+
   /****************** temp refeered badge ************************/
   .hit_refereed {
       float: left;

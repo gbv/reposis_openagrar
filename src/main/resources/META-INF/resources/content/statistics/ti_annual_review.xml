@@ -4,7 +4,6 @@
   <section title="Statistiken" xml:lang="de"/>
   <section title="Statistics" xml:lang="en"/>
   <section xml:lang="all">
-    <link rel="stylesheet" type="text/css" href="../../css/ti_annual_review.css" />
     <script src='../../js/ti_annual_review.js'> </script>
     <script src='../../js/searchcount.js'> </script>
   </section>
