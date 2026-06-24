@@ -6,14 +6,13 @@ $(document).ready( function() {
   if (year1 < 2018) year1 = 2018;
 
   for (i = year1; i <= year; i++) {
+    // alle drei Statistiken eines Jahres in einer Zeile
     var li = $('<li />');
     li.append('<a href="jki_statstics_2020.xml?year=' + i + '">' + i + '</a>');
-    $("#jki_statistic_2020").append(li);
-    li = $('<li />');
-    li.append('<a href="jki_statstics_2020.xml?year=' + i + '&JCRClasses1Yb=true">' + i + ' mit JCR vom Vorjahr</a>');
-    $("#jki_statistic_2020").append(li);
-    li = $('<li />');
-    li.append('<a href="jki_statstics_2020.xml?year=' + i + '&JCRClasses2Yb=true">' + i + ' mit JCR von 2 Jahren zuvor</a>');
+    li.append(' | ');
+    li.append('<a href="jki_statstics_2020.xml?year=' + i + '&JCRClasses1Yb=true">mit JCR vom Vorjahr</a>');
+    li.append(' | ');
+    li.append('<a href="jki_statstics_2020.xml?year=' + i + '&JCRClasses2Yb=true">mit JCR von 2 Jahren zuvor</a>');
     $("#jki_statistic_2020").append(li);
   }
 
