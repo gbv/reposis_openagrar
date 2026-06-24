@@ -4,20 +4,6 @@
   <section title="Statistiken" xml:lang="de"/>
   <section title="Statistics" xml:lang="en"/>
   <section xml:lang="all">
-    <style>
-      
-      th, td {
-        border: 1px solid black !important;
-        padding: 5px;
-        empty-cells: show;
-      }
-      
-      .head_inst {
-        vertical-align: top;
-        text-align: center;
-        font-size: small;
-      }
-    </style>
     <script type="text/javascript">
       
       function createAffiQuery (institutes) {
@@ -144,31 +130,32 @@
       
       <p id="text_jcr"> Text IP</p>
       
-      <table>
+      <table class="table table-bordered table-sm">
+
         <tr>
           <td> <b>Veröffentlichungsform </b></td>
           <td> <b>IF </b> </td>
           <td> <b>JKI Gesamt</b> </td>
-          <td class="head_inst"> Institut für Pflanzen-schutz in Ackerbau und Grünland (A) </td>
-          <td class="head_inst"> Institut für nationale und inter-nationale Angelegen- heiten der Pflanzen- gesundheit (AG) </td>
-          <td class="head_inst"> Institut für Anwen-dungs-technik im Pflanzen-schutz (AT) </td>
-          <td class="head_inst"> Institut für Biolo-gischen Pflanzen-schutz (BI) </td>
-          <td class="head_inst"> Institut für Bienen-schutz (BS) </td>
-          <td class="head_inst"> Institut für Digitalisierung und Künstliche Intelligenz (DK) </td>
-          <td class="head_inst"> Institut für Epidemio-logie und Pathogen-diagnostik (EP) </td>
-          <td class="head_inst"> Institut für Pflanzenschutz in Gartenbau und urbanem Grün (G) </td>
-          <td class="head_inst"> Institut für Pflanzen-schutz in Gartenbau und Forst (GF) </td>
-          <td class="head_inst"> Institut für ökologische Chemie, Pflanzen-analytik und Vorrats-schutz (ÖPV)</td>
-          <td class="head_inst"> Institut für Pflanzen-schutz in Obst- und Weinbau (OW) </td>
-          <td class="head_inst"> Institut für Pflanzen-bau und Boden-kunde (PB)</td>
-          <td class="head_inst"> Institut für Resistenz-forschung und Stress-toleranz (RS) </td>
-          <td class="head_inst"> Institut für die Sicherheit biotechno-logischer Verfahren bei Pflanzen (SB) </td>
-          <td class="head_inst"> Institut für Strategien und Folgen-abschätz-ung (SF) </td>
-          <td class="head_inst"> Institut für Waldschutz (WS) </td>
-          <td class="head_inst"> Institut für Züchtungs-forschung an gartenbau-lichen Kulturen (ZG) </td>
-          <td class="head_inst"> Institut für Züchtungs-forschung an landwirt-schaftlichen Kulturen (ZL) </td>
-          <td class="head_inst"> Institut für Züchtungs-forschung an Obst (ZO) </td>
-          <td class="head_inst"> Institut für Reben-züchtung (ZR) </td>
+          <td class="align-top text-center small"> Institut für Pflanzen-schutz in Ackerbau und Grünland (A) </td>
+          <td class="align-top text-center small"> Institut für nationale und inter-nationale Angelegen- heiten der Pflanzen- gesundheit (AG) </td>
+          <td class="align-top text-center small"> Institut für Anwen-dungs-technik im Pflanzen-schutz (AT) </td>
+          <td class="align-top text-center small"> Institut für Biolo-gischen Pflanzen-schutz (BI) </td>
+          <td class="align-top text-center small"> Institut für Bienen-schutz (BS) </td>
+          <td class="align-top text-center small"> Institut für Digitalisierung und Künstliche Intelligenz (DK) </td>
+          <td class="align-top text-center small"> Institut für Epidemio-logie und Pathogen-diagnostik (EP) </td>
+          <td class="align-top text-center small"> Institut für Pflanzenschutz in Gartenbau und urbanem Grün (G) </td>
+          <td class="align-top text-center small"> Institut für Pflanzen-schutz in Gartenbau und Forst (GF) </td>
+          <td class="align-top text-center small"> Institut für ökologische Chemie, Pflanzen-analytik und Vorrats-schutz (ÖPV)</td>
+          <td class="align-top text-center small"> Institut für Pflanzen-schutz in Obst- und Weinbau (OW) </td>
+          <td class="align-top text-center small"> Institut für Pflanzen-bau und Boden-kunde (PB)</td>
+          <td class="align-top text-center small"> Institut für Resistenz-forschung und Stress-toleranz (RS) </td>
+          <td class="align-top text-center small"> Institut für die Sicherheit biotechno-logischer Verfahren bei Pflanzen (SB) </td>
+          <td class="align-top text-center small"> Institut für Strategien und Folgen-abschätz-ung (SF) </td>
+          <td class="align-top text-center small"> Institut für Waldschutz (WS) </td>
+          <td class="align-top text-center small"> Institut für Züchtungs-forschung an gartenbau-lichen Kulturen (ZG) </td>
+          <td class="align-top text-center small"> Institut für Züchtungs-forschung an landwirt-schaftlichen Kulturen (ZL) </td>
+          <td class="align-top text-center small"> Institut für Züchtungs-forschung an Obst (ZO) </td>
+          <td class="align-top text-center small"> Institut für Reben-züchtung (ZR) </td>
         </tr>
         <tr>
           <td rowspan="7"> Referierte Beiträge in wiss. Fachzeitschriften </td>
