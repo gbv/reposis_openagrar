@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="mir_access">
+  <label xml:lang="de" text="Zugriffsberechtigungen auf Volltexte" />
+  <label xml:lang="x-auth" text="accessRestriction" />
+  <label xml:lang="x-uri" text="http://www.mycore.org/classifications/mir_access" />
+  <categories>
+    <category ID="admin">
+      <label xml:lang="de" text="nur für Administratoren" />
+      <label xml:lang="en" text="only for Admins" />
+    </category>
+    <category ID="unlimited">
+      <label xml:lang="de" text="uneingeschränkt" description="jeder darf auf die angehängten Dateien zugreifen" />
+      <label xml:lang="en" text="public" description="everyone can access attached data" />
+    </category>
+    <category ID="intern">
+      <label xml:lang="de" text="nur angemeldete Nutzer oder Nutzer im JKI-Intranet" />
+      <label xml:lang="en" text="only signed in user or users in FLI intranet" />
+    </category>
+    <category ID="fli_intranet">
+      <label xml:lang="de" text="nur angemeldete Nutzer oder Nutzer im FLI-Intranet" />
+      <label xml:lang="en" text="only logged in users or users in FLI intranet" />
+    </category>
+    <category ID="bfr_intranet">
+      <label xml:lang="de" text="BfR Intranet oder Nutzer vom BfR"/>
+      <label xml:lang="en" text="BfR Intranet or BfR User"/>
+    </category>
+  </categories>
+</mycoreclass>
