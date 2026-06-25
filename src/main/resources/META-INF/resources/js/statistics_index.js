@@ -28,4 +28,24 @@ $(document).ready( function() {
     li.append('<a href="bfr_statistics.xml?year=' + i + '">' + i + '</a>');
     $("#bfr_statistic").append(li);
   }
+
+  // Jahresberichtskategorien nach Institut: je Institut eine Zeile mit den letzten 6 Jahren
+  var repCatInstitutes = [
+    { id: "bfr", label: "BfR" },
+    { id: "fli", label: "FLI" },
+    { id: "jki", label: "JKI" },
+    { id: "mri", label: "MRI" },
+    { id: "ti",  label: "TI" }
+  ];
+  $.each(repCatInstitutes, function(idx, inst) {
+    var li = $('<li />');
+    li.append(inst.label + ': ');
+    for (i = year1; i <= year; i++) {
+      li.append('<a href="inst_repCat_pubyear.xml?institute=' + inst.id + '&year=' + i + '">' + i + '</a>');
+      if (i < year) {
+        li.append(' | ');
+      }
+    }
+    $("#inst_repCat").append(li);
+  });
 });

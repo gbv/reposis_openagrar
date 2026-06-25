@@ -33,16 +33,11 @@
 
     <div class="row">
       <div class="col-12">
-        <h3>Jahresberichtskategorien (2016)</h3>
-        
-        <p>Anzahl der Publikationen nach Institut und Jahresberichtskategorien für das Jahr 2016</p>
-        
-        <ul>
-        	<li><a href="bfr_inst_repCat_pubyear.xml">BfR</a></li>
-        	<li><a href="fli_inst_repCat_pubyear.xml">FLI</a></li>
-        	<li><a href="jki_inst_repCat_pubyear.xml">JKI</a></li>
-        	<li><a href="mri_inst_repCat_pubyear.xml">MRI</a></li>
-        	<li><a href="ti_inst_repCat_pubyear.xml">TI</a></li>
+        <h3>Jahresberichtskategorien nach Institut</h3>
+
+        <p>Anzahl der Publikationen je Institut nach Jahresberichtskategorie, je Jahr.</p>
+
+        <ul id="inst_repCat">
         </ul>
       </div>
     </div>
