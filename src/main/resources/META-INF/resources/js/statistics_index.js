@@ -1,0 +1,51 @@
+// Statistik-Uebersicht: baut die Jahres-Linklisten fuer die einzelnen Statistiken auf.
+
+$(document).ready( function() {
+  var year = new Date().getFullYear();
+  var year1 = year - 5;
+  if (year1 < 2018) year1 = 2018;
+
+  for (i = year1; i <= year; i++) {
+    // alle drei Statistiken eines Jahres in einer Zeile
+    var li = $('<li />');
+    li.append('<a href="jki_statstics_2020.xml?year=' + i + '">' + i + '</a>');
+    li.append(' | ');
+    li.append('<a href="jki_statstics_2020.xml?year=' + i + '&JCRClasses1Yb=true">mit JCR vom Vorjahr</a>');
+    li.append(' | ');
+    li.append('<a href="jki_statstics_2020.xml?year=' + i + '&JCRClasses2Yb=true">mit JCR von 2 Jahren zuvor</a>');
+    $("#jki_statistic_2020").append(li);
+  }
+
+  for (i = year1; i <= year; i++) {
+    var li = $('<li />');
+    li.append('<a href="ti_annual_review.xml?year=' + i + '">' + i + '</a>');
+    $("#ti_annual_review").append(li);
+  }
+
+  $("#bfr_statistic").empty();
+  for (i = year1; i <= year; i++) {
+    var li = $('<li />');
+    li.append('<a href="bfr_statistics.xml?year=' + i + '">' + i + '</a>');
+    $("#bfr_statistic").append(li);
+  }
+
+  // Jahresberichtskategorien nach Institut: je Institut eine Zeile mit den letzten 6 Jahren
+  var repCatInstitutes = [
+    { id: "bfr", label: "BfR" },
+    { id: "fli", label: "FLI" },
+    { id: "jki", label: "JKI" },
+    { id: "mri", label: "MRI" },
+    { id: "ti",  label: "TI" }
+  ];
+  $.each(repCatInstitutes, function(idx, inst) {
+    var li = $('<li />');
+    li.append(inst.label + ': ');
+    for (i = year1; i <= year; i++) {
+      li.append('<a href="inst_repCat_pubyear.xml?institute=' + inst.id + '&year=' + i + '">' + i + '</a>');
+      if (i < year) {
+        li.append(' | ');
+      }
+    }
+    $("#inst_repCat").append(li);
+  });
+});

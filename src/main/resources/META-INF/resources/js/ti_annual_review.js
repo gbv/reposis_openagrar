@@ -74,7 +74,7 @@ function protectedRdQuery(instId) {
 // Baut eine Kopfzelle (vertikales Label oben, Code unten)
 function buildHeadCell(label, code) {
   var th = $('<td/>').addClass('align-bottom text-center small');
-  th.append($('<div/>').addClass('cat_label').text(label));
+  th.append($('<div/>').addClass('statistic_vertical_label').text(label));
   th.append($('<br/>'));
   th.append($('<b/>').text(code));
   return th;

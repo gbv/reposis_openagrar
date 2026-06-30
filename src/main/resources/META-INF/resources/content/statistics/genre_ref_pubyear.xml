@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section title="Statistiken" xml:lang="de"/>
+  <section title="Statistics" xml:lang="en"/>
+  <section xml:lang="all">
+    <script src='../../js/genre_ref_pubyear.js'> </script>
+    <script src='../../js/statistic.js'> </script>
+  </section>
+
+  <section xml:lang="de">
+    <div class="row">
+      <div class="col-12 genre-ref" data-lang="de">
+        <h1 class="genre-ref-title"></h1>
+        <p class="genre-ref-desc"></p>
+        <div class="genre-ref-browser"></div>
+      </div>
+    </div>
+  </section>
+
+  <section xml:lang="en">
+    <div class="row">
+      <div class="col-12 genre-ref" data-lang="en">
+        <h1 class="genre-ref-title"></h1>
+        <p class="genre-ref-desc"></p>
+        <div class="genre-ref-browser"></div>
+      </div>
+    </div>
+  </section>
+
+</MyCoReWebPage>
