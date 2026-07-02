@@ -13,8 +13,8 @@
       <label xml:lang="en" text="public" description="everyone can access attached data" />
     </category>
     <category ID="intern">
-      <label xml:lang="de" text="nur angemeldete Nutzer oder Nutzer im JKI-Intranet" />
-      <label xml:lang="en" text="only signed in user or users in FLI intranet" />
+      <label xml:lang="de" text="nur angemeldete Nutzer" />
+      <label xml:lang="en" text="only signed in user" />
     </category>
     <category ID="fli_intranet">
       <label xml:lang="de" text="nur angemeldete Nutzer oder Nutzer im FLI-Intranet" />
