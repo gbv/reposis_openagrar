@@ -15,7 +15,7 @@
         <p>
           Anzahl der Dokumente je TI-Institut und Jahresberichtskategorie für das Jahresberichtsjahr <span id="year_out"/>.
         </p>
-        <table id="ti_stat_table" class="table table-bordered table-sm"></table>
+        <table id="ti_stat_table" class="table table-bordered table-striped table-sm"></table>
       </div>
     </div>
   </section>

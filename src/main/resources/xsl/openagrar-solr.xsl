@@ -35,11 +35,17 @@
       </field>
     </xsl:for-each>
     <xsl:variable name="mir_institutes_doc" select="document('classification:metadata:-1:children:mir_institutes:ti')" />
-    <xsl:for-each select="mods:name[contains(@authorityURI,'institutes')]
-        [substring-after(@valueURI,'#') = $mir_institutes_doc//category/@ID][1]">
-      <xsl:variable name="nameId" select="@ID" />
+    <xsl:variable name="ti_name_ids" select="mods:name[contains(@authorityURI,'institutes')]
+        [substring-after(@valueURI,'#') = $mir_institutes_doc//category/@ID]/@ID" />
+    <!-- Jahr und Kategorie nur aus den annual_review-Eintraegen, die per IDREF an eine TI-Einrichtung
+         gebunden sind. Andere Einrichtungen (z.B. MRI) vergeben eigene Kategorien am selben Objekt,
+         die hier nicht mitindexiert werden duerfen. -->
+    <xsl:for-each select="mods:classification[@displayLabel='annual_review'][@IDREF = $ti_name_ids]">
       <field name="mods.annual_review.ti">
-        <xsl:value-of select="../mods:classification[@displayLabel='annual_review'][@IDREF=$nameId]/@edition" />
+        <xsl:value-of select="@edition" />
+      </field>
+      <field name="mods.annual_review.ti.category">
+        <xsl:value-of select="substring-after(@valueURI,'#')" />
       </field>
     </xsl:for-each>
     <xsl:for-each select="mods:name/mods:affiliation">
