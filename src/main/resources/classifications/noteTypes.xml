@@ -36,5 +36,16 @@
       <label xml:lang="x-access" text="editor admin" />
       <label xml:lang="x-disable" text="true" />
     </category>
+   <category ID="restriction">
+      <label xml:lang="de" text="Restriktion (Sperrvermerk)" />
+      <label xml:lang="en" text="access restriction" />
+      <label xml:lang="x-access" text="guest" />
+    </category>
+    <category ID="deletion">
+      <label xml:lang="de" text="Löschvermerk" />
+      <label xml:lang="en" text="deletion note" />
+      <label xml:lang="x-access" text="guest" />
+    </category>
+  </categories>
   </categories>
 </mycoreclass>
