@@ -62,7 +62,13 @@
     "add-field": {
         "name":"mods.annual_review.ti",
         "type":"pint",
-        "multiValued":false}
+        "multiValued":true}
+  },
+  {
+    "add-field": {
+        "name":"mods.annual_review.ti.category",
+        "type":"string",
+        "multiValued":true}
   },
   {
     "add-field": {
