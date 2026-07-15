@@ -25,6 +25,16 @@
       <label xml:lang="de" text="Inhalt" />
       <label xml:lang="en" text="content" />
     </category>
+    <category ID="funding">
+      <label xml:lang="de" text="Finanzierung" />
+      <label xml:lang="en" text="funding" />
+      <label xml:lang="x-access" text="guest" />
+    </category>
+    <category ID="licensing">
+      <label xml:lang="de" text="Lizensierung" />
+      <label xml:lang="en" text="Licensing" />
+      <label xml:lang="x-access" text="guest" />
+    </category>
     <category ID="citation/reference">
       <label xml:lang="x-access" text="guest" />
       <label xml:lang="en" text="citation/reference" />
