@@ -119,6 +119,18 @@
             <label xml:lang="de">Erfassungsrichtlinien</label>
             <label xml:lang="en">Guidelines</label>
         </item>
+        <item href="/content/publish/guidelines_researchdata.xml" type="intern" replaceMenu="false" constrainPopUp="false">
+            <label xml:lang="de">Erfassung von Forschungsdaten</label>
+            <label xml:lang="en">Cataloguing of research data</label>
+        </item>
+        <item href="/content/publish/pi_and_embargo.xml" type="intern" replaceMenu="false" constrainPopUp="false">
+            <label xml:lang="de">Publikationsstatus</label>
+            <label xml:lang="en">publication status</label>
+        </item>
+        <item href="/content/publish/state_and_embargo.xml" type="intern" replaceMenu="false" constrainPopUp="false">
+            <label xml:lang="de">Persistent Identifier und Embargo</label>
+            <label xml:lang="en">Persistent Identifier and Embargo</label>
+        </item>
     </menu>
     <menu id="user">
         <label xml:lang="de">Nutzermenü</label>
