@@ -148,7 +148,7 @@
                 <label xml:lang="de">Kontaktdaten ändern</label>
                 <label xml:lang="en">Change user contact</label>
             </item>
-            <item href="/publish/meetings_and_contact.xml" replaceMenu="false" constrainPopUp="false">
+            <item href="/content/publish/meetings_and_contact.xml" replaceMenu="false" constrainPopUp="false">
                 <label xml:lang="de">Termine und Kontakt</label>
                 <label xml:lang="en">Dates and Contact</label>
             </item>
