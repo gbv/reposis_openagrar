@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MyCoReWebPage><section xml:lang="de" title="neuer Eintrag"><h1>Erfassung von Forschungsdaten</h1><h2>Definition Forschungsdaten</h2><address>Forschungsdaten sind Daten, die während wissenschaftlicher Tätigkeit (z. B. durch Messungen, Befragungen, Quellenarbeit) entstehen. Sie bilden eine Grundlage wissenschaftlicher Arbeit und dokumentieren deren Ergebnisse.<br />
+Quelle: forschungsdaten.info, Glossar, https://forschungsdaten.info/praxis-kompakt/glossar/#c269824</address><h2>Definition Datensatz</h2><p>Ein Datensatz besteht aus einer oder mehreren Datendatei(en), einer Beschreibung der Daten und ihrer<br />
+Entstehung (Fließtext) und den beschreibenden Metadaten. In einer Tabelle werden alle verwendenten<br />
+Abkürzungen und Variablen erklärt und aufgelöst.</p><h2>Datensatz erfassen</h2><p>Ein Datensatz wird analog zur Monographie in OpenAgrar erfasst und mit der/den dazugehörenden Textpublikation(en) verküpft. Die Verküpfung ("referenziert" bzw. "gehört zu") erfolgt vom Datensatz zur Textpublikation. Es handelt sich hierbei um eine eigenständige Publikation. Vor der Veröffentlichung reicht ein(e) Autor/in stellvertretend eine Freistellungserklärung ein. Grundsätzlich orientiert sich die Erfassung von Forschungsdaten an den Regelwerken "Resource Description an Access (RDA)" und "Regeln zur Schlagwortkatalogisierung".</p><p><strong>Supplement Material / Begleitmaterial zu Textpublikationen nicht erfassen</strong></p><p>Materialanhänge zu Textpublkationen werden nicht als Forschungsdatensätze erfasst! Bei diesen Anhängen handelt es sich meist um Tabellen, Bilder oder ähnliches, dass auch im Artikel selbst zu finden ist. Der Inhalt wird in diesen Fällen in der Regel zur leichteren Nachnutzung zusätzlich in gängigen Dateiformaten angeboten. Das Material gehört letztlich zum Artikel. Auch ist hier nicht klar, ob das Thünen-Institut noch im Besitz der nötigen Rechte für eine erneute Veröffentlichung der Daten ist, da diese nicht immer unter das Urheberrecht fallen. Über den Artikel sind die Datensätze öffentlich nachgewiesen und die Zugangsbedingungen geklärt. </p><p><strong>Eingetragen werden:</strong></p><ul>
+        <li>Titel und ggf. Titelübersetzung</li>
+        <li>Autoren und Beteiligte oder Autorenkollektiv jeweils mit Zugehörigkeit, GND und ORCiD -&gt; ggf. GND-</li>
+        <li>Eintrag erstellen </li>
+        <li>Unternehmen, die die Daten erheben und bei denen die Mitarbeitenden nicht namentlich als Autoren/Beteiligte aufnommen werden, werden als beteiligte Körperschaft aufgenommen. -&gt; ggf. GND-Eintrag erstellen </li>
+        <li>Lizenz oder "Alle Rechte vorbehalten"</li>
+        <li>Bei Bedarf wird ein Embargo eingetragen.</li>
+        <li>Abstract ggf. deutsche und englische Version</li>
+        <li>Schlagwörter, wenn möglich mit GND vernüpfen. Getrennte Schlagwortketten für deutsche und<br />
+        englische Schlagwörter.</li>
+        <li>Geograpfischer Bezug, wenn möglich mit GND verknüpfen. Koordinaten werden eingetragen, wenn<br />
+        vorhanden.</li>
+        <li>Auflage (= Version)</li>
+        <li>Umfang (z.B. 3 CSV-Dateien, 2 PDF-Dateien, 1 TXT-Datei)</li>
+        <li>Persistent Identifier (PID), wenn vergeben</li>
+        <li>Verlag (Name des Repositoriums, oder des Verlags/ Eingenverlags der das Angebot betreibt)</li>
+        <li>Erscheinungsort: Sitz des Verlages oder des Repositoriums</li>
+        <li>Erscheinungsjahr: bei veröffentlichten Datensätzen</li>
+        <li>Erstellung: Zeitraum der Erstellung; Zeitraum, den der Datensatz abdeckt (Berichtszeitraum)</li>
+        <li>Einreichung: Jahr der Einrichung bei unveröffentlichten Datensätzen</li>
+        <li>Finanzierung: Förderangabe bei EU-Projekten OpenAire-Angaben</li>
+        <li>Project ID: Interne Projektnummer</li>
+        <li>Interne TI ID: Aktenzeichen bei unveröffentlichten Datensätzen</li>
+        <li>interne ID: ggf. Abrufzeichen</li>
+        <li>Publikationsstatus</li>
+        <li>Jahresbereichtskategorie, i.d.R. "Forschungsdaten" oder "Nicht im Jahresbericht"</li>
+        <li>Jahresberichtsjahr</li>
+        <li>Einrichtung</li>
+        <li>Interne Anmerkung: Status Langzeitspeicher</li>
+        <li>Bei Bedarf: Kommentare</li>
+</ul><p><strong>Was wird hochgeladen:</strong></p><p><em>Dateibereich: Metadaten</em></p><ul>
+        <li>auf "Datendokumentation" und Sortierung auf "1" stellen</li>
+        <li>Metadaten-Template</li>
+        <li>ggf. weitere Dokumente zur Beschreibung der Daten, z.B. Tabelle mit der Auflösung der verwendenten Variablen</li>
+</ul><p><em>Dateibereich: Dateien</em></p><ul>
+        <li>auf "Inhalt" stellen und Dortierung auf "2" stellen</li>
+        <li>Die eigentlichen Datendateien werden hier hochgeladen.</li>
+        <li>Dateibenennungsregeln beachten.</li>
+        <li>Dateien nicht als ZIP-Archiv hochladen, da MyCoRe selbst ein ZIP-Archiv beim Download erstellt.</li>
+        <li>Datensatz muss ggf. in kleinen Abschnitten hochgeladen werden, 500 MB ist eine gute maximale Datei- oder Ordnergröße.</li>
+        <li>Man kann die gesamte Verzeichnisstruktur hochladen.</li>
+        <li>Geodaten werden möglichst als Geopackage nicht als Shape-File hochgeladen.</li>
+        <li>Die Dateien sollten möglichst in offenen Formaten vorliegen, die eine Speicherung für mehr als 10 Jahre ermöglichen.</li>
+</ul><h2>Verknüpfungen einzelner Datensätze</h2><p><strong>Datensatz mit Literatur verknüpfen</strong></p><p>Von der Datensatzaufnahme wird auf die Literaturaufnahme mit "referenziert" bzw. "gehört zu" verküpft.<br />
+Ausgangspunkt ist der Datensatz, da dieser zuerst da ist und mit einer Vielzahl von Einträgen verlinkt werden<br />
+muss/kann.</p><p><strong>Vorgänger und Nachfolger</strong></p><p>Bei der Erfassung einer neuen Version eines Datensatzes wird die Option "neue Version des Eintrages erstellen" verwendet. Die Verküpfung wird vom System automatisch vorgenommen und als "Vorgänger" beim neuen Datensatz angelegt. Die Angaben des Vorgängers werden bei diesem Vorgehen fast vollständig übernommen und müssen nur geringfügig angepasst werden. Das spart Arbeit. Bei einer nachträglichen Verküpfung geht man wird die Vernüpfung "Vorgänger" manuell beim Nachfolge-Eintrag auf den Vorgänger- Eintrag vorgenommen.</p><p><strong>Datensammelwerk und Themensammlung</strong></p><p><em>Datensammelwerk</em></p><p> </p><p><em>Themensammlung</em></p><p>Eine Themensammlung ist ein Sammelwerk und beinhaltet sowohl Text- als auch Datenpublikationen zu einem bestimmten Thema.<br />
+Beispielweise können die Forschungsoutputs eines Forschungsprojektes oder eines Monitorings mit einer Themensammlung gruppiert werden. Die Erscheinungsweise ist unregelmäßig.</p><h2>Forschungssoftware</h2><p>Forschungssoftware wird als Forschungsdaten mit einer eigenen Formular erfasst. Diese Formular ist bisher nicht verfügbar. Daher wird das Formular für Forschungsdaten verwendet und die zusätzlichen Angaben im Abstract und im  Metadaten-Template festgehalten.</p><h2>Datensammlungen erfassen</h2><p>Datensammlungen werden analog zur monographischen Reihe erfasst. Hierbei werden verschiende<br />
+Sammlungen unterschieden. Hier von ist das Datensammelwerk zu unterscheiden.</p><ul>
+        <li>Serie/Reihe</li>
+        <li>Versionsreihe</li>
+</ul><h3>Serie/Reihe</h3><p>Hierbei handelt es sich in der Regel um Forschungsdaten, die regelmäßig (mehr oder weniger) erhoben<br />
+werden. Die Ergebung findet beispielsweise jährlich statt. Die jeweils aktuelle Erhebung stellt eine Erweiterung<br />
+des Datensatzes um einen Band dar. Es besteht keine Vorgänger-Nachfolger-Beziehung, d.h. die Erweiterung<br />
+des Datensatzes führt nicht zu einer Ablösung der Gültigkeit. Das Inhaltsverzeichnis wird nach dem<br />
+Erscheinungsjahr in Bände eingeteilt. Innerhalb der Jahre können verschiedene Bände gelistet werden.<br />
+Für den Eitrag wird die Maske "<strong>Serie</strong>" verwendet, die auch für Literatureintragungen genutzt wird. Die<br />
+folgenden Felder werden nicht belegt:</p><ul>
+        <li>Herausgeber</li>
+        <li>ISSN</li>
+        <li>ZDB-ID Wenn sinnvoll können werden die Felder</li>
+        <li>Erscheinungsverlauf und</li>
+        <li>abgekürzt ausgefüllt.</li>
+</ul><p><strong>Sonderfall "Zeitreihe"</strong><br />
+Zeitreihen werden über das Schlagwort "Zeitreihe" und "timeline" gekennzeichnet, um gezielt nach diesen<br />
+suchen zu können. Sie werden als "Datensatz" (einmaliges Erstellen) aufgenommen oder, falls eine regelmäßige Aktualisierung erfolgt, als "Serie" bzw. "Versionsreihe" (fortlaufende Aktuallisierung). Eine Zeitreihe liegt immer dann vor, wenn Daten auf der selben Bezugsbasis fortgeschrieben in einer Tabelle erfasst werden.</p><h3>Versionsreihe</h3><p>Bei der Versionsreihe werden mehr oder weniger regelmäßig neue Versionen des Datensatzes erzeugt. Es besteht eine Vorgänger-Nachfolger-Beziehung. Der Nachfolger "löst den Vorgänger in der Gültigkeit ab". Beispiele sind Software-Releases und Datensätze, die im Laufe eines Projektes aktualisiert und/oder erweitert werden.</p><h2>Review-Verfahren</h2><p>Ist die Textpublikation, mit der Forschungsdatensatz zur Verfügung steht, in einem Review eines Verlages, wird der Forschungsdatensatz <strong>nach Beendigung des Review</strong> und erfolgter Überarbeitung veröffentlicht. Bestehen die Gutachter auf einer Veröffentlichung <strong>vor Ende des Reviews</strong> werden keine nachträglichen Änderungen mehr durchgeführt. Bei nötigen Änderungen muss der Datensatz als neue Version veröffentlicht werden. </p><p>Bei einem <strong>Doppelblindverfahren</strong> werden für die Autoren und Beteiligte als N.N. eingetragen. Die Einrichtung, Affiliation, Erscheinungsort und Verlag werden erst nach Abschluss des Review eingetragen. </p><p>Für das Review wird ein <strong>Embargo</strong> eingetragen und ein <strong>lesender Zugrifflink</strong> erstellt. Außderdem wird ein <strong>Hinweis</strong> auf die spätere Registrierung der <strong>DOI</strong> eingetragen (dt. und engl.). Die <strong>Freistellungserklärung</strong> muss vor Erstellung des Zugriffslinks vorliegen.</p><h2>Erfassung von Forschungsdatensätzen, aus externen Repositorien</h2><p>Die Erfassung von Forschungsdatensätzen, die über andere Repositorien als OpenAgrar veröffentlicht werden erfolgt mehr oder weniger analog zu den über OpenAgrar veröffentlichten Forschungsdatensätzen. Unterschied ist, dass die Datensätze in der Regel nicht auf OpenAgrar hochgeladen werden. Es erfolgt ein Metadateneintrag und der Upload eines ausgefüllten Metadaten-Templates. Eine DOI der jeweiligen Einrichtung wird nicht vergeben. Eingetragen wird die DOI des  Repositoriums, über das die Daten veröffentlicht wurden.</p><h2>Zweitveröffentlichung von Forschungsdaten</h2><p>Für eine Zweitveröffentlichung von Forschungsdaten müssen die Vorrausetzungen erfüllt sein. Hier sind grundsätzlich zwei Fälle zu unterscheiden:</p><ol>
+        <li>Forschungsdaten mit urheberrechtlichen Schutz (Schöpfungshöhe erreicht), und</li>
+        <li>Forschungsdaten ohne urheberrechtlichen Schutz (Schöpfungshöhe nicht erreicht).</li>
+</ol><p><strong>Fall 1: Forschungsdaten mit urheberrechtlichen Schutz </strong><br />
+Zu beachten ist der<strong> §38 UrhG</strong>. In Absatz 4 ist der wissenschaftliche Beitrag geregelt. Offen ist die Frage, ob Forschungsdaten ein wissenschaftlicher Beitrag sind und ab wann die Schöpfungshöhe erreicht wird. Auch die akzeptierte Manuskriptsversion müsste in diesem Fall geklärt werden, was ist im Fall von Supplement Material die akzeptierte Manuskriptsversion ist.<br />
+<strong>Fall 2: Forschungsdaten ohne urheberrechtlichen Schutz</strong><br />
+In diesem Fall gilt das Eigentumsrecht (immateriellen Eigentum). Werden solche Daten als z.B. Supplement Material bei einem kommerziellen Verlag veröffentlicht und ausschließliche Verwertungs- und Nutzungsrechte sowie Eigentumsrechte an den Verlag abgetreten, ist eine Zweitveröffentlichung ausgeschlossen.</p><p> </p></section><meta><log lastEditor="btimmermann" date="2026-02-09" time="16:43" /></meta></MyCoReWebPage>
