@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MyCoReWebPage><section xml:lang="de" title="neuer Eintrag"><h1>Nutzerrollen und -rechte</h1><p>Das MyCoRe-System verfügt über ein Rollen- und Rechtemanagement, mit dem jedem Account Systemrollen (Administrator, Bearbeiter, Autor, Leser, ORCiD-Nutzer) und Einrichtungsrollen (= Zugehörigkeit zu einer der beteiligten Einrichtungen) zugewiesen werden. Die verschiedenen Rollen haben verschiedene Rechte in System (z.B. Ändern des Publikationsstatus, Anlegen von neuen Nutzern, Lesen von Dokumenten mit beschränktem Zugriff).</p><p>Aus Sicherheitsgründen sollten nicht benötigte Nutzerkonten grundsätzlich deaktiviert und gelöscht werden.</p><h2>Superuser</h2><p>Können wirklich alles.</p><h2>Administrator</h2><p>Können:</p><ul>
+        <li>alles was Bearbeiter können</li>
+        <li>Nutzer anlegen und verwalten inkl. löschen</li>
+        <li>haben eine Expertensuche</li>
+        <li>im Klassifkationseditor Änderungen an den Klassifikationen vornehmen</li>
+        <li>im WCMS Änderungen vornehmen</li>
+</ul><p>Können nicht:</p><ul>
+        <li>auf den WebCLI zugreifen</li>
+</ul><h2>Bearbeiter</h2><p>Können:</p><ul>
+        <li>alles was Autoren können</li>
+        <li>Einträge bearbeiten, die von Autoren, Bearbeitern und Administratoren eingereicht wurden.</li>
+        <li>Dateianhänge hochladen</li>
+        <li>mit vollständiger komplexer Suchemaske suchen</li>
+        <li>Publikationsstatus ändern</li>
+        <li>alle Publikationsstatus finden</li>
+        <li>eine vollständige Erfassungsmaske nutzen</li>
+        <li>Sehen, wann Einträge angelegt worden sind und von wem</li>
+</ul><p>Können nicht:</p><ul>
+        <li>Einträge löschen</li>
+        <li>Dateianhänge löschen</li>
+        <li>keine Nutzer anlegen</li>
+</ul><h2>Autor</h2><p>Können:</p><ul>
+        <li>alles was Leser können</li>
+        <li>Eigene Einträge solange bearbeiten, wie diese sich im Status „eingereicht“ befinden</li>
+        <li>Dateianhänge hochladen</li>
+</ul><p>Können nicht:</p><ul>
+        <li>Einträge mit dem Status „Eingereicht“ oder „Geschützt“ finden, die sie nicht selbst angelegt haben</li>
+        <li>Dateianhänge löschen</li>
+        <li>Den Publikationsstatus ändern</li>
+        <li>Nach z.B. dem Publikationsstatus suchen (haben eine eingeschränkte komplexe Suche)</li>
+        <li>Haben eine eingeschränkte Erfassungsmaske und bekommen z.B. kein Datumsfeld oder Linkfeld angezeigt, um dort Sachen eintragen zu können.</li>
+        <li>Sehen nicht, wann Einträge angelegt worden sind und von wem</li>
+        <li>Nutzer anlegen</li>
+</ul><h2>Leser</h2><p>Können:</p><ul>
+        <li>alles was ORCID-Nutzer können</li>
+        <li>Dateianhänge sehen und herunterladen, die nur für angemeldete Nutzer (nur für die eigene Einrichtung) einsehbar sind</li>
+</ul><h2>ORCiD-Nutzer</h2><p>Können:</p><ul>
+        <li>alles was Gastnutzer können</li>
+        <li>ihre Profil mit dem ORCID-Nutzerprofil verbinden und Publikationen dort halbautomatisch importieren</li>
+</ul><h2>Gastnutzer</h2><p>Können:</p><ul>
+        <li>Einträge in OpenAgrar über die einfache und die eingeschränkte komplexe Suche finden</li>
+        <li>Einträge in der Merkliste speichern und exportieren</li>
+</ul><p>Können nicht:</p><ul>
+        <li>auf Inhalte zugreifen, die nur für angemeldete Nutzer freigegeben sein</li>
+</ul><h2>Einrichtungsrolle</h2><p>Mit der Einrichtungsrolle wird dem jeweiligen Nutzer ein der beteiligten Einrichtungen zugeordnet. Die Zuordnung steuert, welche Dateianhänge eingesehen und heruntergeladen werden können.</p></section><meta><log lastEditor="btimmermann" date="2026-01-15" time="13:45" /></meta></MyCoReWebPage>
