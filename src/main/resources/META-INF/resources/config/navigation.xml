@@ -148,6 +148,10 @@
                 <label xml:lang="de">Kontaktdaten ändern</label>
                 <label xml:lang="en">Change user contact</label>
             </item>
+            <item href="/authorization/meetings_and_contact.xml" replaceMenu="false" constrainPopUp="false">
+                <label xml:lang="de">Termine und Kontakt</label>
+                <label xml:lang="en">Dates and Contact</label>
+            </item>
         </group>
         <group id="contentadmin">
             <item href="/modules/classeditor/classificationEditor.xml?XSL.classeditor.showId=true" type="extern" replaceMenu="false" constrainPopUp="false">
@@ -171,6 +175,10 @@
             <item href="/authorization/roles-editor.xml" type="extern" replaceMenu="false" constrainPopUp="false">
                 <label xml:lang="de">Rollen administrieren</label>
                 <label xml:lang="en">Manage roles</label>
+            </item>
+            <item href="/publish/roles_and_rights.xml" replaceMenu="false" constrainPopUp="false">
+                <label xml:lang="de">Rollen und Rechte</label>
+                <label xml:lang="en">Rolles and Rights</label>
             </item>
         </group>
         <group id="miscadmin">
