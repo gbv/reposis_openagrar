@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mods="http://www.loc.gov/mods/v3"
-  xmlns:mcrmods="xalan://org.mycore.mods.classification.MCRMODSClassificationSupport" xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation"
-  xmlns:mirmapper="xalan://org.mycore.mir.impexp.MIRClassificationMapper" xmlns:mirdateconverter="xalan://org.mycore.mir.date.MIRDateConverter"
-  xmlns:mirvalidationhelper="xalan://org.mycore.mir.validation.MIRValidationHelper"
-  xmlns:piUtil="xalan://org.mycore.pi.frontend.MCRIdentifierXSLUtils"
-  exclude-result-prefixes="mcrmods xlink mirmapper i18n mirdateconverter mirvalidationhelper piUtil" version="1.0"
+                xmlns:mcrmods="xalan://org.mycore.mods.classification.MCRMODSClassificationSupport" xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation"
+                xmlns:mirmapper="xalan://org.mycore.mir.impexp.MIRClassificationMapper" xmlns:mirdateconverter="xalan://org.mycore.mir.date.MIRDateConverter"
+                xmlns:mirvalidationhelper="xalan://org.mycore.mir.validation.MIRValidationHelper"
+                xmlns:piUtil="xalan://org.mycore.pi.frontend.MCRIdentifierXSLUtils"
+                xmlns:editorUtils="xalan://org.mycore.mir.editor.MIREditorUtils"
+                exclude-result-prefixes="mcrmods xlink mirmapper i18n mirdateconverter mirvalidationhelper piUtil editorUtils" version="1.0"
 >
 
   <xsl:include href="copynodes.xsl" />
@@ -32,32 +33,23 @@
 
   </xsl:template>
 
-  <xsl:template match="mods:subject/mods:topic/@valueURI">
+  <xsl:template match="mods:subject">
+    <xsl:variable name="geoCount" select="count(mods:cartographics) + count(mods:geographic)" />
     <xsl:choose>
-      <xsl:when test="contains(.,'#')">
-        <xsl:attribute name="valueURIxEditor">
-          <xsl:value-of select="substring-after(.,'#')" />
-        </xsl:attribute>
+      <xsl:when test="$geoCount &gt; 0 and $geoCount = count(mods:*)">
+        <mods:subjectGEO>
+          <xsl:copy-of select="editorUtils:xmlAsString(.)" />
+        </mods:subjectGEO>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:attribute name="valueURIxEditor">
-          <xsl:value-of select="substring-after(.,../@authorityURI)" />
-        </xsl:attribute>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
-  <xsl:template match="mods:subject/mods:geographic/@valueURI">
-    <xsl:choose>
-      <xsl:when test="contains(.,'#')">
-        <xsl:attribute name="valueURIxEditor">
-          <xsl:value-of select="substring-after(.,'#')" />
-        </xsl:attribute>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:attribute name="valueURIxEditor">
-          <xsl:value-of select="substring-after(.,../@authorityURI)" />
-        </xsl:attribute>
+        <mods:subjectXML>
+          <xsl:if test="@xml:lang">
+            <xsl:attribute name="xml:lang">
+              <xsl:value-of select="@xml:lang" />
+            </xsl:attribute>
+          </xsl:if>
+          <xsl:copy-of select="editorUtils:xmlAsString(.)" />
+        </mods:subjectXML>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
@@ -66,29 +58,27 @@
     <xsl:variable name="altRepGroup" select="@altRepGroup"/>
     <xsl:choose>
       <xsl:when test="string-length(@altFormat) &gt; 0">
-        <xsl:variable name="content" select="document(@altFormat)" />
+        <xsl:variable name="content" select="document(@altFormat)"/>
         <xsl:apply-templates select="$content/node()" mode="asXmlNode">
           <xsl:with-param name="levels">
             <xsl:choose>
-              <xsl:when test="name() = 'mods:titleInfo'">
-                <xsl:value-of select="2" />
+              <xsl:when test="local-name() = 'titleInfo'">
+                <xsl:value-of select="2"/>
               </xsl:when>
               <xsl:otherwise>
-                <xsl:value-of select="1" />
+                <xsl:value-of select="1"/>
               </xsl:otherwise>
             </xsl:choose>
           </xsl:with-param>
         </xsl:apply-templates>
       </xsl:when>
-      <xsl:when test="../*[@altRepGroup = $altRepGroup and string-length(@altFormat) &gt; 0 ]">
-      </xsl:when>
+      <!-- another member of the altRepGroup carries the @altFormat, that one provides the content -->
+      <xsl:when test="../*[@altRepGroup = $altRepGroup and string-length(@altFormat) &gt; 0]" />
+      <!-- no member of the altRepGroup carries an @altFormat, so keep this element instead of dropping it -->
       <xsl:otherwise>
-        <xsl:copy >
-          <xsl:apply-templates select="*|@*"/>
+        <xsl:copy>
+          <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
-        <!--<xsl:message terminate="no">
-          Warning: Missing altFormat for altRepGroup <xsl:value-of select="$altRepGroup"/>
-        </xsl:message>-->
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
@@ -116,6 +106,9 @@
     <xsl:copy>
       <xsl:apply-templates select="@*" />
       <xsl:choose>
+        <xsl:when test="@type='conference'">
+          <!-- Do nothing: displayForm should not be added -->
+        </xsl:when>
         <xsl:when test="mods:namePart and not(mods:namePart[@type='family']) and not(mods:namePart[@type='given']) and not(mods:displayForm)">
           <mods:displayForm>
             <xsl:for-each select="mods:namePart">
@@ -137,11 +130,11 @@
         </xsl:when>
       </xsl:choose>
       <xsl:apply-templates select="*" />
-        <xsl:if test="@type='personal' and not(mods:role/mods:roleTerm)">
-          <mods:role>
-            <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
-          </mods:role>
-        </xsl:if>
+      <xsl:if test="@type='personal' and not(mods:role/mods:roleTerm)">
+        <mods:role>
+          <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+        </mods:role>
+      </xsl:if>
     </xsl:copy>
   </xsl:template>
 
@@ -184,6 +177,12 @@
       <xsl:apply-templates select="@*" />
       <xsl:text>oth</xsl:text>
     </xsl:copy>
+  </xsl:template>
+
+  <xsl:template match="mods:affiliation[@authorityURI='https://ror.org/'][@valueURI]">
+    <mods:affiliation authorityURI="{@authorityURI}" valueURI="{@valueURI}">
+      <xsl:value-of select="concat(., ' (', @valueURI, ')')"/>
+    </mods:affiliation>
   </xsl:template>
 
   <!-- Remove this mods:classification entry, will be created again while saving using mods:accessCondtition (see MIR-161) -->
