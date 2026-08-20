@@ -1,9 +1,10 @@
 package org.mycore.pi.doi;
 
+import java.util.Date;
 import org.mycore.access.MCRAccessException;
 import org.mycore.datamodel.metadata.MCRBase;
 import org.mycore.pi.MCRPIService;
-import org.mycore.pi.doi.MCRDigitalObjectIdentifier;
+import org.mycore.pi.MCRPIServiceDates;
 import org.mycore.pi.exceptions.MCRPersistentIdentifierException;
 
 public class MCRDOINoRegistrationService extends MCRPIService<MCRDigitalObjectIdentifier> {
@@ -20,12 +21,14 @@ public class MCRDOINoRegistrationService extends MCRPIService<MCRDigitalObjectId
     }
 
     @Override
-    public void registerIdentifier(MCRBase obj, String additional, MCRDigitalObjectIdentifier doi)
+    public MCRPIServiceDates registerIdentifier(MCRBase obj, String additional, MCRDigitalObjectIdentifier doi)
         throws MCRPersistentIdentifierException {
-        if (!additional.equals("")) {
+        if (additional != null && !additional.isEmpty()) {
             throw new MCRPersistentIdentifierException(
                 getClass().getName() + " doesn't support additional information! (" + additional + ")");
         }
+        final Date now = new Date();
+        return new MCRPIServiceDates(now, now);
     }
 
 

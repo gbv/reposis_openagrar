@@ -3,7 +3,6 @@ package org.mycore;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.jdom2.Element;
 import org.apache.solr.client.solrj.SolrClient;
@@ -50,7 +49,7 @@ public class MCRDCATDEServlet extends MCRContentServlet {
     private final List<String> LANGUAGES = MCRConfiguration2.getString("MCR.DCATCatalog.language_list")
             .stream()
             .flatMap(MCRConfiguration2::splitValue)
-            .collect(Collectors.toList());
+            .toList();
     private final String PUBLISHER = MCRConfiguration2.getString("MCR.DCATCatalog.publisher")
             .orElse("MyCoRe Repositorium");
     private final String PUBLISHER_ROR = MCRConfiguration2.getString("MCR.DCATCatalog.publisher_ror")
