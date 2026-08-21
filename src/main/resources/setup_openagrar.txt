@@ -1,4 +1,4 @@
-update classification from uri resource:classifications/author_role.xml
+update classification from uri resource:classifications/author_roles.xml
 update classification from uri resource:classifications/annual_review.xml
 update classification from uri resource:classifications/dataciteResType.xml
 update classification from uri resource:classifications/marcrelator.xml
