@@ -11,3 +11,9 @@ update classification from uri resource:classifications/rfc5646.xml
 update classification from uri resource:classifications/typeOfResource.xml
 update classification from uri resource:classifications/schemaOrg.xml
 update classification from uri resource:classifications/mcr-roles.xml
+update classification from uri resource:classifications/dcat_de_licenses.xml
+update classification from uri resource:classifications/dcat_hvd_categories.xml
+update classification from uri resource:classifications/identifier.xml
+update classification from uri resource:classifications/nameIdentifier.xml
+update classification from uri resource:classifications/sdnb.xml
+update classification from uri resource:classifications/state.xml
