@@ -4,6 +4,10 @@
   <label xml:lang="en" text="Object state" />
   <label xml:lang="x-uri" text="http://www.mycore.org/classifications/state" />
   <categories>
+    <category ID="imported">
+      <label xml:lang="de" text="importiert" />
+      <label xml:lang="en" text="imported" />
+    </category>
     <category ID="submitted">
       <label xml:lang="de" text="eingereicht" />
       <label xml:lang="en" text="submitted" />
