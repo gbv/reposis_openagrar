@@ -32,14 +32,11 @@
       <xsl:when test="$dateIssued &lt;= $dateIssued_online and $dateIssued &lt;= $dateIssued_print">
         <xsl:value-of select="$mods/mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf']"/>
       </xsl:when>
-      <xsl:when test="$dateIssued_online &lt; $dateIssued and $dateIssued_online &lt; $dateIssued_print">
+      <xsl:when test="$dateIssued_online &lt;= $dateIssued_print">
         <xsl:value-of select="$mods/mods:originInfo[@eventType='publication_online']/mods:dateIssued[@encoding='w3cdtf']"/>
       </xsl:when>
-      <xsl:when test="$dateIssued_print &lt; $dateIssued_online and $dateIssued_print &lt; $dateIssued">
-        <xsl:value-of select="$mods/mods:originInfo[@eventType='publication_print']/mods:dateIssued[@encoding='w3cdtf']"/>
-      </xsl:when>
       <xsl:otherwise>
-        <xsl:value-of select="'Error: no date selected.'"/>
+        <xsl:value-of select="$mods/mods:originInfo[@eventType='publication_print']/mods:dateIssued[@encoding='w3cdtf']"/>
       </xsl:otherwise>
     </xsl:choose>
     
