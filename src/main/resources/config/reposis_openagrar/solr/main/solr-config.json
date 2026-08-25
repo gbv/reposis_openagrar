@@ -16,7 +16,6 @@
         "facet.field":  [
           "mods.genre",
           "mods.genre.host",
-          "mods.genre.composite",
           "mods.refereed",
           "mods.refereed.public",
           "worldReadableComplete",
@@ -50,7 +49,6 @@
         "facet.field": [
           "mods.genre",
           "mods.genre.host",
-          "mods.genre.composite",
           "mods.refereed",
           "mods.refereed.public",
           "worldReadableComplete",
@@ -90,7 +88,6 @@
         "facet.field": [
           "mods.genre",
           "mods.genre.host",
-          "mods.genre.composite",
           "mods.refereed",
           "mods.refereed.public",
           "worldReadableComplete",
@@ -129,7 +126,6 @@
         "facet.field": [
           "mods.genre",
           "mods.genre.host",
-          "mods.genre.composite",
           "mods.refereed",
           "mods.refereed.public",
           "worldReadableComplete",
