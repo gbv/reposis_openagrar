@@ -25,7 +25,6 @@
     <artifactId>reposis_mir_parent</artifactId>
     <version>2023.06-SNAPSHOT</version>
   </parent>
-  <groupId>de.gbv.reposis</groupId>
   <artifactId>reposis_openagrar</artifactId>
   <version>2023.06-SNAPSHOT</version>
   <name>Open Agrar</name>
@@ -95,6 +94,11 @@
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>org.mycore</groupId>
       <artifactId>selenium-utils</artifactId>
       <scope>test</scope>
@@ -110,45 +114,4 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <profiles>
-    <profile>
-      <id>ci</id>
-      <activation>
-        <property>
-          <name>env.CI</name>
-          <value>true</value>
-        </property>
-        <file>
-          <exists>src/test/</exists>
-        </file>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-dependency-plugin</artifactId>
-            <executions>
-              <execution>
-                <id>copy-test-libs2</id>
-                <goals>
-                  <goal>copy</goal>
-                </goals>
-                <phase>pre-integration-test</phase>
-                <configuration>
-                  <outputDirectory>${MCR.Home.Integration}/${MCR.AppName}/lib</outputDirectory>
-                  <artifactItems>
-                    <artifactItem>
-                      <groupId>de.gbv.reposis</groupId>
-                      <artifactId>reposis_common</artifactId>
-                      <version>${project.version}</version>
-                    </artifactItem>
-                  </artifactItems>
-                </configuration>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
 </project>
