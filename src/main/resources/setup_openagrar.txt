@@ -1,3 +1,4 @@
+reload solr configuration main in core main
 update classification from uri resource:classifications/author_roles.xml
 update classification from uri resource:classifications/annual_review.xml
 update classification from uri resource:classifications/dataciteResType.xml
