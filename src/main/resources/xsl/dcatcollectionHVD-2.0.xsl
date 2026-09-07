@@ -143,7 +143,7 @@
               </xsl:attribute>
             </xsl:if>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-            <foaf:name><xsl:value-of select="concat(mods:namePart[@type='family'], ', ', mods:namePart[@type='given'][1])"/></foaf:name>
+            <foaf:name><xsl:value-of select="concat(mods:namePart[@type='family'][1], ', ', mods:namePart[@type='given'][1])"/></foaf:name>
             <foaf:givenName><xsl:value-of select="mods:namePart[@type='given'][1]"/></foaf:givenName>
             <foaf:familyName><xsl:value-of select="mods:namePart[@type='family']"/></foaf:familyName>
             <xsl:if test="mods:affiliation">
