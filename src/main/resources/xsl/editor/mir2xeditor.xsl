@@ -229,7 +229,7 @@
                   </xed:bind>
                 </xsl:when>
                 <xsl:otherwise>
-                  <textarea class="form-control ckeditor">
+                  <textarea class="form-control tinymce">
                     <xsl:copy-of select="@rows" />
                     <xsl:copy-of select="@placeholder" />
                   </textarea>
@@ -253,7 +253,7 @@
               <xed:output i18n="{@label}" />
             </label>
             <div class="col-md-6">
-              <textarea class="form-control ckeditor">
+              <textarea class="form-control tinymce">
                 <xsl:copy-of select="@rows" />
                 <xsl:copy-of select="@placeholder" />
               </textarea>
@@ -382,8 +382,8 @@
     <xed:repeat
       xpath="mods:name[@type='personal' or not(@type) or (@type='corporate' and not(@authorityURI='{$institutesURI}'))][mods:role/mods:roleTerm[@type='code'][@authority='marcrelator']='{@role}']"
       min="1" max="100">
-      <xed:bind xpath="@type" initially="personal"/>
-      <xed:bind xpath="@simpleEditor" default="true"/>
+      <xed:bind xpath="@type" initially="personal" />
+      <xed:bind xpath="@simpleEditor" default="true" />
       <xed:bind xpath="mods:displayForm"> <!-- Move down to get the "required" validation right -->
         <div class="form-group row {@class} {$xed-val-marker}">
           <xed:bind xpath=".."> <!-- Move up again after validation marker is set -->

@@ -50,7 +50,7 @@ var BloodhoundConf = {
 		prepare : function(query, settings) {
 		    var param = "+%2Bmods.identifier.issn%3A"+query+"*";
 			param += "+%2BobjectType%3A%22mods%22";
-			param += "&fl=mods.title%2Cid%2Cidentifier.type.issn";
+			param += "&fl=mods.title%2Cid%2Cmods.identifier.issn";
 			param += "&version=4.5&rows=20&wt=json";
 
 			settings.url = settings.url.replace("%QUERY", param);

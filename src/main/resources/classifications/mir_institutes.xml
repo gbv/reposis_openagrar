@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="mir_institutes">
-  <label xml:lang="en" text="Instituts of BMEL" description="A list of institutions" />
   <label xml:lang="de" text="Einrichtungen des BMEL" description="Liste der BMEL-Einrichtungen" />
+  <label xml:lang="en" text="Instituts of BMEL" description="A list of institutions" />
   <label xml:lang="x-uri" text="https://www.openagrar.de/classifications/institutes" />
   <categories>
     <category ID="jki">
-      <label xml:lang="en" text="Julius Kühn-Institute" description="Federal Research Centre for Cultivated Plants" />
       <label xml:lang="de" text="Julius Kühn-Institut" description="Bundesforschungsinstitut für Kulturpflanzen" />
-      <url xlink:href="https://www.julius-kuehn.de" xlink:type="locator" />
+      <label xml:lang="en" text="Julius Kühn-Institute" description="Federal Research Centre for Cultivated Plants" />
+      <url xlink:type="locator" xlink:href="https://www.julius-kuehn.de" />
       <category ID="jki_leitg">
         <label xml:lang="de" text="Leitungsbereich" />
         <label xml:lang="en" text="President" />
@@ -21,122 +21,307 @@
         <label xml:lang="en" text="Institute for Bee Protection" />
       </category>
       <category ID="jki_bi">
-        <label xml:lang="en" text="Institute for Biological Control" />
         <label xml:lang="de" text="Institut für biologischen Pflanzenschutz" />
+        <label xml:lang="en" text="Institute for Biological Control" />
       </category>
       <category ID="jki_ep">
         <label xml:lang="de" text="Institut für Epidemiologie und Pathogendiagnostik" />
         <label xml:lang="en" text="Institute for Epidemiology and Plant Diagnostics" />
       </category>
+      <category ID="jki_ag">
+        <label xml:lang="de" text="Institut für nationale und internationale Angelegenheiten der Pflanzengesundheit" />
+        <label xml:lang="en" text="Institute for National and International Plant Health" />
+      </category>
       <category ID="jki_opv">
-        <label xml:lang="en" text="Institute for Ecological Chemistry, Plant Analysis and Stored Product Protection" />
         <label xml:lang="de" text="Institut für Ökologische Chemie, Pflanzenanalytik und Vorratsschutz" />
+        <label xml:lang="en" text="Institute for Ecological Chemistry, Plant Analysis and Stored Product Protection" />
       </category>
       <category ID="jki_pb">
         <label xml:lang="de" text="Institut für Pflanzenbau und Bodenkunde" />
         <label xml:lang="en" text="Institute for Crop and Soil Science" />
       </category>
-      <category ID="jki_ag">
-        <label xml:lang="de" text="Institut für nationale und internationale Angelegenheiten der Pflanzengesundheit" />
-        <label xml:lang="en" text="Institute for National and International Plant Health" />
-      </category>
       <category ID="jki_a">
         <label xml:lang="de" text="Institut für Pflanzenschutz in Ackerbau und Grünland" />
         <label xml:lang="en" text="Institute for Plant Protection in Field Crops and Grassland" />
       </category>
-      <category ID="jki_gf">
-        <label xml:lang="de" text="Institut für Pflanzenschutz in Gartenbau und Forst" />
-        <label xml:lang="en" text="Institute for Plant Protection in Field Crops and Grassland" />
+      <category ID="G">
+        <label xml:lang="de" text="Institut für Pflanzenschutz in Gartenbau und urbanem Grün" />
+        <label xml:lang="en" text="Institute for Plant Protection in Horticulture and Urban Green" />
       </category>
       <category ID="jki_ow">
-        <label xml:lang="en" text="Institute for Plant Protection in Fruit Crops and Viticulture" />
         <label xml:lang="de" text="Institut für Pflanzenschutz im Obst- und Weinbau" />
+        <label xml:lang="en" text="Institute for Plant Protection in Fruit Crops and Viticulture" />
       </category>
       <category ID="jki_zr">
         <label xml:lang="de" text="Institut für Rebenzüchtung" />
         <label xml:lang="en" text="Institute for Grapevine Breeding" />
       </category>
       <category ID="jki_rs">
-        <label xml:lang="en" text="Institute for Resistance Research and Stress Tolerance" />
         <label xml:lang="de" text="Institut für Resistenzforschung und Stresstoleranz" />
+        <label xml:lang="en" text="Institute for Resistance Research and Stress Tolerance" />
       </category>
       <category ID="jki_sb">
-        <label xml:lang="en" text="Institute for Biosafety in Plant Biotechnology" />
         <label xml:lang="de" text="Institut für die Sicherheit biotechnologischer Verfahren bei Pflanzen" />
+        <label xml:lang="en" text="Institute for Biosafety in Plant Biotechnology" />
       </category>
       <category ID="jki_stfo">
         <label xml:lang="de" text="Institut für Strategien und Folgenabschätzung" />
         <label xml:lang="en" text="Institute for Strategies and Technology Assessment" />
+      </category>
+      <category ID="jki_ws">
+        <label xml:lang="de" text="Institut für Waldschutz" />
+        <label xml:lang="en" text="Institute for Forest Protection" />
+        <url xlink:type="locator" xlink:href="https://www.julius-kuehn.de/ws/" />
       </category>
       <category ID="jki_zg">
         <label xml:lang="de" text="Institut für Züchtungsforschung an gartenbaulichen Kulturen" />
         <label xml:lang="en" text="Institute for Breeding Research on Horticultural Crops" />
       </category>
       <category ID="jki_zl">
-        <label xml:lang="en" text="Institute for Breeding Research on Agricultural Crops" />
         <label xml:lang="de" text="Institut für Züchtungsforschung an landwirtschaftlichen Kulturen" />
+        <label xml:lang="en" text="Institute for Breeding Research on Agricultural Crops" />
       </category>
       <category ID="jki_zo">
         <label xml:lang="de" text="Institut für Züchtungsforschung an Obst" />
         <label xml:lang="en" text="Institute for Breeding Research on Fruit Crops" />
       </category>
       <category ID="jki_ib">
-        <label xml:lang="en" text="Information centre and library" />
         <label xml:lang="de" text="Informationszentrum und Bibliothek" />
+        <label xml:lang="en" text="Information centre and library" />
       </category>
-      <category ID="jki_dv">
-        <label xml:lang="de" text="Zentrale Datenverarbeitung" />
-        <label xml:lang="en" text="Data processing department" />
+      <category ID="jki_dk">
+        <label xml:lang="de" text="Digitalisierung und Künstliche Intelligenz" />
+        <label xml:lang="en" text="Department of Digitalisation and Artificial Intelligence" />
       </category>
       <category ID="jki_vg">
-        <label xml:lang="en" text="Predecessors" />
         <label xml:lang="de" text="Vorgängereinrichtung" />
+        <label xml:lang="en" text="Predecessors" />
         <category ID="3ebb783e-4d0f-4142-a01b-2919abb174f7">
           <label xml:lang="de" text="Julius Kühn-Institut" description="Bundesforschungsinstitut für Kulturpflanzen" />
           <label xml:lang="en" text="Julius Kühn Institute" description="Federal Research Centre for Cultivated Plants " />
-          <url xlink:href="http://www.jki.bund.de/" xlink:type="locator" />
+          <url xlink:type="locator" xlink:href="http://www.jki.bund.de/" />
+          <category ID="jki_gf">
+            <label xml:lang="de" text="Institut für Pflanzenschutz in Gartenbau und Forst" />
+            <label xml:lang="en" text="Institute for Plant Protection in Field Crops and Grassland" />
+          </category>
           <category ID="0ea6a332-470f-49fc-94f3-49e4181e7a79">
             <label xml:lang="de" text="Institut für Sicherheit in der Gentechnik bei Pflanzen" />
             <label xml:lang="en" text="Institute for Biosafety of Genetically Modified Plants" />
           </category>
           <category ID="jki_sf">
-            <label xml:lang="en" text="Institute  for  Strategies  and  Technology  Assessment  in  Plant  Protection" />
             <label xml:lang="de" text="Institut für Strategien und Folgenabschätzung im Pflanzenschutz" />
+            <label xml:lang="en" text="Institute  for  Strategies  and  Technology  Assessment  in  Plant  Protection" />
           </category>
           <category ID="jki_zgo">
             <label xml:lang="de" text="Institut für Züchtungsforschung an Gartenbaulichen Kulturen und Obst" />
             <label xml:lang="en" text="Institute for Breeding Research on Horticultural Research and Fruit Crops" />
           </category>
+          <category ID="jki_dv">
+            <label xml:lang="de" text="Zentrale Datenverarbeitung" />
+            <label xml:lang="en" text="Data processing department" />
+          </category>
         </category>
         <category ID="f9586bbf-e6c8-45e0-9961-f893c6e47806">
-          <label xml:lang="en" text="Federal Biological Research Centre for Agriculture and Forestry" />
           <label xml:lang="de" text="Biologische Bundesanstalt für Land- und Forstwirtschaft" />
+          <label xml:lang="en" text="Federal Biological Research Centre for Agriculture and Forestry" />
+          <category ID="bba_ag">
+            <label xml:lang="de" text="Abteilung für nationale und internationale Angelegenheiten der Pflanzengesundheit" />
+            <label xml:lang="en" text="Department for National and International Plant Health" />
+          </category>
+          <category ID="bba_at">
+            <label xml:lang="de" text="Abteilung für Pflanzenschutzmittel und Anwendungstechnik" />
+            <label xml:lang="en" text="Department of Plant Protection Products an Application Techniques" />
+          </category>
+          <category ID="bba_fa">
+            <label xml:lang="de" text="Fachgruppe Anwendungstechnik" />
+            <label xml:lang="en" text="Application Techniques Division" />
+          </category>
+          <category ID="bba_iz">
+            <label xml:lang="de" text="Informationszentrum Phytomedizin und Bibliothek" />
+            <label xml:lang="en" text="Information Centre for Phytomedicine and Library" />
+          </category>
+          <category ID="bba_bv">
+            <label xml:lang="de" text="Institut für Biochemie und Pflanzenvirologie " />
+            <label xml:lang="en" text="Institute of Biochemistry and Plant Virology" />
+          </category>
+          <category ID="bba_bi">
+            <label xml:lang="de" text="Institut für biologischen Pflanzenschutz " />
+            <label xml:lang="en" text="Institute for Biological Control" />
+          </category>
+          <category ID="bba_cp">
+            <label xml:lang="de" text="Institut für Chemikalienprüfung" />
+            <label xml:lang="en" text="Institute for Chemical Testing" />
+          </category>
           <category ID="22f20c05-8e00-4c7c-b899-68a9176b0ec1">
-            <label xml:lang="en" text="Institute  for  Technology  Assessment  in  Plant  Protection" />
             <label xml:lang="de" text=" Institut für Folgenabschätzung im Pflanzenschutz" />
+            <label xml:lang="en" text="Institute  for  Technology  Assessment  in  Plant  Protection" />
           </category>
           <category ID="70f8a6c2-d6a3-44c2-baed-1e59027335b8">
             <label xml:lang="de" text=" Institut für integrierten Pflanzenschutz" />
             <label xml:lang="en" text="Institute for Integrated Plant Protection" />
           </category>
+          <category ID="bba_mb">
+            <label xml:lang="de" text="Institut für Mikrobiologie" />
+            <label xml:lang="en" text="Institute for Microbiology" />
+          </category>
+          <category ID="bba_nw">
+            <label xml:lang="de" text="Institut für Nematologie und Wirbeltierkunde" />
+            <label xml:lang="en" text="Institute for Nematology and Vertebrate Research" />
+          </category>
+          <category ID="bba_oc">
+            <label xml:lang="de" text="Institut für ökologische Chemie" />
+            <label xml:lang="en" text="Institute for Ecological Chemistry" />
+          </category>
+          <category ID="bba_otp">
+            <label xml:lang="de" text="Institut für Ökotoxikologie im Pflanzenschutz" />
+            <label xml:lang="en" text="Institute for  Ecotoxicology in Plant Protection" />
+          </category>
+          <category ID="bba_op">
+            <label xml:lang="de" text="Institut für Ökotoxikologie und Ökochemie im Pflanzenschutz" />
+            <label xml:lang="en" text="Institute for Ecotoxicology and Ecochemistry in Plant Protection" />
+          </category>
+          <category ID="bba_a">
+            <label xml:lang="de" text="Institut für Pflanzenschutz im Ackerbau und Grünland" />
+            <label xml:lang="en" text="Institute for Plant Protection in Field Crops and Grassland" />
+          </category>
+          <category ID="bba_f">
+            <label xml:lang="de" text="Institut für Pflanzenschutz im Forst" />
+            <label xml:lang="en" text="Institute for Plant Protection in Forest" />
+          </category>
+          <category ID="bba_g">
+            <label xml:lang="de" text="Institut für Pflanzenschutz im Gartenbau" />
+            <label xml:lang="en" text="Institute for Plant Protection in Horticulture" />
+          </category>
           <category ID="bba_o">
             <label xml:lang="de" text="Institut für Pflanzenschutz im Obstbau" />
             <label xml:lang="en" text="Institute for Plant Protection in Fruit Crops" />
+          </category>
+          <category ID="bba_w">
+            <label xml:lang="de" text="Institut für Pflanzenschutz im Weinbau" />
+            <label xml:lang="en" text="Institute for Plant Protection in Viticulture" />
+          </category>
+          <category ID="bba_ps">
+            <label xml:lang="de" text="Institut für Pflanzenvirologie, Mikrobiologie und biologische Sicherheit" />
+            <label xml:lang="en" text="Institute for Plant Virology, Microbiology and Biosafety" />
+          </category>
+          <category ID="bba_rg">
+            <label xml:lang="de" text="Institut für Resistenzgenetik" />
+            <label xml:lang="en" text="Institute for Resistance Genetics" />
+          </category>
+          <category ID="bba_uf">
+            <label xml:lang="de" text="Institut für Unkrautforschung" />
+            <label xml:lang="en" text="Institute for Weed Research" />
           </category>
           <category ID="VS">
             <label xml:lang="de" text="Institut für Vorratsschutz" />
             <label xml:lang="en" text="Institute for Stored Product Protection" />
           </category>
+          <category ID="bba_l">
+            <label xml:lang="de" text="Leitungsbereich" />
+            <label xml:lang="en" text="President" />
+          </category>
+          <category ID="bba_dv">
+            <label xml:lang="de" text="Zentrale EDV-Gruppe" />
+            <label xml:lang="en" text="Data Processing Group" />
+          </category>
         </category>
         <category ID="bba_bs">
-          <label xml:lang="en" text="Federal Biological Research Centre for Agriculture and Forestry (BBA)" />
           <label xml:lang="de" text="Biologische Bundesanstalt für Land- und Forstwirtschaft &lt;Braunschweig&gt;" />
+          <label xml:lang="en" text="Federal Biological Research Centre for Agriculture and Forestry (BBA)" />
         </category>
         <category ID="bza_bs">
           <label xml:lang="de" text="Biologische Zentralanstalt für Land- und Forstwirtschaft &lt;Braunschweig&gt;" />
         </category>
         <category ID="bza_kle">
           <label xml:lang="de" text="Biologische Zentralanstalt für Land- und Forstwirtschaft &lt;Kleinmachnow&gt;" />
+        </category>
+        <category ID="baz">
+          <label xml:lang="de" text="Bundesanstalt für Züchtungsforschung an Kulturpflanzen (BAZ)" />
+          <label xml:lang="en" text="Federal Centre for Breeding Research on Cultivated Plants" />
+          <category ID="baz_gb">
+            <label xml:lang="de" text="Genbank" />
+            <label xml:lang="en" text="Gene Bank" />
+          </category>
+          <category ID="baz_ist">
+            <label xml:lang="de" text="Institut für abiotische Stresstoleranz " />
+            <label xml:lang="en" text="Institut für abiotische Stresstoleranz" />
+          </category>
+          <category ID="baz_ep">
+            <label xml:lang="de" text="Institut für Epidemiologie" />
+            <label xml:lang="en" text="Institute of Epidemiology" />
+          </category>
+          <category ID="baz_ier">
+            <label xml:lang="de" text="Institut für Epidemiologie und Resistenzressourcen " />
+            <label xml:lang="en" text="Institute of Epidemiology and Resistance Resources" />
+          </category>
+          <category ID="baz_gk">
+            <label xml:lang="de" text="Institut für gartenbauliche Kulturen" />
+            <label xml:lang="en" text="Institute of Horticultural Crops" />
+          </category>
+          <category ID="baz_ghg">
+            <label xml:lang="de" text="Institut für Gemüse- Heil- und Gewürzpflanzenzüchtung" />
+            <label xml:lang="en" text="Institute of Breeding of Vegetables, Medicinal and Aromatic Plants" />
+          </category>
+          <category ID="baz_l">
+            <label xml:lang="de" text="Institut für landwirtschaftliche Kulturen" />
+            <label xml:lang="en" text="Institute for horticultural crops" />
+          </category>
+          <category ID="baz_ioz">
+            <label xml:lang="de" text="Institut für Obstzüchtung" />
+            <label xml:lang="en" text="Institute for Fruit Breeding" />
+          </category>
+          <category ID="baz_p">
+            <label xml:lang="de" text="Institut für Pathogendiagnostik" />
+            <label xml:lang="en" text="Institute of Pathogen Diagnostic" />
+          </category>
+          <category ID="baz_ipa">
+            <label xml:lang="de" text="Institut für Pflanzenanalytik " />
+            <label xml:lang="en" text="Institute of Plant Analysis" />
+          </category>
+          <category ID="baz_q">
+            <label xml:lang="de" text="Institut für Qualitätsanalytik" />
+            <label xml:lang="en" text="Institute of Quality Analysis" />
+          </category>
+          <category ID="baz_zr">
+            <label xml:lang="de" text="Institut für Rebenzüchtung Geilweilerhof" />
+            <label xml:lang="en" text="Institute for Grapevine Breeding Geilweilerhof" />
+          </category>
+          <category ID="baz_r">
+            <label xml:lang="de" text="Institut für Resistenz" />
+            <label xml:lang="en" text="Institue of Resistance Research" />
+          </category>
+          <category ID="baz_rf">
+            <label xml:lang="de" text="Institut für Resistenzforschung" />
+            <label xml:lang="en" text="Institute of Resistance Research" />
+          </category>
+          <category ID="baz_irp">
+            <label xml:lang="de" text="Institut für Resistenzforschung und Pathogendiagnostik " />
+            <label xml:lang="en" text="Institute of Resistance Research and Pathogen Diagnostics" />
+          </category>
+          <category ID="baz_rg">
+            <label xml:lang="de" text="Institut für Resistenzgenetik" />
+            <label xml:lang="en" text="Institute for Resistance Genetics" />
+          </category>
+          <category ID="baz_sr">
+            <label xml:lang="de" text="Institut für Streßphysiologie und Rohstoffqualität" />
+            <label xml:lang="en" text="Institute of Stress Physiology and Quality of Raw Materials" />
+          </category>
+          <category ID="baz_zp">
+            <label xml:lang="de" text="Institut für Zierpflanzenzüchtung" />
+            <label xml:lang="en" text="Institute of Ornamental Plant Breeding" />
+          </category>
+          <category ID="baz_zl">
+            <label xml:lang="de" text="Institut für Züchtung landwirtschaftlicher Kulturpflanzen" />
+            <label xml:lang="en" text="Institute of Agricultural Crops" />
+          </category>
+          <category ID="baz_zmg">
+            <label xml:lang="de" text="Institut für Züchtungsmethodik bei Gemüse" />
+            <label xml:lang="en" text="Institute of Breeding Methods on Vegetables" />
+          </category>
+          <category ID="baz_zm">
+            <label xml:lang="de" text="Institut für Züchtungsmethodik landwirtschaftlicher Kulturpflanzen" />
+            <label xml:lang="en" text="Institute of Breeding Methods on Agricultural Crops" />
+          </category>
         </category>
         <category ID="BRA">
           <label xml:lang="de" text="Biologische Reichsanstalt für Land- und Forstwirtschaft" />
@@ -150,73 +335,77 @@
       </category>
     </category>
     <category ID="fli">
-      <label xml:lang="en" text="Friedrich-Loeffler-Institut" description="Federal Research Institute for Animal Health" />
       <label xml:lang="de" text="Friedrich-Loeffler-Institut" description="Bundesforschungsinstitut für Tiergesundheit" />
-      <url xlink:href="http://www.fli.de/" xlink:type="locator" />
+      <label xml:lang="en" text="Friedrich-Loeffler-Institut" description="Federal Research Institute for Animal Health" />
+      <url xlink:type="locator" xlink:href="http://www.fli.de/" />
       <category ID="fli_leitg">
-        <label xml:lang="en" text="Management" />
         <label xml:lang="de" text="Leitungsbereich" />
-        <url xlink:href="https://www.fli.de/de/ueber-das-fli/das-fli/leitung/" xlink:type="locator" />
+        <label xml:lang="en" text="Management" />
+        <url xlink:type="locator" xlink:href="https://www.fli.de/de/ueber-das-fli/das-fli/leitung/" />
       </category>
       <category ID="fli_atb">
-        <label xml:lang="en" text="Department of Experimental Animal Facilities and Biorisk Management" />
         <label xml:lang="de" text="Abteilung für experimentelle Tierhaltung und Biosicherheit" />
-        <url xlink:href="https://www.fli.de/de/institute/abteilung-fuer-experimentelle-tierhaltung-und-biosicherheit-atb/" xlink:type="locator" />
+        <label xml:lang="en" text="Department of Experimental Animal Facilities and Biorisk Management" />
+        <url xlink:type="locator" xlink:href="https://www.fli.de/de/institute/abteilung-fuer-experimentelle-tierhaltung-und-biosicherheit-atb/" />
       </category>
       <category ID="fli_imb">
         <label xml:lang="de" text="Institut für molekulare Virologie und Zellbiologie" />
         <label xml:lang="en" text="Institute of Molecular Virology and Cell Biology" />
-        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-molekulare-virologie-und-zellbiologie-imvz/" xlink:type="locator" />
+        <url xlink:type="locator" xlink:href="https://www.fli.de/de/institute/institut-fuer-molekulare-virologie-und-zellbiologie-imvz/" />
       </category>
       <category ID="fli_imed">
-        <label xml:lang="en" text="Institute of Infectology" />
         <label xml:lang="de" text="Institut für Infektionsmedizin" />
-        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-infektionsmedizin-imed/" xlink:type="locator" />
+        <label xml:lang="en" text="Institute of Infectology" />
+        <url xlink:type="locator" xlink:href="https://www.fli.de/de/institute/institut-fuer-infektionsmedizin-imed/" />
       </category>
       <category ID="fli_ivd">
-        <label xml:lang="en" text="Institute of Diagnostic Virology" />
         <label xml:lang="de" text="Institut für Virusdiagnostik" />
-        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-virusdiagnostik-ivd/" xlink:type="locator" />
+        <label xml:lang="en" text="Institute of Diagnostic Virology" />
+        <url xlink:type="locator" xlink:href="https://www.fli.de/de/institute/institut-fuer-virusdiagnostik-ivd/" />
       </category>
       <category ID="fli_innt">
-        <label xml:lang="en" text="Institute of Novel and Emerging Infectious Diseases" />
         <label xml:lang="de" text="Institut für neue und neuartige Tierseuchenerreger" />
-        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-neue-und-neuartige-tierseuchenerreger-innt/" xlink:type="locator" />
+        <label xml:lang="en" text="Institute of Novel and Emerging Infectious Diseases" />
+        <url xlink:type="locator" xlink:href="https://www.fli.de/de/institute/institut-fuer-neue-und-neuartige-tierseuchenerreger-innt/" />
       </category>
       <category ID="fli_ite">
         <label xml:lang="de" text="Institut für Tierernährung" />
         <label xml:lang="en" text="Institute of Animal Nutrition" />
-        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-tierernaehrung-ite/" xlink:type="locator" />
+        <url xlink:type="locator" xlink:href="https://www.fli.de/de/institute/institut-fuer-tierernaehrung-ite/" />
       </category>
       <category ID="fli_itt">
-        <label xml:lang="en" text="Institute of Animal Welfare and Animal Husbandry" />
         <label xml:lang="de" text="Institut für Tierschutz und Tierhaltung" />
-        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-tierschutz-und-tierhaltung-itt/" xlink:type="locator" />
+        <label xml:lang="en" text="Institute of Animal Welfare and Animal Husbandry" />
+        <url xlink:type="locator" xlink:href="https://www.fli.de/de/institute/institut-fuer-tierschutz-und-tierhaltung-itt/" />
       </category>
       <category ID="fli_ibiz">
         <label xml:lang="de" text="Institut für Bakterielle Infektionen und Zoonosen" />
         <label xml:lang="en" text="Institute of Bacterial Infections and Zoonoses" />
-        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-bakterielle-infektionen-und-zoonosen-ibiz/" xlink:type="locator" />
+        <url xlink:type="locator" xlink:href="https://www.fli.de/de/institute/institut-fuer-bakterielle-infektionen-und-zoonosen-ibiz/" />
       </category>
       <category ID="fli_imp">
         <label xml:lang="de" text="Institut für Molekulare Pathogenese" />
         <label xml:lang="en" text="Institute of Molecular Pathogenesis" />
-        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-molekulare-pathogenese-imp/" xlink:type="locator" />
+        <url xlink:type="locator" xlink:href="https://www.fli.de/de/institute/institut-fuer-molekulare-pathogenese-imp/" />
       </category>
       <category ID="fli_ing">
-        <label xml:lang="en" text="Institute of Farm Animal Genetics" />
         <label xml:lang="de" text="Institut für Nutztiergenetik" />
-        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-nutztiergenetik-ing/" xlink:type="locator" />
+        <label xml:lang="en" text="Institute of Farm Animal Genetics" />
+        <url xlink:type="locator" xlink:href="https://www.fli.de/de/institute/institut-fuer-nutztiergenetik-ing/" />
       </category>
       <category ID="fli_ifi">
         <label xml:lang="de" text="Institut für Immunologie" />
         <label xml:lang="en" text="Institute of Immunology" />
-        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-immunologie-ifi/" xlink:type="locator" />
+        <url xlink:type="locator" xlink:href="https://www.fli.de/de/institute/institut-fuer-immunologie-ifi/" />
       </category>
       <category ID="fli_ife">
         <label xml:lang="de" text="Institut für Epidemiologie" />
         <label xml:lang="en" text="Institute of Epidemiology" />
-        <url xlink:href="https://www.fli.de/de/institute/institut-fuer-epidemiologie-ife/" xlink:type="locator" />
+        <url xlink:type="locator" xlink:href="https://www.fli.de/de/institute/institut-fuer-epidemiologie-ife/" />
+      </category>
+      <category ID="fli_iit">
+        <label xml:lang="de" text="Institut für Internationale Tiergesundheit/One Health" />
+        <label xml:lang="en" text="Institute of International Animal Health/One Health" />
       </category>
       <category ID="fli_agbm">
         <label xml:lang="de" text="AG Biomathematik" />
@@ -225,13 +414,30 @@
         <label xml:lang="de" text="AG Internationale Tiergesundheit" />
       </category>
       <category ID="fli_vg">
-        <label xml:lang="en" text="Predecessor institution" />
         <label xml:lang="de" text="Vorgängereinrichtung" />
+        <label xml:lang="en" text="Predecessor institution" />
       </category>
     </category>
     <category ID="mri">
       <label xml:lang="de" text="Max Rubner-Institut" description="Bundesforschungsinstitut für Ernährung und Lebensmittel" />
-      <url xlink:href="http://www.mri.bund.de/" xlink:type="locator" />
+      <url xlink:type="locator" xlink:href="http://www.mri.bund.de/" />
+      <category ID="mri_elm">
+        <label xml:lang="de" text="Institut für Ernährungs- und Lebensmittelmikrobiologie " />
+      </category>
+      <category ID="mri_eep">
+        <label xml:lang="de" text="Institut für Ernährungsepidemiologie und -physiologie" />
+      </category>
+      <category ID="mri_izlp">
+        <label xml:lang="de" text="Innovationszentrum für Lebensmittel und Prozesstechnologien" />
+      </category>
+      <category ID="mri_tl">
+        <label xml:lang="de" text="Institut für tierische Lebensmittel" />
+        <url xlink:type="locator" xlink:href="https://www.mri.bund.de/de/home/" />
+      </category>
+      <category ID="mri_pl">
+        <label xml:lang="de" text="Institut für pflanzliche Lebensmittel" />
+        <url xlink:type="locator" xlink:href="https://www.mri.bund.de/de/home/" />
+      </category>
       <category ID="mri_leitg">
         <label xml:lang="de" text="Leitungsbereich" />
       </category>
@@ -247,28 +453,32 @@
         <label xml:lang="de" text="Institut für Kinderernährung" />
       </category>
       <category ID="mri_lbv">
-        <label xml:lang="en" text="Department of Food Technology and Bioprocess Engineering" />
         <label xml:lang="de" text="Institut für Lebensmittel- und Bioverfahrenstechnik" />
+        <label xml:lang="en" text="Department of Food Technology and Bioprocess Engineering" />
       </category>
       <category ID="mri_mbt">
-        <label xml:lang="en" text="Department of Microbiology and Biotechnology" />
         <label xml:lang="de" text="Institut für Mikrobiologie und Biotechnologie" />
+        <label xml:lang="en" text="Department of Microbiology and Biotechnology" />
       </category>
       <category ID="mri_mf">
         <label xml:lang="de" text="Institut für Sicherheit und Qualität bei Milch und Fisch" />
         <label xml:lang="en" text="Department of Safety and Quality of Milk and Fish Products" />
       </category>
       <category ID="mri_og">
-        <label xml:lang="en" text="Department of Safety and Quality of Fruit and Vegetables" />
         <label xml:lang="de" text="Institut für Sicherheit und Qualität bei Obst und Gemüse" />
+        <label xml:lang="en" text="Department of Safety and Quality of Fruit and Vegetables" />
       </category>
       <category ID="mri_fl">
         <label xml:lang="de" text="Institut für Sicherheit und Qualität bei Fleisch" />
         <label xml:lang="en" text="Department of Safety and Quality of Meat" />
       </category>
       <category ID="mri_ge">
-        <label xml:lang="en" text="Department of Safety and Quality of Cereals" />
         <label xml:lang="de" text="Institut für Sicherheit und Qualität bei Getreide" />
+        <label xml:lang="en" text="Department of Safety and Quality of Cereals" />
+      </category>
+      <category ID="mri_nrz">
+        <label xml:lang="de" text="Nationales Referenzzentrum für authentische Lebensmittel" />
+        <label xml:lang="en" text="National Reference Centre for Authentic Food" />
       </category>
       <category ID="mri_aa">
         <label xml:lang="de" text="Arbeitsgruppe Analytik" />
@@ -279,9 +489,15 @@
     </category>
     <category ID="ti">
       <label xml:lang="de" text="Thünen-Institut" description="Bundesforschungsinstitut für Ländliche Räume, Wald und Fischerei" />
-      <url xlink:href="http://www.ti.bund.de/" xlink:type="locator" />
-      <category ID="ti_kb">
-        <label xml:lang="de" text="Stabsstellen Klima und Boden" />
+      <url xlink:type="locator" xlink:href="http://www.thuenen.de/" />
+      <category ID="ti_lv">
+        <label xml:lang="de" text="Institut für Lebensverhältnisse in ländlichen Räumen" />
+      </category>
+      <category ID="ti_wi">
+        <label xml:lang="de" text="Institut für Innovation und Wertschöpfung in Ländlichen Räumen" />
+      </category>
+      <category ID="ti_bw">
+        <label xml:lang="de" text="Institut für Betriebswirtschaft" />
       </category>
       <category ID="ti_ma">
         <label xml:lang="de" text="Institut für Marktanalyse" />
@@ -289,17 +505,11 @@
       <category ID="ti_at">
         <label xml:lang="de" text="Institut für Agrartechnologie" />
       </category>
-      <category ID="ti_ak">
-        <label xml:lang="de" text="Institut für Agrarklimaschutz" />
-      </category>
-      <category ID="ti_lr">
-        <label xml:lang="de" text="Institut für Ländliche Räume" />
-      </category>
-      <category ID="ti_bw">
-        <label xml:lang="de" text="Institut für Betriebswirtschaft" />
-      </category>
       <category ID="ti_bd">
         <label xml:lang="de" text="Institut für Biodiversität" />
+      </category>
+      <category ID="ti_ak">
+        <label xml:lang="de" text="Institut für Agrarklimaschutz" />
       </category>
       <category ID="ti_ol">
         <label xml:lang="de" text="Institut für Ökologischen Landbau" />
@@ -307,8 +517,8 @@
       <category ID="ti_hf">
         <label xml:lang="de" text="Institut für Holzforschung" />
       </category>
-      <category ID="ti_wffo">
-        <label xml:lang="de" text="Institut für Internationale Waldwirtschaft und Forstökonomie" />
+      <category ID="ti_ww">
+        <label xml:lang="de" text="Institut für Waldwirtschaft" />
       </category>
       <category ID="ti_wo">
         <label xml:lang="de" text="Institut für Waldökosysteme" />
@@ -325,23 +535,65 @@
       <category ID="ti_of">
         <label xml:lang="de" text="Institut für Ostseefischerei" />
       </category>
-      <category ID="ti_it">
-        <label xml:lang="de" text="Informationstechnik" />
+      <category ID="ti_p">
+        <label xml:lang="de" text="PräsidentIn / Wissenschaftlicher Beirat" />
       </category>
-      <category ID="ti_fz">
-        <label xml:lang="de" text="Fachinformationszentrum" />
+      <category ID="ti_zentral_stab">
+        <label xml:lang="de" text="Zentralbereich und Stabstellen" />
+        <category ID="ti_pb">
+          <label xml:lang="de" text="Präsidialbüro" />
+        </category>
+        <category ID="ti_presse">
+          <label xml:lang="de" text="Pressestelle" />
+        </category>
+        <category ID="ti_fkoord">
+          <label xml:lang="de" text="ForschungkoordinatorIn" />
+        </category>
+        <category ID="ti_za">
+          <label xml:lang="de" text="Zentralabteilung" />
+        </category>
+        <category ID="ti_zi">
+          <label xml:lang="de" text="Zentrum für Informationsmanagement" />
+        </category>
+        <category ID="ti_skbb">
+          <label xml:lang="de" text="Stabstelle Klima, Boden, Biodiversität" />
+        </category>
+        <category ID="ti_steueroeko">
+          <label xml:lang="de" text="Geschäftsstelle Steuerungsgruppe Öko-Forschung" />
+        </category>
+        <category ID="ti_transfisch">
+          <label xml:lang="de" text="Informations- und Koordinierungsstelle Transformation Fischerei" />
+        </category>
       </category>
       <category ID="vti_vg">
         <label xml:lang="de" text="Vorgängereinrichtung" />
+        <category ID="ti_ttdigi">
+          <label xml:lang="de" text="Think Tank Digitalisierung" />
+        </category>
+        <category ID="ti_lr">
+          <label xml:lang="de" text="Institut für Ländliche Räume" />
+        </category>
+        <category ID="ti_kb">
+          <label xml:lang="de" text="Stabsstellen Klima und Boden" />
+        </category>
+        <category ID="ti_wffo">
+          <label xml:lang="de" text="Institut für Internationale Waldwirtschaft und Forstökonomie" />
+        </category>
         <category ID="ti_fo">
           <label xml:lang="de" text="Institut für Forstökonomie" />
         </category>
         <category ID="ti_wf">
           <label xml:lang="de" text="Institut für Weltforstwirtschaft" />
         </category>
+        <category ID="ti_it">
+          <label xml:lang="de" text="Informationstechnik" />
+        </category>
+        <category ID="ti_fz">
+          <label xml:lang="de" text="Fachinformationszentrum" />
+        </category>
         <category ID="vti">
           <label xml:lang="de" text="Johann Heinrich von Thünen-Institut" description="Bundesforschungsinstitut für Ländliche Räume, Wald und Fischerei" />
-          <url xlink:href="http://www.vti.bund.de/" xlink:type="locator" />
+          <url xlink:type="locator" xlink:href="http://www.vti.bund.de/" />
           <category ID="vti_ma">
             <label xml:lang="de" text="Institut für Marktanalyse und Agrarhandelspolitik" />
           </category>
@@ -390,433 +642,1002 @@
         </category>
       </category>
     </category>
-    <category ID="bfr_201406">
+    <category ID="bfr_all">
+      <label xml:lang="de" text="Bundesinstitut für Risikobewertung" />
       <label xml:lang="en" text="German Federal Institute for Risk Assessment" />
-      <label xml:lang="de" text="Bundesinstitut für Risikobewertung" description="Struktur gültig seit Juli 2014" />
-      <label xml:lang="x-valfrom" text="2014-07" />
-      <url xlink:href="http://www.bfr.bund.de/" xlink:type="locator" />
-      <category ID="bfr_nat_201708">
-        <label xml:lang="en" text="National Committee for the Protection of Animals Used for Scientific Purposes for the Federal Republic of Germany" />
-        <label xml:lang="de" text="Nationaler Ausschuss Tierschutzgesetz" />
+      <category ID="bfr_2022">
+        <label xml:lang="de" text="Bundesinstitut für Risikobewertung (ab 2022)" description="Struktur gültig seit 2022" />
+        <label xml:lang="en" text="German Federal Institute for Risk Assessment" />
+        <url xlink:type="locator" xlink:href="https://www.bfr.bund.de/" />
+        <category ID="bfr_2022_L">
+          <label xml:lang="de" text="Leitung" />
+          <label xml:lang="en" text="Executive Office" />
+        </category>
+        <category ID="bfr_2022_RBS">
+          <label xml:lang="de" text="Risikobewertungsstrategien" />
+          <label xml:lang="en" text="Risk Assessment Strategies" />
+        </category>
+        <category ID="bfr_2022_UMK">
+          <label xml:lang="de" text="Umweltmanagementkoordination" />
+          <label xml:lang="en" text="Environmental Management Coordination" />
+        </category>
+        <category ID="bfr_2022_INT">
+          <label xml:lang="de" text="Internationale Angelegenheiten" />
+          <label xml:lang="en" text="International Affairs" />
+        </category>
+        <category ID="bfr_2022_FSK">
+          <label xml:lang="de" text="Forschungsstrategie und -koordination" />
+          <label xml:lang="en" text="Research Strategy and Coordination" />
+        </category>
+        <category ID="bfr_2022_QMK">
+          <label xml:lang="de" text="QM-Koordination" />
+          <label xml:lang="en" text="QM-Coordination" />
+        </category>
+        <category ID="bfr_2022_NFM">
+          <label xml:lang="de" text="Notfallmanagement" />
+          <label xml:lang="en" text="Contingency Management" />
+        </category>
+        <category ID="bfr_2022_CON">
+          <label xml:lang="de" text="Controlling" />
+          <label xml:lang="en" text="Controlling" />
+        </category>
+        <category ID="bfr_2022_DI">
+          <label xml:lang="de" text="Digitale Innovation" />
+          <label xml:lang="en" text="Digital Innovation" />
+        </category>
+        <category ID="bfr_2022_Z">
+          <label xml:lang="de" text="Abteilung Z - Zentralabteilung" />
+          <label xml:lang="en" text="Department Z" />
+          <category ID="bfr_2022_ZL">
+            <label xml:lang="de" text="Abteilung Z - Leitung" />
+            <label xml:lang="en" text="Department Z" />
+          </category>
+          <category ID="bfr_2022_Z11">
+            <label xml:lang="de" text="Referat Z11 - Personal" />
+            <label xml:lang="en" text="Section Z11" />
+          </category>
+          <category ID="bfr_2022_Z12">
+            <label xml:lang="de" text="Referat Z12 - Haushalt" />
+            <label xml:lang="en" text="Section Z12" />
+          </category>
+          <category ID="bfr_2022_Z13">
+            <label xml:lang="de" text="Referat Z13 - Organisation" />
+            <label xml:lang="en" text="Section Z13" />
+          </category>
+          <category ID="bfr_2022_Z14">
+            <label xml:lang="de" text="Referat Z14 - Personalentwicklung" />
+            <label xml:lang="en" text="Section Z14" />
+          </category>
+          <category ID="bfr_2022_Z21">
+            <label xml:lang="de" text="Referat Z21 - Justiziariat" />
+            <label xml:lang="en" text="Section Z21" />
+          </category>
+          <category ID="bfr_2022_Z22">
+            <label xml:lang="de" text="Referat Z22 - Beschaffung" />
+            <label xml:lang="en" text="Section Z22" />
+          </category>
+          <category ID="bfr_2022_Z23">
+            <label xml:lang="de" text="Referat Z23 - Bau und Technik" />
+            <label xml:lang="en" text="Section Z23" />
+          </category>
+          <category ID="bfr_2022_Z24">
+            <label xml:lang="de" text="Referat Z24 - Innerer Dienst und Zentralregistratur" />
+            <label xml:lang="en" text="Section Z24" />
+          </category>
+        </category>
+        <category ID="bfr_2022_1">
+          <label xml:lang="de" text="Abteilung 1 - Informationstechnik" />
+          <label xml:lang="en" text="Department 1" />
+          <category ID="bfr_2022_1L">
+            <label xml:lang="de" text="Abteilung 1 - Leitung" />
+            <label xml:lang="en" text="Department 1" />
+          </category>
+          <category ID="bfr_2022_1IZ">
+            <label xml:lang="de" text="1 IZ - Innovationszentrum Warenkettenmodellierungen und Künstliche Intelligenz" />
+            <label xml:lang="en" text="1 IZ" />
+          </category>
+          <category ID="bfr_2022_11">
+            <label xml:lang="de" text="Fachgruppe 11 - Netzwerk und Sicherheit" />
+            <label xml:lang="en" text="Unit 11" />
+          </category>
+          <category ID="bfr_2022_12">
+            <label xml:lang="de" text="Fachgruppe 12 - Basisdienste und Helpdesk" />
+            <label xml:lang="en" text="Unit 12" />
+          </category>
+          <category ID="bfr_2022_13">
+            <label xml:lang="de" text="Fachgruppe 13 - Anwendungsentwicklung" />
+            <label xml:lang="en" text="Unit 13" />
+          </category>
+          <category ID="bfr_2022_14">
+            <label xml:lang="de" text="Fachgruppe 14 - Bibliothek und Forschungsdatenmanagement" />
+            <label xml:lang="en" text="Unit 14" />
+          </category>
+          <category ID="bfr_2022_15">
+            <label xml:lang="de" text="Fachgruppe 15 - IT-Architektur, -Planung und Projektmanagement" />
+            <label xml:lang="en" text="Unit 15" />
+          </category>
+          <category ID="bfr_2022_16">
+            <label xml:lang="de" text="Fachgruppe 16 - Labor-IT und LIMS" />
+            <label xml:lang="en" text="Unit 16" />
+          </category>
+        </category>
+        <category ID="bfr_2022_2">
+          <label xml:lang="de" text="Abteilung 2 - Risikokommunikation" />
+          <label xml:lang="en" text="Department 2" />
+          <category ID="bfr_2022_2L">
+            <label xml:lang="de" text="Abteilung 2 - Leitung" />
+            <label xml:lang="en" text="Department 2" />
+          </category>
+          <category ID="bfr_2022_21">
+            <label xml:lang="de" text="Fachgruppe 21 - Krisenprävention und -koordination" />
+            <label xml:lang="en" text="Unit 21" />
+          </category>
+          <category ID="bfr_2022_22">
+            <label xml:lang="de" text="Fachgruppe 22 - Risikosoziologie und Risiko-Nutzen-Beurteilung" />
+            <label xml:lang="en" text="Unit 22" />
+          </category>
+          <category ID="bfr_2022_23">
+            <label xml:lang="de" text="Fachgruppe 23 - Presse- und Öffentlichkeitsarbeit" />
+            <label xml:lang="en" text="Unit 23" />
+          </category>
+          <category ID="bfr_2022_24">
+            <label xml:lang="de" text="Fachgruppe 24 - BfR-Akademie" />
+            <label xml:lang="en" text="Unit 24" />
+          </category>
+          <category ID="bfr_2022_25">
+            <label xml:lang="de" text="Fachgruppe 25 - Visuelle Kommunikation" />
+            <label xml:lang="en" text="Unit 25" />
+          </category>
+          <category ID="bfr_2022_2sz">
+            <label xml:lang="de" text="2 SZ - Sozialwissenschaftliche Risikokommunikationsforschung" />
+            <label xml:lang="en" text="2 SZ" />
+          </category>
+          <category ID="bfr_2022_2ng">
+            <label xml:lang="de" text="2NG - Reputation und Vertrauensbildung" />
+            <label xml:lang="en" text="2 NG" />
+          </category>
+        </category>
+        <category ID="bfr_2022_3">
+          <label xml:lang="de" text="Abteilung 3 - Exposition" />
+          <label xml:lang="en" text="Department 3" />
+          <category ID="bfr_2022_3L">
+            <label xml:lang="de" text="Abteilung 3 - Leitung" />
+            <label xml:lang="en" text="Department 3" />
+          </category>
+          <category ID="bfr_2022_31">
+            <label xml:lang="de" text="Fachgruppe 31 - Chemikalienexposition und Transport gefährlicher Güter" />
+            <label xml:lang="en" text="Unit 31" />
+          </category>
+          <category ID="bfr_2022_32">
+            <label xml:lang="de" text="Fachgruppe 32 - Expositionsbewertung von gefährlichen Produkten" />
+            <label xml:lang="en" text="Unit 32" />
+          </category>
+          <category ID="bfr_2022_33">
+            <label xml:lang="de" text="Fachgruppe 33 - Epidemiologie, Statistik und Expositionsmodellierung" />
+            <label xml:lang="en" text="Unit 33" />
+          </category>
+          <category ID="bfr_2022_34">
+            <label xml:lang="de" text="Fachgruppe 34 - Lebensmittelexposition und Gesamtbewertung" />
+            <label xml:lang="en" text="Unit 34" />
+          </category>
+          <category ID="bfr_2022_35">
+            <label xml:lang="de" text="Fachgruppe 35 - Nationales Vergiftungsregister" />
+            <label xml:lang="en" text="Unit 35" />
+          </category>
+          <category ID="bfr_2026_3sz">
+            <label xml:lang="de" text="3 SZ - Exposition und Epidemiologie" />
+            <label xml:lang="en" text="3 SZ" />
+          </category>
+          <category ID="bfr_2022_3sz">
+            <label xml:lang="de" text="3 SZ - MEAL Studienzentrum, Nationale Total-Diet-Studie (bis März 2026)" />
+            <label xml:lang="en" text="3 SZ (until March 2026)" />
+          </category>
+        </category>
+        <category ID="bfr_2022_4">
+          <label xml:lang="de" text="Abteilung 4 - Biologische Sicherheit" />
+          <label xml:lang="en" text="Department 4" />
+          <category ID="bfr_2022_4L">
+            <label xml:lang="de" text="Abteilung 4 - Leitung" />
+            <label xml:lang="en" text="Department 4" />
+          </category>
+          <category ID="bfr_2022_41">
+            <label xml:lang="de" text="Fachgruppe 41 - Lebensmittelhygiene und -technologie, Warenketten, Produktschutz" />
+            <label xml:lang="en" text="Unit 41" />
+          </category>
+          <category ID="bfr_2022_42">
+            <label xml:lang="de" text="Fachgruppe 42 - Lebensmittelmikrobiologie, Erreger-Wirt-Interaktionen" />
+            <label xml:lang="en" text="Unit 42" />
+          </category>
+          <category ID="bfr_2022_43">
+            <label xml:lang="de" text="Fachgruppe 43 - Epidemiologie, Zoonosen und Antibiotikaresistenz" />
+            <label xml:lang="en" text="Unit 43" />
+          </category>
+          <category ID="bfr_2022_44">
+            <label xml:lang="de" text="Fachgruppe 44 - Bakterielle Toxine, Gemeinschaftsverpflegung" />
+            <label xml:lang="en" text="Unit 44" />
+          </category>
+          <category ID="bfr_2022_45">
+            <label xml:lang="de" text="Fachgruppe 45 - Diagnostik, Erregercharakterisierung, Parasiten in Lebensmitteln" />
+            <label xml:lang="en" text="Unit 45" />
+          </category>
+          <category ID="bfr_2022_46">
+            <label xml:lang="de" text="Fachgruppe 46 - Viren in Lebensmitteln" />
+            <label xml:lang="en" text="Unit 46" />
+          </category>
+          <category ID="bfr_2022_47">
+            <label xml:lang="de" text="Fachgruppe 47 - Produkthygiene und Desinfektionsstrategien" />
+            <label xml:lang="en" text="Unit 47" />
+          </category>
+          <category ID="bfr_2022_4sz">
+            <label xml:lang="de" text="4 SZ (bis 2024)" />
+            <label xml:lang="en" text="4 SZ (until 2024)" />
+          </category>
+          <category ID="bfr_2022_4nsz">
+            <label xml:lang="de" text="4 NSZ - Nationales Studienzentrum für Sequenzierungen in der Risikobewertung" />
+            <label xml:lang="en" text="4 NSZ" />
+          </category>
+        </category>
+        <category ID="bfr_2022_5">
+          <label xml:lang="de" text="Abteilung 5/5R - Referenzzentrum Lebens- und Futtermittelanalytik" />
+          <label xml:lang="en" text="Department 5/5R" />
+          <category ID="bfr_2025_5L">
+            <label xml:lang="de" text="Abteilung 5R - Referenzzentrum Lebens- und Futtermittelanalytik" />
+            <label xml:lang="en" text="Department 5R" />
+          </category>
+          <category ID="bfr_2022_5L">
+            <label xml:lang="de" text="Abteilung 5 - Lebensmittelsicherheit (bis Juni 2025)" />
+            <label xml:lang="en" text="Department 5 (until June 2025)" />
+          </category>
+          <category ID="bfr_2025_51">
+            <label xml:lang="de" text="Fachgruppe 51 - Obergutachterstelle für die Einfuhrkontrolle von Wein, Qualitätssicherung, Koordinierung der NRL" />
+            <label xml:lang="en" text="Unit 51" />
+          </category>
+          <category ID="bfr_2022_51">
+            <label xml:lang="de" text="Fachgruppe 51 - Wirkungsbezogene Analytik und Toxikogenomics (bis Juni 2025)" />
+            <label xml:lang="en" text="Unit 51 (until June 2025)" />
+          </category>
+          <category ID="bfr_2025_52">
+            <label xml:lang="de" text="Fachgruppe 52 - Toxine" />
+            <label xml:lang="en" text="Unit 52" />
+          </category>
+          <category ID="bfr_2022_52">
+            <label xml:lang="de" text="Fachgruppe 52 - Lebensmitteltoxikologie (bis Juni 2025)" />
+            <label xml:lang="en" text="Unit 52 (until June 2025)" />
+          </category>
+          <category ID="bfr_2025_53">
+            <label xml:lang="de" text="Fachgruppe 53 - Halogenierte Kontaminanten" />
+            <label xml:lang="en" text="Unit 53" />
+          </category>
+          <category ID="bfr_2022_53">
+            <label xml:lang="de" text="Fachgruppe 53 - Ernährungsrisiken, Allergien und Neuartige Lebensmittel (bis Juni 2025)" />
+            <label xml:lang="en" text="Unit 53 (until June 2025)" />
+          </category>
+          <category ID="bfr_2025_54">
+            <label xml:lang="de" text="Fachgruppe 54 - Lebensmittelkontaktmaterialien" />
+            <label xml:lang="en" text="Unit 54" />
+          </category>
+          <category ID="bfr_2022_54">
+            <label xml:lang="de" text="Fachgruppe 54 - Risiken besonderer Bevölkerungsgruppen und Humanstudien (bis Juni 2025)" />
+            <label xml:lang="en" text="Unit 54 (until June 2025)" />
+          </category>
+          <category ID="bfr_2025_55">
+            <label xml:lang="de" text="Fachgruppe 55 - Speziesidentifizierung in Lebens- und Futtermitteln" />
+            <label xml:lang="en" text="Unit 55" />
+          </category>
+          <category ID="bfr_2025_56">
+            <label xml:lang="de" text="Fachgruppe 56 - Zusatzstoffe in Lebens- und Futtermitteln" />
+            <label xml:lang="en" text="Unit 56" />
+          </category>
+          <category ID="bfr_2022_5sz">
+            <label xml:lang="de" text="5 SZ - Humanstudienzentrum gesundheitlicher Verbraucherschutz (bis Juni 2025)" />
+            <label xml:lang="en" text="5 SZ (until June 2025)" />
+          </category>
+        </category>
+        <category ID="bfr_2022_6">
+          <label xml:lang="de" text="Abteilung 6 - Sicherheit von Pestiziden" />
+          <label xml:lang="en" text="Department 6" />
+          <category ID="bfr_2022_6L">
+            <label xml:lang="de" text="Abteilung 6 - Leitung" />
+            <label xml:lang="en" text="Department 6" />
+          </category>
+          <category ID="bfr_2022_61">
+            <label xml:lang="de" text="Fachgruppe 61 - Steuerung und Gesamtbewertung Pflanzenschutz" />
+            <label xml:lang="en" text="Unit 61" />
+          </category>
+          <category ID="bfr_2022_62">
+            <label xml:lang="de" text="Fachgruppe 62 - Steuerung und Gesamtbewertung Biozide" />
+            <label xml:lang="en" text="Unit 62" />
+          </category>
+          <category ID="bfr_2022_63">
+            <label xml:lang="de" text="Fachgruppe 63 - Toxikologie der Wirkstoffe und ihrer Metabolite" />
+            <label xml:lang="en" text="Unit 63" />
+          </category>
+          <category ID="bfr_2022_64">
+            <label xml:lang="de" text="Fachgruppe 64 - Toxikologie der Präparate und Anwendungssicherheit" />
+            <label xml:lang="en" text="Unit 64" />
+          </category>
+          <category ID="bfr_2022_65">
+            <label xml:lang="de" text="Fachgruppe 65 - Rückstände und Analyseverfahren" />
+            <label xml:lang="en" text="Unit 65" />
+          </category>
+          <category ID="bfr_2022_66">
+            <label xml:lang="de" text="Fachgruppe 66 - Prüf- und Bewertungsstrategien von Pestiziden" />
+            <label xml:lang="en" text="Unit 66" />
+          </category>
+          <category ID="bfr_2022_6ng1">
+            <label xml:lang="de" text="6 NG 1 - Hautmikrobiom" />
+            <label xml:lang="en" text="6 NG 1" />
+          </category>
+          <category ID="bfr_2022_6ng2">
+            <label xml:lang="de" text="6 NG 2 - New-Approach-Method (NAM) basierte Bewertung von Mischungstoxizitäten" />
+            <label xml:lang="en" text="6 NG 2" />
+          </category>
+        </category>
+        <category ID="bfr_2022_7">
+          <label xml:lang="de" text="Abteilung 7 - Chemikalien- und Produktsicherheit" />
+          <label xml:lang="en" text="Department 7" />
+          <category ID="bfr_2022_7L">
+            <label xml:lang="de" text="Abteilung 7 - Leitung" />
+            <label xml:lang="en" text="Department 7" />
+          </category>
+          <category ID="bfr_2022_71">
+            <label xml:lang="de" text="Fachgruppe 71 - Steuerung der Verfahren und Bewertungsstrategien" />
+            <label xml:lang="en" text="Unit 71" />
+          </category>
+          <category ID="bfr_2022_72">
+            <label xml:lang="de" text="Fachgruppe 72 - Chemikaliensicherheit" />
+            <label xml:lang="en" text="Unit 72" />
+          </category>
+          <category ID="bfr_2022_73">
+            <label xml:lang="de" text="Fachgruppe 73 - Sicherheit von Verbraucherprodukten" />
+            <label xml:lang="en" text="Unit 73" />
+          </category>
+          <category ID="bfr_2025_74">
+            <label xml:lang="de" text="Fachgruppe 74 - Zellbasierte Teststrategien und Toxikogenomik" />
+            <label xml:lang="en" text="Unit 74" />
+          </category>
+          <category ID="bfr_2022_74">
+            <label xml:lang="de" text="Fachgruppe 74 - Sicherheit von Lebensmittelkontaktmaterialien (bis Juni 2025)" />
+            <label xml:lang="en" text="Unit 74 (until 2025)" />
+          </category>
+          <category ID="bfr_2022_75">
+            <label xml:lang="de" text="Fachgruppe 75 - Produktbeschaffenheit und Nanotechnologie" />
+            <label xml:lang="en" text="Unit 75" />
+          </category>
+          <category ID="bfr_2022_76">
+            <label xml:lang="de" text="Fachgruppe 76 - Faser-und Nanotoxikologie" />
+            <label xml:lang="en" text="Unit 76" />
+          </category>
+          <category ID="bfr_2022_77">
+            <label xml:lang="de" text="Fachgruppe 77 - Produktanalytik" />
+            <label xml:lang="en" text="Unit 77" />
+          </category>
+          <category ID="bfr_2022_7sz">
+            <label xml:lang="de" text="7 SZ - Studienzentrum Dermatotoxikologie" />
+            <label xml:lang="en" text="7 SZ" />
+          </category>
+        </category>
+        <category ID="bfr_2022_8">
+          <label xml:lang="de" text="Abteilung 8 - Lebens- und Futtermittelsicherheit in der Nahrungskette" />
+          <label xml:lang="en" text="Department 8" />
+          <category ID="bfr_2025_8L">
+            <label xml:lang="de" text="Abteilung 8 - Lebens- und Futtermittelsicherheit in der Nahrungskette" />
+            <label xml:lang="en" text="Department 8" />
+          </category>
+          <category ID="bfr_2022_8L">
+            <label xml:lang="de" text="Abteilung 8 - Sicherheit in der Nahrungskette (bis Juni 2025)" />
+            <label xml:lang="en" text="Department 8 (until June 2025)" />
+          </category>
+          <category ID="bfr_2025_8fz">
+            <label xml:lang="de" text="8FZ - Futtermittelsicherheit, Stofftransfer in der der Nahrungskette" />
+            <label xml:lang="en" text="8 FZ" />
+          </category>
+          <category ID="bfr_2025_81">
+            <label xml:lang="de" text="Fachgruppe 81 - Lebensmitteltoxikologie" />
+            <label xml:lang="en" text="Unit 81" />
+          </category>
+          <category ID="bfr_2022_81">
+            <label xml:lang="de" text="Fachgruppe 81 - Rückstände (bis Juni 2025)" />
+            <label xml:lang="en" text="Unit 81 (until June 2025)" />
+          </category>
+          <category ID="bfr_2025_82">
+            <label xml:lang="de" text="Fachgruppe 82 - Sicherheit von Lebensmittelkontaktmaterialien" />
+            <label xml:lang="en" text="Unit 82" />
+          </category>
+          <category ID="bfr_2022_82">
+            <label xml:lang="de" text="Fachgruppe 82 - Kontaminanten (bis Juni 2025)" />
+            <label xml:lang="en" text="Unit 82 (until June 2025)" />
+          </category>
+          <category ID="bfr_2025_83">
+            <label xml:lang="de" text="Fachgruppe 83 - Neuartige Lebensmittel, GMO, Lebensmittelzusatz-, Aroma- und  Futtermittelzusatzstoffe" />
+            <label xml:lang="en" text="Unit 83" />
+          </category>
+          <category ID="bfr_2022_83">
+            <label xml:lang="de" text="Fachgruppe 83 - Produktidentität, Warenketten und Rückverfolgbarkeit (bis Juni 2025)" />
+            <label xml:lang="en" text="Unit 83 (until June 2025)" />
+          </category>
+          <category ID="bfr_2025_84">
+            <label xml:lang="de" text="Fachgruppe 84 - Ernährungsrisiken und Biomarker" />
+            <label xml:lang="en" text="Unit 84" />
+          </category>
+          <category ID="bfr_2022_84">
+            <label xml:lang="de" text="Fachgruppe 84 - Futtermittel und Futtermittelzusatzstoffe (bis Juni 2025)" />
+            <label xml:lang="en" text="Unit 84 (until June 2025)" />
+          </category>
+          <category ID="bfr_2022_85">
+            <label xml:lang="de" text="Fachgruppe 85 - Pflanzen- und Mykotoxine (bis Juni 2025)" />
+            <label xml:lang="en" text="Unit 85 (until June 2025)" />
+          </category>
+          <category ID="bfr_2025_8hsz">
+            <label xml:lang="de" text="8HSZ - Humanstudienzentrum Gesundheitlicher Verbraucherschutz" />
+            <label xml:lang="en" text="8 HSZ" />
+          </category>
+          <category ID="bfr_2022_8sz">
+            <label xml:lang="de" text="8 SZ - Studienzentrum Landnutzungsbezogene Bewertungsverfahren, One-Health-Konzepte" />
+            <label xml:lang="en" text="8 SZ" />
+          </category>
+        </category>
+        <category ID="bfr_2022_9">
+          <label xml:lang="de" text="Abteilung 9 - Deutsches Zentrum zum Schutz von Versuchstieren und experimentelle Toxikologie" />
+          <label xml:lang="en" text="Department 9" />
+          <category ID="bfr_2025_9L">
+            <label xml:lang="de" text="Abteilung 9 - Deutsches Zentrum zum Schutz von Versuchstieren und experimentelle Toxikologie" />
+            <label xml:lang="en" text="Department 9" />
+          </category>
+          <category ID="bfr_2022_9L">
+            <label xml:lang="de" text="Abteilung 9 - Experimentelle Toxikologie und ZEBET (bis Juni 2025)" />
+            <label xml:lang="en" text="Department 9 (until June 2025)" />
+          </category>
+          <category ID="bfr_2022_91">
+            <label xml:lang="de" text="Fachgruppe 91 - Zentralstelle zur Erfassung und Bewertung von Ersatz- und Ergänzungsmethoden zum Tierversuch" />
+            <label xml:lang="en" text="Unit 91" />
+          </category>
+          <category ID="bfr_2025_92">
+            <label xml:lang="de" text="Fachgruppe 92 - Verhalten von Versuchstieren und Refinement" />
+            <label xml:lang="en" text="Unit 92" />
+          </category>
+          <category ID="bfr_2022_92">
+            <label xml:lang="de" text="Fachgruppe 92 - Versuchstierkunde (bis Juni 2025)" />
+            <label xml:lang="en" text="Unit 92 (until June 2025)" />
+          </category>
+          <category ID="bfr_2022_93">
+            <label xml:lang="de" text="Fachgruppe 93 - Toxikologische Bewertungsstrategien" />
+            <label xml:lang="en" text="Unit 93" />
+          </category>
+          <category ID="bfr_2025_94">
+            <label xml:lang="de" text="Fachgruppe 94 - Tierschutz, Wissenstransfer und Nationaler Ausschuss" />
+            <label xml:lang="en" text="Unit 94" />
+          </category>
+          <category ID="bfr_2022_94">
+            <label xml:lang="de" text="Fachgruppe 94 - Tierschutz und Wissenstransfer (bis Juni 2025)" />
+            <label xml:lang="en" text="Unit 94 (until June 2025)" />
+          </category>
+          <category ID="bfr_2025_95">
+            <label xml:lang="de" text="Fachgruppe 95 - Tierhaltung und Versuchstierkunde" />
+            <label xml:lang="en" text="Unit 95" />
+          </category>
+          <category ID="bfr_2022_95">
+            <label xml:lang="de" text="Fachgruppe 95 - Tierhaltung, Aquakultur und Referenzmaterial (bis Juni 2025)" />
+            <label xml:lang="en" text="Unit 95 (until June 2025)" />
+          </category>
+          <category ID="bfr_2022_9dz">
+            <label xml:lang="de" text="9DZ - Deutsches Zentrum zum Schutz von Versuchstieren" />
+            <label xml:lang="en" text="9 DZ" />
+          </category>
+        </category>
       </category>
-      <category ID="bfr_bf3r_201606">
-        <label xml:lang="en" text="German Centre for the Protection of Laboratory Animals (Bf3R)" />
-        <label xml:lang="de" text="Deutsches Zentrum zum Schutz von Versuchstieren (Bf3R)" />
+      <category ID="bfr_201406">
+        <label xml:lang="de" text="Bundesinstitut für Risikobewertung (Juli 2014 - 2021)" description="Struktur gültig seit Juli 2014" />
+        <label xml:lang="en" text="German Federal Institute for Risk Assessment (July 2014 - 2021)" />
+        <label xml:lang="x-valfrom" text="2014-07" />
+        <url xlink:type="locator" xlink:href="https://www.bfr.bund.de/" />
+        <category ID="bfr_rbs_201406">
+          <label xml:lang="de" text="Risikobewertungsstrategien (Juli 2014 - 2021)" />
+          <label xml:lang="en" text="Risk Assessment Strategies (July 2014 - 2021)" />
+        </category>
+        <category ID="bfr_int_201406">
+          <label xml:lang="de" text="Internationale Angelegenheiten (Juli 2014 - 2021)" />
+          <label xml:lang="en" text="International Affairs (July 2014 - 2021)" />
+        </category>
+        <category ID="bfr_nat_201708">
+          <label xml:lang="de" text="Nationaler Ausschuss Tierschutzgesetz (Juli 2014 - 2021)" />
+          <label xml:lang="en" text="National Committee for the Protection of Animals Used for Scientific Purposes for the Federal Republic of Germany (July 2014 - 2021)" />
+        </category>
+        <category ID="bfr_leitg_201406">
+          <label xml:lang="de" text="Leitung (Juli 2014 - 2021)" />
+          <label xml:lang="en" text="Executive Office (July 2014 - 2021)" />
+        </category>
+        <category ID="bfr_fsk_201407">
+          <label xml:lang="de" text="Forschungsstrategie und -koordination (FSK) (Juli 2014 - 2021)" />
+          <label xml:lang="en" text="Research Strategy and Coordination (FSK) (July 2014 - 2021)" />
+        </category>
+        <category ID="bfr_fk_201406">
+          <label xml:lang="de" text="Forschungskoordination/Grundsatzangelegenheiten (Juli 2014 - 2021)" />
+          <label xml:lang="en" text="Research Coordination/Policy Matters (July 2014 - 2021)" />
+        </category>
+        <category ID="bfr_verw_201406">
+          <label xml:lang="de" text="Abteilung 1 - Verwaltung (Juli 2014 - 2021)" />
+          <label xml:lang="en" text="Department 1 - Adminitration (July 2014 - 2021)" />
+          <category ID="bfr_11_201406">
+            <label xml:lang="de" text="Referat 11 - Personal (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Section 11 Personnel (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_12_201406">
+            <label xml:lang="de" text="Referat 12 - Haushalt (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Section 12 Budget (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_13_201406">
+            <label xml:lang="de" text="Referat 13 - Organisation (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Section 13 Organisation (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_14_201406">
+            <label xml:lang="de" text="Referat 14 - Beschaffung (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Section 14 Procurement (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_15_201406">
+            <label xml:lang="de" text="Referat 15 - Innerer Dienst (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Section 15 Internal Services (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_16_201406">
+            <label xml:lang="de" text="Referat 16 - Bau und Technik (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Section 16 Buildings and Technology (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_17_201406">
+            <label xml:lang="de" text="Referat 17 - Justiziariat (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Section 17 Legal Affairs (July 2014 - 2021)" />
+          </category>
+        </category>
+        <category ID="bfr_riko_201406">
+          <label xml:lang="de" text="Abteilung 2 - Risikokommunikation (Juli 2014 - 2021)" />
+          <label xml:lang="en" text="Department 2 Risk Communication (July 2014 - 2021)" />
+          <category ID="bfr_2ngRV_201406">
+            <label xml:lang="de" text="2 NG - Reputation und Vertrauensbildung (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="2 NG - Junior Research Group Reputation and Trust Building (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_2sz_201406">
+            <label xml:lang="de" text="2 SZ - Sozialwissenschaftliche Risikokommunikationsforschung (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="2 SZ - Study Centre for Socio-Scientific Risk Communication Research (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_2ng_201406">
+            <label xml:lang="de" text="2NG - Empirische Sozialforschung (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Junior Research Group 2NG - Social Research (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_21_201406">
+            <label xml:lang="de" text="Fachgruppe 21 - Krisenprävention und -koordination (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 21 Crisis Prevention and Coordination (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_22_201406">
+            <label xml:lang="de" text="Fachgruppe 22 - Risikoforschung, -wahrnehmung, -früherkennung und -folgenabschätzung (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 22 Risk Research, Perception, Early Detection and Impact Assessment (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_23_201406">
+            <label xml:lang="de" text="Fachgruppe 23 - Presse- und Öffentlichkeitsarbeit (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 23 Press and Public Relations (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_24_201406">
+            <label xml:lang="de" text="Fachgruppe 24 - BfR-Akademie (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 24 BfR Academy (July 2014 - 2021)" />
+          </category>
+        </category>
+        <category ID="bfr_quer_201406">
+          <label xml:lang="de" text="Abteilung 3 - Exposition (Juli 2014 - 2021)" />
+          <label xml:lang="en" text="Department 3 Exposure (July 2014 - 2021)" />
+          <category ID="bfr_36NV_201406">
+            <label xml:lang="de" text="Fachgruppe 36 - Nationales Vergiftungsregister (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 36 - National Registry of Poisonings (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_3sz_201406">
+            <label xml:lang="de" text="MEAL Studienzentrum 3SZ - Nationale Total-Diet-Studie (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="MEAL Study Centre 3SZ - National Total Diet Study (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_31_201406">
+            <label xml:lang="de" text="Fachgruppe 31 - Transport gefährlicher Güter (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 31 Transport of Dangerous Goods (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_32_201406">
+            <label xml:lang="de" text="Fachgruppe 32 - Vergiftungs- und Produktdokumentation (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 32 Poison and Product Documentation Centre (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_33_201406">
+            <label xml:lang="de" text="Fachgruppe 33 - Epidemiologie, Statistik und mathematische Modellierung (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 33 Epidemiology, Statistics and Mathematical Modelling (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_34_201406">
+            <label xml:lang="de" text="Fachgruppe 34 - Expositionsschätzung und -standardisierung (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 34 Exposure Assessment and Exposure Standardisation (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_35_201406">
+            <label xml:lang="de" text="Fachgruppe 35 - Informationstechnik (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 35 Information Technology (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_36_201406">
+            <label xml:lang="de" text="Fachgruppe 36 - GLP-Bundesstelle und Qualitätsmanagement (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 36 GLP Federal Bureau and Quality Management (July 2014 - 2021)" />
+          </category>
+        </category>
+        <category ID="bfr_bios_201406">
+          <label xml:lang="de" text="Abteilung 4 - Biologische Sicherheit (Juli 2014 - 2021)" />
+          <label xml:lang="en" text="Department 4 Biological Safety (July 2014 - 2021)" />
+          <category ID="bfr_4nsz_201406">
+            <label xml:lang="de" text="4NSZ - Nationales Studienzentrum für Sequenzierungen in der Risikobewertung (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="4NSZ - National Study Centre for Sequencing in Risk Assessment (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_4ng_201406">
+            <label xml:lang="de" text="Nachwuchsgruppe 4 NG - Warenkettenmodelle (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Junior Research Group 4 NG - Supply Chain Models (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_4sz_201406">
+            <label xml:lang="de" text="Studienzentrum 4SZ - Genomsequenzierung und -analyse (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Study Centre 4SZ - Genome Sequencing and Analysis (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_41_201406">
+            <label xml:lang="de" text="Fachgruppe 41 - Lebensmitteltechnologische Verfahren, Warenketten und Produktschutz (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 41 Food Technologies, Supply Chains and Food Defense (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_42_201406">
+            <label xml:lang="de" text="Fachgruppe 42 - Lebensmittelhygiene und -virologie (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 42 Food Hygiene and Food Virology (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_43_201406">
+            <label xml:lang="de" text="Fachgruppe 43 - Epidemiologie, Zoonosen und Antibiotikaresistenz (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 43 Epidemiology, Zoonoses and Antimicrobial Resistance (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_44_201406">
+            <label xml:lang="de" text="Fachgruppe 44 - Mikrobielle Toxine (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 44 Microbial Toxins (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_45_201406">
+            <label xml:lang="de" text="Fachgruppe 45 - Diagnostik und Erregercharakterisierung (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 45 Diagnostics and Pathogen Characterisation (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_46_201406">
+            <label xml:lang="de" text="Fachgruppe 46 - Molekulare Mikrobiologie und Genomanalyse (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 46 Molecular Microbiology and Genome Analysis (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_47_201406">
+            <label xml:lang="de" text="Fachgruppe 47 - Produkthygiene und Desinfektionsstrategien (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 47 Product Hygiene and Disinfection Strategies (July 2014 - 2021)" />
+          </category>
+        </category>
+        <category ID="bfr_lms_201406">
+          <label xml:lang="de" text="Abteilung 5 - Lebensmittelsicherheit (Juli 2014 - 2021)" />
+          <label xml:lang="en" text="Department 5 Food Safety (July 2014 - 2021)" />
+          <category ID="bfr_5ng_201406">
+            <label xml:lang="de" text="Nachwuchsgruppe 5NG - Nanotoxicologie (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Junior Research Group 5NG - Nanotoxicology (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_5sz_201406">
+            <label xml:lang="de" text="Studienzentrum  5 SZ - Humanstudienzentrum gesundheitlicher Verbraucherschutz (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Study Centre 5SZ - Human Study Centre Consumer Health Protection (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_51_201406">
+            <label xml:lang="de" text="Fachgruppe 51 - Wirkungsbezogene Analytik und Toxikogenomics (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 51 Effect-based Analytics and Toxicogenomics (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_52_201406">
+            <label xml:lang="de" text="Fachgruppe 52 - Lebensmitteltoxikologie (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 52 Food Toxicology (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_53_201406">
+            <label xml:lang="de" text="Fachgruppe 53 - Ernährungsrisiken, Allergien und Neuartige Lebensmittel (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 53 Nutritional Risks, Allergies and Novel Foods (Juli 2014 - 2021)" />
+          </category>
+          <category ID="bfr_54_201406">
+            <label xml:lang="de" text="Fachgruppe 54 - Risiken besonderer Bevölkerungsgruppen und Humanstudien (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 54 Risks of Subpopulations and Human Studies (Juli 2014 - 2021)" />
+          </category>
+        </category>
+        <category ID="bfr_chs_201406">
+          <label xml:lang="de" text="Abteilung 6 - Sicherheit von Pestiziden (Juli 2014 - 2021)" />
+          <label xml:lang="en" text="Department 6 Pesticides Safety (July 2014 - 2021)" />
+          <category ID="bfr_6ng2_201406">
+            <label xml:lang="de" text="6 NG 2 - New-Approach-Method-(NAM)-basierte Bewertung von Mischungstoxizitäten (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="6 NG 2 - Junior Research Group Mixture Toxicity (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_6ng1_201406">
+            <label xml:lang="de" text="6 NG 1 - Hautmikrobiom (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="6  NG1 - Junior Research Group Skin Microbiome (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_61_201406">
+            <label xml:lang="de" text="Fachgruppe 61 - Steuerung und Gesamtbewertung Pflanzenschutz (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 61 Steering and Overall Assessment – Plant Protection (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_62_201406">
+            <label xml:lang="de" text="Fachgruppe 62 - Steuerung und Gesamtbewertung Biozide (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 62 Steering and Overall Assessment – Biocides (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_63_201406">
+            <label xml:lang="de" text="Fachgruppe 63 - Toxikologie der Wirkstoffe und ihrer Metabolite (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 63 Toxicology of Active Substances and their Metabolites (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_64_201406">
+            <label xml:lang="de" text="Fachgruppe 64 - Toxikologie der Präparate und Anwendungssicherheit (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 64 Toxicology of Products and their Safe Use (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_65_201406">
+            <label xml:lang="de" text="Fachgruppe 65 - Rückstände und Analyseverfahren (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 65 Residues and Analytical Methods (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_66_201406">
+            <label xml:lang="de" text="Fachgruppe 66 - Prüf- und Bewertungsstrategien von Pestiziden (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 66 - Testing and Assessment Strategies Pesticides (July 2014 - 2021)" />
+          </category>
+        </category>
+        <category ID="bfr_prs_201406">
+          <label xml:lang="de" text="Abteilung 7 - Chemikalien- und Produktsicherheit (Juli 2014 - 2021)" />
+          <label xml:lang="en" text="Department 7 Chemical and Product Safety (July 2014 - 2021)" />
+          <category ID="bfr_7sz_201406">
+            <label xml:lang="de" text="Studienzentrum 7 SZ - Dermatotoxikologie (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Study Centre 7SZ - Dermatotoxikology (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_71_201406">
+            <label xml:lang="de" text="Fachgruppe 71 - Steuerung und Gesamtbewertung (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 71 Coordination and Overall Assessment (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_72_201406">
+            <label xml:lang="de" text="Fachgruppe 72 - Chemikaliensicherheit (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 72 Chemicals Safety (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_73_201406">
+            <label xml:lang="de" text="Fachgruppe 73 - Sicherheit von Produkten ohne Lebensmittelkontakt (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 73 Safety of Non-Food Products (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_74_201406">
+            <label xml:lang="de" text="Fachgruppe 74 - Sicherheit von Produkten mit Lebensmittelkontakt (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 74 Safety of Food-Contact Materials (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_75_201406">
+            <label xml:lang="de" text="Fachgruppe 75 - Produktbeschaffenheit und Nanotechnologie (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 75 Product Research and Nanotechnology (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_76_201406">
+            <label xml:lang="de" text="Fachgruppe 76 - Faser-und Nanotoxikologie (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 76 - Fibre and Nanotoxicology (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_77_201406">
+            <label xml:lang="de" text="Fachgruppe 77 - Produktanalytik (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 77 - Product Analytics (July 2014 - 2021)" />
+          </category>
+        </category>
+        <category ID="bfr_sin_201406">
+          <label xml:lang="de" text="Abteilung 8 - Sicherheit in der Nahrungskette (Juli 2014 - 2021)" />
+          <label xml:lang="en" text="Department 8 Safety in the Food Chain (July 2014 - 2021)" />
+          <category ID="bfr_8sz_201406">
+            <label xml:lang="de" text="Studienzentrum 8SZ - Landnutzungsbezogene Bewertungsverfahren, One-Health-Konzepte (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Study Centre 8SZ  Landuse related Evaluation procedures, One-Health (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_81_201406">
+            <label xml:lang="de" text="Fachgruppe 81 - Rückstände (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 81 Residues (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_82_201406">
+            <label xml:lang="de" text="Fachgruppe 82 - Kontaminanten (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 82 Contaminants (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_83_201406">
+            <label xml:lang="de" text="Fachgruppe 83 - Produktidentität, Warenketten und Rückverfolgbarkeit (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 83 Product Identity, Supply Chains and Traceability (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_84_201406">
+            <label xml:lang="de" text="Fachgruppe 84 - Futtermittel und Futtermittelzusatzstoffe (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 84 Feed and Feed Additives (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_85_201406">
+            <label xml:lang="de" text="Fachgruppe 85 - Pflanzen- und Mykotoxine (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 85 Plant- and Mycotoxins (July 2014 - 2021)" />
+          </category>
+        </category>
+        <category ID="bfr_tox_201406">
+          <label xml:lang="de" text="Abteilung 9 - Experimentelle Toxikologie und ZEBET (Juli 2014 - 2021)" />
+          <label xml:lang="en" text="Department 9 Experimental Toxicology and ZEBET (July 2014 - 2021)" />
+          <category ID="bfr_9bf3r_201606">
+            <label xml:lang="de" text="Deutsches Zentrum zum Schutz von Versuchstieren (Bf3R) (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="German Centre for the Protection of Laboratory Animals (Bf3R) (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_91_201406">
+            <label xml:lang="de" text="Fachgruppe 91 - Zentralstelle zur Erfassung und Bewertung von Ersatz- und Ergänzungsmethoden zum Tierversuch (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 91 – Centre for Documentation and Evaluation of Alternative Methods to Animal Experiments (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_92_201406">
+            <label xml:lang="de" text="Fachgruppe 92 - Versuchstierkunde (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 92 – Laboratory Animal Science (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_93_201406">
+            <label xml:lang="de" text="Fachgruppe 93 - Toxikologische Bewertungsstrategien (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 93 - Strategies for Toxicological Assessments (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_94_201406">
+            <label xml:lang="de" text="Fachgruppe 94 - Tierschutz und Wissenstransfer (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 94 - Animal Welfare and Knowledge Transfer (July 2014 - 2021)" />
+          </category>
+          <category ID="bfr_95_201406">
+            <label xml:lang="de" text="Fachgruppe 95 - Tierhaltung, Aquakultur und Referenzmaterial (Juli 2014 - 2021)" />
+            <label xml:lang="en" text="Unit 95 Animal husbandry, Aquaculture and Reference Materials (July 2014 - 2021)" />
+          </category>
+        </category>
       </category>
-      <category ID="bfr_leitg_201406">
-        <label xml:lang="en" text="Executive Office" />
-        <label xml:lang="de" text="Leitung" />
-      </category>
-      <category ID="bfr_fk_201406">
-        <label xml:lang="en" text="Research Coordination/Policy Matters" />
-        <label xml:lang="de" text="Forschungskoordination/Grundsatzangelegenheiten" />
-      </category>
-      <category ID="bfr_verw_201406">
-        <label xml:lang="en" text="Department 1 Adminitration" />
-        <label xml:lang="de" text="Abteilung 1 - Verwaltung" />
-        <category ID="bfr_11_201406">
-          <label xml:lang="de" text="Referat 11 - Personal" />
-          <label xml:lang="en" text="Section 11 Personnel" />
+      <category ID="bfr">
+        <label xml:lang="de" text="Bundesinstitut für Risikobewertung (bis Juni 2014)" />
+        <label xml:lang="x-valuntil" text="2014-06" />
+        <url xlink:type="locator" xlink:href="http://www.bfr.bund.de/" />
+        <category ID="bfr_leitg">
+          <label xml:lang="de" text="Leitung" />
         </category>
-        <category ID="bfr_12_201406">
-          <label xml:lang="de" text="Referat 12 - Haushalt" />
-          <label xml:lang="en" text="Section 12 Budget" />
+        <category ID="bfr_fk">
+          <label xml:lang="de" text="Forschungskoordination FK" />
         </category>
-        <category ID="bfr_13_201406">
-          <label xml:lang="de" text="Referat 13 - Organisation" />
-          <label xml:lang="en" text="Section 13 Organisation" />
+        <category ID="bfr_verw">
+          <label xml:lang="de" text="Abteilung 1 - Verwaltung (bis Juni 2014)" />
+          <category ID="bfr_11">
+            <label xml:lang="de" text="Referat 11 - Personal" />
+          </category>
+          <category ID="bfr_12">
+            <label xml:lang="de" text="Referat 12 - Haushalt" />
+          </category>
+          <category ID="bfr_13">
+            <label xml:lang="de" text="Referat 13 - Organisation" />
+          </category>
+          <category ID="bfr_14">
+            <label xml:lang="de" text="Referat 14 - Beschaffung" />
+          </category>
+          <category ID="bfr_15">
+            <label xml:lang="de" text="Referat 15 - Innerer Dienst" />
+          </category>
+          <category ID="bfr_16">
+            <label xml:lang="de" text="Referat 16 - Bau und Technik" />
+          </category>
+          <category ID="bfr_17">
+            <label xml:lang="de" text="Referat 17 - Justiziariat" />
+          </category>
         </category>
-        <category ID="bfr_14_201406">
-          <label xml:lang="de" text="Referat 14 - Beschaffung" />
-          <label xml:lang="en" text="Section 14 Procurement" />
+        <category ID="bfr_riko">
+          <label xml:lang="de" text="Abteilung 2 - Risikokommunikation (bis Juni 2014)" />
+          <category ID="bfr_21">
+            <label xml:lang="de" text="Fachgruppe 21 - Clearing, EFSA -Kontaktstelle und Kommissionen" />
+          </category>
+          <category ID="bfr_22">
+            <label xml:lang="de" text="Fachgruppe 22 - Risikoforschung, -wahrnehmung, -früherkennung und -folgenabschätzung" />
+          </category>
+          <category ID="bfr_23">
+            <label xml:lang="de" text="Fachgruppe 23 - Presse- und Öffentlichkeitsarbeit" />
+          </category>
+          <category ID="bfr_24">
+            <label xml:lang="de" text="Fachgruppe 24 - Wissenschaftliches Veranstaltungsmanagement" />
+          </category>
         </category>
-        <category ID="bfr_15_201406">
-          <label xml:lang="de" text="Referat 15 - Innerer Dienst" />
-          <label xml:lang="en" text="Section 15 Internal Services" />
+        <category ID="bfr_quer">
+          <label xml:lang="de" text="Abteilung 3 - Wissenschaftliche Querschnittsaufgaben (bis Juni 2014)" />
+          <category ID="bfr_31">
+            <label xml:lang="de" text="Fachgruppe 31 - Internationale Chemikalienprogramme" />
+          </category>
+          <category ID="bfr_32">
+            <label xml:lang="de" text="Fachgruppe 32 - Vergiftungs- und Produktdokumentation" />
+          </category>
+          <category ID="bfr_33">
+            <label xml:lang="de" text="Fachgruppe 33 - Epidemiologie, Biometrie und mathematische Modellierung" />
+          </category>
+          <category ID="bfr_34">
+            <label xml:lang="de" text="Fachgruppe 34 - Expositionsschätzung und Expositionsstandardisierung" />
+          </category>
+          <category ID="bfr_35">
+            <label xml:lang="de" text="Fachgruppe 35 - Informationstechnik" />
+          </category>
+          <category ID="bfr_36">
+            <label xml:lang="de" text="Fachgruppe 36 - GLP-Bundesstelle und Qualitätsmanagement" />
+          </category>
         </category>
-        <category ID="bfr_16_201406">
-          <label xml:lang="de" text="Referat 16 - Bau und Technik" />
-          <label xml:lang="en" text="Section 16 Buildings and Technology" />
+        <category ID="bfr_bios">
+          <label xml:lang="de" text="Abteilung 4 - Biologische Sicherheit (bis Juni 2014)" />
+          <category ID="bfr_41">
+            <label xml:lang="de" text="Fachgruppe 41 - Mikrobielle Toxine" />
+          </category>
+          <category ID="bfr_42">
+            <label xml:lang="de" text="Fachgruppe 42 - Lebensmittelhygiene und Sicherheitskonzepte" />
+          </category>
+          <category ID="bfr_43">
+            <label xml:lang="de" text="Fachgruppe 43 - Infektionsepidemiologie und Zoonosen" />
+          </category>
+          <category ID="bfr_44">
+            <label xml:lang="de" text="Fachgruppe 44 - Prävention und Aufklärung lebensmittelbedingter Ausbrüche" />
+          </category>
+          <category ID="bfr_45">
+            <label xml:lang="de" text="Fachgruppe 45 - Diagnostik, Genetik und Erregercharakterisierung" />
+          </category>
+          <category ID="bfr_46">
+            <label xml:lang="de" text="Fachgruppe 46 - Antibiotikaresistenz und Resistenzdeterminanten" />
+          </category>
         </category>
-        <category ID="bfr_17_201406">
-          <label xml:lang="de" text="Referat 17 - Justiziariat" />
-          <label xml:lang="en" text="Section 17 Legal Affairs" />
+        <category ID="bfr_lms">
+          <label xml:lang="de" text="Abteilung 5 - Lebensmittelsicherheit (bis Juni 2014)" />
+          <category ID="bfr_51">
+            <label xml:lang="de" text="Fachgruppe 51 - Wirkungsbezogene Analytik und Toxikokinetik" />
+          </category>
+          <category ID="bfr_52">
+            <label xml:lang="de" text="Fachgruppe 52 - Lebensmitteltoxikologie" />
+          </category>
+          <category ID="bfr_53">
+            <label xml:lang="de" text="Fachgruppe 53 - Ernährungsrisiken, Allergien und Neuartige Lebensmittel" />
+          </category>
         </category>
-      </category>
-      <category ID="bfr_riko_201406">
-        <label xml:lang="de" text="Abteilung 2 - Risikokommunikation" />
-        <label xml:lang="en" text="Department 2 Risk Communication" />
-        <category ID="bfr_21_201406">
-          <label xml:lang="de" text="Fachgruppe 21 - Krisenprävention und -koordination" />
-          <label xml:lang="en" text="Unit 21 Crisis Prevention and Coordination" />
+        <category ID="bfr_chs">
+          <label xml:lang="de" text="Abteilung 6 - Chemikaliensicherheit (bis Juni 2014)" />
+          <category ID="bfr_61">
+            <label xml:lang="de" text="Fachgruppe 61 - Steuerung der gesetzlichen Verfahren und Gesamtbewertung" />
+          </category>
+          <category ID="bfr_62">
+            <label xml:lang="de" text="Fachgruppe 62 - Toxikologie der Pestizide und Biozide" />
+          </category>
+          <category ID="bfr_63">
+            <label xml:lang="de" text="Fachgruppe 63 - Toxikologie der Chemikalien" />
+          </category>
+          <category ID="bfr_64">
+            <label xml:lang="de" text="Fachgruppe 64 - Anwendungssicherheit" />
+          </category>
+          <category ID="bfr_65">
+            <label xml:lang="de" text="Fachgruppe 65 - Rückstandsbewertung von Pestiziden und Bioziden" />
+          </category>
         </category>
-        <category ID="bfr_22_201406">
-          <label xml:lang="de" text="Fachgruppe 22 - Risikoforschung, -wahrnehmung, -früherkennung und -folgenabschätzung" />
-          <label xml:lang="en" text="Unit 22 Risk Research, Perception, Early Detection and Impact Assessment" />
+        <category ID="bfr_prs">
+          <label xml:lang="de" text="Abteilung 7 - Produktsicherheit (bis Juni 2014)" />
+          <category ID="bfr_71">
+            <label xml:lang="de" text="Fachgruppe 71 - Toxikologie von verbrauchernahen Produkten" />
+          </category>
+          <category ID="bfr_72">
+            <label xml:lang="de" text="Fachgruppe 72 - Analytik und Expositionsabschätzung" />
+          </category>
+          <category ID="bfr_73">
+            <label xml:lang="de" text="Fachgruppe 73 - Experimentelle Forschung" />
+          </category>
+          <category ID="bfr_74">
+            <label xml:lang="de" text="Fachgruppe 74 - Hygiene und Mikrobiologie" />
+          </category>
+          <category ID="bfr_75">
+            <label xml:lang="de" text="Fachgruppe 75 - Technologie" />
+          </category>
         </category>
-        <category ID="bfr_23_201406">
-          <label xml:lang="en" text="Unit 23 Press and Public Relations" />
-          <label xml:lang="de" text="Fachgruppe 23 - Presse- und Öffentlichkeitsarbeit" />
+        <category ID="bfr_sin">
+          <label xml:lang="de" text="Abteilung 8 - Sicherheit in der Nahrungskette (bis Juni 2014)" />
+          <category ID="bfr_81">
+            <label xml:lang="de" text="Fachgruppe 81 - Rückstände" />
+          </category>
+          <category ID="bfr_82">
+            <label xml:lang="de" text="Fachgruppe 82 - Kontaminanten" />
+          </category>
+          <category ID="bfr_83">
+            <label xml:lang="de" text="Fachgruppe 83 - Produktidentität und Rückverfolgbarkeit" />
+          </category>
+          <category ID="bfr_84">
+            <label xml:lang="de" text="Fachgruppe 84 - Futtermittel und Futtermittelzusatzstoffe" />
+          </category>
         </category>
-        <category ID="bfr_24_201406">
-          <label xml:lang="en" text="Unit 24 BfR Academy" />
-          <label xml:lang="de" text="Fachgruppe 24 - BfR-Akademie" />
-        </category>
-      </category>
-      <category ID="bfr_quer_201406">
-        <label xml:lang="de" text="Abteilung 3 - Exposition" />
-        <label xml:lang="en" text="Department 3 Exposure" />
-        <category ID="bfr_31_201406">
-          <label xml:lang="en" text="Unit 31 Transport of Dangerous Goods" />
-          <label xml:lang="de" text="Fachgruppe 31 - Transport gefährlicher Güter" />
-        </category>
-        <category ID="bfr_32_201406">
-          <label xml:lang="de" text="Fachgruppe 32 - Vergiftungs- und Produktdokumentation" />
-          <label xml:lang="en" text="Unit 32 Poison and Product Documentation Centre" />
-        </category>
-        <category ID="bfr_33_201406">
-          <label xml:lang="de" text="Fachgruppe 33 - Epidemiologie, Statistik und mathematische Modellierung" />
-          <label xml:lang="en" text="Unit 33 Epidemiology, Statistics and Mathematical Modelling" />
-        </category>
-        <category ID="bfr_34_201406">
-          <label xml:lang="de" text="Fachgruppe 34 - Expositionsschätzung und -standardisierung" />
-          <label xml:lang="en" text="Unit 34 Exposure Assessment and Exposure Standardisation" />
-        </category>
-        <category ID="bfr_35_201406">
-          <label xml:lang="de" text="Fachgruppe 35 - Informationstechnik" />
-          <label xml:lang="en" text="Unit 35 Information Technology" />
-        </category>
-        <category ID="bfr_36_201406">
-          <label xml:lang="en" text="Unit 36 GLP Federal Bureau and Quality Management" />
-          <label xml:lang="de" text="Fachgruppe 36 - GLP-Bundesstelle und Qualitätsmanagement" />
-        </category>
-      </category>
-      <category ID="bfr_bios_201406">
-        <label xml:lang="de" text="Abteilung 4 - Biologische Sicherheit" />
-        <label xml:lang="en" text="Department 4 Biological Safety" />
-        <category ID="bfr_41_201406">
-          <label xml:lang="en" text="Unit 41 Food Technologies, Supply Chains and Food Defense" />
-          <label xml:lang="de" text="Fachgruppe 41 - Lebensmitteltechnologische Verfahren, Warenketten und Produktschutz" />
-        </category>
-        <category ID="bfr_42_201406">
-          <label xml:lang="en" text="Unit 42 Food Hygiene and Food Virology" />
-          <label xml:lang="de" text="Fachgruppe 42 - Lebensmittelhygiene und -virologie" />
-        </category>
-        <category ID="bfr_43_201406">
-          <label xml:lang="de" text="Fachgruppe 43 - Epidemiologie, Zoonosen und Antibiotikaresistenz" />
-          <label xml:lang="en" text="Unit 43 Epidemiology, Zoonoses and Antimicrobial Resistance" />
-        </category>
-        <category ID="bfr_44_201406">
-          <label xml:lang="de" text="Fachgruppe 44 - Mikrobielle Toxine" />
-          <label xml:lang="en" text="Unit 44 Microbial Toxins" />
-        </category>
-        <category ID="bfr_45_201406">
-          <label xml:lang="de" text="Fachgruppe 45 - Diagnostik und Erregercharakterisierung" />
-          <label xml:lang="en" text="Unit 45 Diagnostics and Pathogen Characterisation" />
-        </category>
-        <category ID="bfr_46_201406">
-          <label xml:lang="de" text="Fachgruppe 46 - Molekulare Mikrobiologie und Genomanalyse" />
-          <label xml:lang="en" text="Unit 46 Molecular Microbiology and Genome Analysis" />
-        </category>
-        <category ID="bfr_47_201406">
-          <label xml:lang="de" text="Fachgruppe 47 - Produkthygiene und Desinfektionsstrategien" />
-          <label xml:lang="en" text="Unit 47 Product Hygiene and Disinfection Strategies" />
-        </category>
-      </category>
-      <category ID="bfr_lms_201406">
-        <label xml:lang="de" text="Abteilung 5 - Lebensmittelsicherheit" />
-        <label xml:lang="en" text="Department 5 Food Safety" />
-        <category ID="bfr_51_201406">
-          <label xml:lang="en" text="Unit 51 Effect-based Analytics and Toxicogenomics" />
-          <label xml:lang="de" text="Fachgruppe 51 - Wirkungsbezogene Analytik und Toxikogenomics" />
-        </category>
-        <category ID="bfr_52_201406">
-          <label xml:lang="en" text="Unit 52 Food Toxicology" />
-          <label xml:lang="de" text="Fachgruppe 52 - Lebensmitteltoxikologie" />
-        </category>
-        <category ID="bfr_53_201406">
-          <label xml:lang="de" text="Fachgruppe 53 - Ernährungsrisiken, Allergien und Neuartige Lebensmittel" />
-          <label xml:lang="en" text="Unit 53 Nutritional Risks, Allergies and Novel Foods" />
-        </category>
-        <category ID="bfr_54_201406">
-          <label xml:lang="de" text="Fachgruppe 54 - Risiken besonderer Bevölkerungsgruppen und Humanstudien" />
-          <label xml:lang="en" text="Unit 54 Risks of Subpopulations and Human Studies" />
-        </category>
-      </category>
-      <category ID="bfr_chs_201406">
-        <label xml:lang="de" text="Abteilung 6 - Sicherheit von Pestiziden" />
-        <label xml:lang="en" text="Department 6 Pesticides Safety" />
-        <category ID="bfr_61_201406">
-          <label xml:lang="en" text="Unit 61 Steering and Overall Assessment – Plant Protection" />
-          <label xml:lang="de" text="Fachgruppe 61 - Steuerung und Gesamtbewertung Pflanzenschutz" />
-        </category>
-        <category ID="bfr_62_201406">
-          <label xml:lang="de" text="Fachgruppe 62 - Steuerung und Gesamtbewertung Biozide" />
-          <label xml:lang="en" text="Unit 62 Steering and Overall Assessment – Biocides" />
-        </category>
-        <category ID="bfr_63_201406">
-          <label xml:lang="de" text="Fachgruppe 63 - Toxikologie der Wirkstoffe und ihrer Metabolite" />
-          <label xml:lang="en" text="Unit 63 Toxicology of ActiveSubstances and their Metabolites" />
-        </category>
-        <category ID="bfr_64_201406">
-          <label xml:lang="de" text="Fachgruppe 64 - Toxikologie der Präparate und Anwendungssicherheit" />
-          <label xml:lang="en" text="Unit 64 Toxicology of Products and their Safe Use" />
-        </category>
-        <category ID="bfr_65_201406">
-          <label xml:lang="de" text="Fachgruppe 65 - Rückstände und Analyseverfahren" />
-          <label xml:lang="en" text="Unit 65 Residues and Analytical Methods" />
-        </category>
-      </category>
-      <category ID="bfr_prs_201406">
-        <label xml:lang="en" text="Department 7 Chemical and Product Safety" />
-        <label xml:lang="de" text="Abteilung 7 - Chemikalien- und Produktsicherheit" />
-        <category ID="bfr_71_201406">
-          <label xml:lang="de" text="Fachgruppe 71 - Steuerung und Gesamtbewertung" />
-          <label xml:lang="en" text="Unit 71 Coordination and Overall Assessment" />
-        </category>
-        <category ID="bfr_72_201406">
-          <label xml:lang="en" text="Unit 72 Chemicals Safety" />
-          <label xml:lang="de" text="Fachgruppe 72 - Chemikaliensicherheit" />
-        </category>
-        <category ID="bfr_73_201406">
-          <label xml:lang="en" text="Unit 73 Safety of Non-Food Products" />
-          <label xml:lang="de" text="Fachgruppe 73 - Sicherheit von Produkten ohne Lebensmittelkontakt" />
-        </category>
-        <category ID="bfr_74_201406">
-          <label xml:lang="de" text="Fachgruppe 74 - Sicherheit von Produkten mit Lebensmittelkontakt" />
-          <label xml:lang="en" text="Unit 74 Safety of Food-Contact Materials" />
-        </category>
-        <category ID="bfr_75_201406">
-          <label xml:lang="en" text="Unit 75 Product Research and Nanotechnology" />
-          <label xml:lang="de" text="Fachgruppe 75 - Produktbeschaffenheit und Nanotechnologie" />
-        </category>
-      </category>
-      <category ID="bfr_sin_201406">
-        <label xml:lang="en" text="Department 8 Safety in the Food Chain" />
-        <label xml:lang="de" text="Abteilung 8 - Sicherheit in der Nahrungskette" />
-        <category ID="bfr_81_201406">
-          <label xml:lang="en" text="Unit 81 Residues" />
-          <label xml:lang="de" text="Fachgruppe 81 - Rückstände" />
-        </category>
-        <category ID="bfr_82_201406">
-          <label xml:lang="de" text="Fachgruppe 82 - Kontaminanten" />
-          <label xml:lang="en" text="Unit 82 Contaminants" />
-        </category>
-        <category ID="bfr_83_201406">
-          <label xml:lang="en" text="Unit 83 Product Identity, Supply Chains and Traceability" />
-          <label xml:lang="de" text="Fachgruppe 83 - Produktidentität, Warenketten und Rückverfolgbarkeit" />
-        </category>
-        <category ID="bfr_84_201406">
-          <label xml:lang="en" text="Unit 84 Feed and Feed Additives" />
-          <label xml:lang="de" text="Fachgruppe 84 - Futtermittel und Futtermittelzusatzstoffe" />
-        </category>
-      </category>
-      <category ID="bfr_tox_201406">
-        <label xml:lang="en" text="Department 9 Experimental Toxicology and ZEBET" />
-        <label xml:lang="de" text="Abteilung 9 - Experimentelle Toxikologie und ZEBET" />
-        <category ID="bfr_91_201406">
-          <label xml:lang="de" text="Fachgruppe 91 - ZEBET-Datenbank und Informationsbeschaffung" />
-          <label xml:lang="en" text="Unit 91 ZEBET – Database and Information Procurement" />
-        </category>
-        <category ID="bfr_92_201406">
-          <label xml:lang="de" text="Fachgruppe 92 - ZEBET - Alternativmethoden zu Tierversuchen" />
-          <label xml:lang="en" text="Unit 92 ZEBET – Alternative Methods to Animal Experiments" />
-        </category>
-        <category ID="bfr_93_201406">
-          <label xml:lang="en" text="Unit 93 Animal Protection and Laboratory Animal Science" />
-          <label xml:lang="de" text="Fachgruppe 93 - Tierschutz und Versuchstierkunde" />
-        </category>
-        <category ID="bfr_94_201406">
-          <label xml:lang="en" text="Unit 94 Strategies for Toxicological Assessments" />
-          <label xml:lang="de" text="Fachgruppe 94 - Toxikologische Bewertungsstrategien" />
-        </category>
-        <category ID="bfr_95_201406">
-          <label xml:lang="en" text="Unit 95 Animal husbandry, Aquaculture and Reference Materials" />
-          <label xml:lang="de" text="Fachgruppe 95 - Tierhaltung, Aquakultur und Referenzmaterial" />
+        <category ID="bfr_tox">
+          <label xml:lang="de" text="Abteilung 9 - Experimentelle Toxikologie und ZEBET (bis Juni 2014)" />
+          <category ID="bfr_91">
+            <label xml:lang="de" text="Fachgruppe 91 - ZEBET-Datenbank und Informationsbeschaffung" />
+          </category>
+          <category ID="bfr_92">
+            <label xml:lang="de" text="Fachgruppe 92 - ZEBET - Alternativmethoden zu Tierversuchen" />
+          </category>
+          <category ID="bfr_93">
+            <label xml:lang="de" text="Fachgruppe 93 - Molekulare Toxikologie" />
+          </category>
+          <category ID="bfr_94">
+            <label xml:lang="de" text="Fachgruppe 94 - Nanotoxikologie" />
+          </category>
+          <category ID="bfr_95">
+            <label xml:lang="de" text="Fachgruppe 95 - Referenzmaterial und Zertifizierung" />
+          </category>
         </category>
       </category>
       <category ID="bfr_vg">
         <label xml:lang="de" text="Vorgängereinrichtung" />
         <label xml:lang="en" text="Predecessor Institution" />
-        <category ID="bfr">
-          <label xml:lang="de" text="Bundesinstitut für Risikobewertung (bis Juni 2014)" />
-          <label xml:lang="x-valuntil" text="2014-06" />
-          <url xlink:href="http://www.bfr.bund.de/" xlink:type="locator" />
-          <category ID="bfr_leitg">
-            <label xml:lang="de" text="Leitung" />
-          </category>
-          <category ID="bfr_fk">
-            <label xml:lang="de" text="Forschungskoordination FK" />
-          </category>
-          <category ID="bfr_verw">
-            <label xml:lang="de" text="Abteilung 1 - Verwaltung" />
-            <category ID="bfr_11">
-              <label xml:lang="de" text="Referat 11 - Personal" />
-            </category>
-            <category ID="bfr_12">
-              <label xml:lang="de" text="Referat 12 - Haushalt" />
-            </category>
-            <category ID="bfr_13">
-              <label xml:lang="de" text="Referat 13 - Organisation" />
-            </category>
-            <category ID="bfr_14">
-              <label xml:lang="de" text="Referat 14 - Beschaffung" />
-            </category>
-            <category ID="bfr_15">
-              <label xml:lang="de" text="Referat 15 - Innerer Dienst" />
-            </category>
-            <category ID="bfr_16">
-              <label xml:lang="de" text="Referat 16 - Bau und Technik" />
-            </category>
-            <category ID="bfr_17">
-              <label xml:lang="de" text="Referat 17 - Justiziariat" />
-            </category>
-          </category>
-          <category ID="bfr_riko">
-            <label xml:lang="de" text="Abteilung 2 - Risikokommunikation" />
-            <category ID="bfr_21">
-              <label xml:lang="de" text="Fachgruppe 21 - Clearing, EFSA -Kontaktstelle und Kommissionen" />
-            </category>
-            <category ID="bfr_22">
-              <label xml:lang="de" text="Fachgruppe 22 - Risikoforschung, -wahrnehmung, -früherkennung und -folgenabschätzung" />
-            </category>
-            <category ID="bfr_23">
-              <label xml:lang="de" text="Fachgruppe 23 - Presse- und Öffentlichkeitsarbeit" />
-            </category>
-            <category ID="bfr_24">
-              <label xml:lang="de" text="Fachgruppe 24 - Wissenschaftliches Veranstaltungsmanagement" />
-            </category>
-          </category>
-          <category ID="bfr_quer">
-            <label xml:lang="de" text="Abteilung 3 - Wissenschaftliche Querschnittsaufgaben" />
-            <category ID="bfr_31">
-              <label xml:lang="de" text="Fachgruppe 31 - Internationale Chemikalienprogramme" />
-            </category>
-            <category ID="bfr_32">
-              <label xml:lang="de" text="Fachgruppe 32 - Vergiftungs- und Produktdokumentation" />
-            </category>
-            <category ID="bfr_33">
-              <label xml:lang="de" text="Fachgruppe 33 - Epidemiologie, Biometrie und mathematische Modellierung" />
-            </category>
-            <category ID="bfr_34">
-              <label xml:lang="de" text="Fachgruppe 34 - Expositionsschätzung und Expositionsstandardisierung" />
-            </category>
-            <category ID="bfr_35">
-              <label xml:lang="de" text="Fachgruppe 35 - Informationstechnik" />
-            </category>
-            <category ID="bfr_36">
-              <label xml:lang="de" text="Fachgruppe 36 - GLP-Bundesstelle und Qualitätsmanagement" />
-            </category>
-          </category>
-          <category ID="bfr_bios">
-            <label xml:lang="de" text="Abteilung 4 - Biologische Sicherheit" />
-            <category ID="bfr_41">
-              <label xml:lang="de" text="Fachgruppe 41 - Mikrobielle Toxine" />
-            </category>
-            <category ID="bfr_42">
-              <label xml:lang="de" text="Fachgruppe 42 - Lebensmittelhygiene und Sicherheitskonzepte" />
-            </category>
-            <category ID="bfr_43">
-              <label xml:lang="de" text="Fachgruppe 43 - Infektionsepidemiologie und Zoonosen" />
-            </category>
-            <category ID="bfr_44">
-              <label xml:lang="de" text="Fachgruppe 44 - Prävention und Aufklärung lebensmittelbedingter Ausbrüche" />
-            </category>
-            <category ID="bfr_45">
-              <label xml:lang="de" text="Fachgruppe 45 - Diagnostik, Genetik und Erregercharakterisierung" />
-            </category>
-            <category ID="bfr_46">
-              <label xml:lang="de" text="Fachgruppe 46 - Antibiotikaresistenz und Resistenzdeterminanten" />
-            </category>
-          </category>
-          <category ID="bfr_lms">
-            <label xml:lang="de" text="Abteilung 5 - Lebensmittelsicherheit" />
-            <category ID="bfr_51">
-              <label xml:lang="de" text="Fachgruppe 51 - Wirkungsbezogene Analytik und Toxikokinetik" />
-            </category>
-            <category ID="bfr_52">
-              <label xml:lang="de" text="Fachgruppe 52 - Lebensmitteltoxikologie" />
-            </category>
-            <category ID="bfr_53">
-              <label xml:lang="de" text="Fachgruppe 53 - Ernährungsrisiken, Allergien und Neuartige Lebensmittel" />
-            </category>
-          </category>
-          <category ID="bfr_chs">
-            <label xml:lang="de" text="Abteilung 6 - Chemikaliensicherheit" />
-            <category ID="bfr_61">
-              <label xml:lang="de" text="Fachgruppe 61 - Steuerung der gesetzlichen Verfahren und Gesamtbewertung" />
-            </category>
-            <category ID="bfr_62">
-              <label xml:lang="de" text="Fachgruppe 62 - Toxikologie der Pestizide und Biozide" />
-            </category>
-            <category ID="bfr_63">
-              <label xml:lang="de" text="Fachgruppe 63 - Toxikologie der Chemikalien" />
-            </category>
-            <category ID="bfr_64">
-              <label xml:lang="de" text="Fachgruppe 64 - Anwendungssicherheit" />
-            </category>
-            <category ID="bfr_65">
-              <label xml:lang="de" text="Fachgruppe 65 - Rückstandsbewertung von Pestiziden und Bioziden" />
-            </category>
-          </category>
-          <category ID="bfr_prs">
-            <label xml:lang="de" text="Abteilung 7 - Produktsicherheit" />
-            <category ID="bfr_71">
-              <label xml:lang="de" text="Fachgruppe 71 - Toxikologie von verbrauchernahen Produkten" />
-            </category>
-            <category ID="bfr_72">
-              <label xml:lang="de" text="Fachgruppe 72 - Analytik und Expositionsabschätzung" />
-            </category>
-            <category ID="bfr_73">
-              <label xml:lang="de" text="Fachgruppe 73 - Experimentelle Forschung" />
-            </category>
-            <category ID="bfr_74">
-              <label xml:lang="de" text="Fachgruppe 74 - Hygiene und Mikrobiologie" />
-            </category>
-            <category ID="bfr_75">
-              <label xml:lang="de" text="Fachgruppe 75 - Technologie" />
-            </category>
-          </category>
-          <category ID="bfr_sin">
-            <label xml:lang="de" text="Abteilung 8 - Sicherheit in der Nahrungskette" />
-            <category ID="bfr_81">
-              <label xml:lang="de" text="Fachgruppe 81 - Rückstände" />
-            </category>
-            <category ID="bfr_82">
-              <label xml:lang="de" text="Fachgruppe 82 - Kontaminanten" />
-            </category>
-            <category ID="bfr_83">
-              <label xml:lang="de" text="Fachgruppe 83 - Produktidentität und Rückverfolgbarkeit" />
-            </category>
-            <category ID="bfr_84">
-              <label xml:lang="de" text="Fachgruppe 84 - Futtermittel und Futtermittelzusatzstoffe" />
-            </category>
-          </category>
-          <category ID="bfr_tox">
-            <label xml:lang="de" text="Abteilung 9 - Experimentelle Toxikologie und ZEBET" />
-            <category ID="bfr_91">
-              <label xml:lang="de" text="Fachgruppe 91 - ZEBET-Datenbank und Informationsbeschaffung" />
-            </category>
-            <category ID="bfr_92">
-              <label xml:lang="de" text="Fachgruppe 92 - ZEBET - Alternativmethoden zu Tierversuchen" />
-            </category>
-            <category ID="bfr_93">
-              <label xml:lang="de" text="Fachgruppe 93 - Molekulare Toxikologie" />
-            </category>
-            <category ID="bfr_94">
-              <label xml:lang="de" text="Fachgruppe 94 - Nanotoxikologie" />
-            </category>
-            <category ID="bfr_95">
-              <label xml:lang="de" text="Fachgruppe 95 - Referenzmaterial und Zertifizierung" />
-            </category>
-          </category>
-        </category>
       </category>
     </category>
     <category ID="bvl">
       <label xml:lang="de" text="Bundesamt für Verbraucherschutz und Lebensmittelsicherheit" />
       <label xml:lang="en" text="Federal Office of Consumer Protection and Food Safety (BVL)" />
-      <url xlink:href="http://www.bvl.bund.de/" xlink:type="locator" />
+      <url xlink:type="locator" xlink:href="http://www.bvl.bund.de/" />
       <category ID="bvl_p">
         <label xml:lang="de" text="Präsident" />
       </category>
@@ -852,33 +1673,33 @@
       </category>
     </category>
     <category ID="ble">
-      <label xml:lang="en" text="Federal Office for Agriculture and Food" />
       <label xml:lang="de" text="Bundesanstalt für Landwirtschaft und Ernährung" />
-      <url xlink:href="http://www.ble.de" xlink:type="locator" />
+      <label xml:lang="en" text="Federal Office for Agriculture and Food" />
+      <url xlink:type="locator" xlink:href="http://www.ble.de" />
       <category ID="ble_vg">
-        <label xml:lang="en" text="Predecessors" />
         <label xml:lang="de" text="Vorgängereinrichtung" />
+        <label xml:lang="en" text="Predecessors" />
       </category>
     </category>
     <category ID="wgl">
       <label xml:lang="de" text="Wissenschaftsgemeinschaft Gottfried Wilhelm Leibniz e.V." />
       <label xml:lang="en" text="Leibniz Association" />
       <category ID="wgl_dfa">
-        <label xml:lang="en" text="German Research Center for Food Chemistry" />
         <label xml:lang="de" text="Deutsche Forschungsanstalt für Lebensmittelchemie" />
-        <url xlink:href="http://www.dfal.de" xlink:type="locator" />
+        <label xml:lang="en" text="German Research Center for Food Chemistry" />
+        <url xlink:type="locator" xlink:href="http://www.dfal.de" />
       </category>
       <category ID="wgl_atb">
-        <label xml:lang="en" text="Leibniz Institute of Agricultural Engineering Potsdam-Bornim e. V. (ATB)" />
         <label xml:lang="de" text="Institut für Agrartechnik Bornim e.V." />
+        <label xml:lang="en" text="Leibniz Institute of Agricultural Engineering Potsdam-Bornim e. V. (ATB)" />
       </category>
       <category ID="wgl_zalf">
         <label xml:lang="de" text="Leibniz-Zentrum für Agrarlandschaftsforschung (ZALF)" />
         <label xml:lang="en" text="Leibniz Centre for Agricultural Landscape Research (ZALF)" />
       </category>
       <category ID="wgl_fbn">
-        <label xml:lang="en" text="Forschungsinstitut für die Biologie landwirtschaftlicher Nutztiere" />
         <label xml:lang="de" text="Forschungsinstitut für die Biologie landwirtschaftlicher Nutztiere" />
+        <label xml:lang="en" text="Forschungsinstitut für die Biologie landwirtschaftlicher Nutztiere" />
       </category>
       <category ID="wgl_igz">
         <label xml:lang="de" text="Institut für Gemüse- und Zierpflanzenbau" />
@@ -914,9 +1735,9 @@
       </category>
     </category>
     <category ID="bmelv">
-      <label xml:lang="en" text="Federal Ministry of Food and Agriculture" />
       <label xml:lang="de" text="Bundesministerium für Ernährung und Landwirtschaft" />
-      <url xlink:href="http://www.bmel.de" xlink:type="locator" />
+      <label xml:lang="en" text="Federal Ministry of Food and Agriculture" />
+      <url xlink:type="locator" xlink:href="http://www.bmel.de" />
     </category>
     <category ID="senat">
       <label xml:lang="de" text="Senat der Bundesforschungsanstalten" />
