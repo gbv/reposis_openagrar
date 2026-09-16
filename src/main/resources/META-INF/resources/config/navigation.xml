@@ -115,6 +115,10 @@
             <label xml:lang="de">Admin-Formular</label>
             <label xml:lang="en">Admin Editor</label>
         </item>
+        <item href="/servlets/MCRCircleRepairServlet" type="extern" replaceMenu="false" constrainPopUp="false">
+            <label xml:lang="de">Kreisverweise prüfen</label>
+            <label xml:lang="en">Check Circular References</label>
+        </item>
         <item href="/content/publish/guidelines.xml" type="intern" replaceMenu="false" constrainPopUp="false">
             <label xml:lang="de">Erfassungsrichtlinien</label>
             <label xml:lang="en">Guidelines</label>
