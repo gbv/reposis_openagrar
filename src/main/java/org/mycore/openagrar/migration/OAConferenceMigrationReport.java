@@ -24,12 +24,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.EnumMap;
 import java.util.EnumSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Stream;
@@ -64,7 +66,7 @@ public final class OAConferenceMigrationReport {
     private static final String SUMMARY_ONLY_NOTE = "Not listed one by one: the displayForm was built by the editor"
         + " itself and was nowhere visible, the conference shown does not change.";
 
-    private static final DateTimeFormatter TIMESTAMP = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
+    private static final DateTimeFormatter TIMESTAMP = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm", Locale.ROOT);
 
     private static final int LOG_COLUMNS = 8;
 
@@ -146,7 +148,7 @@ public final class OAConferenceMigrationReport {
      */
     public static Path write(LocalDate cutoff) throws IOException {
         Path report = Path.of(MCRConfiguration2.getStringOrThrow("MCR.basedir"))
-            .resolve(String.format(REPORT_FILE, LocalDate.now()));
+            .resolve(String.format(Locale.ROOT, REPORT_FILE, LocalDate.now(ZoneId.systemDefault())));
         new MCRStringContent(buildReport(readLog(), cutoff, MCRFrontendUtil.getBaseURL())).sendTo(report);
         return report;
     }
@@ -182,7 +184,7 @@ public final class OAConferenceMigrationReport {
         html.append("<h1>").append(TITLE).append("</h1>\n<p>")
             .append(applied ? "The changes have been saved." : "Dry run, nothing was changed.").append("<br>")
             .append("Cutoff date of the change: ").append(cutoff).append("<br>")
-            .append("Created: ").append(LocalDateTime.now().format(TIMESTAMP))
+            .append("Created: ").append(LocalDateTime.now(ZoneId.systemDefault()).format(TIMESTAMP))
             .append("</p>\n");
 
         html.append("<h2>Overview</h2>\n<table>\n<tr><th>Reason</th><th>Count</th></tr>\n");
