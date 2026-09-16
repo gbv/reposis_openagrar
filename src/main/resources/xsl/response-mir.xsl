@@ -92,17 +92,6 @@
     <div class="row result_head">
       <div class="col-12 result_headline">
         <h1>
-          <xsl:choose>
-            <xsl:when test="$hits=0">
-              <xsl:value-of select="i18n:translate('results.noObject')" />
-            </xsl:when>
-            <xsl:when test="$hits=1">
-              <xsl:value-of select="i18n:translate('results.oneObject')" />
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:value-of select="i18n:translate('results.nObjects',$hits)" />
-            </xsl:otherwise>
-          </xsl:choose>
           <!-- START: OA specific changes -->
           <xsl:choose>
             <xsl:when test="string-length($institut_str) &gt; 0">
@@ -121,6 +110,19 @@
           </xsl:choose>
           <!-- END: OA specific changes -->
         </h1>
+        <h2>
+          <xsl:choose>
+            <xsl:when test="$hits=0">
+              <xsl:value-of select="i18n:translate('results.noObject')" />
+            </xsl:when>
+            <xsl:when test="$hits=1">
+              <xsl:value-of select="i18n:translate('results.oneObject')" />
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="i18n:translate('results.nObjects',$hits)" />
+            </xsl:otherwise>
+          </xsl:choose>
+        </h2>
       </div>
     </div>
 
