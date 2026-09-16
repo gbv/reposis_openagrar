@@ -48,8 +48,8 @@ import org.mycore.mods.MCRMODSWrapper;
  * OA-420: command line interface of {@link OAConferenceMigration}.
  * <p>
  * The work is spread over one command per package of documents, so that no session stays open for the whole run.
- * Every package appends its decisions to {@link OAConferenceMigrationReport#LOG_FILE}, the last command of the run
- * turns that log into an HTML report for the editors.
+ * Every package writes its decisions into {@link OAConferenceMigrationReport#getLogDirectory()}, the last command
+ * of the run turns that log into an HTML report for the editors.
  */
 @MCRCommandGroup(name = "OpenAgrar conference migration")
 public class OAConferenceMigrationCommands {
