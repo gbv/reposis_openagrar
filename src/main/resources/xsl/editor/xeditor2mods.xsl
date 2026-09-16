@@ -2,15 +2,14 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mcr="http://www.mycore.org/" xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:mods="http://www.loc.gov/mods/v3" xmlns:mcrmods="xalan://org.mycore.mods.classification.MCRMODSClassificationSupport" xmlns:mcrxml="xalan://org.mycore.common.xml.MCRXMLFunctions"
   xmlns:mcrdataurl="xalan://org.mycore.datamodel.common.MCRDataURL" xmlns:mcrid="xalan://org.mycore.datamodel.metadata.MCRObjectID" xmlns:exslt="http://exslt.org/common"
-  xmlns:acl="xalan://org.mycore.access.MCRAccessManager"
-  exclude-result-prefixes="mcrmods mcrid xlink mcr mcrxml mcrdataurl exslt acl" version="1.0"
+  exclude-result-prefixes="mcrmods mcrid xlink mcr mcrxml mcrdataurl exslt" version="1.0"
 >
 
   <xsl:include href="copynodes.xsl" />
   <xsl:include href="editor/mods-node-utils.xsl" />
   <xsl:include href="mods-utils.xsl" />
   <xsl:include href="coreFunctions.xsl" />
-  <xsl:include href="oa-xeditor2mods.xsl"/>
+  <xsl:include href="oa-xeditor2mods.xsl" />
 
   <xsl:param name="MIR.PPN.DatabaseList" select="'gvk'" />
   <xsl:param name="MCR.Metadata.ObjectID.NumberPattern" select="00000000" />
@@ -157,6 +156,79 @@
     </mods:nameIdentifier>
   </xsl:template>
 
+  <xsl:template match="mods:affiliation">
+    <xsl:variable name="fullValue" select="."/>
+
+    <xsl:choose>
+      <!-- Case when affiliation contains a ROR URL -->
+      <xsl:when test="contains($fullValue, 'ror.org/')">
+        <!-- Extract name (everything before the opening parenthesis of the ROR URL) -->
+        <xsl:variable name="beforeROR" select="substring-before($fullValue, '(http')"/>
+        <xsl:variable name="name">
+          <xsl:choose>
+            <xsl:when test="$beforeROR != ''">
+              <xsl:value-of select="normalize-space($beforeROR)"/>
+            </xsl:when>
+            <xsl:otherwise>
+              <!-- If there's nothing before the ROR URL, use the part after as name -->
+              <xsl:value-of select="normalize-space(substring-before($fullValue, ')'))"/>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:variable>
+
+        <!-- Extract ROR URL -->
+        <xsl:variable name="rorURL">
+          <xsl:call-template name="extractRORURL">
+            <xsl:with-param name="text" select="$fullValue"/>
+          </xsl:call-template>
+        </xsl:variable>
+
+        <mods:affiliation authorityURI="https://ror.org/">
+          <xsl:if test="$rorURL != ''">
+            <xsl:attribute name="valueURI">
+              <xsl:value-of select="$rorURL"/>
+            </xsl:attribute>
+          </xsl:if>
+          <xsl:value-of select="$name"/>
+        </mods:affiliation>
+      </xsl:when>
+
+      <!-- Case when affiliation is just plain text without ROR URL -->
+      <xsl:otherwise>
+        <mods:affiliation>
+          <xsl:value-of select="$fullValue"/>
+        </mods:affiliation>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <!-- Helper template to extract ROR URL -->
+  <xsl:template name="extractRORURL">
+    <xsl:param name="text"/>
+
+    <!-- Find the start of http(s) -->
+    <xsl:variable name="afterOpenParen" select="substring-after($text, '(')"/>
+    <xsl:variable name="httpPos">
+      <xsl:choose>
+        <xsl:when test="contains($afterOpenParen, 'http://ror.org/')">
+          <xsl:value-of select="'http://ror.org/'"/>
+        </xsl:when>
+        <xsl:when test="contains($afterOpenParen, 'https://ror.org/')">
+          <xsl:value-of select="'https://ror.org/'"/>
+        </xsl:when>
+        <xsl:otherwise/>
+      </xsl:choose>
+    </xsl:variable>
+
+    <xsl:if test="$httpPos != ''">
+      <xsl:variable name="afterHTTP" select="substring-after($afterOpenParen, $httpPos)"/>
+      <xsl:variable name="rorID" select="substring-before($afterHTTP, ')')"/>
+      <xsl:if test="$rorID != ''">
+        <xsl:value-of select="concat($httpPos, $rorID)"/>
+      </xsl:if>
+    </xsl:if>
+  </xsl:template>
+
   <!-- Copy content of mods:accessCondtition to mods:classification to enable classification support (see MIR-161) -->
   <xsl:template match="mods:accessCondition[@type='restriction on access'][contains(@xlink:href,'mir_access')]">
     <mods:accessCondition type="restriction on access">
@@ -233,7 +305,7 @@
       </xsl:if>
     </xsl:copy>
   </xsl:template>
-  
+
   <xsl:template match="mods:identifier[@type='ppn']">
     <xsl:variable name="database">
       <xsl:choose>

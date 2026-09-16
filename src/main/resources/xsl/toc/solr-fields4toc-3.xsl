@@ -22,11 +22,11 @@
       <xsl:apply-templates select="descendant::mods:relatedItem[contains('host series',@type)]/@xlink:href" mode="toc" />
       
       <xsl:choose>
-        <xsl:when test="mods:relatedItem[contains('host',@type)]/@xlink:href">
-          <xsl:apply-templates select="mods:relatedItem[contains('host',@type)]/@xlink:href" mode="toc.legacyParent" />
+        <xsl:when test="mods:relatedItem[contains(@type, 'host')]/@xlink:href">
+          <xsl:apply-templates select="mods:relatedItem[contains(@type, 'host')][1]/@xlink:href" mode="toc.legacyParent" />
         </xsl:when>
-        <xsl:when test="mods:relatedItem[contains('series',@type)]/@xlink:href">
-          <xsl:apply-templates select="mods:relatedItem[contains('series',@type)][1]/@xlink:href" mode="toc.legacyParent" />
+        <xsl:when test="mods:relatedItem[contains(@type, 'series')]/@xlink:href">
+          <xsl:apply-templates select="mods:relatedItem[contains(@type, 'series')][1]/@xlink:href" mode="toc.legacyParent" />
         </xsl:when>
       </xsl:choose>
 
@@ -36,35 +36,35 @@
       <xsl:variable name="allSeriesParts" select="descendant::mods:relatedItem[@type='series']/mods:part"/>
 
       <!-- host.volume.top, host.issue.top, host.articleNumber.top, series.volume.top - only first occurrence -->
-      <xsl:apply-templates select="($topHostsParts/mods:detail[@type='volume'])[1]/mods:number" mode="toc.field" >
+      <xsl:apply-templates select="($topHostsParts/mods:detail[@type='volume']/mods:number)[1]" mode="toc.field" >
         <xsl:with-param name="name">volume.top</xsl:with-param>
       </xsl:apply-templates>
-      <xsl:apply-templates select="($topHostsParts/mods:detail[@type='issue'])[1]/mods:number" mode="toc.field" >
+      <xsl:apply-templates select="($topHostsParts/mods:detail[@type='issue']/mods:number)[1]" mode="toc.field" >
         <xsl:with-param name="name">issue.top</xsl:with-param>
       </xsl:apply-templates>
-      <xsl:apply-templates select="($topHostsParts/mods:detail[@type='article_number'])[1]/mods:number" mode="toc.field" >
+      <xsl:apply-templates select="($topHostsParts/mods:detail[@type='article_number']/mods:number)[1]" mode="toc.field" >
         <xsl:with-param name="name">articleNumber.top</xsl:with-param>
       </xsl:apply-templates>
-      <xsl:apply-templates select="($topSeriesParts/mods:detail[@type='volume'])[1]/mods:number" mode="toc.field" >
+      <xsl:apply-templates select="($topSeriesParts/mods:detail[@type='volume']/mods:number)[1]" mode="toc.field" >
         <xsl:with-param name="name">volume.top</xsl:with-param>
       </xsl:apply-templates>
 
       <!-- host.volume, host.issue, host.articleNumber, series.volume - only first occurrence -->
-      <xsl:apply-templates select="($allHostsParts/mods:detail[@type='volume'])[1]/mods:number" mode="toc.field" >
+      <xsl:apply-templates select="($allHostsParts/mods:detail[@type='volume']/mods:number)[1]" mode="toc.field" >
         <xsl:with-param name="name">volume</xsl:with-param>
       </xsl:apply-templates>
-      <xsl:apply-templates select="($allHostsParts/mods:detail[@type='issue'])[1]/mods:number" mode="toc.field" >
+      <xsl:apply-templates select="($allHostsParts/mods:detail[@type='issue']/mods:number)[1]" mode="toc.field" >
         <xsl:with-param name="name">issue</xsl:with-param>
       </xsl:apply-templates>
-      <xsl:apply-templates select="($allHostsParts/mods:detail[@type='article_number'])[1]/mods:number" mode="toc.field" >
+      <xsl:apply-templates select="($allHostsParts/mods:detail[@type='article_number']/mods:number)[1]" mode="toc.field" >
         <xsl:with-param name="name">articleNumber</xsl:with-param>
       </xsl:apply-templates>
-      <xsl:apply-templates select="($allSeriesParts/mods:detail[@type='volume'])[1]/mods:number" mode="toc.field" >
+      <xsl:apply-templates select="($allSeriesParts/mods:detail[@type='volume']/mods:number)[1]" mode="toc.field" >
         <xsl:with-param name="name">volume</xsl:with-param>
       </xsl:apply-templates>
 
       <!-- host.page - only first occurrence -->
-      <xsl:apply-templates select="($allHostsParts/mods:extent[@unit='pages'])[1]/mods:start" mode="toc.field">
+      <xsl:apply-templates select="($allHostsParts/mods:extent[@unit='pages']/mods:start)[1]" mode="toc.field">
         <xsl:with-param name="name">page</xsl:with-param>
       </xsl:apply-templates>
 
@@ -134,7 +134,8 @@
     </field>
 
     <xsl:choose>
-      <xsl:when test="string(number(.)) = 'NaN' or floor(number(.)) != number(.)">
+      <xsl:when test="string(number(.)) = 'NaN' or floor(number(.)) != number(.)
+                      or number(.) &gt; 2147483647 or number(.) &lt; -2147483648">
         <field name="{$field}.str">
           <xsl:value-of select="." />
         </field>

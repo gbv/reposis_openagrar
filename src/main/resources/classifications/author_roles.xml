@@ -5,20 +5,20 @@
   <label xml:lang="x-uri" text="https://www.mycore.de/classifications/author_roles" />
   <categories>
     <category ID="main_author">
-      <label xml:lang="en" text="Main Author" />
       <label xml:lang="de" text="Erstautor(in)" />
+      <label xml:lang="en" text="Main Author" />
     </category>
     <category ID="last_author">
-      <label xml:lang="en" text="Last Author" />
       <label xml:lang="de" text="Letzte(r) Autor(in)" />
+      <label xml:lang="en" text="Last Author" />
     </category>
     <category ID="corresponding_author">
-      <label xml:lang="en" text="Corresponding Author" />
       <label xml:lang="de" text="Korrespondierende(r) Autor(in)" />
+      <label xml:lang="en" text="Corresponding Author" />
     </category>
     <category ID="co_author">
-      <label xml:lang="en" text="Co Author" />
       <label xml:lang="de" text="Co-Autor(in)" />
+      <label xml:lang="en" text="Co Author" />
     </category>
   </categories>
 </mycoreclass>

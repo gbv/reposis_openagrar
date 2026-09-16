@@ -40,8 +40,23 @@
 
             <div class="searchfield_box oa-main-menu__search" title="{i18n:translate('mir.navsearch.title')}">
               <form action="{$WebApplicationBaseURL}servlets/solr/find" class="navbar-form form-inline" role="search">
+                <!-- Check if 'initialCondQuery' exists and extract its value if it does -->
+                <xsl:variable name="initialCondQuery" select="/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='initialCondQuery']" />
+
                 <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
                   <input name="condQuery" placeholder="{i18n:translate('mir.navsearch.placeholder')}" class="form-control search-query" id="searchInput" type="text" />
+                  <input type="hidden" id="initialCondQueryMirFlatmirLayout" name="initialCondQuery">
+                    <xsl:attribute name="value">
+                      <xsl:choose>
+                        <xsl:when test="$initialCondQuery">
+                          <xsl:value-of select="$initialCondQuery"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                          <xsl:value-of select="'*'"/>
+                        </xsl:otherwise>
+                      </xsl:choose>
+                    </xsl:attribute>
+                  </input>
                   <xsl:choose>
                     <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
                       <input name="owner" type="hidden" value="createdby:*" />
