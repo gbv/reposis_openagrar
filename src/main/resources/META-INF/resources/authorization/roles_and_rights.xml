@@ -43,4 +43,54 @@
         <li>Einträge in der Merkliste speichern und exportieren</li>
 </ul><p>Können nicht:</p><ul>
         <li>auf Inhalte zugreifen, die nur für angemeldete Nutzer freigegeben sein</li>
-</ul><h2>Einrichtungsrolle</h2><p>Mit der Einrichtungsrolle wird dem jeweiligen Nutzer ein der beteiligten Einrichtungen zugeordnet. Die Zuordnung steuert, welche Dateianhänge eingesehen und heruntergeladen werden können.</p></section><meta><log lastEditor="btimmermann" date="2026-01-15" time="13:45" /></meta></MyCoReWebPage>
+</ul><h2>Einrichtungsrolle</h2><p>Mit der Einrichtungsrolle wird dem jeweiligen Nutzer ein der beteiligten Einrichtungen zugeordnet. Die Zuordnung steuert, welche Dateianhänge eingesehen und heruntergeladen werden können.</p><h2>Zugriffrechte auf Derivate</h2><table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
+        <tbody>
+                <tr>
+                        <td>uneingeschränkt</td>
+                        <td> </td>
+                </tr>
+                <tr>
+                        <td>nur für Administratoren</td>
+                        <td>Der Nutzer ist Admin.</td>
+                </tr>
+                <tr>
+                        <td>nur angemeldete Nutzer</td>
+                        <td>Der Nutzer ist kein Gast oder in der Rolle orcid</td>
+                </tr>
+                <tr>
+                        <td>nur angemeldete Nutzer oder Nutzer im FLI-Intranet</td>
+                        <td>Entweder die IP stammt aus dem Bereich 193.22.115.* oder der Nutzer ist kein Gast oder in der Rolle orcid.</td>
+                </tr>
+                <tr>
+                        <td>BfR Intranet oder Nutzer vom BfR</td>
+                        <td>Entweder die IP stammt aus den zwei Bereichen 77.87.231.*,93.174.21.*oder der Nutzer gehört zum BfR (bfr_all) oder ist Admin.</td>
+                </tr>
+        </tbody>
+</table><h2>Vergabe von Persistent Identifier</h2><table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
+        <tbody>
+                <tr>
+                        <td>register-DataciteTI (10.3220/253-*)</td>
+                        <td>Entweder Bearbeiter die zum TI gehören (vti,ti) oder Admins.</td>
+                </tr>
+                <tr>
+                        <td>register-DataciteJKI (10.5073/)</td>
+                        <td>Entweder Bearbeiter die zum JKI gehören (jki) oder Admins.</td>
+                </tr>
+                <tr>
+                        <td>register-DataciteBfR (10.17590/)</td>
+                        <td>Entweder Bearbeiter die zum BfR gehören (bfr_201406) oder Admins.</td>
+                </tr>
+                <tr>
+                        <td>register-DNBURNTI (urn:nbn:de:gbv:253-)</td>
+                        <td>Entweder Bearbeiter die zum TI gehören (vti,ti) oder Admins.</td>
+                </tr>
+                <tr>
+                        <td>register-DataciteMRIDATA (10.25826/Data)</td>
+                        <td>Entweder Bearbeiter die zum MRI gehören (mri) oder Admins.</td>
+                </tr>
+                <tr>
+                        <td>register-DataciteMRI (10.25826)</td>
+                        <td>Entweder Bearbeiter die zum MRI gehören (mri) oder Admins.</td>
+                </tr>
+        </tbody>
+</table><p> </p></section><meta><log lastEditor="btimmermann" date="2026-07-28" time="10:27" /></meta></MyCoReWebPage>

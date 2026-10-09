@@ -1,43 +1,202 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MyCoReWebPage><section xml:lang="de" title="neuer Eintrag"><h1>Erfassung von Forschungsdaten</h1><h2>Definition Forschungsdaten</h2><address>Forschungsdaten sind Daten, die während wissenschaftlicher Tätigkeit (z. B. durch Messungen, Befragungen, Quellenarbeit) entstehen. Sie bilden eine Grundlage wissenschaftlicher Arbeit und dokumentieren deren Ergebnisse.<br />
-Quelle: forschungsdaten.info, Glossar, https://forschungsdaten.info/praxis-kompakt/glossar/#c269824</address><h2>Definition Datensatz</h2><p>Ein Datensatz besteht aus einer oder mehreren Datendatei(en), einer Beschreibung der Daten und ihrer<br />
-Entstehung (Fließtext) und den beschreibenden Metadaten. In einer Tabelle werden alle verwendenten<br />
-Abkürzungen und Variablen erklärt und aufgelöst.</p><h2>Datensatz erfassen</h2><p>Ein Datensatz wird analog zur Monographie in OpenAgrar erfasst und mit der/den dazugehörenden Textpublikation(en) verküpft. Die Verküpfung ("referenziert" bzw. "gehört zu") erfolgt vom Datensatz zur Textpublikation. Es handelt sich hierbei um eine eigenständige Publikation. Vor der Veröffentlichung reicht ein(e) Autor/in stellvertretend eine Freistellungserklärung ein. Grundsätzlich orientiert sich die Erfassung von Forschungsdaten an den Regelwerken "Resource Description an Access (RDA)" und "Regeln zur Schlagwortkatalogisierung".</p><p><strong>Supplement Material / Begleitmaterial zu Textpublikationen nicht erfassen</strong></p><p>Materialanhänge zu Textpublkationen werden nicht als Forschungsdatensätze erfasst! Bei diesen Anhängen handelt es sich meist um Tabellen, Bilder oder ähnliches, dass auch im Artikel selbst zu finden ist. Der Inhalt wird in diesen Fällen in der Regel zur leichteren Nachnutzung zusätzlich in gängigen Dateiformaten angeboten. Das Material gehört letztlich zum Artikel. Auch ist hier nicht klar, ob das Thünen-Institut noch im Besitz der nötigen Rechte für eine erneute Veröffentlichung der Daten ist, da diese nicht immer unter das Urheberrecht fallen. Über den Artikel sind die Datensätze öffentlich nachgewiesen und die Zugangsbedingungen geklärt. </p><p><strong>Eingetragen werden:</strong></p><ul>
-        <li>Titel und ggf. Titelübersetzung</li>
-        <li>Autoren und Beteiligte oder Autorenkollektiv jeweils mit Zugehörigkeit, GND und ORCiD -&gt; ggf. GND-</li>
-        <li>Eintrag erstellen </li>
-        <li>Unternehmen, die die Daten erheben und bei denen die Mitarbeitenden nicht namentlich als Autoren/Beteiligte aufnommen werden, werden als beteiligte Körperschaft aufgenommen. -&gt; ggf. GND-Eintrag erstellen </li>
-        <li>Lizenz oder "Alle Rechte vorbehalten"</li>
-        <li>Bei Bedarf wird ein Embargo eingetragen.</li>
-        <li>Abstract ggf. deutsche und englische Version</li>
-        <li>Schlagwörter, wenn möglich mit GND vernüpfen. Getrennte Schlagwortketten für deutsche und<br />
-        englische Schlagwörter.</li>
-        <li>Geograpfischer Bezug, wenn möglich mit GND verknüpfen. Koordinaten werden eingetragen, wenn<br />
-        vorhanden.</li>
-        <li>Auflage (= Version)</li>
-        <li>Umfang (z.B. 3 CSV-Dateien, 2 PDF-Dateien, 1 TXT-Datei)</li>
-        <li>Persistent Identifier (PID), wenn vergeben</li>
-        <li>Verlag (Name des Repositoriums, oder des Verlags/ Eingenverlags der das Angebot betreibt)</li>
-        <li>Erscheinungsort: Sitz des Verlages oder des Repositoriums</li>
-        <li>Erscheinungsjahr: bei veröffentlichten Datensätzen</li>
-        <li>Erstellung: Zeitraum der Erstellung; Zeitraum, den der Datensatz abdeckt (Berichtszeitraum)</li>
-        <li>Einreichung: Jahr der Einrichung bei unveröffentlichten Datensätzen</li>
-        <li>Finanzierung: Förderangabe bei EU-Projekten OpenAire-Angaben</li>
-        <li>Project ID: Interne Projektnummer</li>
-        <li>Interne TI ID: Aktenzeichen bei unveröffentlichten Datensätzen</li>
-        <li>interne ID: ggf. Abrufzeichen</li>
-        <li>Publikationsstatus</li>
-        <li>Jahresbereichtskategorie, i.d.R. "Forschungsdaten" oder "Nicht im Jahresbericht"</li>
-        <li>Jahresberichtsjahr</li>
-        <li>Einrichtung</li>
-        <li>Interne Anmerkung: Status Langzeitspeicher</li>
+<MyCoReWebPage><section xml:lang="de" title="neuer Eintrag"><h1>Erfassung von Forschungsdaten</h1><p align="left">Erfassungsrichtlinien und Anleitungen für OpenAgrar als bearbeitbare Dateien <a href="https://www.openagrar.de/receive/openagrar_mods_00117023">https://www.openagrar.de/receive/openagrar_mods_00117023</a>.</p><h1>1 Definition Forschungsdaten und Geodaten</h1><p><strong>Forschungsdaten</strong> sind Daten, die während wissenschaftlicher Tätigkeit (z. B. durch Messungen, Befragungen, Quellenarbeit) entstehen. Sie bilden eine Grundlage wissenschaftlicher Arbeit und dokumentieren deren Ergebnisse.</p><p><em>Quelle: forschungsdaten.info, Glossar, </em><a href="https://forschungsdaten.info/praxis-kompakt/glossar/#c269824"><em>https://forschungsdaten.info/praxis-kompakt/glossar/#c269824</em></a></p><p><strong>Geodaten</strong> sind Daten, [Definition folgt]</p><h2>1.1 Definition Datensatz</h2><p>Ein Datensatz besteht aus einer oder mehrere Datendateien(en), einer Beschreibung der Daten und ihrer Entstehung (Fließtext) und den beschreibenden Metadaten. In einer Tabelle werden alle verwendeten Abkürzungen und Variablen erklärt und aufgelöst.</p><h1>2 Erschließung von Forschungs- und Geodaten in OpenAgrar</h1><p>Grundsätzlich erfolgt die Erschließung von Forschungs- und Geodatendaten an den Regelwerken "Ressource Description an Access DACH“ (RDA DACH, <a href="https://sta.dnb.de/doc/RDA">https://sta.dnb.de/doc/RDA</a>) und "Regeln zur Schlagwortkatalogisierung" (RSWK, <a href="https://d-nb.info/1126513032/34">https://d-nb.info/1126513032/34</a>). Geodaten werden als kartografischer Datentyp erfasst (<a href="https://sta.dnb.de/doc/RDA-E-M575">RDA-E-M575</a>). Die Erschließung erfolgt nach der Erscheinungsweise (<a href="https://sta.dnb.de/doc/RDA-E-M320">RDA-E-M320</a>). Details zu den RDA-Elementen können über die Übersicht abgerufen werden (<a href="https://sta.dnb.de/doc/RDA-E">RDA-E</a>).</p><h2>2.1 Datensatz erfassen (einzelne Einheit)</h2><p>Ein Datensatz wird gemäß RDA-DACH als <strong>einzelne Einheit</strong> (<a href="https://sta.dnb.de/doc/RDA-VW-E-M320-EINZELNEEINHEIT">RDA-VW-E-M320-EINZELNEEINHEIT</a>) als sonstige Online-Ressource (<a href="https://sta.dnb.de/doc/RDA-A-INFO#Sonstige-Online-Ressourcen">RDA-A-Info</a>) in OpenAgrar erfasst und mit der/den dazugehörenden Textpublikation(en) verknüpft. Zusätzlich kann man sich an den Regeln für die Erfassung von E-Books, elektronische Ressource (<a href="https://sta.dnb.de/doc/RDA-R-ER">RDA-R-ER</a>) orientieren, wo die Regeln für die sonstigen Online-Ressourcen noch zu undefiniert sind. Die Verknüpfung ("referenziert" bzw. "gehört zu") erfolgt vom Datensatz zur Textpublikation. Es handelt sich bei Datensätzen um eine eigenständige Publikation. Vor der Veröffentlichung reicht ein(e) Autor/in stellvertretend eine Freistellungserklärung ein (Thünen). Bei einem einzelnen Datensatz ist zum Zeitpunkt der Aufnahme bzw. der Publikation <strong>keine Aktualisierung oder Fortsetzung geplant.</strong></p><p><strong>Beilagen zu Textpublikationen werden nicht als Forschungsdatensätze erfasst!</strong> Bei diesen Anhängen handelt es sich meist um Tabellen, Bilder oder ähnliches, dass auch im Artikel selbst zu finden ist. Der Inhalt wird in diesen Fällen in der Regel zur leichteren Nachnutzung zusätzlich in gängigen Dateiformaten angeboten. Die Beilagen gehören letztlich zum Artikel und sind unselbstständig erschienen. Die Erfassung erfolgt als Ressource mit Beilagen (<a href="https://sta.dnb.de/doc/RDA-R-BEGL">RDA-R-BEGL</a>) über die Bibliothek (Thünen). Über die Textpublikation sind in diesen Fällen die Datensätze öffentlich nachgewiesen und die Zugangsbedingungen geklärt. </p><p>Gemäß dem Grundsatz der RDA DACH werden die Angaben in <strong>Vorlageform</strong> erfasst. Darüber hinaus werden normierte <strong>Ansetzungsformen</strong> und <strong>Normdaten</strong> sowie <strong>Verweise</strong> verwendet und verknüpft, um die Metadaten gemäß den <strong>FAIR-Prinzipien</strong> zu verarbeiten und Auslieferung über die Schnittstellen zu gewährleisten. Einträge in die GND werden von der Bibliothek übernommen (Thünen).</p><p align="left"><strong>Eingetragen werden:</strong></p><ul>
+        <li><strong>Publikationsstatus</strong>: steuert die Sichtbarkeit des Eintrags und den Redaktionsprozess. Wenn der Eintrag einmal auf „veröffentlicht“ gestellt und gespeichert wurde ist und bleibt er öffentlich sichtbar und auffindbar. Er wird dann auch über die Schnittstellen ausgeliefert und kann nicht zurückgenommen werden.
+
+                <ul>
+                        <li>Solange ein Datensatz noch in Bearbeitung ist wird er auf „eingereicht“ oder „wird bearbeitet“ gestellt. Über den OpenAgrar-Link (URL des Eintrags) kann der Eintrag in diesem Status mit externen nicht angemeldeten Nutzern geteilt werden.</li>
+                </ul>
+        </li>
+        <li><strong>Lizenz oder "Alle Rechte vorbehalten" </strong>
+                <ul>
+                        <li>Zusätzlich können über den Kommentar „Lizensierung“ weitere Angaben zur Nutzung und zur Zugänglichkeit gemacht werden. Über den Kommentar „Restriktionen (Sperrvermerk)“ werden Einschränkungen bei der Nutzung vermerkt. Beispiel: „Sperrvermerk: Geschäftsgeheimnisse und Personenbezug. Datensatz kann auf Anfrage teilweise für Forschungszwecke zur Verfügung gestellt werden. Eine Datennutzungsvereinbarung wird abgeschlossen. Trade secrets and personal data. The dataset may be made available in part for research purposes upon request. A data usage agreement will be concluded.“</li>
+                        <li>Über den Kommentar „Löschung“ wird bei einer Löschung der Grund vermerkt.</li>
+                        <li>Wenn „Alle Rechte vorbehalten“ (Closed Data Publikation) ausgewählt wurde, werden die Datendateien nicht hochgeladen. Die Daten werden für entsprechende Nutzungsanfragen schreibgeschützt auf dem Langzeitspeicher abgelegt. (siehe hierfür Arbeitsablauf zum LZS, Thünen)</li>
+                        <li>Thünen: Wenn eine Open-Content-Lizenz ausgewählt wird, müssen die Daten auf OpenAgrar hochgeladen werden und frei downloadbar sein. D.h. die Datendateien werden hochgeladen (Thünen). In der Regel werden Datensätze bis zu einer Größe von 1 GB ohne Rücksprache mit der Bibliothek hochgeladen. Datensätze mit einer Größe zwischen 1 und 10 GB werden nach Rücksprache mit der Bibliotheksleitung hochgeladen. Datensätze größer als 10 GB bis 50 GB werden über zenodo veröffentlicht und in OpenAgrar nur nachgewiesen. Es muss eine spezifische Open-Content-Lizenz ausgewählt werden.</li>
+                        <li>Ist eine Open-Content-Lizenz nicht in der Auswahlliste kann diese ggf. ergänzt werden. Ergänzt werden die Lizenzen vom GBV bzw. von Administratoren.</li>
+                </ul>
+        </li>
+        <li><strong>Embargo</strong>: Bei Bedarf wird ein Embargo eingetragen.
+                <ul>
+                        <li>Ein Embargo wird vergeben, die Dateien nach Veröffentlichung noch nicht zugänglich sein sollen. Das ist beispielsweise der Fall, wenn das Manuskript noch geschrieben und beim Journal eingereicht werden muss. Die Journals verlangen meist, dass die zugehörigen Forschungsdaten vorab veröffentlicht werden.</li>
+                        <li>Wir tragen das gewünschte Embargo ein (Thünen).</li>
+                        <li>Der Datensatz wird veröffentlicht. Austausch von Datei nicht mehr möglich.</li>
+                        <li>Es werden keine Grenzen gesetzt, was den zeitlichen Umfang angeht (Thünen).</li>
+                        <li>Auch wenn andere Repositorien hier anders vorgehen. Üblich sind Embargos von zwei bis drei Jahren.</li>
+                        <li>Der Download der Dateien wird mit der Eintragung des Embargos bis zu dessen Ablauf für nicht angemeldete Nutzer gesperrt.</li>
+                </ul>
+        </li>
+        <li><strong>Titel</strong> (Haupttitel, <a href="https://sta.dnb.de/doc/RDA-E-M005">RDA-E-M005</a>) und ggf. Titelübersetzung und alternativer Titel (<a href="https://sta.dnb.de/doc/RDA-E-W005">RDA-E-W005</a>). Führende Artikel (Der, Die, Das) werden in das gesonderte Feld eingetragen, damit eine korrekte Sortierung erfolgt. Artikel aus Fremdsprachen werden zusammen mit dem Titel als Haupttitel aufgenommen. Abgekürzte Titel werden ggf. bei fortlaufenden Ressourcen erfasst. Der Einheitstitel wird in der Regel nicht vergeben (vgl. RAK-WB §§ 501 – 525, Einheitssachtitel, <a href="https://nbn-resolving.org/urn:nbn:de:101-2007072711">https://nbn-resolving.org/urn:nbn:de:101-2007072711</a>).</li>
+        <li><strong>Autoren und Beteiligte</strong> (<a href="https://sta.dnb.de/doc/RDA-E-M045">RDA-E-M045</a>, <a href="https://sta.dnb.de/doc/RDA-E-P005">RDA-E-P005</a>, <a href="https://sta.dnb.de/doc/RDA-E-E165">RDA-E-E165</a>) oder <strong>Körperschaft</strong> (<a href="https://sta.dnb.de/doc/RDA-E-K005">RDA-E-K005</a>) jeweils mit Zugehörigkeit, GND und ORCiD -&gt; ggf. GND-Eintrag erstellen. Es werden alle Autoren, Beteiligte und Körperschaften aufgenommen. Die Ansetzungsform wird folgender maßen eingegeben. Nachname, [LEERZEICHEN]Vorname. Die Ansetzungsform wird gemäß den Regeln für die Ansetzung in der GND gewählt. Die vereinfache Vorlageform wird in die Unterfelder („Nachname, Vorname, sonstige) eingetragen.
+                <ul>
+                        <li>Unternehmen, die die Daten erheben und bei denen die Mitarbeitenden nicht namentlich als Autoren/Beteiligte aufgenommen werden, werden als beteiligte Körperschaft aufgenommen. -&gt; ggf. GND-Eintrag erstellen. Die Ansetzung erfolgt nach RDA DACH (<a href="https://sta.dnb.de/doc/STA-KL-KOERPERSCHAFT">STA-KL-KOERPERSCHAFT</a>)</li>
+                        <li>Autorenkollektive werden als „Körperschaft (Projekt)“ aufgenommen (<a href="https://sta.dnb.de/doc/STA-KL-KOERPERSCHAFT">STA-KL-KOERPERSCHAFT</a>). Ein GND-Eintrag wird erstellt und mit dem OpenAgrar-Eintrag verknüpft. Eine Liste aller zum Autorenkollektiv zugehörenden Personen wird als Datei mit in dem Dateibereich „Metadaten“ abgelegt.</li>
+                        <li>GND -Einträge werden von der Bibliothek (Thünen) erstellt.</li>
+                </ul>
+        </li>
+        <li><strong>Abstract / Beschreibung</strong> ggf. deutsche und englische Version (<a href="https://sta.dnb.de/doc/RDA-E-E020">RDA-E-E020</a>)
+                <ul>
+                        <li>Werden Versionen in verschiedenen Sprachen erfasst, muss das Feld für jede Version wiederholt werden.</li>
+                        <li>Die Reihenfolge bestimmt auch die Reihenfolge der Anzeige der verschiedenen Versionen.</li>
+                        <li>In der Beschreibung wird der Datensatz beschrieben. Eine Zusammenfassung der zugehörigen Textpublikation ist hier falsch.</li>
+                        <li>Zur Beschreibung gehören auch die Erklärung von Variablen, Trennzeichen und verwendete Codierungen sowie Systemvoraussetzungen und Programmiersprache. Gleiches gilt für den Zweck zu dem die Daten erhoben wurden, z.B. die zu beantwortenden Forschungsdaten.</li>
+                        <li>Die Beschreibung ersetzt nicht eine ausführliche Dokumentation, die Teil des Datensatzes ist.</li>
+                        <li>Hier kann auch die Entstehungsmethode erfasst werden (<a href="https://sta.dnb.de/doc/RDA-E-M415">RDA-E-M415</a>, unstrukturierte Beschreibung).</li>
+                        <li>Angaben zu den Eigenschaften der digitalen Dateien können ebenfalls hier oder über den Kommentar „System-Angaben“ gemacht werden (<a href="https://sta.dnb.de/doc/RDA-E-M535">RDA-E-M535</a>).</li>
+                </ul>
+        </li>
+        <li><strong>Sachgruppe der DNB</strong>: Muss vergeben werden. Es wird die Gruppe ausgewählt, die den Inhalt bzw. die fachliche Zuordnung am besten beschreibt. Bei Geodaten kann zusätzlich die Gruppe „550 Geowissenschaften“ oder „910 Geographie und Reisen“ vergeben werden</li>
+        <li><strong>Schlagwörter</strong>, wenn möglich mit GND (<a href="https://sta.dnb.de/doc/GND">https://sta.dnb.de/doc/GND</a>) verknüpfen. Getrennte Schlagwortketten für deutsche und englische Schlagwörter. Die in der GND enthaltenden Schlagwörter können über den <a href="https://explore.gnd.network/">GND-Explorer</a> eingesehen werden.
+                <ul>
+                        <li>Schlagwörter sind Teil der Sacherschließung und werden nach den RSWK (<a href="https://www.dnb.de/DE/Professionell/Standardisierung/Standards/_content/rswk.html">Regelwerk</a>) vergeben.</li>
+                        <li>Schlagwörter werden, wenn möglich mit den Normdaten der GND verknüpft.</li>
+                        <li>Zeitschlagwörter werden ebenfalls an dieser Stelle eingetragen.</li>
+                        <li>Schlagwörter aus dem <a href="https://agrovoc.fao.org/">AGROVOC</a> und anderen Thesauri können in der jeweiligen Ansetzungsform eingetragen werden. Werden jedoch nicht mit den Normdaten verknüpft, da diese Thesauri (noch) nicht in OpenAgrar eingebunden sind.</li>
+                </ul>
+        </li>
+        <li><strong>Geographischer Bezug</strong> wird ggf. eingetragen.
+                <ul>
+                        <li>Der geographische Bezug wird in Form eines geographischen Schlagwortes (Ansetzungsform) eingetragen und mit der GND verknüpft. Es geht um einen inhaltlichen geografischen Bezug, also welchen groben räumlichen Bezug die Daten haben. Es wird immer der engste Bezug gewählt. Beispiel: Befragung von Landfrauen in verschiedenen Bundesländern (Niedersachsen, Bayern) befragt. Eingetragen werden die Bundesländer.</li>
+                        <li>Das Feld kann wiederholt werden.</li>
+                        <li>Koordinaten werden eingetragen, wenn es sich um kartografische Ressourcen (<a href="https://sta.dnb.de/doc/RDA-R-KART">RDA-R-KART</a>) handelt.</li>
+                </ul>
+        </li>
+        <li><strong>Auflage (= Version)</strong>
+                <ul>
+                        <li>Wenn eine Versionsangabe vorhanden ist wird sie in Vorlageform erfasst.</li>
+                        <li>Ausgabevermerk (<a href="https://sta.dnb.de/doc/RDA-E-M060">RDA-E-M060</a>)</li>
+                        <li>Ausgabebezeichnung (<a href="https://sta.dnb.de/doc/RDA-E-M065">RDA-E-M065</a>)</li>
+                </ul>
+        </li>
+        <li><strong>Umfang</strong> (z.B. 3 CSV-Dateien, 2 PDF-Dateien, 1 TXT-Datei) bei sehr großen Datensätzen werden nur die Anzahl Ordner und die Anzahl der Dateien angegeben (z.B. 35 Ordner, 20.234 Dateien (561 GB)) sowie das Datenvolumen in runden Klammern.
+                <ul>
+                        <li>Als Faustregel gilt: was man an zwei Händen abzählen kann wird im Detail angegeben.</li>
+                        <li>Die Anzahl Ordner und Dateien wird über das jeweilige Dateiverwaltungssystem ausgelesen.</li>
+                        <li><a href="https://sta.dnb.de/doc/RDA-E-M370">RDA-E-M370</a></li>
+                </ul>
+        </li>
+        <li><strong>Persistent Identifier (PID)</strong>
+                <ul>
+                        <li>PID werden erfasst, wenn sie vergeben wurden/ werden.</li>
+                        <li>DOI anderers Repositorien werden ab 10. … eingetragen.</li>
+                        <li>Für Datensätze werden bei Datenpublikationen <strong>DOI</strong> vergeben. Die vergebenen DOI müssen nach Veröffentlichung bei der Registrierungsagentur (Thünen: mEDRA) registriert werden. Bei DataCite und CrossRef erfolgt die Registrierung automatisch nach dem der Datensatz auf den Publikationsstatus „veröffentlicht“ gestellt wurde.
+                                <ul>
+                                        <li>Die Registrierung und Auslieferung der Metadaten über die Schnittstellen erfolgt nachdem der Eintrag auf „veröffentlicht“ gestellt wurde.</li>
+                                        <li>Voraussetzung für die DOI-Vergabe ist, dass die Ressource schreibgeschützt aufbewahrt wird. D.h. die Dateien müssen in der jeweiligen Einrichtung vorgehalten werden. In der Regel erfolgt diese Aufbewahrung über den Langzeitspeicher (Thünen).</li>
+                                </ul>
+                        </li>
+                        <li>URN werden nur für Textpublikationen vergeben, die als Pflichtexemplar bei der DNB abgeliefert werden müssen (Thünen).</li>
+                        <li>URL wird erfasst, wenn vorhanden und keine DOI vergeben wurde. Hier kann z.B. ein permanenter Link zu den Thünen-Atlanten (Link mit der UUID) eingefügt werden.</li>
+                        <li>Die übrigen PID werden für Textpublikationen verwendet und belieben entsprechend frei.</li>
+                </ul>
+        </li>
+        <li><strong>Verlag</strong> (Name des Repositoriums, oder des Verlags/ Eigenverlags der das Angebot betreibt) (<a href="https://sta.dnb.de/doc/RDA-E-M195">RDA-E-M195</a>)
+                <ul>
+                        <li>Für Datensätze mit „Alle Rechte vorbehalten“ wird als Verlag „Thünen-Institut“ eingetragen (Thünen).</li>
+                        <li>Für Datensätze mit einer Open-Content-Lizenz wird „OpenAgrar“ als Verlag eingetragen.</li>
+                        <li>Bei Datensätzen, die über externe Repositorien veröffentlicht wurden, wird der Name des Repositoriums in Vorlageform eingetragen.</li>
+                </ul>
+        </li>
+        <li><strong>Erscheinungsort</strong> (<a href="https://sta.dnb.de/doc/RDA-E-M185">RDA-E-M185</a>): Sitz des Verlages oder des Repositoriums bzw. Standort der Server / Speicher auf denen die Daten vorgehalten werden.
+                <ul>
+                        <li>Für Datensätze mit „Alle Rechte vorbehalten“ wird als Erscheinungsort „Braunschweig“ eingetragen (Thünen).</li>
+                        <li>Für Datensätze mit einer Open-Content-Lizenz wird als Erscheinungsort „Göttingen“ eingetragen.</li>
+                        <li>Bei Datensätzen, die über externe Repositorien veröffentlicht wurden, wird der Sitz des Repositoriums oder der Standort der Server in Vorlageform eingetragen. Falls beides nicht ermittelt werden kann, wird er Sitz der Körperschaft eingetragen, die das Repositorium betreut.</li>
+                </ul>
+        </li>
+        <li><strong>Erscheinungsjahr:</strong> bei veröffentlichten Datensätzen (<a href="https://sta.dnb.de/doc/RDA-E-M205">RDA-E-M205</a>)
+                <ul>
+                        <li>In der Regel wird nur das Jahr (JJJJ) eingetragen.</li>
+                        <li>Das vollständige Daten kann, wenn es vorliegt, eingetragen werden.</li>
+                </ul>
+        </li>
+        <li><strong>Erstellung</strong>: Zeitraum der Erstellung; Zeitraum, den der Datensatz abdeckt (Berichtszeitraum, Herstellungsdatum, <a href="https://sta.dnb.de/doc/RDA-E-M265">RDA-E-M265</a>)
+                <ul>
+                        <li>Dort wird der Zeitraum eingetragen in dem die Daten erhoben wurden.</li>
+                        <li>Die Angabe gibt also an, welchen Zeitraum die Daten abdecken. Das ist besonders wichtig, wenn die Daten schon älter sind und erst mit größerem Zeitverzug veröffentlicht werden.</li>
+                        <li>In der Regel werden nur die Jahre angegeben. Liegen vollständige Datumsangaben vor, können diese erfasst werden.</li>
+                </ul>
+        </li>
+        <li><strong>Einreichung:</strong> Jahr der Einrichtung bei <strong>un</strong>veröffentlichten Datensätzen
+                <ul>
+                        <li>An Stelle des Erscheinungsjahres wird bei unveröffentlichten Datensätzen das Einreichungsjahr (JJJJ) erfasst.</li>
+                </ul>
+        </li>
+        <li><strong>Herstellungsort</strong> (<a href="https://sta.dnb.de/doc/RDA-E-M245">RDA-E-M245</a>): Wird als Geografikum /geografischer Ort angegeben und mit der GND verknüpft.</li>
+        <li><strong>Sprache(n)</strong> eintragen</li>
+        <li><strong>Förderangabe bei Drittmittelprojekten</strong>: Der Förderhinweis wird im Kommentarfeld „Finanzierung“ eingetragen.
+                <ul>
+                        <li>Förderangabe bei EU-Projekten: EU-Projekte sind verpflichtet ihre Aktivitäten auf der OpenAire-Plattform anzugeben. Daher wird ihre Förderangabe im Bereich für OpenAire eingetragen. In der Regel wird das Projektakronym zum Auffinden des zugehörigen Projekteintrags in OpenAire benötigt. Die restlichen Angaben ergänzen sich automatisch.</li>
+                        <li>Wichtig bei Drittmittelprojekten. Mittgeber verlangen diese Kennzeichnung.</li>
+                        <li>Logos können nicht eingefügt werden.</li>
+                </ul>
+        </li>
+        <li><strong>Project ID:</strong> Interne Projektnummer
+                <ul>
+                        <li>In diesem Feld kann Projektnummer oder das Förderkennzeichen (FKZ) des Projektes eingetragen werden.</li>
+                        <li>Das Feld ist öffentlich sichtbar.</li>
+                </ul>
+        </li>
+        <li><strong>Interne TI ID</strong>: (Thünen) Archivsignatur des LZS/ Aktenzeichen / Ordnername im Dateisystem bei unveröffentlichten Datensätzen, optional bei veröffentlichten Datensätzen
+                <ul>
+                        <li>Das Feld ist öffentlich sichtbar.</li>
+                </ul>
+        </li>
+        <li><strong>interne ID</strong>: ggf. Abrufzeichen, Teilbestandskennzeichen, Zeichen für Statistik usw.
+                <ul>
+                        <li>Das Feld ist nur für angemeldete Nutzer sichtbar.</li>
+                </ul>
+        </li>
+        <li><strong>Provenienz:</strong> Kann als Kommentar „Datum“ angegeben werden.</li>
+</ul><p><em>Projektinformation (OpenAIRE)</em></p><ul>
+        <li>Brauchen wir für EU-Projekte.</li>
+        <li>Man gibt in einem der Felder die Informationen ein. In der Regel erfolgt schon bei der Eingabe eine Abfrage bei OpenAIRE. Es werden verschiedene Einträge angeboten und man wählt den passenden aus. Die übrigen Angaben werden automatisch ergänzt.</li>
+        <li><strong>HVD-Kategorie</strong>: Hierrüber werden Datensätze als <a href="https://www.govdata.de/informationen/hochwertige-datensaetze#hvd_faq_section1_q2">High-Value-Datasets</a> gekennzeichnet. Diese wird nur ausgewählt, wenn es sich um einen solchen Datensatz handelt.</li>
+</ul><p><em>OpenAgrar-spezifischer Abschnitt</em></p><p>Dieser Abschnitt kann beliebig häufig wiederholt werden.</p><ul>
+        <li>Jahresberichtskategorie, i.d.R. "Forschungsdaten" oder "Nicht im Jahresbericht"
+                <ul>
+                        <li>„Forschungsdaten“ wird gewählt für alle veröffentlichten Datensätze, die im laufenden Jahresbericht aufgenommen werden sollen. (Thünen) Diese Datensätze müssen auch an ThünenLit gemeldet werden. Mail mit Zitat (Vollbeleg) und OpenAgrar-Link an <a href="mailto:thuenenlit@thuenen.de">thuenenlit@thuenen.de</a>.</li>
+                        <li>„Nicht im Jahresbericht“ wird ausgewählt, wenn der Datensatz nicht in den Jahresbericht aufgenommen werden soll. (Thünen) Diese Datensätze werden nicht an ThünenLit oder GovData gemeldet.</li>
+                </ul>
+        </li>
+        <li>Jahresberichtsjahr
+                <ul>
+                        <li>Es wird das aktuelle Kalenderjahr eingetragen, auch wenn es sich um eine Nachmeldung handelt.</li>
+                        <li>Das Jahr (JJJJ) muss vierstellig angegeben werden.</li>
+                </ul>
+        </li>
+        <li>Einrichtung
+                <ul>
+                        <li>Es wird die Einrichtung/ Institut innerhalb der jeweiligen Einrichtung ausgewählt, die für den Datensatz verantwortlich ist.</li>
+                        <li>Sind mehrere Einrichtungen beteiligt, muss der Abschnitt für jede Einrichtung wiederholt werden.</li>
+                </ul>
+        </li>
+        <li>Interne Anmerkung:
+                <ul>
+                        <li>(Thünen) Status Langzeitspeicher, Aufbereitungsstatus für GovData, interne Vermerke, Bearbeitungshinweise
+                                <ul>
+                                        <li>Daten sind auf dem LZS abgelegt.
+                                                <ul>
+                                                        <li>LZS FDM-[Bearbeiterkürzel] 09-07-2026</li>
+                                                        <li>DCAT</li>
+                                                </ul>
+                                        </li>
+                                        <li>Keine Daten auf dem LZS, nur vorbereiteter Ordner mit Metadaten-Template auf dem ITBS-Laufwerk vorhanden. Datensatz muss in der zugehörigen Excel-Liste aufgenommen werden.
+                                                <ul>
+                                                        <li>LZS-nd 13-07-2026 FDM-[Bearbeiterkürzel]</li>
+                                                        <li>DCAT</li>
+                                                </ul>
+                                        </li>
+                                </ul>
+                        </li>
+                </ul>
+        </li>
         <li>Bei Bedarf: Kommentare</li>
-</ul><p><strong>Was wird hochgeladen:</strong></p><p><em>Dateibereich: Metadaten</em></p><ul>
+</ul><p align="left"><strong>Was wird hochgeladen:</strong></p><p align="left">Es werden zwei Dateibereiche erstellt. Zuerst wird der Bereich „Metadaten“ erstellt und danach der Bereich „Dateien“.</p><p align="left"><em>Dateibereich: Metadaten</em></p><ul>
         <li>auf "Datendokumentation" und Sortierung auf "1" stellen</li>
         <li>Metadaten-Template</li>
-        <li>ggf. weitere Dokumente zur Beschreibung der Daten, z.B. Tabelle mit der Auflösung der verwendenten Variablen</li>
-</ul><p><em>Dateibereich: Dateien</em></p><ul>
-        <li>auf "Inhalt" stellen und Dortierung auf "2" stellen</li>
+        <li>ggf. weitere Dokumente zur Beschreibung der Daten, z.B. Tabelle mit der Auflösung der verwendeten Variablen</li>
+</ul><p align="left"><em>Dateibereich: Dateien</em></p><ul>
+        <li>auf "Inhalt" stellen und Sortierung auf "2" stellen</li>
         <li>Die eigentlichen Datendateien werden hier hochgeladen.</li>
         <li>Dateibenennungsregeln beachten.</li>
         <li>Dateien nicht als ZIP-Archiv hochladen, da MyCoRe selbst ein ZIP-Archiv beim Download erstellt.</li>
@@ -45,31 +204,290 @@ Abkürzungen und Variablen erklärt und aufgelöst.</p><h2>Datensatz erfassen</h
         <li>Man kann die gesamte Verzeichnisstruktur hochladen.</li>
         <li>Geodaten werden möglichst als Geopackage nicht als Shape-File hochgeladen.</li>
         <li>Die Dateien sollten möglichst in offenen Formaten vorliegen, die eine Speicherung für mehr als 10 Jahre ermöglichen.</li>
-</ul><h2>Verknüpfungen einzelner Datensätze</h2><p><strong>Datensatz mit Literatur verknüpfen</strong></p><p>Von der Datensatzaufnahme wird auf die Literaturaufnahme mit "referenziert" bzw. "gehört zu" verküpft.<br />
-Ausgangspunkt ist der Datensatz, da dieser zuerst da ist und mit einer Vielzahl von Einträgen verlinkt werden<br />
-muss/kann.</p><p><strong>Vorgänger und Nachfolger</strong></p><p>Bei der Erfassung einer neuen Version eines Datensatzes wird die Option "neue Version des Eintrages erstellen" verwendet. Die Verküpfung wird vom System automatisch vorgenommen und als "Vorgänger" beim neuen Datensatz angelegt. Die Angaben des Vorgängers werden bei diesem Vorgehen fast vollständig übernommen und müssen nur geringfügig angepasst werden. Das spart Arbeit. Bei einer nachträglichen Verküpfung geht man wird die Vernüpfung "Vorgänger" manuell beim Nachfolge-Eintrag auf den Vorgänger- Eintrag vorgenommen.</p><p><strong>Datensammelwerk und Themensammlung</strong></p><p><em>Datensammelwerk</em></p><p> </p><p><em>Themensammlung</em></p><p>Eine Themensammlung ist ein Sammelwerk und beinhaltet sowohl Text- als auch Datenpublikationen zu einem bestimmten Thema.<br />
-Beispielweise können die Forschungsoutputs eines Forschungsprojektes oder eines Monitorings mit einer Themensammlung gruppiert werden. Die Erscheinungsweise ist unregelmäßig.</p><h2>Forschungssoftware</h2><p>Forschungssoftware wird als Forschungsdaten mit einer eigenen Formular erfasst. Diese Formular ist bisher nicht verfügbar. Daher wird das Formular für Forschungsdaten verwendet und die zusätzlichen Angaben im Abstract und im  Metadaten-Template festgehalten.</p><h2>Datensammlungen erfassen</h2><p>Datensammlungen werden analog zur monographischen Reihe erfasst. Hierbei werden verschiende<br />
-Sammlungen unterschieden. Hier von ist das Datensammelwerk zu unterscheiden.</p><ul>
-        <li>Serie/Reihe</li>
-        <li>Versionsreihe</li>
-</ul><h3>Serie/Reihe</h3><p>Hierbei handelt es sich in der Regel um Forschungsdaten, die regelmäßig (mehr oder weniger) erhoben<br />
-werden. Die Ergebung findet beispielsweise jährlich statt. Die jeweils aktuelle Erhebung stellt eine Erweiterung<br />
-des Datensatzes um einen Band dar. Es besteht keine Vorgänger-Nachfolger-Beziehung, d.h. die Erweiterung<br />
-des Datensatzes führt nicht zu einer Ablösung der Gültigkeit. Das Inhaltsverzeichnis wird nach dem<br />
-Erscheinungsjahr in Bände eingeteilt. Innerhalb der Jahre können verschiedene Bände gelistet werden.<br />
-Für den Eitrag wird die Maske "<strong>Serie</strong>" verwendet, die auch für Literatureintragungen genutzt wird. Die<br />
-folgenden Felder werden nicht belegt:</p><ul>
-        <li>Herausgeber</li>
-        <li>ISSN</li>
-        <li>ZDB-ID Wenn sinnvoll können werden die Felder</li>
-        <li>Erscheinungsverlauf und</li>
-        <li>abgekürzt ausgefüllt.</li>
-</ul><p><strong>Sonderfall "Zeitreihe"</strong><br />
-Zeitreihen werden über das Schlagwort "Zeitreihe" und "timeline" gekennzeichnet, um gezielt nach diesen<br />
-suchen zu können. Sie werden als "Datensatz" (einmaliges Erstellen) aufgenommen oder, falls eine regelmäßige Aktualisierung erfolgt, als "Serie" bzw. "Versionsreihe" (fortlaufende Aktuallisierung). Eine Zeitreihe liegt immer dann vor, wenn Daten auf der selben Bezugsbasis fortgeschrieben in einer Tabelle erfasst werden.</p><h3>Versionsreihe</h3><p>Bei der Versionsreihe werden mehr oder weniger regelmäßig neue Versionen des Datensatzes erzeugt. Es besteht eine Vorgänger-Nachfolger-Beziehung. Der Nachfolger "löst den Vorgänger in der Gültigkeit ab". Beispiele sind Software-Releases und Datensätze, die im Laufe eines Projektes aktualisiert und/oder erweitert werden.</p><h2>Review-Verfahren</h2><p>Ist die Textpublikation, mit der Forschungsdatensatz zur Verfügung steht, in einem Review eines Verlages, wird der Forschungsdatensatz <strong>nach Beendigung des Review</strong> und erfolgter Überarbeitung veröffentlicht. Bestehen die Gutachter auf einer Veröffentlichung <strong>vor Ende des Reviews</strong> werden keine nachträglichen Änderungen mehr durchgeführt. Bei nötigen Änderungen muss der Datensatz als neue Version veröffentlicht werden. </p><p>Bei einem <strong>Doppelblindverfahren</strong> werden für die Autoren und Beteiligte als N.N. eingetragen. Die Einrichtung, Affiliation, Erscheinungsort und Verlag werden erst nach Abschluss des Review eingetragen. </p><p>Für das Review wird ein <strong>Embargo</strong> eingetragen und ein <strong>lesender Zugrifflink</strong> erstellt. Außderdem wird ein <strong>Hinweis</strong> auf die spätere Registrierung der <strong>DOI</strong> eingetragen (dt. und engl.). Die <strong>Freistellungserklärung</strong> muss vor Erstellung des Zugriffslinks vorliegen.</p><h2>Erfassung von Forschungsdatensätzen, aus externen Repositorien</h2><p>Die Erfassung von Forschungsdatensätzen, die über andere Repositorien als OpenAgrar veröffentlicht werden erfolgt mehr oder weniger analog zu den über OpenAgrar veröffentlichten Forschungsdatensätzen. Unterschied ist, dass die Datensätze in der Regel nicht auf OpenAgrar hochgeladen werden. Es erfolgt ein Metadateneintrag und der Upload eines ausgefüllten Metadaten-Templates. Eine DOI der jeweiligen Einrichtung wird nicht vergeben. Eingetragen wird die DOI des  Repositoriums, über das die Daten veröffentlicht wurden.</p><h2>Zweitveröffentlichung von Forschungsdaten</h2><p>Für eine Zweitveröffentlichung von Forschungsdaten müssen die Vorrausetzungen erfüllt sein. Hier sind grundsätzlich zwei Fälle zu unterscheiden:</p><ol>
-        <li>Forschungsdaten mit urheberrechtlichen Schutz (Schöpfungshöhe erreicht), und</li>
-        <li>Forschungsdaten ohne urheberrechtlichen Schutz (Schöpfungshöhe nicht erreicht).</li>
-</ol><p><strong>Fall 1: Forschungsdaten mit urheberrechtlichen Schutz </strong><br />
-Zu beachten ist der<strong> §38 UrhG</strong>. In Absatz 4 ist der wissenschaftliche Beitrag geregelt. Offen ist die Frage, ob Forschungsdaten ein wissenschaftlicher Beitrag sind und ab wann die Schöpfungshöhe erreicht wird. Auch die akzeptierte Manuskriptsversion müsste in diesem Fall geklärt werden, was ist im Fall von Supplement Material die akzeptierte Manuskriptsversion ist.<br />
-<strong>Fall 2: Forschungsdaten ohne urheberrechtlichen Schutz</strong><br />
-In diesem Fall gilt das Eigentumsrecht (immateriellen Eigentum). Werden solche Daten als z.B. Supplement Material bei einem kommerziellen Verlag veröffentlicht und ausschließliche Verwertungs- und Nutzungsrechte sowie Eigentumsrechte an den Verlag abgetreten, ist eine Zweitveröffentlichung ausgeschlossen.</p><p> </p></section><meta><log lastEditor="btimmermann" date="2026-02-09" time="16:43" /></meta></MyCoReWebPage>
+</ul><h2>2.2 Mehrteilige Monografie /Ressource (Datensammelwerk)</h2><p>Ein Datensammelwerk wird analog zu einer<strong> mehrteiligen Monografie</strong> (<a href="https://sta.dnb.de/doc/RDA-E-M320">RDA-E-M320</a>) erfasst. Es handelt sich um eine Sammlung von Datensätzen, die in einem direkten Zusammenhang zu einander stehen. Die Datensätze können über einen Zeitraum nacheinander oder gleichzeitig veröffentlicht werden. Datensammelwerke werden wie andere Sammelwerke auch hierarchisch erfasst.</p><p>Die <strong>übergeordnete Aufnahme</strong> wird mit dem <strong>Publikationstyp „Sammelwerk“</strong> erstellt. Die Forschungsdatensätze werden mit der Verknüpfung „erschienen in“ als <strong>untergeordnete Aufnahme (einzelne Einheit, Forschungsdaten)</strong> verknüpft.</p><p><strong>Eingetragen werden:</strong></p><ul>
+        <li><strong>Publikationsstatus:</strong> steuert die Sichtbarkeit des Eintrags und den Redaktionsprozess. Wenn der Eintrag einmal auf „veröffentlicht“ gestellt und gespeichert wurde ist und bleibt er öffentlich sichtbar und auffindbar. Er wird dann auch über die Schnittstellen ausgeliefert und kann nicht zurückgenommen werden.
+
+                <ul>
+                        <li>Solange ein Datensatz noch in Bearbeitung ist wird er auf „eingereicht“ oder „wird bearbeitet“ gestellt. Über den OpenAgrar-Link (URL des Eintrags) kann der Eintrag in diesem Status mit externen nicht angemeldeten Nutzern geteilt werden.</li>
+                        <li>Sobald der erste enthaltene Datensatz veröffentlicht wird, wird auch die übergeordnete Aufnahme auf veröffentlicht gestellt.</li>
+                </ul>
+        </li>
+        <li><strong>Titel</strong> (Haupttitel, <a href="https://sta.dnb.de/doc/RDA-E-M005">RDA-E-M005</a>) und ggf. Titelübersetzung und alternativer Titel (<a href="https://sta.dnb.de/doc/RDA-E-W005">RDA-E-W005</a>). Führende Artikel (Der, Die, Das) werden in das gesonderte Feld eingetragen, damit eine korrekte Sortierung erfolgt. Artikel aus Fremdsprachen werden zusammen mit dem Titel als Haupttitel aufgenommen. Abgekürzte Titel werden ggf. bei fortlaufenden Ressourcen erfasst. Der Einheitstitel wird in der Regel nicht vergeben (vgl. RAK-WB §§ 501 – 525, Einheitssachtitel, <a href="https://nbn-resolving.org/urn:nbn:de:101-2007072711">https://nbn-resolving.org/urn:nbn:de:101-2007072711</a>).</li>
+        <li><strong>Herausgeber</strong> (<a href="https://sta.dnb.de/doc/RDA-E-M045">RDA-E-M045</a>, <a href="https://sta.dnb.de/doc/RDA-E-P005">RDA-E-P005</a>, <a href="https://sta.dnb.de/doc/RDA-E-E165">RDA-E-E165</a>) oder herausgebende Körperschaft / herausgebendes Organ (<a href="https://sta.dnb.de/doc/RDA-E-K005">RDA-E-K005</a>) jeweils mit Zugehörigkeit, GND und ORCiD -&gt; ggf. GND-Eintrag erstellen. Es werden alle Autoren, Beteiligte und Körperschaften aufgenommen. Die Ansetzungsform wird folgender maßen eingegeben. Nachname, [LEERZEICHEN]Vorname. Die Ansetzungsform wird gemäß den Regeln für die Ansetzung in der GND gewählt. Die vereinfache Vorlageform wird in die Unterfelder („Nachname, Vorname, sonstige) eingetragen.
+                <ul>
+                        <li>Unternehmen, die die Daten erheben und bei denen die Mitarbeitenden nicht namentlich als Autoren/Beteiligte aufgenommen werden, werden als beteiligte Körperschaft aufgenommen. -&gt; ggf. GND-Eintrag erstellen. Die Ansetzung erfolgt nach RDA DACH (<a href="https://sta.dnb.de/doc/STA-KL-KOERPERSCHAFT">STA-KL-KOERPERSCHAFT</a>)</li>
+                        <li>Autorenkollektive werden als „Körperschaft (Projekt)“ aufgenommen (<a href="https://sta.dnb.de/doc/STA-KL-KOERPERSCHAFT">STA-KL-KOERPERSCHAFT</a>). Ein GND-Eintrag wird erstellt und mit dem OpenAgrar-Eintrag verknüpft. Eine Liste aller zum Autorenkollektiv zugehörenden Personen wird als Datei mit in dem Dateibereich „Metadaten“ abgelegt.</li>
+                        <li>In seltenen Fällen können auch Autor(en) eingetragen werden.</li>
+                        <li>GND -Einträge werden von der Bibliothek (Thünen) erstellt.</li>
+                </ul>
+        </li>
+        <li>Open Content-<strong>Lizenz</strong> oder "Alle Rechte vorbehalten"
+                <ul>
+                        <li>Zusätzlich können über den Kommentar „Lizensierung“ weitere Angaben zur Nutzung und zur Zugänglichkeit gemacht werden. Über den Kommentar „Restriktionen (Sperrvermerk)“ werden Einschränkungen bei der Nutzung vermerkt. Beispiel: Sperrvermerk: Geschäftsgeheimnisse und Personenbezug. Datensatz kann auf Anfrage teilweise für Forschungszwecke zur Verfügung gestellt werden. Eine Datennutzungsvereinbarung wird abgeschlossen. Trade secrets and personal data. The dataset may be made available in part for research purposes upon request. A data usage agreement will be concluded.</li>
+                        <li>Über den Kommentar „Löschung“ wird bei einer Löschung der Grund vermerkt.</li>
+                        <li>Wenn „Alle Rechte vorbehalten“ (Closed Data Publikation) ausgewählt wurde, werden die Datendateien nicht hochgeladen. Die Daten werden für entsprechende Nutzungsanfragen schreibgeschützt auf dem Langzeitspeicher abgelegt. (siehe hierfür Arbeitsablauf zum LZS)</li>
+                        <li>Ist eine Open-Content-Lizenz nicht in der Auswahlliste kann diese ggf. ergänzt werden. Ergänzt werden die Lizenzen vom GBV bzw. von Administratoren.</li>
+                </ul>
+        </li>
+        <li><strong>Abstract / Beschreibung</strong> ggf. deutsche und englische Version (<a href="https://sta.dnb.de/doc/RDA-E-E020">RDA-E-E020</a>)
+                <ul>
+                        <li>Werden Versionen in verschiedenen Sprachen erfasst, muss das Feld für jede Version wiederholt werden.</li>
+                        <li>Die Reihenfolge bestimmt auch die Reihenfolge der Anzeige der verschiedenen Versionen.</li>
+                        <li>In der Beschreibung wird der Gesamt-Datensatz beschrieben. Eine Zusammenfassung der zugehörigen Textpublikation ist hier falsch.</li>
+                        <li>Zur Beschreibung gehören auch die Erklärung von Variablen, Trennzeichen und verwendete Codierungen sowie Systemvoraussetzungen und Programmiersprache. Gleiches gilt für den Zweck zu dem die Daten erhoben wurden, z.B. die zu beantwortenden Forschungsdaten.</li>
+                        <li>Die Beschreibung ersetzt nicht eine ausführliche Dokumentation, die Teil des Datensatzes ist.</li>
+                        <li>Hier kann auch die Entstehungsmethode erfasst werden (<a href="https://sta.dnb.de/doc/RDA-E-M415">RDA-E-M415</a>, unstrukturierte Beschreibung).</li>
+                        <li>Angaben zu den Eigenschaften der digitalen Dateien können ebenfalls hier oder über den Kommentar „System-Angaben“ gemacht werden (<a href="https://sta.dnb.de/doc/RDA-E-M535">RDA-E-M535</a>).</li>
+                </ul>
+        </li>
+        <li><strong>Provenienz</strong>: Kann als Kommentar „Datum“ angegeben werden.</li>
+        <li><strong>Schlagwörter</strong>, wenn möglich mit GND (<a href="https://sta.dnb.de/doc/GND">https://sta.dnb.de/doc/GND</a>) verknüpfen. Getrennte Schlagwortketten für deutsche und englische Schlagwörter. Die in der GND enthaltenden Schlagwörter können über den <a href="https://explore.gnd.network/">GND-Explorer</a> eingesehen werden.
+                <ul>
+                        <li>Schlagwörter sind Teil der Sacherschließung und werden nach den RSWK (<a href="https://www.dnb.de/DE/Professionell/Standardisierung/Standards/_content/rswk.html">Regelwerk</a>) vergeben.</li>
+                        <li>Schlagwörter werden, wenn möglich mit den Normdaten der GND verknüpft.</li>
+                        <li>Zeitschlagwörter werden ebenfalls an dieser Stelle eingetragen.</li>
+                        <li>Schlagwörter aus dem <a href="https://agrovoc.fao.org/">AGROVOC</a> und andere Thesauri können in der jeweiligen Ansetzungsform eingetragen werden. Werden jedoch nicht mit den Normdaten verknüpft, da diese Thesauri nicht in OpenAgrar eingebunden sind.</li>
+                </ul>
+        </li>
+        <li><strong>Geographischer Bezug</strong> wird ggf. eingetragen.
+                <ul>
+                        <li>Der geographische Bezug wird in Form eines geographischen Schlagwortes (Ansetzungsform) und mit der GND verknüpft. Es geht um einen inhaltlichen geografischen Bezug.</li>
+                        <li>Es wird der engste Bezug eingetragen.</li>
+                        <li>Koordinaten werden eingetragen, wenn es sich um kartografische Ressourcen (<a href="https://sta.dnb.de/doc/RDA-R-KART">RDA-R-KART</a>) handelt.</li>
+                </ul>
+        </li>
+        <li><strong>Auflage</strong> (= Version)
+                <ul>
+                        <li>Wenn eine Versionsangabe vorhanden sind wird sie in Vorlageform erfasst.</li>
+                        <li>Ausgabevermerk (<a href="https://sta.dnb.de/doc/RDA-E-M060">RDA-E-M060</a>)</li>
+                        <li>Ausgabebezeichnung (<a href="https://sta.dnb.de/doc/RDA-E-M065">RDA-E-M065</a>)</li>
+                </ul>
+        </li>
+        <li><strong>Umfang</strong>: Anzahl der Datensätze (z.B. 12 Datensätze)
+                <ul>
+                        <li><a href="https://sta.dnb.de/doc/RDA-E-M370">RDA-E-M370</a></li>
+                </ul>
+        </li>
+        <li><strong>Persistent Identifier (PID)</strong>
+                <ul>
+                        <li>PID werden erfasst, wenn sie vergeben wurden/ werden.</li>
+                        <li>Für Datensätze werden bei Datenpublikationen DOI vergeben. Die vergebenen DOI müssen nach Veröffentlichung bei der Registrierungsagentur (Thünen: mEDRA) registriert werden.
+                                <ul>
+                                        <li>DOI kann vergeben werden, auch wenn das Sammelwerk nach und nach erscheint. Die Registrierung erfolgt erst, nach dem vollständigen Erscheinen.</li>
+                                        <li>Voraussetzung für die DOI-Vergabe ist, dass die Ressource schreibgeschützt aufbewahrt wird. D.h. die Dateien müssen in der jeweiligen Einrichtung vorgehalten werden. In der Regel erfolgt diese Aufbewahrung über den Langzeitspeicher.</li>
+                                </ul>
+                        </li>
+                        <li>URN werden nur für Textpublikationen vergeben, die als Pflichtexemplar bei der DNB abgeliefert werden müssen.</li>
+                        <li>URL wird erfasst, wenn vorhanden und keine DOI vergeben wurde. Hier kann z.B. ein permanenter Link zu den Thünen-Atlanten (Link mit UUID) eingefügt werden.</li>
+                        <li>Alle übrigen PID werden nicht belegt, da sie für Textpublikationen verwendet werden.</li>
+                </ul>
+        </li>
+        <li><strong>Verlag</strong> (Name des Repositoriums, oder des Verlags/ Eigenverlags der das Angebot betreibt) (<a href="https://sta.dnb.de/doc/RDA-E-M195">RDA-E-M195</a>)
+                <ul>
+                        <li> (Thünen) Für Datensätze mit „Alle Rechte vorbehalten“ wird als Verlag „Thünen-Institut“ eingetragen.</li>
+                        <li>Für Datensätze mit einer Open-Content-Lizenz wird „OpenAgrar“ als Verlag eingetragen.</li>
+                        <li>Bei Datensätzen, die über externe Repositorien veröffentlicht wurden, wird der Name des Repositoriums in Vorlageform eingetragen.</li>
+                </ul>
+        </li>
+        <li><strong>Erscheinungsort </strong>(<a href="https://sta.dnb.de/doc/RDA-E-M185">RDA-E-M185</a>): Sitz des Verlages oder des Repositoriums bzw. Standort der Server / Speicher auf denen die Daten vorgehalten werden.
+                <ul>
+                        <li>(Thünen) Für Datensätze mit „Alle Rechte vorbehalten“ wird als Erscheinungsort „Braunschweig“ eingetragen.</li>
+                        <li>Für Datensätze mit einer Open-Content-Lizenz wird als Erscheinungsort „Göttingen“ eingetragen.</li>
+                        <li>Bei Datensätzen, die über externe Repositorien veröffentlicht wurden, wird der Sitz des Repositoriums oder der Standort der Server in Vorlageform eingetragen. Falls beides nicht ermittelt werden kann, wird er Sitz der Körperschaft eingetragen, die das Repositorium betreut.</li>
+                </ul>
+        </li>
+        <li><strong>Erscheinungsjahr</strong>: bei veröffentlichten Datensätzen (<a href="https://sta.dnb.de/doc/RDA-E-M205">RDA-E-M205</a>)
+                <ul>
+                        <li>In der Regel wird nur das Jahr (JJJJ) eingetragen.</li>
+                        <li>Erscheinungszeitraum, wenn das Sammelwerk erst nach und nach erscheint. Solange das Sammelwerk noch nicht vollständig erscheinen ist, bleibt das Enddatum leer.</li>
+                        <li>Das vollständige Datum kann, wenn es vorliegt, eingetragen werden.</li>
+                </ul>
+        </li>
+        <li><strong>Erstellung</strong>: Zeitraum der Erstellung; Zeitraum, den der Datensatz abdeckt (Berichtszeitraum, Herstellungsdatum, <a href="https://sta.dnb.de/doc/RDA-E-M265">RDA-E-M265</a>)
+                <ul>
+                        <li>Dort wird der Zeitraum eingetragen in dem die Daten erhoben wurden.</li>
+                        <li>Die Angabe gibt also an, welchen Zeitraum die Daten abdecken. Das ist besonders wichtig, wenn die Daten schon älter sind und erst mit größerem Zeitverzug veröffentlicht werden.</li>
+                        <li>In der Regel werden nur die Jahre angegeben. Liegen vollständige Datumsangaben vor, können diese erfasst werden.</li>
+                </ul>
+        </li>
+        <li>Datum der letzten <strong>Aktualisierung</strong></li>
+        <li><strong>Herstellungsort</strong> (<a href="https://sta.dnb.de/doc/RDA-E-M245">RDA-E-M245</a>): Wird als Geografikum /geografischer Bezug angegeben und mit der GND verknüpft.</li>
+        <li><strong>Sprache(n)</strong> eintragen.</li>
+        <li><strong>Förderangabe bei Drittmittelprojekten</strong>: Der Förderhinweis wird im Kommentarfeld „Finanzierung“ eingetragen.
+                <ul>
+                        <li>Förderangabe bei EU-Projekten: EU-Projekte sind verpflichtet ihre Aktivitäten auf der OpenAire-Plattform anzugeben. Daher wird ihre Förderangabe im Bereich für OpenAire eingetragen. In der Regel wird das Projektakronym zum Auffinden des zugehörigen Projekteintrags in OpenAire benötigt. Die restlichen Angaben ergänzen sich automatisch.</li>
+                </ul>
+        </li>
+        <li><strong>Project ID:</strong> Interne Projektnummer
+                <ul>
+                        <li>In diesem Feld kann Projektnummer oder das Förderkennzeichen (FKZ) des Projektes eingetragen werden.</li>
+                </ul>
+        </li>
+        <li><strong>interne ID</strong>: ggf. Abrufzeichen, Teilbestandskennzeichen, Zeichen für Statistik usw.
+                <ul>
+                        <li>Das Feld ist nur für angemeldete Nutzer sichtbar.</li>
+                </ul>
+        </li>
+</ul><p><em>OpenAgrar-spezifischer Abschnitt</em></p><p>Dieser Abschnitt kann beliebig häufig wiederholt werden.</p><ul>
+        <li><strong>Einrichtung</strong>
+
+                <ul>
+                        <li>Es wird die Einrichtung im Thünen ausgewählt, die für den Datensatz verantwortlich ist.</li>
+                        <li>Sind mehrere Einrichtungen beteiligt, muss der Abschnitt für jede Einrichtung wiederholt werden.</li>
+                </ul>
+        </li>
+        <li><strong>Interne Anmerkung</strong>: bei Bedarf</li>
+        <li>Bei Bedarf: <strong>Kommentare</strong></li>
+</ul><p align="left"><strong>Was wird hochgeladen:</strong></p><ul>
+        <li>keine Datendateien</li>
+        <li>Bei Autorenkollektiven wird eine Mitgliederliste hochgeladen, diese darf bei Änderungen ausgetauscht werden. Dateibereich für Datendokumentation.</li>
+</ul><h2>2.3 Fortlaufende Ressource / Serie</h2><p><strong>Fortlaufende Ressourcen</strong> (<a href="https://sta.dnb.de/doc/RDA-E-M320">RDA-E-M320</a>) liegen vor, wenn mehrere aufeinander folgende in sich abgeschlossene Forschungsdatensätze erscheinen und <strong>kein Ende geplant</strong> ist. Beispiele sind u.a. Dauerversuche, Monitorings.</p><p><strong>hierarchische Erschließung</strong></p><p>Die <strong>übergeordnete Aufnahme</strong> wird mit dem <strong>Publikationstyp „Serie“</strong> erstellt. Die Forschungsdatensätze werden mit der Verknüpfung „in Serie“ als <strong>untergeordnete Aufnahme (einzelne Einheit, Forschungsdaten)</strong> verknüpft.</p><p><strong>Eingetragen werden:</strong></p><ul>
+        <li><strong>Publikationsstatus</strong>: steuert die Sichtbarkeit des Eintrags und den Redaktionsprozess. Wenn der Eintrag einmal auf „veröffentlicht“ gestellt und gespeichert wurde ist und bleibt er öffentlich sichtbar und auffindbar. Er wird dann auch über die Schnittstellen ausgeliefert und kann nicht zurückgenommen werden.</li>
+        <li><strong>Titel</strong> (Haupttitel, <a href="https://sta.dnb.de/doc/RDA-E-M005">RDA-E-M005</a>) und ggf. Titelübersetzung und alternativer Titel (<a href="https://sta.dnb.de/doc/RDA-E-W005">RDA-E-W005</a>). Führende Artikel (Der, Die, Das) werden in das gesonderte Feld eingetragen, damit eine korrekte Sortierung erfolgt. Artikel aus Fremdsprachen werden zusammen mit dem Titel als Haupttitel aufgenommen. Abgekürzte Titel werden ggf. bei fortlaufenden Ressourcen erfasst. Der Einheitstitel wird in der Regel nicht vergeben (vgl. RAK-WB §§ 501 – 525, Einheitssachtitel, <a href="https://nbn-resolving.org/urn:nbn:de:101-2007072711">https://nbn-resolving.org/urn:nbn:de:101-2007072711</a>).</li>
+        <li><strong>Herausgeber</strong> (<a href="https://sta.dnb.de/doc/RDA-E-M045">RDA-E-M045</a>, <a href="https://sta.dnb.de/doc/RDA-E-P005">RDA-E-P005</a>, <a href="https://sta.dnb.de/doc/RDA-E-E165">RDA-E-E165</a>) oder herausgebende Körperschaft / herausgebendes Organ (<a href="https://sta.dnb.de/doc/RDA-E-K005">RDA-E-K005</a>) jeweils mit Zugehörigkeit, GND und ORCiD -&gt; ggf. GND-Eintrag erstellen. Es werden alle Autoren, Beteiligte und Körperschaften aufgenommen. Die Ansetzungsform wird folgender maßen eingegeben. Nachname, [LEERZEICHEN]Vorname. Die Ansetzungsform wird gemäß den Regeln für die Ansetzung in der GND gewählt. Die vereinfache Vorlageform wird in die Unterfelder („Nachname, Vorname, sonstige) eingetragen. Das Thünen wird als herausgebendes Organ eingetragen und ROR-ID und GND verknüpfen.
+                <ul>
+                        <li>GND -Einträge werden von der Bibliothek (Thünen) erstellt.</li>
+                </ul>
+        </li>
+        <li><strong>Abstract / Beschreibung</strong> ggf. deutsche und englische Version (<a href="https://sta.dnb.de/doc/RDA-E-E020">RDA-E-E020</a>)
+                <ul>
+                        <li>Werden Versionen in verschiedenen Sprachen erfasst, muss das Feld für jede Version wiederholt werden.</li>
+                        <li>Die Reihenfolge bestimmt auch die Reihenfolge der Anzeige der verschiedenen Versionen.</li>
+                        <li>In der Beschreibung wird die gesamte Serie beschrieben.</li>
+                </ul>
+        </li>
+        <li><strong>Schlagwörter,</strong> wenn möglich mit GND (<a href="https://sta.dnb.de/doc/GND">https://sta.dnb.de/doc/GND</a>) verknüpfen. Getrennte Schlagwortketten für deutsche und englische Schlagwörter. Die in der GND enthaltenden Schlagwörter können über den <a href="https://explore.gnd.network/">GND-Explorer</a> eingesehen werden.
+                <ul>
+                        <li>Schlagwörter sind Teil der Sacherschließung und werden nach den RSWK (<a href="https://www.dnb.de/DE/Professionell/Standardisierung/Standards/_content/rswk.html">Regelwerk</a>) vergeben.</li>
+                        <li>Schlagwörter werden, wenn möglich mit den Normdaten der GND verknüpft.</li>
+                        <li>Zeitschlagwörter werden ebenfalls an dieser Stelle eingetragen.</li>
+                        <li>Schlagwörter aus dem <a href="https://agrovoc.fao.org/">AGROVOC</a> und andere Thesauri können in der jeweiligen Ansetzungsform eingetragen werden. Werden jedoch nicht mit den Normdaten verknüpft, da diese Thesauri nicht in OpenAgrar eingebunden sind.</li>
+                </ul>
+        </li>
+        <li><strong>Geographischer Bezug</strong> wird ggf. eingetragen.
+                <ul>
+                        <li>Der geographische Bezug wird in Form eines geographischen Schlagwortes (Ansetzungsform) und mit der GND verknüpft. Es geht um einen inhaltlichen geografischen Bezug. Es wird der engste Bezug eintragen.</li>
+                        <li>Koordinaten werden eingetragen, wenn es sich um kartografische Ressourcen (<a href="https://sta.dnb.de/doc/RDA-R-KART">RDA-R-KART</a>) handelt.</li>
+                </ul>
+        </li>
+        <li><strong>Persistent Identifier (PID)</strong> werden <strong>nicht</strong> vergeben. Dies gilt auch für die ISSN. Die ISSN wird nur für Serien vergeben, die unter das Pflichtexemplarrecht der DNB fallen. Bei Forschungsdaten ist dies nicht der Fall.</li>
+        <li><strong>Verlag</strong> (Name des Repositoriums, oder des Verlags/ Eigenverlags der das Angebot betreibt) (<a href="https://sta.dnb.de/doc/RDA-E-M195">RDA-E-M195</a>)
+                <ul>
+                        <li>(Thünen) Für Datensätze mit „Alle Rechte vorbehalten“ wird als Verlag „Thünen-Institut“ eingetragen.</li>
+                        <li>Für Datensätze mit einer Open-Content-Lizenz wird „OpenAgrar“ als Verlag eingetragen.</li>
+                        <li>Bei Datensätzen, die über externe Repositorien veröffentlicht wurden, wird der Name des Repositoriums in Vorlageform eingetragen.</li>
+                </ul>
+        </li>
+        <li><strong>Erscheinungsort</strong> (<a href="https://sta.dnb.de/doc/RDA-E-M185">RDA-E-M185</a>): Sitz des Verlages oder des Repositoriums bzw. Standort der Server / Speicher auf denen die Daten vorgehalten werden.
+                <ul>
+                        <li>(Thünen) Für Datensätze mit „Alle Rechte vorbehalten“ wird als Erscheinungsort „Braunschweig“ eingetragen.</li>
+                        <li>Für Datensätze mit einer Open-Content-Lizenz wird als Erscheinungsort „Göttingen“ eingetragen.</li>
+                        <li>Bei Datensätzen, die über externe Repositorien veröffentlicht wurden, wird der Sitz des Repositoriums oder der Standort der Server in Vorlageform eingetragen. Falls beides nicht ermittelt werden kann, wird er Sitz der Körperschaft eingetragen, die das Repositorium betreut.</li>
+                </ul>
+        </li>
+        <li><strong>Erscheinungsjahr</strong>: bei veröffentlichten Datensätzen (<a href="https://sta.dnb.de/doc/RDA-E-M205">RDA-E-M205</a>)
+                <ul>
+                        <li>Erscheinungszeitraum. Startjahr eintragen und das Ende offenlassen.</li>
+                </ul>
+        </li>
+        <li><strong>Datum der letzten Aktualisierung</strong></li>
+        <li><strong>Sprache(n)</strong> eintragen.</li>
+        <li><strong>interne ID</strong>: ggf. Abrufzeichen, Teilbestandskennzeichen, Zeichen für Statistik usw.
+                <ul>
+                        <li>Das Feld ist nur für angemeldete Nutzer sichtbar.</li>
+                </ul>
+        </li>
+</ul><p><em>OpenAgrar-spezifischer Abschnitt</em></p><p>Dieser Abschnitt kann beliebig häufig wiederholt werden.</p><ul>
+        <li><strong>Einrichtung</strong>
+
+                <ul>
+                        <li>Es wird die Einrichtung im Thünen ausgewählt, die für den Datensatz verantwortlich ist.</li>
+                        <li>Sind mehrere Einrichtungen beteiligt, muss der Abschnitt für jede Einrichtung wiederholt werden.</li>
+                </ul>
+        </li>
+        <li><strong>Interne Anmerkung</strong>: bei Bedarf</li>
+        <li>Bei Bedarf: <strong>Kommentare</strong></li>
+</ul><p align="left"><strong>Was wird hochgeladen:</strong></p><ul>
+        <li>keine Datendateien</li>
+        <li>Bei Autorenkollektiven wird eine Mitgliederliste hochgeladen, diese darf bei Änderungen ausgetauscht werden.</li>
+</ul><h2>2.4 Integrierende Ressource</h2><p>Eine <strong>integrierende Ressource</strong> (<a href="https://sta.dnb.de/doc/RDA-E-M320">RDA-E-M320</a>) wird <strong>laufend aktualisiert</strong>. Dabei werden die Aktualisierungen in die Ressource integriert und der vorherige Zustand überschrieben. Beispiele hierfür sind Datenbanken von Monitoringaufgaben und Forschungssoftware (siehe auch 2.4.1).</p><p><strong>Eingetragen werden:</strong></p><ul>
+        <li><strong>Publikationsstatus</strong>: steuert die Sichtbarkeit des Eintrags und den Redaktionsprozess. Wenn der Eintrag einmal auf „veröffentlicht“ gestellt und gespeichert wurde ist und bleibt er öffentlich sichtbar und auffindbar. Er wird dann auch über die Schnittstellen ausgeliefert und kann nicht zurückgenommen werden.</li>
+        <li><strong>Titel</strong> (Haupttitel, <a href="https://sta.dnb.de/doc/RDA-E-M005">RDA-E-M005</a>) und ggf. Titelübersetzung und alternativer Titel (<a href="https://sta.dnb.de/doc/RDA-E-W005">RDA-E-W005</a>). Führende Artikel (Der, Die, Das) werden in das gesonderte Feld eingetragen, damit eine korrekte Sortierung erfolgt. Artikel aus Fremdsprachen werden zusammen mit dem Titel als Haupttitel aufgenommen. Abgekürzte Titel werden ggf. bei fortlaufenden Ressourcen erfasst. Der Einheitstitel wird in der Regel nicht vergeben (vgl. RAK-WB §§ 501 – 525, Einheitssachtitel, <a href="https://nbn-resolving.org/urn:nbn:de:101-2007072711">https://nbn-resolving.org/urn:nbn:de:101-2007072711</a>).</li>
+        <li><strong>Herausgeber</strong> (<a href="https://sta.dnb.de/doc/RDA-E-M045">RDA-E-M045</a>, <a href="https://sta.dnb.de/doc/RDA-E-P005">RDA-E-P005</a>, <a href="https://sta.dnb.de/doc/RDA-E-E165">RDA-E-E165</a>) oder herausgebende Körperschaft / herausgebendes Organ (<a href="https://sta.dnb.de/doc/RDA-E-K005">RDA-E-K005</a>) jeweils mit Zugehörigkeit, GND und ORCiD -&gt; ggf. GND-Eintrag erstellen. Es werden alle Autoren, Beteiligte und Körperschaften aufgenommen. Die Ansetzungsform wird folgender maßen eingegeben. Nachname, [LEERZEICHEN]Vorname. Die Ansetzungsform wird gemäß den Regeln für die Ansetzung in der GND gewählt. Die vereinfache Vorlageform wird in die Unterfelder („Nachname, Vorname, sonstige) eingetragen. Das Thünen wird als herausgebendes Organ eingetragen und ROR-ID und GND verknüpfen.
+                <ul>
+                        <li>Unternehmen, die die Daten erheben und bei denen die Mitarbeitenden nicht namentlich als Autoren/Beteiligte aufgenommen werden, werden als beteiligte Körperschaft aufgenommen. -&gt; ggf. GND-Eintrag erstellen. Die Ansetzung erfolgt nach RDA DACH (<a href="https://sta.dnb.de/doc/STA-KL-KOERPERSCHAFT">STA-KL-KOERPERSCHAFT</a>)</li>
+                        <li>Autorenkollektive werden als „Körperschaft (Projekt)“ aufgenommen (<a href="https://sta.dnb.de/doc/STA-KL-KOERPERSCHAFT">STA-KL-KOERPERSCHAFT</a>). Ein GND-Eintrag wird erstellt und mit dem OpenAgrar-Eintrag verknüpft. Eine Liste aller zum Autorenkollektiv zugehörenden Personen wird als Datei mit in dem Dateibereich „Metadaten“ abgelegt.</li>
+                        <li>GND -Einträge werden von der Bibliothek (Thünen) erstellt.</li>
+                </ul>
+        </li>
+        <li>Open Content-<strong>Lizenz</strong> oder „Alle Rechte vorbehalten“
+                <ul>
+                        <li>Kommentar „Sperrvermerk“: „Integrierende Ressource. Datenauszüge werden auf Anfrage erstellt und eine Datennutzungsvereinbarung wird abgeschlossen. Anfragen sind per Mail an beispielmail@example.de oder an opendata@example.de möglich.“</li>
+                        <li>Kommentar „Lizensierung“: „Diese Ressource wird regelmäßig oder bei Bedarf aktualisiert. Bitte geben Sie bei Nutzung das Datum des Dateiabrufes an“. Wird genutzt, die Datei bei Aktualisierung ausgetauscht wird.</li>
+                </ul>
+        </li>
+        <li><strong>Abstract / Beschreibung</strong> ggf. deutsche und englische Version (<a href="https://sta.dnb.de/doc/RDA-E-E020">RDA-E-E020</a>)
+                <ul>
+                        <li>Werden Versionen in verschiedenen Sprachen erfasst, muss das Feld für jede Version wiederholt werden.</li>
+                        <li>Die Reihenfolge bestimmt auch die Reihenfolge der Anzeige der verschiedenen Versionen.</li>
+                        <li>In der Beschreibung wird der Datensatz beschrieben. Eine Zusammenfassung der zugehörigen Textpublikation ist hier falsch.</li>
+                        <li>Zur Beschreibung gehören auch die Erklärung von Variablen, Trennzeichen und verwendete Codierungen sowie Systemvoraussetzungen und Programmiersprache. Gleiches gilt für den Zweck zu dem die Daten erhoben wurden, z.B. die zu beantwortenden Forschungsdaten.</li>
+                        <li>Die Beschreibung ersetzt nicht eine ausführliche Dokumentation, die Teil des Datensatzes ist.</li>
+                        <li>Hier kann auch die Entstehungsmethode erfasst werden (<a href="https://sta.dnb.de/doc/RDA-E-M415">RDA-E-M415</a>, unstrukturierte Beschreibung).</li>
+                        <li>Angaben zu den Eigenschaften der digitalen Dateien können ebenfalls hier oder über den Kommentar „System-Angaben“ gemacht werden (<a href="https://sta.dnb.de/doc/RDA-E-M535">RDA-E-M535</a>), z.B. wenn eine bestimmte Software zum Verarbeiten der Dateien benötigt wird.</li>
+                        <li>Muss bei jeder Aktualisierung angepasst werden.</li>
+                </ul>
+        </li>
+        <li><strong>Schlagwörter</strong>, wenn möglich mit GND (<a href="https://sta.dnb.de/doc/GND">https://sta.dnb.de/doc/GND</a>) verknüpfen. Getrennte Schlagwortketten für deutsche und englische Schlagwörter. Die in der GND enthaltenden Schlagwörter können über den <a href="https://explore.gnd.network/">GND-Explorer</a> eingesehen werden.
+                <ul>
+                        <li>Schlagwörter sind Teil der Sacherschließung und werden nach den RSWK (<a href="https://www.dnb.de/DE/Professionell/Standardisierung/Standards/_content/rswk.html">Regelwerk</a>) vergeben.</li>
+                        <li>Schlagwörter werden, wenn möglich mit den Normdaten der GND verknüpft.</li>
+                        <li>Zeitschlagwörter werden ebenfalls an dieser Stelle eingetragen.</li>
+                        <li>Schlagwörter aus dem <a href="https://agrovoc.fao.org/">AGROVOC</a> und andere Thesauri können in der jeweiligen Ansetzungsform eingetragen werden. Werden jedoch nicht mit den Normdaten verknüpft, da diese Thesauri nicht in OpenAgrar eingebunden sind.</li>
+                </ul>
+        </li>
+        <li><strong>Geographischer Bezug</strong> wird ggf. eingetragen.
+                <ul>
+                        <li>Der geographische Bezug wird in Form eines geographischen Schlagwortes (Ansetzungsform) und mit der GND verknüpft. Es geht um einen inhaltlichen geografischen Bezug.</li>
+                        <li>Koordinaten werden eingetragen, wenn es sich um kartografische Ressourcen (<a href="https://sta.dnb.de/doc/RDA-R-KART">RDA-R-KART</a>) handelt.</li>
+                </ul>
+        </li>
+        <li><strong>Persistent Identifier (PID)</strong> werden <strong>nicht vergeben</strong>, da diese nur für abgeschlossene Ressourcen vergeben werden dürfen.</li>
+        <li><strong>Verlag</strong> (Name des Repositoriums, oder des Verlags/ Eigenverlags der das Angebot betreibt) (<a href="https://sta.dnb.de/doc/RDA-E-M195">RDA-E-M195</a>)
+                <ul>
+                        <li>Für Datensätze mit „Alle Rechte vorbehalten“ wird als Verlag die jeweilige Einrichtung eingetragen.</li>
+                        <li>Für Datensätze mit einer Open-Content-Lizenz wird „OpenAgrar“ als Verlag eingetragen.</li>
+                </ul>
+        </li>
+        <li><strong>Erscheinungsort</strong> (<a href="https://sta.dnb.de/doc/RDA-E-M185">RDA-E-M185</a>): Sitz des Verlages oder des Repositoriums bzw. Standort der Server / Speicher auf denen die Daten vorgehalten werden.
+                <ul>
+                        <li>Für Datensätze mit „Alle Rechte vorbehalten“ wird als Erscheinungsort „Braunschweig“ eingetragen (Thünen).</li>
+                        <li>Für Datensätze mit einer Open-Content-Lizenz wird als Erscheinungsort „Göttingen“ eingetragen</li>
+                </ul>
+        </li>
+        <li><strong>Erscheinungsjahr</strong>: bei veröffentlichten Datensätzen (<a href="https://sta.dnb.de/doc/RDA-E-M205">RDA-E-M205</a>)
+                <ul>
+                        <li>Erscheinungszeitraum. Startjahr eintragen und das Ende offenlassen.</li>
+                </ul>
+        </li>
+        <li>Datum der <strong>letzten Aktualisierung</strong></li>
+        <li><strong>Sprache(n)</strong> eintragen.</li>
+        <li><strong>interne ID</strong>: ggf. Abrufzeichen, Teilbestandskennzeichen, Zeichen für Statistik usw.
+                <ul>
+                        <li>Das Feld ist nur für angemeldete Nutzer sichtbar.</li>
+                </ul>
+        </li>
+</ul><p><em>OpenAgrar-spezifischer Abschnitt</em></p><p>Dieser Abschnitt kann beliebig häufig wiederholt werden.</p><ul>
+        <li><strong>Einrichtung</strong>
+
+                <ul>
+                        <li>Es wird die Einrichtung / Institut in der jeweiligen Einrichtung ausgewählt, die für den Datensatz verantwortlich ist.</li>
+                        <li>Sind mehrere Einrichtungen beteiligt, muss der Abschnitt für jede Einrichtung wiederholt werden.</li>
+                </ul>
+        </li>
+        <li><strong>Interne Anmerkung</strong>: bei Bedarf</li>
+</ul><p align="left"><strong>Was wird hochgeladen:</strong></p><ul>
+        <li>ggf. Datendateien, wenn gewünscht mit Austausch bei Aktualisierung.</li>
+        <li>Bei Autorenkollektiven wird eine Mitgliederliste hochgeladen, diese darf bei Änderungen ausgetauscht werden.</li>
+</ul><h3>2.4.1 Forschungssoftware</h3><p><strong>Forschungssoftware</strong> wird als Forschungsdaten mit einem eigenen Formular erfasst (Formular ist noch nicht fertig Stand 28-07-2026). Dieses Formular ist bisher nicht verfügbar. Daher wird das Formular für Forschungsdaten verwendet und die zusätzlichen Angaben im Abstract und im Metadaten-Template festgehalten.</p><p>(Thünen) Software wird als <strong>integrierende Ressource</strong> (<a href="https://sta.dnb.de/doc/RDA-E-M320">RDA-E-M320</a>) erfasst und als Forschungsdaten in den Jahresbericht mit aufgenommen (<strong>Jahresberichtskategorie</strong>: „Forschungsdaten“). Bei einem Major-Release wird eine neue Aufnahme erstellt und die Software erneut für den Jahresbericht gezählt. Die <strong>Link URL</strong> auf eine Bezugsquelle (z.B. GitHub-Repository) wird erfasst sowie das <strong>Datum der letzten Aktualisierung</strong> und die <strong>Version (Auflage)</strong>.</p><h1>3 Verweise und Verknüpfungen</h1><p>Die Verknüpfungen „Rezension von“, „Quelle“, „Original“ werden für Textpublikationen genutzt.</p><h2>3.1 Datensatz mit Literatur verknüpfen</h2><p align="left">Von der Datensatzaufnahme wird auf die Literaturaufnahme mit "referenziert" verknüpft. Ausgangspunkt ist der Datensatz, da dieser zuerst da ist und mit einer Vielzahl von Einträgen verlinkt werden muss/kann.</p><h2>3.2 Vorgänger und Nachfolger</h2><p align="left">Bei der Erfassung einer neuen Version eines Datensatzes wird die Option "neue Version des Eintrages erstellen" verwendet. Die Verknüpfung wird vom System automatisch vorgenommen und als "Vorgänger" beim neuen Datensatz angelegt. Die Angaben des Vorgängers werden bei diesem Vorgehen fast vollständig übernommen und müssen nur geringfügig angepasst werden. Das spart Arbeit. Bei einer nachträglichen Verknüpfung wird die Verknüpfung "Vorgänger" manuell beim Nachfolge-Eintrag auf den Vorgänger- Eintrag vorgenommen.</p><h2>3.3 Datensammelwerk und Themensammlung</h2><p align="left">Erfassung siehe mehrteilige Monographie.</p><p align="left"><em>Datensammelwerk</em></p><p align="left">Ein Datensammelwerk besteht aus verschiedenen Forschungsdatensätzen, die innerhalb eines bestimmten Zeitraums erhoben werden oder aus verschiedenen Forschungsvorhaben stammen und ein gemeinsames Thema haben. Die Verknüpfung erfolgt über den einzelnen Datensatz mit „Erschienen in“.</p><p align="left"><em>Themensammlung</em></p><p align="left">Eine Themensammlung ist ein Sammelwerk und beinhaltet sowohl Text- als auch Datenpublikationen zu einem bestimmten Thema.<br />
+        Beispielweise können die Forschungsoutputs eines Forschungsprojektes oder eines Monitorings mit einer Themensammlung gruppiert werden. Die Erscheinungsweise ist unregelmäßig. Die Verknüpfung erfolgt über die einzelne Ressource über „Erschienen in“.</p><h2>3.4 Anderes Format</h2><p align="left">Mit der Verknüpfung „Anderes Format“ wird auf einen Datensatz in einem anderen Dateiformat verwiesen.</p><h2>3.5 Andere Version</h2><p align="left">Mit der Verknüpfung „Andere Version“ wird auf Datensätze in einer anderen Sprache verwiesen.</p><h2>3.6 Verweis auf externe Quellen</h2><p align="left">Verweise auf externe Quellen werden als Links erfasst.</p><p align="left"><strong>Link URL</strong>: Link auf die original Ressource oder auf eine weitere Bezugsquelle.</p><p align="left"><strong>Link im Kontext</strong>: Link zu weiteren externen Informationen, die einen Bezug zur Daten- oder Textpublikation haben.</p><p align="left"><strong>Link zum Volltext</strong>: wird für Forschungsdaten nicht belegt.</p><p align="left"><strong>Link zur Vorschau</strong>: Kann für eine Visualisierung der Forschungsdaten eingetragen werden, z.B. eine digitale Karte oder Dashboard.</p><h1>4 Review-Verfahren</h1><p align="left">Ist die Textpublikation, mit der Forschungsdatensatz zur Verfügung steht, in einem Review eines Verlages, wird der Forschungsdatensatz <strong>nach Beendigung des Reviews</strong> und erfolgter Überarbeitung veröffentlicht. Bestehen die Gutachter auf einer Veröffentlichung <strong>vor Ende des Reviews</strong> werden keine nachträglichen Änderungen mehr durchgeführt. Bei nötigen Änderungen muss der Datensatz als neue Version veröffentlicht werden. </p><p align="left">Bei einem <strong>Doppelblindverfahren</strong> werden für die Autoren und Beteiligte als N.N. eingetragen. Die Einrichtung, Affiliation, Erscheinungsort und Verlag werden erst nach Abschluss des Reviews eingetragen. </p><p align="left">Für das Review wird ein <strong>Embargo</strong> eingetragen und ein <strong>lesender Zugrifflink</strong> erstellt. Außerdem wird ein <strong>Hinweis</strong> auf die spätere Registrierung der <strong>DOI</strong> eingetragen (dt. und engl.). Die <strong>Freistellungserklärung</strong> muss vor Erstellung des Zugriffslinks vorliegen.</p><h1>5 Erfassung von Forschungsdatensätzen, aus externen Repositorien</h1><p align="left">Die Erfassung von Forschungsdatensätzen, die über andere Repositorien als OpenAgrar veröffentlicht werden erfolgt RDA-DACH und RSWK. Unterschied ist, dass die Datensätze in der Regel nicht auf OpenAgrar hochgeladen werden. Es erfolgt ein Metadateneintrag und der Upload eines ausgefüllten Metadaten-Templates (Thünen). Eine DOI der jeweiligen Ressortforschungseinrichtung wird nicht vergeben. Eingetragen wird die DOI des Repositoriums, über das die Daten veröffentlicht wurden.</p><h1>6 Zweitveröffentlichung von Forschungsdaten</h1><p align="left">Der Publikationstyp „Zweitveröffentlichung“ wird nur Publikationen gemäß §38 UrhG verwendet. Dies gilt auch für Forschungsdaten.</p></section><meta><log lastEditor="btimmermann" date="2026-08-07" time="13:29" /></meta></MyCoReWebPage>
