@@ -88,6 +88,10 @@
       <label xml:lang="de" text="Forschungsdaten (FD)" />
       <label xml:lang="en" text="Research Data (FD)" />
     </category>
+    <category ID="RS">
+      <label xml:lang="de" text="Forschungssoftware (RS)" />
+      <label xml:lang="en" text="Research software (RS)" />
+    </category>
     <category ID="TR">
       <label xml:lang="de" text="Project brief (TR)" />
       <label xml:lang="en" text="Project brief (TR)" />
